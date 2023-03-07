@@ -94,7 +94,7 @@
             "- name: ${1:Description}",
             "  # Comment",
             "  ansible.builtin.file:",
-            "    path: ${2:source}",
+            "    path: ${2:/tmp/test}",
             "    state: ${3|file,directory,touch,absent,link|}",
             "    owner: ${4:owner}",
             "    group: ${5:group}",
@@ -116,11 +116,49 @@
             "  ansible.builtin.service:",
             "    name: ${2:service_name}",
             "    state: ${3|started,stopped,restarted,reloaded|}",
-            "    enabled: ${4|true,false|}"
+            "    enabled: ${4|true,false|}",
+            "$0"
         ],
         "description": "Used for manage service",
         "scope": "ansible"
     },
+    "Set Facts": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.set_fact"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.set_fact:",
+            "    ${1:key}: ${2:value}",
+            "$0"
+        ],
+        "description": "Used for set variables",
+        "scope": "ansible"
+    },
+    "Stat": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.stat"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.stat:",
+            "    path: ${2:/tmp/test}",
+            "    follow: ${3|true,false|}",
+            "    get_checksum: ${5|true,false|}",
+            "    get_mime: ${6|true,false|}",
+            "    checksum_algorithm: ${7|true,false|}",
+            "    get_attributes: ${8|true,false|}",
+            "$0"
+
+        ],
+        "description": "Used for set variables",
+        "scope": "ansible"
+    },
+
     "Insert a block": {
         "prefix": [
             "sr",
