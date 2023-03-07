@@ -3,7 +3,9 @@
 This Visual Studio Code extension has snippets to help you write your Ansible
 code when you are recommendations on myb [personal blog](https://blog.stephane-robert.info/)
 
-<!-- set_fact, stat, blockinfile, lineinfile, assert, includes, wait_for, import_tasks
+![ansible snippets vscode](img/sr-ansible-snippet.gif)
+
+<!-- set_fact, stat, blockinfile, lineinfile, assert, includes, wait_for, import_tasks, unarchive
 - name: Add os specific variables
   ansible.builtin.include_vars: "{{ loop_vars }}"
   with_first_found:
