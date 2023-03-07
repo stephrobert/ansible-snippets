@@ -1,0 +1,147 @@
+{
+    "Insert a playbook": {
+        "prefix": [
+            "sr",
+            "playbook"
+        ],
+        "body": [
+            "---",
+            "# Description",
+            "- name: ${1: Description of playbook}",
+            "  hosts: ${2:all}",
+            "  gather_facts: ${3|true,false|}",
+            "  vars:",
+            "  tasks:",
+            "    - name: ${4:First task}"
+        ],
+        "description": "Insert the header of a playbook",
+        "scope": "ansible"
+    },
+    "Add Host to Group": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.add_host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.add_host:",
+            "    hostname: ${2:host_or_ip_to_add}",
+            "    groups: ",
+            "      - ${3:group}",
+            "$0"
+        ],
+        "description": "Used for Add Host to add a host in a group",
+        "scope": "ansible"
+    },
+    "Debug": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.debug"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.debug:",
+            "    msg: \"${2:{{ var }}}\"",
+            "$0"
+        ],
+        "description": "Used for display message or variable",
+        "scope": "ansible"
+    },
+    "Install package": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.package"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.package:",
+            "    name:",
+            "      - ${2:top}",
+            "    state: ${3|present,absent|}",
+            "$0"
+        ],
+        "description": "Used for Install package on system",
+        "scope": "ansible"
+    },
+    "Create file from Template": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.template"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.template:",
+            "    src: ${2:source}",
+            "    dest: ${3:dest}",
+            "    owner: ${4:owner}",
+            "    group: ${5:group}",
+            "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
+            "$0"
+        ],
+        "description": "Used for create a file from a template",
+        "scope": "ansible"
+    },
+    "Create File, Directory": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.file:",
+            "    path: ${2:source}",
+            "    state: ${3|file,directory,touch,absent,link|}",
+            "    owner: ${4:owner}",
+            "    group: ${5:group}",
+            "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
+            "    follow: false",
+            "$0"
+        ],
+        "description": "Used for create or destroy a file, directory, link",
+        "scope": "ansible"
+    },
+    "Manage Services": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  ansible.builtin.service:",
+            "    name: ${2:service_name}",
+            "    state: ${3|started,stopped,restarted,reloaded|}",
+            "    enabled: ${4|true,false|}"
+        ],
+        "description": "Used for manage service",
+        "scope": "ansible"
+    },
+    "Insert a block": {
+        "prefix": [
+            "sr",
+            "block"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "  when: ",
+            "  block:",
+            "  # Comment",
+            "    ",
+            "  rescue:",
+            "  # Comment",
+            "    ",
+            "  always:",
+            "  # Comment",
+            "    ",
+            "$0"
+        ],
+        "description": "User for create a block",
+        "scope": "ansible"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "sr-ansible-snippets",
+  "displayName": "Ansible Snippets",
+  "description": "Stephane ROBERT Ansible Snippets for VScode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "icon":"img/asr.png",
+  "publisher": "srobert0560",
+  "categories": [
+    "Snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/stephrobert/ansible-snippets.git"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "ansible",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
