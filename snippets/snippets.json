@@ -20,7 +20,8 @@
     "Add Host to Group": {
         "prefix": [
             "sr",
-            "ansible.builtin.add_host"
+            "ansible.builtin.add_host",
+            "add host to group"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -37,7 +38,8 @@
     "Debug": {
         "prefix": [
             "sr",
-            "ansible.builtin.debug"
+            "ansible.builtin.debug",
+            "debug a task"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -52,7 +54,8 @@
     "Install package": {
         "prefix": [
             "sr",
-            "ansible.builtin.package"
+            "ansible.builtin.package",
+            "install a package"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -69,7 +72,8 @@
     "Create file from Template": {
         "prefix": [
             "sr",
-            "ansible.builtin.template"
+            "ansible.builtin.template",
+            "generate a file from a template"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -88,7 +92,10 @@
     "Create File, Directory": {
         "prefix": [
             "sr",
-            "ansible.builtin.file"
+            "ansible.builtin.file",
+            "create a file",
+            "touch a file",
+            "create a directory"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -108,7 +115,11 @@
     "Manage Services": {
         "prefix": [
             "sr",
-            "ansible.builtin.service"
+            "ansible.builtin.service",
+            "start a service",
+            "stop a service",
+            "enable a service",
+            "disable a service"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -125,7 +136,8 @@
     "Set Facts": {
         "prefix": [
             "sr",
-            "ansible.builtin.set_fact"
+            "ansible.builtin.set_fact",
+            "compute a variable"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -140,7 +152,8 @@
     "Stat": {
         "prefix": [
             "sr",
-            "ansible.builtin.stat"
+            "ansible.builtin.stat",
+            "check status of a file or a directory"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -155,7 +168,7 @@
             "$0"
 
         ],
-        "description": "Used for set variables",
+        "description": "Used for check stat of a file/directory",
         "scope": "ansible"
     },
 
