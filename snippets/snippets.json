@@ -166,12 +166,29 @@
             "    checksum_algorithm: ${7|true,false|}",
             "    get_attributes: ${8|true,false|}",
             "$0"
-
         ],
         "description": "Used for check stat of a file/directory",
         "scope": "ansible"
     },
-
+    "Unarchive": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.unarchive",
+            "unarchive a compressed file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # Comment",
+            "      ansible.builtin.unarchive:",
+            "        src: ${2:/src}",
+            "        dest: ${3:/dest}",
+            "        owner: ${4:owner}",
+            "        group: ${5:group}",
+            "        mode: \"${6|0755,0640,0644,0700,0600|}\"",
+            "${0}"
+        ],
+        "description": "Unarchive"
+    },
     "Insert a block": {
         "prefix": [
             "sr",
