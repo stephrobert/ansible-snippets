@@ -179,15 +179,26 @@
         "body": [
             "- name: ${1:Description}",
             "  # Comment",
-            "      ansible.builtin.unarchive:",
-            "        src: ${2:/src}",
-            "        dest: ${3:/dest}",
-            "        owner: ${4:owner}",
-            "        group: ${5:group}",
-            "        mode: \"${6|0755,0640,0644,0700,0600|}\"",
+            "  ansible.builtin.unarchive:",
+            "    src: ${2:/src}",
+            "    dest: ${3:/dest}",
+            "    owner: ${4:owner}",
+            "    group: ${5:group}",
+            "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
             "${0}"
         ],
         "description": "Unarchive"
+    },
+    "Import a File Task": {
+        "prefix": "Import tasks",
+        "body": [
+            "- name: ${1:Descritpition}",
+            "  # Comment",
+            "  ansible.builtin.import_tasks:",
+            "    file: ${2:tasks.yml}",
+            "${0}"
+        ],
+        "description": "Import a File Task"
     },
     "Insert a block": {
         "prefix": [
