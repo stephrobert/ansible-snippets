@@ -151,6 +151,26 @@
         "description": "Used for set variables",
         "scope": "ansible"
     },
+    "Line In file": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.lineinfile",
+            "include a line in a file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${8:Comment}",
+            "  ansible.builtin.lineinfile:",
+            "    path: ${2:/etc/hosts}",
+            "    regexp: ${3:\"^text.*$\"}",
+            "    line: ${4:\"replace\"}",
+            "    owner: ${5:owner}",
+            "    group: ${6:root}",
+            "    mode: \"${7|0755,0640,0644,0700,0600|}\""
+        ],
+        "description": "Insert a line in a file",
+        "scope": "ansible"
+    },
     "Stat": {
         "prefix": [
             "sr",
@@ -262,11 +282,31 @@
             "  # ${8:Comment}",
             "  ansible.builtin.include_role:",
             "    name: ${2:role_name}",
-            "    ${3:task_from: other}",
+            "    ${3:tasks_from: other}",
             "${0}"
         ],
         "description": "Include a role"
     },
+    "Assert expression": {
+        "prefix": [
+            "sr",
+            "Assert",
+            "ansible.builtin.assert"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${8:Comment}",
+            "  ansible.builtin.assert:",
+            "    that:",
+            "      - ${2:expression}",
+            "    success_msg: ${3:message}",
+            "    fail_msg: ${3:message}",
+            "    quiet: ${4|true,false|}",
+            "${0}"
+        ],
+        "description": "Assert an expression"
+    },
+
     "Insert a block": {
         "prefix": [
             "sr",
@@ -290,4 +330,5 @@
         "description": "User for create a block",
         "scope": "ansible"
     }
+
 }
