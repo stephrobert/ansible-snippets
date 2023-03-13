@@ -11,8 +11,9 @@
             "  hosts: ${2:all}",
             "  gather_facts: ${3|true,false|}",
             "  vars:",
+            "    - key: value",
             "  tasks:",
-            "    - name: ${4:First task}"
+            "    ${0}"
         ],
         "description": "Insert the header of a playbook",
         "scope": "ansible"
@@ -25,7 +26,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.add_host:",
             "    hostname: ${2:host_or_ip_to_add}",
             "    groups: ",
@@ -43,9 +44,9 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.debug:",
-            "    msg: \"${2:{{ var }}}\"",
+            "    msg: \"${2:{{ key }}}\"",
             "$0"
         ],
         "description": "Used for display message or variable",
@@ -59,7 +60,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.package:",
             "    name:",
             "      - ${2:top}",
@@ -77,7 +78,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.template:",
             "    src: ${2:source}",
             "    dest: ${3:dest}",
@@ -99,7 +100,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.file:",
             "    path: ${2:/tmp/test}",
             "    state: ${3|file,directory,touch,absent,link|}",
@@ -123,7 +124,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.service:",
             "    name: ${2:service_name}",
             "    state: ${3|started,stopped,restarted,reloaded|}",
@@ -137,13 +138,14 @@
         "prefix": [
             "sr",
             "ansible.builtin.set_fact",
-            "compute a variable"
+            "compute a variable",
+            "set a variable"
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.set_fact:",
-            "    ${1:key}: ${2:value}",
+            "    ${2:key}: ${3:value}",
             "$0"
         ],
         "description": "Used for set variables",
@@ -153,18 +155,19 @@
         "prefix": [
             "sr",
             "ansible.builtin.stat",
-            "check status of a file or a directory"
+            "status of a file or a directory"
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${9:Comment}",
             "  ansible.builtin.stat:",
             "    path: ${2:/tmp/test}",
             "    follow: ${3|true,false|}",
-            "    get_checksum: ${5|true,false|}",
-            "    get_mime: ${6|true,false|}",
-            "    checksum_algorithm: ${7|true,false|}",
-            "    get_attributes: ${8|true,false|}",
+            "    get_checksum: ${4|true,false|}",
+            "    get_mime: ${5|true,false|}",
+            "    checksum_algorithm: ${6|md5,sha1,sha224,sha256,sha384,sha512|}",
+            "    get_attributes: ${7|true,false|}",
+            "    get_md5: ${8|true,false|}",
             "$0"
         ],
         "description": "Used for check stat of a file/directory",
@@ -178,7 +181,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  ansible.builtin.unarchive:",
             "    src: ${2:/src}",
             "    dest: ${3:/dest}",
@@ -190,15 +193,79 @@
         "description": "Unarchive"
     },
     "Import a File Task": {
-        "prefix": "Import tasks",
+        "prefix": [
+            "sr",
+            "Import tasks",
+            "ansible.builtin.import_tasks"
+        ],
         "body": [
-            "- name: ${1:Descritpition}",
-            "  # Comment",
+            "- name: ${1:Description}",
+            "  # ${8:Comment}",
             "  ansible.builtin.import_tasks:",
             "    file: ${2:tasks.yml}",
             "${0}"
         ],
         "description": "Import a File Task"
+    },
+    "Include a File Task": {
+        "prefix": [
+            "sr",
+            "Include tasks",
+            "ansible.builtin.include_tasks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${8:Comment}",
+            "  ansible.builtin.include_tasks:",
+            "    file: ${2:tasks.yml}",
+            "${0}"
+        ],
+        "description": "Include a File Task"
+    },
+    "Import a Playbook": {
+        "prefix": [
+            "sr",
+            "Import playbook",
+            "ansible.builtin.import_playbook"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${8:Comment}",
+            "  ansible.builtin.import_playbook: ${2:playbook.yml}",
+            "${0}"
+        ],
+        "description": "Import a Playbook"
+    },
+    "Import a Role": {
+        "prefix": [
+            "sr",
+            "Import role",
+            "ansible.builtin.import_role"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${8:Comment}",
+            "  ansible.builtin.import_role:",
+            "    name: ${2:role_name}",
+            "${0}"
+        ],
+        "description": "Import a role"
+    },
+    "Include a Role": {
+        "prefix": [
+            "sr",
+            "Include role",
+            "ansible.builtin.include_role"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${8:Comment}",
+            "  ansible.builtin.include_role:",
+            "    name: ${2:role_name}",
+            "    ${3:task_from: other}",
+            "${0}"
+        ],
+        "description": "Include a role"
     },
     "Insert a block": {
         "prefix": [
@@ -207,16 +274,16 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # Comment",
+            "  # ${8:Comment}",
             "  when: ",
             "  block:",
-            "  # Comment",
+            "  # ${8:Comment}",
             "    ",
             "  rescue:",
-            "  # Comment",
+            "  # ${8:Comment}",
             "    ",
             "  always:",
-            "  # Comment",
+            "  # ${8:Comment}",
             "    ",
             "$0"
         ],
