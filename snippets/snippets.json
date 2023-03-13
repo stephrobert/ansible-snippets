@@ -360,18 +360,69 @@
             "    name: ${2:name}",
             "    state: ${3|present,absent|}",
             "    comment: ${4:comment}",
-            "    uid: ${5:1020}",
-            "    group: ${6:group}",
-            "    force: ${7|false,true|}",
-            "    append: ${8|false,true|}",
-            "    remove: ${9|false,true|}",
-            "    system: ${10|false,true|}",
-            "    move_home: ${11|false,true|}",
-            "    non_unique: ${12|false,true|}",
+			"    shell: ${5:/bin/bash}",
+            "    uid: ${6:1020}",
+            "    group: ${7:group}",
+            "    force: ${8|false,true|}",
+            "    append: ${9|false,true|}",
+            "    remove: ${10|false,true|}",
+            "    system: ${11|false,true|}",
+            "    move_home: ${12|false,true|}",
+            "    non_unique: ${13|false,true|}",
+			"    generate_ssh_key: ${14|false,true|}",
             "    #groups: ",
             "${0}"
         ],
         "description": "Create a user Account ",
+        "scope": "ansible"
+    },
+    "Wait for connection": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.wait_for_connection",
+            "Waits until remote system is reachable"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.wait_for_connection:",
+            "    delay: ${2:0}",
+            "    sleep: ${3:1}",
+            "    timeout: ${4:600}",
+			"    connect_timeout: ${5:5}",
+            "    active_connection_states: [\"ESTABLISHED\", \"FIN_WAIT1\", \"FIN_WAIT2\", \"SYN_RECV\", \"SYN_SENT\", \"TIME_WAIT\"]",
+            "${0}"
+        ],
+        "descrition": "Waits until remote system is reachable",
+        "scope": "ansible"
+    },
+    "Wait for a port": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.wait_for",
+            "Waits for a condition before continuing"
+                    ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.wait_for:",
+            "    delay: ${2:0}",
+            "    sleep: ${3:1}",
+            "    timeout: ${4:600}",
+			"    connect_timeout: ${5:5}",
+            "    host: ${6:127.0.0.1} # a hostname or IP address to wait for",
+            "    msg: \"${7:An error message}\"",
+            "    active_connection_states: [\"ESTABLISHED\", \"FIN_WAIT1\", \"FIN_WAIT2\", \"SYN_RECV\", \"SYN_SENT\", \"TIME_WAIT\"]",
+            "    #port: # Port number to poll",
+            "    #state: # The state of the port present,absent,started,stopped,drained",
+            "    #path: /path #Path to a file on the filesystem that must exist before continuing",
+            "    #The list of TCP connection states which are counted as active connections",
+			"    #active_connection_states: ${6|ESTABLISHED,FIN_WAIT1,FIN_WAIT2,SYN_RECV,SYN_SENT,TIME_WAIT|}",
+            "    #exclude_hosts: ",
+            "    #search_regex:",
+            "${0}"
+        ],
+        "description": "Waits for a condition before continuing",        ,
         "scope": "ansible"
     },
     "Import a File Task": {

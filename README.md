@@ -62,6 +62,10 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "Create an user account",
   * "Destroy an user account",
   * "Modify an user account"
+* ansible.builtin.wait_for:
+  * "Waits for a condition before continuing"
+* ansible.builtin.wait_for_connection:
+  * "Waits until remote system is reachable"
 * ansible.builtin.import_tasks:
   * "Import tasks"
 * ansible.builtin.include_tasks:
