@@ -5,6 +5,8 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
 
 ![ansible snippets vscode](https://github.com/stephrobert/ansible-snippets/raw/main/img/sr-ansible-snippet.gif)
 
+**I ll add more snippets in a few days!!**
+
 ## List of snippets
 
 **Format :**
@@ -43,6 +45,8 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "stop a service"
   * "enable a service"
   * "disable a service"
+* ansible.builtin.service_facts:
+  * "Get service state information as fact data"
 * ansible.builtin.setup:
   * "get facts"
 * ansible.builtin.set_fact:

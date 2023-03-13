@@ -247,6 +247,23 @@
         "description": "Used for manage service",
         "scope": "ansible"
     },
+    "Service Facts":
+    {
+        "prefix": [
+            "sr",
+            "ansible.builtin.service_facts",
+            "Get service state"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.service_facts:",
+            "$0"
+        ],
+        "description": "Get service state information as fact data",
+        "scope": "ansible"
+
+    },
     "Set Facts": {
         "prefix": [
             "sr",
