@@ -7,11 +7,16 @@
         "body": [
             "---",
             "# Description",
-            "- name: ${1: Description of playbook}",
+            "- name: ${1:Description of playbook}",
             "  hosts: ${2:all}",
             "  gather_facts: ${3|true,false|}",
             "  vars:",
-            "    - key: value",
+            "    key: value",
+            "    # Uncomment next lines to use with include_vars",
+            "    # ansible_distro: \"{{ ansible_distribution | lower | replace('\\\"', '') }}\"",
+            "    # ansible_distro_version: \"{{ ansible_distribution_version | lower | replace('/', '_') }}\"",
+            "    # ansible_distro_release: \"{{ ansible_distribution_release | lower }}\"",
+            "    # ansible_distro_major_version: \"{{ ansible_distribution_major_version | lower | replace('/', '_') }}\"",
             "  tasks:",
             "    ${0}"
         ],
@@ -36,6 +41,25 @@
         "description": "Used for Add Host to add a host in a group",
         "scope": "ansible"
     },
+    "Assert expression": {
+        "prefix": [
+            "sr",
+            "Assert",
+            "ansible.builtin.assert"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.assert:",
+            "    that:",
+            "      - ${2:expression}",
+            "    success_msg: ${3:message}",
+            "    fail_msg: ${3:message}",
+            "    quiet: ${4|false,true|}",
+            "${0}"
+        ],
+        "description": "Assert an expression"
+    },
     "Debug": {
         "prefix": [
             "sr",
@@ -46,7 +70,7 @@
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  ansible.builtin.debug:",
-            "    msg: \"${2:{{ key }}}\"",
+            "    msg: \"{{ ${2: key }}}\"",
             "$0"
         ],
         "description": "Used for display message or variable",
@@ -247,8 +271,7 @@
         "description": "Used for manage service",
         "scope": "ansible"
     },
-    "Service Facts":
-    {
+    "Service Facts": {
         "prefix": [
             "sr",
             "ansible.builtin.service_facts",
@@ -262,7 +285,6 @@
         ],
         "description": "Get service state information as fact data",
         "scope": "ansible"
-
     },
     "Set Facts": {
         "prefix": [
@@ -360,7 +382,7 @@
             "    name: ${2:name}",
             "    state: ${3|present,absent|}",
             "    comment: ${4:comment}",
-			"    shell: ${5:/bin/bash}",
+            "    shell: ${5:/bin/bash}",
             "    uid: ${6:1020}",
             "    group: ${7:group}",
             "    force: ${8|false,true|}",
@@ -369,7 +391,7 @@
             "    system: ${11|false,true|}",
             "    move_home: ${12|false,true|}",
             "    non_unique: ${13|false,true|}",
-			"    generate_ssh_key: ${14|false,true|}",
+            "    generate_ssh_key: ${14|false,true|}",
             "    #groups: ",
             "${0}"
         ],
@@ -389,19 +411,19 @@
             "    delay: ${2:0}",
             "    sleep: ${3:1}",
             "    timeout: ${4:600}",
-			"    connect_timeout: ${5:5}",
+            "    connect_timeout: ${5:5}",
             "    active_connection_states: [\"ESTABLISHED\", \"FIN_WAIT1\", \"FIN_WAIT2\", \"SYN_RECV\", \"SYN_SENT\", \"TIME_WAIT\"]",
             "${0}"
         ],
         "descrition": "Waits until remote system is reachable",
         "scope": "ansible"
     },
-    "Wait for a port": {
+    "Wait for a condition": {
         "prefix": [
             "sr",
             "ansible.builtin.wait_for",
             "Waits for a condition before continuing"
-                    ],
+        ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
@@ -409,7 +431,7 @@
             "    delay: ${2:0}",
             "    sleep: ${3:1}",
             "    timeout: ${4:600}",
-			"    connect_timeout: ${5:5}",
+            "    connect_timeout: ${5:5}",
             "    host: ${6:127.0.0.1} # a hostname or IP address to wait for",
             "    msg: \"${7:An error message}\"",
             "    active_connection_states: [\"ESTABLISHED\", \"FIN_WAIT1\", \"FIN_WAIT2\", \"SYN_RECV\", \"SYN_SENT\", \"TIME_WAIT\"]",
@@ -417,12 +439,12 @@
             "    #state: # The state of the port present,absent,started,stopped,drained",
             "    #path: /path #Path to a file on the filesystem that must exist before continuing",
             "    #The list of TCP connection states which are counted as active connections",
-			"    #active_connection_states: ${6|ESTABLISHED,FIN_WAIT1,FIN_WAIT2,SYN_RECV,SYN_SENT,TIME_WAIT|}",
+            "    #active_connection_states: ${6|ESTABLISHED,FIN_WAIT1,FIN_WAIT2,SYN_RECV,SYN_SENT,TIME_WAIT|}",
             "    #exclude_hosts: ",
             "    #search_regex:",
             "${0}"
         ],
-        "description": "Waits for a condition before continuing",        ,
+        "description": "Waits for a condition before continuing",
         "scope": "ansible"
     },
     "Import a File Task": {
@@ -438,9 +460,10 @@
             "    file: ${2:tasks.yml}",
             "${0}"
         ],
-        "description": "Import a File Task"
+        "description": "Import a File Task",
+        "scope": "ansible"
     },
-    "Include a File Task": {
+    "Include a Task File": {
         "prefix": [
             "sr",
             "Include tasks",
@@ -453,7 +476,8 @@
             "    file: ${2:tasks.yml}",
             "${0}"
         ],
-        "description": "Include a File Task"
+        "description": "Include a File Task",
+        "scope": "ansible"
     },
     "Import a Playbook": {
         "prefix": [
@@ -467,7 +491,8 @@
             "  ansible.builtin.import_playbook: ${2:playbook.yml}",
             "${0}"
         ],
-        "description": "Import a Playbook"
+        "description": "Import a Playbook",
+        "scope": "ansible"
     },
     "Import a Role": {
         "prefix": [
@@ -482,7 +507,8 @@
             "    name: ${2:role_name}",
             "${0}"
         ],
-        "description": "Import a role"
+        "description": "Import a role",
+        "scope": "ansible"
     },
     "Include a Role": {
         "prefix": [
@@ -498,26 +524,37 @@
             "    ${3:tasks_from: other}",
             "${0}"
         ],
-        "description": "Include a role"
+        "description": "Include a role",
+        "scope": "ansible"
     },
-    "Assert expression": {
+    "Include vars:": {
         "prefix": [
             "sr",
-            "Assert",
-            "ansible.builtin.assert"
+            "Include vars",
+            "ansible.builtin.include_vars"
         ],
         "body": [
-            "- name: ${1:Description}",
-            "  # ${99:Comment}",
-            "  ansible.builtin.assert:",
-            "    that:",
-            "      - ${2:expression}",
-            "    success_msg: ${3:message}",
-            "    fail_msg: ${3:message}",
-            "    quiet: ${4|false,true|}",
-            "${0}"
+            "- name: Add os specific variables",
+            "  ansible.builtin.include_vars: \"{{ loop_vars }}\"",
+            "  loop: \"{{ query('ansible.builtin.first_found', params) }}\"",
+            "  vars:",
+            "    params:",
+            "      files:",
+            "        - \"{{ ansible_distro }}-{{ ansible_distro_version }}.yml\"",
+            "        - \"{{ ansible_distro }}-{{ ansible_distro_release }}.yml\"",
+            "        - \"{{ ansible_distro }}-{{ ansible_distro_major_version }}.yml\"",
+            "        - \"{{ ansible_distro }}.yml\"",
+            "        - \"{{ ansible_os_family | lower }}-family.yml\"",
+            "        - \"{{ ansible_system | lower }}.yml\"",
+            "      paths:",
+            "        - \"vars\"",
+            "      skip: true",
+            "  loop_control:",
+            "    loop_var: loop_vars",
+            "$0"
         ],
-        "description": "Assert an expression"
+        "description": "Include vars",
+        "scope": "ansible"
     },
     "Insert a block": {
         "prefix": [

@@ -63,7 +63,7 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "Destroy an user account",
   * "Modify an user account"
 * ansible.builtin.wait_for:
-  * "Waits for a condition before continuing"
+  * "Waits for a condition"
 * ansible.builtin.wait_for_connection:
   * "Waits until remote system is reachable"
 * ansible.builtin.import_tasks:
@@ -76,19 +76,5 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "Import role"
 * ansible.builtin.include_role:
   * "Include a Role"
-
-<!-- set_fact, stat, blockinfile, lineinfile, assert, includes, wait_for, import_tasks, unarchive
-- name: Add os specific variables
-  ansible.builtin.include_vars: "{{ loop_vars }}"
-  with_first_found:
-    - files:
-        - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version }}.yml"
-        - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version }}.yml"
-        - "{{ ansible_distribution | lower }}.yml"
-        - "{{ ansible_os_family | lower }}.yml"
-        - "{{ ansible_system | lower }}.yml"
-        - "main.yml"
-      paths:
-        - "vars"
-  loop_control:
-    loop_var: loop_vars -->
+* ansible.builtin.inlcude_vars:
+  * "Include vars"
