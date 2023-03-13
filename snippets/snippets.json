@@ -26,7 +26,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.add_host:",
             "    hostname: ${2:host_or_ip_to_add}",
             "    groups: ",
@@ -44,7 +44,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.debug:",
             "    msg: \"${2:{{ key }}}\"",
             "$0"
@@ -60,7 +60,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.package:",
             "    name:",
             "      - ${2:top}",
@@ -68,6 +68,29 @@
             "$0"
         ],
         "description": "Used for Install package on system",
+        "scope": "ansible"
+    },
+    "Copy a file": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.copy",
+            "copy a file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.copy:",
+            "    src: ${2:source}",
+            "    dest: ${3:dest}",
+            "    owner: ${4:owner}",
+            "    group: ${5:group}",
+            "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
+            "    backup: ${7|false,true|}",
+            "    follow: ${8|false, true|}",
+            "    remote_src: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Used for create a file from a template",
         "scope": "ansible"
     },
     "Create file from Template": {
@@ -78,7 +101,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.template:",
             "    src: ${2:source}",
             "    dest: ${3:dest}",
@@ -100,14 +123,14 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.file:",
             "    path: ${2:/tmp/test}",
             "    state: ${3|file,directory,touch,absent,link|}",
             "    owner: ${4:owner}",
             "    group: ${5:group}",
             "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
-            "    follow: false",
+            "    follow: ${7|false, true|}",
             "$0"
         ],
         "description": "Used for create or destroy a file, directory, link",
@@ -124,11 +147,11 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.service:",
             "    name: ${2:service_name}",
             "    state: ${3|started,stopped,restarted,reloaded|}",
-            "    enabled: ${4|true,false|}",
+            "    enabled: ${4|false,true|}",
             "$0"
         ],
         "description": "Used for manage service",
@@ -143,7 +166,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.set_fact:",
             "    ${2:key}: ${3:value}",
             "$0"
@@ -159,7 +182,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.lineinfile:",
             "    path: ${2:/etc/hosts}",
             "    regexp: ${3:\"^text.*$\"}",
@@ -182,12 +205,12 @@
             "  # ${9:Comment}",
             "  ansible.builtin.stat:",
             "    path: ${2:/tmp/test}",
-            "    follow: ${3|true,false|}",
-            "    get_checksum: ${4|true,false|}",
-            "    get_mime: ${5|true,false|}",
+            "    follow: ${3|false,true|}",
+            "    get_checksum: ${4|false,true|}",
+            "    get_mime: ${5|false,true|}",
             "    checksum_algorithm: ${6|md5,sha1,sha224,sha256,sha384,sha512|}",
-            "    get_attributes: ${7|true,false|}",
-            "    get_md5: ${8|true,false|}",
+            "    get_attributes: ${7|false,true|}",
+            "    get_md5: ${8|false,true|}",
             "$0"
         ],
         "description": "Used for check stat of a file/directory",
@@ -201,7 +224,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.unarchive:",
             "    src: ${2:/src}",
             "    dest: ${3:/dest}",
@@ -220,7 +243,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.import_tasks:",
             "    file: ${2:tasks.yml}",
             "${0}"
@@ -235,7 +258,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.include_tasks:",
             "    file: ${2:tasks.yml}",
             "${0}"
@@ -250,7 +273,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.import_playbook: ${2:playbook.yml}",
             "${0}"
         ],
@@ -264,7 +287,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.import_role:",
             "    name: ${2:role_name}",
             "${0}"
@@ -279,7 +302,7 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.include_role:",
             "    name: ${2:role_name}",
             "    ${3:tasks_from: other}",
@@ -295,13 +318,13 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  ansible.builtin.assert:",
             "    that:",
             "      - ${2:expression}",
             "    success_msg: ${3:message}",
             "    fail_msg: ${3:message}",
-            "    quiet: ${4|true,false|}",
+            "    quiet: ${4|false,true|}",
             "${0}"
         ],
         "description": "Assert an expression"
@@ -314,16 +337,16 @@
         ],
         "body": [
             "- name: ${1:Description}",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "  when: ",
             "  block:",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "    ",
             "  rescue:",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "    ",
             "  always:",
-            "  # ${8:Comment}",
+            "  # ${99:Comment}",
             "    ",
             "$0"
         ],
