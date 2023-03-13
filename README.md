@@ -16,18 +16,22 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
 * block
 * ansible.builtin.add_host:
   * "add host to group"
+* ansible.builtin.assert:
+  * "Assert"
+* ansible.builtin.copy:
+  * "copy a file"
 * ansible.builtin.debug:
   * "debug a task"
-* ansible.builtin.package:
-  * "install a package"
-* ansible.builtin.package:
-  * "copy a file"
-* ansible.builtin.template:
-  * "generate a file from a template"
 * ansible.builtin.file:
   * "create a file"
   * "touch a file"
   * "create a directory"
+* ansible.builtin.get_url:
+  * "download file"
+* ansible.builtin.lineinfile:
+  * "include a line in a file"
+* ansible.builtin.package:
+  * "install a package"
 * ansible.builtin.service:
   * "start a service"
   * "stop a service"
@@ -36,12 +40,16 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
 * ansible.builtin.set_fact:
   * "compute a variable"
   * "set a variable"
-* ansible.builtin.lineinfile:
-  * "include a line in a file"
 * ansible.builtin.stat:
   * "status of a file or a directory"
+* ansible.builtin.template:
+  * "generate a file from a template"
 * ansible.builtin.unarchive:
   * "unarchive a compressed file"
+* ansible.builtin.user:
+  * "Create an user account",
+  * "Destroy an user account",
+  * "Modify an user account"
 * ansible.builtin.import_tasks:
   * "Import tasks"
 * ansible.builtin.include_tasks:
@@ -52,8 +60,6 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "Import role"
 * ansible.builtin.include_role:
   * "Include a Role"
-* ansible.builtin.assert:
-  * "Assert"
 
 <!-- set_fact, stat, blockinfile, lineinfile, assert, includes, wait_for, import_tasks, unarchive
 - name: Add os specific variables

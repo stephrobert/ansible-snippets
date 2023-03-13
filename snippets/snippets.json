@@ -86,7 +86,7 @@
             "    group: ${5:group}",
             "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
             "    backup: ${7|false,true|}",
-            "    follow: ${8|false, true|}",
+            "    follow: ${8|false,true|}",
             "    remote_src: ${8|false,true|}",
             "$0"
         ],
@@ -113,7 +113,7 @@
         "description": "Used for create a file from a template",
         "scope": "ansible"
     },
-    "Create File, Directory": {
+    "Create File,Directory": {
         "prefix": [
             "sr",
             "ansible.builtin.file",
@@ -130,10 +130,59 @@
             "    owner: ${4:owner}",
             "    group: ${5:group}",
             "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
-            "    follow: ${7|false, true|}",
+            "    follow: ${7|false,true|}",
             "$0"
         ],
         "description": "Used for create or destroy a file, directory, link",
+        "scope": "ansible"
+    },
+    "": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.get_url",
+            "download file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.get_url:",
+            "    url: ${2:https://}",
+            "    dest: ${3:/tmp/test}",
+            "    force_basic_auth: ${4|false,true|}",
+            "    force: ${5|false,true|}",
+            "    decompress: ${6|true,false|}",
+            "    owner: ${7:owner}",
+            "    group: ${8:group}",
+            "    mode: \"${9|0755,0640,0644,0700,0600|}\"",
+            "    timeout: ${10:10}",
+            "    use_proxy: ${11|true,false|}",
+            "    validate_certs: ${12|true,false|}",
+            "    #checksum:",
+            "    #headers:",
+            "    #   key1: value1",
+            "$0"
+        ],
+        "description": "Download file from HTTP, HTTPS or FTP",
+        "scope": "ansible"
+    },
+    "Line In file": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.lineinfile",
+            "include a line in a file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.lineinfile:",
+            "    path: ${2:/etc/hosts}",
+            "    regexp: ${3:\"^text.*$\"}",
+            "    line: ${4:\"replace\"}",
+            "    owner: ${5:owner}",
+            "    group: ${6:root}",
+            "    mode: \"${7|0755,0640,0644,0700,0600|}\""
+        ],
+        "description": "Insert a line in a file",
         "scope": "ansible"
     },
     "Manage Services": {
@@ -172,26 +221,6 @@
             "$0"
         ],
         "description": "Used for set variables",
-        "scope": "ansible"
-    },
-    "Line In file": {
-        "prefix": [
-            "sr",
-            "ansible.builtin.lineinfile",
-            "include a line in a file"
-        ],
-        "body": [
-            "- name: ${1:Description}",
-            "  # ${99:Comment}",
-            "  ansible.builtin.lineinfile:",
-            "    path: ${2:/etc/hosts}",
-            "    regexp: ${3:\"^text.*$\"}",
-            "    line: ${4:\"replace\"}",
-            "    owner: ${5:owner}",
-            "    group: ${6:root}",
-            "    mode: \"${7|0755,0640,0644,0700,0600|}\""
-        ],
-        "description": "Insert a line in a file",
         "scope": "ansible"
     },
     "Stat": {
@@ -233,7 +262,36 @@
             "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
             "${0}"
         ],
-        "description": "Unarchive"
+        "description": "Unarchive",
+        "scope": "ansible"
+    },
+    "User": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.user",
+            "Create an user account",
+            "Destroy an user account",
+            "Modify an user account"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.user:",
+            "    name: ${2:name}",
+            "    comment: ${3:comment}",
+            "    uid: ${4:1020}",
+            "    group: ${5:group}",
+            "    force: ${6|false,true|}",
+            "    append: ${7|false,true|}",
+            "    remove: ${8|false,true|}",
+            "    system: ${9|false,true|}",
+            "    move_home: ${10|false,true|}",
+            "    non_unique: ${11|false,true|}",
+            "    #groups: ",
+            "${0}"
+        ],
+        "description": "Create a user Account ",
+        "scope": "ansible"
     },
     "Import a File Task": {
         "prefix": [
