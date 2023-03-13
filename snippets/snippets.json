@@ -148,21 +148,62 @@
             "  ansible.builtin.get_url:",
             "    url: ${2:https://}",
             "    dest: ${3:/tmp/test}",
-            "    force_basic_auth: ${4|false,true|}",
-            "    force: ${5|false,true|}",
-            "    decompress: ${6|true,false|}",
-            "    owner: ${7:owner}",
-            "    group: ${8:group}",
-            "    mode: \"${9|0755,0640,0644,0700,0600|}\"",
-            "    timeout: ${10:10}",
+            "    owner: ${4:owner}",
+            "    group: ${5:group}",
+            "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
+            "    timeout: ${7:10}",
+            "    force_basic_auth: ${8|false,true|}",
+            "    force: ${9|false,true|}",
+            "    decompress: ${10|true,false|}",
             "    use_proxy: ${11|true,false|}",
             "    validate_certs: ${12|true,false|}",
+            "    #url_username:",
+            "    #url_password:",
             "    #checksum:",
             "    #headers:",
             "    #   key1: value1",
             "$0"
         ],
         "description": "Download file from HTTP, HTTPS or FTP",
+        "scope": "ansible"
+    },
+    "Create a group": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.group",
+            "Create a group",
+            "Destroy a group",
+            "Modify a group"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.group:",
+            "    name: ${2:somegroup}",
+            "    state: ${3|present,absent|}",
+            "    gid: ${4:1020}",
+            "    system: ${9|false,true|}",
+            "    non_unique: ${11|false,true|}",
+            "${0}"
+        ],
+        "description": "Create a group ",
+        "scope": "ansible"
+    },
+    "Hostname": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.hostname",
+            "manage hostname"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.hostname:",
+            "    name: ${2:hostname}",
+            "    use: ${3|systemd,alpine,debian,freebsd,generic,macos,macosx,darwin,openbsd,openrc,redhat,sles,solaris|}",
+            "${0}"
+        ],
+        "description": "Manage hostname",
         "scope": "ansible"
     },
     "Line In file": {
@@ -223,6 +264,28 @@
         "description": "Used for set variables",
         "scope": "ansible"
     },
+    "Setup": {
+        "prefix": [
+            "sr",
+            "ansible.builtin.setup",
+            "Get facts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${9:Comment}",
+            "  ansible.builtin.setup:",
+            "    gather_subset:",
+            "      - '!all'",
+            "      - facter",
+            "    filter:",
+            "      - 'ansible_distribution'",
+            "      - 'ansible_machine_id'",
+            "      - 'ansible_*_mb'",
+            "$0"
+        ],
+        "description": "Gathers facts about remote hosts",
+        "scope": "ansible"
+    },
     "Stat": {
         "prefix": [
             "sr",
@@ -278,15 +341,16 @@
             "  # ${99:Comment}",
             "  ansible.builtin.user:",
             "    name: ${2:name}",
-            "    comment: ${3:comment}",
-            "    uid: ${4:1020}",
-            "    group: ${5:group}",
-            "    force: ${6|false,true|}",
-            "    append: ${7|false,true|}",
-            "    remove: ${8|false,true|}",
-            "    system: ${9|false,true|}",
-            "    move_home: ${10|false,true|}",
-            "    non_unique: ${11|false,true|}",
+            "    state: ${3|present,absent|}",
+            "    comment: ${4:comment}",
+            "    uid: ${5:1020}",
+            "    group: ${6:group}",
+            "    force: ${7|false,true|}",
+            "    append: ${8|false,true|}",
+            "    remove: ${9|false,true|}",
+            "    system: ${10|false,true|}",
+            "    move_home: ${11|false,true|}",
+            "    non_unique: ${12|false,true|}",
             "    #groups: ",
             "${0}"
         ],
@@ -387,7 +451,6 @@
         ],
         "description": "Assert an expression"
     },
-
     "Insert a block": {
         "prefix": [
             "sr",
@@ -411,5 +474,4 @@
         "description": "User for create a block",
         "scope": "ansible"
     }
-
 }

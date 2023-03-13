@@ -28,6 +28,12 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "create a directory"
 * ansible.builtin.get_url:
   * "download file"
+* ansible.builtin.group:
+  * "Create a group",
+  * "Destroy a group",
+  * "Modify a group"
+* ansible.builtin.hostname:
+  * "Manage hostname"
 * ansible.builtin.lineinfile:
   * "include a line in a file"
 * ansible.builtin.package:
@@ -37,6 +43,8 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "stop a service"
   * "enable a service"
   * "disable a service"
+* ansible.builtin.setup:
+  * "get facts"
 * ansible.builtin.set_fact:
   * "compute a variable"
   * "set a variable"
