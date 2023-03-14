@@ -28,6 +28,8 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "create a file"
   * "touch a file"
   * "create a directory"
+* ansible.builtin.find
+  * "Get list o files"
 * ansible.builtin.get_url:
   * "download file"
 * ansible.builtin.group:

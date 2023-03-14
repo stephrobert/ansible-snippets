@@ -1,7 +1,7 @@
 {
     "Insert a playbook": {
         "prefix": [
-            "playbook basic skeleton"
+            "Playbook basic skeleton."
         ],
         "body": [
             "---",
@@ -17,7 +17,7 @@
     },
     "Insert a playboo with include_vars": {
         "prefix": [
-            "playbook skeleton with include_vars"
+            "Playbook skeleton with include_vars."
         ],
         "body": [
             "---",
@@ -38,10 +38,33 @@
         "description": "Insert the header of a playbook with include_vars",
         "scope": "ansible"
     },
+    "Insert a block": {
+        "prefix": [
+            "block"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  when: ",
+            "  block:",
+            "  # ${99:Comment}",
+            "    ",
+            "  rescue:",
+            "  # ${99:Comment}",
+            "    ",
+            "  always:",
+            "  # ${99:Comment}",
+            "    ",
+            "$0"
+        ],
+        "description": "User for create a block",
+        "scope": "ansible"
+    },
     "Add Host to Group": {
         "prefix": [
+            "add_host",
             "ansible.builtin.add_host",
-            "add host to group"
+            "Add host to group."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -57,7 +80,7 @@
     },
     "Assert expression": {
         "prefix": [
-            "Assert",
+            "assert",
             "ansible.builtin.assert"
         ],
         "body": [
@@ -75,8 +98,9 @@
     },
     "Debug": {
         "prefix": [
+            "debug",
             "ansible.builtin.debug",
-            "debug a task"
+            "Debug a task."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -90,8 +114,9 @@
     },
     "Install package": {
         "prefix": [
+            "package",
             "ansible.builtin.package",
-            "install a package"
+            "Install a package."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -107,8 +132,9 @@
     },
     "Copy a file": {
         "prefix": [
+            "copy",
             "ansible.builtin.copy",
-            "copy a file"
+            "Copy a file."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -127,31 +153,13 @@
         "description": "Used for create a file from a template",
         "scope": "ansible"
     },
-    "Create file from Template": {
-        "prefix": [
-            "ansible.builtin.template",
-            "generate a file from a template"
-        ],
-        "body": [
-            "- name: ${1:Description}",
-            "  # ${99:Comment}",
-            "  ansible.builtin.template:",
-            "    src: ${2:source}",
-            "    dest: ${3:dest}",
-            "    owner: ${4:owner}",
-            "    group: ${5:group}",
-            "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
-            "$0"
-        ],
-        "description": "Used for create a file from a template",
-        "scope": "ansible"
-    },
     "Create File,Directory": {
         "prefix": [
+            "file",
             "ansible.builtin.file",
-            "create a file",
-            "touch a file",
-            "create a directory"
+            "Create a file.",
+            "Touch a file.",
+            "Create a directory."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -168,10 +176,41 @@
         "description": "Used for create or destroy a file, directory, link",
         "scope": "ansible"
     },
+    "Get list of files": {
+        "prefix": [
+            "find",
+            "ansible.builtin.find",
+            "Find files."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.find:",
+            "    paths: ${2:/tmp/test}",
+            "    file_type: ${3|file,any,directory,link|}",
+            "    depth: ${4|unlimited,1|}",
+            "    # age: ${5:1w}",
+            "    # age_stamp: ${6|mtime,atime,ctime|}",
+            "    patterns: ",
+            "      - ${7:expr}",
+            "    size: \"${8:-1}\" # Use a negative size to find files equal to or less than the specified size.",
+            "    use_regex: ${9|false,true|}",
+            "    recurse: ${10|false,true|}",
+            "    read_whole_file: ${11|false,true|}",
+            "    # excludes:",
+            "    #   - ${12: expr}",
+            "    # get_checksum: ${13|false,true|}",
+            "    # hidden:  ${14|false,true|}",
+            "$0"
+        ],
+        "description": "Return a list of files based on specific criteria",
+        "scope": "ansible"
+    },
     "": {
         "prefix": [
+            "get_url",
             "ansible.builtin.get_url",
-            "download file"
+            "Download file."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -188,10 +227,10 @@
             "    decompress: ${10|true,false|}",
             "    use_proxy: ${11|true,false|}",
             "    validate_certs: ${12|true,false|}",
-            "    #url_username:",
-            "    #url_password:",
-            "    #checksum:",
-            "    #headers:",
+            "    # url_username:",
+            "    # url_password:",
+            "    # checksum:",
+            "    # headers:",
             "    #   key1: value1",
             "$0"
         ],
@@ -200,6 +239,7 @@
     },
     "Create a group": {
         "prefix": [
+            "group",
             "ansible.builtin.group",
             "Create a group",
             "Destroy a group",
@@ -221,6 +261,7 @@
     },
     "Hostname": {
         "prefix": [
+            "hostname",
             "ansible.builtin.hostname",
             "manage hostname"
         ],
@@ -237,6 +278,7 @@
     },
     "Line In file": {
         "prefix": [
+            "lineinfile",
             "ansible.builtin.lineinfile",
             "include a line in a file"
         ],
@@ -256,6 +298,7 @@
     },
     "Manage Services": {
         "prefix": [
+            "service",
             "ansible.builtin.service",
             "start a service",
             "stop a service",
@@ -276,6 +319,7 @@
     },
     "Service Facts": {
         "prefix": [
+            "service_facts",
             "ansible.builtin.service_facts",
             "Get service state"
         ],
@@ -290,6 +334,7 @@
     },
     "Set Facts": {
         "prefix": [
+            "set_fact",
             "ansible.builtin.set_fact",
             "compute a variable",
             "set a variable"
@@ -306,6 +351,7 @@
     },
     "Setup": {
         "prefix": [
+            "setup",
             "ansible.builtin.setup",
             "Get facts"
         ],
@@ -327,6 +373,7 @@
     },
     "Stat": {
         "prefix": [
+            "stat",
             "ansible.builtin.stat",
             "status of a file or a directory"
         ],
@@ -346,8 +393,29 @@
         "description": "Used for check stat of a file/directory",
         "scope": "ansible"
     },
+    "Create file from Template": {
+        "prefix": [
+            "template",
+            "ansible.builtin.template",
+            "generate a file from a template"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.template:",
+            "    src: ${2:source}",
+            "    dest: ${3:dest}",
+            "    owner: ${4:owner}",
+            "    group: ${5:group}",
+            "    mode: \"${6|0755,0640,0644,0700,0600|}\"",
+            "$0"
+        ],
+        "description": "Used for create a file from a template",
+        "scope": "ansible"
+    },
     "Unarchive": {
         "prefix": [
+            "unarchive",
             "ansible.builtin.unarchive",
             "unarchive a compressed file"
         ],
@@ -367,6 +435,7 @@
     },
     "User": {
         "prefix": [
+            "user",
             "ansible.builtin.user",
             "Create an user account",
             "Destroy an user account",
@@ -397,6 +466,7 @@
     },
     "Wait for connection": {
         "prefix": [
+            "wait_for_connection",
             "ansible.builtin.wait_for_connection",
             "Waits until remote system is reachable"
         ],
@@ -416,6 +486,7 @@
     },
     "Wait for a condition": {
         "prefix": [
+            "wait_for",
             "ansible.builtin.wait_for",
             "Waits for a condition before continuing"
         ],
@@ -444,7 +515,7 @@
     },
     "Import a File Task": {
         "prefix": [
-            "Import tasks",
+            "Import tasks.",
             "ansible.builtin.import_tasks"
         ],
         "body": [
@@ -459,7 +530,7 @@
     },
     "Include a Task File": {
         "prefix": [
-            "Include tasks",
+            "Include tasks.",
             "ansible.builtin.include_tasks"
         ],
         "body": [
@@ -474,7 +545,7 @@
     },
     "Import a Playbook": {
         "prefix": [
-            "Import playbook",
+            "Import playbook.",
             "ansible.builtin.import_playbook"
         ],
         "body": [
@@ -488,7 +559,7 @@
     },
     "Import a Role": {
         "prefix": [
-            "Import role",
+            "Import role.",
             "ansible.builtin.import_role"
         ],
         "body": [
@@ -503,7 +574,7 @@
     },
     "Include a Role": {
         "prefix": [
-            "Include role",
+            "Include role.",
             "ansible.builtin.include_role"
         ],
         "body": [
@@ -519,7 +590,7 @@
     },
     "Include vars:": {
         "prefix": [
-            "Include vars",
+            "Include vars.",
             "ansible.builtin.include_vars"
         ],
         "body": [
@@ -543,28 +614,6 @@
             "$0"
         ],
         "description": "Include vars",
-        "scope": "ansible"
-    },
-    "Insert a block": {
-        "prefix": [
-            "block"
-        ],
-        "body": [
-            "- name: ${1:Description}",
-            "  # ${99:Comment}",
-            "  when: ",
-            "  block:",
-            "  # ${99:Comment}",
-            "    ",
-            "  rescue:",
-            "  # ${99:Comment}",
-            "    ",
-            "  always:",
-            "  # ${99:Comment}",
-            "    ",
-            "$0"
-        ],
-        "description": "User for create a block",
         "scope": "ansible"
     }
 }
