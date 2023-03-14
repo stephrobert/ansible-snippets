@@ -1,8 +1,23 @@
 {
     "Insert a playbook": {
         "prefix": [
-            "sr",
-            "playbook"
+            "playbook basic skeleton"
+        ],
+        "body": [
+            "---",
+            "# Description",
+            "- name: ${1:Description of the playbook}",
+            "  hosts: ${2:all}",
+            "  gather_facts: ${3|true,false|}",
+            "  tasks:",
+            "    ${0}"
+        ],
+        "description": "Insert the header of a playbook",
+        "scope": "ansible"
+    },
+    "Insert a playboo with include_vars": {
+        "prefix": [
+            "playbook skeleton with include_vars"
         ],
         "body": [
             "---",
@@ -20,12 +35,11 @@
             "  tasks:",
             "    ${0}"
         ],
-        "description": "Insert the header of a playbook",
+        "description": "Insert the header of a playbook with include_vars",
         "scope": "ansible"
     },
     "Add Host to Group": {
         "prefix": [
-            "sr",
             "ansible.builtin.add_host",
             "add host to group"
         ],
@@ -43,7 +57,6 @@
     },
     "Assert expression": {
         "prefix": [
-            "sr",
             "Assert",
             "ansible.builtin.assert"
         ],
@@ -62,7 +75,6 @@
     },
     "Debug": {
         "prefix": [
-            "sr",
             "ansible.builtin.debug",
             "debug a task"
         ],
@@ -78,7 +90,6 @@
     },
     "Install package": {
         "prefix": [
-            "sr",
             "ansible.builtin.package",
             "install a package"
         ],
@@ -96,7 +107,6 @@
     },
     "Copy a file": {
         "prefix": [
-            "sr",
             "ansible.builtin.copy",
             "copy a file"
         ],
@@ -119,7 +129,6 @@
     },
     "Create file from Template": {
         "prefix": [
-            "sr",
             "ansible.builtin.template",
             "generate a file from a template"
         ],
@@ -139,7 +148,6 @@
     },
     "Create File,Directory": {
         "prefix": [
-            "sr",
             "ansible.builtin.file",
             "create a file",
             "touch a file",
@@ -162,7 +170,6 @@
     },
     "": {
         "prefix": [
-            "sr",
             "ansible.builtin.get_url",
             "download file"
         ],
@@ -193,7 +200,6 @@
     },
     "Create a group": {
         "prefix": [
-            "sr",
             "ansible.builtin.group",
             "Create a group",
             "Destroy a group",
@@ -215,7 +221,6 @@
     },
     "Hostname": {
         "prefix": [
-            "sr",
             "ansible.builtin.hostname",
             "manage hostname"
         ],
@@ -232,7 +237,6 @@
     },
     "Line In file": {
         "prefix": [
-            "sr",
             "ansible.builtin.lineinfile",
             "include a line in a file"
         ],
@@ -252,7 +256,6 @@
     },
     "Manage Services": {
         "prefix": [
-            "sr",
             "ansible.builtin.service",
             "start a service",
             "stop a service",
@@ -273,7 +276,6 @@
     },
     "Service Facts": {
         "prefix": [
-            "sr",
             "ansible.builtin.service_facts",
             "Get service state"
         ],
@@ -288,7 +290,6 @@
     },
     "Set Facts": {
         "prefix": [
-            "sr",
             "ansible.builtin.set_fact",
             "compute a variable",
             "set a variable"
@@ -305,7 +306,6 @@
     },
     "Setup": {
         "prefix": [
-            "sr",
             "ansible.builtin.setup",
             "Get facts"
         ],
@@ -327,7 +327,6 @@
     },
     "Stat": {
         "prefix": [
-            "sr",
             "ansible.builtin.stat",
             "status of a file or a directory"
         ],
@@ -349,7 +348,6 @@
     },
     "Unarchive": {
         "prefix": [
-            "sr",
             "ansible.builtin.unarchive",
             "unarchive a compressed file"
         ],
@@ -369,7 +367,6 @@
     },
     "User": {
         "prefix": [
-            "sr",
             "ansible.builtin.user",
             "Create an user account",
             "Destroy an user account",
@@ -400,7 +397,6 @@
     },
     "Wait for connection": {
         "prefix": [
-            "sr",
             "ansible.builtin.wait_for_connection",
             "Waits until remote system is reachable"
         ],
@@ -420,7 +416,6 @@
     },
     "Wait for a condition": {
         "prefix": [
-            "sr",
             "ansible.builtin.wait_for",
             "Waits for a condition before continuing"
         ],
@@ -449,7 +444,6 @@
     },
     "Import a File Task": {
         "prefix": [
-            "sr",
             "Import tasks",
             "ansible.builtin.import_tasks"
         ],
@@ -465,7 +459,6 @@
     },
     "Include a Task File": {
         "prefix": [
-            "sr",
             "Include tasks",
             "ansible.builtin.include_tasks"
         ],
@@ -481,7 +474,6 @@
     },
     "Import a Playbook": {
         "prefix": [
-            "sr",
             "Import playbook",
             "ansible.builtin.import_playbook"
         ],
@@ -496,7 +488,6 @@
     },
     "Import a Role": {
         "prefix": [
-            "sr",
             "Import role",
             "ansible.builtin.import_role"
         ],
@@ -512,7 +503,6 @@
     },
     "Include a Role": {
         "prefix": [
-            "sr",
             "Include role",
             "ansible.builtin.include_role"
         ],
@@ -529,7 +519,6 @@
     },
     "Include vars:": {
         "prefix": [
-            "sr",
             "Include vars",
             "ansible.builtin.include_vars"
         ],
@@ -558,7 +547,6 @@
     },
     "Insert a block": {
         "prefix": [
-            "sr",
             "block"
         ],
         "body": [
