@@ -4,7 +4,7 @@
   "description": "Stephane ROBERT Ansible Snippets for VScode",
   "version": "0.2.13",
   "engines": {
-    "vscode": "^1.76.0"
+    "vscode": "^0.10.5"
   },
   "icon": "img/asr.png",
   "publisher": "srobert0560",
