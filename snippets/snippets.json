@@ -206,7 +206,7 @@
         "description": "Return a list of files based on specific criteria",
         "scope": "ansible"
     },
-    "": {
+    "Download file": {
         "prefix": [
             "get_url",
             "ansible.builtin.get_url",
@@ -450,6 +450,34 @@
         ],
         "description": "Unarchive",
         "scope": "ansible"
+    },
+    "Interacts with HTTP/S webservices": {
+        "prefix": [
+            "uri",
+            "ansible.builtin.uri",
+            "Interact with webservice",
+            "Interact with API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.uri:",
+            "    url: ${2:https://your.jira.example.com/rest/api/2/issue/}",
+            "    headers:",
+            "      Content-Type: application/json",
+            "    user: ${3:your_username}",
+            "    password: ${4:your_pass}",
+            "    force_basic_auth: ${5|false,true|}",
+            "    method: ${6|GET,POST,PUT,PATCH,DELETE|}",
+            "    body: ${7:\"{{ lookup('ansible.builtin.file','issue.json') \\}\\}\"}",
+            "    status_code: ${8|200,201,204,301|}",
+            "    body_format: ${9|json,text,xml|}",
+            "    return_content: ${10|false,true|}",
+            "${0}"
+        ],
+        "description": "Interacts with HTTP/S webservices",
+        "scope": "ansible"
+
     },
     "User": {
         "prefix": [

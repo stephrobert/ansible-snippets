@@ -62,6 +62,9 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "generate a file from a template"
 * ansible.builtin.unarchive:
   * "unarchive a compressed file"
+* ansible.builtin.uri
+  * "Interact with webservice",
+  * "Interact with API"
 * ansible.builtin.user:
   * "Create an user account",
   * "Destroy an user account",
