@@ -24,6 +24,8 @@ code when you are recommendations on my [personal blog](https://blog.stephane-ro
   * "copy a file"
 * ansible.builtin.debug:
   * "debug a task"
+* ansible.builtin.fetch
+  * "Get a file from remote node"
 * ansible.builtin.file:
   * "create a file"
   * "touch a file"
