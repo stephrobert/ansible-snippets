@@ -112,24 +112,6 @@
         "description": "Used for display message or variable",
         "scope": "ansible"
     },
-    "Install package": {
-        "prefix": [
-            "package",
-            "ansible.builtin.package",
-            "Install a package."
-        ],
-        "body": [
-            "- name: ${1:Description}",
-            "  # ${99:Comment}",
-            "  ansible.builtin.package:",
-            "    name:",
-            "      - ${2:top}",
-            "    state: ${3|present,absent|}",
-            "$0"
-        ],
-        "description": "Used for Install package on system",
-        "scope": "ansible"
-    },
     "Copy a file": {
         "prefix": [
             "copy",
@@ -151,6 +133,24 @@
             "$0"
         ],
         "description": "Used for create a file from a template",
+        "scope": "ansible"
+    },
+    "Fetch files from remote Node": {
+        "prefix": [
+            "fetch",
+            "ansible.builtin.fetch",
+            "Get a file from remote node."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.fetch:",
+            "    src: ${2:/tmp/uniquefile}",
+            "    dest: ${3:/tmp/special/}",
+            "    flat: ${4|false,true|}",
+            "$0"
+        ],
+        "description": "Fetch files from remote Node",
         "scope": "ansible"
     },
     "Create File,Directory": {
@@ -188,7 +188,7 @@
             "  ansible.builtin.find:",
             "    paths: ${2:/tmp/test}",
             "    file_type: ${3|file,any,directory,link|}",
-            "    depth: ${4|unlimited,1|}",
+            "    # depth: ${4:1}",
             "    # age: ${5:1w}",
             "    # age_stamp: ${6|mtime,atime,ctime|}",
             "    patterns: ",
@@ -294,6 +294,24 @@
             "    mode: \"${7|0755,0640,0644,0700,0600|}\""
         ],
         "description": "Insert a line in a file",
+        "scope": "ansible"
+    },
+    "Install package": {
+        "prefix": [
+            "package",
+            "ansible.builtin.package",
+            "Install a package."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.builtin.package:",
+            "    name:",
+            "      - ${2:top}",
+            "    state: ${3|present,absent|}",
+            "$0"
+        ],
+        "description": "Used for Install package on system",
         "scope": "ansible"
     },
     "Manage Services": {
