@@ -1,63 +1,63 @@
 {
-    "Insert a playbook": {
-        "prefix": [
-            "Playbook basic skeleton."
-        ],
-        "body": [
-            "---",
-            "# Description",
-            "- name: ${1:Description of the playbook}",
-            "  hosts: ${2:all}",
-            "  gather_facts: ${3|true,false|}",
-            "  tasks:",
-            "    ${0}"
-        ],
-        "description": "Insert the header of a playbook",
-        "scope": "ansible"
-    },
-    "Insert a playbook with include_vars": {
-        "prefix": [
-            "Playbook skeleton with include_vars."
-        ],
-        "body": [
-            "---",
-            "# Description",
-            "- name: ${1:Description of playbook}",
-            "  hosts: ${2:all}",
-            "  gather_facts: ${3|true,false|}",
-            "  vars:",
-            "    key: value",
-            "    # Uncomment next lines to use with include_vars",
-            "    # ansible_distro: \"{{ ansible_distribution | lower | replace('\\\"', '') }}\"",
-            "    # ansible_distro_version: \"{{ ansible_distribution_version | lower | replace('/', '_') }}\"",
-            "    # ansible_distro_release: \"{{ ansible_distribution_release | lower }}\"",
-            "    # ansible_distro_major_version: \"{{ ansible_distribution_major_version | lower | replace('/', '_') }}\"",
-            "  tasks:",
-            "    ${0}"
-        ],
-        "description": "Insert the header of a playbook with include_vars",
-        "scope": "ansible"
-    },
-    "Insert a block": {
-        "prefix": [
-            "block"
-        ],
-        "body": [
-            "- name: ${1:Description}",
-            "  # ${99:Comment}",
-            "  when: ",
-            "  block:",
-            "  # ${99:Comment}",
-            "    ",
-            "  rescue:",
-            "  # ${99:Comment}",
-            "    ",
-            "  always:",
-            "  # ${99:Comment}",
-            "    ",
-            "$0"
-        ],
-        "description": "User for create a block",
-        "scope": "ansible"
-    }
+  "Insert a playbook": {
+    "prefix": [
+      "Playbook basic skeleton."
+    ],
+    "body": [
+      "---",
+      "# Description",
+      "- name: ${1:Description of the playbook}",
+      "  hosts: ${2:all}",
+      "  gather_facts: ${3|true,false|}",
+      "  tasks:",
+      "    ${0}"
+    ],
+    "description": "Insert the header of a playbook",
+    "scope": "ansible"
+  },
+  "Insert a playboo with include_vars": {
+    "prefix": [
+      "Playbook skeleton with include_vars."
+    ],
+    "body": [
+      "---",
+      "# Description",
+      "- name: ${1:Description of playbook}",
+      "  hosts: ${2:all}",
+      "  gather_facts: ${3|true,false|}",
+      "  vars:",
+      "    key: value",
+      "    # Uncomment next lines to use with include_vars",
+      "    # ansible_distro: \"{{ ansible_distribution | lower | replace('\\\"', '') }}\"",
+      "    # ansible_distro_version: \"{{ ansible_distribution_version | lower | replace('/', '_') }}\"",
+      "    # ansible_distro_release: \"{{ ansible_distribution_release | lower }}\"",
+      "    # ansible_distro_major_version: \"{{ ansible_distribution_major_version | lower | replace('/', '_') }}\"",
+      "  tasks:",
+      "    ${0}"
+    ],
+    "description": "Insert the header of a playbook with include_vars",
+    "scope": "ansible"
+  },
+  "Insert a block": {
+    "prefix": [
+      "block"
+    ],
+    "body": [
+      "- name: ${1:Description}",
+      "  # ${99:Comment}",
+      "  when: ",
+      "  block:",
+      "  # ${99:Comment}",
+      "    ",
+      "  rescue:",
+      "  # ${99:Comment}",
+      "    ",
+      "  always:",
+      "  # ${99:Comment}",
+      "    ",
+      "$0"
+    ],
+    "description": "User for create a block",
+    "scope": "ansible"
+  }
 }
