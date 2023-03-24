@@ -20,6 +20,30 @@
       {
         "language": "ansible",
         "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "ansible",
+        "path": "./snippets/ansible.builtin.snippets.json"
+      },
+      {
+        "language": "ansible",
+        "path": "./snippets/ansible.posix.snippets.json"
+      },
+      {
+        "language": "ansible",
+        "path": "./snippets/ansible.windows.snippets.json"
+      },
+      {
+        "language": "ansible",
+        "path": "./snippets/awx.awx.snippets.json"
+      },
+      {
+        "language": "ansible",
+        "path": "./snippets/community.general.snippets.json"
+      },
+      {
+        "language": "ansible",
+        "path": "./snippets/community.windows.snippets.json"
       }
     ]
   }
