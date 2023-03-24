@@ -1,0 +1,1856 @@
+{
+    "Runs commands on a remote Windows host based on the PsExec model": {
+        "prefix": [
+            "community.windows.psexec",
+            "Runs commands on a remote Windows host based on the PsExec model"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.psexec:",
+            "    arguments: ${2:string}",
+            "    asynchronous: ${3|false,true|}",
+            "    connection_password: ${4:string}",
+            "    connection_timeout: ${5:60}",
+            "    connection_username: ${6:string}",
+            "    encrypt: ${7|true,false|}",
+            "    executable: ${8:string}",
+            "    hostname: ${9:string}",
+            "    integrity_level: ${10|default,limited,elevated|}",
+            "    interactive: ${11|false,true|}",
+            "    interactive_session: ${12:0}",
+            "    load_profile: ${13|true,false|}",
+            "    port: ${14:445}",
+            "    priority: ${15|normal,above_normal,below_normal,high,idle,realtime|}",
+            "    process_password: ${16:string}",
+            "    process_timeout: ${17:0}",
+            "    process_username: ${18:string}",
+            "    show_ui_on_logon_screen: ${19|false,true|}",
+            "    stdin: ${20:string}",
+            "    working_directory: ${21:C:\\Windows\\System32}",
+            "$0"
+        ],
+        "description": "Runs commands on a remote Windows host based on the PsExec model",
+        "scope": "ansible"
+    },
+    "Used to make changes to the system wide Audit Policy": {
+        "prefix": [
+            "community.windows.win_audit_policy_system",
+            "Used to make changes to the system wide Audit Policy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_audit_policy_system:",
+            "    audit_type:",
+            "      - ${2:element}",
+            "    category: ${3:string}",
+            "    subcategory: ${4:string}",
+            "$0"
+        ],
+        "description": "Used to make changes to the system wide Audit Policy",
+        "scope": "ansible"
+    },
+    "Adds an audit rule to files, folders, or registry keys": {
+        "prefix": [
+            "community.windows.win_audit_rule",
+            "Adds an audit rule to files, folders, or registry keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_audit_rule:",
+            "    audit_flags:",
+            "      - ${2:element}",
+            "    inheritance_flags:",
+            "      - ${3:element}",
+            "    path: ${4:path}",
+            "    rights:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    user: ${8:string}",
+            "$0"
+        ],
+        "description": "Adds an audit rule to files, folders, or registry keys",
+        "scope": "ansible"
+    },
+    "Adds or Sets auto logon registry keys.": {
+        "prefix": [
+            "community.windows.win_auto_logon",
+            "Adds or Sets auto logon registry keys."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_auto_logon:",
+            "    logon_count: ${2:int}",
+            "    password: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "    username: ${5:string}",
+            "$0"
+        ],
+        "description": "Adds or Sets auto logon registry keys.",
+        "scope": "ansible"
+    },
+    "Get information on certificates from a Windows Certificate Store": {
+        "prefix": [
+            "community.windows.win_certificate_info",
+            "Get information on certificates from a Windows Certificate Store"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_certificate_info:",
+            "    store_location: ${2|LocalMachine,CurrentUser|}",
+            "    store_name: ${3:My}",
+            "    thumbprint: ${4:string}",
+            "$0"
+        ],
+        "description": "Get information on certificates from a Windows Certificate Store",
+        "scope": "ansible"
+    },
+    "Set windows description, owner and organization": {
+        "prefix": [
+            "community.windows.win_computer_description",
+            "Set windows description, owner and organization"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_computer_description:",
+            "    description: ${2:string}",
+            "    organization: ${3:string}",
+            "    owner: ${4:string}",
+            "$0"
+        ],
+        "description": "Set windows description, owner and organization",
+        "scope": "ansible"
+    },
+    "Manages Windows Credentials in the Credential Manager": {
+        "prefix": [
+            "community.windows.win_credential",
+            "Manages Windows Credentials in the Credential Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_credential:",
+            "    alias: ${2:string}",
+            "    attributes:",
+            "      - ${3:element}",
+            "    comment: ${4:string}",
+            "    name: ${5:string}",
+            "    persistence: ${6|local,enterprise|}",
+            "    secret: ${7:string}",
+            "    secret_format: ${8|text,base64|}",
+            "    state: ${9|present,absent|}",
+            "    type: ${10:string}",
+            "    update_secret: ${11|always,on_create|}",
+            "    username: ${12:string}",
+            "$0"
+        ],
+        "description": "Manages Windows Credentials in the Credential Manager",
+        "scope": "ansible"
+    },
+    "Module to enable Data Deduplication on a volume.": {
+        "prefix": [
+            "community.windows.win_data_deduplication",
+            "Module to enable Data Deduplication on a volume."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_data_deduplication:",
+            "    drive_letter: ${2:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Module to enable Data Deduplication on a volume.",
+        "scope": "ansible"
+    },
+    "Consolidate fragmented files on local volumes": {
+        "prefix": [
+            "community.windows.win_defrag",
+            "Consolidate fragmented files on local volumes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_defrag:",
+            "    exclude_volumes:",
+            "      - ${2:element}",
+            "    freespace_consolidation: ${3|false,true|}",
+            "    include_volumes:",
+            "      - ${4:element}",
+            "    parallel: ${5|false,true|}",
+            "    priority: ${6|low,normal|}",
+            "$0"
+        ],
+        "description": "Consolidate fragmented files on local volumes",
+        "scope": "ansible"
+    },
+    "Manage Windows Server DHCP Leases": {
+        "prefix": [
+            "community.windows.win_dhcp_lease",
+            "Manage Windows Server DHCP Leases"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_dhcp_lease:",
+            "    description: ${2:string}",
+            "    dns_hostname: ${3:string}",
+            "    dns_regtype: ${4|aptr,a,noreg|}",
+            "    duration: ${5:int}",
+            "    ip: ${6:string}",
+            "    mac: ${7:string}",
+            "    reservation_name: ${8:string}",
+            "    scope_id: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    type: ${11|reservation,lease|}",
+            "$0"
+        ],
+        "description": "Manage Windows Server DHCP Leases",
+        "scope": "ansible"
+    },
+    "Show the attached disks and disk information of the target host": {
+        "prefix": [
+            "community.windows.win_disk_facts",
+            "Show the attached disks and disk information of the target host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_disk_facts:",
+            "    filter:",
+            "      - ${2:element}",
+            "$0"
+        ],
+        "description": "Show the attached disks and disk information of the target host",
+        "scope": "ansible"
+    },
+    "Manage ISO/VHD/VHDX mounts on Windows hosts": {
+        "prefix": [
+            "community.windows.win_disk_image",
+            "Manage ISO/VHD/VHDX mounts on Windows hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_disk_image:",
+            "    image_path: ${2:string}",
+            "    state: ${3|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage ISO/VHD/VHDX mounts on Windows hosts",
+        "scope": "ansible"
+    },
+    "Manage Windows Server DNS records": {
+        "prefix": [
+            "community.windows.win_dns_record",
+            "Manage Windows Server DNS records"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_dns_record:",
+            "    computer_name: ${2:string}",
+            "    name: ${3:string}",
+            "    port: ${4:int}",
+            "    priority: ${5:int}",
+            "    state: ${6|present,absent|}",
+            "    ttl: ${7:3600}",
+            "    type: ${8:string}",
+            "    value:",
+            "      - ${9:element}",
+            "    weight: ${10:int}",
+            "    zone: ${11:string}",
+            "$0"
+        ],
+        "description": "Manage Windows Server DNS records",
+        "scope": "ansible"
+    },
+    "Manage Windows Server DNS Zones": {
+        "prefix": [
+            "community.windows.win_dns_zone",
+            "Manage Windows Server DNS Zones"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_dns_zone:",
+            "    dns_servers:",
+            "      - ${2:element}",
+            "    dynamic_update: ${3:string}",
+            "    forwarder_timeout: ${4:int}",
+            "    name: ${5:string}",
+            "    replication: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    type: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage Windows Server DNS Zones",
+        "scope": "ansible"
+    },
+    "Manage computers in Active Directory": {
+        "prefix": [
+            "community.windows.win_domain_computer",
+            "Manage computers in Active Directory"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_domain_computer:",
+            "    description: ${2:}",
+            "    dns_hostname: ${3:string}",
+            "    domain_password: ${4:string}",
+            "    domain_server: ${5:string}",
+            "    domain_username: ${6:string}",
+            "    enabled: ${7|true,false|}",
+            "    managed_by: ${8:string}",
+            "    name: ${9:string}",
+            "    offline_domain_join: ${11|none,output,path|}",
+            "    ou: ${12:string}",
+            "    sam_account_name: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage computers in Active Directory",
+        "scope": "ansible"
+    },
+    "Creates, modifies or removes domain groups": {
+        "prefix": [
+            "community.windows.win_domain_group",
+            "Creates, modifies or removes domain groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_domain_group:",
+            "    category: ${3:string}",
+            "    description: ${4:string}",
+            "    display_name: ${5:string}",
+            "    domain_password: ${6:string}",
+            "    domain_server: ${7:string}",
+            "    domain_username: ${8:string}",
+            "    ignore_protection: ${9|false,true|}",
+            "    managed_by: ${10:string}",
+            "    name: ${11:string}",
+            "    organizational_unit: ${12:string}",
+            "    protect: ${13|false,true|}",
+            "    scope: ${14:string}",
+            "    state: ${15|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates, modifies or removes domain groups",
+        "scope": "ansible"
+    },
+    "Manage Windows domain group membership": {
+        "prefix": [
+            "community.windows.win_domain_group_membership",
+            "Manage Windows domain group membership"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_domain_group_membership:",
+            "    domain_password: ${2:string}",
+            "    domain_server: ${3:string}",
+            "    domain_username: ${4:string}",
+            "    members:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    state: ${7|present,absent,pure|}",
+            "$0"
+        ],
+        "description": "Manage Windows domain group membership",
+        "scope": "ansible"
+    },
+    "Gather information an Active Directory object": {
+        "prefix": [
+            "community.windows.win_domain_object_info",
+            "Gather information an Active Directory object"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_domain_object_info:",
+            "    domain_password: ${2:string}",
+            "    domain_server: ${3:string}",
+            "    domain_username: ${4:string}",
+            "    filter: ${5:string}",
+            "    identity: ${6:string}",
+            "    include_deleted: ${7|false,true|}",
+            "    ldap_filter: ${8:string}",
+            "    properties:",
+            "      - ${9:element}",
+            "    search_base: ${10:string}",
+            "    search_scope: ${11:string}",
+            "$0"
+        ],
+        "description": "Gather information an Active Directory object",
+        "scope": "ansible"
+    },
+    "Manage Active Directory Organizational Units": {
+        "prefix": [
+            "community.windows.win_domain_ou",
+            "Manage Active Directory Organizational Units"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_domain_ou:",
+            "    domain_password: ${2:string}",
+            "    domain_server: ${3:string}",
+            "    domain_username: ${4:string}",
+            "    filter: ${5:*}",
+            "    name: ${6:string}",
+            "    path: ${7:string}",
+            "    protected: ${9|false,true|}",
+            "    recursive: ${10|false,true|}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Active Directory Organizational Units",
+        "scope": "ansible"
+    },
+    "Manages Windows Active Directory user accounts": {
+        "prefix": [
+            "community.windows.win_domain_user",
+            "Manages Windows Active Directory user accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_domain_user:",
+            "    account_locked: ${2|false,true|}",
+            "    city: ${4:string}",
+            "    company: ${5:string}",
+            "    country: ${6:string}",
+            "    delegates:",
+            "      - ${7:element}",
+            "    description: ${8:string}",
+            "    display_name: ${9:string}",
+            "    domain_password: ${10:string}",
+            "    domain_server: ${11:string}",
+            "    domain_username: ${12:string}",
+            "    email: ${13:string}",
+            "    enabled: ${14|true,false|}",
+            "    firstname: ${15:string}",
+            "    groups:",
+            "      - ${16:element}",
+            "    groups_action: ${17|replace,add,remove|}",
+            "    groups_missing_behaviour: ${18|fail,ignore,warn|}",
+            "    identity: ${19:string}",
+            "    name: ${20:string}",
+            "    password: ${21:string}",
+            "    password_expired: ${22|false,true|}",
+            "    password_never_expires: ${23|false,true|}",
+            "    path: ${24:string}",
+            "    postal_code: ${25:string}",
+            "    sam_account_name: ${26:string}",
+            "    spn:",
+            "      - ${27:element}",
+            "    spn_action: ${28|replace,add,remove|}",
+            "    state: ${29|present,absent,query|}",
+            "    state_province: ${30:string}",
+            "    street: ${31:string}",
+            "    surname: ${32:string}",
+            "    update_password: ${33|always,on_create,when_changed|}",
+            "    upn: ${34:string}",
+            "    user_cannot_change_password: ${35|false,true|}",
+            "$0"
+        ],
+        "description": "Manages Windows Active Directory user accounts",
+        "scope": "ansible"
+    },
+    "Runs ngen to recompile DLLs after .NET  updates": {
+        "prefix": [
+            "community.windows.win_dotnet_ngen",
+            "Runs ngen to recompile DLLs after .NET  updates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_dotnet_ngen:",
+            "$0"
+        ],
+        "description": "Runs ngen to recompile DLLs after .NET  updates",
+        "scope": "ansible"
+    },
+    "Manage Windows event logs": {
+        "prefix": [
+            "community.windows.win_eventlog",
+            "Manage Windows event logs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_eventlog:",
+            "    category_file: ${2:path}",
+            "    maximum_size: ${3:string}",
+            "    message_file: ${4:path}",
+            "    name: ${5:string}",
+            "    overflow_action: ${6:string}",
+            "    parameter_file: ${7:path}",
+            "    retention_days: ${8:int}",
+            "    sources:",
+            "      - ${9:element}",
+            "    state: ${10|present,absent,clear|}",
+            "$0"
+        ],
+        "description": "Manage Windows event logs",
+        "scope": "ansible"
+    },
+    "Write entries to Windows event logs": {
+        "prefix": [
+            "community.windows.win_eventlog_entry",
+            "Write entries to Windows event logs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_eventlog_entry:",
+            "    category: ${2:int}",
+            "    entry_type: ${3:string}",
+            "    event_id: ${4:int}",
+            "    log: ${5:string}",
+            "    message: ${6:string}",
+            "    raw_data: ${7:string}",
+            "    source: ${8:string}",
+            "$0"
+        ],
+        "description": "Write entries to Windows event logs",
+        "scope": "ansible"
+    },
+    "Gather information about Windows features": {
+        "prefix": [
+            "community.windows.win_feature_info",
+            "Gather information about Windows features"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_feature_info:",
+            "    name: ${2:*}",
+            "$0"
+        ],
+        "description": "Gather information about Windows features",
+        "scope": "ansible"
+    },
+    "Alters the compression of files and directories on NTFS partitions.": {
+        "prefix": [
+            "community.windows.win_file_compression",
+            "Alters the compression of files and directories on NTFS partitions."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_file_compression:",
+            "    force: ${2|true,false|}",
+            "    path: ${3:path}",
+            "    recurse: ${4|false,true|}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Alters the compression of files and directories on NTFS partitions.",
+        "scope": "ansible"
+    },
+    "Get DLL or EXE file build version": {
+        "prefix": [
+            "community.windows.win_file_version",
+            "Get DLL or EXE file build version"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_file_version:",
+            "    path: ${2:path}",
+            "$0"
+        ],
+        "description": "Get DLL or EXE file build version",
+        "scope": "ansible"
+    },
+    "Enable or disable the Windows Firewall": {
+        "prefix": [
+            "community.windows.win_firewall",
+            "Enable or disable the Windows Firewall"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_firewall:",
+            "    inbound_action: ${2:string}",
+            "    outbound_action: ${3:string}",
+            "    profiles:",
+            "      - ${4:element}",
+            "    state: ${5:string}",
+            "$0"
+        ],
+        "description": "Enable or disable the Windows Firewall",
+        "scope": "ansible"
+    },
+    "Windows firewall automation": {
+        "prefix": [
+            "community.windows.win_firewall_rule",
+            "Windows firewall automation"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_firewall_rule:",
+            "    action: ${2:string}",
+            "    description: ${3:string}",
+            "    direction: ${4:string}",
+            "    enabled: ${5|false,true|}",
+            "    group: ${6:string}",
+            "    icmp_type_code:",
+            "      - ${7:element}",
+            "    localip: ${8:string}",
+            "    localport: ${9:string}",
+            "    name: ${10:string}",
+            "    profiles:",
+            "      - ${11:element}",
+            "    program: ${12:string}",
+            "    protocol: ${13:string}",
+            "    remoteip: ${14:string}",
+            "    remoteport: ${15:string}",
+            "    service: ${16:string}",
+            "    state: ${17|present,absent|}",
+            "$0"
+        ],
+        "description": "Windows firewall automation",
+        "scope": "ansible"
+    },
+    "Formats an existing volume or a new volume on an existing partition on Windows": {
+        "prefix": [
+            "community.windows.win_format",
+            "Formats an existing volume or a new volume on an existing partition on Windows"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_format:",
+            "    allocation_unit_size: ${2:int}",
+            "    compress: ${3|false,true|}",
+            "    drive_letter: ${4:string}",
+            "    file_system: ${5:string}",
+            "    force: ${6|false,true|}",
+            "    full: ${7|false,true|}",
+            "    integrity_streams: ${8|false,true|}",
+            "    label: ${9:string}",
+            "    large_frs: ${10|false,true|}",
+            "    new_label: ${11:string}",
+            "    path: ${12:string}",
+            "$0"
+        ],
+        "description": "Formats an existing volume or a new volume on an existing partition on Windows",
+        "scope": "ansible"
+    },
+    "Manages hosts file entries on Windows.": {
+        "prefix": [
+            "community.windows.win_hosts",
+            "Manages hosts file entries on Windows."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_hosts:",
+            "    action: ${2|set,add,remove|}",
+            "    aliases:",
+            "      - ${3:element}",
+            "    canonical_name: ${4:string}",
+            "    ip_address: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages hosts file entries on Windows.",
+        "scope": "ansible"
+    },
+    "Install and uninstalls Windows hotfixes": {
+        "prefix": [
+            "community.windows.win_hotfix",
+            "Install and uninstalls Windows hotfixes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_hotfix:",
+            "    hotfix_identifier: ${2:string}",
+            "    hotfix_kb: ${3:string}",
+            "    source: ${4:path}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Install and uninstalls Windows hotfixes",
+        "scope": "ansible"
+    },
+    "Manages proxy settings for WinHTTP": {
+        "prefix": [
+            "community.windows.win_http_proxy",
+            "Manages proxy settings for WinHTTP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_http_proxy:",
+            "    bypass:",
+            "      - ${2:element}",
+            "    proxy: ${3:\"raw\"}",
+            "    source: ${4:string}",
+            "$0"
+        ],
+        "description": "Manages proxy settings for WinHTTP",
+        "scope": "ansible"
+    },
+    "Configures a virtual directory in IIS": {
+        "prefix": [
+            "community.windows.win_iis_virtualdirectory",
+            "Configures a virtual directory in IIS"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_iis_virtualdirectory:",
+            "    application: ${2:string}",
+            "    connect_as: ${3:string}",
+            "    name: ${4:string}",
+            "    password: ${5:string}",
+            "    physical_path: ${6:string}",
+            "    site: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    username: ${9:string}",
+            "$0"
+        ],
+        "description": "Configures a virtual directory in IIS",
+        "scope": "ansible"
+    },
+    "Configures IIS web applications": {
+        "prefix": [
+            "community.windows.win_iis_webapplication",
+            "Configures IIS web applications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_iis_webapplication:",
+            "    application_pool: ${2:string}",
+            "    connect_as: ${3:string}",
+            "    name: ${4:string}",
+            "    password: ${5:string}",
+            "    physical_path: ${6:string}",
+            "    site: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    username: ${9:string}",
+            "$0"
+        ],
+        "description": "Configures IIS web applications",
+        "scope": "ansible"
+    },
+    "Configure IIS Web Application Pools": {
+        "prefix": [
+            "community.windows.win_iis_webapppool",
+            "Configure IIS Web Application Pools"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_iis_webapppool:",
+            "    name: ${3:string}",
+            "    state: ${4|present,absent,restarted,started,stopped|}",
+            "$0"
+        ],
+        "description": "Configure IIS Web Application Pools",
+        "scope": "ansible"
+    },
+    "Configures a IIS Web site binding": {
+        "prefix": [
+            "community.windows.win_iis_webbinding",
+            "Configures a IIS Web site binding"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_iis_webbinding:",
+            "    certificate_hash: ${2:string}",
+            "    certificate_store_name: ${3:my}",
+            "    host_header: ${4:string}",
+            "    ip: ${5:*}",
+            "    name: ${6:string}",
+            "    port: ${7:80}",
+            "    protocol: ${8:http}",
+            "    ssl_flags: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures a IIS Web site binding",
+        "scope": "ansible"
+    },
+    "Configures a IIS Web site": {
+        "prefix": [
+            "community.windows.win_iis_website",
+            "Configures a IIS Web site"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_iis_website:",
+            "    application_pool: ${2:string}",
+            "    hostname: ${3:string}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parameters: ${6:string}",
+            "    physical_path: ${7:string}",
+            "    port: ${8:int}",
+            "    site_id: ${9:string}",
+            "    state: ${10:string}",
+            "$0"
+        ],
+        "description": "Configures a IIS Web site",
+        "scope": "ansible"
+    },
+    "Manages proxy settings for WinINet and Internet Explorer": {
+        "prefix": [
+            "community.windows.win_inet_proxy",
+            "Manages proxy settings for WinINet and Internet Explorer"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_inet_proxy:",
+            "    auto_config_url: ${2:string}",
+            "    auto_detect: ${3|true,false|}",
+            "    bypass:",
+            "      - ${4:element}",
+            "    connection: ${5:string}",
+            "    proxy: ${6:\"raw\"}",
+            "$0"
+        ],
+        "description": "Manages proxy settings for WinINet and Internet Explorer",
+        "scope": "ansible"
+    },
+    "Initializes disks on Windows Server": {
+        "prefix": [
+            "community.windows.win_initialize_disk",
+            "Initializes disks on Windows Server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_initialize_disk:",
+            "    disk_number: ${2:int}",
+            "    force: ${3|false,true|}",
+            "    online: ${4|true,false|}",
+            "    path: ${5:string}",
+            "    style: ${6|gpt,mbr|}",
+            "    uniqueid: ${7:string}",
+            "$0"
+        ],
+        "description": "Initializes disks on Windows Server",
+        "scope": "ansible"
+    },
+    "Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression": {
+        "prefix": [
+            "community.windows.win_lineinfile",
+            "Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_lineinfile:",
+            "    backrefs: ${2|false,true|}",
+            "    backup: ${3|false,true|}",
+            "    create: ${4|false,true|}",
+            "    encoding: ${5:auto}",
+            "    insertafter: ${6|EOF,*regex*|}",
+            "    insertbefore: ${7:string}",
+            "    line: ${8:string}",
+            "    newline: ${9|windows,unix|}",
+            "    path: ${10:path}",
+            "    state: ${12|present,absent|}",
+            "    validate: ${13:string}",
+            "$0"
+        ],
+        "description": "Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression",
+        "scope": "ansible"
+    },
+    "Recopilates the facts of the listening ports of the machine": {
+        "prefix": [
+            "community.windows.win_listen_ports_facts",
+            "Recopilates the facts of the listening ports of the machine"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_listen_ports_facts:",
+            "    date_format: ${2:%c}",
+            "    tcp_filter:",
+            "      - ${3:element}",
+            "$0"
+        ],
+        "description": "Recopilates the facts of the listening ports of the machine",
+        "scope": "ansible"
+    },
+    "Map network drives for users": {
+        "prefix": [
+            "community.windows.win_mapped_drive",
+            "Map network drives for users"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_mapped_drive:",
+            "    letter: ${2:string}",
+            "    password: ${3:string}",
+            "    path: ${4:path}",
+            "    state: ${5|present,absent|}",
+            "    username: ${6:string}",
+            "$0"
+        ],
+        "description": "Map network drives for users",
+        "scope": "ansible"
+    },
+    "Sends a message to logged in users on Windows hosts": {
+        "prefix": [
+            "community.windows.win_msg",
+            "Sends a message to logged in users on Windows hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_msg:",
+            "    display_seconds: ${2:10}",
+            "    msg: ${3:Hello world!}",
+            "    to: ${4:*}",
+            "    wait: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Sends a message to logged in users on Windows hosts",
+        "scope": "ansible"
+    },
+    "Enable or disable certain network adapters.": {
+        "prefix": [
+            "community.windows.win_net_adapter_feature",
+            "Enable or disable certain network adapters."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_net_adapter_feature:",
+            "    component_id:",
+            "      - ${2:element}",
+            "    interface:",
+            "      - ${3:element}",
+            "    state: ${4|enabled,disabled|}",
+            "$0"
+        ],
+        "description": "Enable or disable certain network adapters.",
+        "scope": "ansible"
+    },
+    "Manage NetBIOS over TCP/IP settings on Windows.": {
+        "prefix": [
+            "community.windows.win_netbios",
+            "Manage NetBIOS over TCP/IP settings on Windows."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_netbios:",
+            "    adapter_names:",
+            "      - ${2:element}",
+            "    state: ${3:string}",
+            "$0"
+        ],
+        "description": "Manage NetBIOS over TCP/IP settings on Windows.",
+        "scope": "ansible"
+    },
+    "Install a service using NSSM": {
+        "prefix": [
+            "community.windows.win_nssm",
+            "Install a service using NSSM"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_nssm:",
+            "    app_parameters: ${3:string}",
+            "    app_rotate_bytes: ${4:104858}",
+            "    app_rotate_online: ${5:0}",
+            "    app_stop_method_console: ${6:int}",
+            "    app_stop_method_skip: ${7:int}",
+            "    application: ${8:path}",
+            "    arguments: ${9:string}",
+            "    dependencies:",
+            "      - ${10:element}",
+            "    description: ${11:string}",
+            "    display_name: ${12:string}",
+            "    executable: ${13:path}",
+            "    name: ${14:string}",
+            "    password: ${15:string}",
+            "    start_mode: ${16|auto,delayed,disabled,manual|}",
+            "    state: ${17|present,absent,started,stopped,restarted|}",
+            "    stderr_file: ${18:path}",
+            "    stdout_file: ${19:path}",
+            "    username: ${20:string}",
+            "    working_directory: ${21:path}",
+            "$0"
+        ],
+        "description": "Install a service using NSSM",
+        "scope": "ansible"
+    },
+    "Query or change pagefile configuration": {
+        "prefix": [
+            "community.windows.win_pagefile",
+            "Query or change pagefile configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_pagefile:",
+            "    automatic: ${2|false,true|}",
+            "    drive: ${3:string}",
+            "    initial_size: ${4:int}",
+            "    maximum_size: ${5:int}",
+            "    override: ${6|true,false|}",
+            "    remove_all: ${7|false,true|}",
+            "    state: ${8|query,absent,present|}",
+            "    system_managed: ${9|false,true|}",
+            "    test_path: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Query or change pagefile configuration",
+        "scope": "ansible"
+    },
+    "Creates, changes and removes partitions on Windows Server": {
+        "prefix": [
+            "community.windows.win_partition",
+            "Creates, changes and removes partitions on Windows Server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_partition:",
+            "    active: ${2|false,true|}",
+            "    disk_number: ${3:int}",
+            "    drive_letter: ${4:string}",
+            "    gpt_type: ${5:string}",
+            "    hidden: ${6|false,true|}",
+            "    mbr_type: ${7:string}",
+            "    offline: ${8|false,true|}",
+            "    partition_number: ${9:int}",
+            "    partition_size: ${10:string}",
+            "    read_only: ${11|false,true|}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates, changes and removes partitions on Windows Server",
+        "scope": "ansible"
+    },
+    "Run Pester tests on Windows hosts": {
+        "prefix": [
+            "community.windows.win_pester",
+            "Run Pester tests on Windows hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_pester:",
+            "    output_file: ${2:string}",
+            "    output_format: ${3:NunitXML}",
+            "    path: ${4:string}",
+            "    tags:",
+            "      - ${5:element}",
+            "    version: ${7:string}",
+            "$0"
+        ],
+        "description": "Run Pester tests on Windows hosts",
+        "scope": "ansible"
+    },
+    "Changes the power plan of a Windows system": {
+        "prefix": [
+            "community.windows.win_power_plan",
+            "Changes the power plan of a Windows system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_power_plan:",
+            "    guid: ${2:string}",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "Changes the power plan of a Windows system",
+        "scope": "ansible"
+    },
+    "Provides Windows product and license information": {
+        "prefix": [
+            "community.windows.win_product_facts",
+            "Provides Windows product and license information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_product_facts:",
+            "$0"
+        ],
+        "description": "Provides Windows product and license information",
+        "scope": "ansible"
+    },
+    "Runs commands (remotely) as another (privileged) user": {
+        "prefix": [
+            "community.windows.win_psexec",
+            "Runs commands (remotely) as another (privileged) user"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psexec:",
+            "    chdir: ${2:path}",
+            "    command: ${3:string}",
+            "    elevated: ${4|false,true|}",
+            "    executable: ${5:path}",
+            "    hostnames:",
+            "      - ${6:element}",
+            "    interactive: ${7|false,true|}",
+            "    limited: ${8|false,true|}",
+            "    nobanner: ${9|false,true|}",
+            "    noprofile: ${10|false,true|}",
+            "    password: ${11:string}",
+            "    priority: ${12:string}",
+            "    session: ${13:int}",
+            "    system: ${14|false,true|}",
+            "    timeout: ${15:int}",
+            "    username: ${16:string}",
+            "    wait: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Runs commands (remotely) as another (privileged) user",
+        "scope": "ansible"
+    },
+    "Adds or removes a Windows PowerShell module": {
+        "prefix": [
+            "community.windows.win_psmodule",
+            "Adds or removes a Windows PowerShell module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psmodule:",
+            "    accept_license: ${2|false,true|}",
+            "    allow_clobber: ${3|false,true|}",
+            "    allow_prerelease: ${4|false,true|}",
+            "    maximum_version: ${5:string}",
+            "    minimum_version: ${6:string}",
+            "    name: ${7:string}",
+            "    password: ${8:string}",
+            "    repository: ${9:string}",
+            "    required_version: ${10:string}",
+            "    skip_publisher_check: ${11|false,true|}",
+            "    state: ${12|present,absent,latest|}",
+            "    url: ${13:string}",
+            "    username: ${14:string}",
+            "$0"
+        ],
+        "description": "Adds or removes a Windows PowerShell module",
+        "scope": "ansible"
+    },
+    "Gather information about PowerShell Modules": {
+        "prefix": [
+            "community.windows.win_psmodule_info",
+            "Gather information about PowerShell Modules"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psmodule_info:",
+            "    name: ${2:*}",
+            "    repository: ${3:string}",
+            "$0"
+        ],
+        "description": "Gather information about PowerShell Modules",
+        "scope": "ansible"
+    },
+    "Adds, removes or updates a Windows PowerShell repository.": {
+        "prefix": [
+            "community.windows.win_psrepository",
+            "Adds, removes or updates a Windows PowerShell repository."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psrepository:",
+            "    force: ${2|false,true|}",
+            "    installation_policy: ${3:string}",
+            "    name: ${4:string}",
+            "    password: ${5:string}",
+            "    proxy: ${6:string}",
+            "    publish_location: ${7:string}",
+            "    script_publish_location: ${8:string}",
+            "    script_source_location: ${9:string}",
+            "    source_location: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    username: ${12:string}",
+            "$0"
+        ],
+        "description": "Adds, removes or updates a Windows PowerShell repository.",
+        "scope": "ansible"
+    },
+    "Copies registered PSRepositories to other user profiles": {
+        "prefix": [
+            "community.windows.win_psrepository_copy",
+            "Copies registered PSRepositories to other user profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psrepository_copy:",
+            "    exclude:",
+            "      - ${2:element}",
+            "    exclude_profiles:",
+            "      - ${3:element}",
+            "    name:",
+            "      - ${4:element}",
+            "    profiles:",
+            "      - ${5:element}",
+            "    source: ${6:path}",
+            "$0"
+        ],
+        "description": "Copies registered PSRepositories to other user profiles",
+        "scope": "ansible"
+    },
+    "Gather information about PSRepositories": {
+        "prefix": [
+            "community.windows.win_psrepository_info",
+            "Gather information about PSRepositories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psrepository_info:",
+            "    name: ${2:*}",
+            "$0"
+        ],
+        "description": "Gather information about PSRepositories",
+        "scope": "ansible"
+    },
+    "Install and manage PowerShell scripts from a PSRepository": {
+        "prefix": [
+            "community.windows.win_psscript",
+            "Install and manage PowerShell scripts from a PSRepository"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psscript:",
+            "    allow_prerelease: ${2|false,true|}",
+            "    maximum_version: ${3:string}",
+            "    minimum_version: ${4:string}",
+            "    name: ${5:string}",
+            "    repository: ${6:string}",
+            "    required_version: ${7:string}",
+            "    scope: ${8|all_users,current_user|}",
+            "    source_password: ${9:string}",
+            "    source_username: ${10:string}",
+            "    state: ${11|present,absent,latest|}",
+            "$0"
+        ],
+        "description": "Install and manage PowerShell scripts from a PSRepository",
+        "scope": "ansible"
+    },
+    "Gather information about installed PowerShell Scripts": {
+        "prefix": [
+            "community.windows.win_psscript_info",
+            "Gather information about installed PowerShell Scripts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_psscript_info:",
+            "    name: ${2:*}",
+            "    repository: ${3:string}",
+            "$0"
+        ],
+        "description": "Gather information about installed PowerShell Scripts",
+        "scope": "ansible"
+    },
+    "Manage PSSession Configurations": {
+        "prefix": [
+            "community.windows.win_pssession_configuration",
+            "Manage PSSession Configurations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_pssession_configuration:",
+            "    access_mode: ${2:string}",
+            "    assemblies_to_load:",
+            "      - ${4:element}",
+            "    async_poll: ${5:1}",
+            "    async_timeout: ${6:300}",
+            "    author: ${7:string}",
+            "    company_name: ${8:string}",
+            "    copyright: ${9:string}",
+            "    description: ${10:string}",
+            "    execution_policy: ${12:string}",
+            "    formats_to_process:",
+            "      - ${13:element}",
+            "    group_managed_service_account: ${15:string}",
+            "    guid: ${16:\"raw\"}",
+            "    language_mode: ${17:string}",
+            "    lenient_config_fields:",
+            "      - ${18:element}",
+            "    maximum_received_data_size_per_command_mb: ${19:\"raw\"}",
+            "    maximum_received_object_size_mb: ${20:\"raw\"}",
+            "    modules_to_import:",
+            "      - ${21:element}",
+            "    mount_user_drive: ${22|false,true|}",
+            "    name: ${23:string}",
+            "    powershell_version: ${24:\"raw\"}",
+            "    processor_architecure: ${25:string}",
+            "    run_as_credential_password: ${28:string}",
+            "    run_as_credential_username: ${29:string}",
+            "    run_as_virtual_account: ${30|false,true|}",
+            "    run_as_virtual_account_groups:",
+            "      - ${31:element}",
+            "    schema_version: ${32:\"raw\"}",
+            "    scripts_to_process:",
+            "      - ${33:element}",
+            "    security_descriptor_sddl: ${34:string}",
+            "    session_type: ${35:string}",
+            "    startup_script: ${36:path}",
+            "    state: ${37|present,absent|}",
+            "    thread_apartment_state: ${38:string}",
+            "    thread_options: ${39:string}",
+            "    transcript_directory: ${40:path}",
+            "    types_to_process:",
+            "      - ${41:element}",
+            "    use_shared_process: ${42|false,true|}",
+            "    user_drive_maximum_size: ${43:\"raw\"}",
+            "    variable_definitions:",
+            "      - ${44:element}",
+            "    visible_aliases:",
+            "      - ${45:element}",
+            "    visible_cmdlets:",
+            "      - ${46:element}",
+            "    visible_external_commands:",
+            "      - ${47:element}",
+            "    visible_functions:",
+            "      - ${48:element}",
+            "$0"
+        ],
+        "description": "Manage PSSession Configurations",
+        "scope": "ansible"
+    },
+    "Manage RabbitMQ plugins": {
+        "prefix": [
+            "community.windows.win_rabbitmq_plugin",
+            "Manage RabbitMQ plugins"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_rabbitmq_plugin:",
+            "    names: ${2:string}",
+            "    new_only: ${3|false,true|}",
+            "    prefix: ${4:string}",
+            "    state: ${5|enabled,disabled|}",
+            "$0"
+        ],
+        "description": "Manage RabbitMQ plugins",
+        "scope": "ansible"
+    },
+    "Manage Connection Authorization Policies (CAP) on a Remote Desktop Gateway server": {
+        "prefix": [
+            "community.windows.win_rds_cap",
+            "Manage Connection Authorization Policies (CAP) on a Remote Desktop Gateway server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_rds_cap:",
+            "    allow_only_sdrts_servers: ${2|false,true|}",
+            "    auth_method: ${3:string}",
+            "    computer_groups:",
+            "      - ${4:element}",
+            "    idle_timeout: ${5:int}",
+            "    name: ${6:string}",
+            "    order: ${7:int}",
+            "    redirect_clipboard: ${8|false,true|}",
+            "    redirect_drives: ${9|false,true|}",
+            "    redirect_pnp: ${10|false,true|}",
+            "    redirect_printers: ${11|false,true|}",
+            "    redirect_serial: ${12|false,true|}",
+            "    session_timeout: ${13:int}",
+            "    session_timeout_action: ${14|disconnect,reauth|}",
+            "    state: ${15|present,absent,enabled,disabled|}",
+            "    user_groups:",
+            "      - ${16:element}",
+            "$0"
+        ],
+        "description": "Manage Connection Authorization Policies (CAP) on a Remote Desktop Gateway server",
+        "scope": "ansible"
+    },
+    "Manage Resource Authorization Policies (RAP) on a Remote Desktop Gateway server": {
+        "prefix": [
+            "community.windows.win_rds_rap",
+            "Manage Resource Authorization Policies (RAP) on a Remote Desktop Gateway server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_rds_rap:",
+            "    allowed_ports:",
+            "      - ${2:element}",
+            "    computer_group: ${3:string}",
+            "    computer_group_type: ${4:string}",
+            "    description: ${5:string}",
+            "    state: ${7|present,absent,disabled,enabled|}",
+            "    user_groups:",
+            "      - ${8:element}",
+            "$0"
+        ],
+        "description": "Manage Resource Authorization Policies (RAP) on a Remote Desktop Gateway server",
+        "scope": "ansible"
+    },
+    "Manage main settings of a Remote Desktop Gateway server": {
+        "prefix": [
+            "community.windows.win_rds_settings",
+            "Manage main settings of a Remote Desktop Gateway server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_rds_settings:",
+            "    certificate_hash: ${2:string}",
+            "    enable_only_messaging_capable_clients: ${3|false,true|}",
+            "    max_connections: ${4:int}",
+            "    ssl_bridging: ${5:string}",
+            "$0"
+        ],
+        "description": "Manage main settings of a Remote Desktop Gateway server",
+        "scope": "ansible"
+    },
+    "Set the region and format settings": {
+        "prefix": [
+            "community.windows.win_region",
+            "Set the region and format settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_region:",
+            "    copy_settings: ${2|false,true|}",
+            "    format: ${3:string}",
+            "    location: ${4:string}",
+            "    unicode_language: ${5:string}",
+            "$0"
+        ],
+        "description": "Set the region and format settings",
+        "scope": "ansible"
+    },
+    "Merges the contents of a registry file into the Windows registry": {
+        "prefix": [
+            "community.windows.win_regmerge",
+            "Merges the contents of a registry file into the Windows registry"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_regmerge:",
+            "    compare_key: ${2:string}",
+            "    path: ${3:path}",
+            "$0"
+        ],
+        "description": "Merges the contents of a registry file into the Windows registry",
+        "scope": "ansible"
+    },
+    "Synchronizes the contents of two directories using Robocopy": {
+        "prefix": [
+            "community.windows.win_robocopy",
+            "Synchronizes the contents of two directories using Robocopy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_robocopy:",
+            "    dest: ${2:path}",
+            "    flags: ${3:string}",
+            "    purge: ${4|false,true|}",
+            "    recurse: ${5|false,true|}",
+            "    src: ${6:path}",
+            "$0"
+        ],
+        "description": "Synchronizes the contents of two directories using Robocopy",
+        "scope": "ansible"
+    },
+    "Add or remove a static route": {
+        "prefix": [
+            "community.windows.win_route",
+            "Add or remove a static route"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_route:",
+            "    destination: ${2:string}",
+            "    gateway: ${3:string}",
+            "    metric: ${4:1}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Add or remove a static route",
+        "scope": "ansible"
+    },
+    "Text to speech module for Windows to speak messages and optionally play sounds": {
+        "prefix": [
+            "community.windows.win_say",
+            "Text to speech module for Windows to speak messages and optionally play sounds"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_say:",
+            "    end_sound_path: ${2:path}",
+            "    msg: ${3:string}",
+            "    msg_file: ${4:path}",
+            "    speech_speed: ${5:0}",
+            "    start_sound_path: ${6:path}",
+            "    voice: ${7:string}",
+            "$0"
+        ],
+        "description": "Text to speech module for Windows to speak messages and optionally play sounds",
+        "scope": "ansible"
+    },
+    "Manage scheduled tasks": {
+        "prefix": [
+            "community.windows.win_scheduled_task",
+            "Manage scheduled tasks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_scheduled_task:",
+            "    actions:",
+            "      - ${2:element}",
+            "    allow_demand_start: ${3|false,true|}",
+            "    allow_hard_terminate: ${4|false,true|}",
+            "    author: ${5:string}",
+            "    compatibility: ${6:int}",
+            "    date: ${7:string}",
+            "    delete_expired_task_after: ${8:string}",
+            "    description: ${9:string}",
+            "    disallow_start_if_on_batteries: ${10|false,true|}",
+            "    display_name: ${11:string}",
+            "    enabled: ${12|false,true|}",
+            "    execution_time_limit: ${13:string}",
+            "    group: ${14:string}",
+            "    hidden: ${15|false,true|}",
+            "    logon_type: ${16:string}",
+            "    multiple_instances: ${17:int}",
+            "    name: ${18:string}",
+            "    password: ${19:string}",
+            "    path: ${20:\\}",
+            "    priority: ${21:int}",
+            "    restart_count: ${22:int}",
+            "    restart_interval: ${23:string}",
+            "    run_level: ${24:string}",
+            "    run_only_if_idle: ${25|false,true|}",
+            "    run_only_if_network_available: ${26|false,true|}",
+            "    source: ${27:string}",
+            "    start_when_available: ${28|false,true|}",
+            "    state: ${29|present,absent|}",
+            "    stop_if_going_on_batteries: ${30|false,true|}",
+            "    triggers:",
+            "      - ${31:element}",
+            "    update_password: ${32|true,false|}",
+            "    username: ${33:string}",
+            "    version: ${34:string}",
+            "    wake_to_run: ${35|false,true|}",
+            "$0"
+        ],
+        "description": "Manage scheduled tasks",
+        "scope": "ansible"
+    },
+    "Get information about Windows Scheduled Tasks": {
+        "prefix": [
+            "community.windows.win_scheduled_task_stat",
+            "Get information about Windows Scheduled Tasks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_scheduled_task_stat:",
+            "    name: ${2:string}",
+            "    path: ${3:\\}",
+            "$0"
+        ],
+        "description": "Get information about Windows Scheduled Tasks",
+        "scope": "ansible"
+    },
+    "Manage packages using Scoop": {
+        "prefix": [
+            "community.windows.win_scoop",
+            "Manage packages using Scoop"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_scoop:",
+            "    architecture: ${2:string}",
+            "    global: ${3|false,true|}",
+            "    independent: ${4|false,true|}",
+            "    name:",
+            "      - ${5:element}",
+            "    no_cache: ${6|false,true|}",
+            "    purge: ${7|false,true|}",
+            "    skip_checksum: ${8|false,true|}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage packages using Scoop",
+        "scope": "ansible"
+    },
+    "Manage Scoop buckets": {
+        "prefix": [
+            "community.windows.win_scoop_bucket",
+            "Manage Scoop buckets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_scoop_bucket:",
+            "    name: ${2:string}",
+            "    repo: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Scoop buckets",
+        "scope": "ansible"
+    },
+    "Change local security policy settings": {
+        "prefix": [
+            "community.windows.win_security_policy",
+            "Change local security policy settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_security_policy:",
+            "    key: ${2:string}",
+            "    section: ${3:string}",
+            "    value: ${4:string}",
+            "$0"
+        ],
+        "description": "Change local security policy settings",
+        "scope": "ansible"
+    },
+    "Manage shortcuts on Windows": {
+        "prefix": [
+            "community.windows.win_shortcut",
+            "Manage shortcuts on Windows"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_shortcut:",
+            "    arguments: ${2:string}",
+            "    description: ${3:string}",
+            "    dest: ${4:path}",
+            "    directory: ${5:path}",
+            "    hotkey: ${6:string}",
+            "    icon: ${7:path}",
+            "    run_as_admin: ${8|false,true|}",
+            "    src: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    windowstyle: ${11:string}",
+            "$0"
+        ],
+        "description": "Manage shortcuts on Windows",
+        "scope": "ansible"
+    },
+    "Configures the Windows SNMP service": {
+        "prefix": [
+            "community.windows.win_snmp",
+            "Configures the Windows SNMP service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_snmp:",
+            "    action: ${2|set,add,remove|}",
+            "    community_strings:",
+            "      - ${3:element}",
+            "    permitted_managers:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Configures the Windows SNMP service",
+        "scope": "ansible"
+    },
+    "Sets Windows machine timezone": {
+        "prefix": [
+            "community.windows.win_timezone",
+            "Sets Windows machine timezone"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_timezone:",
+            "    timezone: ${2:string}",
+            "$0"
+        ],
+        "description": "Sets Windows machine timezone",
+        "scope": "ansible"
+    },
+    "Sends Toast windows notification to logged in users on Windows 10 or later hosts": {
+        "prefix": [
+            "community.windows.win_toast",
+            "Sends Toast windows notification to logged in users on Windows 10 or later hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_toast:",
+            "    expire: ${2:45}",
+            "    group: ${3:Powershell}",
+            "    msg: ${4:Hello, World!}",
+            "    popup: ${5|true,false|}",
+            "    tag: ${6:Ansible}",
+            "    title: ${7:Notification HH:mm}",
+            "$0"
+        ],
+        "description": "Sends Toast windows notification to logged in users on Windows 10 or later hosts",
+        "scope": "ansible"
+    },
+    "Unzips compressed files and archives on the Windows node": {
+        "prefix": [
+            "community.windows.win_unzip",
+            "Unzips compressed files and archives on the Windows node"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_unzip:",
+            "    creates: ${2:path}",
+            "    delete_archive: ${3|false,true|}",
+            "    dest: ${4:path}",
+            "    recurse: ${6|false,true|}",
+            "    src: ${7:path}",
+            "$0"
+        ],
+        "description": "Unzips compressed files and archives on the Windows node",
+        "scope": "ansible"
+    },
+    "Manages the Windows user profiles.": {
+        "prefix": [
+            "community.windows.win_user_profile",
+            "Manages the Windows user profiles."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_user_profile:",
+            "    name: ${2:string}",
+            "    remove_multiple: ${3|false,true|}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages the Windows user profiles.",
+        "scope": "ansible"
+    },
+    "Waits for a process to exist or not exist before continuing.": {
+        "prefix": [
+            "community.windows.win_wait_for_process",
+            "Waits for a process to exist or not exist before continuing."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_wait_for_process:",
+            "    owner: ${2:string}",
+            "    pid: ${3:0}",
+            "    post_wait_delay: ${4:0}",
+            "    pre_wait_delay: ${5:0}",
+            "    process_min_count: ${6:1}",
+            "    process_name_exact:",
+            "      - ${7:element}",
+            "    process_name_pattern: ${8:string}",
+            "    sleep: ${9:1}",
+            "    state: ${10|present,absent|}",
+            "    timeout: ${11:300}",
+            "$0"
+        ],
+        "description": "Waits for a process to exist or not exist before continuing.",
+        "scope": "ansible"
+    },
+    "Send a magic Wake-on-LAN (WoL) broadcast packet": {
+        "prefix": [
+            "community.windows.win_wakeonlan",
+            "Send a magic Wake-on-LAN (WoL) broadcast packet"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_wakeonlan:",
+            "    broadcast: ${2:255.255.255.255}",
+            "    mac: ${3:string}",
+            "    port: ${4:7}",
+            "$0"
+        ],
+        "description": "Send a magic Wake-on-LAN (WoL) broadcast packet",
+        "scope": "ansible"
+    },
+    "Installs packages using Web Platform Installer command-line": {
+        "prefix": [
+            "community.windows.win_webpicmd",
+            "Installs packages using Web Platform Installer command-line"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_webpicmd:",
+            "    name: ${2:string}",
+            "$0"
+        ],
+        "description": "Installs packages using Web Platform Installer command-line",
+        "scope": "ansible"
+    },
+    "Manages XML file content on Windows hosts": {
+        "prefix": [
+            "community.windows.win_xml",
+            "Manages XML file content on Windows hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_xml:",
+            "    attribute: ${2:string}",
+            "    backup: ${3|false,true|}",
+            "    count: ${4|false,true|}",
+            "    fragment: ${5:string}",
+            "    path: ${6:path}",
+            "    state: ${7|present,absent|}",
+            "    type: ${8|element,attribute,text|}",
+            "    xpath: ${9:string}",
+            "$0"
+        ],
+        "description": "Manages XML file content on Windows hosts",
+        "scope": "ansible"
+    },
+    "Compress file or directory as zip archive on the Windows node": {
+        "prefix": [
+            "community.windows.win_zip",
+            "Compress file or directory as zip archive on the Windows node"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.windows.win_zip:",
+            "    dest: ${2:path}",
+            "    src: ${3:string}",
+            "$0"
+        ],
+        "description": "Compress file or directory as zip archive on the Windows node",
+        "scope": "ansible"
+    }
+}

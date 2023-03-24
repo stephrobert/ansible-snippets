@@ -1,0 +1,954 @@
+{
+    "Obtain status of asynchronous task": {
+        "prefix": [
+            "ansible.windows.async_status",
+            "Obtain status of asynchronous task"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.async_status:",
+            "    jid: ${2:string}",
+            "    mode: ${3|status,cleanup|}",
+            "$0"
+        ],
+        "description": "Obtain status of asynchronous task",
+        "scope": "ansible"
+    },
+    "Gathers facts about remote hosts": {
+        "prefix": [
+            "ansible.windows.setup",
+            "Gathers facts about remote hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.setup:",
+            "    _measure_subset: ${2|false,true|}",
+            "    fact_path: ${3:path}",
+            "    gather_subset:",
+            "      - ${4:element}",
+            "    gather_timeout: ${5:10}",
+            "$0"
+        ],
+        "description": "Gathers facts about remote hosts",
+        "scope": "ansible"
+    },
+    "Slurps a file from remote nodes": {
+        "prefix": [
+            "ansible.windows.slurp",
+            "Slurps a file from remote nodes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.slurp:",
+            "    src: ${2:path}",
+            "$0"
+        ],
+        "description": "Slurps a file from remote nodes",
+        "scope": "ansible"
+    },
+    "Set file/directory/registry permissions for a system user or group": {
+        "prefix": [
+            "ansible.windows.win_acl",
+            "Set file/directory/registry permissions for a system user or group"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_acl:",
+            "    follow: ${2|false,true|}",
+            "    inherit: ${3:string}",
+            "    path: ${4:string}",
+            "    propagation: ${5|None,InheritOnly,NoPropagateInherit|}",
+            "    rights: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    type: ${8:string}",
+            "    user: ${9:string}",
+            "$0"
+        ],
+        "description": "Set file/directory/registry permissions for a system user or group",
+        "scope": "ansible"
+    },
+    "Change ACL inheritance": {
+        "prefix": [
+            "ansible.windows.win_acl_inheritance",
+            "Change ACL inheritance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_acl_inheritance:",
+            "    path: ${2:string}",
+            "    reorganize: ${3|false,true|}",
+            "    state: ${4|absent,present|}",
+            "$0"
+        ],
+        "description": "Change ACL inheritance",
+        "scope": "ansible"
+    },
+    "Manages the certificate store": {
+        "prefix": [
+            "ansible.windows.win_certificate_store",
+            "Manages the certificate store"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_certificate_store:",
+            "    file_type: ${2|der,pem,pkcs12|}",
+            "    key_exportable: ${3|true,false|}",
+            "    key_storage: ${4|default,machine,user|}",
+            "    password: ${5:string}",
+            "    path: ${6:path}",
+            "    state: ${7|present,absent,exported|}",
+            "    store_location: ${8:LocalMachine}",
+            "    store_name: ${9:My}",
+            "    store_type: ${10|system,service|}",
+            "    thumbprint: ${11:string}",
+            "$0"
+        ],
+        "description": "Manages the certificate store",
+        "scope": "ansible"
+    },
+    "Executes a command on a remote Windows node": {
+        "prefix": [
+            "ansible.windows.win_command",
+            "Executes a command on a remote Windows node"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_command:",
+            "    _raw_params: ${2:string}",
+            "    argv:",
+            "      - ${3:element}",
+            "    chdir: ${4:path}",
+            "    cmd: ${5:string}",
+            "    creates: ${6:path}",
+            "    output_encoding_override: ${7:string}",
+            "    removes: ${8:path}",
+            "    stdin: ${9:string}",
+            "$0"
+        ],
+        "description": "Executes a command on a remote Windows node",
+        "scope": "ansible"
+    },
+    "Copies files to remote locations on windows hosts": {
+        "prefix": [
+            "ansible.windows.win_copy",
+            "Copies files to remote locations on windows hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_copy:",
+            "    backup: ${2|false,true|}",
+            "    content: ${3:string}",
+            "    decrypt: ${4|true,false|}",
+            "    dest: ${5:path}",
+            "    force: ${6|true,false|}",
+            "    local_follow: ${7|true,false|}",
+            "    remote_src: ${8|false,true|}",
+            "    src: ${9:path}",
+            "$0"
+        ],
+        "description": "Copies files to remote locations on windows hosts",
+        "scope": "ansible"
+    },
+    "Configures DNS lookup on Windows hosts": {
+        "prefix": [
+            "ansible.windows.win_dns_client",
+            "Configures DNS lookup on Windows hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_dns_client:",
+            "    adapter_names:",
+            "      - ${2:element}",
+            "    dns_servers:",
+            "      - ${3:element}",
+            "$0"
+        ],
+        "description": "Configures DNS lookup on Windows hosts",
+        "scope": "ansible"
+    },
+    "Ensures the existence of a Windows domain": {
+        "prefix": [
+            "ansible.windows.win_domain",
+            "Ensures the existence of a Windows domain"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_domain:",
+            "    create_dns_delegation: ${2|false,true|}",
+            "    database_path: ${3:path}",
+            "    dns_domain_name: ${4:string}",
+            "    domain_mode: ${5:string}",
+            "    domain_netbios_name: ${6:string}",
+            "    forest_mode: ${7:string}",
+            "    install_dns: ${8|true,false|}",
+            "    log_path: ${9:path}",
+            "    safe_mode_password: ${10:string}",
+            "    sysvol_path: ${11:path}",
+            "$0"
+        ],
+        "description": "Ensures the existence of a Windows domain",
+        "scope": "ansible"
+    },
+    "Manage domain controller/member server state for a Windows host": {
+        "prefix": [
+            "ansible.windows.win_domain_controller",
+            "Manage domain controller/member server state for a Windows host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_domain_controller:",
+            "    database_path: ${2:path}",
+            "    dns_domain_name: ${3:string}",
+            "    domain_admin_password: ${4:string}",
+            "    domain_admin_user: ${5:string}",
+            "    domain_log_path: ${6:path}",
+            "    install_dns: ${7|false,true|}",
+            "    install_media_path: ${8:path}",
+            "    local_admin_password: ${9:string}",
+            "    log_path: ${10:string}",
+            "    read_only: ${11|false,true|}",
+            "    safe_mode_password: ${12:string}",
+            "    site_name: ${13:string}",
+            "    state: ${14:string}",
+            "    sysvol_path: ${15:path}",
+            "$0"
+        ],
+        "description": "Manage domain controller/member server state for a Windows host",
+        "scope": "ansible"
+    },
+    "Manage domain/workgroup membership for a Windows host": {
+        "prefix": [
+            "ansible.windows.win_domain_membership",
+            "Manage domain/workgroup membership for a Windows host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_domain_membership:",
+            "    dns_domain_name: ${2:string}",
+            "    domain_admin_password: ${3:string}",
+            "    domain_admin_user: ${4:string}",
+            "    domain_ou_path: ${5:string}",
+            "    hostname: ${6:string}",
+            "    state: ${7:string}",
+            "    workgroup_name: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage domain/workgroup membership for a Windows host",
+        "scope": "ansible"
+    },
+    "Invokes a PowerShell DSC configuration": {
+        "prefix": [
+            "ansible.windows.win_dsc",
+            "Invokes a PowerShell DSC configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_dsc:",
+            "    free_form: ${2:string}",
+            "    module_version: ${3:latest}",
+            "    resource_name: ${4:string}",
+            "$0"
+        ],
+        "description": "Invokes a PowerShell DSC configuration",
+        "scope": "ansible"
+    },
+    "Modify environment variables on windows hosts": {
+        "prefix": [
+            "ansible.windows.win_environment",
+            "Modify environment variables on windows hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_environment:",
+            "    level: ${2:string}",
+            "    name: ${3:string}",
+            "    state: ${4:string}",
+            "    value: ${5:string}",
+            "$0"
+        ],
+        "description": "Modify environment variables on windows hosts",
+        "scope": "ansible"
+    },
+    "Installs and uninstalls Windows Features on Windows Server": {
+        "prefix": [
+            "ansible.windows.win_feature",
+            "Installs and uninstalls Windows Features on Windows Server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_feature:",
+            "    include_management_tools: ${2|false,true|}",
+            "    include_sub_features: ${3|false,true|}",
+            "    name:",
+            "      - ${4:element}",
+            "    source: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Installs and uninstalls Windows Features on Windows Server",
+        "scope": "ansible"
+    },
+    "Creates, touches or removes files or directories": {
+        "prefix": [
+            "ansible.windows.win_file",
+            "Creates, touches or removes files or directories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_file:",
+            "    path: ${2:path}",
+            "    state: ${3:string}",
+            "$0"
+        ],
+        "description": "Creates, touches or removes files or directories",
+        "scope": "ansible"
+    },
+    "Return a list of files based on specific criteria": {
+        "prefix": [
+            "ansible.windows.win_find",
+            "Return a list of files based on specific criteria"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_find:",
+            "    age: ${2:string}",
+            "    age_stamp: ${3|mtime,atime,ctime|}",
+            "    checksum_algorithm: ${4|sha1,md5,sha256,sha384,sha512|}",
+            "    file_type: ${5|file,directory|}",
+            "    follow: ${6|false,true|}",
+            "    get_checksum: ${7|true,false|}",
+            "    hidden: ${8|false,true|}",
+            "    paths:",
+            "      - ${9:element}",
+            "    patterns:",
+            "      - ${10:element}",
+            "    recurse: ${11|false,true|}",
+            "    size: ${12:string}",
+            "    use_regex: ${13|false,true|}",
+            "$0"
+        ],
+        "description": "Return a list of files based on specific criteria",
+        "scope": "ansible"
+    },
+    "Downloads file from HTTP, HTTPS, or FTP to node": {
+        "prefix": [
+            "ansible.windows.win_get_url",
+            "Downloads file from HTTP, HTTPS, or FTP to node"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_get_url:",
+            "    checksum: ${2:string}",
+            "    checksum_algorithm: ${3|sha1,md5,sha256,sha384,sha512|}",
+            "    checksum_url: ${4:string}",
+            "    client_cert: ${5:string}",
+            "    client_cert_password: ${6:string}",
+            "    dest: ${7:path}",
+            "    follow_redirects: ${8|safe,all,none|}",
+            "    force: ${9|true,false|}",
+            "    force_basic_auth: ${10|false,true|}",
+            "    http_agent: ${12:ansible-httpget}",
+            "    maximum_redirection: ${13:50}",
+            "    proxy_password: ${14:string}",
+            "    proxy_url: ${15:string}",
+            "    proxy_use_default_credential: ${16|false,true|}",
+            "    proxy_username: ${17:string}",
+            "    url: ${18:string}",
+            "    url_method: ${19:string}",
+            "    url_password: ${20:string}",
+            "    url_timeout: ${21:30}",
+            "    url_username: ${22:string}",
+            "    use_default_credential: ${23|false,true|}",
+            "    use_proxy: ${24|true,false|}",
+            "    validate_certs: ${25|true,false|}",
+            "$0"
+        ],
+        "description": "Downloads file from HTTP, HTTPS, or FTP to node",
+        "scope": "ansible"
+    },
+    "Add and remove local groups": {
+        "prefix": [
+            "ansible.windows.win_group",
+            "Add and remove local groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_group:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Add and remove local groups",
+        "scope": "ansible"
+    },
+    "Manage Windows local group membership": {
+        "prefix": [
+            "ansible.windows.win_group_membership",
+            "Manage Windows local group membership"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_group_membership:",
+            "    members:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    state: ${4|present,absent,pure|}",
+            "$0"
+        ],
+        "description": "Manage Windows local group membership",
+        "scope": "ansible"
+    },
+    "Manages local Windows computer name": {
+        "prefix": [
+            "ansible.windows.win_hostname",
+            "Manages local Windows computer name"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_hostname:",
+            "    name: ${2:string}",
+            "$0"
+        ],
+        "description": "Manages local Windows computer name",
+        "scope": "ansible"
+    },
+    "Manage optional Windows features": {
+        "prefix": [
+            "ansible.windows.win_optional_feature",
+            "Manage optional Windows features"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_optional_feature:",
+            "    include_parent: ${2|false,true|}",
+            "    name:",
+            "      - ${3:element}",
+            "    source: ${4:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage optional Windows features",
+        "scope": "ansible"
+    },
+    "Set owner": {
+        "prefix": [
+            "ansible.windows.win_owner",
+            "Set owner"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_owner:",
+            "    path: ${2:path}",
+            "    recurse: ${3|false,true|}",
+            "    user: ${4:string}",
+            "$0"
+        ],
+        "description": "Set owner",
+        "scope": "ansible"
+    },
+    "Installs/uninstalls an installable package": {
+        "prefix": [
+            "ansible.windows.win_package",
+            "Installs/uninstalls an installable package"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_package:",
+            "    arguments: ${2:\"raw\"}",
+            "    chdir: ${3:path}",
+            "    client_cert: ${4:string}",
+            "    client_cert_password: ${5:string}",
+            "    creates_path: ${6:path}",
+            "    creates_service: ${7:string}",
+            "    creates_version: ${8:string}",
+            "    expected_return_code:",
+            "      - ${9:element}",
+            "    follow_redirects: ${10|safe,all,none|}",
+            "    force_basic_auth: ${11|false,true|}",
+            "    http_agent: ${13:ansible-httpget}",
+            "    log_path: ${14:path}",
+            "    maximum_redirection: ${15:50}",
+            "    password: ${16:string}",
+            "    path: ${17:string}",
+            "    product_id: ${18:string}",
+            "    provider: ${19|auto,msi,msix,msp,registry|}",
+            "    proxy_password: ${20:string}",
+            "    proxy_url: ${21:string}",
+            "    proxy_use_default_credential: ${22|false,true|}",
+            "    proxy_username: ${23:string}",
+            "    state: ${24|present,absent|}",
+            "    url_method: ${25:string}",
+            "    url_password: ${26:string}",
+            "    url_timeout: ${27:30}",
+            "    url_username: ${28:string}",
+            "    use_default_credential: ${29|false,true|}",
+            "    use_proxy: ${30|true,false|}",
+            "    username: ${31:string}",
+            "    validate_certs: ${32|true,false|}",
+            "    wait_for_children: ${33|false,true|}",
+            "$0"
+        ],
+        "description": "Installs/uninstalls an installable package",
+        "scope": "ansible"
+    },
+    "Manage Windows path environment variables": {
+        "prefix": [
+            "ansible.windows.win_path",
+            "Manage Windows path environment variables"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_path:",
+            "    elements:",
+            "      - ${2:element}",
+            "    name: ${3:PATH}",
+            "    scope: ${4|machine,user|}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Windows path environment variables",
+        "scope": "ansible"
+    },
+    "A windows version of the classic ping module": {
+        "prefix": [
+            "ansible.windows.win_ping",
+            "A windows version of the classic ping module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_ping:",
+            "    data: ${2:pong}",
+            "$0"
+        ],
+        "description": "A windows version of the classic ping module",
+        "scope": "ansible"
+    },
+    "Run PowerShell scripts": {
+        "prefix": [
+            "ansible.windows.win_powershell",
+            "Run PowerShell scripts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_powershell:",
+            "    arguments:",
+            "      - ${2:element}",
+            "    chdir: ${3:string}",
+            "    creates: ${4:string}",
+            "    depth: ${5:2}",
+            "    error_action: ${6|continue,silently_continue,stop|}",
+            "    executable: ${7:string}",
+            "    removes: ${9:string}",
+            "    script: ${10:string}",
+            "$0"
+        ],
+        "description": "Run PowerShell scripts",
+        "scope": "ansible"
+    },
+    "Reboot a windows machine": {
+        "prefix": [
+            "ansible.windows.win_reboot",
+            "Reboot a windows machine"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_reboot:",
+            "    boot_time_command: ${2:(Get-CimInstance -ClassName Win32_OperatingSystem -Property LastBootUpTime).LastBootUpTime.ToFileTime()}",
+            "    msg: ${4:Reboot initiated by Ansible}",
+            "    test_command: ${8:string}",
+            "$0"
+        ],
+        "description": "Reboot a windows machine",
+        "scope": "ansible"
+    },
+    "Get information about Windows registry keys": {
+        "prefix": [
+            "ansible.windows.win_reg_stat",
+            "Get information about Windows registry keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_reg_stat:",
+            "    name: ${2:string}",
+            "    path: ${3:string}",
+            "$0"
+        ],
+        "description": "Get information about Windows registry keys",
+        "scope": "ansible"
+    },
+    "Add, change, or remove registry keys and values": {
+        "prefix": [
+            "ansible.windows.win_regedit",
+            "Add, change, or remove registry keys and values"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_regedit:",
+            "    data: ${2:\"raw\"}",
+            "    delete_key: ${3|true,false|}",
+            "    hive: ${4:path}",
+            "    name: ${5:string}",
+            "    path: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    type: ${8|string,none,binary,dword,expandstring,multistring,qword|}",
+            "$0"
+        ],
+        "description": "Add, change, or remove registry keys and values",
+        "scope": "ansible"
+    },
+    "Manage and query Windows services": {
+        "prefix": [
+            "ansible.windows.win_service",
+            "Manage and query Windows services"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_service:",
+            "    dependencies:",
+            "      - ${2:element}",
+            "    dependency_action: ${3|set,add,remove|}",
+            "    description: ${4:string}",
+            "    desktop_interact: ${5|false,true|}",
+            "    display_name: ${6:string}",
+            "    error_control: ${7:string}",
+            "    failure_actions:",
+            "      - ${8:element}",
+            "    failure_actions_on_non_crash_failure: ${9|false,true|}",
+            "    failure_command: ${10:string}",
+            "    failure_reboot_msg: ${11:string}",
+            "    failure_reset_period_sec: ${12:\"raw\"}",
+            "    force_dependent_services: ${13|false,true|}",
+            "    load_order_group: ${14:string}",
+            "    name: ${15:string}",
+            "    password: ${16:string}",
+            "    path: ${17:string}",
+            "    pre_shutdown_timeout_ms: ${18:\"raw\"}",
+            "    required_privileges:",
+            "      - ${19:element}",
+            "    service_type: ${20:string}",
+            "    sid_info: ${21:string}",
+            "    start_mode: ${22:string}",
+            "    state: ${23:string}",
+            "    update_password: ${24:string}",
+            "    username: ${25:string}",
+            "$0"
+        ],
+        "description": "Manage and query Windows services",
+        "scope": "ansible"
+    },
+    "Gather information about Windows services": {
+        "prefix": [
+            "ansible.windows.win_service_info",
+            "Gather information about Windows services"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_service_info:",
+            "    name: ${2:string}",
+            "$0"
+        ],
+        "description": "Gather information about Windows services",
+        "scope": "ansible"
+    },
+    "Manage Windows shares": {
+        "prefix": [
+            "ansible.windows.win_share",
+            "Manage Windows shares"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_share:",
+            "    caching_mode: ${2|Manual,BranchCache,Documents,None,Programs,Unknown|}",
+            "    change: ${3:string}",
+            "    deny: ${4:string}",
+            "    description: ${5:string}",
+            "    encrypt: ${6|false,true|}",
+            "    full: ${7:string}",
+            "    list: ${8|false,true|}",
+            "    name: ${9:string}",
+            "    path: ${10:path}",
+            "    read: ${11:string}",
+            "    rule_action: ${12|set,add|}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Windows shares",
+        "scope": "ansible"
+    },
+    "Execute shell commands on target hosts": {
+        "prefix": [
+            "ansible.windows.win_shell",
+            "Execute shell commands on target hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_shell:",
+            "    chdir: ${2:path}",
+            "    creates: ${3:path}",
+            "    executable: ${4:path}",
+            "    free_form: ${5:string}",
+            "    no_profile: ${6|false,true|}",
+            "    output_encoding_override: ${7:string}",
+            "    removes: ${8:path}",
+            "    stdin: ${9:string}",
+            "$0"
+        ],
+        "description": "Execute shell commands on target hosts",
+        "scope": "ansible"
+    },
+    "Get information about Windows files": {
+        "prefix": [
+            "ansible.windows.win_stat",
+            "Get information about Windows files"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_stat:",
+            "    checksum_algorithm: ${2|sha1,md5,sha256,sha384,sha512|}",
+            "    follow: ${3|false,true|}",
+            "    get_checksum: ${4|true,false|}",
+            "    get_size: ${5|true,false|}",
+            "    path: ${6:path}",
+            "$0"
+        ],
+        "description": "Get information about Windows files",
+        "scope": "ansible"
+    },
+    "Creates temporary files and directories": {
+        "prefix": [
+            "ansible.windows.win_tempfile",
+            "Creates temporary files and directories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_tempfile:",
+            "    path: ${2:path}",
+            "    prefix: ${3:ansible.}",
+            "    state: ${4|file,directory|}",
+            "    suffix: ${5:string}",
+            "$0"
+        ],
+        "description": "Creates temporary files and directories",
+        "scope": "ansible"
+    },
+    "Template a file out to a remote server": {
+        "prefix": [
+            "ansible.windows.win_template",
+            "Template a file out to a remote server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_template:",
+            "    backup: ${2|false,true|}",
+            "    block_end_string: ${3:%}}",
+            "    block_start_string: ${4:{%}",
+            "    dest: ${5:path}",
+            "    force: ${6|true,false|}",
+            "    lstrip_blocks: ${7|false,true|}",
+            "    newline_sequence: ${8|\\r\\n,\\n,\\r|}",
+            "    output_encoding: ${9:utf-8}",
+            "    src: ${10:path}",
+            "    trim_blocks: ${11|true,false|}",
+            "    variable_end_string: ${12:}}}",
+            "    variable_start_string: ${13:{{}",
+            "$0"
+        ],
+        "description": "Template a file out to a remote server",
+        "scope": "ansible"
+    },
+    "Download and install Windows updates": {
+        "prefix": [
+            "ansible.windows.win_updates",
+            "Download and install Windows updates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_updates:",
+            "    _output_path: ${2:string}",
+            "    _wait: ${3|false,true|}",
+            "    accept_list:",
+            "      - ${4:element}",
+            "    category_names:",
+            "      - ${5:element}",
+            "    log_path: ${6:path}",
+            "    reboot: ${7|false,true|}",
+            "    reboot_timeout: ${8:1200}",
+            "    reject_list:",
+            "      - ${9:element}",
+            "    server_selection: ${10|default,managed_server,windows_update|}",
+            "    skip_optional: ${11|false,true|}",
+            "    state: ${12|installed,searched,downloaded|}",
+            "    use_scheduled_task: ${13|false,true|}",
+            "$0"
+        ],
+        "description": "Download and install Windows updates",
+        "scope": "ansible"
+    },
+    "Interacts with webservices": {
+        "prefix": [
+            "ansible.windows.win_uri",
+            "Interacts with webservices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_uri:",
+            "    body: ${2:\"raw\"}",
+            "    client_cert: ${3:string}",
+            "    client_cert_password: ${4:string}",
+            "    content_type: ${5:string}",
+            "    creates: ${6:path}",
+            "    dest: ${7:path}",
+            "    follow_redirects: ${8|safe,all,none|}",
+            "    force_basic_auth: ${9|false,true|}",
+            "    http_agent: ${11:ansible-httpget}",
+            "    maximum_redirection: ${12:50}",
+            "    proxy_password: ${13:string}",
+            "    proxy_url: ${14:string}",
+            "    proxy_use_default_credential: ${15|false,true|}",
+            "    proxy_username: ${16:string}",
+            "    removes: ${17:path}",
+            "    return_content: ${18|false,true|}",
+            "    status_code:",
+            "      - ${19:element}",
+            "    url: ${20:string}",
+            "    url_method: ${21:GET}",
+            "    url_password: ${22:string}",
+            "    url_timeout: ${23:30}",
+            "    url_username: ${24:string}",
+            "    use_default_credential: ${25|false,true|}",
+            "    use_proxy: ${26|true,false|}",
+            "    validate_certs: ${27|true,false|}",
+            "$0"
+        ],
+        "description": "Interacts with webservices",
+        "scope": "ansible"
+    },
+    "Manages local Windows user accounts": {
+        "prefix": [
+            "ansible.windows.win_user",
+            "Manages local Windows user accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_user:",
+            "    account_disabled: ${2|false,true|}",
+            "    account_locked: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    fullname: ${5:string}",
+            "    groups:",
+            "      - ${6:element}",
+            "    groups_action: ${7|replace,add,remove|}",
+            "    home_directory: ${8:string}",
+            "    login_script: ${9:string}",
+            "    name: ${10:string}",
+            "    password: ${11:string}",
+            "    password_expired: ${12|false,true|}",
+            "    password_never_expires: ${13|false,true|}",
+            "    profile: ${14:string}",
+            "    state: ${15|present,absent,query|}",
+            "    update_password: ${16|always,on_create|}",
+            "    user_cannot_change_password: ${17|false,true|}",
+            "$0"
+        ],
+        "description": "Manages local Windows user accounts",
+        "scope": "ansible"
+    },
+    "Manage Windows User Rights": {
+        "prefix": [
+            "ansible.windows.win_user_right",
+            "Manage Windows User Rights"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_user_right:",
+            "    action: ${2|set,add,remove|}",
+            "    name: ${3:string}",
+            "    users:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Manage Windows User Rights",
+        "scope": "ansible"
+    },
+    "Waits for a condition before continuing": {
+        "prefix": [
+            "ansible.windows.win_wait_for",
+            "Waits for a condition before continuing"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_wait_for:",
+            "    connect_timeout: ${2:5}",
+            "    delay: ${3:int}",
+            "    exclude_hosts:",
+            "      - ${4:element}",
+            "    host: ${5:127.0.0.1}",
+            "    path: ${6:path}",
+            "    port: ${7:int}",
+            "    regex: ${8:string}",
+            "    sleep: ${9:1}",
+            "    state: ${10|started,absent,drained,present,stopped|}",
+            "    timeout: ${11:300}",
+            "$0"
+        ],
+        "description": "Waits for a condition before continuing",
+        "scope": "ansible"
+    },
+    "Get information about the current user and process": {
+        "prefix": [
+            "ansible.windows.win_whoami",
+            "Get information about the current user and process"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.windows.win_whoami:",
+            "$0"
+        ],
+        "description": "Get information about the current user and process",
+        "scope": "ansible"
+    }
+}
