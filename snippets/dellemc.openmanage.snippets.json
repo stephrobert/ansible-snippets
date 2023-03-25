@@ -1,0 +1,1962 @@
+{
+    "Configures the RAID configuration attributes": {
+        "prefix": [
+            "dellemc.openmanage.dellemc_idrac_storage_volume",
+            "Configures the RAID configuration attributes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.dellemc_idrac_storage_volume:",
+            "    ca_path: ${2:path}",
+            "    controller_id: ${4:string}",
+            "    disk_cache_policy: ${5|Default,Enabled,Disabled|}",
+            "    idrac_ip: ${6:string}",
+            "    idrac_password: ${7:string}",
+            "    idrac_port: ${8:443}",
+            "    idrac_user: ${9:string}",
+            "    media_type: ${10:string}",
+            "    number_dedicated_hot_spare: ${11:0}",
+            "    protocol: ${12:string}",
+            "    raid_init_operation: ${13:string}",
+            "    raid_reset_config: ${14|False,True|}",
+            "    read_cache_policy: ${15|NoReadAhead,ReadAhead,AdaptiveReadAhead|}",
+            "    span_depth: ${16:1}",
+            "    span_length: ${17:1}",
+            "    state: ${18|view,create,delete|}",
+            "    stripe_size: ${19:65536}",
+            "    timeout: ${20:30}",
+            "    validate_certs: ${21|true,false|}",
+            "    volume_id: ${22:string}",
+            "    volume_type: ${23|RAID0,RAID1,RAID5,RAID6,RAID10,RAID50,RAID60|}",
+            "    volumes:",
+            "      - ${24:element}",
+            "    write_cache_policy: ${25|WriteThrough,WriteBack,WriteBackForce|}",
+            "$0"
+        ],
+        "description": "Configures the RAID configuration attributes",
+        "scope": "ansible"
+    },
+    "Configure the iDRAC attributes.": {
+        "prefix": [
+            "dellemc.openmanage.idrac_attributes",
+            "Configure the iDRAC attributes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_attributes:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${4:string}",
+            "    idrac_password: ${5:string}",
+            "    idrac_port: ${6:443}",
+            "    idrac_user: ${7:string}",
+            "    resource_id: ${9:string}",
+            "    timeout: ${11:30}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Configure the iDRAC attributes.",
+        "scope": "ansible"
+    },
+    "Modify and clear BIOS attributes, reset BIOS settings and configure boot sources": {
+        "prefix": [
+            "dellemc.openmanage.idrac_bios",
+            "Modify and clear BIOS attributes, reset BIOS settings and configure boot sources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_bios:",
+            "    apply_time: ${2|Immediate,OnReset,AtMaintenanceWindowStart,InMaintenanceWindowOnReset|}",
+            "    boot_sources:",
+            "      - ${4:element}",
+            "    ca_path: ${5:path}",
+            "    clear_pending: ${6|false,true|}",
+            "    idrac_ip: ${7:string}",
+            "    idrac_password: ${8:string}",
+            "    idrac_port: ${9:443}",
+            "    idrac_user: ${10:string}",
+            "    job_wait: ${11|true,false|}",
+            "    job_wait_timeout: ${12:1200}",
+            "    reset_bios: ${14|false,true|}",
+            "    reset_type: ${15|graceful_restart,force_restart|}",
+            "    share_mnt: ${16:string}",
+            "    share_name: ${17:string}",
+            "    share_password: ${18:string}",
+            "    share_user: ${19:string}",
+            "    timeout: ${20:30}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Modify and clear BIOS attributes, reset BIOS settings and configure boot sources",
+        "scope": "ansible"
+    },
+    "Configure the boot order settings.": {
+        "prefix": [
+            "dellemc.openmanage.idrac_boot",
+            "Configure the boot order settings."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_boot:",
+            "    boot_options:",
+            "      - ${2:element}",
+            "    boot_order:",
+            "      - ${3:element}",
+            "    boot_source_override_enabled: ${4:string}",
+            "    boot_source_override_mode: ${5:string}",
+            "    boot_source_override_target: ${6:string}",
+            "    ca_path: ${7:path}",
+            "    idrac_ip: ${8:string}",
+            "    idrac_password: ${9:string}",
+            "    idrac_port: ${10:443}",
+            "    idrac_user: ${11:string}",
+            "    job_wait: ${12|true,false|}",
+            "    job_wait_timeout: ${13:900}",
+            "    reset_type: ${14|graceful_restart,force_restart,none|}",
+            "    resource_id: ${15:string}",
+            "    timeout: ${16:30}",
+            "    uefi_target_boot_source_override: ${17:string}",
+            "    validate_certs: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Configure the boot order settings.",
+        "scope": "ansible"
+    },
+    "Configure certificates for iDRAC": {
+        "prefix": [
+            "dellemc.openmanage.idrac_certificates",
+            "Configure certificates for iDRAC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_certificates:",
+            "    ca_path: ${2:path}",
+            "    certificate_path: ${4:path}",
+            "    certificate_type: ${5|HTTPS,CA,CSC,CLIENT_TRUST_CERTIFICATE|}",
+            "    command: ${6|generate_csr,import,export,reset|}",
+            "    idrac_ip: ${7:string}",
+            "    idrac_password: ${8:string}",
+            "    idrac_port: ${9:443}",
+            "    idrac_user: ${10:string}",
+            "    passphrase: ${11:string}",
+            "    reset: ${12|true,false|}",
+            "    resource_id: ${13:string}",
+            "    timeout: ${14:30}",
+            "    validate_certs: ${15|true,false|}",
+            "    wait: ${16:300}",
+            "$0"
+        ],
+        "description": "Configure certificates for iDRAC",
+        "scope": "ansible"
+    },
+    "Firmware update from a repository on a network share (CIFS, NFS, HTTP, HTTPS, FTP)": {
+        "prefix": [
+            "dellemc.openmanage.idrac_firmware",
+            "Firmware update from a repository on a network share (CIFS, NFS, HTTP, HTTPS, FTP)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_firmware:",
+            "    apply_update: ${2|true,false|}",
+            "    ca_path: ${3:path}",
+            "    catalog_file_name: ${4:Catalog.xml}",
+            "    idrac_ip: ${5:string}",
+            "    idrac_password: ${6:string}",
+            "    idrac_port: ${7:443}",
+            "    idrac_user: ${8:string}",
+            "    ignore_cert_warning: ${9|true,false|}",
+            "    job_wait: ${10|true,false|}",
+            "    reboot: ${11|false,true|}",
+            "    share_mnt: ${12:string}",
+            "    share_name: ${13:string}",
+            "    share_password: ${14:string}",
+            "    share_user: ${15:string}",
+            "    timeout: ${16:30}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Firmware update from a repository on a network share (CIFS, NFS, HTTP, HTTPS, FTP)",
+        "scope": "ansible"
+    },
+    "Get Firmware Inventory": {
+        "prefix": [
+            "dellemc.openmanage.idrac_firmware_info",
+            "Get Firmware Inventory"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_firmware_info:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    timeout: ${7:30}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get Firmware Inventory",
+        "scope": "ansible"
+    },
+    "Get the status of a Lifecycle Controller job": {
+        "prefix": [
+            "dellemc.openmanage.idrac_lifecycle_controller_job_status_info",
+            "Get the status of a Lifecycle Controller job"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_lifecycle_controller_job_status_info:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    job_id: ${7:string}",
+            "    timeout: ${8:30}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Get the status of a Lifecycle Controller job",
+        "scope": "ansible"
+    },
+    "Delete the Lifecycle Controller Jobs": {
+        "prefix": [
+            "dellemc.openmanage.idrac_lifecycle_controller_jobs",
+            "Delete the Lifecycle Controller Jobs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_lifecycle_controller_jobs:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    job_id: ${7:string}",
+            "    timeout: ${8:30}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Delete the Lifecycle Controller Jobs",
+        "scope": "ansible"
+    },
+    "Export Lifecycle Controller logs to a network share or local path.": {
+        "prefix": [
+            "dellemc.openmanage.idrac_lifecycle_controller_logs",
+            "Export Lifecycle Controller logs to a network share or local path."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_lifecycle_controller_logs:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    job_wait: ${7|true,false|}",
+            "    share_name: ${8:string}",
+            "    share_password: ${9:string}",
+            "    share_user: ${10:string}",
+            "    timeout: ${11:30}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Export Lifecycle Controller logs to a network share or local path.",
+        "scope": "ansible"
+    },
+    "Get the status of the Lifecycle Controller": {
+        "prefix": [
+            "dellemc.openmanage.idrac_lifecycle_controller_status_info",
+            "Get the status of the Lifecycle Controller"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_lifecycle_controller_status_info:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    timeout: ${7:30}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get the status of the Lifecycle Controller",
+        "scope": "ansible"
+    },
+    "Boot to a network ISO image": {
+        "prefix": [
+            "dellemc.openmanage.idrac_os_deployment",
+            "Boot to a network ISO image"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_os_deployment:",
+            "    ca_path: ${2:path}",
+            "    expose_duration: ${3:1080}",
+            "    idrac_ip: ${4:string}",
+            "    idrac_password: ${5:string}",
+            "    idrac_port: ${6:443}",
+            "    idrac_user: ${7:string}",
+            "    iso_image: ${8:string}",
+            "    share_name: ${9:string}",
+            "    share_password: ${10:string}",
+            "    share_user: ${11:string}",
+            "    timeout: ${12:30}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Boot to a network ISO image",
+        "scope": "ansible"
+    },
+    "Configures the physical disk, virtual disk, and storage controller settings": {
+        "prefix": [
+            "dellemc.openmanage.idrac_redfish_storage_controller",
+            "Configures the physical disk, virtual disk, and storage controller settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_redfish_storage_controller:",
+            "    baseuri: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    command: ${4|AssignSpare,ResetConfig,SetControllerKey,RemoveControllerKey,ReKey,UnassignSpare,EnableControllerEncryption,BlinkTarget,UnBlinkTarget,ConvertToRAID,ConvertToNonRAID,ChangePDStateToOnline,ChangePDStateToOffline,LockVirtualDisk|}",
+            "    controller_id: ${5:string}",
+            "    job_wait: ${6|false,true|}",
+            "    job_wait_timeout: ${7:120}",
+            "    key: ${8:string}",
+            "    key_id: ${9:string}",
+            "    mode: ${10|LKM,SEKM|}",
+            "    old_key: ${11:string}",
+            "    password: ${12:string}",
+            "    target:",
+            "      - ${13:element}",
+            "    timeout: ${14:30}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "    volume_id:",
+            "      - ${17:element}",
+            "$0"
+        ],
+        "description": "Configures the physical disk, virtual disk, and storage controller settings",
+        "scope": "ansible"
+    },
+    "Reset iDRAC": {
+        "prefix": [
+            "dellemc.openmanage.idrac_reset",
+            "Reset iDRAC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_reset:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    timeout: ${7:30}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Reset iDRAC",
+        "scope": "ansible"
+    },
+    "Export or Import iDRAC Server Configuration Profile (SCP)": {
+        "prefix": [
+            "dellemc.openmanage.idrac_server_config_profile",
+            "Export or Import iDRAC Server Configuration Profile (SCP)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_server_config_profile:",
+            "    ca_path: ${2:path}",
+            "    command: ${3|export,import,preview|}",
+            "    end_host_power_state: ${4|On,Off|}",
+            "    export_format: ${5|XML,JSON|}",
+            "    export_use: ${6|Default,Clone,Replace|}",
+            "    idrac_ip: ${7:string}",
+            "    idrac_password: ${8:string}",
+            "    idrac_port: ${9:443}",
+            "    idrac_user: ${10:string}",
+            "    job_wait: ${11|false,true|}",
+            "    scp_components: ${12|ALL,IDRAC,BIOS,NIC,RAID|}",
+            "    scp_file: ${13:string}",
+            "    share_name: ${14:string}",
+            "    share_password: ${15:string}",
+            "    share_user: ${16:string}",
+            "    shutdown_type: ${17|Graceful,Forced,NoReboot|}",
+            "    timeout: ${18:30}",
+            "    validate_certs: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Export or Import iDRAC Server Configuration Profile (SCP)",
+        "scope": "ansible"
+    },
+    "Enable or disable the syslog on iDRAC": {
+        "prefix": [
+            "dellemc.openmanage.idrac_syslog",
+            "Enable or disable the syslog on iDRAC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_syslog:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    share_mnt: ${7:string}",
+            "    share_name: ${8:string}",
+            "    share_password: ${9:string}",
+            "    share_user: ${10:string}",
+            "    syslog: ${11|Enabled,Disabled|}",
+            "    timeout: ${12:30}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Enable or disable the syslog on iDRAC",
+        "scope": "ansible"
+    },
+    "Get the PowerEdge Server System Inventory": {
+        "prefix": [
+            "dellemc.openmanage.idrac_system_info",
+            "Get the PowerEdge Server System Inventory"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_system_info:",
+            "    ca_path: ${2:path}",
+            "    idrac_ip: ${3:string}",
+            "    idrac_password: ${4:string}",
+            "    idrac_port: ${5:443}",
+            "    idrac_user: ${6:string}",
+            "    timeout: ${7:30}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get the PowerEdge Server System Inventory",
+        "scope": "ansible"
+    },
+    "Configure settings for user accounts": {
+        "prefix": [
+            "dellemc.openmanage.idrac_user",
+            "Configure settings for user accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_user:",
+            "    authentication_protocol: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    enable: ${4|false,true|}",
+            "    idrac_ip: ${5:string}",
+            "    idrac_password: ${6:string}",
+            "    idrac_port: ${7:443}",
+            "    idrac_user: ${8:string}",
+            "    ipmi_lan_privilege: ${9:string}",
+            "    ipmi_serial_privilege: ${10:string}",
+            "    new_user_name: ${11:string}",
+            "    privacy_protocol: ${12:string}",
+            "    privilege: ${13:string}",
+            "    protocol_enable: ${14|false,true|}",
+            "    sol_enable: ${15|false,true|}",
+            "    state: ${16|present,absent|}",
+            "    timeout: ${17:30}",
+            "    user_name: ${18:string}",
+            "    user_password: ${19:string}",
+            "    validate_certs: ${20|true,false|}",
+            "$0"
+        ],
+        "description": "Configure settings for user accounts",
+        "scope": "ansible"
+    },
+    "Configure the Remote File Share settings.": {
+        "prefix": [
+            "dellemc.openmanage.idrac_virtual_media",
+            "Configure the Remote File Share settings."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.idrac_virtual_media:",
+            "    ca_path: ${2:path}",
+            "    force: ${3|false,true|}",
+            "    idrac_ip: ${4:string}",
+            "    idrac_password: ${5:string}",
+            "    idrac_port: ${6:443}",
+            "    idrac_user: ${7:string}",
+            "    resource_id: ${8:string}",
+            "    timeout: ${9:30}",
+            "    validate_certs: ${10|true,false|}",
+            "    virtual_media:",
+            "      - ${11:element}",
+            "$0"
+        ],
+        "description": "Configure the Remote File Share settings.",
+        "scope": "ansible"
+    },
+    "Configure Active Directory groups to be used with Directory Services": {
+        "prefix": [
+            "dellemc.openmanage.ome_active_directory",
+            "Configure Active Directory groups to be used with Directory Services"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_active_directory:",
+            "    ca_path: ${2:path}",
+            "    certificate_file: ${3:path}",
+            "    domain_controller_lookup: ${4|DNS,MANUAL|}",
+            "    domain_controller_port: ${5:3269}",
+            "    domain_password: ${6:string}",
+            "    domain_server:",
+            "      - ${7:element}",
+            "    domain_username: ${8:string}",
+            "    group_domain: ${9:string}",
+            "    hostname: ${10:string}",
+            "    id: ${11:int}",
+            "    name: ${12:string}",
+            "    network_timeout: ${13:120}",
+            "    password: ${14:string}",
+            "    port: ${15:443}",
+            "    search_timeout: ${16:120}",
+            "    state: ${17|present,absent|}",
+            "    test_connection: ${18|false,true|}",
+            "    timeout: ${19:30}",
+            "    username: ${20:string}",
+            "    validate_certificate: ${21|false,true|}",
+            "    validate_certs: ${22|true,false|}",
+            "$0"
+        ],
+        "description": "Configure Active Directory groups to be used with Directory Services",
+        "scope": "ansible"
+    },
+    "This module allows to configure SMTP or email configurations": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_alerts_smtp",
+            "This module allows to configure SMTP or email configurations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_alerts_smtp:",
+            "    ca_path: ${2:path}",
+            "    destination_address: ${4:string}",
+            "    enable_authentication: ${5|false,true|}",
+            "    hostname: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    port_number: ${9:int}",
+            "    timeout: ${10:30}",
+            "    use_ssl: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "This module allows to configure SMTP or email configurations",
+        "scope": "ansible"
+    },
+    "Configure syslog forwarding settings on OpenManage Enterprise and OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_alerts_syslog",
+            "Configure syslog forwarding settings on OpenManage Enterprise and OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_alerts_syslog:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    syslog_servers:",
+            "      - ${6:element}",
+            "    timeout: ${7:30}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Configure syslog forwarding settings on OpenManage Enterprise and OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "This module allows to generate a CSR and upload the certificate": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_certificate",
+            "This module allows to generate a CSR and upload the certificate"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_certificate:",
+            "    business_name: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    command: ${4|generate_csr,upload|}",
+            "    country: ${5:string}",
+            "    country_state: ${6:string}",
+            "    department_name: ${7:string}",
+            "    distinguished_name: ${8:string}",
+            "    email: ${9:string}",
+            "    hostname: ${10:string}",
+            "    locality: ${11:string}",
+            "    password: ${12:string}",
+            "    port: ${13:443}",
+            "    timeout: ${14:30}",
+            "    upload_file: ${15:string}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "This module allows to generate a CSR and upload the certificate",
+        "scope": "ansible"
+    },
+    "Configure console preferences on OpenManage Enterprise.": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_console_preferences",
+            "Configure console preferences on OpenManage Enterprise."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_console_preferences:",
+            "    ca_path: ${3:path}",
+            "    email_sender_settings: ${6:string}",
+            "    hostname: ${7:string}",
+            "    metrics_collection_settings: ${8:int}",
+            "    mx7000_onboarding_preferences: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    report_row_limit: ${12:int}",
+            "    timeout: ${14:30}",
+            "    trap_forwarding_format: ${15:string}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Configure console preferences on OpenManage Enterprise.",
+        "scope": "ansible"
+    },
+    "Updates the network configuration on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_network_address",
+            "Updates the network configuration on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_network_address:",
+            "    ca_path: ${2:path}",
+            "    enable_nic: ${4|true,false|}",
+            "    hostname: ${5:string}",
+            "    interface_name: ${6:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    reboot_delay: ${12:int}",
+            "    timeout: ${13:30}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Updates the network configuration on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Updates the proxy configuration on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_network_proxy",
+            "Updates the proxy configuration on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_network_proxy:",
+            "    ca_path: ${2:path}",
+            "    enable_authentication: ${3|false,true|}",
+            "    enable_proxy: ${4|false,true|}",
+            "    hostname: ${5:string}",
+            "    ip_address: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_password: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    proxy_username: ${11:string}",
+            "    timeout: ${12:30}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Updates the proxy configuration on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "This module allows you to configure the session inactivity timeout settings": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_network_settings",
+            "This module allows you to configure the session inactivity timeout settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_network_settings:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    timeout: ${7:30}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "This module allows you to configure the session inactivity timeout settings",
+        "scope": "ansible"
+    },
+    "Updates the network time on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_network_time",
+            "Updates the network time on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_network_time:",
+            "    ca_path: ${2:path}",
+            "    enable_ntp: ${3|false,true|}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    primary_ntp_address: ${7:string}",
+            "    secondary_ntp_address1: ${8:string}",
+            "    secondary_ntp_address2: ${9:string}",
+            "    system_time: ${10:string}",
+            "    time_zone: ${11:string}",
+            "    timeout: ${12:30}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Updates the network time on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Updates the Web server configuration on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_network_webserver",
+            "Updates the Web server configuration on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_network_webserver:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    timeout: ${6:30}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "    webserver_port: ${9:int}",
+            "    webserver_timeout: ${10:int}",
+            "$0"
+        ],
+        "description": "Updates the Web server configuration on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Configure the login security properties": {
+        "prefix": [
+            "dellemc.openmanage.ome_application_security_settings",
+            "Configure the login security properties"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_application_security_settings:",
+            "    ca_path: ${2:path}",
+            "    fips_mode_enable: ${3|false,true|}",
+            "    hostname: ${4:string}",
+            "    job_wait: ${5|true,false|}",
+            "    job_wait_timeout: ${6:120}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    timeout: ${11:30}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Configure the login security properties",
+        "scope": "ansible"
+    },
+    "Rename sled slots on OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_chassis_slots",
+            "Rename sled slots on OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_chassis_slots:",
+            "    ca_path: ${2:path}",
+            "    device_options:",
+            "      - ${3:element}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    slot_options:",
+            "      - ${7:element}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Rename sled slots on OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Create, modify, and delete a configuration compliance baseline and remediate non-compliant devices on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_configuration_compliance_baseline",
+            "Create, modify, and delete a configuration compliance baseline and remediate non-compliant devices on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_configuration_compliance_baseline:",
+            "    ca_path: ${2:path}",
+            "    command: ${3|create,modify,delete,remediate|}",
+            "    description: ${4:string}",
+            "    device_group_names:",
+            "      - ${5:element}",
+            "    device_ids:",
+            "      - ${6:element}",
+            "    device_service_tags:",
+            "      - ${7:element}",
+            "    hostname: ${8:string}",
+            "    job_wait: ${9|true,false|}",
+            "    job_wait_timeout: ${10:10800}",
+            "    names:",
+            "      - ${11:element}",
+            "    new_name: ${12:string}",
+            "    password: ${13:string}",
+            "    port: ${14:443}",
+            "    template_id: ${15:int}",
+            "    template_name: ${16:string}",
+            "    timeout: ${17:30}",
+            "    username: ${18:string}",
+            "    validate_certs: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify, and delete a configuration compliance baseline and remediate non-compliant devices on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Device compliance report for devices managed in OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_configuration_compliance_info",
+            "Device compliance report for devices managed in OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_configuration_compliance_info:",
+            "    baseline: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    device_id: ${4:int}",
+            "    device_service_tag: ${5:string}",
+            "    hostname: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    timeout: ${9:30}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Device compliance report for devices managed in OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Add or remove device(s) from a static device group on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_group",
+            "Add or remove device(s) from a static device group on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_group:",
+            "    ca_path: ${2:path}",
+            "    device_ids:",
+            "      - ${3:element}",
+            "    device_service_tags:",
+            "      - ${4:element}",
+            "    group_id: ${5:int}",
+            "    hostname: ${6:string}",
+            "    ip_addresses:",
+            "      - ${7:element}",
+            "    name: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    state: ${11|present,absent|}",
+            "    timeout: ${12:30}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Add or remove device(s) from a static device group on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Retrieves the information of devices inventoried by OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_info",
+            "Retrieves the information of devices inventoried by OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_info:",
+            "    ca_path: ${2:path}",
+            "    fact_subset: ${3|basic_inventory,detailed_inventory,subsystem_health|}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves the information of devices inventoried by OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Configure local access settings on OpenManage Enterprise Modular.": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_local_access_configuration",
+            "Configure local access settings on OpenManage Enterprise Modular."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_local_access_configuration:",
+            "    ca_path: ${2:path}",
+            "    device_id: ${4:int}",
+            "    device_service_tag: ${5:string}",
+            "    enable_chassis_direct_access: ${6|false,true|}",
+            "    enable_kvm_access: ${7|false,true|}",
+            "    hostname: ${8:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    timeout: ${13:30}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Configure local access settings on OpenManage Enterprise Modular.",
+        "scope": "ansible"
+    },
+    "Configure device location settings on OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_location",
+            "Configure device location settings on OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_location:",
+            "    aisle: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    data_center: ${4:string}",
+            "    device_id: ${5:int}",
+            "    device_service_tag: ${6:string}",
+            "    hostname: ${7:string}",
+            "    location: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    rack: ${11:string}",
+            "    rack_slot: ${12:int}",
+            "    room: ${13:string}",
+            "    timeout: ${14:30}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Configure device location settings on OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Configure network settings of devices on OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_mgmt_network",
+            "Configure network settings of devices on OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_mgmt_network:",
+            "    ca_path: ${2:path}",
+            "    delay: ${3:0}",
+            "    device_id: ${4:int}",
+            "    device_service_tag: ${5:string}",
+            "    enable_nic: ${8|true,false|}",
+            "    hostname: ${9:string}",
+            "    password: ${13:string}",
+            "    port: ${14:443}",
+            "    timeout: ${15:30}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Configure network settings of devices on OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Configure chassis network services settings on OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_network_services",
+            "Configure chassis network services settings on OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_network_services:",
+            "    ca_path: ${2:path}",
+            "    device_id: ${3:int}",
+            "    device_service_tag: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    timeout: ${11:30}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Configure chassis network services settings on OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Configure chassis power settings on OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_power_settings",
+            "Configure chassis power settings on OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_power_settings:",
+            "    ca_path: ${2:path}",
+            "    device_id: ${3:int}",
+            "    device_service_tag: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    timeout: ${11:30}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Configure chassis power settings on OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Configure Quick Deploy settings on OpenManage Enterprise Modular.": {
+        "prefix": [
+            "dellemc.openmanage.ome_device_quick_deploy",
+            "Configure Quick Deploy settings on OpenManage Enterprise Modular."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_device_quick_deploy:",
+            "    ca_path: ${2:path}",
+            "    device_id: ${3:int}",
+            "    device_service_tag: ${4:string}",
+            "    hostname: ${5:string}",
+            "    job_wait: ${6|true,false|}",
+            "    job_wait_timeout: ${7:120}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    setting_type: ${11:string}",
+            "    timeout: ${12:30}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Configure Quick Deploy settings on OpenManage Enterprise Modular.",
+        "scope": "ansible"
+    },
+    "Perform device-specific operations on target devices": {
+        "prefix": [
+            "dellemc.openmanage.ome_devices",
+            "Perform device-specific operations on target devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_devices:",
+            "    ca_path: ${2:path}",
+            "    device_action: ${3|refresh_inventory,reset_idrac,clear_idrac_job_queue|}",
+            "    device_ids:",
+            "      - ${4:element}",
+            "    device_service_tags:",
+            "      - ${5:element}",
+            "    hostname: ${6:string}",
+            "    job_description: ${7:string}",
+            "    job_name: ${8:string}",
+            "    job_schedule: ${9:startnow}",
+            "    job_wait: ${10|true,false|}",
+            "    job_wait_timeout: ${11:1200}",
+            "    password: ${12:string}",
+            "    port: ${13:443}",
+            "    state: ${14|present,absent|}",
+            "    timeout: ${15:30}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Perform device-specific operations on target devices",
+        "scope": "ansible"
+    },
+    "Export technical support logs(TSR) to network share location": {
+        "prefix": [
+            "dellemc.openmanage.ome_diagnostics",
+            "Export technical support logs(TSR) to network share location"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_diagnostics:",
+            "    ca_path: ${2:path}",
+            "    device_group_name: ${3:string}",
+            "    device_ids:",
+            "      - ${4:element}",
+            "    device_service_tags:",
+            "      - ${5:element}",
+            "    hostname: ${6:string}",
+            "    job_wait: ${7|true,false|}",
+            "    job_wait_timeout: ${8:60}",
+            "    lead_chassis_only: ${9|false,true|}",
+            "    log_selectors:",
+            "      - ${10:element}",
+            "    log_type: ${11|support_assist_collection,application,supportassist_collection|}",
+            "    mask_sensitive_info: ${12|false,true|}",
+            "    password: ${13:string}",
+            "    port: ${14:443}",
+            "    share_address: ${15:string}",
+            "    share_domain: ${16:string}",
+            "    share_name: ${17:string}",
+            "    share_password: ${18:string}",
+            "    share_type: ${19:string}",
+            "    share_user: ${20:string}",
+            "    test_connection: ${21|false,true|}",
+            "    timeout: ${22:30}",
+            "    username: ${23:string}",
+            "    validate_certs: ${24|true,false|}",
+            "$0"
+        ],
+        "description": "Export technical support logs(TSR) to network share location",
+        "scope": "ansible"
+    },
+    "Create, modify, or delete a discovery job on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_discovery",
+            "Create, modify, or delete a discovery job on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_discovery:",
+            "    ca_path: ${2:path}",
+            "    community_string: ${3|false,true|}",
+            "    cron: ${4:string}",
+            "    discovery_config_targets:",
+            "      - ${5:element}",
+            "    discovery_id: ${6:int}",
+            "    discovery_job_name: ${7:string}",
+            "    email_recipient: ${8:string}",
+            "    hostname: ${9:string}",
+            "    ignore_partial_failure: ${10|false,true|}",
+            "    job_wait: ${11|true,false|}",
+            "    job_wait_timeout: ${12:10800}",
+            "    new_name: ${13:string}",
+            "    password: ${14:string}",
+            "    port: ${15:443}",
+            "    schedule: ${16|RunNow,RunLater|}",
+            "    state: ${17|present,absent|}",
+            "    timeout: ${18:30}",
+            "    trap_destination: ${19|false,true|}",
+            "    username: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify, or delete a discovery job on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Create, modify, or delete an Active Directory user group on OpenManage Enterprise and OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_domain_user_groups",
+            "Create, modify, or delete an Active Directory user group on OpenManage Enterprise and OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_domain_user_groups:",
+            "    ca_path: ${2:path}",
+            "    directory_id: ${3:int}",
+            "    directory_name: ${4:string}",
+            "    domain_password: ${5:string}",
+            "    domain_username: ${6:string}",
+            "    group_name: ${7:string}",
+            "    hostname: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    role: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    timeout: ${13:30}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify, or delete an Active Directory user group on OpenManage Enterprise and OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Update firmware on PowerEdge devices and its components through OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_firmware",
+            "Update firmware on PowerEdge devices and its components through OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_firmware:",
+            "    baseline_name: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    components:",
+            "      - ${4:element}",
+            "    device_group_names:",
+            "      - ${5:element}",
+            "    device_id:",
+            "      - ${6:element}",
+            "    device_service_tag:",
+            "      - ${7:element}",
+            "    devices:",
+            "      - ${8:element}",
+            "    dup_file: ${9:path}",
+            "    hostname: ${10:string}",
+            "    password: ${11:string}",
+            "    port: ${12:443}",
+            "    schedule: ${13|RebootNow,StageForNextReboot|}",
+            "    timeout: ${14:30}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Update firmware on PowerEdge devices and its components through OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Create, modify, or delete a firmware baseline on OpenManage Enterprise or OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_firmware_baseline",
+            "Create, modify, or delete a firmware baseline on OpenManage Enterprise or OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_firmware_baseline:",
+            "    baseline_description: ${2:string}",
+            "    baseline_id: ${3:int}",
+            "    baseline_name: ${4:string}",
+            "    ca_path: ${5:path}",
+            "    catalog_name: ${6:string}",
+            "    device_group_names:",
+            "      - ${7:element}",
+            "    device_ids:",
+            "      - ${8:element}",
+            "    device_service_tags:",
+            "      - ${9:element}",
+            "    downgrade_enabled: ${10|false,true|}",
+            "    hostname: ${11:string}",
+            "    is_64_bit: ${12|false,true|}",
+            "    job_wait: ${13|true,false|}",
+            "    job_wait_timeout: ${14:600}",
+            "    new_baseline_name: ${15:string}",
+            "    password: ${16:string}",
+            "    port: ${17:443}",
+            "    state: ${18|present,absent|}",
+            "    timeout: ${19:30}",
+            "    username: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify, or delete a firmware baseline on OpenManage Enterprise or OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Retrieves baseline compliance details on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_firmware_baseline_compliance_info",
+            "Retrieves baseline compliance details on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_firmware_baseline_compliance_info:",
+            "    baseline_name: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    device_group_names:",
+            "      - ${4:element}",
+            "    device_ids:",
+            "      - ${5:element}",
+            "    device_service_tags:",
+            "      - ${6:element}",
+            "    hostname: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    timeout: ${10:30}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves baseline compliance details on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Retrieves baseline details from OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_firmware_baseline_info",
+            "Retrieves baseline details from OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_firmware_baseline_info:",
+            "    baseline_name: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    timeout: ${7:30}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves baseline details from OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Create, modify, or delete a firmware catalog on OpenManage Enterprise or OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_firmware_catalog",
+            "Create, modify, or delete a firmware catalog on OpenManage Enterprise or OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_firmware_catalog:",
+            "    ca_path: ${2:path}",
+            "    catalog_description: ${3:string}",
+            "    catalog_id:",
+            "      - ${4:element}",
+            "    catalog_name:",
+            "      - ${5:element}",
+            "    check_certificate: ${6|false,true|}",
+            "    file_name: ${7:string}",
+            "    hostname: ${8:string}",
+            "    job_wait: ${9|true,false|}",
+            "    job_wait_timeout: ${10:600}",
+            "    new_catalog_name: ${11:string}",
+            "    password: ${12:string}",
+            "    port: ${13:443}",
+            "    repository_domain: ${14:string}",
+            "    repository_password: ${15:string}",
+            "    repository_type: ${16:string}",
+            "    repository_username: ${17:string}",
+            "    source: ${18:string}",
+            "    source_path: ${19:string}",
+            "    state: ${20|present,absent|}",
+            "    timeout: ${21:30}",
+            "    username: ${22:string}",
+            "    validate_certs: ${23|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify, or delete a firmware catalog on OpenManage Enterprise or OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Manages static device groups on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_groups",
+            "Manages static device groups on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_groups:",
+            "    ca_path: ${2:path}",
+            "    description: ${3:string}",
+            "    group_id:",
+            "      - ${4:element}",
+            "    hostname: ${5:string}",
+            "    name:",
+            "      - ${6:element}",
+            "    new_name: ${7:string}",
+            "    parent_group_id: ${8:int}",
+            "    parent_group_name: ${9:Static Groups}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    state: ${12|present,absent|}",
+            "    timeout: ${13:30}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manages static device groups on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Manages identity pool settings on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_identity_pool",
+            "Manages identity pool settings on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_identity_pool:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${6:string}",
+            "    new_pool_name: ${8:string}",
+            "    password: ${9:string}",
+            "    pool_description: ${10:string}",
+            "    pool_name: ${11:string}",
+            "    port: ${12:443}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:30}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Manages identity pool settings on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Get job details for a given job ID or an entire job queue on OpenMange Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_job_info",
+            "Get job details for a given job ID or an entire job queue on OpenMange Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_job_info:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    job_id: ${4:int}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Get job details for a given job ID or an entire job queue on OpenMange Enterprise",
+        "scope": "ansible"
+    },
+    "This module allows to automate the port portioning or port breakout to logical sub ports": {
+        "prefix": [
+            "dellemc.openmanage.ome_network_port_breakout",
+            "This module allows to automate the port portioning or port breakout to logical sub ports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_network_port_breakout:",
+            "    breakout_type: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    target_port: ${7:string}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "This module allows to automate the port portioning or port breakout to logical sub ports",
+        "scope": "ansible"
+    },
+    "Create, modify & delete a VLAN": {
+        "prefix": [
+            "dellemc.openmanage.ome_network_vlan",
+            "Create, modify &amp; delete a VLAN"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_network_vlan:",
+            "    ca_path: ${2:path}",
+            "    description: ${3:string}",
+            "    hostname: ${4:string}",
+            "    name: ${5:string}",
+            "    new_name: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:30}",
+            "    type: ${11:string}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "    vlan_maximum: ${14:int}",
+            "    vlan_minimum: ${15:int}",
+            "$0"
+        ],
+        "description": "Create, modify &amp; delete a VLAN",
+        "scope": "ansible"
+    },
+    "Retrieves the information about networks VLAN(s) present in OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_network_vlan_info",
+            "Retrieves the information about networks VLAN(s) present in OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_network_vlan_info:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    id: ${4:int}",
+            "    name: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves the information about networks VLAN(s) present in OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Performs the power management operations on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_powerstate",
+            "Performs the power management operations on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_powerstate:",
+            "    ca_path: ${2:path}",
+            "    device_id: ${3:int}",
+            "    device_service_tag: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    power_state: ${8:string}",
+            "    timeout: ${9:30}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Performs the power management operations on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Create, modify, delete, assign, unassign and migrate a profile on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_profile",
+            "Create, modify, delete, assign, unassign and migrate a profile on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_profile:",
+            "    ca_path: ${4:path}",
+            "    command: ${5|create,modify,delete,assign,unassign,migrate|}",
+            "    description: ${6:string}",
+            "    device_id: ${7:int}",
+            "    device_service_tag: ${8:string}",
+            "    force: ${10|false,true|}",
+            "    hostname: ${11:string}",
+            "    name: ${12:string}",
+            "    name_prefix: ${13:Profile}",
+            "    new_name: ${14:string}",
+            "    number_of_profiles: ${15:1}",
+            "    password: ${16:string}",
+            "    port: ${17:443}",
+            "    template_id: ${18:int}",
+            "    template_name: ${19:string}",
+            "    timeout: ${20:30}",
+            "    username: ${21:string}",
+            "    validate_certs: ${22|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify, delete, assign, unassign and migrate a profile on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Retrieves the information of server interface profile on OpenManage Enterprise Modular.": {
+        "prefix": [
+            "dellemc.openmanage.ome_server_interface_profile_info",
+            "Retrieves the information of server interface profile on OpenManage Enterprise Modular."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_server_interface_profile_info:",
+            "    ca_path: ${2:path}",
+            "    device_id:",
+            "      - ${3:element}",
+            "    device_service_tag:",
+            "      - ${4:element}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves the information of server interface profile on OpenManage Enterprise Modular.",
+        "scope": "ansible"
+    },
+    "Configure server interface profiles": {
+        "prefix": [
+            "dellemc.openmanage.ome_server_interface_profiles",
+            "Configure server interface profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_server_interface_profiles:",
+            "    ca_path: ${2:path}",
+            "    device_id:",
+            "      - ${3:element}",
+            "    device_service_tag:",
+            "      - ${4:element}",
+            "    hostname: ${5:string}",
+            "    job_wait: ${6|true,false|}",
+            "    job_wait_timeout: ${7:120}",
+            "    nic_configuration:",
+            "      - ${8:element}",
+            "    nic_teaming: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    timeout: ${12:30}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Configure server interface profiles",
+        "scope": "ansible"
+    },
+    "Create, modify or delete a fabric on OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_smart_fabric",
+            "Create, modify or delete a fabric on OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_smart_fabric:",
+            "    ca_path: ${2:path}",
+            "    description: ${3:string}",
+            "    fabric_design: ${4:string}",
+            "    hostname: ${5:string}",
+            "    name: ${6:string}",
+            "    new_name: ${7:string}",
+            "    override_LLDP_configuration: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    primary_switch_service_tag: ${11:string}",
+            "    secondary_switch_service_tag: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:30}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify or delete a fabric on OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Create, modify or delete a uplink for a fabric on OpenManage Enterprise Modular": {
+        "prefix": [
+            "dellemc.openmanage.ome_smart_fabric_uplink",
+            "Create, modify or delete a uplink for a fabric on OpenManage Enterprise Modular"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_smart_fabric_uplink:",
+            "    ca_path: ${2:path}",
+            "    description: ${3:string}",
+            "    fabric_name: ${4:string}",
+            "    hostname: ${5:string}",
+            "    name: ${6:string}",
+            "    new_name: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    primary_switch_ports:",
+            "      - ${10:element}",
+            "    primary_switch_service_tag: ${11:string}",
+            "    secondary_switch_ports:",
+            "      - ${12:element}",
+            "    secondary_switch_service_tag: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    tagged_networks:",
+            "      - ${15:element}",
+            "    timeout: ${16:30}",
+            "    ufd_enable: ${17:string}",
+            "    untagged_network: ${18:string}",
+            "    uplink_type: ${19:string}",
+            "    username: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify or delete a uplink for a fabric on OpenManage Enterprise Modular",
+        "scope": "ansible"
+    },
+    "Create, modify, deploy, delete, export, import and clone a template on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_template",
+            "Create, modify, deploy, delete, export, import and clone a template on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_template:",
+            "    ca_path: ${3:path}",
+            "    command: ${4|create,modify,deploy,delete,export,import,clone|}",
+            "    device_group_names:",
+            "      - ${5:element}",
+            "    device_id:",
+            "      - ${6:element}",
+            "    device_service_tag:",
+            "      - ${7:element}",
+            "    hostname: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    template_id: ${11:int}",
+            "    template_name: ${12:string}",
+            "    template_view_type: ${13|Deployment,Compliance,Inventory,Sample,None|}",
+            "    timeout: ${14:30}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify, deploy, delete, export, import and clone a template on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Attach or detach an identity pool to a requested template on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_template_identity_pool",
+            "Attach or detach an identity pool to a requested template on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_template_identity_pool:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    identity_pool_name: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    template_name: ${7:string}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Attach or detach an identity pool to a requested template on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Retrieves template details from OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_template_info",
+            "Retrieves template details from OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_template_info:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    template_id: ${7:int}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves template details from OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Set tagged and untagged vlans to native network card supported by a template on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_template_network_vlan",
+            "Set tagged and untagged vlans to native network card supported by a template on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_template_network_vlan:",
+            "    ca_path: ${2:path}",
+            "    hostname: ${3:string}",
+            "    nic_identifier: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    propagate_vlan: ${7|true,false|}",
+            "    tagged_networks:",
+            "      - ${8:element}",
+            "    template_id: ${9:int}",
+            "    template_name: ${10:string}",
+            "    timeout: ${11:30}",
+            "    untagged_networks:",
+            "      - ${12:element}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Set tagged and untagged vlans to native network card supported by a template on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Create, modify or delete a user on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_user",
+            "Create, modify or delete a user on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_user:",
+            "    ca_path: ${3:path}",
+            "    hostname: ${4:string}",
+            "    name: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    state: ${8|present,absent|}",
+            "    timeout: ${9:30}",
+            "    user_id: ${10:int}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify or delete a user on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Retrieves details of all accounts or a specific account on OpenManage Enterprise": {
+        "prefix": [
+            "dellemc.openmanage.ome_user_info",
+            "Retrieves details of all accounts or a specific account on OpenManage Enterprise"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.ome_user_info:",
+            "    account_id: ${2:int}",
+            "    ca_path: ${3:path}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    timeout: ${8:30}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves details of all accounts or a specific account on OpenManage Enterprise",
+        "scope": "ansible"
+    },
+    "Manage Redfish Subscriptions": {
+        "prefix": [
+            "dellemc.openmanage.redfish_event_subscription",
+            "Manage Redfish Subscriptions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.redfish_event_subscription:",
+            "    baseuri: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    destination: ${4:string}",
+            "    event_format_type: ${5|Event,MetricReport|}",
+            "    event_type: ${6|Alert,MetricReport|}",
+            "    password: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    timeout: ${9:30}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Redfish Subscriptions",
+        "scope": "ansible"
+    },
+    "To perform a component firmware update using the image file available on the local or remote system": {
+        "prefix": [
+            "dellemc.openmanage.redfish_firmware",
+            "To perform a component firmware update using the image file available on the local or remote system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.redfish_firmware:",
+            "    baseuri: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    image_uri: ${4:string}",
+            "    password: ${5:string}",
+            "    timeout: ${6:30}",
+            "    transfer_protocol: ${7|HTTP,CIFS,FTP,HTTPS,NSF,OEM,SCP,SFTP,TFTP|}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "To perform a component firmware update using the image file available on the local or remote system",
+        "scope": "ansible"
+    },
+    "Manage device power state": {
+        "prefix": [
+            "dellemc.openmanage.redfish_powerstate",
+            "Manage device power state"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.redfish_powerstate:",
+            "    baseuri: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    password: ${4:string}",
+            "    reset_type: ${5:string}",
+            "    resource_id: ${6:string}",
+            "    timeout: ${7:30}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage device power state",
+        "scope": "ansible"
+    },
+    "Manages the storage volume configuration": {
+        "prefix": [
+            "dellemc.openmanage.redfish_storage_volume",
+            "Manages the storage volume configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.openmanage.redfish_storage_volume:",
+            "    baseuri: ${2:string}",
+            "    block_size_bytes: ${3:int}",
+            "    ca_path: ${4:path}",
+            "    capacity_bytes: ${5:string}",
+            "    command: ${6:string}",
+            "    controller_id: ${7:string}",
+            "    drives:",
+            "      - ${8:element}",
+            "    encrypted: ${9|false,true|}",
+            "    encryption_types: ${10:string}",
+            "    initialize_type: ${11|Fast,Slow|}",
+            "    name: ${12:string}",
+            "    optimum_io_size_bytes: ${14:int}",
+            "    password: ${15:string}",
+            "    state: ${16:string}",
+            "    timeout: ${17:30}",
+            "    username: ${18:string}",
+            "    validate_certs: ${19|true,false|}",
+            "    volume_id: ${20:string}",
+            "    volume_type: ${21:string}",
+            "$0"
+        ],
+        "description": "Manages the storage volume configuration",
+        "scope": "ansible"
+    }
+}

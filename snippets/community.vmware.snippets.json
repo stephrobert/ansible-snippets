@@ -1,0 +1,4401 @@
+{
+    "Gather user or group information of a domain": {
+        "prefix": [
+            "community.vmware.vcenter_domain_user_group_info",
+            "Gather user or group information of a domain"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vcenter_domain_user_group_info:",
+            "    belongs_to_group: ${2:string}",
+            "    belongs_to_user: ${3:string}",
+            "    domain: ${4:vsphere.local}",
+            "    exact_match: ${5|false,true|}",
+            "    find_groups: ${6|true,false|}",
+            "    find_users: ${7|true,false|}",
+            "    hostname: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    search_string: ${13:string}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Gather user or group information of a domain",
+        "scope": "ansible"
+    },
+    "Register/deregister vCenter Extensions": {
+        "prefix": [
+            "community.vmware.vcenter_extension",
+            "Register/deregister vCenter Extensions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vcenter_extension:",
+            "    client_type: ${2:vsphere-client-serenity}",
+            "    company: ${3:string}",
+            "    description: ${4:string}",
+            "    email: ${5:string}",
+            "    extension_key: ${6:string}",
+            "    hostname: ${7:string}",
+            "    name: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    server_type: ${13:vsphere-client-serenity}",
+            "    ssl_thumbprint: ${14:string}",
+            "    state: ${15|present,absent|}",
+            "    url: ${16:string}",
+            "    username: ${17:string}",
+            "    validate_certs: ${18|true,false|}",
+            "    version: ${19:string}",
+            "    visible: ${20|true,false|}",
+            "$0"
+        ],
+        "description": "Register/deregister vCenter Extensions",
+        "scope": "ansible"
+    },
+    "Gather info vCenter extensions": {
+        "prefix": [
+            "community.vmware.vcenter_extension_info",
+            "Gather info vCenter extensions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vcenter_extension_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info vCenter extensions",
+        "scope": "ansible"
+    },
+    "Manage folders on given datacenter": {
+        "prefix": [
+            "community.vmware.vcenter_folder",
+            "Manage folders on given datacenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vcenter_folder:",
+            "    datacenter: ${2:string}",
+            "    folder_name: ${3:string}",
+            "    folder_type: ${4|vm,datastore,host,network|}",
+            "    hostname: ${5:string}",
+            "    parent_folder: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage folders on given datacenter",
+        "scope": "ansible"
+    },
+    "Manage VMware vCenter license keys": {
+        "prefix": [
+            "community.vmware.vcenter_license",
+            "Manage VMware vCenter license keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vcenter_license:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    esxi_hostname: ${4:string}",
+            "    hostname: ${5:string}",
+            "    license: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    state: ${12|present,absent|}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware vCenter license keys",
+        "scope": "ansible"
+    },
+    "Add, reconfigure or remove Standard Key Provider on vCenter server": {
+        "prefix": [
+            "community.vmware.vcenter_standard_key_provider",
+            "Add, reconfigure or remove Standard Key Provider on vCenter server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vcenter_standard_key_provider:",
+            "    hostname: ${2:string}",
+            "    kms_info:",
+            "      - ${3:element}",
+            "    kms_password: ${4:string}",
+            "    kms_username: ${5:string}",
+            "    mark_default: ${7|false,true|}",
+            "    name: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    proxy_server: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Add, reconfigure or remove Standard Key Provider on vCenter server",
+        "scope": "ansible"
+    },
+    "Provides information about VMware server to which user is connecting to": {
+        "prefix": [
+            "community.vmware.vmware_about_info",
+            "Provides information about VMware server to which user is connecting to"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_about_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Provides information about VMware server to which user is connecting to",
+        "scope": "ansible"
+    },
+    "Manage VMware categories": {
+        "prefix": [
+            "community.vmware.vmware_category",
+            "Manage VMware categories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_category:",
+            "    associable_object_types:",
+            "      - ${2:element}",
+            "    category_cardinality: ${3|multiple,single|}",
+            "    category_description: ${4:}",
+            "    category_name: ${5:string}",
+            "    hostname: ${6:string}",
+            "    new_category_name: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    protocol: ${10|https,http|}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    state: ${13|present,absent|}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware categories",
+        "scope": "ansible"
+    },
+    "Gather info about VMware tag categories": {
+        "prefix": [
+            "community.vmware.vmware_category_info",
+            "Gather info about VMware tag categories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_category_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    protocol: ${5|https,http|}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about VMware tag categories",
+        "scope": "ansible"
+    },
+    "Backup / Restore / Reset ESXi host configuration": {
+        "prefix": [
+            "community.vmware.vmware_cfg_backup",
+            "Backup / Restore / Reset ESXi host configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cfg_backup:",
+            "    dest: ${2:path}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    src: ${9:path}",
+            "    state: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Backup / Restore / Reset ESXi host configuration",
+        "scope": "ansible"
+    },
+    "Manage VMware vSphere clusters": {
+        "prefix": [
+            "community.vmware.vmware_cluster",
+            "Manage VMware vSphere clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cluster:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware vSphere clusters",
+        "scope": "ansible"
+    },
+    "Manage Distributed Power Management (DPM) on VMware vSphere clusters": {
+        "prefix": [
+            "community.vmware.vmware_cluster_dpm",
+            "Manage Distributed Power Management (DPM) on VMware vSphere clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cluster_dpm:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    default_dpm_behaviour: ${4|automated,manual|}",
+            "    enable_dpm: ${5|false,true|}",
+            "    host_power_action_rate: ${6:3}",
+            "    hostname: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Distributed Power Management (DPM) on VMware vSphere clusters",
+        "scope": "ansible"
+    },
+    "Manage Distributed Resource Scheduler (DRS) on VMware vSphere clusters": {
+        "prefix": [
+            "community.vmware.vmware_cluster_drs",
+            "Manage Distributed Resource Scheduler (DRS) on VMware vSphere clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cluster_drs:",
+            "    cluster_name: ${3:string}",
+            "    datacenter: ${4:string}",
+            "    drs_default_vm_behavior: ${5|fullyAutomated,manual,partiallyAutomated|}",
+            "    drs_enable_vm_behavior_overrides: ${6|true,false|}",
+            "    drs_vmotion_rate: ${7:3}",
+            "    enable: ${8|true,false|}",
+            "    hostname: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    predictive_drs: ${12|false,true|}",
+            "    proxy_host: ${13:string}",
+            "    proxy_port: ${14:int}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Distributed Resource Scheduler (DRS) on VMware vSphere clusters",
+        "scope": "ansible"
+    },
+    "Manage High Availability (HA) on VMware vSphere clusters": {
+        "prefix": [
+            "community.vmware.vmware_cluster_ha",
+            "Manage High Availability (HA) on VMware vSphere clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cluster_ha:",
+            "    apd_delay: ${3:180}",
+            "    apd_reaction: ${4|reset,none|}",
+            "    apd_response: ${5|warning,disabled,restartConservative,restartAggressive|}",
+            "    cluster_name: ${6:string}",
+            "    datacenter: ${7:string}",
+            "    enable: ${8|true,false|}",
+            "    ha_host_monitoring: ${10|enabled,disabled|}",
+            "    ha_restart_priority: ${11|medium,disabled,high,low|}",
+            "    ha_vm_failure_interval: ${12:30}",
+            "    ha_vm_max_failure_window: ${13:-1}",
+            "    ha_vm_max_failures: ${14:3}",
+            "    ha_vm_min_up_time: ${15:120}",
+            "    ha_vm_monitoring: ${16|vmMonitoringDisabled,vmAndAppMonitoring,vmMonitoringOnly|}",
+            "    host_isolation_response: ${17|none,powerOff,shutdown|}",
+            "    hostname: ${18:string}",
+            "    password: ${19:string}",
+            "    pdl_response: ${20|warning,disabled,restartAggressive|}",
+            "    port: ${21:443}",
+            "    proxy_host: ${22:string}",
+            "    proxy_port: ${23:int}",
+            "    username: ${26:string}",
+            "    validate_certs: ${27|true,false|}",
+            "$0"
+        ],
+        "description": "Manage High Availability (HA) on VMware vSphere clusters",
+        "scope": "ansible"
+    },
+    "Gather info about clusters available in given vCenter": {
+        "prefix": [
+            "community.vmware.vmware_cluster_info",
+            "Gather info about clusters available in given vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cluster_info:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    properties:",
+            "      - ${7:element}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    schema: ${10|summary,vsphere|}",
+            "    show_tag: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about clusters available in given vCenter",
+        "scope": "ansible"
+    },
+    "Override the default vCLS (vSphere Cluster Services) VM disk placement for this cluster.": {
+        "prefix": [
+            "community.vmware.vmware_cluster_vcls",
+            "Override the default vCLS (vSphere Cluster Services) VM disk placement for this cluster."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cluster_vcls:",
+            "    allowed_datastores:",
+            "      - ${2:element}",
+            "    cluster_name: ${3:string}",
+            "    datacenter: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Override the default vCLS (vSphere Cluster Services) VM disk placement for this cluster.",
+        "scope": "ansible"
+    },
+    "Manages virtual storage area network (vSAN) configuration on VMware vSphere clusters": {
+        "prefix": [
+            "community.vmware.vmware_cluster_vsan",
+            "Manages virtual storage area network (vSAN) configuration on VMware vSphere clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_cluster_vsan:",
+            "    cluster_name: ${3:string}",
+            "    datacenter: ${4:string}",
+            "    enable: ${5|true,false|}",
+            "    hostname: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "    vsan_auto_claim_storage: ${13|false,true|}",
+            "$0"
+        ],
+        "description": "Manages virtual storage area network (vSAN) configuration on VMware vSphere clusters",
+        "scope": "ansible"
+    },
+    "Deploy Virtual Machine from ovf template stored in content library.": {
+        "prefix": [
+            "community.vmware.vmware_content_deploy_ovf_template",
+            "Deploy Virtual Machine from ovf template stored in content library."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_content_deploy_ovf_template:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    datastore: ${4:string}",
+            "    datastore_cluster: ${5:string}",
+            "    folder: ${6:vm}",
+            "    host: ${7:string}",
+            "    hostname: ${8:string}",
+            "    library: ${9:string}",
+            "    log_level: ${10|normal,debug,info|}",
+            "    name: ${11:string}",
+            "    password: ${12:string}",
+            "    port: ${13:443}",
+            "    protocol: ${14|https,http|}",
+            "    proxy_host: ${15:string}",
+            "    proxy_port: ${16:int}",
+            "    resource_pool: ${17:string}",
+            "    storage_provisioning: ${18|thin,thick,eagerZeroedThick,eagerzeroedthick|}",
+            "    template: ${19:string}",
+            "    username: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Deploy Virtual Machine from ovf template stored in content library.",
+        "scope": "ansible"
+    },
+    "Deploy Virtual Machine from template stored in content library.": {
+        "prefix": [
+            "community.vmware.vmware_content_deploy_template",
+            "Deploy Virtual Machine from template stored in content library."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_content_deploy_template:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    datastore: ${4:string}",
+            "    datastore_cluster: ${5:string}",
+            "    folder: ${6:vm}",
+            "    host: ${7:string}",
+            "    hostname: ${8:string}",
+            "    library: ${9:string}",
+            "    log_level: ${10|normal,debug,info|}",
+            "    name: ${11:string}",
+            "    password: ${12:string}",
+            "    port: ${13:443}",
+            "    protocol: ${14|https,http|}",
+            "    proxy_host: ${15:string}",
+            "    proxy_port: ${16:int}",
+            "    resource_pool: ${17:string}",
+            "    state: ${18|present,poweredon|}",
+            "    template: ${19:string}",
+            "    username: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Deploy Virtual Machine from template stored in content library.",
+        "scope": "ansible"
+    },
+    "Gather information about VMWare Content Library": {
+        "prefix": [
+            "community.vmware.vmware_content_library_info",
+            "Gather information about VMWare Content Library"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_content_library_info:",
+            "    hostname: ${2:string}",
+            "    library_id: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    protocol: ${6|https,http|}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about VMWare Content Library",
+        "scope": "ansible"
+    },
+    "Create, update and delete VMware content library": {
+        "prefix": [
+            "community.vmware.vmware_content_library_manager",
+            "Create, update and delete VMware content library"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_content_library_manager:",
+            "    datastore_name: ${2:string}",
+            "    hostname: ${3:string}",
+            "    library_description: ${4:string}",
+            "    library_name: ${5:string}",
+            "    library_type: ${6|local,subscribed|}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    protocol: ${9|https,http|}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    ssl_thumbprint: ${12:}",
+            "    state: ${13|present,absent|}",
+            "    subscription_url: ${14:}",
+            "    update_on_demand: ${15|false,true|}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Create, update and delete VMware content library",
+        "scope": "ansible"
+    },
+    "Manage custom attributes definitions": {
+        "prefix": [
+            "community.vmware.vmware_custom_attribute",
+            "Manage custom attributes definitions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_custom_attribute:",
+            "    custom_attribute: ${2:string}",
+            "    hostname: ${3:string}",
+            "    object_type: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage custom attributes definitions",
+        "scope": "ansible"
+    },
+    "Manage custom attributes from VMware for the given vSphere object": {
+        "prefix": [
+            "community.vmware.vmware_custom_attribute_manager",
+            "Manage custom attributes from VMware for the given vSphere object"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_custom_attribute_manager:",
+            "    custom_attributes:",
+            "      - ${2:element}",
+            "    hostname: ${3:string}",
+            "    object_name: ${4:string}",
+            "    object_type: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|present,absent|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage custom attributes from VMware for the given vSphere object",
+        "scope": "ansible"
+    },
+    "Manage VMware vSphere Datacenters": {
+        "prefix": [
+            "community.vmware.vmware_datacenter",
+            "Manage VMware vSphere Datacenters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_datacenter:",
+            "    datacenter_name: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    state: ${8|present,absent|}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware vSphere Datacenters",
+        "scope": "ansible"
+    },
+    "Gather information about VMware vSphere Datacenters": {
+        "prefix": [
+            "community.vmware.vmware_datacenter_info",
+            "Gather information about VMware vSphere Datacenters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_datacenter_info:",
+            "    datacenter: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    properties:",
+            "      - ${6:element}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    schema: ${9|summary,vsphere|}",
+            "    show_tag: ${10|false,true|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about VMware vSphere Datacenters",
+        "scope": "ansible"
+    },
+    "Configure Datastores": {
+        "prefix": [
+            "community.vmware.vmware_datastore",
+            "Configure Datastores"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_datastore:",
+            "    congestion_threshold_manual: ${2:int}",
+            "    congestion_threshold_percentage: ${3:90}",
+            "    datacenter: ${4:string}",
+            "    hostname: ${5:string}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    statistic_collection: ${11|true,false|}",
+            "    storage_io_control: ${12:string}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Configure Datastores",
+        "scope": "ansible"
+    },
+    "Manage VMware vSphere datastore clusters": {
+        "prefix": [
+            "community.vmware.vmware_datastore_cluster",
+            "Manage VMware vSphere datastore clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_datastore_cluster:",
+            "    automation_level: ${2|manual,automated|}",
+            "    datacenter_name: ${3:string}",
+            "    datastore_cluster_name: ${4:string}",
+            "    enable_io_loadbalance: ${5|false,true|}",
+            "    enable_sdrs: ${6|false,true|}",
+            "    folder: ${7:string}",
+            "    hostname: ${8:string}",
+            "    keep_vmdks_together: ${9|true,false|}",
+            "    loadbalance_interval: ${10:480}",
+            "    password: ${11:string}",
+            "    port: ${12:443}",
+            "    proxy_host: ${13:string}",
+            "    proxy_port: ${14:int}",
+            "    state: ${15|present,absent|}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware vSphere datastore clusters",
+        "scope": "ansible"
+    },
+    "Manage VMware vSphere datastore cluster's members": {
+        "prefix": [
+            "community.vmware.vmware_datastore_cluster_manager",
+            "Manage VMware vSphere datastore cluster&#39;s members"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_datastore_cluster_manager:",
+            "    datacenter_name: ${2:string}",
+            "    datastore_cluster_name: ${3:string}",
+            "    datastores:",
+            "      - ${4:element}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|present,absent|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware vSphere datastore cluster&#39;s members",
+        "scope": "ansible"
+    },
+    "Gather info about datastores available in given vCenter": {
+        "prefix": [
+            "community.vmware.vmware_datastore_info",
+            "Gather info about datastores available in given vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_datastore_info:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    gather_nfs_mount_info: ${4|false,true|}",
+            "    gather_vmfs_mount_info: ${5|false,true|}",
+            "    hostname: ${6:string}",
+            "    name: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    properties:",
+            "      - ${10:element}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    schema: ${13|summary,vsphere|}",
+            "    show_tag: ${14|false,true|}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about datastores available in given vCenter",
+        "scope": "ansible"
+    },
+    "Place a datastore into maintenance mode": {
+        "prefix": [
+            "community.vmware.vmware_datastore_maintenancemode",
+            "Place a datastore into maintenance mode"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_datastore_maintenancemode:",
+            "    cluster_name: ${2:string}",
+            "    datastore: ${3:string}",
+            "    datastore_cluster: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|present,absent|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Place a datastore into maintenance mode",
+        "scope": "ansible"
+    },
+    "Deploys a VMware virtual machine from an OVF or OVA file": {
+        "prefix": [
+            "community.vmware.vmware_deploy_ovf",
+            "Deploys a VMware virtual machine from an OVF or OVA file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_deploy_ovf:",
+            "    allow_duplicates: ${2|true,false|}",
+            "    cluster: ${3:string}",
+            "    datacenter: ${4:ha-datacenter}",
+            "    datastore: ${5:datastore1}",
+            "    deployment_option: ${6:string}",
+            "    disk_provisioning: ${7|thin,flat,eagerZeroedThick,monolithicSparse,twoGbMaxExtentSparse,twoGbMaxExtentFlat,sparse,thick,seSparse,monolithicFlat|}",
+            "    esxi_hostname: ${8:string}",
+            "    fail_on_spec_warnings: ${9|false,true|}",
+            "    folder: ${10:string}",
+            "    hostname: ${11:string}",
+            "    inject_ovf_env: ${12|false,true|}",
+            "    name: ${13:string}",
+            "    ovf: ${15:path}",
+            "    password: ${16:string}",
+            "    port: ${17:443}",
+            "    power_on: ${18|true,false|}",
+            "    proxy_host: ${20:string}",
+            "    proxy_port: ${21:int}",
+            "    resource_pool: ${22:Resources}",
+            "    username: ${23:string}",
+            "    validate_certs: ${24|true,false|}",
+            "    wait: ${25|true,false|}",
+            "    wait_for_ip_address: ${26|false,true|}",
+            "$0"
+        ],
+        "description": "Deploys a VMware virtual machine from an OVF or OVA file",
+        "scope": "ansible"
+    },
+    "Creates vm/host group in a given cluster.": {
+        "prefix": [
+            "community.vmware.vmware_drs_group",
+            "Creates vm/host group in a given cluster."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_drs_group:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    group_name: ${4:string}",
+            "    hostname: ${5:string}",
+            "    hosts:",
+            "      - ${6:element}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "    vms:",
+            "      - ${14:element}",
+            "$0"
+        ],
+        "description": "Creates vm/host group in a given cluster.",
+        "scope": "ansible"
+    },
+    "Gathers info about DRS VM/Host groups on the given cluster": {
+        "prefix": [
+            "community.vmware.vmware_drs_group_info",
+            "Gathers info about DRS VM/Host groups on the given cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_drs_group_info:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about DRS VM/Host groups on the given cluster",
+        "scope": "ansible"
+    },
+    "Manage VMs and Hosts in DRS group.": {
+        "prefix": [
+            "community.vmware.vmware_drs_group_manager",
+            "Manage VMs and Hosts in DRS group."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_drs_group_manager:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    group_name: ${4:string}",
+            "    hostname: ${5:string}",
+            "    hosts:",
+            "      - ${6:element}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "    vms:",
+            "      - ${14:element}",
+            "$0"
+        ],
+        "description": "Manage VMs and Hosts in DRS group.",
+        "scope": "ansible"
+    },
+    "Gathers info about DRS rule on the given cluster": {
+        "prefix": [
+            "community.vmware.vmware_drs_rule_info",
+            "Gathers info about DRS rule on the given cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_drs_rule_info:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about DRS rule on the given cluster",
+        "scope": "ansible"
+    },
+    "Add or remove a host from distributed virtual switch": {
+        "prefix": [
+            "community.vmware.vmware_dvs_host",
+            "Add or remove a host from distributed virtual switch"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvs_host:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    lag_uplinks:",
+            "      - ${4:element}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    switch_name: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "    vendor_specific_config:",
+            "      - ${13:element}",
+            "    vmnics:",
+            "      - ${14:element}",
+            "$0"
+        ],
+        "description": "Add or remove a host from distributed virtual switch",
+        "scope": "ansible"
+    },
+    "Create or remove a Distributed vSwitch portgroup.": {
+        "prefix": [
+            "community.vmware.vmware_dvs_portgroup",
+            "Create or remove a Distributed vSwitch portgroup."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvs_portgroup:",
+            "    hostname: ${2:string}",
+            "    net_flow: ${5:string}",
+            "    num_ports: ${7:int}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    port_allocation: ${11:string}",
+            "    port_binding: ${12:string}",
+            "    portgroup_name: ${14:string}",
+            "    proxy_host: ${15:string}",
+            "    proxy_port: ${16:int}",
+            "    state: ${17:string}",
+            "    switch_name: ${18:string}",
+            "    username: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "    vlan_id: ${22:string}",
+            "    vlan_private: ${23|false,true|}",
+            "    vlan_trunk: ${24|false,true|}",
+            "$0"
+        ],
+        "description": "Create or remove a Distributed vSwitch portgroup.",
+        "scope": "ansible"
+    },
+    "Find portgroup(s) in a VMware environment": {
+        "prefix": [
+            "community.vmware.vmware_dvs_portgroup_find",
+            "Find portgroup(s) in a VMware environment"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvs_portgroup_find:",
+            "    dvswitch: ${2:string}",
+            "    hostname: ${3:string}",
+            "    name: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    show_uplink: ${9|false,true|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "    vlanid: ${12:int}",
+            "$0"
+        ],
+        "description": "Find portgroup(s) in a VMware environment",
+        "scope": "ansible"
+    },
+    "Gathers info DVS portgroup configurations": {
+        "prefix": [
+            "community.vmware.vmware_dvs_portgroup_info",
+            "Gathers info DVS portgroup configurations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvs_portgroup_info:",
+            "    datacenter: ${2:string}",
+            "    dvswitch: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    show_mac_learning: ${9|true,false|}",
+            "    show_network_policy: ${10|true,false|}",
+            "    show_port_policy: ${11|true,false|}",
+            "    show_teaming_policy: ${12|true,false|}",
+            "    show_uplinks: ${13|true,false|}",
+            "    show_vlan_info: ${14|false,true|}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info DVS portgroup configurations",
+        "scope": "ansible"
+    },
+    "Create or remove a Distributed Switch": {
+        "prefix": [
+            "community.vmware.vmware_dvswitch",
+            "Create or remove a Distributed Switch"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvswitch:",
+            "    datacenter_name: ${3:string}",
+            "    description: ${4:string}",
+            "    discovery_operation: ${5|listen,both,advertise|}",
+            "    discovery_proto: ${6|cdp,lldp,disabled|}",
+            "    folder: ${7:string}",
+            "    hostname: ${9:string}",
+            "    mtu: ${10:1500}",
+            "    multicast_filtering_mode: ${11|basic,snooping|}",
+            "    password: ${14:string}",
+            "    port: ${15:443}",
+            "    proxy_host: ${16:string}",
+            "    proxy_port: ${17:int}",
+            "    state: ${18|present,absent|}",
+            "    switch_name: ${19:string}",
+            "    switch_version: ${20:string}",
+            "    uplink_prefix: ${21:Uplink }",
+            "    uplink_quantity: ${22:int}",
+            "    username: ${23:string}",
+            "    validate_certs: ${24|true,false|}",
+            "$0"
+        ],
+        "description": "Create or remove a Distributed Switch",
+        "scope": "ansible"
+    },
+    "Gathers info dvswitch configurations": {
+        "prefix": [
+            "community.vmware.vmware_dvswitch_info",
+            "Gathers info dvswitch configurations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvswitch_info:",
+            "    folder: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    properties:",
+            "      - ${6:element}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    schema: ${9|summary,vsphere|}",
+            "    switch_name: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info dvswitch configurations",
+        "scope": "ansible"
+    },
+    "Manage LACP configuration on a Distributed Switch": {
+        "prefix": [
+            "community.vmware.vmware_dvswitch_lacp",
+            "Manage LACP configuration on a Distributed Switch"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvswitch_lacp:",
+            "    hostname: ${2:string}",
+            "    link_aggregation_groups:",
+            "      - ${3:element}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    support_mode: ${8|basic,enhanced|}",
+            "    switch: ${9:string}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage LACP configuration on a Distributed Switch",
+        "scope": "ansible"
+    },
+    "Manage distributed switch Network IO Control": {
+        "prefix": [
+            "community.vmware.vmware_dvswitch_nioc",
+            "Manage distributed switch Network IO Control"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvswitch_nioc:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    resources:",
+            "      - ${7:element}",
+            "    state: ${8|present,absent|}",
+            "    switch: ${9:string}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "    version: ${12:string}",
+            "$0"
+        ],
+        "description": "Manage distributed switch Network IO Control",
+        "scope": "ansible"
+    },
+    "Manage Private VLAN configuration of a Distributed Switch": {
+        "prefix": [
+            "community.vmware.vmware_dvswitch_pvlans",
+            "Manage Private VLAN configuration of a Distributed Switch"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvswitch_pvlans:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    primary_pvlans:",
+            "      - ${5:element}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    secondary_pvlans:",
+            "      - ${8:element}",
+            "    switch: ${9:string}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Private VLAN configuration of a Distributed Switch",
+        "scope": "ansible"
+    },
+    "Manage uplink portproup configuration of a Distributed Switch": {
+        "prefix": [
+            "community.vmware.vmware_dvswitch_uplink_pg",
+            "Manage uplink portproup configuration of a Distributed Switch"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_dvswitch_uplink_pg:",
+            "    block_all_ports: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    hostname: ${5:string}",
+            "    name: ${7:string}",
+            "    netflow_enabled: ${8|false,true|}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    switch: ${13:string}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "    vlan_trunk_range:",
+            "      - ${16:element}",
+            "$0"
+        ],
+        "description": "Manage uplink portproup configuration of a Distributed Switch",
+        "scope": "ansible"
+    },
+    "Enable/Disable EVC mode on vCenter": {
+        "prefix": [
+            "community.vmware.vmware_evc_mode",
+            "Enable/Disable EVC mode on vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_evc_mode:",
+            "    cluster_name: ${2:string}",
+            "    datacenter_name: ${3:string}",
+            "    evc_mode: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|present,absent|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Enable/Disable EVC mode on vCenter",
+        "scope": "ansible"
+    },
+    "Exports a VMware virtual machine to an OVF file, device files and a manifest file": {
+        "prefix": [
+            "community.vmware.vmware_export_ovf",
+            "Exports a VMware virtual machine to an OVF file, device files and a manifest file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_export_ovf:",
+            "    datacenter: ${2:ha-datacenter}",
+            "    download_timeout: ${3:30}",
+            "    export_dir: ${4:path}",
+            "    export_with_extraconfig: ${5|false,true|}",
+            "    export_with_images: ${6|false,true|}",
+            "    folder: ${7:string}",
+            "    hostname: ${8:string}",
+            "    moid: ${9:string}",
+            "    name: ${10:string}",
+            "    password: ${11:string}",
+            "    port: ${12:443}",
+            "    proxy_host: ${13:string}",
+            "    proxy_port: ${14:int}",
+            "    username: ${15:string}",
+            "    uuid: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Exports a VMware virtual machine to an OVF file, device files and a manifest file",
+        "scope": "ansible"
+    },
+    "Manage VMware vSphere First Class Disks": {
+        "prefix": [
+            "community.vmware.vmware_first_class_disk",
+            "Manage VMware vSphere First Class Disks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_first_class_disk:",
+            "    datacenter_name: ${2:string}",
+            "    datastore_name: ${3:string}",
+            "    disk_name: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    size: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware vSphere First Class Disks",
+        "scope": "ansible"
+    },
+    "Provides information about folders in a datacenter": {
+        "prefix": [
+            "community.vmware.vmware_folder_info",
+            "Provides information about folders in a datacenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_folder_info:",
+            "    datacenter: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Provides information about folders in a datacenter",
+        "scope": "ansible"
+    },
+    "Manages virtual machines in vCenter": {
+        "prefix": [
+            "community.vmware.vmware_guest",
+            "Manages virtual machines in vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest:",
+            "    advanced_settings:",
+            "      - ${2:element}",
+            "    annotation: ${3:string}",
+            "    cdrom: ${4:\"raw\"}",
+            "    cluster: ${5:string}",
+            "    convert: ${6:string}",
+            "    customization_spec: ${8:string}",
+            "    customvalues:",
+            "      - ${9:element}",
+            "    datacenter: ${10:ha-datacenter}",
+            "    datastore: ${11:string}",
+            "    delete_from_inventory: ${12|false,true|}",
+            "    disk:",
+            "      - ${13:element}",
+            "    esxi_hostname: ${14:string}",
+            "    folder: ${15:string}",
+            "    force: ${16|false,true|}",
+            "    guest_id: ${17:string}",
+            "    hostname: ${19:string}",
+            "    is_template: ${20|false,true|}",
+            "    linked_clone: ${21|false,true|}",
+            "    name: ${22:string}",
+            "    name_match: ${23|first,last|}",
+            "    networks:",
+            "      - ${24:element}",
+            "    password: ${26:string}",
+            "    port: ${27:443}",
+            "    proxy_host: ${28:string}",
+            "    proxy_port: ${29:int}",
+            "    resource_pool: ${30:string}",
+            "    snapshot_src: ${31:string}",
+            "    state: ${32|present,absent,poweredon,powered-on,poweredoff,powered-off,rebootguest,reboot-guest,restarted,suspended,shutdownguest,shutdown-guest|}",
+            "    state_change_timeout: ${33:0}",
+            "    template: ${34:string}",
+            "    use_instance_uuid: ${35|false,true|}",
+            "    username: ${36:string}",
+            "    uuid: ${37:string}",
+            "    validate_certs: ${38|true,false|}",
+            "    vapp_properties:",
+            "      - ${39:element}",
+            "    wait_for_customization: ${40|false,true|}",
+            "    wait_for_customization_timeout: ${41:3600}",
+            "    wait_for_ip_address: ${42|false,true|}",
+            "    wait_for_ip_address_timeout: ${43:300}",
+            "$0"
+        ],
+        "description": "Manages virtual machines in vCenter",
+        "scope": "ansible"
+    },
+    "Gather info about boot options for the given virtual machine": {
+        "prefix": [
+            "community.vmware.vmware_guest_boot_info",
+            "Gather info about boot options for the given virtual machine"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_boot_info:",
+            "    hostname: ${2:string}",
+            "    moid: ${3:string}",
+            "    name: ${4:string}",
+            "    name_match: ${5|first,last|}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    use_instance_uuid: ${10|false,true|}",
+            "    username: ${11:string}",
+            "    uuid: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about boot options for the given virtual machine",
+        "scope": "ansible"
+    },
+    "Manage boot options for the given virtual machine": {
+        "prefix": [
+            "community.vmware.vmware_guest_boot_manager",
+            "Manage boot options for the given virtual machine"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_boot_manager:",
+            "    boot_delay: ${2:int}",
+            "    boot_firmware: ${3:string}",
+            "    boot_hdd_name: ${4:string}",
+            "    boot_order:",
+            "      - ${5:element}",
+            "    boot_retry_delay: ${6:int}",
+            "    boot_retry_enabled: ${7|false,true|}",
+            "    enter_bios_setup: ${8|false,true|}",
+            "    hostname: ${9:string}",
+            "    moid: ${10:string}",
+            "    name: ${11:string}",
+            "    name_match: ${12|first,last|}",
+            "    password: ${13:string}",
+            "    port: ${14:443}",
+            "    proxy_host: ${15:string}",
+            "    proxy_port: ${16:int}",
+            "    secure_boot_enabled: ${17|false,true|}",
+            "    use_instance_uuid: ${18|false,true|}",
+            "    username: ${19:string}",
+            "    uuid: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Manage boot options for the given virtual machine",
+        "scope": "ansible"
+    },
+    "Manage disk or USB controllers related to virtual machine in given vCenter infrastructure": {
+        "prefix": [
+            "community.vmware.vmware_guest_controller",
+            "Manage disk or USB controllers related to virtual machine in given vCenter infrastructure"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_controller:",
+            "    controllers:",
+            "      - ${2:element}",
+            "    datacenter: ${3:ha-datacenter}",
+            "    folder: ${4:string}",
+            "    gather_disk_controller_facts: ${5|false,true|}",
+            "    hostname: ${6:string}",
+            "    moid: ${7:string}",
+            "    name: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    sleep_time: ${13:10}",
+            "    use_instance_uuid: ${14|false,true|}",
+            "    username: ${15:string}",
+            "    uuid: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Manage disk or USB controllers related to virtual machine in given vCenter infrastructure",
+        "scope": "ansible"
+    },
+    "Cross-vCenter VM/template clone": {
+        "prefix": [
+            "community.vmware.vmware_guest_cross_vc_clone",
+            "Cross-vCenter VM/template clone"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_cross_vc_clone:",
+            "    destination_datastore: ${2:string}",
+            "    destination_host: ${3:string}",
+            "    destination_resource_pool: ${4:string}",
+            "    destination_vcenter: ${5:string}",
+            "    destination_vcenter_password: ${6:string}",
+            "    destination_vcenter_port: ${7:443}",
+            "    destination_vcenter_username: ${8:string}",
+            "    destination_vcenter_validate_certs: ${9|false,true|}",
+            "    destination_vm_folder: ${10:string}",
+            "    destination_vm_name: ${11:string}",
+            "    hostname: ${12:string}",
+            "    is_template: ${13|false,true|}",
+            "    moid: ${14:string}",
+            "    name: ${15:string}",
+            "    password: ${16:string}",
+            "    port: ${17:443}",
+            "    proxy_host: ${18:string}",
+            "    proxy_port: ${19:int}",
+            "    state: ${20|present,poweredon|}",
+            "    use_instance_uuid: ${21|false,true|}",
+            "    username: ${22:string}",
+            "    uuid: ${23:string}",
+            "    validate_certs: ${24|true,false|}",
+            "$0"
+        ],
+        "description": "Cross-vCenter VM/template clone",
+        "scope": "ansible"
+    },
+    "Manage custom attributes definitions for virtual machine from VMware": {
+        "prefix": [
+            "community.vmware.vmware_guest_custom_attribute_defs",
+            "Manage custom attributes definitions for virtual machine from VMware"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_custom_attribute_defs:",
+            "    attribute_key: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    state: ${8|present,absent|}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manage custom attributes definitions for virtual machine from VMware",
+        "scope": "ansible"
+    },
+    "Manage custom attributes from VMware for the given virtual machine": {
+        "prefix": [
+            "community.vmware.vmware_guest_custom_attributes",
+            "Manage custom attributes from VMware for the given virtual machine"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_custom_attributes:",
+            "    attributes:",
+            "      - ${2:element}",
+            "    datacenter: ${3:string}",
+            "    folder: ${4:string}",
+            "    hostname: ${5:string}",
+            "    moid: ${6:string}",
+            "    name: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    state: ${12|present,absent|}",
+            "    use_instance_uuid: ${13|false,true|}",
+            "    username: ${14:string}",
+            "    uuid: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Manage custom attributes from VMware for the given virtual machine",
+        "scope": "ansible"
+    },
+    "Gather info about VM customization specifications": {
+        "prefix": [
+            "community.vmware.vmware_guest_customization_info",
+            "Gather info about VM customization specifications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_customization_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    spec_name: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about VM customization specifications",
+        "scope": "ansible"
+    },
+    "Manage disks related to virtual machine in given vCenter infrastructure": {
+        "prefix": [
+            "community.vmware.vmware_guest_disk",
+            "Manage disks related to virtual machine in given vCenter infrastructure"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_disk:",
+            "    datacenter: ${2:string}",
+            "    disk:",
+            "      - ${3:element}",
+            "    folder: ${4:string}",
+            "    hostname: ${5:string}",
+            "    moid: ${6:string}",
+            "    name: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    use_instance_uuid: ${12|false,true|}",
+            "    username: ${13:string}",
+            "    uuid: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage disks related to virtual machine in given vCenter infrastructure",
+        "scope": "ansible"
+    },
+    "Gather info about disks of given virtual machine": {
+        "prefix": [
+            "community.vmware.vmware_guest_disk_info",
+            "Gather info about disks of given virtual machine"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_disk_info:",
+            "    datacenter: ${2:string}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    use_instance_uuid: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    uuid: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about disks of given virtual machine",
+        "scope": "ansible"
+    },
+    "Files operation in a VMware guest operating system without network": {
+        "prefix": [
+            "community.vmware.vmware_guest_file_operation",
+            "Files operation in a VMware guest operating system without network"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_file_operation:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${4:string}",
+            "    folder: ${7:string}",
+            "    hostname: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    timeout: ${13:100}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "    vm_id: ${16:string}",
+            "    vm_id_type: ${17|vm_name,uuid,instance_uuid,dns_name,inventory_path|}",
+            "    vm_password: ${18:string}",
+            "    vm_username: ${19:string}",
+            "$0"
+        ],
+        "description": "Files operation in a VMware guest operating system without network",
+        "scope": "ansible"
+    },
+    "Find the folder path(s) for a virtual machine by name or UUID": {
+        "prefix": [
+            "community.vmware.vmware_guest_find",
+            "Find the folder path(s) for a virtual machine by name or UUID"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_find:",
+            "    hostname: ${2:string}",
+            "    name: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    use_instance_uuid: ${8|false,true|}",
+            "    username: ${9:string}",
+            "    uuid: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Find the folder path(s) for a virtual machine by name or UUID",
+        "scope": "ansible"
+    },
+    "Gather info about a single VM": {
+        "prefix": [
+            "community.vmware.vmware_guest_info",
+            "Gather info about a single VM"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_info:",
+            "    datacenter: ${2:string}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    name_match: ${7|first,last|}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    properties:",
+            "      - ${10:element}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    schema: ${13|summary,vsphere|}",
+            "    tag_details: ${14|false,true|}",
+            "    tags: ${15|false,true|}",
+            "    use_instance_uuid: ${16|false,true|}",
+            "    username: ${17:string}",
+            "    uuid: ${18:string}",
+            "    validate_certs: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about a single VM",
+        "scope": "ansible"
+    },
+    "Instant Clone VM": {
+        "prefix": [
+            "community.vmware.vmware_guest_instant_clone",
+            "Instant Clone VM"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_instant_clone:",
+            "    datacenter: ${2:string}",
+            "    datastore: ${3:string}",
+            "    folder: ${4:string}",
+            "    guestinfo_vars:",
+            "      - ${5:element}",
+            "    host: ${6:string}",
+            "    hostname: ${7:string}",
+            "    moid: ${8:string}",
+            "    name: ${9:string}",
+            "    parent_vm: ${10:string}",
+            "    password: ${11:string}",
+            "    port: ${12:443}",
+            "    proxy_host: ${13:string}",
+            "    proxy_port: ${14:int}",
+            "    resource_pool: ${15:string}",
+            "    use_instance_uuid: ${16|false,true|}",
+            "    username: ${17:string}",
+            "    uuid: ${18:string}",
+            "    validate_certs: ${19|true,false|}",
+            "    vm_password: ${20:string}",
+            "    vm_username: ${21:string}",
+            "    wait_vm_tools: ${22|true,false|}",
+            "    wait_vm_tools_timeout: ${23:300}",
+            "$0"
+        ],
+        "description": "Instant Clone VM",
+        "scope": "ansible"
+    },
+    "Moves virtual machines in vCenter": {
+        "prefix": [
+            "community.vmware.vmware_guest_move",
+            "Moves virtual machines in vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_move:",
+            "    datacenter: ${2:string}",
+            "    dest_folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    name_match: ${7|first,last|}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    use_instance_uuid: ${12|false,true|}",
+            "    username: ${13:string}",
+            "    uuid: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Moves virtual machines in vCenter",
+        "scope": "ansible"
+    },
+    "Manage network adapters of specified virtual machine in given vCenter infrastructure": {
+        "prefix": [
+            "community.vmware.vmware_guest_network",
+            "Manage network adapters of specified virtual machine in given vCenter infrastructure"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_network:",
+            "    allow_guest_os_mtu_change: ${2|true,false|}",
+            "    cluster: ${3:string}",
+            "    connected: ${4|true,false|}",
+            "    datacenter: ${5:ha-datacenter}",
+            "    device_type: ${6:vmxnet3}",
+            "    directpath_io: ${7|false,true|}",
+            "    esxi_hostname: ${8:string}",
+            "    folder: ${9:string}",
+            "    force: ${10|false,true|}",
+            "    gather_network_info: ${11|false,true|}",
+            "    guest_control: ${12|true,false|}",
+            "    hostname: ${13:string}",
+            "    label: ${14:string}",
+            "    mac_address: ${15:string}",
+            "    moid: ${16:string}",
+            "    name: ${17:string}",
+            "    network_name: ${18:string}",
+            "    password: ${19:string}",
+            "    physical_function_backing: ${20:string}",
+            "    port: ${21:443}",
+            "    proxy_host: ${22:string}",
+            "    proxy_port: ${23:int}",
+            "    pvrdma_device_protocol: ${24:string}",
+            "    start_connected: ${25|true,false|}",
+            "    state: ${26|present,absent|}",
+            "    switch: ${27:string}",
+            "    use_instance_uuid: ${28|false,true|}",
+            "    username: ${29:string}",
+            "    uuid: ${30:string}",
+            "    validate_certs: ${31|true,false|}",
+            "    virtual_function_backing: ${32:string}",
+            "    vlan_id: ${33:int}",
+            "    wake_onlan: ${34|false,true|}",
+            "$0"
+        ],
+        "description": "Manage network adapters of specified virtual machine in given vCenter infrastructure",
+        "scope": "ansible"
+    },
+    "Manages power states of virtual machines in vCenter": {
+        "prefix": [
+            "community.vmware.vmware_guest_powerstate",
+            "Manages power states of virtual machines in vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_powerstate:",
+            "    answer:",
+            "      - ${2:element}",
+            "    datacenter: ${3:ha-datacenter}",
+            "    folder: ${4:string}",
+            "    force: ${5|false,true|}",
+            "    hostname: ${6:string}",
+            "    moid: ${7:string}",
+            "    name: ${8:string}",
+            "    name_match: ${9|first,last|}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    schedule_task_description: ${14:string}",
+            "    schedule_task_enabled: ${15|true,false|}",
+            "    schedule_task_name: ${16:string}",
+            "    scheduled_at: ${17:string}",
+            "    state: ${18|present,powered-off,powered-on,reboot-guest,restarted,shutdown-guest,suspended|}",
+            "    state_change_timeout: ${19:0}",
+            "    use_instance_uuid: ${20|false,true|}",
+            "    username: ${21:string}",
+            "    uuid: ${22:string}",
+            "    validate_certs: ${23|true,false|}",
+            "$0"
+        ],
+        "description": "Manages power states of virtual machines in vCenter",
+        "scope": "ansible"
+    },
+    "VM inventory registration operation": {
+        "prefix": [
+            "community.vmware.vmware_guest_register_operation",
+            "VM inventory registration operation"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_register_operation:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:ha-datacenter}",
+            "    esxi_hostname: ${4:string}",
+            "    folder: ${5:string}",
+            "    hostname: ${6:string}",
+            "    name: ${7:string}",
+            "    password: ${8:string}",
+            "    path: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    resource_pool: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    template: ${15|false,true|}",
+            "    username: ${16:string}",
+            "    uuid: ${17:string}",
+            "    validate_certs: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "VM inventory registration operation",
+        "scope": "ansible"
+    },
+    "Create a screenshot of the Virtual Machine console.": {
+        "prefix": [
+            "community.vmware.vmware_guest_screenshot",
+            "Create a screenshot of the Virtual Machine console."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_screenshot:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    esxi_hostname: ${4:string}",
+            "    folder: ${5:string}",
+            "    hostname: ${6:string}",
+            "    local_path: ${7:path}",
+            "    moid: ${8:string}",
+            "    name: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    username: ${14:string}",
+            "    uuid: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Create a screenshot of the Virtual Machine console.",
+        "scope": "ansible"
+    },
+    "Send USB HID codes to the Virtual Machine's keyboard.": {
+        "prefix": [
+            "community.vmware.vmware_guest_sendkey",
+            "Send USB HID codes to the Virtual Machine&#39;s keyboard."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_sendkey:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    esxi_hostname: ${4:string}",
+            "    folder: ${5:string}",
+            "    hostname: ${6:string}",
+            "    keys_send:",
+            "      - ${7:element}",
+            "    moid: ${8:string}",
+            "    name: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    sleep_time: ${14:0}",
+            "    string_send: ${15:string}",
+            "    username: ${16:string}",
+            "    uuid: ${17:string}",
+            "    validate_certs: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Send USB HID codes to the Virtual Machine&#39;s keyboard.",
+        "scope": "ansible"
+    },
+    "Manage serial ports on an existing VM": {
+        "prefix": [
+            "community.vmware.vmware_guest_serial_port",
+            "Manage serial ports on an existing VM"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_serial_port:",
+            "    backings:",
+            "      - ${2:element}",
+            "    hostname: ${3:string}",
+            "    moid: ${4:string}",
+            "    name: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    use_instance_uuid: ${10|false,true|}",
+            "    username: ${11:string}",
+            "    uuid: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage serial ports on an existing VM",
+        "scope": "ansible"
+    },
+    "Manages virtual machines snapshots in vCenter": {
+        "prefix": [
+            "community.vmware.vmware_guest_snapshot",
+            "Manages virtual machines snapshots in vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_snapshot:",
+            "    datacenter: ${2:string}",
+            "    description: ${3:}",
+            "    folder: ${4:string}",
+            "    hostname: ${5:string}",
+            "    memory_dump: ${6|false,true|}",
+            "    moid: ${7:string}",
+            "    name: ${8:string}",
+            "    name_match: ${9|first,last|}",
+            "    new_description: ${10:string}",
+            "    new_snapshot_name: ${11:string}",
+            "    password: ${12:string}",
+            "    port: ${13:443}",
+            "    proxy_host: ${14:string}",
+            "    proxy_port: ${15:int}",
+            "    quiesce: ${16|false,true|}",
+            "    remove_children: ${17|false,true|}",
+            "    snapshot_name: ${18:string}",
+            "    state: ${19|present,absent,revert,remove_all|}",
+            "    use_instance_uuid: ${20|false,true|}",
+            "    username: ${21:string}",
+            "    uuid: ${22:string}",
+            "    validate_certs: ${23|true,false|}",
+            "$0"
+        ],
+        "description": "Manages virtual machines snapshots in vCenter",
+        "scope": "ansible"
+    },
+    "Gather info about virtual machine's snapshots in vCenter": {
+        "prefix": [
+            "community.vmware.vmware_guest_snapshot_info",
+            "Gather info about virtual machine&#39;s snapshots in vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_snapshot_info:",
+            "    datacenter: ${2:string}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    use_instance_uuid: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    uuid: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about virtual machine&#39;s snapshots in vCenter",
+        "scope": "ansible"
+    },
+    "Set VM Home and disk(s) storage policy profiles.": {
+        "prefix": [
+            "community.vmware.vmware_guest_storage_policy",
+            "Set VM Home and disk(s) storage policy profiles."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_storage_policy:",
+            "    disk:",
+            "      - ${2:element}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    username: ${11:string}",
+            "    uuid: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "    vm_home: ${14:string}",
+            "$0"
+        ],
+        "description": "Set VM Home and disk(s) storage policy profiles.",
+        "scope": "ansible"
+    },
+    "Gather info about VMware tools installed in VM": {
+        "prefix": [
+            "community.vmware.vmware_guest_tools_info",
+            "Gather info about VMware tools installed in VM"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_tools_info:",
+            "    datacenter: ${2:string}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    name_match: ${7|first,last|}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    use_instance_uuid: ${12|false,true|}",
+            "    username: ${13:string}",
+            "    uuid: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about VMware tools installed in VM",
+        "scope": "ansible"
+    },
+    "Module to upgrade VMTools": {
+        "prefix": [
+            "community.vmware.vmware_guest_tools_upgrade",
+            "Module to upgrade VMTools"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_tools_upgrade:",
+            "    datacenter: ${2:string}",
+            "    folder: ${3:string}",
+            "    force_upgrade: ${4|false,true|}",
+            "    hostname: ${5:string}",
+            "    moid: ${6:string}",
+            "    name: ${7:string}",
+            "    name_match: ${8|first,last|}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    username: ${13:string}",
+            "    uuid: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Module to upgrade VMTools",
+        "scope": "ansible"
+    },
+    "Wait for VMware tools to become available": {
+        "prefix": [
+            "community.vmware.vmware_guest_tools_wait",
+            "Wait for VMware tools to become available"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_tools_wait:",
+            "    datacenter: ${2:string}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    name_match: ${7|first,last|}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    timeout: ${12:500}",
+            "    use_instance_uuid: ${13|false,true|}",
+            "    username: ${14:string}",
+            "    uuid: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Wait for VMware tools to become available",
+        "scope": "ansible"
+    },
+    "Add or remove vTPM device for specified VM.": {
+        "prefix": [
+            "community.vmware.vmware_guest_tpm",
+            "Add or remove vTPM device for specified VM."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_tpm:",
+            "    datacenter: ${2:string}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "    username: ${12:string}",
+            "    uuid: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Add or remove vTPM device for specified VM.",
+        "scope": "ansible"
+    },
+    "Modify vGPU video card profile of the specified virtual machine in the given vCenter infrastructure": {
+        "prefix": [
+            "community.vmware.vmware_guest_vgpu",
+            "Modify vGPU video card profile of the specified virtual machine in the given vCenter infrastructure"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_vgpu:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:ha-datacenter}",
+            "    esxi_hostname: ${4:string}",
+            "    folder: ${5:string}",
+            "    force: ${6|false,true|}",
+            "    hostname: ${7:string}",
+            "    moid: ${8:string}",
+            "    name: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    state: ${14|present,absent|}",
+            "    use_instance_uuid: ${15|false,true|}",
+            "    username: ${16:string}",
+            "    uuid: ${17:string}",
+            "    validate_certs: ${18|true,false|}",
+            "    vgpu: ${19:string}",
+            "$0"
+        ],
+        "description": "Modify vGPU video card profile of the specified virtual machine in the given vCenter infrastructure",
+        "scope": "ansible"
+    },
+    "Gather information about vGPU profiles of the specified virtual machine in the given vCenter infrastructure": {
+        "prefix": [
+            "community.vmware.vmware_guest_vgpu_info",
+            "Gather information about vGPU profiles of the specified virtual machine in the given vCenter infrastructure"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_vgpu_info:",
+            "    datacenter: ${2:ha-datacenter}",
+            "    folder: ${3:string}",
+            "    hostname: ${4:string}",
+            "    moid: ${5:string}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    use_instance_uuid: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    uuid: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about vGPU profiles of the specified virtual machine in the given vCenter infrastructure",
+        "scope": "ansible"
+    },
+    "Modify video card configurations of specified virtual machine in given vCenter infrastructure": {
+        "prefix": [
+            "community.vmware.vmware_guest_video",
+            "Modify video card configurations of specified virtual machine in given vCenter infrastructure"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_guest_video:",
+            "    datacenter: ${2:ha-datacenter}",
+            "    display_number: ${3:int}",
+            "    enable_3D: ${4|false,true|}",
+            "    folder: ${5:string}",
+            "    gather_video_facts: ${6|false,true|}",
+            "    hostname: ${7:string}",
+            "    memory_3D_mb: ${8:int}",
+            "    moid: ${9:string}",
+            "    name: ${10:string}",
+            "    password: ${11:string}",
+            "    port: ${12:443}",
+            "    proxy_host: ${13:string}",
+            "    proxy_port: ${14:int}",
+            "    renderer_3D: ${15:string}",
+            "    use_auto_detect: ${16|false,true|}",
+            "    username: ${17:string}",
+            "    uuid: ${18:string}",
+            "    validate_certs: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Modify video card configurations of specified virtual machine in given vCenter infrastructure",
+        "scope": "ansible"
+    },
+    "Add, remove, or move an ESXi host to, from, or within vCenter": {
+        "prefix": [
+            "community.vmware.vmware_host",
+            "Add, remove, or move an ESXi host to, from, or within vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host:",
+            "    add_connected: ${2|true,false|}",
+            "    cluster_name: ${3:string}",
+            "    datacenter_name: ${4:string}",
+            "    esxi_hostname: ${5:string}",
+            "    esxi_password: ${6:string}",
+            "    esxi_ssl_thumbprint: ${7:}",
+            "    esxi_username: ${8:string}",
+            "    fetch_ssl_thumbprint: ${9|true,false|}",
+            "    folder: ${10:string}",
+            "    force_connection: ${11|true,false|}",
+            "    hostname: ${12:string}",
+            "    password: ${13:string}",
+            "    port: ${14:443}",
+            "    proxy_host: ${15:string}",
+            "    proxy_port: ${16:int}",
+            "    reconnect_disconnected: ${17|true,false|}",
+            "    state: ${18|present,absent,add_or_reconnect,reconnect,disconnected|}",
+            "    username: ${19:string}",
+            "    validate_certs: ${20|true,false|}",
+            "$0"
+        ],
+        "description": "Add, remove, or move an ESXi host to, from, or within vCenter",
+        "scope": "ansible"
+    },
+    "Manage the host acceptance level of an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_acceptance",
+            "Manage the host acceptance level of an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_acceptance:",
+            "    acceptance_level: ${2:string}",
+            "    cluster_name: ${3:string}",
+            "    esxi_hostname: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|list,present|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage the host acceptance level of an ESXi host",
+        "scope": "ansible"
+    },
+    "Joins an ESXi host system to an Active Directory domain or leaves it": {
+        "prefix": [
+            "community.vmware.vmware_host_active_directory",
+            "Joins an ESXi host system to an Active Directory domain or leaves it"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_active_directory:",
+            "    ad_domain: ${2:}",
+            "    ad_password: ${3:}",
+            "    ad_state: ${4|absent,present|}",
+            "    ad_user: ${5:}",
+            "    cluster_name: ${6:string}",
+            "    esxi_hostname: ${7:string}",
+            "    hostname: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Joins an ESXi host system to an Active Directory domain or leaves it",
+        "scope": "ansible"
+    },
+    "Manage the auto power ON or OFF for vm on ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_auto_start",
+            "Manage the auto power ON or OFF for vm on ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_auto_start:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    moid: ${4:string}",
+            "    name: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    use_instance_uuid: ${12|false,true|}",
+            "    username: ${13:string}",
+            "    uuid: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage the auto power ON or OFF for vm on ESXi host",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's capability information": {
+        "prefix": [
+            "community.vmware.vmware_host_capability_info",
+            "Gathers info about an ESXi host&#39;s capability information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_capability_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s capability information",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's advance configuration information": {
+        "prefix": [
+            "community.vmware.vmware_host_config_info",
+            "Gathers info about an ESXi host&#39;s advance configuration information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_config_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s advance configuration information",
+        "scope": "ansible"
+    },
+    "Manage advanced system settings of an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_config_manager",
+            "Manage advanced system settings of an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_config_manager:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage advanced system settings of an ESXi host",
+        "scope": "ansible"
+    },
+    "Manage custom attributes from VMware for the given ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_custom_attributes",
+            "Manage custom attributes from VMware for the given ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_custom_attributes:",
+            "    attributes:",
+            "      - ${2:element}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage custom attributes from VMware for the given ESXi host",
+        "scope": "ansible"
+    },
+    "Manage a datastore on ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_datastore",
+            "Manage a datastore on ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_datastore:",
+            "    auto_expand: ${2|true,false|}",
+            "    datastore_name: ${3:string}",
+            "    datastore_type: ${4:string}",
+            "    esxi_hostname: ${5:string}",
+            "    hostname: ${6:string}",
+            "    nfs_path: ${7:string}",
+            "    nfs_ro: ${8|false,true|}",
+            "    nfs_server: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    state: ${14|present,absent|}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "    vmfs_device_name: ${17:string}",
+            "    vmfs_version: ${18:int}",
+            "$0"
+        ],
+        "description": "Manage a datastore on ESXi host",
+        "scope": "ansible"
+    },
+    "Gathers information about disks attached to given ESXi host/s.": {
+        "prefix": [
+            "community.vmware.vmware_host_disk_info",
+            "Gathers information about disks attached to given ESXi host/s."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_disk_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers information about disks attached to given ESXi host/s.",
+        "scope": "ansible"
+    },
+    "Manage DNS configuration of an ESXi host system": {
+        "prefix": [
+            "community.vmware.vmware_host_dns",
+            "Manage DNS configuration of an ESXi host system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_dns:",
+            "    cluster_name: ${2:string}",
+            "    device: ${3:string}",
+            "    dns_servers:",
+            "      - ${4:element}",
+            "    domain: ${5:string}",
+            "    esxi_hostname: ${6:string}",
+            "    host_name: ${7:string}",
+            "    hostname: ${8:string}",
+            "    password: ${9:string}",
+            "    port: ${10:443}",
+            "    proxy_host: ${11:string}",
+            "    proxy_port: ${12:int}",
+            "    search_domains:",
+            "      - ${13:element}",
+            "    type: ${14:string}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "    verbose: ${17|false,true|}",
+            "$0"
+        ],
+        "description": "Manage DNS configuration of an ESXi host system",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's DNS configuration information": {
+        "prefix": [
+            "community.vmware.vmware_host_dns_info",
+            "Gathers info about an ESXi host&#39;s DNS configuration information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_dns_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s DNS configuration information",
+        "scope": "ansible"
+    },
+    "Gathers facts about remote ESXi hostsystem": {
+        "prefix": [
+            "community.vmware.vmware_host_facts",
+            "Gathers facts about remote ESXi hostsystem"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_facts:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    properties:",
+            "      - ${6:element}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    schema: ${9|summary,vsphere|}",
+            "    show_tag: ${10|false,true|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers facts about remote ESXi hostsystem",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's feature capability information": {
+        "prefix": [
+            "community.vmware.vmware_host_feature_info",
+            "Gathers info about an ESXi host&#39;s feature capability information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_feature_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s feature capability information",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's firewall configuration information": {
+        "prefix": [
+            "community.vmware.vmware_host_firewall_info",
+            "Gathers info about an ESXi host&#39;s firewall configuration information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_firewall_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s firewall configuration information",
+        "scope": "ansible"
+    },
+    "Manage firewall configurations about an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_firewall_manager",
+            "Manage firewall configurations about an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_firewall_manager:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    rules:",
+            "      - ${9:element}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage firewall configurations about an ESXi host",
+        "scope": "ansible"
+    },
+    "Enables/Disables Hyperthreading optimization for an ESXi host system": {
+        "prefix": [
+            "community.vmware.vmware_host_hyperthreading",
+            "Enables/Disables Hyperthreading optimization for an ESXi host system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_hyperthreading:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|enabled,disabled|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Enables/Disables Hyperthreading optimization for an ESXi host system",
+        "scope": "ansible"
+    },
+    "Enables/Disables IPv6 support for an ESXi host system": {
+        "prefix": [
+            "community.vmware.vmware_host_ipv6",
+            "Enables/Disables IPv6 support for an ESXi host system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_ipv6:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|enabled,disabled|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Enables/Disables IPv6 support for an ESXi host system",
+        "scope": "ansible"
+    },
+    "Manage the iSCSI configuration of ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_iscsi",
+            "Manage the iSCSI configuration of ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_iscsi:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent,enabled,disabled|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage the iSCSI configuration of ESXi host",
+        "scope": "ansible"
+    },
+    "Gather iSCSI configuration information of ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_iscsi_info",
+            "Gather iSCSI configuration information of ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_iscsi_info:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Gather iSCSI configuration information of ESXi host",
+        "scope": "ansible"
+    },
+    "Manage kernel module options on ESXi hosts": {
+        "prefix": [
+            "community.vmware.vmware_host_kernel_manager",
+            "Manage kernel module options on ESXi hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_kernel_manager:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    kernel_module_name: ${5:string}",
+            "    kernel_module_option: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage kernel module options on ESXi hosts",
+        "scope": "ansible"
+    },
+    "Manage administrator permission for the local administrative account for the ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_lockdown",
+            "Manage administrator permission for the local administrative account for the ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_lockdown:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname:",
+            "      - ${3:element}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|normal,disabled,strict,present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage administrator permission for the local administrative account for the ESXi host",
+        "scope": "ansible"
+    },
+    "Manage Lockdown Mode Exception Users": {
+        "prefix": [
+            "community.vmware.vmware_host_lockdown_exceptions",
+            "Manage Lockdown Mode Exception Users"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_lockdown_exceptions:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname:",
+            "      - ${3:element}",
+            "    exception_users:",
+            "      - ${4:element}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|present,absent,set|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Lockdown Mode Exception Users",
+        "scope": "ansible"
+    },
+    "Fetch logbundle file from ESXi": {
+        "prefix": [
+            "community.vmware.vmware_host_logbundle",
+            "Fetch logbundle file from ESXi"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_logbundle:",
+            "    dest: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    manifests:",
+            "      - ${5:element}",
+            "    password: ${6:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch logbundle file from ESXi",
+        "scope": "ansible"
+    },
+    "Gathers manifest info for logbundle": {
+        "prefix": [
+            "community.vmware.vmware_host_logbundle_info",
+            "Gathers manifest info for logbundle"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_logbundle_info:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers manifest info for logbundle",
+        "scope": "ansible"
+    },
+    "Manage NTP server configuration of an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_ntp",
+            "Manage NTP server configuration of an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_ntp:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    ntp_servers:",
+            "      - ${5:element}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "    verbose: ${13|false,true|}",
+            "$0"
+        ],
+        "description": "Manage NTP server configuration of an ESXi host",
+        "scope": "ansible"
+    },
+    "Gathers info about NTP configuration on an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_ntp_info",
+            "Gathers info about NTP configuration on an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_ntp_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about NTP configuration on an ESXi host",
+        "scope": "ansible"
+    },
+    "Gathers info about available packages on an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_package_info",
+            "Gathers info about available packages on an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_package_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about available packages on an ESXi host",
+        "scope": "ansible"
+    },
+    "Manage PCI device passthrough settings on host": {
+        "prefix": [
+            "community.vmware.vmware_host_passthrough",
+            "Manage PCI device passthrough settings on host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_passthrough:",
+            "    cluster: ${2:string}",
+            "    devices:",
+            "      - ${3:element}",
+            "    esxi_hostname: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|present,absent|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage PCI device passthrough settings on host",
+        "scope": "ansible"
+    },
+    "Manages the Power Management Policy of an ESXI host system": {
+        "prefix": [
+            "community.vmware.vmware_host_powermgmt_policy",
+            "Manages the Power Management Policy of an ESXI host system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_powermgmt_policy:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    policy: ${6|balanced,high-performance,low-power,custom|}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manages the Power Management Policy of an ESXI host system",
+        "scope": "ansible"
+    },
+    "Manages power states of host systems in vCenter": {
+        "prefix": [
+            "community.vmware.vmware_host_powerstate",
+            "Manages power states of host systems in vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_powerstate:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    force: ${4|false,true|}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|shutdown-host,power-down-to-standby,power-up-from-standby,reboot-host|}",
+            "    timeout: ${11:600}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manages power states of host systems in vCenter",
+        "scope": "ansible"
+    },
+    "Rescan host HBA's and optionally refresh the storage system": {
+        "prefix": [
+            "community.vmware.vmware_host_scanhba",
+            "Rescan host HBA&#39;s and optionally refresh the storage system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_scanhba:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    refresh_storage: ${9|false,true|}",
+            "    rescan_hba: ${10|true,false|}",
+            "    rescan_vmfs: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Rescan host HBA&#39;s and optionally refresh the storage system",
+        "scope": "ansible"
+    },
+    "Gather information about SCSI disk attached to the given ESXi": {
+        "prefix": [
+            "community.vmware.vmware_host_scsidisk_info",
+            "Gather information about SCSI disk attached to the given ESXi"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_scsidisk_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about SCSI disk attached to the given ESXi",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's services": {
+        "prefix": [
+            "community.vmware.vmware_host_service_info",
+            "Gathers info about an ESXi host&#39;s services"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_service_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s services",
+        "scope": "ansible"
+    },
+    "Manage services on a given ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_service_manager",
+            "Manage services on a given ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_service_manager:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    service_name: ${9:string}",
+            "    service_policy: ${10:string}",
+            "    state: ${11|start,absent,present,restart,stop,unchanged|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage services on a given ESXi host",
+        "scope": "ansible"
+    },
+    "Configures SNMP on an ESXi host system": {
+        "prefix": [
+            "community.vmware.vmware_host_snmp",
+            "Configures SNMP on an ESXi host system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_snmp:",
+            "    community:",
+            "      - ${2:element}",
+            "    hostname: ${3:string}",
+            "    hw_source: ${4|indications,sensors|}",
+            "    log_level: ${5|info,debug,warning,error|}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    send_trap: ${10|false,true|}",
+            "    snmp_port: ${11:161}",
+            "    state: ${12|disabled,enabled,reset|}",
+            "    sys_contact: ${13:string}",
+            "    sys_location: ${14:string}",
+            "    trap_filter:",
+            "      - ${15:element}",
+            "    trap_targets:",
+            "      - ${16:element}",
+            "    username: ${17:string}",
+            "    validate_certs: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Configures SNMP on an ESXi host system",
+        "scope": "ansible"
+    },
+    "Manage SR-IOV settings on host": {
+        "prefix": [
+            "community.vmware.vmware_host_sriov",
+            "Manage SR-IOV settings on host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_sriov:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    num_virt_func: ${5:int}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    sriov_on: ${10|false,true|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "    vmnic: ${13:string}",
+            "$0"
+        ],
+        "description": "Manage SR-IOV settings on host",
+        "scope": "ansible"
+    },
+    "Gather info of ESXi host system about SSL": {
+        "prefix": [
+            "community.vmware.vmware_host_ssl_info",
+            "Gather info of ESXi host system about SSL"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_ssl_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info of ESXi host system about SSL",
+        "scope": "ansible"
+    },
+    "Manage the TCP/IP Stacks configuration of ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_tcpip_stacks",
+            "Manage the TCP/IP Stacks configuration of ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_tcpip_stacks:",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage the TCP/IP Stacks configuration of ESXi host",
+        "scope": "ansible"
+    },
+    "Manage users of ESXi": {
+        "prefix": [
+            "community.vmware.vmware_host_user_manager",
+            "Manage users of ESXi"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_user_manager:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    override_user_password: ${4|false,true|}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    user_description: ${10:string}",
+            "    user_name: ${11:string}",
+            "    user_password: ${12:string}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Manage users of ESXi",
+        "scope": "ansible"
+    },
+    "Gathers info about vmhbas available on the given ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_vmhba_info",
+            "Gathers info about vmhbas available on the given ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_vmhba_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about vmhbas available on the given ESXi host",
+        "scope": "ansible"
+    },
+    "Gathers info about vmnics available on the given ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_host_vmnic_info",
+            "Gathers info about vmnics available on the given ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_host_vmnic_info:",
+            "    capabilities: ${2|false,true|}",
+            "    cluster_name: ${3:string}",
+            "    directpath_io: ${4|false,true|}",
+            "    esxi_hostname: ${5:string}",
+            "    hostname: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    sriov: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about vmnics available on the given ESXi host",
+        "scope": "ansible"
+    },
+    "Gather info about local roles on an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_local_role_info",
+            "Gather info about local roles on an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_local_role_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about local roles on an ESXi host",
+        "scope": "ansible"
+    },
+    "Manage local roles on an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_object_role_permission",
+            "Manage local roles on an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_object_role_permission:",
+            "    group: ${2:string}",
+            "    hostname: ${3:string}",
+            "    object_name: ${4:string}",
+            "    object_type: ${5|Folder,VirtualMachine,Datacenter,ResourcePool,Datastore,Network,HostSystem,ComputeResource,ClusterComputeResource,DistributedVirtualSwitch,DistributedVirtualPortgroup,StoragePod|}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    principal: ${8:string}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    recursive: ${11|true,false|}",
+            "    role: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage local roles on an ESXi host",
+        "scope": "ansible"
+    },
+    "Gather info about users on the given ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_local_user_info",
+            "Gather info about users on the given ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_local_user_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info about users on the given ESXi host",
+        "scope": "ansible"
+    },
+    "Manage local users on an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_local_user_manager",
+            "Manage local users on an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_local_user_manager:",
+            "    hostname: ${2:string}",
+            "    local_user_description: ${3:string}",
+            "    local_user_name: ${4:string}",
+            "    local_user_password: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${10|present,absent|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage local users on an ESXi host",
+        "scope": "ansible"
+    },
+    "Place a host into maintenance mode": {
+        "prefix": [
+            "community.vmware.vmware_maintenancemode",
+            "Place a host into maintenance mode"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_maintenancemode:",
+            "    esxi_hostname: ${2:string}",
+            "    evacuate: ${3|false,true|}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:0}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "    vsan: ${13:string}",
+            "$0"
+        ],
+        "description": "Place a host into maintenance mode",
+        "scope": "ansible"
+    },
+    "Migrate a VMK interface from VSS to VDS": {
+        "prefix": [
+            "community.vmware.vmware_migrate_vmk",
+            "Migrate a VMK interface from VSS to VDS"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_migrate_vmk:",
+            "    current_portgroup_name: ${2:string}",
+            "    current_switch_name: ${3:string}",
+            "    device: ${4:string}",
+            "    esxi_hostname: ${5:string}",
+            "    hostname: ${6:string}",
+            "    migrate_portgroup_name: ${7:string}",
+            "    migrate_switch_name: ${8:string}",
+            "    migrate_vlan_id: ${9:int}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Migrate a VMK interface from VSS to VDS",
+        "scope": "ansible"
+    },
+    "Gather custom attributes of an object": {
+        "prefix": [
+            "community.vmware.vmware_object_custom_attributes_info",
+            "Gather custom attributes of an object"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_object_custom_attributes_info:",
+            "    hostname: ${2:string}",
+            "    moid: ${3:string}",
+            "    object_name: ${4:string}",
+            "    object_type: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Gather custom attributes of an object",
+        "scope": "ansible"
+    },
+    "Renames VMware objects": {
+        "prefix": [
+            "community.vmware.vmware_object_rename",
+            "Renames VMware objects"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_object_rename:",
+            "    hostname: ${2:string}",
+            "    new_name: ${3:string}",
+            "    object_moid: ${4:string}",
+            "    object_name: ${5:string}",
+            "    object_type: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    protocol: ${9|https,http|}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Renames VMware objects",
+        "scope": "ansible"
+    },
+    "Gather information about object's permissions": {
+        "prefix": [
+            "community.vmware.vmware_object_role_permission_info",
+            "Gather information about object&#39;s permissions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_object_role_permission_info:",
+            "    hostname: ${2:string}",
+            "    moid: ${3:string}",
+            "    object_name: ${4:string}",
+            "    object_type: ${5|Folder,VirtualMachine,Datacenter,ResourcePool,Datastore,Network,HostSystem,ComputeResource,ClusterComputeResource,DistributedVirtualSwitch,DistributedVirtualPortgroup,StoragePod|}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    principal: ${8:string}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about object&#39;s permissions",
+        "scope": "ansible"
+    },
+    "Create a VMware portgroup": {
+        "prefix": [
+            "community.vmware.vmware_portgroup",
+            "Create a VMware portgroup"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_portgroup:",
+            "    cluster_name: ${2:string}",
+            "    hostname: ${3:string}",
+            "    hosts:",
+            "      - ${4:element}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    portgroup: ${7:string}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    state: ${11|present,absent|}",
+            "    switch: ${12:string}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "    vlan_id: ${17:0}",
+            "$0"
+        ],
+        "description": "Create a VMware portgroup",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's Port Group configuration": {
+        "prefix": [
+            "community.vmware.vmware_portgroup_info",
+            "Gathers info about an ESXi host&#39;s Port Group configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_portgroup_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    policies: ${6|false,true|}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s Port Group configuration",
+        "scope": "ansible"
+    },
+    "Returns the recommended datastore from a SDRS-enabled datastore cluster": {
+        "prefix": [
+            "community.vmware.vmware_recommended_datastore",
+            "Returns the recommended datastore from a SDRS-enabled datastore cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_recommended_datastore:",
+            "    datacenter: ${2:string}",
+            "    datastore_cluster: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Returns the recommended datastore from a SDRS-enabled datastore cluster",
+        "scope": "ansible"
+    },
+    "Add/remove resource pools to/from vCenter": {
+        "prefix": [
+            "community.vmware.vmware_resource_pool",
+            "Add/remove resource pools to/from vCenter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_resource_pool:",
+            "    cluster: ${2:string}",
+            "    cpu_allocation_shares: ${3:4000}",
+            "    cpu_expandable_reservations: ${4|true,false|}",
+            "    cpu_limit: ${5:-1}",
+            "    cpu_reservation: ${6:0}",
+            "    cpu_shares: ${7|normal,high,custom,low|}",
+            "    datacenter: ${8:string}",
+            "    esxi_hostname: ${9:string}",
+            "    hostname: ${10:string}",
+            "    mem_allocation_shares: ${11:163840}",
+            "    mem_expandable_reservations: ${12|true,false|}",
+            "    mem_limit: ${13:-1}",
+            "    mem_reservation: ${14:0}",
+            "    mem_shares: ${15|normal,high,custom,low|}",
+            "    parent_resource_pool: ${16:string}",
+            "    password: ${17:string}",
+            "    port: ${18:443}",
+            "    proxy_host: ${19:string}",
+            "    proxy_port: ${20:int}",
+            "    resource_pool: ${21:string}",
+            "    state: ${22|present,absent|}",
+            "    username: ${23:string}",
+            "    validate_certs: ${24|true,false|}",
+            "$0"
+        ],
+        "description": "Add/remove resource pools to/from vCenter",
+        "scope": "ansible"
+    },
+    "Gathers info about resource pool information": {
+        "prefix": [
+            "community.vmware.vmware_resource_pool_info",
+            "Gathers info about resource pool information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_resource_pool_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about resource pool information",
+        "scope": "ansible"
+    },
+    "Manage VMware tags": {
+        "prefix": [
+            "community.vmware.vmware_tag",
+            "Manage VMware tags"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_tag:",
+            "    category_id: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    protocol: ${6|https,http|}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    tag_description: ${10:}",
+            "    tag_name: ${11:string}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware tags",
+        "scope": "ansible"
+    },
+    "Manage VMware tag info": {
+        "prefix": [
+            "community.vmware.vmware_tag_info",
+            "Manage VMware tag info"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_tag_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    protocol: ${5|https,http|}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage VMware tag info",
+        "scope": "ansible"
+    },
+    "Manage association of VMware tags with VMware objects": {
+        "prefix": [
+            "community.vmware.vmware_tag_manager",
+            "Manage association of VMware tags with VMware objects"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_tag_manager:",
+            "    hostname: ${2:string}",
+            "    moid: ${3:string}",
+            "    object_name: ${4:string}",
+            "    object_type: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    protocol: ${8|https,http|}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    state: ${11|add,present,absent,remove,set|}",
+            "    tag_names:",
+            "      - ${12:element}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Manage association of VMware tags with VMware objects",
+        "scope": "ansible"
+    },
+    "Return canonical (NAA) from an ESXi host system": {
+        "prefix": [
+            "community.vmware.vmware_target_canonical_info",
+            "Return canonical (NAA) from an ESXi host system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_target_canonical_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    target_id: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Return canonical (NAA) from an ESXi host system",
+        "scope": "ansible"
+    },
+    "List and Export VMware vCenter infra profile configs.": {
+        "prefix": [
+            "community.vmware.vmware_vc_infraprofile_info",
+            "List and Export VMware vCenter infra profile configs."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vc_infraprofile_info:",
+            "    api: ${2:string}",
+            "    config_path: ${3:string}",
+            "    decryption_key: ${4:string}",
+            "    description: ${5:string}",
+            "    encryption_key: ${6:string}",
+            "    hostname: ${7:string}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    profiles: ${10:string}",
+            "    protocol: ${11|https,http|}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "List and Export VMware vCenter infra profile configs.",
+        "scope": "ansible"
+    },
+    "Configures general settings on a vCenter server": {
+        "prefix": [
+            "community.vmware.vmware_vcenter_settings",
+            "Configures general settings on a vCenter server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vcenter_settings:",
+            "    hostname: ${4:string}",
+            "    logging_options: ${5|info,none,error,warning,verbose,trivia|}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Configures general settings on a vCenter server",
+        "scope": "ansible"
+    },
+    "Gather info vCenter settings": {
+        "prefix": [
+            "community.vmware.vmware_vcenter_settings_info",
+            "Gather info vCenter settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vcenter_settings_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    properties:",
+            "      - ${5:element}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    schema: ${8|summary,vsphere|}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gather info vCenter settings",
+        "scope": "ansible"
+    },
+    "Configures statistics on a vCenter server": {
+        "prefix": [
+            "community.vmware.vmware_vcenter_statistics",
+            "Configures statistics on a vCenter server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vcenter_statistics:",
+            "    hostname: ${2:string}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Configures statistics on a vCenter server",
+        "scope": "ansible"
+    },
+    "Return supported guest ID list and VM recommended config option for specific guest OS": {
+        "prefix": [
+            "community.vmware.vmware_vm_config_option",
+            "Return supported guest ID list and VM recommended config option for specific guest OS"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_config_option:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:ha-datacenter}",
+            "    esxi_hostname: ${4:string}",
+            "    get_config_options: ${5|false,true|}",
+            "    get_guest_os_ids: ${6|false,true|}",
+            "    get_hardware_versions: ${7|false,true|}",
+            "    guest_id: ${8:string}",
+            "    hardware_version: ${9:string}",
+            "    hostname: ${10:string}",
+            "    password: ${11:string}",
+            "    port: ${12:443}",
+            "    proxy_host: ${13:string}",
+            "    proxy_port: ${14:int}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Return supported guest ID list and VM recommended config option for specific guest OS",
+        "scope": "ansible"
+    },
+    "Creates vm/host group in a given cluster": {
+        "prefix": [
+            "community.vmware.vmware_vm_host_drs_rule",
+            "Creates vm/host group in a given cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_host_drs_rule:",
+            "    affinity_rule: ${2|true,false|}",
+            "    cluster_name: ${3:string}",
+            "    datacenter: ${4:string}",
+            "    drs_rule_name: ${5:string}",
+            "    enabled: ${6|false,true|}",
+            "    host_group_name: ${7:string}",
+            "    hostname: ${8:string}",
+            "    mandatory: ${9|false,true|}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    state: ${14|present,absent|}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "    vm_group_name: ${17:string}",
+            "$0"
+        ],
+        "description": "Creates vm/host group in a given cluster",
+        "scope": "ansible"
+    },
+    "Return basic info pertaining to a VMware machine guest": {
+        "prefix": [
+            "community.vmware.vmware_vm_info",
+            "Return basic info pertaining to a VMware machine guest"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_info:",
+            "    folder: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    show_allocated: ${8|false,true|}",
+            "    show_attribute: ${9|false,true|}",
+            "    show_tag: ${10|false,true|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "    vm_name: ${13:string}",
+            "    vm_type: ${14|all,vm,template|}",
+            "$0"
+        ],
+        "description": "Return basic info pertaining to a VMware machine guest",
+        "scope": "ansible"
+    },
+    "Run commands in a VMware guest operating system": {
+        "prefix": [
+            "community.vmware.vmware_vm_shell",
+            "Run commands in a VMware guest operating system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_shell:",
+            "    cluster: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    folder: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    timeout: ${10:3600}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "    vm_id: ${13:string}",
+            "    vm_id_type: ${14|vm_name,uuid,instance_uuid,dns_name,inventory_path|}",
+            "    vm_password: ${15:string}",
+            "    vm_shell: ${16:string}",
+            "    vm_shell_args: ${17: }",
+            "    vm_shell_cwd: ${18:string}",
+            "    vm_shell_env:",
+            "      - ${19:element}",
+            "    vm_username: ${20:string}",
+            "    wait_for_process: ${21|false,true|}",
+            "$0"
+        ],
+        "description": "Run commands in a VMware guest operating system",
+        "scope": "ansible"
+    },
+    "Create vSphere storage policies": {
+        "prefix": [
+            "community.vmware.vmware_vm_storage_policy",
+            "Create vSphere storage policies"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_storage_policy:",
+            "    description: ${2:string}",
+            "    hostname: ${3:string}",
+            "    name: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    tag_affinity: ${10|true,false|}",
+            "    tag_category: ${11:string}",
+            "    tag_name: ${12:string}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Create vSphere storage policies",
+        "scope": "ansible"
+    },
+    "Gather information about vSphere storage profile defined storage policy information.": {
+        "prefix": [
+            "community.vmware.vmware_vm_storage_policy_info",
+            "Gather information about vSphere storage profile defined storage policy information."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_storage_policy_info:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:443}",
+            "    proxy_host: ${5:string}",
+            "    proxy_port: ${6:int}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about vSphere storage profile defined storage policy information.",
+        "scope": "ansible"
+    },
+    "Configure VMware DRS Affinity rule for virtual machines in the given cluster": {
+        "prefix": [
+            "community.vmware.vmware_vm_vm_drs_rule",
+            "Configure VMware DRS Affinity rule for virtual machines in the given cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_vm_drs_rule:",
+            "    affinity_rule: ${2|true,false|}",
+            "    cluster_name: ${3:string}",
+            "    drs_rule_name: ${4:string}",
+            "    enabled: ${5|false,true|}",
+            "    hostname: ${6:string}",
+            "    mandatory: ${7|false,true|}",
+            "    password: ${8:string}",
+            "    port: ${9:443}",
+            "    proxy_host: ${10:string}",
+            "    proxy_port: ${11:int}",
+            "    state: ${12|present,absent|}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "    vms:",
+            "      - ${15:element}",
+            "$0"
+        ],
+        "description": "Configure VMware DRS Affinity rule for virtual machines in the given cluster",
+        "scope": "ansible"
+    },
+    "Migrates a virtual machine from a standard vswitch to distributed": {
+        "prefix": [
+            "community.vmware.vmware_vm_vss_dvs_migrate",
+            "Migrates a virtual machine from a standard vswitch to distributed"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vm_vss_dvs_migrate:",
+            "    dvportgroup_name: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "    vm_name: ${10:string}",
+            "$0"
+        ],
+        "description": "Migrates a virtual machine from a standard vswitch to distributed",
+        "scope": "ansible"
+    },
+    "Manages a VMware VMkernel Adapter of an ESXi host.": {
+        "prefix": [
+            "community.vmware.vmware_vmkernel",
+            "Manages a VMware VMkernel Adapter of an ESXi host."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vmkernel:",
+            "    device: ${2:string}",
+            "    dvswitch_name: ${3:string}",
+            "    enable_ft: ${4|false,true|}",
+            "    enable_mgmt: ${5|false,true|}",
+            "    enable_provisioning: ${6|false,true|}",
+            "    enable_replication: ${7|false,true|}",
+            "    enable_replication_nfc: ${8|false,true|}",
+            "    enable_vmotion: ${9|false,true|}",
+            "    enable_vsan: ${10|false,true|}",
+            "    esxi_hostname: ${11:string}",
+            "    hostname: ${12:string}",
+            "    mtu: ${13:1500}",
+            "    password: ${15:string}",
+            "    port: ${16:443}",
+            "    portgroup_name: ${17:string}",
+            "    proxy_host: ${18:string}",
+            "    proxy_port: ${19:int}",
+            "    state: ${20|present,absent|}",
+            "    username: ${21:string}",
+            "    validate_certs: ${22|true,false|}",
+            "    vswitch_name: ${23:string}",
+            "$0"
+        ],
+        "description": "Manages a VMware VMkernel Adapter of an ESXi host.",
+        "scope": "ansible"
+    },
+    "Gathers VMKernel info about an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_vmkernel_info",
+            "Gathers VMKernel info about an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vmkernel_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:443}",
+            "    proxy_host: ${7:string}",
+            "    proxy_port: ${8:int}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers VMKernel info about an ESXi host",
+        "scope": "ansible"
+    },
+    "Move a virtual machine using vMotion, and/or its vmdks using storage vMotion.": {
+        "prefix": [
+            "community.vmware.vmware_vmotion",
+            "Move a virtual machine using vMotion, and/or its vmdks using storage vMotion."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vmotion:",
+            "    destination_cluster: ${2:string}",
+            "    destination_datacenter: ${3:string}",
+            "    destination_datastore: ${4:string}",
+            "    destination_datastore_cluster: ${5:string}",
+            "    destination_host: ${6:string}",
+            "    destination_resourcepool: ${7:string}",
+            "    hostname: ${8:string}",
+            "    moid: ${9:string}",
+            "    password: ${10:string}",
+            "    port: ${11:443}",
+            "    proxy_host: ${12:string}",
+            "    proxy_port: ${13:int}",
+            "    timeout: ${14:3600}",
+            "    use_instance_uuid: ${15|false,true|}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "    vm_name: ${18:string}",
+            "    vm_uuid: ${19:string}",
+            "$0"
+        ],
+        "description": "Move a virtual machine using vMotion, and/or its vmdks using storage vMotion.",
+        "scope": "ansible"
+    },
+    "Configure VSAN clustering on an ESXi host": {
+        "prefix": [
+            "community.vmware.vmware_vsan_cluster",
+            "Configure VSAN clustering on an ESXi host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vsan_cluster:",
+            "    cluster_uuid: ${2:string}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:443}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:int}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Configure VSAN clustering on an ESXi host",
+        "scope": "ansible"
+    },
+    "Gather information about a VMware vSAN cluster's health": {
+        "prefix": [
+            "community.vmware.vmware_vsan_health_info",
+            "Gather information about a VMware vSAN cluster&#39;s health"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vsan_health_info:",
+            "    cluster_name: ${2:string}",
+            "    datacenter: ${3:string}",
+            "    fetch_from_cache: ${4|false,true|}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about a VMware vSAN cluster&#39;s health",
+        "scope": "ansible"
+    },
+    "Create or remove a Port Mirroring session.": {
+        "prefix": [
+            "community.vmware.vmware_vspan_session",
+            "Create or remove a Port Mirroring session."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vspan_session:",
+            "    description: ${2:string}",
+            "    destination_port: ${3:string}",
+            "    enabled: ${5|true,false|}",
+            "    encapsulation_vlan_id: ${6:int}",
+            "    hostname: ${7:string}",
+            "    mirrored_packet_length: ${8:int}",
+            "    name: ${9:string}",
+            "    normal_traffic_allowed: ${10|false,true|}",
+            "    password: ${11:string}",
+            "    port: ${12:443}",
+            "    proxy_host: ${13:string}",
+            "    proxy_port: ${14:int}",
+            "    sampling_rate: ${15:int}",
+            "    session_type: ${16|dvPortMirror,encapsulatedRemoteMirrorSource,remoteMirrorDest,remoteMirrorSource|}",
+            "    source_port_received: ${17:string}",
+            "    source_port_transmitted: ${18:string}",
+            "    state: ${21:string}",
+            "    strip_original_vlan: ${22|false,true|}",
+            "    switch: ${23:string}",
+            "    username: ${24:string}",
+            "    validate_certs: ${25|true,false|}",
+            "$0"
+        ],
+        "description": "Create or remove a Port Mirroring session.",
+        "scope": "ansible"
+    },
+    "Manage a VMware Standard Switch to an ESXi host.": {
+        "prefix": [
+            "community.vmware.vmware_vswitch",
+            "Manage a VMware Standard Switch to an ESXi host."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vswitch:",
+            "    esxi_hostname: ${2:string}",
+            "    hostname: ${3:string}",
+            "    mtu: ${4:1500}",
+            "    nics:",
+            "      - ${5:element}",
+            "    number_of_ports: ${6:128}",
+            "    password: ${7:string}",
+            "    port: ${8:443}",
+            "    proxy_host: ${9:string}",
+            "    proxy_port: ${10:int}",
+            "    state: ${12|present,absent|}",
+            "    switch: ${13:string}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Manage a VMware Standard Switch to an ESXi host.",
+        "scope": "ansible"
+    },
+    "Gathers info about an ESXi host's vswitch configurations": {
+        "prefix": [
+            "community.vmware.vmware_vswitch_info",
+            "Gathers info about an ESXi host&#39;s vswitch configurations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vmware_vswitch_info:",
+            "    cluster_name: ${2:string}",
+            "    esxi_hostname: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    policies: ${6|false,true|}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Gathers info about an ESXi host&#39;s vswitch configurations",
+        "scope": "ansible"
+    },
+    "Copy a file to a VMware datastore": {
+        "prefix": [
+            "community.vmware.vsphere_copy",
+            "Copy a file to a VMware datastore"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vsphere_copy:",
+            "    datacenter: ${2:string}",
+            "    datastore: ${3:string}",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    path: ${6:string}",
+            "    port: ${7:443}",
+            "    proxy_host: ${8:string}",
+            "    proxy_port: ${9:int}",
+            "    src: ${10:string}",
+            "    timeout: ${11:10}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Copy a file to a VMware datastore",
+        "scope": "ansible"
+    },
+    "Manage files on a vCenter datastore": {
+        "prefix": [
+            "community.vmware.vsphere_file",
+            "Manage files on a vCenter datastore"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.vmware.vsphere_file:",
+            "    datacenter: ${2:string}",
+            "    datastore: ${3:string}",
+            "    host: ${4:string}",
+            "    password: ${5:string}",
+            "    path: ${6:string}",
+            "    state: ${7|file,absent,directory,touch|}",
+            "    timeout: ${8:10}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manage files on a vCenter datastore",
+        "scope": "ansible"
+    }
+}

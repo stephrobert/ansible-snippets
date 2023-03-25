@@ -1,0 +1,212 @@
+{
+    "This module will manage a company entities in a SAP S4HANA environment": {
+        "prefix": [
+            "community.sap_libs.sap_company",
+            "This module will manage a company entities in a SAP S4HANA environment"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_company:",
+            "    city: ${2:string}",
+            "    client: ${3:000}",
+            "    company_id: ${4:string}",
+            "    conn_password: ${5:string}",
+            "    conn_username: ${6:string}",
+            "    country: ${7:string}",
+            "    e_mail: ${8:string}",
+            "    host: ${9:string}",
+            "    name: ${10:string}",
+            "    name_2: ${11:string}",
+            "    post_code: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    street: ${14:string}",
+            "    street_no: ${15:string}",
+            "    sysnr: ${16:01}",
+            "    time_zone: ${17:string}",
+            "$0"
+        ],
+        "description": "This module will manage a company entities in a SAP S4HANA environment",
+        "scope": "ansible"
+    },
+    "Ansible Module to execute SAPCONTROL": {
+        "prefix": [
+            "community.sap_libs.sap_control_exec",
+            "Ansible Module to execute SAPCONTROL"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_control_exec:",
+            "    force: ${2|false,true|}",
+            "    function: ${3:string}",
+            "    hostname: ${4:localhost}",
+            "    parameter: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:int}",
+            "    sysnr: ${8:string}",
+            "    username: ${9:string}",
+            "$0"
+        ],
+        "description": "Ansible Module to execute SAPCONTROL",
+        "scope": "ansible"
+    },
+    "Ansible Module to execute SQL on SAP HANA": {
+        "prefix": [
+            "community.sap_libs.sap_hdbsql",
+            "Ansible Module to execute SQL on SAP HANA"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_hdbsql:",
+            "    autocommit: ${2|true,false|}",
+            "    bin_path: ${3:string}",
+            "    database: ${4:string}",
+            "    encrypted: ${5|false,true|}",
+            "    filepath:",
+            "      - ${6:element}",
+            "    host: ${7:string}",
+            "    instance: ${8:string}",
+            "    password: ${9:string}",
+            "    query:",
+            "      - ${10:element}",
+            "    sid: ${11:string}",
+            "    user: ${12:SYSTEM}",
+            "    userstore: ${13|false,true|}",
+            "$0"
+        ],
+        "description": "Ansible Module to execute SQL on SAP HANA",
+        "scope": "ansible"
+    },
+    "Ansible Module for use of SAP PyRFC to execute SAP RFCs (Remote Function Calls) to SAP remote-enabled function modules": {
+        "prefix": [
+            "community.sap_libs.sap_pyrfc",
+            "Ansible Module for use of SAP PyRFC to execute SAP RFCs (Remote Function Calls) to SAP remote-enabled function modules"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_pyrfc:",
+            "    function: ${3:string}",
+            "$0"
+        ],
+        "description": "Ansible Module for use of SAP PyRFC to execute SAP RFCs (Remote Function Calls) to SAP remote-enabled function modules",
+        "scope": "ansible"
+    },
+    "This module will upload and (de)implements C(SNOTES) in a SAP S4HANA environment.": {
+        "prefix": [
+            "community.sap_libs.sap_snote",
+            "This module will upload and (de)implements C(SNOTES) in a SAP S4HANA environment."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_snote:",
+            "    client: ${2:000}",
+            "    conn_password: ${3:string}",
+            "    conn_username: ${4:string}",
+            "    host: ${5:string}",
+            "    snote: ${6:string}",
+            "    snote_path: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    sysnr: ${9:01}",
+            "$0"
+        ],
+        "description": "This module will upload and (de)implements C(SNOTES) in a SAP S4HANA environment.",
+        "scope": "ansible"
+    },
+    "Gathers SAP facts in a host": {
+        "prefix": [
+            "community.sap_libs.sap_system_facts",
+            "Gathers SAP facts in a host"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_system_facts:",
+            "$0"
+        ],
+        "description": "Gathers SAP facts in a host",
+        "scope": "ansible"
+    },
+    "Perform SAP Task list execution": {
+        "prefix": [
+            "community.sap_libs.sap_task_list_execute",
+            "Perform SAP Task list execution"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_task_list_execute:",
+            "    client: ${2:000}",
+            "    conn_password: ${3:string}",
+            "    conn_username: ${4:string}",
+            "    host: ${5:string}",
+            "    sysnr: ${6:00}",
+            "    task_parameters:",
+            "      - ${7:element}",
+            "    task_settings:",
+            "      - ${8:element}",
+            "    task_skip: ${9|false,true|}",
+            "    task_to_execute: ${10:string}",
+            "$0"
+        ],
+        "description": "Perform SAP Task list execution",
+        "scope": "ansible"
+    },
+    "This module will manage a user entities in a SAP S4/HANA environment": {
+        "prefix": [
+            "community.sap_libs.sap_user",
+            "This module will manage a user entities in a SAP S4/HANA environment"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sap_user:",
+            "    client: ${2:000}",
+            "    company: ${3:string}",
+            "    conn_password: ${4:string}",
+            "    conn_username: ${5:string}",
+            "    email: ${6:string}",
+            "    firstname: ${7:string}",
+            "    force: ${8|false,true|}",
+            "    host: ${9:string}",
+            "    lastname: ${10:string}",
+            "    password: ${11:string}",
+            "    profiles:",
+            "      - ${12:element}",
+            "    roles:",
+            "      - ${13:element}",
+            "    state: ${14|present,absent,lock,unlock|}",
+            "    sysnr: ${15:00}",
+            "    user_type: ${16|A,B,C,S,L|}",
+            "    useralias: ${17:string}",
+            "    username: ${18:string}",
+            "$0"
+        ],
+        "description": "This module will manage a user entities in a SAP S4/HANA environment",
+        "scope": "ansible"
+    },
+    "Manages SAP SAPCAR archives": {
+        "prefix": [
+            "community.sap_libs.sapcar_extract",
+            "Manages SAP SAPCAR archives"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.sap_libs.sapcar_extract:",
+            "    binary_path: ${2:path}",
+            "    dest: ${3:path}",
+            "    manifest: ${4:SIGNATURE.SMF}",
+            "    path: ${5:path}",
+            "    remove: ${6|false,true|}",
+            "    security_library: ${7:path}",
+            "    signature: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Manages SAP SAPCAR archives",
+        "scope": "ansible"
+    }
+}

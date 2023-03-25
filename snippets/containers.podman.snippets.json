@@ -1,0 +1,613 @@
+{
+    "Manage podman containers": {
+        "prefix": [
+            "containers.podman.podman_container",
+            "Manage podman containers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_container:",
+            "    authfile: ${3:path}",
+            "    blkio_weight: ${4:int}",
+            "    cap_add:",
+            "      - ${6:element}",
+            "    cap_drop:",
+            "      - ${7:element}",
+            "    cgroup_parent: ${8:path}",
+            "    cgroupns: ${9:string}",
+            "    cgroups: ${10:string}",
+            "    cidfile: ${11:path}",
+            "    cmd_args:",
+            "      - ${12:element}",
+            "    command: ${13:\"raw\"}",
+            "    conmon_pidfile: ${14:path}",
+            "    cpu_period: ${15:int}",
+            "    cpu_rt_period: ${16:int}",
+            "    cpu_rt_runtime: ${17:int}",
+            "    cpu_shares: ${18:int}",
+            "    cpus: ${19:string}",
+            "    cpuset_cpus: ${20:string}",
+            "    cpuset_mems: ${21:string}",
+            "    debug: ${22|false,true|}",
+            "    detach: ${23|true,false|}",
+            "    detach_keys: ${24:string}",
+            "    device:",
+            "      - ${25:element}",
+            "    device_read_bps:",
+            "      - ${26:element}",
+            "    device_read_iops:",
+            "      - ${27:element}",
+            "    device_write_bps:",
+            "      - ${28:element}",
+            "    device_write_iops:",
+            "      - ${29:element}",
+            "    dns:",
+            "      - ${30:element}",
+            "    dns_option: ${31:string}",
+            "    dns_search: ${32:string}",
+            "    entrypoint: ${33:string}",
+            "    env_file: ${35:path}",
+            "    env_host: ${36|false,true|}",
+            "    executable: ${38:podman}",
+            "    expose:",
+            "      - ${39:element}",
+            "    force_restart: ${40|false,true|}",
+            "    gidmap:",
+            "      - ${42:element}",
+            "    group_add:",
+            "      - ${43:element}",
+            "    healthcheck: ${44:string}",
+            "    healthcheck_interval: ${45:string}",
+            "    healthcheck_retries: ${46:int}",
+            "    healthcheck_start_period: ${47:string}",
+            "    healthcheck_timeout: ${48:string}",
+            "    hostname: ${49:string}",
+            "    http_proxy: ${50|false,true|}",
+            "    image: ${51:string}",
+            "    image_strict: ${52|false,true|}",
+            "    image_volume: ${53:string}",
+            "    init: ${54|false,true|}",
+            "    init_path: ${55:string}",
+            "    interactive: ${56|false,true|}",
+            "    ip: ${57:string}",
+            "    ipc: ${58:string}",
+            "    kernel_memory: ${59:string}",
+            "    label_file: ${61:string}",
+            "    log_driver: ${62:string}",
+            "    log_level: ${63:string}",
+            "    mac_address: ${65:string}",
+            "    memory: ${66:string}",
+            "    memory_reservation: ${67:string}",
+            "    memory_swap: ${68:string}",
+            "    memory_swappiness: ${69:int}",
+            "    mount:",
+            "      - ${70:element}",
+            "    name: ${71:string}",
+            "    network:",
+            "      - ${72:element}",
+            "    network_aliases:",
+            "      - ${73:element}",
+            "    no_hosts: ${74|false,true|}",
+            "    oom_kill_disable: ${75|false,true|}",
+            "    oom_score_adj: ${76:int}",
+            "    pid: ${77:string}",
+            "    pids_limit: ${78:string}",
+            "    pod: ${79:string}",
+            "    privileged: ${80|false,true|}",
+            "    publish:",
+            "      - ${81:element}",
+            "    publish_all: ${82|false,true|}",
+            "    read_only: ${83|false,true|}",
+            "    read_only_tmpfs: ${84|false,true|}",
+            "    recreate: ${85|false,true|}",
+            "    requires:",
+            "      - ${86:element}",
+            "    restart_policy: ${87:string}",
+            "    rm: ${88|false,true|}",
+            "    rootfs: ${89|false,true|}",
+            "    sdnotify: ${90:string}",
+            "    secrets:",
+            "      - ${91:element}",
+            "    security_opt:",
+            "      - ${92:element}",
+            "    shm_size: ${93:string}",
+            "    sig_proxy: ${94|false,true|}",
+            "    state: ${95|started,absent,present,stopped,created|}",
+            "    stop_signal: ${96:int}",
+            "    stop_timeout: ${97:int}",
+            "    subgidname: ${98:string}",
+            "    subuidname: ${99:string}",
+            "    systemd: ${101:string}",
+            "    timezone: ${102:string}",
+            "    tty: ${104|false,true|}",
+            "    uidmap:",
+            "      - ${105:element}",
+            "    ulimit:",
+            "      - ${106:element}",
+            "    user: ${107:string}",
+            "    userns: ${108:string}",
+            "    uts: ${109:string}",
+            "    volume:",
+            "      - ${110:element}",
+            "    volumes_from:",
+            "      - ${111:element}",
+            "    workdir: ${112:string}",
+            "$0"
+        ],
+        "description": "Manage podman containers",
+        "scope": "ansible"
+    },
+    "Gather facts about containers using podman": {
+        "prefix": [
+            "containers.podman.podman_container_info",
+            "Gather facts about containers using podman"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_container_info:",
+            "    executable: ${2:podman}",
+            "    name:",
+            "      - ${3:element}",
+            "$0"
+        ],
+        "description": "Gather facts about containers using podman",
+        "scope": "ansible"
+    },
+    "Manage podman containers in a batch": {
+        "prefix": [
+            "containers.podman.podman_containers",
+            "Manage podman containers in a batch"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_containers:",
+            "    containers:",
+            "      - ${2:element}",
+            "    debug: ${3|false,true|}",
+            "$0"
+        ],
+        "description": "Manage podman containers in a batch",
+        "scope": "ansible"
+    },
+    "Export a podman container": {
+        "prefix": [
+            "containers.podman.podman_export",
+            "Export a podman container"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_export:",
+            "    container: ${2:string}",
+            "    dest: ${3:string}",
+            "    executable: ${4:podman}",
+            "    force: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Export a podman container",
+        "scope": "ansible"
+    },
+    "Generate systemd unit from a pod or a container": {
+        "prefix": [
+            "containers.podman.podman_generate_systemd",
+            "Generate systemd unit from a pod or a container"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_generate_systemd:",
+            "    after:",
+            "      - ${2:element}",
+            "    container_prefix: ${3:string}",
+            "    dest: ${4:path}",
+            "    executable: ${6:podman}",
+            "    name: ${7:string}",
+            "    new: ${8|false,true|}",
+            "    no_header: ${9|false,true|}",
+            "    pod_prefix: ${10:string}",
+            "    requires:",
+            "      - ${11:element}",
+            "    restart_policy: ${12:string}",
+            "    restart_sec: ${13:int}",
+            "    separator: ${14:string}",
+            "    start_timeout: ${15:int}",
+            "    stop_timeout: ${16:int}",
+            "    use_names: ${17|true,false|}",
+            "    wants:",
+            "      - ${18:element}",
+            "$0"
+        ],
+        "description": "Generate systemd unit from a pod or a container",
+        "scope": "ansible"
+    },
+    "Pull images for use by podman": {
+        "prefix": [
+            "containers.podman.podman_image",
+            "Pull images for use by podman"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_image:",
+            "    auth_file: ${2:path}",
+            "    ca_cert_dir: ${4:path}",
+            "    executable: ${5:podman}",
+            "    force: ${6|false,true|}",
+            "    name: ${7:string}",
+            "    password: ${8:string}",
+            "    path: ${9:string}",
+            "    pull: ${10|true,false|}",
+            "    push: ${11|false,true|}",
+            "    state: ${13|present,absent,build|}",
+            "    tag: ${14:latest}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|false,true|}",
+            "$0"
+        ],
+        "description": "Pull images for use by podman",
+        "scope": "ansible"
+    },
+    "Gather info about images using podman": {
+        "prefix": [
+            "containers.podman.podman_image_info",
+            "Gather info about images using podman"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_image_info:",
+            "    executable: ${2:podman}",
+            "    name:",
+            "      - ${3:element}",
+            "$0"
+        ],
+        "description": "Gather info about images using podman",
+        "scope": "ansible"
+    },
+    "Import Podman container from a tar file.": {
+        "prefix": [
+            "containers.podman.podman_import",
+            "Import Podman container from a tar file."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_import:",
+            "    change:",
+            "      - ${2:element}",
+            "    commit_message: ${3:string}",
+            "    executable: ${4:podman}",
+            "    src: ${5:string}",
+            "$0"
+        ],
+        "description": "Import Podman container from a tar file.",
+        "scope": "ansible"
+    },
+    "Load image from a tar file.": {
+        "prefix": [
+            "containers.podman.podman_load",
+            "Load image from a tar file."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_load:",
+            "    executable: ${2:podman}",
+            "    input: ${3:string}",
+            "$0"
+        ],
+        "description": "Load image from a tar file.",
+        "scope": "ansible"
+    },
+    "Login to a container registry using podman": {
+        "prefix": [
+            "containers.podman.podman_login",
+            "Login to a container registry using podman"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_login:",
+            "    authfile: ${2:path}",
+            "    certdir: ${3:path}",
+            "    executable: ${4:podman}",
+            "    password: ${5:string}",
+            "    registry: ${6:string}",
+            "    tlsverify: ${7|false,true|}",
+            "    username: ${8:string}",
+            "$0"
+        ],
+        "description": "Login to a container registry using podman",
+        "scope": "ansible"
+    },
+    "Return the logged-in user if any for a given registry": {
+        "prefix": [
+            "containers.podman.podman_login_info",
+            "Return the logged-in user if any for a given registry"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_login_info:",
+            "    authfile: ${2:path}",
+            "    executable: ${3:podman}",
+            "    registry: ${4:string}",
+            "$0"
+        ],
+        "description": "Return the logged-in user if any for a given registry",
+        "scope": "ansible"
+    },
+    "Log out of a container registry using podman": {
+        "prefix": [
+            "containers.podman.podman_logout",
+            "Log out of a container registry using podman"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_logout:",
+            "    all: ${2|false,true|}",
+            "    authfile: ${3:path}",
+            "    executable: ${4:podman}",
+            "    ignore_docker_credentials: ${5|false,true|}",
+            "    registry: ${6:string}",
+            "$0"
+        ],
+        "description": "Log out of a container registry using podman",
+        "scope": "ansible"
+    },
+    "Manage podman networks": {
+        "prefix": [
+            "containers.podman.podman_network",
+            "Manage podman networks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_network:",
+            "    debug: ${2|false,true|}",
+            "    disable_dns: ${3|false,true|}",
+            "    driver: ${4:string}",
+            "    executable: ${5:podman}",
+            "    gateway: ${6:string}",
+            "    internal: ${7|false,true|}",
+            "    ip_range: ${8:string}",
+            "    ipv6: ${9|false,true|}",
+            "    macvlan: ${10:string}",
+            "    name: ${11:string}",
+            "    recreate: ${13|false,true|}",
+            "    state: ${14|present,absent|}",
+            "    subnet: ${15:string}",
+            "$0"
+        ],
+        "description": "Manage podman networks",
+        "scope": "ansible"
+    },
+    "Gather info about podman networks": {
+        "prefix": [
+            "containers.podman.podman_network_info",
+            "Gather info about podman networks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_network_info:",
+            "    executable: ${2:podman}",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "Gather info about podman networks",
+        "scope": "ansible"
+    },
+    "Play kubernetes YAML file using podman": {
+        "prefix": [
+            "containers.podman.podman_play",
+            "Play kubernetes YAML file using podman"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_play:",
+            "    authfile: ${2:path}",
+            "    cert_dir: ${3:path}",
+            "    configmap:",
+            "      - ${4:element}",
+            "    debug: ${5|false,true|}",
+            "    executable: ${6:podman}",
+            "    kube_file: ${7:path}",
+            "    log_driver: ${8:string}",
+            "    log_level: ${9:string}",
+            "    network:",
+            "      - ${10:element}",
+            "    password: ${11:string}",
+            "    quiet: ${12|false,true|}",
+            "    recreate: ${13|false,true|}",
+            "    seccomp_profile_root: ${14:path}",
+            "    state: ${15:string}",
+            "    tls_verify: ${16|false,true|}",
+            "    username: ${17:string}",
+            "$0"
+        ],
+        "description": "Play kubernetes YAML file using podman",
+        "scope": "ansible"
+    },
+    "Manage Podman pods": {
+        "prefix": [
+            "containers.podman.podman_pod",
+            "Manage Podman pods"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_pod:",
+            "    add_host:",
+            "      - ${2:element}",
+            "    cgroup_parent: ${3:string}",
+            "    cpus: ${4:string}",
+            "    cpuset_cpus: ${5:string}",
+            "    debug: ${6|false,true|}",
+            "    device:",
+            "      - ${7:element}",
+            "    device_read_bps:",
+            "      - ${8:element}",
+            "    dns:",
+            "      - ${9:element}",
+            "    dns_opt:",
+            "      - ${10:element}",
+            "    dns_search:",
+            "      - ${11:element}",
+            "    executable: ${12:podman}",
+            "    gidmap:",
+            "      - ${14:element}",
+            "    hostname: ${15:string}",
+            "    infra: ${16|false,true|}",
+            "    infra_command: ${17:string}",
+            "    infra_conmon_pidfile: ${18:string}",
+            "    infra_image: ${19:string}",
+            "    infra_name: ${20:string}",
+            "    ip: ${21:string}",
+            "    label_file: ${23:string}",
+            "    mac_address: ${24:string}",
+            "    name: ${25:string}",
+            "    network:",
+            "      - ${26:element}",
+            "    network_alias:",
+            "      - ${27:element}",
+            "    no_hosts: ${28|false,true|}",
+            "    pid: ${29:string}",
+            "    pod_id_file: ${30:string}",
+            "    publish:",
+            "      - ${31:element}",
+            "    recreate: ${32|false,true|}",
+            "    share: ${33:string}",
+            "    state: ${34|created,killed,restarted,absent,started,stopped,paused,unpaused|}",
+            "    subgidname: ${35:string}",
+            "    subuidname: ${36:string}",
+            "    uidmap:",
+            "      - ${37:element}",
+            "    userns: ${38:string}",
+            "    volume:",
+            "      - ${39:element}",
+            "$0"
+        ],
+        "description": "Manage Podman pods",
+        "scope": "ansible"
+    },
+    "Gather info about podman pods": {
+        "prefix": [
+            "containers.podman.podman_pod_info",
+            "Gather info about podman pods"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_pod_info:",
+            "    executable: ${2:podman}",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "Gather info about podman pods",
+        "scope": "ansible"
+    },
+    "Saves podman image to tar file": {
+        "prefix": [
+            "containers.podman.podman_save",
+            "Saves podman image to tar file"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_save:",
+            "    compress: ${2|false,true|}",
+            "    dest: ${3:string}",
+            "    executable: ${4:podman}",
+            "    force: ${5|true,false|}",
+            "    format: ${6:string}",
+            "    image: ${7:string}",
+            "    multi_image_archive: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Saves podman image to tar file",
+        "scope": "ansible"
+    },
+    "Manage podman secrets": {
+        "prefix": [
+            "containers.podman.podman_secret",
+            "Manage podman secrets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_secret:",
+            "    data: ${2:string}",
+            "    driver: ${3:string}",
+            "    executable: ${5:podman}",
+            "    force: ${6|false,true|}",
+            "    name: ${7:string}",
+            "    skip_existing: ${8|false,true|}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage podman secrets",
+        "scope": "ansible"
+    },
+    "Add an additional name to a local image": {
+        "prefix": [
+            "containers.podman.podman_tag",
+            "Add an additional name to a local image"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_tag:",
+            "    executable: ${2:podman}",
+            "    image: ${3:string}",
+            "    target_names:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Add an additional name to a local image",
+        "scope": "ansible"
+    },
+    "Manage Podman volumes": {
+        "prefix": [
+            "containers.podman.podman_volume",
+            "Manage Podman volumes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_volume:",
+            "    debug: ${2|false,true|}",
+            "    driver: ${3:string}",
+            "    executable: ${4:podman}",
+            "    name: ${6:string}",
+            "    options:",
+            "      - ${7:element}",
+            "    recreate: ${8|false,true|}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Podman volumes",
+        "scope": "ansible"
+    },
+    "Gather info about podman volumes": {
+        "prefix": [
+            "containers.podman.podman_volume_info",
+            "Gather info about podman volumes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  containers.podman.podman_volume_info:",
+            "    executable: ${2:podman}",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "Gather info about podman volumes",
+        "scope": "ansible"
+    }
+}

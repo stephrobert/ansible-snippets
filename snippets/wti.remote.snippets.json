@@ -1,0 +1,694 @@
+{
+    "Get alarm information from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_alarm_info",
+            "Get alarm information from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_alarm_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    use_https: ${5|true,false|}",
+            "    use_proxy: ${6|false,true|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Get alarm information from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get parameters from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_config_backup",
+            "Get parameters from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_config_backup:",
+            "    cpm_password: ${2:string}",
+            "    cpm_path: ${3:/tmp/}",
+            "    cpm_url: ${4:string}",
+            "    cpm_username: ${5:string}",
+            "    use_https: ${6|true,false|}",
+            "    use_proxy: ${7|false,true|}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get parameters from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Send operational parameters to WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_config_restore",
+            "Send operational parameters to WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_config_restore:",
+            "    cpm_filename: ${2:string}",
+            "    cpm_password: ${3:string}",
+            "    cpm_path: ${4:/tmp/}",
+            "    cpm_url: ${5:string}",
+            "    cpm_username: ${6:string}",
+            "    use_https: ${7|true,false|}",
+            "    use_proxy: ${8|false,true|}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Send operational parameters to WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get the Current Information of a WTI device": {
+        "prefix": [
+            "wti.remote.cpm_current_info",
+            "Get the Current Information of a WTI device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_current_info:",
+            "    cpm_enddate: ${2:string}",
+            "    cpm_password: ${3:string}",
+            "    cpm_startdate: ${4:string}",
+            "    cpm_url: ${5:string}",
+            "    cpm_username: ${6:string}",
+            "    use_https: ${7|true,false|}",
+            "    use_proxy: ${8|false,true|}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Get the Current Information of a WTI device",
+        "scope": "ansible"
+    },
+    "Get firmware information from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_firmware_info",
+            "Get firmware information from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_firmware_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    use_https: ${5|true,false|}",
+            "    use_proxy: ${6|false,true|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Get firmware information from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set Serial port parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_serial_port_config",
+            "Set Serial port parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_serial_port_config:",
+            "    baud: ${2:int}",
+            "    break_allow: ${3|false,true|}",
+            "    cmd: ${4:int}",
+            "    cpm_password: ${5:string}",
+            "    cpm_url: ${6:string}",
+            "    cpm_username: ${7:string}",
+            "    echo: ${8|false,true|}",
+            "    handshake: ${9:int}",
+            "    logoff: ${10:string}",
+            "    mode: ${11:int}",
+            "    parity: ${12:int}",
+            "    port: ${13:int}",
+            "    portname: ${14:string}",
+            "    seq: ${15:int}",
+            "    stopbits: ${16:int}",
+            "    tout: ${17:int}",
+            "    use_https: ${18|true,false|}",
+            "    use_proxy: ${19|false,true|}",
+            "    validate_certs: ${20|true,false|}",
+            "$0"
+        ],
+        "description": "Set Serial port parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices.": {
+        "prefix": [
+            "wti.remote.cpm_hostname_config",
+            "Set Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_hostname_config:",
+            "    assettag: ${2:string}",
+            "    cpm_password: ${3:string}",
+            "    cpm_url: ${4:string}",
+            "    cpm_username: ${5:string}",
+            "    hostname: ${6:string}",
+            "    location: ${7:string}",
+            "    use_https: ${8|true,false|}",
+            "    use_proxy: ${9|false,true|}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Set Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices.",
+        "scope": "ansible"
+    },
+    "Get Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_hostname_info",
+            "Get Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_hostname_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    use_https: ${5|true,false|}",
+            "    use_proxy: ${6|false,true|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Get Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set network interface parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_interface_config",
+            "Set network interface parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_interface_config:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    interface: ${5:string}",
+            "    ipv4address: ${6:string}",
+            "    ipv4dhcpdefgateway: ${7:int}",
+            "    ipv4dhcpenable: ${8:int}",
+            "    ipv4dhcphostname: ${9:string}",
+            "    ipv4dhcplease: ${10:int}",
+            "    ipv4dhcpobdns: ${11:int}",
+            "    ipv4dhcpupdns: ${12:int}",
+            "    ipv4gateway: ${13:string}",
+            "    ipv4netmask: ${14:string}",
+            "    ipv6address: ${15:string}",
+            "    ipv6gateway: ${16:string}",
+            "    ipv6subnetprefix: ${17:string}",
+            "    negotiation: ${18:int}",
+            "    use_https: ${19|true,false|}",
+            "    use_proxy: ${20|false,true|}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Set network interface parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get network interface parameters from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_interface_info",
+            "Get network interface parameters from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_interface_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    face:",
+            "      - ${5:element}",
+            "    interface:",
+            "      - ${6:element}",
+            "    use_https: ${7|true,false|}",
+            "    use_proxy: ${8|false,true|}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Get network interface parameters from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set network IPTables parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_snmp_config",
+            "Set network IPTables parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_snmp_config:",
+            "    authpass:",
+            "      - ${2:element}",
+            "    authpriv:",
+            "      - ${3:element}",
+            "    authproto:",
+            "      - ${4:element}",
+            "    clear: ${5:int}",
+            "    contact: ${6:string}",
+            "    cpm_password: ${7:string}",
+            "    cpm_url: ${8:string}",
+            "    cpm_username: ${9:string}",
+            "    enable: ${10:int}",
+            "    index:",
+            "      - ${11:element}",
+            "    interface: ${12:string}",
+            "    location: ${13:string}",
+            "    privpass:",
+            "      - ${14:element}",
+            "    privproto:",
+            "      - ${15:element}",
+            "    protocol: ${16:int}",
+            "    readonly: ${17:int}",
+            "    rocommunity: ${18:string}",
+            "    rwcommunity: ${19:string}",
+            "    systemname: ${20:string}",
+            "    use_https: ${21|true,false|}",
+            "    use_proxy: ${22|false,true|}",
+            "    username:",
+            "      - ${23:element}",
+            "    validate_certs: ${24|true,false|}",
+            "    version: ${25:int}",
+            "$0"
+        ],
+        "description": "Set network IPTables parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get network IPTABLES parameters from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_iptables_info",
+            "Get network IPTABLES parameters from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_iptables_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    use_https: ${5|true,false|}",
+            "    use_proxy: ${6|false,true|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Get network IPTABLES parameters from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get and Set Plug Parameters on WTI OOB and PDU power devices": {
+        "prefix": [
+            "wti.remote.cpm_plugconfig",
+            "Get and Set Plug Parameters on WTI OOB and PDU power devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_plugconfig:",
+            "    cpm_action: ${2:string}",
+            "    cpm_password: ${3:string}",
+            "    cpm_url: ${4:string}",
+            "    cpm_username: ${5:string}",
+            "    plug_bootdelay: ${6:int}",
+            "    plug_bootpriority: ${7:int}",
+            "    plug_default: ${8:int}",
+            "    plug_id: ${9:string}",
+            "    plug_name: ${10:string}",
+            "    use_https: ${11|true,false|}",
+            "    use_proxy: ${12|false,true|}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Get and Set Plug Parameters on WTI OOB and PDU power devices",
+        "scope": "ansible"
+    },
+    "Get and Set Plug actions on WTI OOB and PDU power devices": {
+        "prefix": [
+            "wti.remote.cpm_plugcontrol",
+            "Get and Set Plug actions on WTI OOB and PDU power devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_plugcontrol:",
+            "    cpm_action: ${2:string}",
+            "    cpm_password: ${3:string}",
+            "    cpm_url: ${4:string}",
+            "    cpm_username: ${5:string}",
+            "    plug_id: ${6:string}",
+            "    plug_state: ${7:string}",
+            "    use_https: ${8|true,false|}",
+            "    use_proxy: ${9|false,true|}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Get and Set Plug actions on WTI OOB and PDU power devices",
+        "scope": "ansible"
+    },
+    "Get the Power Information of a WTI device": {
+        "prefix": [
+            "wti.remote.cpm_power_info",
+            "Get the Power Information of a WTI device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_power_info:",
+            "    cpm_enddate: ${2:string}",
+            "    cpm_password: ${3:string}",
+            "    cpm_startdate: ${4:string}",
+            "    cpm_url: ${5:string}",
+            "    cpm_username: ${6:string}",
+            "    use_https: ${7|true,false|}",
+            "    use_proxy: ${8|false,true|}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Get the Power Information of a WTI device",
+        "scope": "ansible"
+    },
+    "Get Serial port connection status in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_serial_port_action_info",
+            "Get Serial port connection status in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_serial_port_action_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    port:",
+            "      - ${5:element}",
+            "    use_https: ${6|false,true|}",
+            "    use_proxy: ${7|false,true|}",
+            "    validate_certs: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Get Serial port connection status in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set Serial port connection/disconnection commands in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_serial_port_action_set",
+            "Set Serial port connection/disconnection commands in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_serial_port_action_set:",
+            "    action: ${2:int}",
+            "    cpm_password: ${3:string}",
+            "    cpm_url: ${4:string}",
+            "    cpm_username: ${5:string}",
+            "    port: ${6:int}",
+            "    portremote: ${7:int}",
+            "    use_https: ${8|true,false|}",
+            "    use_proxy: ${9|false,true|}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Set Serial port connection/disconnection commands in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get Serial port parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_serial_port_info",
+            "Get Serial port parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_serial_port_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    port:",
+            "      - ${5:element}",
+            "    use_https: ${6|false,true|}",
+            "    use_proxy: ${7|false,true|}",
+            "    validate_certs: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Get Serial port parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get network SNMP parameters from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_snmp_info",
+            "Get network SNMP parameters from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_snmp_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    interface:",
+            "      - ${5:element}",
+            "    use_https: ${6|true,false|}",
+            "    use_proxy: ${7|false,true|}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get network SNMP parameters from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get general status information from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_status_info",
+            "Get general status information from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_status_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    use_https: ${5|true,false|}",
+            "    use_proxy: ${6|false,true|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Get general status information from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set network SYSLOG Client parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_syslog_client_config",
+            "Set network SYSLOG Client parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_syslog_client_config:",
+            "    address:",
+            "      - ${2:element}",
+            "    clear: ${3:int}",
+            "    cpm_password: ${4:string}",
+            "    cpm_url: ${5:string}",
+            "    cpm_username: ${6:string}",
+            "    index:",
+            "      - ${7:element}",
+            "    port:",
+            "      - ${8:element}",
+            "    protocol: ${9:int}",
+            "    secure:",
+            "      - ${10:element}",
+            "    transport:",
+            "      - ${11:element}",
+            "    use_https: ${12|true,false|}",
+            "    use_proxy: ${13|false,true|}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Set network SYSLOG Client parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get network SYSLOG Client parameters from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_syslog_client_info",
+            "Get network SYSLOG Client parameters from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_syslog_client_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    interface:",
+            "      - ${5:element}",
+            "    use_https: ${6|true,false|}",
+            "    use_proxy: ${7|false,true|}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get network SYSLOG Client parameters from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set network SYSLOG Server parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_syslog_server_config",
+            "Set network SYSLOG Server parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_syslog_server_config:",
+            "    address:",
+            "      - ${2:element}",
+            "    clear: ${3:int}",
+            "    cpm_password: ${4:string}",
+            "    cpm_url: ${5:string}",
+            "    cpm_username: ${6:string}",
+            "    enable: ${7:int}",
+            "    index:",
+            "      - ${8:element}",
+            "    interface: ${9:string}",
+            "    port: ${10:int}",
+            "    protocol: ${11:int}",
+            "    secure: ${12:int}",
+            "    transport: ${13:int}",
+            "    use_https: ${14|true,false|}",
+            "    use_proxy: ${15|false,true|}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Set network SYSLOG Server parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get network SYSLOG Server parameters from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_syslog_server_info",
+            "Get network SYSLOG Server parameters from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_syslog_server_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    interface:",
+            "      - ${5:element}",
+            "    use_https: ${6|true,false|}",
+            "    use_proxy: ${7|false,true|}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get network SYSLOG Server parameters from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get temperature information from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_temp_info",
+            "Get temperature information from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_temp_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    use_https: ${5|true,false|}",
+            "    use_proxy: ${6|false,true|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Get temperature information from WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Set Time/Date parameters in WTI OOB and PDU devices.": {
+        "prefix": [
+            "wti.remote.cpm_time_config",
+            "Set Time/Date parameters in WTI OOB and PDU devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_time_config:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    date: ${5:string}",
+            "    ipv4address: ${6:string}",
+            "    ipv6address: ${7:string}",
+            "    ntpenable: ${8:int}",
+            "    time: ${9:string}",
+            "    timeout: ${10:int}",
+            "    timezone: ${11:int}",
+            "    use_https: ${12|true,false|}",
+            "    use_proxy: ${13|false,true|}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Set Time/Date parameters in WTI OOB and PDU devices.",
+        "scope": "ansible"
+    },
+    "Get Time/Date parameters in WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_time_info",
+            "Get Time/Date parameters in WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_time_info:",
+            "    cpm_password: ${2:string}",
+            "    cpm_url: ${3:string}",
+            "    cpm_username: ${4:string}",
+            "    use_https: ${5|true,false|}",
+            "    use_proxy: ${6|false,true|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Get Time/Date parameters in WTI OOB and PDU devices",
+        "scope": "ansible"
+    },
+    "Get various status and parameters from WTI OOB and PDU devices": {
+        "prefix": [
+            "wti.remote.cpm_user",
+            "Get various status and parameters from WTI OOB and PDU devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  wti.remote.cpm_user:",
+            "    cpm_action: ${2:string}",
+            "    cpm_password: ${3:string}",
+            "    cpm_url: ${4:string}",
+            "    cpm_username: ${5:string}",
+            "    use_https: ${6|true,false|}",
+            "    use_proxy: ${7|false,true|}",
+            "    user_accessapi: ${8:int}",
+            "    user_accesslevel: ${9:int}",
+            "    user_accessmonitor: ${10:int}",
+            "    user_accessoutbound: ${11:int}",
+            "    user_accessserial: ${12:int}",
+            "    user_accessssh: ${13:int}",
+            "    user_accessweb: ${14:int}",
+            "    user_callbackphone: ${15:string}",
+            "    user_groupaccess: ${16:string}",
+            "    user_name: ${17:string}",
+            "    user_pass: ${18:string}",
+            "    user_plugaccess: ${19:string}",
+            "    user_portaccess: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Get various status and parameters from WTI OOB and PDU devices",
+        "scope": "ansible"
+    }
+}

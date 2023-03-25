@@ -1,0 +1,769 @@
+{
+    "Configures an availability group listener": {
+        "prefix": [
+            "lowlydba.sqlserver.ag_listener",
+            "Configures an availability group listener"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.ag_listener:",
+            "    ag_name: ${2:string}",
+            "    dhcp: ${3|false,true|}",
+            "    ip_address: ${4:string}",
+            "    listener_name: ${5:string}",
+            "    port: ${6:1433}",
+            "    sql_instance: ${7:string}",
+            "    sql_password: ${8:string}",
+            "    sql_username: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    subnet_ip: ${11:string}",
+            "    subnet_mask: ${12:255.255.255.0}",
+            "$0"
+        ],
+        "description": "Configures an availability group listener",
+        "scope": "ansible"
+    },
+    "Configures an availability group replica": {
+        "prefix": [
+            "lowlydba.sqlserver.ag_replica",
+            "Configures an availability group replica"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.ag_replica:",
+            "    ag_name: ${2:string}",
+            "    availability_mode: ${3|AsynchronousCommit,SynchronousCommit|}",
+            "    backup_priority: ${4:50}",
+            "    cluster_type: ${5|Wsfc,External,None|}",
+            "    configure_xe_session: ${6|false,true|}",
+            "    connection_mode_in_primary_role: ${7|AllowAllConnections,AllowReadIntentConnectionsOnly|}",
+            "    connection_mode_in_secondary_role: ${8|AllowNoConnections,AllowReadIntentConnectionsOnly,AllowAllConnections|}",
+            "    endpoint: ${9:hadr_endpoint}",
+            "    endpoint_url: ${10:string}",
+            "    failover_mode: ${11|Manual,Automatic|}",
+            "    read_only_routing_connection_url: ${12:string}",
+            "    read_only_routing_list: ${13:string}",
+            "    seeding_mode: ${14|Automatic,Manual|}",
+            "    session_timeout: ${15:int}",
+            "    sql_instance: ${16:string}",
+            "    sql_instance_replica: ${17:string}",
+            "    sql_password: ${18:string}",
+            "    sql_password_replica: ${19:string}",
+            "    sql_username: ${20:string}",
+            "    sql_username_replica: ${21:string}",
+            "    state: ${22|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures an availability group replica",
+        "scope": "ansible"
+    },
+    "Configures a SQL Agent job": {
+        "prefix": [
+            "lowlydba.sqlserver.agent_job",
+            "Configures a SQL Agent job"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.agent_job:",
+            "    category: ${2:string}",
+            "    description: ${3:string}",
+            "    enabled: ${4|true,false|}",
+            "    force: ${5|false,true|}",
+            "    job: ${6:string}",
+            "    owner_login: ${7:string}",
+            "    schedule: ${8:string}",
+            "    sql_instance: ${9:string}",
+            "    sql_password: ${10:string}",
+            "    sql_username: ${11:string}",
+            "    start_step_id: ${12:int}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures a SQL Agent job",
+        "scope": "ansible"
+    },
+    "Configures a SQL Agent job category": {
+        "prefix": [
+            "lowlydba.sqlserver.agent_job_category",
+            "Configures a SQL Agent job category"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.agent_job_category:",
+            "    category: ${2:string}",
+            "    category_type: ${3:string}",
+            "    sql_instance: ${4:string}",
+            "    sql_password: ${5:string}",
+            "    sql_username: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures a SQL Agent job category",
+        "scope": "ansible"
+    },
+    "Configures a SQL Agent job schedule": {
+        "prefix": [
+            "lowlydba.sqlserver.agent_job_schedule",
+            "Configures a SQL Agent job schedule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.agent_job_schedule:",
+            "    enabled: ${2|false,true|}",
+            "    end_date: ${3:string}",
+            "    end_time: ${4:string}",
+            "    force: ${5|false,true|}",
+            "    frequency_interval: ${6:string}",
+            "    frequency_recurrence_factor: ${7:int}",
+            "    frequency_relative_interval: ${8:string}",
+            "    frequency_subday_interval: ${9:int}",
+            "    frequency_subday_type: ${10:string}",
+            "    frequency_type: ${11:string}",
+            "    job: ${12:string}",
+            "    schedule: ${13:string}",
+            "    sql_instance: ${14:string}",
+            "    sql_password: ${15:string}",
+            "    sql_username: ${16:string}",
+            "    start_date: ${17:string}",
+            "    start_time: ${18:string}",
+            "    state: ${19|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures a SQL Agent job schedule",
+        "scope": "ansible"
+    },
+    "Configures a SQL Agent job step": {
+        "prefix": [
+            "lowlydba.sqlserver.agent_job_step",
+            "Configures a SQL Agent job step"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.agent_job_step:",
+            "    command: ${2:string}",
+            "    database: ${3:master}",
+            "    job: ${4:string}",
+            "    on_fail_action: ${5|QuitWithFailure,QuitWithSuccess,GoToNextStep,GoToStep|}",
+            "    on_fail_step_id: ${6:0}",
+            "    on_success_action: ${7|QuitWithSuccess,QuitWithFailure,GoToNextStep,GoToStep|}",
+            "    on_success_step_id: ${8:0}",
+            "    retry_attempts: ${9:0}",
+            "    retry_interval: ${10:0}",
+            "    sql_instance: ${11:string}",
+            "    sql_password: ${12:string}",
+            "    sql_username: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    step_id: ${15:int}",
+            "    step_name: ${16:string}",
+            "    subsystem: ${17|TransactSql,CmdExec,Distribution,LogReader,Merge,PowerShell,QueueReader,Snapshot,Ssis|}",
+            "$0"
+        ],
+        "description": "Configures a SQL Agent job step",
+        "scope": "ansible"
+    },
+    "Configures availability group(s)": {
+        "prefix": [
+            "lowlydba.sqlserver.availability_group",
+            "Configures availability group(s)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.availability_group:",
+            "    ag_name: ${2:string}",
+            "    all_ags: ${3|false,true|}",
+            "    allow_null_backup: ${4|false,true|}",
+            "    automated_backup_preference: ${5|Secondary,None,Primary,SecondaryOnly|}",
+            "    availability_mode: ${6|SynchronousCommit,AsynchronousCommit|}",
+            "    basic_availability_group: ${7|false,true|}",
+            "    cluster_type: ${8|Wsfc,External,None|}",
+            "    database: ${9:string}",
+            "    database_health_trigger: ${10|false,true|}",
+            "    dtc_support_enabled: ${11|false,true|}",
+            "    failover_mode: ${12|Automatic,Manual|}",
+            "    failure_condition_level: ${13:string}",
+            "    force: ${14|false,true|}",
+            "    healthcheck_timeout: ${15:int}",
+            "    is_distributed_ag: ${16|false,true|}",
+            "    seeding_mode: ${17|Manual,Automatic|}",
+            "    shared_path: ${18:string}",
+            "    sql_instance: ${19:string}",
+            "    sql_instance_secondary: ${20:string}",
+            "    sql_password: ${21:string}",
+            "    sql_password_secondary: ${22:string}",
+            "    sql_username: ${23:string}",
+            "    sql_username_secondary: ${24:string}",
+            "    state: ${25|present,absent|}",
+            "    use_last_backup: ${26|false,true|}",
+            "$0"
+        ],
+        "description": "Configures availability group(s)",
+        "scope": "ansible"
+    },
+    "Performs a backup operation": {
+        "prefix": [
+            "lowlydba.sqlserver.backup",
+            "Performs a backup operation"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.backup:",
+            "    azure_base_url: ${2:string}",
+            "    azure_credential: ${3:string}",
+            "    block_size: ${4:string}",
+            "    buffer_count: ${5:0}",
+            "    build_path: ${6|false,true|}",
+            "    checksum: ${7|false,true|}",
+            "    compress: ${8|false,true|}",
+            "    copy_only: ${9|false,true|}",
+            "    create_folder: ${10|false,true|}",
+            "    database: ${11:string}",
+            "    encryption_algorithm: ${12:string}",
+            "    encryption_certificate: ${13:string}",
+            "    file_count: ${14:0}",
+            "    file_path: ${15:string}",
+            "    ignore_file_checks: ${16|false,true|}",
+            "    increment_prefix: ${17|false,true|}",
+            "    initialize: ${18|false,true|}",
+            "    max_transfer_size: ${19:0}",
+            "    no_recovery: ${20|false,true|}",
+            "    path: ${21:string}",
+            "    replace_in_name: ${22|false,true|}",
+            "    sql_instance: ${23:string}",
+            "    sql_password: ${24:string}",
+            "    sql_username: ${25:string}",
+            "    timestamp_format: ${26:string}",
+            "    type: ${27|database,full,log,differential,diff|}",
+            "    verify: ${28|false,true|}",
+            "    with_format: ${29|false,true|}",
+            "$0"
+        ],
+        "description": "Performs a backup operation",
+        "scope": "ansible"
+    },
+    "Configures a credential on a SQL server": {
+        "prefix": [
+            "lowlydba.sqlserver.credential",
+            "Configures a credential on a SQL server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.credential:",
+            "    force: ${2|false,true|}",
+            "    identity: ${3:string}",
+            "    mapped_class_type: ${4:string}",
+            "    name: ${5:string}",
+            "    password: ${6:string}",
+            "    provider_name: ${7:string}",
+            "    sql_instance: ${8:string}",
+            "    sql_password: ${9:string}",
+            "    sql_username: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures a credential on a SQL server",
+        "scope": "ansible"
+    },
+    "Creates and configures a database": {
+        "prefix": [
+            "lowlydba.sqlserver.database",
+            "Creates and configures a database"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.database:",
+            "    compatibility: ${2:string}",
+            "    data_file_path: ${3:string}",
+            "    database: ${4:string}",
+            "    log_file_path: ${5:string}",
+            "    maxdop: ${6:int}",
+            "    owner: ${7:string}",
+            "    rcsi: ${8|false,true|}",
+            "    recovery_model: ${9:string}",
+            "    secondary_maxdop: ${10:int}",
+            "    sql_instance: ${11:string}",
+            "    sql_password: ${12:string}",
+            "    sql_username: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates and configures a database",
+        "scope": "ansible"
+    },
+    "Install/update the DBA Multitool suite by John McCall": {
+        "prefix": [
+            "lowlydba.sqlserver.dba_multitool",
+            "Install/update the DBA Multitool suite by John McCall"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.dba_multitool:",
+            "    branch: ${2:string}",
+            "    database: ${3:string}",
+            "    force: ${4|false,true|}",
+            "    local_file: ${5:string}",
+            "    sql_instance: ${6:string}",
+            "    sql_password: ${7:string}",
+            "    sql_username: ${8:string}",
+            "$0"
+        ],
+        "description": "Install/update the DBA Multitool suite by John McCall",
+        "scope": "ansible"
+    },
+    "Install/update the First Responder Kit scripts": {
+        "prefix": [
+            "lowlydba.sqlserver.first_responder_kit",
+            "Install/update the First Responder Kit scripts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.first_responder_kit:",
+            "    branch: ${2:string}",
+            "    database: ${3:string}",
+            "    force: ${4|false,true|}",
+            "    local_file: ${5:string}",
+            "    only_script: ${6|Install-All-Scripts.sql,Install-Core-Blitz-No-Query-Store.sql,Install-Core-Blitz-With-Query-Store.sql,sp_Blitz.sql,sp_BlitzFirst.sql,sp_BlitzIndex.sql,sp_BlitzCache.sql,sp_BlitzWho.sql,sp_BlitzQueryStore.sql,sp_BlitzAnalysis.sql,sp_BlitzBackups.sql,sp_BlitzInMemoryOLTP.sql,sp_BlitzLock.sql,sp_AllNightLog.sql,sp_AllNightLog_Setup.sql,sp_DatabaseRestore.sql,sp_ineachdb.sql,SqlServerVersions.sql,Uninstall.sql|}",
+            "    sql_instance: ${7:string}",
+            "    sql_password: ${8:string}",
+            "    sql_username: ${9:string}",
+            "$0"
+        ],
+        "description": "Install/update the First Responder Kit scripts",
+        "scope": "ansible"
+    },
+    "Enable or disable HADR": {
+        "prefix": [
+            "lowlydba.sqlserver.hadr",
+            "Enable or disable HADR"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.hadr:",
+            "    enabled: ${2|true,false|}",
+            "    force: ${3|false,true|}",
+            "    password: ${4:string}",
+            "    sql_instance: ${5:string}",
+            "    sql_password: ${6:string}",
+            "    sql_username: ${7:string}",
+            "    username: ${8:string}",
+            "$0"
+        ],
+        "description": "Enable or disable HADR",
+        "scope": "ansible"
+    },
+    "Runs migration scripts against a database": {
+        "prefix": [
+            "lowlydba.sqlserver.install_script",
+            "Runs migration scripts against a database"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.install_script:",
+            "    connection_timeout: ${2:30}",
+            "    create_database: ${3|false,true|}",
+            "    database: ${4:string}",
+            "    deployment_method: ${5|NoTransaction,SingleTransaction,TransactionPerScript|}",
+            "    execution_timeout: ${6:0}",
+            "    match: ${7:string}",
+            "    no_log_version: ${8|false,true|}",
+            "    no_recurse: ${9|false,true|}",
+            "    output_file: ${10:string}",
+            "    path: ${11:string}",
+            "    schema_version_table: ${12:string}",
+            "    sql_instance: ${13:string}",
+            "    sql_password: ${14:string}",
+            "    sql_username: ${15:string}",
+            "$0"
+        ],
+        "description": "Runs migration scripts against a database",
+        "scope": "ansible"
+    },
+    "Returns basic information for a SQL Server instance": {
+        "prefix": [
+            "lowlydba.sqlserver.instance_info",
+            "Returns basic information for a SQL Server instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.instance_info:",
+            "    sql_instance: ${2:string}",
+            "    sql_password: ${3:string}",
+            "    sql_username: ${4:string}",
+            "$0"
+        ],
+        "description": "Returns basic information for a SQL Server instance",
+        "scope": "ansible"
+    },
+    "Configures a login for the target SQL Server instance": {
+        "prefix": [
+            "lowlydba.sqlserver.login",
+            "Configures a login for the target SQL Server instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.login:",
+            "    default_database: ${2:string}",
+            "    enabled: ${3|true,false|}",
+            "    language: ${4:string}",
+            "    login: ${5:string}",
+            "    password: ${6:string}",
+            "    password_expiration_enabled: ${7|false,true|}",
+            "    password_must_change: ${8|false,true|}",
+            "    password_policy_enforced: ${9|false,true|}",
+            "    sql_instance: ${10:string}",
+            "    sql_password: ${11:string}",
+            "    sql_username: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures a login for the target SQL Server instance",
+        "scope": "ansible"
+    },
+    "Install/update Maintenance Solution by Ola Hallengren": {
+        "prefix": [
+            "lowlydba.sqlserver.maintenance_solution",
+            "Install/update Maintenance Solution by Ola Hallengren"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.maintenance_solution:",
+            "    backup_location: ${2:string}",
+            "    cleanup_time: ${3:0}",
+            "    database: ${4:string}",
+            "    force: ${5|false,true|}",
+            "    install_jobs: ${6|false,true|}",
+            "    install_parallel: ${7|false,true|}",
+            "    local_file: ${8:string}",
+            "    log_to_table: ${9|false,true|}",
+            "    output_file_dir: ${10:string}",
+            "    replace_existing: ${11|false,true|}",
+            "    solution: ${12|All,Backup,IntegrityCheck,IndexOptimize|}",
+            "    sql_instance: ${13:string}",
+            "    sql_password: ${14:string}",
+            "    sql_username: ${15:string}",
+            "$0"
+        ],
+        "description": "Install/update Maintenance Solution by Ola Hallengren",
+        "scope": "ansible"
+    },
+    "Sets the maximum memory for a SQL Server instance": {
+        "prefix": [
+            "lowlydba.sqlserver.memory",
+            "Sets the maximum memory for a SQL Server instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.memory:",
+            "    max: ${2:0}",
+            "    sql_instance: ${3:string}",
+            "    sql_password: ${4:string}",
+            "    sql_username: ${5:string}",
+            "$0"
+        ],
+        "description": "Sets the maximum memory for a SQL Server instance",
+        "scope": "ansible"
+    },
+    "Executes a generic nonquery": {
+        "prefix": [
+            "lowlydba.sqlserver.nonquery",
+            "Executes a generic nonquery"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.nonquery:",
+            "    database: ${2:string}",
+            "    nonquery: ${3:string}",
+            "    query_timeout: ${4:60}",
+            "    sql_instance: ${5:string}",
+            "    sql_password: ${6:string}",
+            "    sql_username: ${7:string}",
+            "$0"
+        ],
+        "description": "Executes a generic nonquery",
+        "scope": "ansible"
+    },
+    "Configures the resource governor on a SQL Server instance": {
+        "prefix": [
+            "lowlydba.sqlserver.resource_governor",
+            "Configures the resource governor on a SQL Server instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.resource_governor:",
+            "    classifier_function: ${2:string}",
+            "    enabled: ${3|true,false|}",
+            "    sql_instance: ${4:string}",
+            "    sql_password: ${5:string}",
+            "    sql_username: ${6:string}",
+            "$0"
+        ],
+        "description": "Configures the resource governor on a SQL Server instance",
+        "scope": "ansible"
+    },
+    "Performs a restore operation": {
+        "prefix": [
+            "lowlydba.sqlserver.restore",
+            "Performs a restore operation"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.restore:",
+            "    azure_credential: ${2:string}",
+            "    block_size: ${3:string}",
+            "    buffer_count: ${4:0}",
+            "    database: ${5:string}",
+            "    destination_data_directory: ${6:string}",
+            "    destination_file_prefix: ${7:string}",
+            "    destination_file_suffix: ${8:string}",
+            "    destination_filestream_directory: ${9:string}",
+            "    destination_log_directory: ${10:string}",
+            "    directory_recurse: ${11|false,true|}",
+            "    ignore_diff_backup: ${12|false,true|}",
+            "    ignore_log_backup: ${13|false,true|}",
+            "    keep_cdc: ${14|false,true|}",
+            "    keep_replication: ${15|false,true|}",
+            "    maintenance_solution_backup: ${16|false,true|}",
+            "    max_transfer_size: ${17:0}",
+            "    no_recovery: ${18|false,true|}",
+            "    no_xp_dir_recurse: ${19|false,true|}",
+            "    path: ${20:string}",
+            "    replace_db_name_in_file: ${21|false,true|}",
+            "    restore_time: ${22:string}",
+            "    restored_database_name_prefix: ${23:string}",
+            "    reuse_source_folder_structure: ${24|false,true|}",
+            "    sql_instance: ${25:string}",
+            "    sql_password: ${26:string}",
+            "    sql_username: ${27:string}",
+            "    standby_directory: ${28:string}",
+            "    stop_after_date: ${29:string}",
+            "    stop_before: ${30|false,true|}",
+            "    stop_mark: ${31:string}",
+            "    use_destination_default_directories: ${32|false,true|}",
+            "    verify_only: ${33|false,true|}",
+            "    with_replace: ${34|false,true|}",
+            "    xp_dirtree: ${35|false,true|}",
+            "$0"
+        ],
+        "description": "Performs a restore operation",
+        "scope": "ansible"
+    },
+    "Configures a resource pool for use by the Resource Governor": {
+        "prefix": [
+            "lowlydba.sqlserver.rg_resource_pool",
+            "Configures a resource pool for use by the Resource Governor"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.rg_resource_pool:",
+            "    cap_cpu_perc: ${2:int}",
+            "    max_cpu_perc: ${3:int}",
+            "    max_iops_per_vol: ${4:int}",
+            "    max_mem_perc: ${5:int}",
+            "    min_cpu_perc: ${6:int}",
+            "    min_iops_per_vol: ${7:int}",
+            "    min_mem_perc: ${8:int}",
+            "    resource_pool: ${9:string}",
+            "    sql_instance: ${10:string}",
+            "    sql_password: ${11:string}",
+            "    sql_username: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    type: ${14|Internal,External|}",
+            "$0"
+        ],
+        "description": "Configures a resource pool for use by the Resource Governor",
+        "scope": "ansible"
+    },
+    "Configures a workload group for use by the Resource Governor": {
+        "prefix": [
+            "lowlydba.sqlserver.rg_workload_group",
+            "Configures a workload group for use by the Resource Governor"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.rg_workload_group:",
+            "    group_max_requests: ${2:int}",
+            "    importance: ${3:string}",
+            "    max_dop: ${4:int}",
+            "    request_max_cpu_time: ${5:int}",
+            "    request_max_mem_grant_perc: ${6:int}",
+            "    request_mem_grant_timeout_sec: ${7:int}",
+            "    resource_pool: ${8:string}",
+            "    resource_pool_type: ${9|Internal,External|}",
+            "    sql_instance: ${10:string}",
+            "    sql_password: ${11:string}",
+            "    sql_username: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    workload_group: ${14:string}",
+            "$0"
+        ],
+        "description": "Configures a workload group for use by the Resource Governor",
+        "scope": "ansible"
+    },
+    "Configure the C(sa) login for security best practices": {
+        "prefix": [
+            "lowlydba.sqlserver.sa",
+            "Configure the C(sa) login for security best practices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.sa:",
+            "    enabled: ${2|true,false|}",
+            "    new_name: ${3:string}",
+            "    password: ${4:string}",
+            "    password_expiration_enabled: ${5|false,true|}",
+            "    password_must_change: ${6|false,true|}",
+            "    password_policy_enforced: ${7|false,true|}",
+            "    sql_instance: ${8:string}",
+            "    sql_password: ${9:string}",
+            "    sql_username: ${10:string}",
+            "$0"
+        ],
+        "description": "Configure the C(sa) login for security best practices",
+        "scope": "ansible"
+    },
+    "Make instance level system configuration changes via C(sp_configure)": {
+        "prefix": [
+            "lowlydba.sqlserver.sp_configure",
+            "Make instance level system configuration changes via C(sp_configure)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.sp_configure:",
+            "    name: ${2:string}",
+            "    sql_instance: ${3:string}",
+            "    sql_password: ${4:string}",
+            "    sql_username: ${5:string}",
+            "    value: ${6:int}",
+            "$0"
+        ],
+        "description": "Make instance level system configuration changes via C(sp_configure)",
+        "scope": "ansible"
+    },
+    "Install/update C(sp_whoisactive) by Adam Mechanic": {
+        "prefix": [
+            "lowlydba.sqlserver.sp_whoisactive",
+            "Install/update C(sp_whoisactive) by Adam Mechanic"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.sp_whoisactive:",
+            "    database: ${2:string}",
+            "    force: ${3|false,true|}",
+            "    local_file: ${4:string}",
+            "    sql_instance: ${5:string}",
+            "    sql_password: ${6:string}",
+            "    sql_username: ${7:string}",
+            "$0"
+        ],
+        "description": "Install/update C(sp_whoisactive) by Adam Mechanic",
+        "scope": "ansible"
+    },
+    "Configures SPNs for SQL Server": {
+        "prefix": [
+            "lowlydba.sqlserver.spn",
+            "Configures SPNs for SQL Server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.spn:",
+            "    computer: ${2:string}",
+            "    computer_password: ${3:string}",
+            "    computer_username: ${4:string}",
+            "    service_account: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures SPNs for SQL Server",
+        "scope": "ansible"
+    },
+    "Sets the TCP port for the instance": {
+        "prefix": [
+            "lowlydba.sqlserver.tcp_port",
+            "Sets the TCP port for the instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.tcp_port:",
+            "    force: ${2|false,true|}",
+            "    ip_address: ${3:string}",
+            "    password: ${4:string}",
+            "    port: ${5:int}",
+            "    sql_instance: ${6:string}",
+            "    sql_password: ${7:string}",
+            "    sql_username: ${8:string}",
+            "    username: ${9:string}",
+            "$0"
+        ],
+        "description": "Sets the TCP port for the instance",
+        "scope": "ansible"
+    },
+    "Enable or disable global trace flags on a SQL Server instance": {
+        "prefix": [
+            "lowlydba.sqlserver.traceflag",
+            "Enable or disable global trace flags on a SQL Server instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.traceflag:",
+            "    enabled: ${2|false,true|}",
+            "    sql_instance: ${3:string}",
+            "    sql_password: ${4:string}",
+            "    sql_username: ${5:string}",
+            "    trace_flag: ${6:int}",
+            "$0"
+        ],
+        "description": "Enable or disable global trace flags on a SQL Server instance",
+        "scope": "ansible"
+    },
+    "Configures a user within a database": {
+        "prefix": [
+            "lowlydba.sqlserver.user",
+            "Configures a user within a database"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  lowlydba.sqlserver.user:",
+            "    database: ${2:string}",
+            "    default_schema: ${3:dbo}",
+            "    external_provider: ${4|false,true|}",
+            "    login: ${5:string}",
+            "    sql_instance: ${6:string}",
+            "    sql_password: ${7:string}",
+            "    sql_username: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "$0"
+        ],
+        "description": "Configures a user within a database",
+        "scope": "ansible"
+    }
+}

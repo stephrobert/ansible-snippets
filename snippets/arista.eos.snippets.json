@@ -1,0 +1,599 @@
+{
+    "ACL interfaces resource module": {
+        "prefix": [
+            "arista.eos.eos_acl_interfaces",
+            "ACL interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_acl_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "ACL interfaces resource module",
+        "scope": "ansible"
+    },
+    "ACLs resource module": {
+        "prefix": [
+            "arista.eos.eos_acls",
+            "ACLs resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_acls:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "ACLs resource module",
+        "scope": "ansible"
+    },
+    "Manage multiline banners on Arista EOS devices": {
+        "prefix": [
+            "arista.eos.eos_banner",
+            "Manage multiline banners on Arista EOS devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_banner:",
+            "    banner: ${2:string}",
+            "    state: ${3|present,absent|}",
+            "    text: ${4:string}",
+            "$0"
+        ],
+        "description": "Manage multiline banners on Arista EOS devices",
+        "scope": "ansible"
+    },
+    "Manages BGP address family resource module": {
+        "prefix": [
+            "arista.eos.eos_bgp_address_family",
+            "Manages BGP address family resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_bgp_address_family:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages BGP address family resource module",
+        "scope": "ansible"
+    },
+    "Manages BGP global resource module": {
+        "prefix": [
+            "arista.eos.eos_bgp_global",
+            "Manages BGP global resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_bgp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,purged,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages BGP global resource module",
+        "scope": "ansible"
+    },
+    "Run arbitrary commands on an Arista EOS device": {
+        "prefix": [
+            "arista.eos.eos_command",
+            "Run arbitrary commands on an Arista EOS device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_command:",
+            "    commands:",
+            "      - ${2:element}",
+            "    interval: ${3:1}",
+            "    match: ${4|all,any|}",
+            "    retries: ${5:10}",
+            "    wait_for:",
+            "      - ${6:element}",
+            "$0"
+        ],
+        "description": "Run arbitrary commands on an Arista EOS device",
+        "scope": "ansible"
+    },
+    "Manage Arista EOS configuration sections": {
+        "prefix": [
+            "arista.eos.eos_config",
+            "Manage Arista EOS configuration sections"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_config:",
+            "    after:",
+            "      - ${2:element}",
+            "    backup: ${3|false,true|}",
+            "    before:",
+            "      - ${5:element}",
+            "    defaults: ${6|false,true|}",
+            "    diff_against: ${7|session,startup,running,intended,validate_config|}",
+            "    diff_ignore_lines:",
+            "      - ${8:element}",
+            "    intended_config: ${9:string}",
+            "    lines:",
+            "      - ${10:element}",
+            "    match: ${11|line,strict,exact,none|}",
+            "    parents:",
+            "      - ${12:element}",
+            "    replace: ${13|line,block,config|}",
+            "    running_config: ${14:string}",
+            "    save_when: ${15|never,always,modified,changed|}",
+            "    src: ${16:path}",
+            "$0"
+        ],
+        "description": "Manage Arista EOS configuration sections",
+        "scope": "ansible"
+    },
+    "Manage and configure Arista EOS eAPI.": {
+        "prefix": [
+            "arista.eos.eos_eapi",
+            "Manage and configure Arista EOS eAPI."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_eapi:",
+            "    config: ${2:string}",
+            "    http: ${3|false,true|}",
+            "    http_port: ${4:int}",
+            "    https: ${5|false,true|}",
+            "    https_port: ${6:int}",
+            "    local_http: ${7|false,true|}",
+            "    local_http_port: ${8:int}",
+            "    socket: ${9|false,true|}",
+            "    state: ${10|started,stopped|}",
+            "    timeout: ${11:30}",
+            "    vrf: ${12:default}",
+            "$0"
+        ],
+        "description": "Manage and configure Arista EOS eAPI.",
+        "scope": "ansible"
+    },
+    "Collect facts from remote devices running Arista EOS": {
+        "prefix": [
+            "arista.eos.eos_facts",
+            "Collect facts from remote devices running Arista EOS"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_facts:",
+            "    available_network_resources: ${2|false,true|}",
+            "    gather_network_resources:",
+            "      - ${3:element}",
+            "    gather_subset:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Collect facts from remote devices running Arista EOS",
+        "scope": "ansible"
+    },
+    "Manages hostname resource module": {
+        "prefix": [
+            "arista.eos.eos_hostname",
+            "Manages hostname resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_hostname:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages hostname resource module",
+        "scope": "ansible"
+    },
+    "Interfaces resource module": {
+        "prefix": [
+            "arista.eos.eos_interfaces",
+            "Interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,rendered,gathered|}",
+            "$0"
+        ],
+        "description": "Interfaces resource module",
+        "scope": "ansible"
+    },
+    "L2 interfaces resource module": {
+        "prefix": [
+            "arista.eos.eos_l2_interfaces",
+            "L2 interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_l2_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,rendered,gathered|}",
+            "$0"
+        ],
+        "description": "L2 interfaces resource module",
+        "scope": "ansible"
+    },
+    "L3 interfaces resource module": {
+        "prefix": [
+            "arista.eos.eos_l3_interfaces",
+            "L3 interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_l3_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "L3 interfaces resource module",
+        "scope": "ansible"
+    },
+    "LACP resource module": {
+        "prefix": [
+            "arista.eos.eos_lacp",
+            "LACP resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_lacp:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,parsed,rendered,gathered|}",
+            "$0"
+        ],
+        "description": "LACP resource module",
+        "scope": "ansible"
+    },
+    "LACP interfaces resource module": {
+        "prefix": [
+            "arista.eos.eos_lacp_interfaces",
+            "LACP interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_lacp_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,rendered,gathered|}",
+            "$0"
+        ],
+        "description": "LACP interfaces resource module",
+        "scope": "ansible"
+    },
+    "LAG interfaces resource module": {
+        "prefix": [
+            "arista.eos.eos_lag_interfaces",
+            "LAG interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_lag_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "LAG interfaces resource module",
+        "scope": "ansible"
+    },
+    "Manage LLDP configuration on Arista EOS network devices": {
+        "prefix": [
+            "arista.eos.eos_lldp",
+            "Manage LLDP configuration on Arista EOS network devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_lldp:",
+            "    state: ${2|present,absent,enabled,disabled|}",
+            "$0"
+        ],
+        "description": "Manage LLDP configuration on Arista EOS network devices",
+        "scope": "ansible"
+    },
+    "LLDP resource module": {
+        "prefix": [
+            "arista.eos.eos_lldp_global",
+            "LLDP resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_lldp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "LLDP resource module",
+        "scope": "ansible"
+    },
+    "LLDP interfaces resource module": {
+        "prefix": [
+            "arista.eos.eos_lldp_interfaces",
+            "LLDP interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_lldp_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "LLDP interfaces resource module",
+        "scope": "ansible"
+    },
+    "Manages logging resource module": {
+        "prefix": [
+            "arista.eos.eos_logging_global",
+            "Manages logging resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_logging_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages logging resource module",
+        "scope": "ansible"
+    },
+    "Manages ntp resource module": {
+        "prefix": [
+            "arista.eos.eos_ntp_global",
+            "Manages ntp resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_ntp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages ntp resource module",
+        "scope": "ansible"
+    },
+    "OSPF Interfaces Resource Module.": {
+        "prefix": [
+            "arista.eos.eos_ospf_interfaces",
+            "OSPF Interfaces Resource Module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_ospf_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "OSPF Interfaces Resource Module.",
+        "scope": "ansible"
+    },
+    "OSPFv2 resource module": {
+        "prefix": [
+            "arista.eos.eos_ospfv2",
+            "OSPFv2 resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_ospfv2:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "OSPFv2 resource module",
+        "scope": "ansible"
+    },
+    "OSPFv3 resource module": {
+        "prefix": [
+            "arista.eos.eos_ospfv3",
+            "OSPFv3 resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_ospfv3:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "OSPFv3 resource module",
+        "scope": "ansible"
+    },
+    "Manages Prefix lists resource module": {
+        "prefix": [
+            "arista.eos.eos_prefix_lists",
+            "Manages Prefix lists resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_prefix_lists:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages Prefix lists resource module",
+        "scope": "ansible"
+    },
+    "Manages Route Maps resource module": {
+        "prefix": [
+            "arista.eos.eos_route_maps",
+            "Manages Route Maps resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_route_maps:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages Route Maps resource module",
+        "scope": "ansible"
+    },
+    "Manages snmp_server resource module": {
+        "prefix": [
+            "arista.eos.eos_snmp_server",
+            "Manages snmp_server resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_snmp_server:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Manages snmp_server resource module",
+        "scope": "ansible"
+    },
+    "Static routes resource module": {
+        "prefix": [
+            "arista.eos.eos_static_routes",
+            "Static routes resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_static_routes:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Static routes resource module",
+        "scope": "ansible"
+    },
+    "Manage the system attributes on Arista EOS devices": {
+        "prefix": [
+            "arista.eos.eos_system",
+            "Manage the system attributes on Arista EOS devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_system:",
+            "    domain_list:",
+            "      - ${2:element}",
+            "    domain_name: ${3:string}",
+            "    hostname: ${4:string}",
+            "    lookup_source:",
+            "      - ${5:element}",
+            "    name_servers:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage the system attributes on Arista EOS devices",
+        "scope": "ansible"
+    },
+    "Manage the collection of local users on EOS devices": {
+        "prefix": [
+            "arista.eos.eos_user",
+            "Manage the collection of local users on EOS devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_user:",
+            "    aggregate:",
+            "      - ${2:element}",
+            "    configured_password: ${3:string}",
+            "    name: ${4:string}",
+            "    nopassword: ${5|false,true|}",
+            "    privilege: ${6:int}",
+            "    purge: ${7|false,true|}",
+            "    role: ${8:string}",
+            "    sshkey: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    update_password: ${11|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manage the collection of local users on EOS devices",
+        "scope": "ansible"
+    },
+    "VLANs resource module": {
+        "prefix": [
+            "arista.eos.eos_vlans",
+            "VLANs resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_vlans:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "VLANs resource module",
+        "scope": "ansible"
+    },
+    "Manage VRFs on Arista EOS network devices": {
+        "prefix": [
+            "arista.eos.eos_vrf",
+            "Manage VRFs on Arista EOS network devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  arista.eos.eos_vrf:",
+            "    aggregate:",
+            "      - ${2:element}",
+            "    associated_interfaces:",
+            "      - ${3:element}",
+            "    delay: ${4:10}",
+            "    interfaces:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    purge: ${7|false,true|}",
+            "    rd: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage VRFs on Arista EOS network devices",
+        "scope": "ansible"
+    }
+}

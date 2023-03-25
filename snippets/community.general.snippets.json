@@ -312,7 +312,7 @@
     "Set and/or get members' attributes of an Apache httpd 2.4 mod_proxy balancer pool": {
         "prefix": [
             "community.general.apache2_mod_proxy",
-            "Set and/or get members' attributes of an Apache httpd 2.4 mod_proxy balancer pool"
+            "Set and/or get members&#39; attributes of an Apache httpd 2.4 mod_proxy balancer pool"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -326,7 +326,7 @@
             "    validate_certs: ${7|true,false|}",
             "$0"
         ],
-        "description": "Set and/or get members' attributes of an Apache httpd 2.4 mod_proxy balancer pool",
+        "description": "Set and/or get members&#39; attributes of an Apache httpd 2.4 mod_proxy balancer pool",
         "scope": "ansible"
     },
     "Enables/disables a module of the Apache2 webserver": {
@@ -1236,7 +1236,7 @@
     "Add, modify & delete services within a consul cluster": {
         "prefix": [
             "community.general.consul",
-            "Add, modify & delete services within a consul cluster"
+            "Add, modify &amp; delete services within a consul cluster"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1266,7 +1266,7 @@
             "    validate_certs: ${22|true,false|}",
             "$0"
         ],
-        "description": "Add, modify & delete services within a consul cluster",
+        "description": "Add, modify &amp; delete services within a consul cluster",
         "scope": "ansible"
     },
     "Manipulate Consul ACL keys and rules": {
@@ -1581,7 +1581,7 @@
     "Create, update, and delete MCP 1.0 & 2.0 networks": {
         "prefix": [
             "community.general.dimensiondata_network",
-            "Create, update, and delete MCP 1.0 & 2.0 networks"
+            "Create, update, and delete MCP 1.0 &amp; 2.0 networks"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1601,7 +1601,7 @@
             "    wait_time: ${13:600}",
             "$0"
         ],
-        "description": "Create, update, and delete MCP 1.0 & 2.0 networks",
+        "description": "Create, update, and delete MCP 1.0 &amp; 2.0 networks",
         "scope": "ansible"
     },
     "Manage a VLAN in a Cloud Control network domain": {
@@ -1793,7 +1793,7 @@
     "Override a debian package's version of a file": {
         "prefix": [
             "community.general.dpkg_divert",
-            "Override a debian package's version of a file"
+            "Override a debian package&#39;s version of a file"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1807,7 +1807,7 @@
             "    state: ${7|present,absent|}",
             "$0"
         ],
-        "description": "Override a debian package's version of a file",
+        "description": "Override a debian package&#39;s version of a file",
         "scope": "ansible"
     },
     "Installs Python libraries": {
@@ -2014,11 +2014,12 @@
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.general.flatpak_remote:",
-            "    executable: ${2:flatpak}",
-            "    flatpakrepo_url: ${3:string}",
-            "    method: ${4|system,user|}",
-            "    name: ${5:string}",
-            "    state: ${6|present,absent|}",
+            "    enabled: ${2|true,false|}",
+            "    executable: ${3:flatpak}",
+            "    flatpakrepo_url: ${4:string}",
+            "    method: ${5|system,user|}",
+            "    name: ${6:string}",
+            "    state: ${7|present,absent|}",
             "$0"
         ],
         "description": "Manage flatpak repository remotes",
@@ -2513,28 +2514,34 @@
             "    container_registry_access_level: ${12:string}",
             "    default_branch: ${13:string}",
             "    description: ${14:string}",
-            "    forking_access_level: ${15:string}",
-            "    group: ${16:string}",
-            "    import_url: ${17:string}",
-            "    initialize_with_readme: ${18|false,true|}",
-            "    issues_enabled: ${19|true,false|}",
-            "    lfs_enabled: ${20|false,true|}",
-            "    merge_method: ${21|merge,ff,rebase_merge|}",
-            "    merge_requests_enabled: ${22|true,false|}",
-            "    name: ${23:string}",
-            "    only_allow_merge_if_all_discussions_are_resolved: ${24|false,true|}",
-            "    only_allow_merge_if_pipeline_succeeds: ${25|false,true|}",
-            "    packages_enabled: ${26|false,true|}",
-            "    path: ${27:string}",
-            "    remove_source_branch_after_merge: ${28|false,true|}",
-            "    shared_runners_enabled: ${29|false,true|}",
-            "    snippets_enabled: ${30|true,false|}",
-            "    squash_option: ${31:string}",
-            "    state: ${32|present,absent|}",
-            "    username: ${33:string}",
-            "    validate_certs: ${34|true,false|}",
-            "    visibility: ${35|private,internal,public|}",
-            "    wiki_enabled: ${36|true,false|}",
+            "    environments_access_level: ${15:string}",
+            "    feature_flags_access_level: ${16:string}",
+            "    forking_access_level: ${17:string}",
+            "    group: ${18:string}",
+            "    import_url: ${19:string}",
+            "    infrastructure_access_level: ${20:string}",
+            "    initialize_with_readme: ${21|false,true|}",
+            "    issues_enabled: ${22|true,false|}",
+            "    lfs_enabled: ${23|false,true|}",
+            "    merge_method: ${24|merge,ff,rebase_merge|}",
+            "    merge_requests_enabled: ${25|true,false|}",
+            "    monitor_access_level: ${26:string}",
+            "    name: ${27:string}",
+            "    only_allow_merge_if_all_discussions_are_resolved: ${28|false,true|}",
+            "    only_allow_merge_if_pipeline_succeeds: ${29|false,true|}",
+            "    packages_enabled: ${30|false,true|}",
+            "    path: ${31:string}",
+            "    releases_access_level: ${32:string}",
+            "    remove_source_branch_after_merge: ${33|false,true|}",
+            "    security_and_compliance_access_level: ${34:string}",
+            "    shared_runners_enabled: ${35|false,true|}",
+            "    snippets_enabled: ${36|true,false|}",
+            "    squash_option: ${37:string}",
+            "    state: ${38|present,absent|}",
+            "    username: ${39:string}",
+            "    validate_certs: ${40|true,false|}",
+            "    visibility: ${41|private,internal,public|}",
+            "    wiki_enabled: ${42|true,false|}",
             "$0"
         ],
         "description": "Creates/updates/deletes GitLab Projects",
@@ -2656,7 +2663,7 @@
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.general.gitlab_runner:",
-            "    access_level: ${2|ref_protected,not_protected|}",
+            "    access_level: ${2:string}",
             "    access_level_on_creation: ${3|false,true|}",
             "    active: ${4|true,false|}",
             "    api_job_token: ${5:string}",
@@ -4666,7 +4673,7 @@
     "Retrieve IP geolocation facts of a host's IP address": {
         "prefix": [
             "community.general.ipinfoio_facts",
-            "Retrieve IP geolocation facts of a host's IP address"
+            "Retrieve IP geolocation facts of a host&#39;s IP address"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -4676,7 +4683,7 @@
             "    timeout: ${3:10}",
             "$0"
         ],
-        "description": "Retrieve IP geolocation facts of a host's IP address",
+        "description": "Retrieve IP geolocation facts of a host&#39;s IP address",
         "scope": "ansible"
     },
     "Management of order of boot devices": {
@@ -5427,10 +5434,12 @@
             "    http_agent: ${10:Ansible}",
             "    id: ${11:string}",
             "    name: ${12:string}",
-            "    realm: ${13:master}",
-            "    state: ${14|present,absent|}",
-            "    token: ${15:string}",
-            "    validate_certs: ${16|true,false|}",
+            "    parents:",
+            "      - ${13:element}",
+            "    realm: ${14:master}",
+            "    state: ${15|present,absent|}",
+            "    token: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
             "$0"
         ],
         "description": "Allows administration of Keycloak groups via Keycloak API",
@@ -5695,7 +5704,7 @@
     "Set or delete a passphrase using the Operating System's native keyring": {
         "prefix": [
             "community.general.keyring",
-            "Set or delete a passphrase using the Operating System's native keyring"
+            "Set or delete a passphrase using the Operating System&#39;s native keyring"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -5708,13 +5717,13 @@
             "    username: ${6:string}",
             "$0"
         ],
-        "description": "Set or delete a passphrase using the Operating System's native keyring",
+        "description": "Set or delete a passphrase using the Operating System&#39;s native keyring",
         "scope": "ansible"
     },
     "Get a passphrase using the Operating System's native keyring": {
         "prefix": [
             "community.general.keyring_info",
-            "Get a passphrase using the Operating System's native keyring"
+            "Get a passphrase using the Operating System&#39;s native keyring"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -5725,7 +5734,7 @@
             "    username: ${4:string}",
             "$0"
         ],
-        "description": "Get a passphrase using the Operating System's native keyring",
+        "description": "Get a passphrase using the Operating System&#39;s native keyring",
         "scope": "ansible"
     },
     "Manage Kibana plugins": {
@@ -5825,6 +5834,7 @@
             "    start_tls: ${10|false,true|}",
             "    state: ${11|present,absent,exact|}",
             "    validate_certs: ${12|true,false|}",
+            "    xorder_discovery: ${13|auto,enable,disable|}",
             "$0"
         ],
         "description": "Add or remove multiple LDAP attribute values",
@@ -5851,6 +5861,7 @@
             "    start_tls: ${11|false,true|}",
             "    state: ${12|present,absent|}",
             "    validate_certs: ${13|true,false|}",
+            "    xorder_discovery: ${14|auto,enable,disable|}",
             "$0"
         ],
         "description": "Add or remove LDAP entries",
@@ -5874,6 +5885,7 @@
             "    server_uri: ${8:ldapi:///}",
             "    start_tls: ${9|false,true|}",
             "    validate_certs: ${10|true,false|}",
+            "    xorder_discovery: ${11|auto,enable,disable|}",
             "$0"
         ],
         "description": "Set passwords in LDAP",
@@ -5901,6 +5913,7 @@
             "    server_uri: ${11:ldapi:///}",
             "    start_tls: ${12|false,true|}",
             "    validate_certs: ${13|true,false|}",
+            "    xorder_discovery: ${14|auto,enable,disable|}",
             "$0"
         ],
         "description": "Search for entries in a LDAP server",
@@ -6644,7 +6657,7 @@
             "    attachments:",
             "      - ${3:element}",
             "    channel: ${4:string}",
-            "    icon_url: ${5:https://www.ansible.com/favicon.ico}",
+            "    icon_url: ${5:https://docs.ansible.com/favicon.ico}",
             "    text: ${6:string}",
             "    url: ${7:string}",
             "    username: ${8:Ansible}",
@@ -6702,7 +6715,7 @@
     "Request reload of Memset's DNS infrastructure,": {
         "prefix": [
             "community.general.memset_dns_reload",
-            "Request reload of Memset's DNS infrastructure,"
+            "Request reload of Memset&#39;s DNS infrastructure,"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -6712,7 +6725,7 @@
             "    poll: ${3|false,true|}",
             "$0"
         ],
-        "description": "Request reload of Memset's DNS infrastructure,",
+        "description": "Request reload of Memset&#39;s DNS infrastructure,",
         "scope": "ansible"
     },
     "Retrieve Memstore product usage information": {
@@ -6843,7 +6856,8 @@
             "  community.general.modprobe:",
             "    name: ${2:string}",
             "    params: ${3:}",
-            "    state: ${4|present,absent|}",
+            "    persistent: ${4|disabled,absent,present|}",
+            "    state: ${5|present,absent|}",
             "$0"
         ],
         "description": "Load or unload kernel modules",
@@ -7602,7 +7616,7 @@
     "Configure 1&1 firewall policy": {
         "prefix": [
             "community.general.oneandone_firewall_policy",
-            "Configure 1&1 firewall policy"
+            "Configure 1&amp;1 firewall policy"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -7629,13 +7643,13 @@
             "    wait_timeout: ${15:600}",
             "$0"
         ],
-        "description": "Configure 1&1 firewall policy",
+        "description": "Configure 1&amp;1 firewall policy",
         "scope": "ansible"
     },
     "Configure 1&1 load balancer": {
         "prefix": [
             "community.general.oneandone_load_balancer",
-            "Configure 1&1 load balancer"
+            "Configure 1&amp;1 load balancer"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -7670,13 +7684,13 @@
             "    wait_timeout: ${23:600}",
             "$0"
         ],
-        "description": "Configure 1&1 load balancer",
+        "description": "Configure 1&amp;1 load balancer",
         "scope": "ansible"
     },
     "Configure 1&1 monitoring policy": {
         "prefix": [
             "community.general.oneandone_monitoring_policy",
-            "Configure 1&1 monitoring policy"
+            "Configure 1&amp;1 monitoring policy"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -7717,13 +7731,13 @@
             "    wait_timeout: ${23:600}",
             "$0"
         ],
-        "description": "Configure 1&1 monitoring policy",
+        "description": "Configure 1&amp;1 monitoring policy",
         "scope": "ansible"
     },
     "Configure 1&1 private networking": {
         "prefix": [
             "community.general.oneandone_private_network",
-            "Configure 1&1 private networking"
+            "Configure 1&amp;1 private networking"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -7747,13 +7761,13 @@
             "    wait_timeout: ${15:600}",
             "$0"
         ],
-        "description": "Configure 1&1 private networking",
+        "description": "Configure 1&amp;1 private networking",
         "scope": "ansible"
     },
     "Configure 1&1 public IPs": {
         "prefix": [
             "community.general.oneandone_public_ip",
-            "Configure 1&1 public IPs"
+            "Configure 1&amp;1 public IPs"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -7771,13 +7785,13 @@
             "    wait_timeout: ${11:600}",
             "$0"
         ],
-        "description": "Configure 1&1 public IPs",
+        "description": "Configure 1&amp;1 public IPs",
         "scope": "ansible"
     },
     "Create, destroy, start, stop, and reboot a 1&1 Host server": {
         "prefix": [
             "community.general.oneandone_server",
-            "Create, destroy, start, stop, and reboot a 1&1 Host server"
+            "Create, destroy, start, stop, and reboot a 1&amp;1 Host server"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -7809,7 +7823,7 @@
             "    wait_timeout: ${25:600}",
             "$0"
         ],
-        "description": "Create, destroy, start, stop, and reboot a 1&1 Host server",
+        "description": "Create, destroy, start, stop, and reboot a 1&amp;1 Host server",
         "scope": "ansible"
     },
     "Gather items from 1Password": {
@@ -8562,7 +8576,7 @@
     "Manage pacman's list of trusted keys": {
         "prefix": [
             "community.general.pacman_key",
-            "Manage pacman's list of trusted keys"
+            "Manage pacman&#39;s list of trusted keys"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -8579,7 +8593,7 @@
             "    verify: ${10|true,false|}",
             "$0"
         ],
-        "description": "Manage pacman's list of trusted keys",
+        "description": "Manage pacman&#39;s list of trusted keys",
         "scope": "ansible"
     },
     "Create PagerDuty maintenance windows": {
@@ -8939,7 +8953,7 @@
     "Package manager for FreeBSD >= 9.0": {
         "prefix": [
             "community.general.pkgng",
-            "Package manager for FreeBSD >= 9.0"
+            "Package manager for FreeBSD &gt;= 9.0"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -8959,7 +8973,7 @@
             "    state: ${11|present,latest,absent|}",
             "$0"
         ],
-        "description": "Package manager for FreeBSD >= 9.0",
+        "description": "Package manager for FreeBSD &gt;= 9.0",
         "scope": "ansible"
     },
     "OpenCSW package management on Solaris": {
@@ -9047,7 +9061,7 @@
     "Installing packages from FreeBSD's ports system": {
         "prefix": [
             "community.general.portinstall",
-            "Installing packages from FreeBSD's ports system"
+            "Installing packages from FreeBSD&#39;s ports system"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -9058,7 +9072,7 @@
             "    use_packages: ${4|true,false|}",
             "$0"
         ],
-        "description": "Installing packages from FreeBSD's ports system",
+        "description": "Installing packages from FreeBSD&#39;s ports system",
         "scope": "ansible"
     },
     "Manages Pritunl Organizations using the Pritunl API": {
@@ -11050,7 +11064,7 @@
             "    color: ${4|normal,good,warning,danger|}",
             "    domain: ${5:string}",
             "    icon_emoji: ${6:string}",
-            "    icon_url: ${7:https://www.ansible.com/favicon.ico}",
+            "    icon_url: ${7:https://docs.ansible.com/favicon.ico}",
             "    link_names: ${8:1}",
             "    msg: ${9:string}",
             "    protocol: ${10|https,http|}",
@@ -11988,7 +12002,8 @@
             "    setype: ${6:string}",
             "    seuser: ${7:string}",
             "    state: ${8|present,absent|}",
-            "    target: ${9:string}",
+            "    substitute: ${9:string}",
+            "    target: ${10:string}",
             "$0"
         ],
         "description": "Manages SELinux file context mapping definitions",
@@ -12313,7 +12328,7 @@
             "    color: ${5:normal}",
             "    domain: ${6:string}",
             "    icon_emoji: ${7:string}",
-            "    icon_url: ${8:https://www.ansible.com/favicon.ico}",
+            "    icon_url: ${8:https://docs.ansible.com/favicon.ico}",
             "    link_names: ${9:1}",
             "    message_id: ${10:string}",
             "    msg: ${11:string}",
@@ -12331,7 +12346,7 @@
     "Package manager for Slackware >= 12.2": {
         "prefix": [
             "community.general.slackpkg",
-            "Package manager for Slackware >= 12.2"
+            "Package manager for Slackware &gt;= 12.2"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -12343,7 +12358,7 @@
             "    update_cache: ${4|false,true|}",
             "$0"
         ],
-        "description": "Package manager for Slackware >= 12.2",
+        "description": "Package manager for Slackware &gt;= 12.2",
         "scope": "ansible"
     },
     "Get SmartOS image details": {
@@ -12497,7 +12512,7 @@
     "Enforce a model's attributes in CA Spectrum": {
         "prefix": [
             "community.general.spectrum_model_attrs",
-            "Enforce a model's attributes in CA Spectrum"
+            "Enforce a model&#39;s attributes in CA Spectrum"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -12514,7 +12529,7 @@
             "    validate_certs: ${9|true,false|}",
             "$0"
         ],
-        "description": "Enforce a model's attributes in CA Spectrum",
+        "description": "Enforce a model&#39;s attributes in CA Spectrum",
         "scope": "ansible"
     },
     "Create, update or delete Spotinst AWS Elastigroups": {

@@ -1,0 +1,926 @@
+{
+    "Manage Sensu AD authentication provider": {
+        "prefix": [
+            "sensu.sensu_go.ad_auth_provider",
+            "Manage Sensu AD authentication provider"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.ad_auth_provider:",
+            "    groups_prefix: ${3:string}",
+            "    name: ${4:string}",
+            "    servers:",
+            "      - ${5:element}",
+            "    state: ${6|present,absent|}",
+            "    username_prefix: ${7:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu AD authentication provider",
+        "scope": "ansible"
+    },
+    "Manage Sensu assets": {
+        "prefix": [
+            "sensu.sensu_go.asset",
+            "Manage Sensu assets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.asset:",
+            "    builds:",
+            "      - ${4:element}",
+            "    name: ${6:string}",
+            "    namespace: ${7:default}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu assets",
+        "scope": "ansible"
+    },
+    "List Sensu assets": {
+        "prefix": [
+            "sensu.sensu_go.asset_info",
+            "List Sensu assets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.asset_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu assets",
+        "scope": "ansible"
+    },
+    "List Sensu authentication providers": {
+        "prefix": [
+            "sensu.sensu_go.auth_provider_info",
+            "List Sensu authentication providers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.auth_provider_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List Sensu authentication providers",
+        "scope": "ansible"
+    },
+    "Add Sensu assets from Bonsai": {
+        "prefix": [
+            "sensu.sensu_go.bonsai_asset",
+            "Add Sensu assets from Bonsai"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.bonsai_asset:",
+            "    name: ${5:string}",
+            "    namespace: ${6:default}",
+            "    on_remote: ${7|false,true|}",
+            "    rename: ${8:string}",
+            "    version: ${9:string}",
+            "$0"
+        ],
+        "description": "Add Sensu assets from Bonsai",
+        "scope": "ansible"
+    },
+    "Manage Sensu checks": {
+        "prefix": [
+            "sensu.sensu_go.check",
+            "Manage Sensu checks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.check:",
+            "    command: ${5:string}",
+            "    cron: ${6:string}",
+            "    handlers:",
+            "      - ${8:element}",
+            "    high_flap_threshold: ${9:int}",
+            "    interval: ${10:int}",
+            "    low_flap_threshold: ${12:int}",
+            "    name: ${13:string}",
+            "    namespace: ${14:default}",
+            "    output_metric_format: ${15:string}",
+            "    output_metric_handlers:",
+            "      - ${16:element}",
+            "    proxy_entity_name: ${17:string}",
+            "    publish: ${19|false,true|}",
+            "    round_robin: ${20|false,true|}",
+            "    runtime_assets:",
+            "      - ${21:element}",
+            "    secrets:",
+            "      - ${22:element}",
+            "    state: ${23|present,absent|}",
+            "    stdin: ${24|false,true|}",
+            "    subscriptions:",
+            "      - ${25:element}",
+            "    timeout: ${26:int}",
+            "    ttl: ${27:int}",
+            "$0"
+        ],
+        "description": "Manage Sensu checks",
+        "scope": "ansible"
+    },
+    "List Sensu checks": {
+        "prefix": [
+            "sensu.sensu_go.check_info",
+            "List Sensu checks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.check_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu checks",
+        "scope": "ansible"
+    },
+    "Manage Sensu Go clusters": {
+        "prefix": [
+            "sensu.sensu_go.cluster",
+            "Manage Sensu Go clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.cluster:",
+            "    api_urls:",
+            "      - ${2:element}",
+            "    name: ${4:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu Go clusters",
+        "scope": "ansible"
+    },
+    "List available Sensu Go clusters": {
+        "prefix": [
+            "sensu.sensu_go.cluster_info",
+            "List available Sensu Go clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.cluster_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List available Sensu Go clusters",
+        "scope": "ansible"
+    },
+    "Manage Sensu cluster roles": {
+        "prefix": [
+            "sensu.sensu_go.cluster_role",
+            "Manage Sensu cluster roles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.cluster_role:",
+            "    name: ${3:string}",
+            "    rules:",
+            "      - ${4:element}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu cluster roles",
+        "scope": "ansible"
+    },
+    "Manage Sensu cluster role bindings": {
+        "prefix": [
+            "sensu.sensu_go.cluster_role_binding",
+            "Manage Sensu cluster role bindings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.cluster_role_binding:",
+            "    cluster_role: ${3:string}",
+            "    groups:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    users:",
+            "      - ${7:element}",
+            "$0"
+        ],
+        "description": "Manage Sensu cluster role bindings",
+        "scope": "ansible"
+    },
+    "List Sensu cluster role bindings": {
+        "prefix": [
+            "sensu.sensu_go.cluster_role_binding_info",
+            "List Sensu cluster role bindings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.cluster_role_binding_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List Sensu cluster role bindings",
+        "scope": "ansible"
+    },
+    "List Sensu cluster roles": {
+        "prefix": [
+            "sensu.sensu_go.cluster_role_info",
+            "List Sensu cluster roles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.cluster_role_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List Sensu cluster roles",
+        "scope": "ansible"
+    },
+    "Manage Sensu external datastore providers": {
+        "prefix": [
+            "sensu.sensu_go.datastore",
+            "Manage Sensu external datastore providers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.datastore:",
+            "    dsn: ${3:string}",
+            "    name: ${4:string}",
+            "    pool_size: ${5:int}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu external datastore providers",
+        "scope": "ansible"
+    },
+    "List external Sensu datastore providers": {
+        "prefix": [
+            "sensu.sensu_go.datastore_info",
+            "List external Sensu datastore providers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.datastore_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List external Sensu datastore providers",
+        "scope": "ansible"
+    },
+    "Manage Sensu entities": {
+        "prefix": [
+            "sensu.sensu_go.entity",
+            "Manage Sensu entities"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.entity:",
+            "    deregister: ${4|false,true|}",
+            "    deregistration_handler: ${5:string}",
+            "    entity_class: ${6:string}",
+            "    last_seen: ${8:int}",
+            "    name: ${9:string}",
+            "    namespace: ${10:default}",
+            "    redact:",
+            "      - ${11:element}",
+            "    state: ${12|present,absent|}",
+            "    subscriptions:",
+            "      - ${13:element}",
+            "    user: ${15:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu entities",
+        "scope": "ansible"
+    },
+    "List Sensu entities": {
+        "prefix": [
+            "sensu.sensu_go.entity_info",
+            "List Sensu entities"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.entity_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu entities",
+        "scope": "ansible"
+    },
+    "Manage Sensu Go etcd replicators": {
+        "prefix": [
+            "sensu.sensu_go.etcd_replicator",
+            "Manage Sensu Go etcd replicators"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.etcd_replicator:",
+            "    api_version: ${2:string}",
+            "    ca_cert: ${4:string}",
+            "    cert: ${5:string}",
+            "    insecure: ${6|false,true|}",
+            "    key: ${7:string}",
+            "    name: ${8:string}",
+            "    namespace: ${9:string}",
+            "    replication_interval: ${10:int}",
+            "    resource: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    url:",
+            "      - ${13:element}",
+            "$0"
+        ],
+        "description": "Manage Sensu Go etcd replicators",
+        "scope": "ansible"
+    },
+    "List available Sensu Go etcd replicators": {
+        "prefix": [
+            "sensu.sensu_go.etcd_replicator_info",
+            "List available Sensu Go etcd replicators"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.etcd_replicator_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List available Sensu Go etcd replicators",
+        "scope": "ansible"
+    },
+    "Manage Sensu events": {
+        "prefix": [
+            "sensu.sensu_go.event",
+            "Manage Sensu events"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.event:",
+            "    check: ${3:string}",
+            "    entity: ${5:string}",
+            "    namespace: ${7:default}",
+            "    timestamp: ${8:int}",
+            "$0"
+        ],
+        "description": "Manage Sensu events",
+        "scope": "ansible"
+    },
+    "List Sensu events": {
+        "prefix": [
+            "sensu.sensu_go.event_info",
+            "List Sensu events"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.event_info:",
+            "    check: ${3:string}",
+            "    entity: ${4:string}",
+            "    namespace: ${5:default}",
+            "$0"
+        ],
+        "description": "List Sensu events",
+        "scope": "ansible"
+    },
+    "Manage Sensu filters": {
+        "prefix": [
+            "sensu.sensu_go.filter",
+            "Manage Sensu filters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.filter:",
+            "    action: ${2:string}",
+            "    expressions:",
+            "      - ${5:element}",
+            "    name: ${7:string}",
+            "    namespace: ${8:default}",
+            "    runtime_assets:",
+            "      - ${9:element}",
+            "    state: ${10|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu filters",
+        "scope": "ansible"
+    },
+    "List Sensu info": {
+        "prefix": [
+            "sensu.sensu_go.filter_info",
+            "List Sensu info"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.filter_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu info",
+        "scope": "ansible"
+    },
+    "List Sensu handlers": {
+        "prefix": [
+            "sensu.sensu_go.handler_info",
+            "List Sensu handlers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.handler_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu handlers",
+        "scope": "ansible"
+    },
+    "Manage Sensu handler set": {
+        "prefix": [
+            "sensu.sensu_go.handler_set",
+            "Manage Sensu handler set"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.handler_set:",
+            "    handlers:",
+            "      - ${4:element}",
+            "    name: ${6:string}",
+            "    namespace: ${7:default}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu handler set",
+        "scope": "ansible"
+    },
+    "Manage Sensu hooks": {
+        "prefix": [
+            "sensu.sensu_go.hook",
+            "Manage Sensu hooks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.hook:",
+            "    command: ${4:string}",
+            "    name: ${6:string}",
+            "    namespace: ${7:default}",
+            "    runtime_assets:",
+            "      - ${8:element}",
+            "    state: ${9|present,absent|}",
+            "    stdin: ${10|false,true|}",
+            "    timeout: ${11:int}",
+            "$0"
+        ],
+        "description": "Manage Sensu hooks",
+        "scope": "ansible"
+    },
+    "List Sensu hooks": {
+        "prefix": [
+            "sensu.sensu_go.hook_info",
+            "List Sensu hooks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.hook_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu hooks",
+        "scope": "ansible"
+    },
+    "Manage Sensu LDAP authentication provider": {
+        "prefix": [
+            "sensu.sensu_go.ldap_auth_provider",
+            "Manage Sensu LDAP authentication provider"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.ldap_auth_provider:",
+            "    groups_prefix: ${3:string}",
+            "    name: ${4:string}",
+            "    servers:",
+            "      - ${5:element}",
+            "    state: ${6|present,absent|}",
+            "    username_prefix: ${7:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu LDAP authentication provider",
+        "scope": "ansible"
+    },
+    "Manage Sensu mutators": {
+        "prefix": [
+            "sensu.sensu_go.mutator",
+            "Manage Sensu mutators"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.mutator:",
+            "    command: ${4:string}",
+            "    name: ${7:string}",
+            "    namespace: ${8:default}",
+            "    runtime_assets:",
+            "      - ${9:element}",
+            "    secrets:",
+            "      - ${10:element}",
+            "    state: ${11|present,absent|}",
+            "    timeout: ${12:int}",
+            "$0"
+        ],
+        "description": "Manage Sensu mutators",
+        "scope": "ansible"
+    },
+    "List Sensu mutators": {
+        "prefix": [
+            "sensu.sensu_go.mutator_info",
+            "List Sensu mutators"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.mutator_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu mutators",
+        "scope": "ansible"
+    },
+    "Manage Sensu namespaces": {
+        "prefix": [
+            "sensu.sensu_go.namespace",
+            "Manage Sensu namespaces"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.namespace:",
+            "    name: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu namespaces",
+        "scope": "ansible"
+    },
+    "List Sensu namespaces": {
+        "prefix": [
+            "sensu.sensu_go.namespace_info",
+            "List Sensu namespaces"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.namespace_info:",
+            "$0"
+        ],
+        "description": "List Sensu namespaces",
+        "scope": "ansible"
+    },
+    "Manage Sensu OIDC authentication provider": {
+        "prefix": [
+            "sensu.sensu_go.oidc_auth_provider",
+            "Manage Sensu OIDC authentication provider"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.oidc_auth_provider:",
+            "    additional_scopes:",
+            "      - ${2:element}",
+            "    client_id: ${4:string}",
+            "    client_secret: ${5:string}",
+            "    disable_offline_access: ${6|false,true|}",
+            "    groups_claim: ${7:string}",
+            "    groups_prefix: ${8:string}",
+            "    name: ${9:string}",
+            "    redirect_uri: ${10:string}",
+            "    server: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    username_claim: ${13:string}",
+            "    username_prefix: ${14:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu OIDC authentication provider",
+        "scope": "ansible"
+    },
+    "Manage Sensu pipe handler": {
+        "prefix": [
+            "sensu.sensu_go.pipe_handler",
+            "Manage Sensu pipe handler"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.pipe_handler:",
+            "    command: ${4:string}",
+            "    filters:",
+            "      - ${6:element}",
+            "    mutator: ${8:string}",
+            "    name: ${9:string}",
+            "    namespace: ${10:default}",
+            "    runtime_assets:",
+            "      - ${11:element}",
+            "    secrets:",
+            "      - ${12:element}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:int}",
+            "$0"
+        ],
+        "description": "Manage Sensu pipe handler",
+        "scope": "ansible"
+    },
+    "Manage Sensu roles": {
+        "prefix": [
+            "sensu.sensu_go.role",
+            "Manage Sensu roles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.role:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "    rules:",
+            "      - ${5:element}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu roles",
+        "scope": "ansible"
+    },
+    "Manage Sensu role bindings": {
+        "prefix": [
+            "sensu.sensu_go.role_binding",
+            "Manage Sensu role bindings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.role_binding:",
+            "    cluster_role: ${3:string}",
+            "    groups:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    namespace: ${6:default}",
+            "    role: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    users:",
+            "      - ${9:element}",
+            "$0"
+        ],
+        "description": "Manage Sensu role bindings",
+        "scope": "ansible"
+    },
+    "List Sensu role bindings": {
+        "prefix": [
+            "sensu.sensu_go.role_binding_info",
+            "List Sensu role bindings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.role_binding_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu role bindings",
+        "scope": "ansible"
+    },
+    "List Sensu roles": {
+        "prefix": [
+            "sensu.sensu_go.role_info",
+            "List Sensu roles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.role_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List Sensu roles",
+        "scope": "ansible"
+    },
+    "Manage Sensu Go secrets": {
+        "prefix": [
+            "sensu.sensu_go.secret",
+            "Manage Sensu Go secrets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.secret:",
+            "    id: ${3:string}",
+            "    name: ${4:string}",
+            "    namespace: ${5:default}",
+            "    provider: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu Go secrets",
+        "scope": "ansible"
+    },
+    "List available Sensu Go secrets": {
+        "prefix": [
+            "sensu.sensu_go.secret_info",
+            "List available Sensu Go secrets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.secret_info:",
+            "    name: ${3:string}",
+            "    namespace: ${4:default}",
+            "$0"
+        ],
+        "description": "List available Sensu Go secrets",
+        "scope": "ansible"
+    },
+    "Manage Sensu Env secrets provider": {
+        "prefix": [
+            "sensu.sensu_go.secrets_provider_env",
+            "Manage Sensu Env secrets provider"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.secrets_provider_env:",
+            "    state: ${3|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Sensu Env secrets provider",
+        "scope": "ansible"
+    },
+    "List Sensu secrets providers": {
+        "prefix": [
+            "sensu.sensu_go.secrets_provider_info",
+            "List Sensu secrets providers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.secrets_provider_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List Sensu secrets providers",
+        "scope": "ansible"
+    },
+    "Manage Sensu VaultProvider secrets providers": {
+        "prefix": [
+            "sensu.sensu_go.secrets_provider_vault",
+            "Manage Sensu VaultProvider secrets providers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.secrets_provider_vault:",
+            "    address: ${2:string}",
+            "    burst_limit: ${4:int}",
+            "    max_retries: ${5:int}",
+            "    name: ${6:string}",
+            "    state: ${8|present,absent|}",
+            "    timeout: ${9:int}",
+            "    token: ${11:string}",
+            "    version: ${12:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu VaultProvider secrets providers",
+        "scope": "ansible"
+    },
+    "Manage Sensu silences": {
+        "prefix": [
+            "sensu.sensu_go.silence",
+            "Manage Sensu silences"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.silence:",
+            "    begin: ${4:int}",
+            "    check: ${5:string}",
+            "    expire: ${6:int}",
+            "    expire_on_resolve: ${7|false,true|}",
+            "    namespace: ${9:default}",
+            "    reason: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    subscription: ${12:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu silences",
+        "scope": "ansible"
+    },
+    "List Sensu silence entries": {
+        "prefix": [
+            "sensu.sensu_go.silence_info",
+            "List Sensu silence entries"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.silence_info:",
+            "    check: ${3:string}",
+            "    namespace: ${4:default}",
+            "    subscription: ${5:string}",
+            "$0"
+        ],
+        "description": "List Sensu silence entries",
+        "scope": "ansible"
+    },
+    "Manage Sensu TCP/UDP handler": {
+        "prefix": [
+            "sensu.sensu_go.socket_handler",
+            "Manage Sensu TCP/UDP handler"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.socket_handler:",
+            "    filters:",
+            "      - ${4:element}",
+            "    host: ${5:string}",
+            "    mutator: ${7:string}",
+            "    name: ${8:string}",
+            "    namespace: ${9:default}",
+            "    port: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "    timeout: ${12:int}",
+            "    type: ${13:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu TCP/UDP handler",
+        "scope": "ansible"
+    },
+    "Manage Sensu's Tessen configuration": {
+        "prefix": [
+            "sensu.sensu_go.tessen",
+            "Manage Sensu&#39;s Tessen configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.tessen:",
+            "    state: ${3:string}",
+            "$0"
+        ],
+        "description": "Manage Sensu&#39;s Tessen configuration",
+        "scope": "ansible"
+    },
+    "Manage Sensu users": {
+        "prefix": [
+            "sensu.sensu_go.user",
+            "Manage Sensu users"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.user:",
+            "    groups:",
+            "      - ${3:element}",
+            "    name: ${4:string}",
+            "    password: ${5:string}",
+            "    password_hash: ${6:string}",
+            "    state: ${7|enabled,disabled|}",
+            "$0"
+        ],
+        "description": "Manage Sensu users",
+        "scope": "ansible"
+    },
+    "List Sensu users": {
+        "prefix": [
+            "sensu.sensu_go.user_info",
+            "List Sensu users"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  sensu.sensu_go.user_info:",
+            "    name: ${3:string}",
+            "$0"
+        ],
+        "description": "List Sensu users",
+        "scope": "ansible"
+    }
+}

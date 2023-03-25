@@ -1,0 +1,897 @@
+{
+    "Gather information about DigitalOcean User account": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_account_info",
+            "Gather information about DigitalOcean User account"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_account_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    timeout: ${4:30}",
+            "    validate_certs: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean User account",
+        "scope": "ansible"
+    },
+    "Display DigitalOcean customer balance": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_balance_info",
+            "Display DigitalOcean customer balance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_balance_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    timeout: ${4:30}",
+            "    validate_certs: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Display DigitalOcean customer balance",
+        "scope": "ansible"
+    },
+    "Create/destroy or attach/detach Block Storage volumes in DigitalOcean": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_block_storage",
+            "Create/destroy or attach/detach Block Storage volumes in DigitalOcean"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_block_storage:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    block_size: ${3:int}",
+            "    command: ${4:string}",
+            "    description: ${5:string}",
+            "    droplet_id: ${6:int}",
+            "    oauth_token: ${7:string}",
+            "    project_name: ${8:}",
+            "    region: ${9:string}",
+            "    snapshot_id: ${10:string}",
+            "    state: ${11:string}",
+            "    timeout: ${12:30}",
+            "    validate_certs: ${13|true,false|}",
+            "    volume_name: ${14:string}",
+            "$0"
+        ],
+        "description": "Create/destroy or attach/detach Block Storage volumes in DigitalOcean",
+        "scope": "ansible"
+    },
+    "Create, update, and delete DigitalOcean CDN Endpoints": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_cdn_endpoints",
+            "Create, update, and delete DigitalOcean CDN Endpoints"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_cdn_endpoints:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    certificate_id: ${3:string}",
+            "    custom_domain: ${4:string}",
+            "    oauth_token: ${5:string}",
+            "    origin: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    timeout: ${8:30}",
+            "    ttl: ${9:3600}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Create, update, and delete DigitalOcean CDN Endpoints",
+        "scope": "ansible"
+    },
+    "Display DigitalOcean CDN Endpoints": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_cdn_endpoints_info",
+            "Display DigitalOcean CDN Endpoints"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_cdn_endpoints_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Display DigitalOcean CDN Endpoints",
+        "scope": "ansible"
+    },
+    "Manage certificates in DigitalOcean": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_certificate",
+            "Manage certificates in DigitalOcean"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_certificate:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    certificate_chain: ${3:string}",
+            "    leaf_certificate: ${4:string}",
+            "    name: ${5:string}",
+            "    oauth_token: ${6:string}",
+            "    private_key: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    timeout: ${9:30}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manage certificates in DigitalOcean",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean certificates": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_certificate_info",
+            "Gather information about DigitalOcean certificates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_certificate_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    certificate_id: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean certificates",
+        "scope": "ansible"
+    },
+    "Create and delete a DigitalOcean database": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_database",
+            "Create and delete a DigitalOcean database"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_database:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    engine: ${3:string}",
+            "    id: ${4:int}",
+            "    name: ${5:string}",
+            "    num_nodes: ${6:1}",
+            "    oauth_token: ${7:string}",
+            "    private_network_uuid: ${8:string}",
+            "    project_name: ${9:}",
+            "    region: ${10:string}",
+            "    size: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    tags:",
+            "      - ${13:element}",
+            "    timeout: ${14:30}",
+            "    validate_certs: ${15|true,false|}",
+            "    version: ${16:string}",
+            "    wait: ${17|true,false|}",
+            "    wait_timeout: ${18:600}",
+            "$0"
+        ],
+        "description": "Create and delete a DigitalOcean database",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean databases": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_database_info",
+            "Gather information about DigitalOcean databases"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_database_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    id: ${3:int}",
+            "    name: ${4:string}",
+            "    oauth_token: ${5:string}",
+            "    timeout: ${6:30}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean databases",
+        "scope": "ansible"
+    },
+    "Create/delete a DNS domain in DigitalOcean": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_domain",
+            "Create/delete a DNS domain in DigitalOcean"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_domain:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    id: ${3:int}",
+            "    ip: ${4:string}",
+            "    ip6: ${5:string}",
+            "    name: ${6:string}",
+            "    oauth_token: ${7:string}",
+            "    project_name: ${8:}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:30}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Create/delete a DNS domain in DigitalOcean",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean Domains": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_domain_info",
+            "Gather information about DigitalOcean Domains"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_domain_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    domain_name: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean Domains",
+        "scope": "ansible"
+    },
+    "Manage DigitalOcean domain records": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_domain_record",
+            "Manage DigitalOcean domain records"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_domain_record:",
+            "    data: ${2:}",
+            "    domain: ${3:string}",
+            "    flags: ${4:int}",
+            "    force_update: ${5|false,true|}",
+            "    name: ${6:@}",
+            "    oauth_token: ${7:string}",
+            "    port: ${8:int}",
+            "    priority: ${9:int}",
+            "    record_id: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "    tag: ${12:string}",
+            "    ttl: ${13:1800}",
+            "    type: ${14:string}",
+            "    weight: ${15:int}",
+            "$0"
+        ],
+        "description": "Manage DigitalOcean domain records",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean domain records": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_domain_record_info",
+            "Gather information about DigitalOcean domain records"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_domain_record_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    name: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    record_id: ${5:int}",
+            "    state: ${6|present|}",
+            "    timeout: ${7:30}",
+            "    type: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean domain records",
+        "scope": "ansible"
+    },
+    "Create and delete a DigitalOcean droplet": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_droplet",
+            "Create and delete a DigitalOcean droplet"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_droplet:",
+            "    backups: ${2|false,true|}",
+            "    baseurl: ${3:https://api.digitalocean.com/v2}",
+            "    firewall:",
+            "      - ${4:element}",
+            "    id: ${5:int}",
+            "    image: ${6:string}",
+            "    ipv6: ${7|false,true|}",
+            "    monitoring: ${8|false,true|}",
+            "    name: ${9:string}",
+            "    oauth_token: ${10:string}",
+            "    private_networking: ${11|false,true|}",
+            "    project_name: ${12:}",
+            "    region: ${13:string}",
+            "    resize_disk: ${14|false,true|}",
+            "    size: ${15:string}",
+            "    sleep_interval: ${16:10}",
+            "    ssh_keys:",
+            "      - ${17:element}",
+            "    state: ${18|present,absent,active,inactive|}",
+            "    tags:",
+            "      - ${19:element}",
+            "    timeout: ${20:30}",
+            "    unique_name: ${21|false,true|}",
+            "    user_data: ${22:string}",
+            "    validate_certs: ${23|true,false|}",
+            "    volumes:",
+            "      - ${24:element}",
+            "    vpc_uuid: ${25:string}",
+            "    wait: ${26|true,false|}",
+            "    wait_timeout: ${27:120}",
+            "$0"
+        ],
+        "description": "Create and delete a DigitalOcean droplet",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean Droplets": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_droplet_info",
+            "Gather information about DigitalOcean Droplets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_droplet_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    id: ${3:string}",
+            "    name: ${4:string}",
+            "    oauth_token: ${5:string}",
+            "    timeout: ${6:30}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean Droplets",
+        "scope": "ansible"
+    },
+    "Manage cloud firewalls within DigitalOcean": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_firewall",
+            "Manage cloud firewalls within DigitalOcean"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_firewall:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    droplet_ids:",
+            "      - ${3:element}",
+            "    inbound_rules:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    oauth_token: ${6:string}",
+            "    outbound_rules:",
+            "      - ${7:element}",
+            "    state: ${8|present,absent|}",
+            "    tags:",
+            "      - ${9:element}",
+            "    timeout: ${10:30}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage cloud firewalls within DigitalOcean",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean firewalls": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_firewall_info",
+            "Gather information about DigitalOcean firewalls"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_firewall_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    name: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean firewalls",
+        "scope": "ansible"
+    },
+    "Manage DigitalOcean Floating IPs": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_floating_ip",
+            "Manage DigitalOcean Floating IPs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_floating_ip:",
+            "    droplet_id: ${2:string}",
+            "    ip: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    project_name: ${5:}",
+            "    region: ${6:string}",
+            "    state: ${7|present,absent,attached,detached|}",
+            "    timeout: ${8:30}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage DigitalOcean Floating IPs",
+        "scope": "ansible"
+    },
+    "DigitalOcean Floating IPs information": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_floating_ip_info",
+            "DigitalOcean Floating IPs information"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_floating_ip_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    timeout: ${4:30}",
+            "    validate_certs: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "DigitalOcean Floating IPs information",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean images": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_image_info",
+            "Gather information about DigitalOcean images"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_image_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    image_type: ${3|all,application,distribution,private|}",
+            "    oauth_token: ${4:string}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean images",
+        "scope": "ansible"
+    },
+    "Create and delete a DigitalOcean Kubernetes cluster": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_kubernetes",
+            "Create and delete a DigitalOcean Kubernetes cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_kubernetes:",
+            "    auto_upgrade: ${2|false,true|}",
+            "    ha: ${3|false,true|}",
+            "    name: ${5:string}",
+            "    node_pools:",
+            "      - ${6:element}",
+            "    oauth_token: ${7:string}",
+            "    region: ${8:nyc1}",
+            "    return_kubeconfig: ${9|false,true|}",
+            "    state: ${10|present,absent|}",
+            "    surge_upgrade: ${11|false,true|}",
+            "    tags:",
+            "      - ${12:element}",
+            "    version: ${13:latest}",
+            "    vpc_uuid: ${14:string}",
+            "    wait: ${15|true,false|}",
+            "    wait_timeout: ${16:600}",
+            "$0"
+        ],
+        "description": "Create and delete a DigitalOcean Kubernetes cluster",
+        "scope": "ansible"
+    },
+    "Returns information about an existing DigitalOcean Kubernetes cluster": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_kubernetes_info",
+            "Returns information about an existing DigitalOcean Kubernetes cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_kubernetes_info:",
+            "    name: ${2:string}",
+            "    oauth_token: ${3:string}",
+            "    return_kubeconfig: ${4|false,true|}",
+            "$0"
+        ],
+        "description": "Returns information about an existing DigitalOcean Kubernetes cluster",
+        "scope": "ansible"
+    },
+    "Manage DigitalOcean Load Balancers": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_load_balancer",
+            "Manage DigitalOcean Load Balancers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_load_balancer:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    droplet_ids:",
+            "      - ${3:element}",
+            "    enable_backend_keepalive: ${4|false,true|}",
+            "    enable_proxy_protocol: ${5|false,true|}",
+            "    forwarding_rules:",
+            "      - ${6:element}",
+            "    name: ${8:string}",
+            "    oauth_token: ${9:string}",
+            "    project_name: ${10:}",
+            "    redirect_http_to_https: ${11|false,true|}",
+            "    region: ${12:string}",
+            "    size: ${13|lb-small,lb-medium,lb-large|}",
+            "    size_unit: ${14:1}",
+            "    state: ${15|present,absent|}",
+            "    tag: ${17:string}",
+            "    timeout: ${18:30}",
+            "    validate_certs: ${19|true,false|}",
+            "    vpc_uuid: ${20:string}",
+            "    wait: ${21|true,false|}",
+            "    wait_timeout: ${22:600}",
+            "$0"
+        ],
+        "description": "Manage DigitalOcean Load Balancers",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean load balancers": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_load_balancer_info",
+            "Gather information about DigitalOcean load balancers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_load_balancer_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    load_balancer_id: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean load balancers",
+        "scope": "ansible"
+    },
+    "Programmatically retrieve metrics as well as configure alert policies based on these metrics": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_monitoring_alerts_info",
+            "Programmatically retrieve metrics as well as configure alert policies based on these metrics"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_monitoring_alerts_info:",
+            "    oauth_token: ${2:string}",
+            "    state: ${3|present|}",
+            "    uuid: ${4:string}",
+            "$0"
+        ],
+        "description": "Programmatically retrieve metrics as well as configure alert policies based on these metrics",
+        "scope": "ansible"
+    },
+    "Manage a DigitalOcean project": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_project",
+            "Manage a DigitalOcean project"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_project:",
+            "    description: ${2:string}",
+            "    environment: ${3:string}",
+            "    id: ${4:string}",
+            "    is_default: ${5|false,true|}",
+            "    name: ${6:string}",
+            "    oauth_token: ${7:string}",
+            "    purpose: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage a DigitalOcean project",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean Projects": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_project_info",
+            "Gather information about DigitalOcean Projects"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_project_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    id: ${3:string}",
+            "    name: ${4:string}",
+            "    oauth_token: ${5:string}",
+            "    timeout: ${6:30}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean Projects",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean regions": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_region_info",
+            "Gather information about DigitalOcean regions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_region_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    timeout: ${4:30}",
+            "    validate_certs: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean regions",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean Droplet sizes": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_size_info",
+            "Gather information about DigitalOcean Droplet sizes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_size_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    timeout: ${4:30}",
+            "    validate_certs: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean Droplet sizes",
+        "scope": "ansible"
+    },
+    "Create and delete DigitalOcean snapshots": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_snapshot",
+            "Create and delete DigitalOcean snapshots"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_snapshot:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    droplet_id: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    snapshot_id: ${5:string}",
+            "    snapshot_name: ${6:string}",
+            "    snapshot_tags:",
+            "      - ${7:element}",
+            "    snapshot_type: ${8|droplet,volume|}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:30}",
+            "    validate_certs: ${11|true,false|}",
+            "    volume_id: ${12:string}",
+            "    wait: ${13|true,false|}",
+            "    wait_timeout: ${14:120}",
+            "$0"
+        ],
+        "description": "Create and delete DigitalOcean snapshots",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean Snapshot": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_snapshot_info",
+            "Gather information about DigitalOcean Snapshot"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_snapshot_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    snapshot_id: ${4:string}",
+            "    snapshot_type: ${5|all,droplet,volume,by_id|}",
+            "    timeout: ${6:30}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean Snapshot",
+        "scope": "ansible"
+    },
+    "Create and remove DigitalOcean Spaces.": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_spaces",
+            "Create and remove DigitalOcean Spaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_spaces:",
+            "    aws_access_key_id: ${2:string}",
+            "    aws_secret_access_key: ${3:string}",
+            "    baseurl: ${4:https://api.digitalocean.com/v2}",
+            "    name: ${5:string}",
+            "    oauth_token: ${6:string}",
+            "    region: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    timeout: ${9:30}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Create and remove DigitalOcean Spaces.",
+        "scope": "ansible"
+    },
+    "List DigitalOcean Spaces.": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_spaces_info",
+            "List DigitalOcean Spaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_spaces_info:",
+            "    aws_access_key_id: ${2:string}",
+            "    aws_secret_access_key: ${3:string}",
+            "    baseurl: ${4:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${5:string}",
+            "    region: ${6:string}",
+            "    state: ${7|present|}",
+            "    timeout: ${8:30}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "List DigitalOcean Spaces.",
+        "scope": "ansible"
+    },
+    "Manage DigitalOcean SSH keys": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_sshkey",
+            "Manage DigitalOcean SSH keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_sshkey:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    fingerprint: ${3:string}",
+            "    name: ${4:string}",
+            "    oauth_token: ${5:string}",
+            "    ssh_pub_key: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    timeout: ${8:30}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage DigitalOcean SSH keys",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean SSH keys": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_sshkey_info",
+            "Gather information about DigitalOcean SSH keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_sshkey_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    timeout: ${4:30}",
+            "    validate_certs: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean SSH keys",
+        "scope": "ansible"
+    },
+    "Create and remove tag(s) to DigitalOcean resource.": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_tag",
+            "Create and remove tag(s) to DigitalOcean resource."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_tag:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    name: ${3:string}",
+            "    oauth_token: ${4:string}",
+            "    resource_id: ${5:string}",
+            "    resource_type: ${6|droplet|}",
+            "    state: ${7|present,absent|}",
+            "    timeout: ${8:30}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Create and remove tag(s) to DigitalOcean resource.",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean tags": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_tag_info",
+            "Gather information about DigitalOcean tags"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_tag_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    tag_name: ${4:string}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean tags",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean volumes": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_volume_info",
+            "Gather information about DigitalOcean volumes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_volume_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    oauth_token: ${3:string}",
+            "    region_name: ${4:string}",
+            "    timeout: ${5:30}",
+            "    validate_certs: ${6|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean volumes",
+        "scope": "ansible"
+    },
+    "Create and delete DigitalOcean VPCs": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_vpc",
+            "Create and delete DigitalOcean VPCs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_vpc:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    default: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    ip_range: ${5:string}",
+            "    name: ${6:string}",
+            "    oauth_token: ${7:string}",
+            "    region: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:30}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Create and delete DigitalOcean VPCs",
+        "scope": "ansible"
+    },
+    "Gather information about DigitalOcean VPCs": {
+        "prefix": [
+            "community.digitalocean.digital_ocean_vpc_info",
+            "Gather information about DigitalOcean VPCs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.digitalocean.digital_ocean_vpc_info:",
+            "    baseurl: ${2:https://api.digitalocean.com/v2}",
+            "    members: ${3|false,true|}",
+            "    name: ${4:string}",
+            "    oauth_token: ${5:string}",
+            "    timeout: ${6:30}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about DigitalOcean VPCs",
+        "scope": "ansible"
+    }
+}

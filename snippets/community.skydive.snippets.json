@@ -1,0 +1,48 @@
+{
+    "Module which manages flow capture on interfaces": {
+        "prefix": [
+            "community.skydive.skydive_capture",
+            "Module which manages flow capture on interfaces"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.skydive.skydive_capture:",
+            "    extra_tcp_metric: ${4|false,true|}",
+            "    ip_defrag: ${6|false,true|}",
+            "    layer_key_mode: ${7:L2}",
+            "    reassemble_tcp: ${10|false,true|}",
+            "$0"
+        ],
+        "description": "Module which manages flow capture on interfaces",
+        "scope": "ansible"
+    },
+    "Module to add edges to Skydive topology": {
+        "prefix": [
+            "community.skydive.skydive_edge",
+            "Module to add edges to Skydive topology"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.skydive.skydive_edge:",
+            "$0"
+        ],
+        "description": "Module to add edges to Skydive topology",
+        "scope": "ansible"
+    },
+    "Module which add nodes to Skydive topology": {
+        "prefix": [
+            "community.skydive.skydive_node",
+            "Module which add nodes to Skydive topology"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.skydive.skydive_node:",
+            "$0"
+        ],
+        "description": "Module which add nodes to Skydive topology",
+        "scope": "ansible"
+    }
+}

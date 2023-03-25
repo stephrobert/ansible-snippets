@@ -1,0 +1,1746 @@
+{
+    "Module to manage affinity groups in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_affinity_group",
+            "Module to manage affinity groups in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_affinity_group:",
+            "    cluster: ${3:string}",
+            "    description: ${4:string}",
+            "    fetch_nested: ${5|false,true|}",
+            "    host_enforcing: ${6|false,true|}",
+            "    host_rule: ${7:string}",
+            "    hosts:",
+            "      - ${8:element}",
+            "    hosts_labels:",
+            "      - ${9:element}",
+            "    name: ${10:string}",
+            "    nested_attributes:",
+            "      - ${11:element}",
+            "    poll_interval: ${12:3}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:180}",
+            "    vm_enforcing: ${15|false,true|}",
+            "    vm_rule: ${16:string}",
+            "    vms:",
+            "      - ${17:element}",
+            "    vms_labels:",
+            "      - ${18:element}",
+            "    wait: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage affinity groups in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Module to manage affinity labels in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_affinity_label",
+            "Module to manage affinity labels in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_affinity_label:",
+            "    cluster: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    hosts:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    poll_interval: ${8:3}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:180}",
+            "    vms:",
+            "      - ${11:element}",
+            "    wait: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage affinity labels in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV affinity labels": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_affinity_label_info",
+            "Retrieve information about one or more oVirt/RHV affinity labels"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_affinity_label_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    host: ${5:string}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    vm: ${8:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV affinity labels",
+        "scope": "ansible"
+    },
+    "Retrieve information about the oVirt/RHV API": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_api_info",
+            "Retrieve information about the oVirt/RHV API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_api_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "$0"
+        ],
+        "description": "Retrieve information about the oVirt/RHV API",
+        "scope": "ansible"
+    },
+    "Module to manage authentication to oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_auth",
+            "Module to manage authentication to oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_auth:",
+            "    ca_file: ${2:path}",
+            "    compress: ${3|true,false|}",
+            "    hostname: ${5:string}",
+            "    insecure: ${6|false,true|}",
+            "    kerberos: ${7|false,true|}",
+            "    password: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    timeout: ${11:int}",
+            "    token: ${12:string}",
+            "    url: ${13:string}",
+            "    username: ${14:string}",
+            "$0"
+        ],
+        "description": "Module to manage authentication to oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Module to manage clusters in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_cluster",
+            "Module to manage clusters in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_cluster:",
+            "    ballooning: ${3|false,true|}",
+            "    comment: ${4:string}",
+            "    compatibility_version: ${5:string}",
+            "    cpu_arch: ${6:string}",
+            "    cpu_type: ${7:string}",
+            "    data_center: ${8:string}",
+            "    description: ${9:string}",
+            "    external_network_providers:",
+            "      - ${10:element}",
+            "    fence_connectivity_threshold: ${11:int}",
+            "    fence_enabled: ${12|false,true|}",
+            "    fence_skip_if_connectivity_broken: ${13|false,true|}",
+            "    fence_skip_if_gluster_bricks_up: ${14|false,true|}",
+            "    fence_skip_if_gluster_quorum_not_met: ${15|false,true|}",
+            "    fence_skip_if_sd_active: ${16|false,true|}",
+            "    fetch_nested: ${17|false,true|}",
+            "    firewall_type: ${18:string}",
+            "    gluster: ${19|false,true|}",
+            "    gluster_tuned_profile: ${20:string}",
+            "    ha_reservation: ${21|false,true|}",
+            "    host_reason: ${22|false,true|}",
+            "    id: ${23:string}",
+            "    ksm: ${24|false,true|}",
+            "    ksm_numa: ${25|false,true|}",
+            "    mac_pool: ${26:string}",
+            "    memory_policy: ${27:string}",
+            "    migration_auto_converge: ${28:string}",
+            "    migration_bandwidth: ${29:string}",
+            "    migration_bandwidth_limit: ${30:int}",
+            "    migration_compressed: ${31:string}",
+            "    migration_encrypted: ${32:string}",
+            "    migration_policy: ${33:string}",
+            "    name: ${34:string}",
+            "    nested_attributes:",
+            "      - ${35:element}",
+            "    network: ${36:string}",
+            "    poll_interval: ${37:3}",
+            "    resilience_policy: ${38:string}",
+            "    rng_sources:",
+            "      - ${39:element}",
+            "    scheduling_policy: ${40:string}",
+            "    scheduling_policy_properties:",
+            "      - ${41:element}",
+            "    serial_policy: ${42:string}",
+            "    serial_policy_value: ${43:string}",
+            "    spice_proxy: ${44:string}",
+            "    state: ${45|present,absent|}",
+            "    switch_type: ${46:string}",
+            "    threads_as_cores: ${47|false,true|}",
+            "    timeout: ${48:180}",
+            "    trusted_service: ${49|false,true|}",
+            "    virt: ${50|false,true|}",
+            "    vm_reason: ${51|false,true|}",
+            "    wait: ${52|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage clusters in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV clusters": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_cluster_info",
+            "Retrieve information about one or more oVirt/RHV clusters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_cluster_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV clusters",
+        "scope": "ansible"
+    },
+    "Module to manage data centers in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_datacenter",
+            "Module to manage data centers in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_datacenter:",
+            "    comment: ${3:string}",
+            "    compatibility_version: ${4:string}",
+            "    description: ${5:string}",
+            "    fetch_nested: ${6|false,true|}",
+            "    force: ${7|false,true|}",
+            "    id: ${8:string}",
+            "    iscsi_bonds:",
+            "      - ${9:element}",
+            "    local: ${10|false,true|}",
+            "    mac_pool: ${11:string}",
+            "    name: ${12:string}",
+            "    nested_attributes:",
+            "      - ${13:element}",
+            "    poll_interval: ${14:3}",
+            "    quota_mode: ${15:string}",
+            "    state: ${16|present,absent|}",
+            "    timeout: ${17:180}",
+            "    wait: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage data centers in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV datacenters": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_datacenter_info",
+            "Retrieve information about one or more oVirt/RHV datacenters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_datacenter_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV datacenters",
+        "scope": "ansible"
+    },
+    "Module to manage Virtual Machine and floating disks in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_disk",
+            "Module to manage Virtual Machine and floating disks in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_disk:",
+            "    activate: ${2|false,true|}",
+            "    backup: ${4:string}",
+            "    bootable: ${5|false,true|}",
+            "    content_type: ${6|data,iso,hosted_engine,hosted_engine_sanlock,hosted_engine_metadata,hosted_engine_configuration|}",
+            "    description: ${7:string}",
+            "    download_image_path: ${8:string}",
+            "    fetch_nested: ${9|false,true|}",
+            "    force: ${10|false,true|}",
+            "    format: ${11|cow,raw|}",
+            "    host: ${12:string}",
+            "    id: ${13:string}",
+            "    image_provider: ${14:string}",
+            "    interface: ${15:string}",
+            "    max_workers: ${17:int}",
+            "    name: ${18:string}",
+            "    nested_attributes:",
+            "      - ${19:element}",
+            "    openstack_volume_type: ${20:string}",
+            "    pass_discard: ${21|false,true|}",
+            "    poll_interval: ${22:3}",
+            "    profile: ${23:string}",
+            "    propagate_errors: ${24|false,true|}",
+            "    quota_id: ${25:string}",
+            "    read_only: ${26|false,true|}",
+            "    scsi_passthrough: ${27:string}",
+            "    shareable: ${28|false,true|}",
+            "    size: ${29:string}",
+            "    sparse: ${30|false,true|}",
+            "    sparsify: ${31|false,true|}",
+            "    state: ${32|present,absent,attached,detached,exported,imported|}",
+            "    storage_domain: ${33:string}",
+            "    storage_domains:",
+            "      - ${34:element}",
+            "    timeout: ${35:180}",
+            "    upload_image_path: ${36:string}",
+            "    uses_scsi_reservation: ${37|false,true|}",
+            "    vm_id: ${38:string}",
+            "    vm_name: ${39:string}",
+            "    wait: ${40|true,false|}",
+            "    wipe_after_delete: ${41|false,true|}",
+            "$0"
+        ],
+        "description": "Module to manage Virtual Machine and floating disks in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV disks": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_disk_info",
+            "Retrieve information about one or more oVirt/RHV disks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_disk_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV disks",
+        "scope": "ansible"
+    },
+    "Module to manage storage domain disk profiles in ovirt": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_disk_profile",
+            "Module to manage storage domain disk profiles in ovirt"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_disk_profile:",
+            "    comment: ${3:string}",
+            "    data_center: ${4:string}",
+            "    description: ${5:string}",
+            "    fetch_nested: ${6|false,true|}",
+            "    id: ${7:string}",
+            "    name: ${8:string}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    poll_interval: ${10:3}",
+            "    qos: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    storage_domain: ${13:string}",
+            "    timeout: ${14:180}",
+            "    wait: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage storage domain disk profiles in ovirt",
+        "scope": "ansible"
+    },
+    "Create or delete an event in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_event",
+            "Create or delete an event in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_event:",
+            "    cluster: ${3:string}",
+            "    correlation_id: ${4:string}",
+            "    custom_id: ${5:int}",
+            "    data_center: ${6:string}",
+            "    description: ${7:string}",
+            "    fetch_nested: ${8|false,true|}",
+            "    host: ${9:string}",
+            "    id: ${10:string}",
+            "    nested_attributes:",
+            "      - ${11:element}",
+            "    origin: ${12:string}",
+            "    poll_interval: ${13:3}",
+            "    severity: ${14|normal,error,warning|}",
+            "    state: ${15|present,absent|}",
+            "    storage_domain: ${16:string}",
+            "    template: ${17:string}",
+            "    timeout: ${18:180}",
+            "    user: ${19:string}",
+            "    vm: ${20:string}",
+            "    wait: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Create or delete an event in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "This module can be used to retrieve information about one or more oVirt/RHV events": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_event_info",
+            "This module can be used to retrieve information about one or more oVirt/RHV events"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_event_info:",
+            "    case_sensitive: ${3|true,false|}",
+            "    fetch_nested: ${4|false,true|}",
+            "    follow:",
+            "      - ${5:element}",
+            "    from_: ${6:int}",
+            "    headers: ${7:string}",
+            "    max: ${8:int}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    query: ${10:string}",
+            "    search: ${11:string}",
+            "    wait: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "This module can be used to retrieve information about one or more oVirt/RHV events",
+        "scope": "ansible"
+    },
+    "Module to manage external providers in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_external_provider",
+            "Module to manage external providers in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_external_provider:",
+            "    authentication_keys:",
+            "      - ${3:element}",
+            "    authentication_url: ${4:string}",
+            "    data_center: ${5:string}",
+            "    description: ${6:string}",
+            "    fetch_nested: ${7|false,true|}",
+            "    name: ${8:string}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    network_type: ${10|external,neutron|}",
+            "    password: ${11:string}",
+            "    poll_interval: ${12:3}",
+            "    read_only: ${13|false,true|}",
+            "    state: ${14|present,absent|}",
+            "    tenant_name: ${15:string}",
+            "    timeout: ${16:180}",
+            "    type: ${17:string}",
+            "    url: ${18:string}",
+            "    username: ${19:string}",
+            "    wait: ${20|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage external providers in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV external providers": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_external_provider_info",
+            "Retrieve information about one or more oVirt/RHV external providers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_external_provider_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    nested_attributes:",
+            "      - ${6:element}",
+            "    type: ${7:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV external providers",
+        "scope": "ansible"
+    },
+    "Module to manage groups in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_group",
+            "Module to manage groups in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_group:",
+            "    authz_name: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    name: ${5:string}",
+            "    namespace: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    poll_interval: ${8:3}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:180}",
+            "    wait: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage groups in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV groups": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_group_info",
+            "Retrieve information about one or more oVirt/RHV groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_group_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV groups",
+        "scope": "ansible"
+    },
+    "Module to manage hosts in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_host",
+            "Module to manage hosts in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_host:",
+            "    activate: ${2|true,false|}",
+            "    address: ${3:string}",
+            "    check_upgrade: ${5|true,false|}",
+            "    cluster: ${6:string}",
+            "    comment: ${7:string}",
+            "    enroll_certificate: ${8|false,true|}",
+            "    fetch_nested: ${9|false,true|}",
+            "    force: ${10|false,true|}",
+            "    hosted_engine: ${11:string}",
+            "    id: ${12:string}",
+            "    kdump_integration: ${14:string}",
+            "    kernel_params:",
+            "      - ${15:element}",
+            "    name: ${16:string}",
+            "    nested_attributes:",
+            "      - ${17:element}",
+            "    override_display: ${18:string}",
+            "    override_iptables: ${19|false,true|}",
+            "    password: ${20:string}",
+            "    poll_interval: ${21:3}",
+            "    power_management_enabled: ${22|false,true|}",
+            "    public_key: ${23|false,true|}",
+            "    reboot_after_installation: ${24|false,true|}",
+            "    reboot_after_upgrade: ${25|true,false|}",
+            "    spm_priority: ${26:int}",
+            "    ssh_port: ${27:int}",
+            "    state: ${28|present,absent,maintenance,upgraded,started,restarted,stopped,reinstalled,iscsidiscover,iscsilogin|}",
+            "    timeout: ${29:600}",
+            "    vgpu_placement: ${30:string}",
+            "    wait: ${31|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage hosts in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV hosts": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_host_info",
+            "Retrieve information about one or more oVirt/RHV hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_host_info:",
+            "    all_content: ${2|false,true|}",
+            "    cluster_version: ${4:string}",
+            "    fetch_nested: ${5|false,true|}",
+            "    follow:",
+            "      - ${6:element}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    pattern: ${8:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV hosts",
+        "scope": "ansible"
+    },
+    "Module to manage host networks in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_host_network",
+            "Module to manage host networks in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_host_network:",
+            "    check: ${4|false,true|}",
+            "    fetch_nested: ${5|false,true|}",
+            "    interface: ${6:string}",
+            "    labels:",
+            "      - ${7:element}",
+            "    name: ${8:string}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    networks:",
+            "      - ${10:element}",
+            "    poll_interval: ${11:3}",
+            "    save: ${12|true,false|}",
+            "    state: ${13|present,absent|}",
+            "    sync_networks: ${14|false,true|}",
+            "    timeout: ${15:180}",
+            "    wait: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage host networks in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Module to manage power management of hosts in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_host_pm",
+            "Module to manage power management of hosts in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_host_pm:",
+            "    address: ${2:string}",
+            "    encrypt_options: ${4|false,true|}",
+            "    fetch_nested: ${5|false,true|}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    order: ${9:int}",
+            "    password: ${10:string}",
+            "    poll_interval: ${11:3}",
+            "    port: ${12:int}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:180}",
+            "    type: ${15:string}",
+            "    username: ${16:string}",
+            "    wait: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage power management of hosts in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV HostStorages (applicable only for block storage)": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_host_storage_info",
+            "Retrieve information about one or more oVirt/RHV HostStorages (applicable only for block storage)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_host_storage_info:",
+            "    fetch_nested: ${4|false,true|}",
+            "    follow:",
+            "      - ${5:element}",
+            "    host: ${6:string}",
+            "    nested_attributes:",
+            "      - ${8:element}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV HostStorages (applicable only for block storage)",
+        "scope": "ansible"
+    },
+    "Module to manage Instance Types in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_instance_type",
+            "Module to manage Instance Types in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_instance_type:",
+            "    ballooning_enabled: ${3|false,true|}",
+            "    boot_devices:",
+            "      - ${4:element}",
+            "    cpu_cores: ${5:int}",
+            "    cpu_mode: ${6:string}",
+            "    cpu_pinning:",
+            "      - ${7:element}",
+            "    cpu_sockets: ${8:int}",
+            "    cpu_threads: ${9:int}",
+            "    description: ${10:string}",
+            "    fetch_nested: ${11|false,true|}",
+            "    high_availability: ${13|false,true|}",
+            "    high_availability_priority: ${14:int}",
+            "    host: ${15:string}",
+            "    id: ${16:string}",
+            "    io_threads: ${17:int}",
+            "    memory: ${18:string}",
+            "    memory_guaranteed: ${19:string}",
+            "    memory_max: ${20:string}",
+            "    name: ${21:string}",
+            "    nested_attributes:",
+            "      - ${22:element}",
+            "    nics:",
+            "      - ${23:element}",
+            "    operating_system: ${24:string}",
+            "    placement_policy: ${25:string}",
+            "    poll_interval: ${26:3}",
+            "    rng_bytes: ${27:int}",
+            "    rng_device: ${28:string}",
+            "    rng_period: ${29:int}",
+            "    serial_console: ${30|false,true|}",
+            "    smartcard_enabled: ${31|false,true|}",
+            "    soundcard_enabled: ${32|false,true|}",
+            "    state: ${33|present,absent|}",
+            "    timeout: ${34:180}",
+            "    usb_support: ${35|false,true|}",
+            "    virtio_scsi: ${36|false,true|}",
+            "    wait: ${37|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage Instance Types in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Module to manage jobs in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_job",
+            "Module to manage jobs in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_job:",
+            "    description: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    poll_interval: ${6:3}",
+            "    state: ${7|present,absent,started,finished,failed|}",
+            "    steps:",
+            "      - ${8:element}",
+            "    timeout: ${9:180}",
+            "    wait: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage jobs in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Module to manage MAC pools in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_mac_pool",
+            "Module to manage MAC pools in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_mac_pool:",
+            "    allow_duplicates: ${2|false,true|}",
+            "    description: ${4:string}",
+            "    fetch_nested: ${5|false,true|}",
+            "    id: ${6:string}",
+            "    name: ${7:string}",
+            "    nested_attributes:",
+            "      - ${8:element}",
+            "    poll_interval: ${9:3}",
+            "    ranges:",
+            "      - ${10:element}",
+            "    state: ${11|present,absent|}",
+            "    timeout: ${12:180}",
+            "    wait: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage MAC pools in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Module to manage logical networks in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_network",
+            "Module to manage logical networks in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_network:",
+            "    clusters:",
+            "      - ${3:element}",
+            "    comment: ${4:string}",
+            "    data_center: ${5:string}",
+            "    description: ${6:string}",
+            "    external_provider: ${7:string}",
+            "    fetch_nested: ${8|false,true|}",
+            "    id: ${9:string}",
+            "    label: ${10:string}",
+            "    mtu: ${11:int}",
+            "    name: ${12:string}",
+            "    nested_attributes:",
+            "      - ${13:element}",
+            "    poll_interval: ${14:3}",
+            "    state: ${15|present,absent|}",
+            "    timeout: ${16:180}",
+            "    vlan_tag: ${17:int}",
+            "    vm_network: ${18|false,true|}",
+            "    wait: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage logical networks in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV networks": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_network_info",
+            "Retrieve information about one or more oVirt/RHV networks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_network_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV networks",
+        "scope": "ansible"
+    },
+    "Module to manage network interfaces of Virtual Machines in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_nic",
+            "Module to manage network interfaces of Virtual Machines in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_nic:",
+            "    fetch_nested: ${3|false,true|}",
+            "    id: ${4:string}",
+            "    interface: ${5:string}",
+            "    linked: ${6|false,true|}",
+            "    mac_address: ${7:string}",
+            "    name: ${8:string}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    network: ${10:string}",
+            "    poll_interval: ${11:3}",
+            "    profile: ${12:string}",
+            "    state: ${13|present,absent,plugged,unplugged|}",
+            "    template: ${14:string}",
+            "    template_version: ${15:int}",
+            "    timeout: ${16:180}",
+            "    vm: ${17:string}",
+            "    wait: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage network interfaces of Virtual Machines in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV virtual machine network interfaces": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_nic_info",
+            "Retrieve information about one or more oVirt/RHV virtual machine network interfaces"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_nic_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    nested_attributes:",
+            "      - ${6:element}",
+            "    template: ${7:string}",
+            "    vm: ${8:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV virtual machine network interfaces",
+        "scope": "ansible"
+    },
+    "Module to manage permissions of users/groups in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_permission",
+            "Module to manage permissions of users/groups in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_permission:",
+            "    authz_name: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    group_name: ${5:string}",
+            "    namespace: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    object_id: ${8:string}",
+            "    object_name: ${9:string}",
+            "    object_type: ${10|vm,cluster,cpu_profile,data_center,disk,disk_profile,host,network,storage_domain,system,template,vm_pool,vnic_profile,mac_pool|}",
+            "    poll_interval: ${11:3}",
+            "    quota_name: ${12:string}",
+            "    role: ${13:UserRole}",
+            "    state: ${14|present,absent|}",
+            "    timeout: ${15:180}",
+            "    user_name: ${16:string}",
+            "    wait: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage permissions of users/groups in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV permissions": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_permission_info",
+            "Retrieve information about one or more oVirt/RHV permissions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_permission_info:",
+            "    authz_name: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    follow:",
+            "      - ${5:element}",
+            "    group_name: ${6:string}",
+            "    namespace: ${7:string}",
+            "    nested_attributes:",
+            "      - ${8:element}",
+            "    user_name: ${9:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV permissions",
+        "scope": "ansible"
+    },
+    "Module to manage QoS entries in ovirt": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_qos",
+            "Module to manage QoS entries in ovirt"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_qos:",
+            "    cpu_limit: ${3:int}",
+            "    data_center: ${4:string}",
+            "    description: ${5:string}",
+            "    fetch_nested: ${6|false,true|}",
+            "    id: ${7:string}",
+            "    inbound_average: ${8:int}",
+            "    inbound_burst: ${9:int}",
+            "    inbound_peak: ${10:int}",
+            "    max_iops: ${11:int}",
+            "    max_throughput: ${12:int}",
+            "    name: ${13:string}",
+            "    nested_attributes:",
+            "      - ${14:element}",
+            "    outbound_average: ${15:int}",
+            "    outbound_average_linkshare: ${16:int}",
+            "    outbound_average_realtime: ${17:int}",
+            "    outbound_average_upperlimit: ${18:int}",
+            "    outbound_burst: ${19:int}",
+            "    outbound_peak: ${20:int}",
+            "    poll_interval: ${21:3}",
+            "    read_iops: ${22:int}",
+            "    read_throughput: ${23:int}",
+            "    state: ${24|present,absent|}",
+            "    timeout: ${25:180}",
+            "    type: ${26:string}",
+            "    wait: ${27|true,false|}",
+            "    write_iops: ${28:int}",
+            "    write_throughput: ${29:int}",
+            "$0"
+        ],
+        "description": "Module to manage QoS entries in ovirt",
+        "scope": "ansible"
+    },
+    "Module to manage datacenter quotas in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_quota",
+            "Module to manage datacenter quotas in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_quota:",
+            "    cluster_grace: ${3:int}",
+            "    cluster_threshold: ${4:int}",
+            "    clusters:",
+            "      - ${5:element}",
+            "    data_center: ${6:string}",
+            "    description: ${7:string}",
+            "    fetch_nested: ${8|false,true|}",
+            "    id: ${9:string}",
+            "    name: ${10:string}",
+            "    nested_attributes:",
+            "      - ${11:element}",
+            "    poll_interval: ${12:3}",
+            "    state: ${13|present,absent|}",
+            "    storage_grace: ${14:int}",
+            "    storage_threshold: ${15:int}",
+            "    storages:",
+            "      - ${16:element}",
+            "    timeout: ${17:180}",
+            "    wait: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage datacenter quotas in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV quotas": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_quota_info",
+            "Retrieve information about one or more oVirt/RHV quotas"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_quota_info:",
+            "    data_center: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    follow:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV quotas",
+        "scope": "ansible"
+    },
+    "Module to manage roles in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_role",
+            "Module to manage roles in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_role:",
+            "    administrative: ${2|false,true|}",
+            "    description: ${4:string}",
+            "    fetch_nested: ${5|false,true|}",
+            "    id: ${6:string}",
+            "    name: ${7:string}",
+            "    nested_attributes:",
+            "      - ${8:element}",
+            "    permits:",
+            "      - ${9:element}",
+            "    poll_interval: ${10:3}",
+            "    state: ${11|present,absent|}",
+            "    timeout: ${12:180}",
+            "    wait: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage roles in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt scheduling policies": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_scheduling_policy_info",
+            "Retrieve information about one or more oVirt scheduling policies"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_scheduling_policy_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    id: ${5:string}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt scheduling policies",
+        "scope": "ansible"
+    },
+    "Module to manage Virtual Machine Snapshots in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_snapshot",
+            "Module to manage Virtual Machine Snapshots in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_snapshot:",
+            "    description: ${3:string}",
+            "    disk_id: ${4:string}",
+            "    disk_name: ${5:string}",
+            "    disks:",
+            "      - ${6:element}",
+            "    download_image_path: ${7:string}",
+            "    fetch_nested: ${8|false,true|}",
+            "    keep_days_old: ${9:int}",
+            "    nested_attributes:",
+            "      - ${10:element}",
+            "    poll_interval: ${11:3}",
+            "    snapshot_id: ${12:string}",
+            "    state: ${13|present,restore,absent|}",
+            "    timeout: ${14:180}",
+            "    upload_image_path: ${15:string}",
+            "    use_memory: ${16|false,true|}",
+            "    vm_id: ${17:string}",
+            "    vm_name: ${18:string}",
+            "    wait: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage Virtual Machine Snapshots in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV virtual machine snapshots": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_snapshot_info",
+            "Retrieve information about one or more oVirt/RHV virtual machine snapshots"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_snapshot_info:",
+            "    description: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    follow:",
+            "      - ${5:element}",
+            "    nested_attributes:",
+            "      - ${6:element}",
+            "    snapshot_id: ${7:string}",
+            "    vm: ${8:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV virtual machine snapshots",
+        "scope": "ansible"
+    },
+    "Module to manage storage connections in oVirt": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_storage_connection",
+            "Module to manage storage connections in oVirt"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_storage_connection:",
+            "    address: ${2:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    force: ${5|false,true|}",
+            "    id: ${6:string}",
+            "    mount_options: ${7:string}",
+            "    nested_attributes:",
+            "      - ${8:element}",
+            "    nfs_retrans: ${9:int}",
+            "    nfs_timeout: ${10:int}",
+            "    nfs_version: ${11:string}",
+            "    password: ${12:string}",
+            "    path: ${13:string}",
+            "    poll_interval: ${14:3}",
+            "    port: ${15:int}",
+            "    state: ${16|present,absent|}",
+            "    storage: ${17:string}",
+            "    target: ${18:string}",
+            "    timeout: ${19:180}",
+            "    type: ${20:string}",
+            "    username: ${21:string}",
+            "    vfs_type: ${22:string}",
+            "    wait: ${23|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage storage connections in oVirt",
+        "scope": "ansible"
+    },
+    "Module to manage storage domains in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_storage_domain",
+            "Module to manage storage domains in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_storage_domain:",
+            "    backup: ${3|false,true|}",
+            "    comment: ${4:string}",
+            "    critical_space_action_blocker: ${5:int}",
+            "    data_center: ${6:string}",
+            "    description: ${7:string}",
+            "    destroy: ${8|false,true|}",
+            "    discard_after_delete: ${9|false,true|}",
+            "    domain_function: ${10|data,iso,export|}",
+            "    fetch_nested: ${12|false,true|}",
+            "    format: ${13|false,true|}",
+            "    host: ${15:string}",
+            "    id: ${16:string}",
+            "    name: ${20:string}",
+            "    nested_attributes:",
+            "      - ${21:element}",
+            "    poll_interval: ${23:3}",
+            "    state: ${25|present,absent,maintenance,unattached,imported,update_ovf_store|}",
+            "    storage_format: ${26:string}",
+            "    timeout: ${27:180}",
+            "    wait: ${28|true,false|}",
+            "    warning_low_space: ${29:int}",
+            "    wipe_after_delete: ${30|false,true|}",
+            "$0"
+        ],
+        "description": "Module to manage storage domains in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV storage domains": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_storage_domain_info",
+            "Retrieve information about one or more oVirt/RHV storage domains"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_storage_domain_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV storage domains",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV templates relate to a storage domain.": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_storage_template_info",
+            "Retrieve information about one or more oVirt/RHV templates relate to a storage domain."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_storage_template_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    max: ${5:int}",
+            "    nested_attributes:",
+            "      - ${6:element}",
+            "    storage_domain: ${7:string}",
+            "    unregistered: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV templates relate to a storage domain.",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV virtual machines relate to a storage domain.": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_storage_vm_info",
+            "Retrieve information about one or more oVirt/RHV virtual machines relate to a storage domain."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_storage_vm_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    max: ${5:int}",
+            "    nested_attributes:",
+            "      - ${6:element}",
+            "    storage_domain: ${7:string}",
+            "    unregistered: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV virtual machines relate to a storage domain.",
+        "scope": "ansible"
+    },
+    "Retrieve information about one oVirt/RHV system options.": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_system_option_info",
+            "Retrieve information about one oVirt/RHV system options."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_system_option_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    nested_attributes:",
+            "      - ${6:element}",
+            "    version: ${7:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one oVirt/RHV system options.",
+        "scope": "ansible"
+    },
+    "Module to manage tags in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_tag",
+            "Module to manage tags in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_tag:",
+            "    description: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    hosts:",
+            "      - ${5:element}",
+            "    id: ${6:string}",
+            "    name: ${7:string}",
+            "    nested_attributes:",
+            "      - ${8:element}",
+            "    parent: ${9:string}",
+            "    poll_interval: ${10:3}",
+            "    state: ${11|present,absent,attached,detached|}",
+            "    timeout: ${12:180}",
+            "    vms:",
+            "      - ${13:element}",
+            "    wait: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage tags in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV tags": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_tag_info",
+            "Retrieve information about one or more oVirt/RHV tags"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_tag_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    host: ${5:string}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    vm: ${8:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV tags",
+        "scope": "ansible"
+    },
+    "Module to manage virtual machine templates in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_template",
+            "Module to manage virtual machine templates in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_template:",
+            "    allow_partial_import: ${2|false,true|}",
+            "    ballooning_enabled: ${4|false,true|}",
+            "    bios_type: ${5:string}",
+            "    boot_menu: ${6|false,true|}",
+            "    clone_name: ${7:string}",
+            "    clone_permissions: ${8|false,true|}",
+            "    cloud_init_nics:",
+            "      - ${10:element}",
+            "    cluster: ${11:string}",
+            "    cluster_mappings:",
+            "      - ${12:element}",
+            "    cpu_profile: ${13:string}",
+            "    description: ${14:string}",
+            "    domain_mappings:",
+            "      - ${15:element}",
+            "    exclusive: ${16|false,true|}",
+            "    export_domain: ${17:string}",
+            "    fetch_nested: ${18|false,true|}",
+            "    id: ${19:string}",
+            "    image_disk: ${20:string}",
+            "    image_provider: ${21:string}",
+            "    io_threads: ${22:int}",
+            "    memory: ${24:string}",
+            "    memory_guaranteed: ${25:string}",
+            "    memory_max: ${26:string}",
+            "    name: ${27:string}",
+            "    nested_attributes:",
+            "      - ${28:element}",
+            "    nics:",
+            "      - ${29:element}",
+            "    operating_system: ${30:string}",
+            "    poll_interval: ${31:3}",
+            "    role_mappings:",
+            "      - ${32:element}",
+            "    seal: ${33|false,true|}",
+            "    smartcard_enabled: ${34|false,true|}",
+            "    soundcard_enabled: ${35|false,true|}",
+            "    sso: ${36|false,true|}",
+            "    state: ${37|present,absent,exported,imported,registered|}",
+            "    storage_domain: ${38:string}",
+            "    template_image_disk_name: ${40:string}",
+            "    timeout: ${41:180}",
+            "    timezone: ${42:string}",
+            "    usb_support: ${43|false,true|}",
+            "    vm: ${45:string}",
+            "    vnic_profile_mappings:",
+            "      - ${46:element}",
+            "    wait: ${47|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage virtual machine templates in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV templates": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_template_info",
+            "Retrieve information about one or more oVirt/RHV templates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_template_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV templates",
+        "scope": "ansible"
+    },
+    "Module to manage users in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_user",
+            "Module to manage users in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_user:",
+            "    authz_name: ${3:string}",
+            "    fetch_nested: ${4|false,true|}",
+            "    name: ${5:string}",
+            "    namespace: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "    poll_interval: ${8:3}",
+            "    ssh_public_key: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    timeout: ${11:180}",
+            "    wait: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage users in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV users": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_user_info",
+            "Retrieve information about one or more oVirt/RHV users"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_user_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV users",
+        "scope": "ansible"
+    },
+    "Module to manage Virtual Machines in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_vm",
+            "Module to manage Virtual Machines in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_vm:",
+            "    affinity_group_mappings:",
+            "      - ${2:element}",
+            "    affinity_label_mappings:",
+            "      - ${3:element}",
+            "    allow_partial_import: ${4|false,true|}",
+            "    ballooning_enabled: ${6|false,true|}",
+            "    bios_type: ${7:string}",
+            "    boot_devices:",
+            "      - ${8:element}",
+            "    boot_menu: ${9|false,true|}",
+            "    cd_iso: ${10:string}",
+            "    clone: ${11|true,false|}",
+            "    clone_permissions: ${12|true,false|}",
+            "    cloud_init_nics:",
+            "      - ${14:element}",
+            "    cloud_init_persist: ${15|true,false|}",
+            "    cluster: ${16:string}",
+            "    cluster_mappings:",
+            "      - ${17:element}",
+            "    comment: ${18:string}",
+            "    cpu_cores: ${19:int}",
+            "    cpu_mode: ${20:string}",
+            "    cpu_pinning:",
+            "      - ${21:element}",
+            "    cpu_shares: ${22:int}",
+            "    cpu_sockets: ${23:int}",
+            "    cpu_threads: ${24:int}",
+            "    custom_compatibility_version: ${25:string}",
+            "    custom_emulated_machine: ${26:string}",
+            "    custom_properties:",
+            "      - ${27:element}",
+            "    delete_protected: ${28|false,true|}",
+            "    description: ${29:string}",
+            "    disk_format: ${30|cow,raw|}",
+            "    disks:",
+            "      - ${31:element}",
+            "    domain_mappings:",
+            "      - ${32:element}",
+            "    exclusive: ${33|false,true|}",
+            "    export_domain: ${34:string}",
+            "    fetch_nested: ${36|false,true|}",
+            "    force: ${37|true,false|}",
+            "    force_migrate: ${38|false,true|}",
+            "    high_availability: ${40|false,true|}",
+            "    high_availability_priority: ${41:int}",
+            "    host: ${42:string}",
+            "    host_devices:",
+            "      - ${43:element}",
+            "    id: ${44:string}",
+            "    initrd_path: ${45:string}",
+            "    instance_type: ${46:string}",
+            "    io_threads: ${47:int}",
+            "    kernel_params: ${48:string}",
+            "    kernel_params_persist: ${49|false,true|}",
+            "    kernel_path: ${50:string}",
+            "    lease: ${52:string}",
+            "    lun_mappings:",
+            "      - ${53:element}",
+            "    memory: ${54:string}",
+            "    memory_guaranteed: ${55:string}",
+            "    memory_max: ${56:string}",
+            "    migrate: ${57|false,true|}",
+            "    multi_queues_enabled: ${58|false,true|}",
+            "    name: ${59:string}",
+            "    nested_attributes:",
+            "      - ${60:element}",
+            "    next_run: ${61|false,true|}",
+            "    nics:",
+            "      - ${62:element}",
+            "    numa_nodes:",
+            "      - ${63:element}",
+            "    numa_tune_mode: ${64:string}",
+            "    operating_system: ${65:string}",
+            "    placement_policy: ${66:string}",
+            "    placement_policy_hosts:",
+            "      - ${67:element}",
+            "    poll_interval: ${68:3}",
+            "    quota_id: ${69:string}",
+            "    reassign_bad_macs: ${70|false,true|}",
+            "    rng_device: ${71:string}",
+            "    role_mappings:",
+            "      - ${72:element}",
+            "    serial_console: ${73|false,true|}",
+            "    serial_policy: ${74:string}",
+            "    serial_policy_value: ${75:string}",
+            "    smartcard_enabled: ${76|false,true|}",
+            "    snapshot_name: ${77:string}",
+            "    snapshot_vm: ${78:string}",
+            "    soundcard_enabled: ${79|false,true|}",
+            "    sso: ${80|false,true|}",
+            "    state: ${81|present,absent,next_run,registered,running,stopped,suspended,exported,reboot,reset|}",
+            "    stateless: ${82|false,true|}",
+            "    storage_domain: ${83:string}",
+            "    template: ${85:string}",
+            "    template_version: ${86:int}",
+            "    ticket: ${87|false,true|}",
+            "    timeout: ${88:180}",
+            "    timezone: ${89:string}",
+            "    type: ${90:string}",
+            "    usb_support: ${91|false,true|}",
+            "    use_latest_template_version: ${92|false,true|}",
+            "    virtio_scsi_enabled: ${93|false,true|}",
+            "    virtio_scsi_multi_queues: ${94:int}",
+            "    vnic_profile_mappings:",
+            "      - ${96:element}",
+            "    volatile: ${97|false,true|}",
+            "    wait: ${98|true,false|}",
+            "    wait_after_lease: ${99:5}",
+            "$0"
+        ],
+        "description": "Module to manage Virtual Machines in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV virtual machines": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_vm_info",
+            "Retrieve information about one or more oVirt/RHV virtual machines"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_vm_info:",
+            "    all_content: ${2|false,true|}",
+            "    case_sensitive: ${4|true,false|}",
+            "    current_cd: ${5|false,true|}",
+            "    fetch_nested: ${6|false,true|}",
+            "    follow:",
+            "      - ${7:element}",
+            "    max: ${8:int}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    next_run: ${10|false,true|}",
+            "    pattern: ${11:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV virtual machines",
+        "scope": "ansible"
+    },
+    "Retrieve information on all supported oVirt/RHV operating systems": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_vm_os_info",
+            "Retrieve information on all supported oVirt/RHV operating systems"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_vm_os_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    filter_keys:",
+            "      - ${4:element}",
+            "    follow:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "$0"
+        ],
+        "description": "Retrieve information on all supported oVirt/RHV operating systems",
+        "scope": "ansible"
+    },
+    "Module to manage VM pools in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_vmpool",
+            "Module to manage VM pools in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_vmpool:",
+            "    cluster: ${3:string}",
+            "    comment: ${4:string}",
+            "    description: ${5:string}",
+            "    fetch_nested: ${6|false,true|}",
+            "    id: ${7:string}",
+            "    name: ${8:string}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    poll_interval: ${10:3}",
+            "    prestarted: ${11:int}",
+            "    state: ${12|present,absent|}",
+            "    template: ${13:string}",
+            "    timeout: ${14:180}",
+            "    type: ${15:string}",
+            "    vm_count: ${17:int}",
+            "    vm_per_user: ${18:int}",
+            "    wait: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage VM pools in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV vmpools": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_vmpool_info",
+            "Retrieve information about one or more oVirt/RHV vmpools"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_vmpool_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    nested_attributes:",
+            "      - ${5:element}",
+            "    pattern: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV vmpools",
+        "scope": "ansible"
+    },
+    "Module to manage vNIC profile of network in oVirt/RHV": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_vnic_profile",
+            "Module to manage vNIC profile of network in oVirt/RHV"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_vnic_profile:",
+            "    custom_properties:",
+            "      - ${3:element}",
+            "    data_center: ${4:string}",
+            "    description: ${5:string}",
+            "    fetch_nested: ${6|false,true|}",
+            "    migratable: ${7|false,true|}",
+            "    name: ${8:string}",
+            "    nested_attributes:",
+            "      - ${9:element}",
+            "    network: ${10:string}",
+            "    network_filter: ${11:string}",
+            "    pass_through: ${12:string}",
+            "    poll_interval: ${13:3}",
+            "    port_mirroring: ${14|false,true|}",
+            "    qos: ${15:string}",
+            "    state: ${16|present,absent|}",
+            "    timeout: ${17:180}",
+            "    wait: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Module to manage vNIC profile of network in oVirt/RHV",
+        "scope": "ansible"
+    },
+    "Retrieve information about one or more oVirt/RHV vnic profiles": {
+        "prefix": [
+            "ovirt.ovirt.ovirt_vnic_profile_info",
+            "Retrieve information about one or more oVirt/RHV vnic profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ovirt.ovirt.ovirt_vnic_profile_info:",
+            "    fetch_nested: ${3|false,true|}",
+            "    follow:",
+            "      - ${4:element}",
+            "    max: ${5:int}",
+            "    name: ${6:string}",
+            "    nested_attributes:",
+            "      - ${7:element}",
+            "$0"
+        ],
+        "description": "Retrieve information about one or more oVirt/RHV vnic profiles",
+        "scope": "ansible"
+    }
+}

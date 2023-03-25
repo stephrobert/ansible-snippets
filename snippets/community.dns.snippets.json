@@ -1,0 +1,308 @@
+{
+    "Add or delete a single record in Hetzner DNS service": {
+        "prefix": [
+            "community.dns.hetzner_dns_record",
+            "Add or delete a single record in Hetzner DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hetzner_dns_record:",
+            "    hetzner_token: ${2:string}",
+            "    prefix: ${3:string}",
+            "    record: ${4:string}",
+            "    state: ${5:string}",
+            "    ttl: ${6:None}",
+            "    txt_character_encoding: ${7:string}",
+            "    txt_transformation: ${8|unquoted,api,quoted|}",
+            "    type: ${9:string}",
+            "    value: ${10:string}",
+            "    zone_id: ${11:string}",
+            "    zone_name: ${12:string}",
+            "$0"
+        ],
+        "description": "Add or delete a single record in Hetzner DNS service",
+        "scope": "ansible"
+    },
+    "Retrieve records in Hetzner DNS service": {
+        "prefix": [
+            "community.dns.hetzner_dns_record_info",
+            "Retrieve records in Hetzner DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hetzner_dns_record_info:",
+            "    hetzner_token: ${2:string}",
+            "    prefix: ${3:string}",
+            "    record: ${4:string}",
+            "    txt_character_encoding: ${5:string}",
+            "    txt_transformation: ${6|unquoted,api,quoted|}",
+            "    type: ${7:string}",
+            "    what: ${8|single_record,all_types_for_record,all_records|}",
+            "    zone_id: ${9:string}",
+            "    zone_name: ${10:string}",
+            "$0"
+        ],
+        "description": "Retrieve records in Hetzner DNS service",
+        "scope": "ansible"
+    },
+    "Add or delete record sets in Hetzner DNS service": {
+        "prefix": [
+            "community.dns.hetzner_dns_record_set",
+            "Add or delete record sets in Hetzner DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hetzner_dns_record_set:",
+            "    bulk_operation_threshold: ${2:2}",
+            "    hetzner_token: ${3:string}",
+            "    on_existing: ${4|replace,keep_and_fail,keep_and_warn,keep|}",
+            "    prefix: ${5:string}",
+            "    record: ${6:string}",
+            "    state: ${7:string}",
+            "    ttl: ${8:None}",
+            "    txt_character_encoding: ${9:string}",
+            "    txt_transformation: ${10|unquoted,api,quoted|}",
+            "    type: ${11:string}",
+            "    value:",
+            "      - ${12:element}",
+            "    zone_id: ${13:string}",
+            "    zone_name: ${14:string}",
+            "$0"
+        ],
+        "description": "Add or delete record sets in Hetzner DNS service",
+        "scope": "ansible"
+    },
+    "Retrieve record sets in Hetzner DNS service": {
+        "prefix": [
+            "community.dns.hetzner_dns_record_set_info",
+            "Retrieve record sets in Hetzner DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hetzner_dns_record_set_info:",
+            "    hetzner_token: ${2:string}",
+            "    prefix: ${3:string}",
+            "    record: ${4:string}",
+            "    txt_character_encoding: ${5:string}",
+            "    txt_transformation: ${6|unquoted,api,quoted|}",
+            "    type: ${7:string}",
+            "    what: ${8|single_record,all_types_for_record,all_records|}",
+            "    zone_id: ${9:string}",
+            "    zone_name: ${10:string}",
+            "$0"
+        ],
+        "description": "Retrieve record sets in Hetzner DNS service",
+        "scope": "ansible"
+    },
+    "Bulk synchronize DNS record sets in Hetzner DNS service": {
+        "prefix": [
+            "community.dns.hetzner_dns_record_sets",
+            "Bulk synchronize DNS record sets in Hetzner DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hetzner_dns_record_sets:",
+            "    bulk_operation_threshold: ${2:2}",
+            "    hetzner_token: ${3:string}",
+            "    prune: ${4|false,true|}",
+            "    record_sets:",
+            "      - ${5:element}",
+            "    txt_character_encoding: ${6:string}",
+            "    txt_transformation: ${7|unquoted,api,quoted|}",
+            "    zone_id: ${8:string}",
+            "    zone_name: ${9:string}",
+            "$0"
+        ],
+        "description": "Bulk synchronize DNS record sets in Hetzner DNS service",
+        "scope": "ansible"
+    },
+    "Retrieve zone information in Hetzner DNS service": {
+        "prefix": [
+            "community.dns.hetzner_dns_zone_info",
+            "Retrieve zone information in Hetzner DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hetzner_dns_zone_info:",
+            "    hetzner_token: ${2:string}",
+            "    zone_id: ${3:string}",
+            "    zone_name: ${4:string}",
+            "$0"
+        ],
+        "description": "Retrieve zone information in Hetzner DNS service",
+        "scope": "ansible"
+    },
+    "Add or delete a single record in Hosttech DNS service": {
+        "prefix": [
+            "community.dns.hosttech_dns_record",
+            "Add or delete a single record in Hosttech DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hosttech_dns_record:",
+            "    hosttech_password: ${2:string}",
+            "    hosttech_token: ${3:string}",
+            "    hosttech_username: ${4:string}",
+            "    prefix: ${5:string}",
+            "    record: ${6:string}",
+            "    state: ${7:string}",
+            "    ttl: ${8:3600}",
+            "    txt_character_encoding: ${9:string}",
+            "    txt_transformation: ${10|unquoted,api,quoted|}",
+            "    type: ${11:string}",
+            "    value: ${12:string}",
+            "    zone_id: ${13:int}",
+            "    zone_name: ${14:string}",
+            "$0"
+        ],
+        "description": "Add or delete a single record in Hosttech DNS service",
+        "scope": "ansible"
+    },
+    "Retrieve records in Hosttech DNS service": {
+        "prefix": [
+            "community.dns.hosttech_dns_record_info",
+            "Retrieve records in Hosttech DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hosttech_dns_record_info:",
+            "    hosttech_password: ${2:string}",
+            "    hosttech_token: ${3:string}",
+            "    hosttech_username: ${4:string}",
+            "    prefix: ${5:string}",
+            "    record: ${6:string}",
+            "    txt_character_encoding: ${7:string}",
+            "    txt_transformation: ${8|unquoted,api,quoted|}",
+            "    type: ${9:string}",
+            "    what: ${10|single_record,all_types_for_record,all_records|}",
+            "    zone_id: ${11:int}",
+            "    zone_name: ${12:string}",
+            "$0"
+        ],
+        "description": "Retrieve records in Hosttech DNS service",
+        "scope": "ansible"
+    },
+    "Add or delete record sets in Hosttech DNS service": {
+        "prefix": [
+            "community.dns.hosttech_dns_record_set",
+            "Add or delete record sets in Hosttech DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hosttech_dns_record_set:",
+            "    hosttech_password: ${2:string}",
+            "    hosttech_token: ${3:string}",
+            "    hosttech_username: ${4:string}",
+            "    on_existing: ${5|replace,keep_and_fail,keep_and_warn,keep|}",
+            "    prefix: ${6:string}",
+            "    record: ${7:string}",
+            "    state: ${8:string}",
+            "    ttl: ${9:3600}",
+            "    txt_character_encoding: ${10:string}",
+            "    txt_transformation: ${11|unquoted,api,quoted|}",
+            "    type: ${12:string}",
+            "    value:",
+            "      - ${13:element}",
+            "    zone_id: ${14:int}",
+            "    zone_name: ${15:string}",
+            "$0"
+        ],
+        "description": "Add or delete record sets in Hosttech DNS service",
+        "scope": "ansible"
+    },
+    "Retrieve record sets in Hosttech DNS service": {
+        "prefix": [
+            "community.dns.hosttech_dns_record_set_info",
+            "Retrieve record sets in Hosttech DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hosttech_dns_record_set_info:",
+            "    hosttech_password: ${2:string}",
+            "    hosttech_token: ${3:string}",
+            "    hosttech_username: ${4:string}",
+            "    prefix: ${5:string}",
+            "    record: ${6:string}",
+            "    txt_character_encoding: ${7:string}",
+            "    txt_transformation: ${8|unquoted,api,quoted|}",
+            "    type: ${9:string}",
+            "    what: ${10|single_record,all_types_for_record,all_records|}",
+            "    zone_id: ${11:int}",
+            "    zone_name: ${12:string}",
+            "$0"
+        ],
+        "description": "Retrieve record sets in Hosttech DNS service",
+        "scope": "ansible"
+    },
+    "Bulk synchronize DNS record sets in Hosttech DNS service": {
+        "prefix": [
+            "community.dns.hosttech_dns_record_sets",
+            "Bulk synchronize DNS record sets in Hosttech DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hosttech_dns_record_sets:",
+            "    hosttech_password: ${2:string}",
+            "    hosttech_token: ${3:string}",
+            "    hosttech_username: ${4:string}",
+            "    prune: ${5|false,true|}",
+            "    record_sets:",
+            "      - ${6:element}",
+            "    txt_character_encoding: ${7:string}",
+            "    txt_transformation: ${8|unquoted,api,quoted|}",
+            "    zone_id: ${9:int}",
+            "    zone_name: ${10:string}",
+            "$0"
+        ],
+        "description": "Bulk synchronize DNS record sets in Hosttech DNS service",
+        "scope": "ansible"
+    },
+    "Retrieve zone information in Hosttech DNS service": {
+        "prefix": [
+            "community.dns.hosttech_dns_zone_info",
+            "Retrieve zone information in Hosttech DNS service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.hosttech_dns_zone_info:",
+            "    hosttech_password: ${2:string}",
+            "    hosttech_token: ${3:string}",
+            "    hosttech_username: ${4:string}",
+            "    zone_id: ${5:int}",
+            "    zone_name: ${6:string}",
+            "$0"
+        ],
+        "description": "Retrieve zone information in Hosttech DNS service",
+        "scope": "ansible"
+    },
+    "Wait for TXT entries to be available on all authoritative nameservers": {
+        "prefix": [
+            "community.dns.wait_for_txt",
+            "Wait for TXT entries to be available on all authoritative nameservers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.dns.wait_for_txt:",
+            "    always_ask_default_resolver: ${2|true,false|}",
+            "    query_retry: ${4:3}",
+            "    records:",
+            "      - ${6:element}",
+            "$0"
+        ],
+        "description": "Wait for TXT entries to be available on all authoritative nameservers",
+        "scope": "ansible"
+    }
+}

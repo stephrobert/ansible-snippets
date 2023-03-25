@@ -917,7 +917,7 @@
     "Execute Ansible 'actions'": {
         "prefix": [
             "ansible.builtin.meta",
-            "Execute Ansible 'actions'"
+            "Execute Ansible &#39;actions&#39;"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -925,7 +925,7 @@
             "  ansible.builtin.meta:",
             "$0"
         ],
-        "description": "Execute Ansible 'actions'",
+        "description": "Execute Ansible &#39;actions&#39;",
         "scope": "ansible"
     },
     "Generic OS package manager": {

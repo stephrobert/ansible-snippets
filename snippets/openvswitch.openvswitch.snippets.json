@@ -1,0 +1,95 @@
+{
+    "Manage Open vSwitch bonds": {
+        "prefix": [
+            "openvswitch.openvswitch.openvswitch_bond",
+            "Manage Open vSwitch bonds"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  openvswitch.openvswitch.openvswitch_bond:",
+            "    bond_downdelay: ${2:int}",
+            "    bond_mode: ${3:string}",
+            "    bond_updelay: ${4:int}",
+            "    bridge: ${5:string}",
+            "    database_socket: ${6:string}",
+            "    interfaces:",
+            "      - ${8:element}",
+            "    lacp: ${9:string}",
+            "    port: ${11:string}",
+            "    set:",
+            "      - ${12:element}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:5}",
+            "$0"
+        ],
+        "description": "Manage Open vSwitch bonds",
+        "scope": "ansible"
+    },
+    "Manage Open vSwitch bridges": {
+        "prefix": [
+            "openvswitch.openvswitch.openvswitch_bridge",
+            "Manage Open vSwitch bridges"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  openvswitch.openvswitch.openvswitch_bridge:",
+            "    bridge: ${2:string}",
+            "    database_socket: ${3:string}",
+            "    fail_mode: ${5:string}",
+            "    parent: ${6:string}",
+            "    set: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    timeout: ${9:5}",
+            "    vlan: ${10:int}",
+            "$0"
+        ],
+        "description": "Manage Open vSwitch bridges",
+        "scope": "ansible"
+    },
+    "Configure open vswitch database.": {
+        "prefix": [
+            "openvswitch.openvswitch.openvswitch_db",
+            "Configure open vswitch database."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  openvswitch.openvswitch.openvswitch_db:",
+            "    col: ${2:string}",
+            "    database_socket: ${3:string}",
+            "    key: ${4:string}",
+            "    record: ${5:string}",
+            "    state: ${6|present,absent,read|}",
+            "    table: ${7:string}",
+            "    timeout: ${8:5}",
+            "    value: ${9:string}",
+            "$0"
+        ],
+        "description": "Configure open vswitch database.",
+        "scope": "ansible"
+    },
+    "Manage Open vSwitch ports": {
+        "prefix": [
+            "openvswitch.openvswitch.openvswitch_port",
+            "Manage Open vSwitch ports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  openvswitch.openvswitch.openvswitch_port:",
+            "    bridge: ${2:string}",
+            "    database_socket: ${3:string}",
+            "    port: ${5:string}",
+            "    set:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    tag: ${8:string}",
+            "    timeout: ${9:5}",
+            "$0"
+        ],
+        "description": "Manage Open vSwitch ports",
+        "scope": "ansible"
+    }
+}

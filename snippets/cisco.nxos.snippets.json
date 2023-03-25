@@ -1,0 +1,1420 @@
+{
+    "Manages AAA server global configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_aaa_server",
+            "Manages AAA server global configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_aaa_server:",
+            "    deadtime: ${2:string}",
+            "    directed_request: ${3:string}",
+            "    encrypt_type: ${4:string}",
+            "    global_key: ${5:string}",
+            "    server_timeout: ${6:string}",
+            "    server_type: ${7:string}",
+            "    state: ${8|present,default|}",
+            "$0"
+        ],
+        "description": "Manages AAA server global configuration.",
+        "scope": "ansible"
+    },
+    "Manages AAA server host-specific configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_aaa_server_host",
+            "Manages AAA server host-specific configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_aaa_server_host:",
+            "    acct_port: ${2:string}",
+            "    address: ${3:string}",
+            "    auth_port: ${4:string}",
+            "    encrypt_type: ${5:string}",
+            "    host_timeout: ${6:string}",
+            "    key: ${7:string}",
+            "    server_type: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    tacacs_port: ${10:string}",
+            "$0"
+        ],
+        "description": "Manages AAA server host-specific configuration.",
+        "scope": "ansible"
+    },
+    "ACL interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_acl_interfaces",
+            "ACL interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_acl_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,gathered,overridden,rendered,replaced,parsed|}",
+            "$0"
+        ],
+        "description": "ACL interfaces resource module",
+        "scope": "ansible"
+    },
+    "ACLs resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_acls",
+            "ACLs resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_acls:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,gathered,overridden,rendered,replaced,parsed|}",
+            "$0"
+        ],
+        "description": "ACLs resource module",
+        "scope": "ansible"
+    },
+    "Manage multiline banners on Cisco NXOS devices": {
+        "prefix": [
+            "cisco.nxos.nxos_banner",
+            "Manage multiline banners on Cisco NXOS devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_banner:",
+            "    banner: ${2:string}",
+            "    state: ${3|present,absent|}",
+            "    text: ${4:string}",
+            "$0"
+        ],
+        "description": "Manage multiline banners on Cisco NXOS devices",
+        "scope": "ansible"
+    },
+    "Bidirectional Forwarding Detection (BFD) global-level configuration": {
+        "prefix": [
+            "cisco.nxos.nxos_bfd_global",
+            "Bidirectional Forwarding Detection (BFD) global-level configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_bfd_global:",
+            "    echo_interface: ${2:string}",
+            "    echo_rx_interval: ${3:int}",
+            "    fabricpath_slow_timer: ${5:int}",
+            "    fabricpath_vlan: ${6:int}",
+            "    ipv4_echo_rx_interval: ${8:int}",
+            "    ipv4_slow_timer: ${10:int}",
+            "    ipv6_echo_rx_interval: ${11:int}",
+            "    ipv6_slow_timer: ${13:int}",
+            "    slow_timer: ${14:int}",
+            "    startup_timer: ${15:int}",
+            "$0"
+        ],
+        "description": "Bidirectional Forwarding Detection (BFD) global-level configuration",
+        "scope": "ansible"
+    },
+    "BFD interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_bfd_interfaces",
+            "BFD interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_bfd_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "BFD interfaces resource module",
+        "scope": "ansible"
+    },
+    "BGP Address Family resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_bgp_address_family",
+            "BGP Address Family resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_bgp_address_family:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "BGP Address Family resource module.",
+        "scope": "ansible"
+    },
+    "BGP Global resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_bgp_global",
+            "BGP Global resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_bgp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,purged,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "BGP Global resource module.",
+        "scope": "ansible"
+    },
+    "BGP Neighbor Address Family resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_bgp_neighbor_address_family",
+            "BGP Neighbor Address Family resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_bgp_neighbor_address_family:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "BGP Neighbor Address Family resource module.",
+        "scope": "ansible"
+    },
+    "Run arbitrary command on Cisco NXOS devices": {
+        "prefix": [
+            "cisco.nxos.nxos_command",
+            "Run arbitrary command on Cisco NXOS devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_command:",
+            "    commands:",
+            "      - ${2:element}",
+            "    interval: ${3:1}",
+            "    match: ${4|all,any|}",
+            "    retries: ${5:9}",
+            "    wait_for:",
+            "      - ${6:element}",
+            "$0"
+        ],
+        "description": "Run arbitrary command on Cisco NXOS devices",
+        "scope": "ansible"
+    },
+    "Manage Cisco NXOS configuration sections": {
+        "prefix": [
+            "cisco.nxos.nxos_config",
+            "Manage Cisco NXOS configuration sections"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_config:",
+            "    after:",
+            "      - ${2:element}",
+            "    backup: ${3|false,true|}",
+            "    before:",
+            "      - ${5:element}",
+            "    defaults: ${6|false,true|}",
+            "    diff_against: ${7:string}",
+            "    diff_ignore_lines:",
+            "      - ${8:element}",
+            "    intended_config: ${9:string}",
+            "    lines:",
+            "      - ${10:element}",
+            "    match: ${11|line,strict,exact,none|}",
+            "    parents:",
+            "      - ${12:element}",
+            "    replace: ${13|line,block,config|}",
+            "    replace_src: ${14:string}",
+            "    running_config: ${15:string}",
+            "    save_when: ${16|never,always,modified,changed|}",
+            "    src: ${17:path}",
+            "$0"
+        ],
+        "description": "Manage Cisco NXOS configuration sections",
+        "scope": "ansible"
+    },
+    "Configuration of device alias for Cisco NXOS MDS Switches.": {
+        "prefix": [
+            "cisco.nxos.nxos_devicealias",
+            "Configuration of device alias for Cisco NXOS MDS Switches."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_devicealias:",
+            "    da:",
+            "      - ${2:element}",
+            "    distribute: ${3|false,true|}",
+            "    mode: ${4:string}",
+            "    rename:",
+            "      - ${5:element}",
+            "$0"
+        ],
+        "description": "Configuration of device alias for Cisco NXOS MDS Switches.",
+        "scope": "ansible"
+    },
+    "Handles the EVPN control plane for VXLAN.": {
+        "prefix": [
+            "cisco.nxos.nxos_evpn_global",
+            "Handles the EVPN control plane for VXLAN."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_evpn_global:",
+            "    nv_overlay_evpn: ${2|false,true|}",
+            "$0"
+        ],
+        "description": "Handles the EVPN control plane for VXLAN.",
+        "scope": "ansible"
+    },
+    "Manages Cisco EVPN VXLAN Network Identifier (VNI).": {
+        "prefix": [
+            "cisco.nxos.nxos_evpn_vni",
+            "Manages Cisco EVPN VXLAN Network Identifier (VNI)."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_evpn_vni:",
+            "    route_distinguisher: ${2:string}",
+            "    route_target_both:",
+            "      - ${3:element}",
+            "    route_target_export:",
+            "      - ${4:element}",
+            "    route_target_import:",
+            "      - ${5:element}",
+            "    state: ${6|present,absent|}",
+            "    vni: ${7:string}",
+            "$0"
+        ],
+        "description": "Manages Cisco EVPN VXLAN Network Identifier (VNI).",
+        "scope": "ansible"
+    },
+    "Gets facts about NX-OS switches": {
+        "prefix": [
+            "cisco.nxos.nxos_facts",
+            "Gets facts about NX-OS switches"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_facts:",
+            "    available_network_resources: ${2|false,true|}",
+            "    gather_network_resources:",
+            "      - ${3:element}",
+            "    gather_subset:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Gets facts about NX-OS switches",
+        "scope": "ansible"
+    },
+    "Manage features in NX-OS switches.": {
+        "prefix": [
+            "cisco.nxos.nxos_feature",
+            "Manage features in NX-OS switches."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_feature:",
+            "    feature: ${2:string}",
+            "    state: ${3|enabled,disabled|}",
+            "$0"
+        ],
+        "description": "Manage features in NX-OS switches.",
+        "scope": "ansible"
+    },
+    "Copy a file to a remote NXOS device.": {
+        "prefix": [
+            "cisco.nxos.nxos_file_copy",
+            "Copy a file to a remote NXOS device."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_file_copy:",
+            "    connect_ssh_port: ${2:22}",
+            "    file_pull: ${3|false,true|}",
+            "    file_pull_compact: ${4|false,true|}",
+            "    file_pull_kstack: ${5|false,true|}",
+            "    file_pull_protocol: ${6|scp,sftp,ftp,http,https,tftp|}",
+            "    file_pull_timeout: ${7:300}",
+            "    file_system: ${8:bootflash:}",
+            "    local_file: ${9:path}",
+            "    local_file_directory: ${10:path}",
+            "    remote_file: ${11:path}",
+            "    remote_scp_server: ${12:string}",
+            "    remote_scp_server_password: ${13:string}",
+            "    remote_scp_server_user: ${14:string}",
+            "    vrf: ${15:management}",
+            "$0"
+        ],
+        "description": "Copy a file to a remote NXOS device.",
+        "scope": "ansible"
+    },
+    "Trigger a graceful removal or insertion (GIR) of the switch.": {
+        "prefix": [
+            "cisco.nxos.nxos_gir",
+            "Trigger a graceful removal or insertion (GIR) of the switch."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_gir:",
+            "    state: ${2|present,absent|}",
+            "    system_mode_maintenance: ${3|false,true|}",
+            "    system_mode_maintenance_dont_generate_profile: ${4|false,true|}",
+            "    system_mode_maintenance_on_reload_reset_reason: ${5:string}",
+            "    system_mode_maintenance_shutdown: ${6|false,true|}",
+            "    system_mode_maintenance_timeout: ${7:string}",
+            "$0"
+        ],
+        "description": "Trigger a graceful removal or insertion (GIR) of the switch.",
+        "scope": "ansible"
+    },
+    "Create a maintenance-mode or normal-mode profile for GIR.": {
+        "prefix": [
+            "cisco.nxos.nxos_gir_profile_management",
+            "Create a maintenance-mode or normal-mode profile for GIR."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_gir_profile_management:",
+            "    commands:",
+            "      - ${2:element}",
+            "    mode: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Create a maintenance-mode or normal-mode profile for GIR.",
+        "scope": "ansible"
+    },
+    "Hostname resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_hostname",
+            "Hostname resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_hostname:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "Hostname resource module.",
+        "scope": "ansible"
+    },
+    "Manages HSRP configuration on NX-OS switches.": {
+        "prefix": [
+            "cisco.nxos.nxos_hsrp",
+            "Manages HSRP configuration on NX-OS switches."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_hsrp:",
+            "    auth_string: ${2:string}",
+            "    auth_type: ${3:string}",
+            "    group: ${4:string}",
+            "    interface: ${5:string}",
+            "    preempt: ${6:string}",
+            "    priority: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    version: ${9|1,2|}",
+            "    vip: ${10:string}",
+            "$0"
+        ],
+        "description": "Manages HSRP configuration on NX-OS switches.",
+        "scope": "ansible"
+    },
+    "HSRP interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_hsrp_interfaces",
+            "HSRP interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_hsrp_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "HSRP interfaces resource module",
+        "scope": "ansible"
+    },
+    "Manages IGMP global configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_igmp",
+            "Manages IGMP global configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_igmp:",
+            "    enforce_rtr_alert: ${2|false,true|}",
+            "    flush_routes: ${3|false,true|}",
+            "    restart: ${4|false,true|}",
+            "    state: ${5|present,default|}",
+            "$0"
+        ],
+        "description": "Manages IGMP global configuration.",
+        "scope": "ansible"
+    },
+    "Manages IGMP interface configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_igmp_interface",
+            "Manages IGMP interface configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_igmp_interface:",
+            "    group_timeout: ${2:string}",
+            "    immediate_leave: ${3|false,true|}",
+            "    interface: ${4:string}",
+            "    last_member_qrt: ${5:string}",
+            "    last_member_query_count: ${6:string}",
+            "    oif_ps: ${7:\"raw\"}",
+            "    oif_routemap: ${8:string}",
+            "    querier_timeout: ${9:string}",
+            "    query_interval: ${10:string}",
+            "    query_mrt: ${11:string}",
+            "    report_llg: ${12|false,true|}",
+            "    restart: ${13|false,true|}",
+            "    robustness: ${14:string}",
+            "    startup_query_count: ${15:string}",
+            "    startup_query_interval: ${16:string}",
+            "    state: ${17|present,absent,default|}",
+            "    version: ${18:string}",
+            "$0"
+        ],
+        "description": "Manages IGMP interface configuration.",
+        "scope": "ansible"
+    },
+    "Manages IGMP snooping global configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_igmp_snooping",
+            "Manages IGMP snooping global configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_igmp_snooping:",
+            "    group_timeout: ${2:string}",
+            "    link_local_grp_supp: ${3|false,true|}",
+            "    report_supp: ${4|false,true|}",
+            "    snooping: ${5|false,true|}",
+            "    state: ${6|present,default|}",
+            "    v3_report_supp: ${7|false,true|}",
+            "$0"
+        ],
+        "description": "Manages IGMP snooping global configuration.",
+        "scope": "ansible"
+    },
+    "Set boot options like boot, kickstart image and issu.": {
+        "prefix": [
+            "cisco.nxos.nxos_install_os",
+            "Set boot options like boot, kickstart image and issu."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_install_os:",
+            "    issu: ${2|no,required,desired,yes|}",
+            "    kickstart_image_file: ${3:string}",
+            "    system_image_file: ${4:string}",
+            "$0"
+        ],
+        "description": "Set boot options like boot, kickstart image and issu.",
+        "scope": "ansible"
+    },
+    "Interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_interfaces",
+            "Interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed,purged|}",
+            "$0"
+        ],
+        "description": "Interfaces resource module",
+        "scope": "ansible"
+    },
+    "L2 interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_l2_interfaces",
+            "L2 interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_l2_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "L2 interfaces resource module",
+        "scope": "ansible"
+    },
+    "L3 interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_l3_interfaces",
+            "L3 interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_l3_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "L3 interfaces resource module",
+        "scope": "ansible"
+    },
+    "LACP resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_lacp",
+            "LACP resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_lacp:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "LACP resource module",
+        "scope": "ansible"
+    },
+    "LACP interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_lacp_interfaces",
+            "LACP interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_lacp_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "LACP interfaces resource module",
+        "scope": "ansible"
+    },
+    "LAG interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_lag_interfaces",
+            "LAG interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_lag_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "LAG interfaces resource module",
+        "scope": "ansible"
+    },
+    "LLDP resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_lldp_global",
+            "LLDP resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_lldp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "LLDP resource module",
+        "scope": "ansible"
+    },
+    "LLDP interfaces resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_lldp_interfaces",
+            "LLDP interfaces resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_lldp_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "LLDP interfaces resource module",
+        "scope": "ansible"
+    },
+    "Logging resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_logging_global",
+            "Logging resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_logging_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "Logging resource module.",
+        "scope": "ansible"
+    },
+    "NTP Global resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_ntp_global",
+            "NTP Global resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_ntp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "NTP Global resource module.",
+        "scope": "ansible"
+    },
+    "Manage NXAPI configuration on an NXOS device.": {
+        "prefix": [
+            "cisco.nxos.nxos_nxapi",
+            "Manage NXAPI configuration on an NXOS device."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_nxapi:",
+            "    http: ${2|true,false|}",
+            "    http_port: ${3:80}",
+            "    https: ${4|false,true|}",
+            "    https_port: ${5:443}",
+            "    sandbox: ${6|false,true|}",
+            "    ssl_strong_ciphers: ${7|false,true|}",
+            "    state: ${8|present,absent|}",
+            "    tlsv1_0: ${9|true,false|}",
+            "    tlsv1_1: ${10|false,true|}",
+            "    tlsv1_2: ${11|false,true|}",
+            "$0"
+        ],
+        "description": "Manage NXAPI configuration on an NXOS device.",
+        "scope": "ansible"
+    },
+    "OSPF Interfaces Resource Module.": {
+        "prefix": [
+            "cisco.nxos.nxos_ospf_interfaces",
+            "OSPF Interfaces Resource Module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_ospf_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "OSPF Interfaces Resource Module.",
+        "scope": "ansible"
+    },
+    "OSPFv2 resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_ospfv2",
+            "OSPFv2 resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_ospfv2:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "OSPFv2 resource module",
+        "scope": "ansible"
+    },
+    "OSPFv3 resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_ospfv3",
+            "OSPFv3 resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_ospfv3:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "OSPFv3 resource module",
+        "scope": "ansible"
+    },
+    "Configures anycast gateway MAC of the switch.": {
+        "prefix": [
+            "cisco.nxos.nxos_overlay_global",
+            "Configures anycast gateway MAC of the switch."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_overlay_global:",
+            "    anycast_gateway_mac: ${2:string}",
+            "$0"
+        ],
+        "description": "Configures anycast gateway MAC of the switch.",
+        "scope": "ansible"
+    },
+    "Manages configuration of a PIM instance.": {
+        "prefix": [
+            "cisco.nxos.nxos_pim",
+            "Manages configuration of a PIM instance."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_pim:",
+            "    bfd: ${2:string}",
+            "    ssm_range:",
+            "      - ${3:element}",
+            "$0"
+        ],
+        "description": "Manages configuration of a PIM instance.",
+        "scope": "ansible"
+    },
+    "Manages PIM interface configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_pim_interface",
+            "Manages PIM interface configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_pim_interface:",
+            "    bfd: ${2:string}",
+            "    border: ${3|false,true|}",
+            "    dr_prio: ${4:string}",
+            "    hello_auth_key: ${5:string}",
+            "    hello_interval: ${6:int}",
+            "    hello_interval_ms: ${7|false,true|}",
+            "    interface: ${8:string}",
+            "    jp_policy_in: ${9:string}",
+            "    jp_policy_out: ${10:string}",
+            "    jp_type_in: ${11:string}",
+            "    jp_type_out: ${12:string}",
+            "    neighbor_policy: ${13:string}",
+            "    neighbor_type: ${14:string}",
+            "    sparse: ${15|false,true|}",
+            "    state: ${16|present,absent,default|}",
+            "$0"
+        ],
+        "description": "Manages PIM interface configuration.",
+        "scope": "ansible"
+    },
+    "Manages configuration of an PIM static RP address instance.": {
+        "prefix": [
+            "cisco.nxos.nxos_pim_rp_address",
+            "Manages configuration of an PIM static RP address instance."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_pim_rp_address:",
+            "    bidir: ${2|false,true|}",
+            "    group_list: ${3:string}",
+            "    prefix_list: ${4:string}",
+            "    route_map: ${5:string}",
+            "    rp_address: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages configuration of an PIM static RP address instance.",
+        "scope": "ansible"
+    },
+    "Tests reachability using ping from Nexus switch.": {
+        "prefix": [
+            "cisco.nxos.nxos_ping",
+            "Tests reachability using ping from Nexus switch."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_ping:",
+            "    count: ${2:5}",
+            "    dest: ${3:string}",
+            "    df_bit: ${4|false,true|}",
+            "    size: ${5:int}",
+            "    source: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    vrf: ${8:string}",
+            "$0"
+        ],
+        "description": "Tests reachability using ping from Nexus switch.",
+        "scope": "ansible"
+    },
+    "Prefix-Lists resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_prefix_lists",
+            "Prefix-Lists resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_prefix_lists:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "Prefix-Lists resource module.",
+        "scope": "ansible"
+    },
+    "Reboot a network device.": {
+        "prefix": [
+            "cisco.nxos.nxos_reboot",
+            "Reboot a network device."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_reboot:",
+            "    confirm: ${2|false,true|}",
+            "$0"
+        ],
+        "description": "Reboot a network device.",
+        "scope": "ansible"
+    },
+    "Set a checkpoint or rollback to a checkpoint.": {
+        "prefix": [
+            "cisco.nxos.nxos_rollback",
+            "Set a checkpoint or rollback to a checkpoint."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_rollback:",
+            "    checkpoint_file: ${2:string}",
+            "    rollback_to: ${3:string}",
+            "$0"
+        ],
+        "description": "Set a checkpoint or rollback to a checkpoint.",
+        "scope": "ansible"
+    },
+    "Route Maps resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_route_maps",
+            "Route Maps resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_route_maps:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "Route Maps resource module.",
+        "scope": "ansible"
+    },
+    "Install patch or feature rpms on Cisco NX-OS devices.": {
+        "prefix": [
+            "cisco.nxos.nxos_rpm",
+            "Install patch or feature rpms on Cisco NX-OS devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_rpm:",
+            "    aggregate:",
+            "      - ${2:element}",
+            "    file_system: ${3:bootflash}",
+            "    pkg: ${4:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Install patch or feature rpms on Cisco NX-OS devices.",
+        "scope": "ansible"
+    },
+    "Manage snapshots of the running states of selected features.": {
+        "prefix": [
+            "cisco.nxos.nxos_snapshot",
+            "Manage snapshots of the running states of selected features."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_snapshot:",
+            "    action: ${2:string}",
+            "    compare_option: ${3:string}",
+            "    comparison_results_file: ${4:string}",
+            "    description: ${5:string}",
+            "    element_key1: ${6:string}",
+            "    element_key2: ${7:string}",
+            "    path: ${8:./}",
+            "    row_id: ${9:string}",
+            "    save_snapshot_locally: ${10|false,true|}",
+            "    section: ${11:string}",
+            "    show_command: ${12:string}",
+            "    snapshot1: ${13:string}",
+            "    snapshot2: ${14:string}",
+            "    snapshot_name: ${15:string}",
+            "$0"
+        ],
+        "description": "Manage snapshots of the running states of selected features.",
+        "scope": "ansible"
+    },
+    "SNMP Server resource module.": {
+        "prefix": [
+            "cisco.nxos.nxos_snmp_server",
+            "SNMP Server resource module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_snmp_server:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "SNMP Server resource module.",
+        "scope": "ansible"
+    },
+    "Static routes resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_static_routes",
+            "Static routes resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_static_routes:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,deleted,overridden,replaced,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Static routes resource module",
+        "scope": "ansible"
+    },
+    "Manage the system attributes on Cisco NXOS devices": {
+        "prefix": [
+            "cisco.nxos.nxos_system",
+            "Manage the system attributes on Cisco NXOS devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_system:",
+            "    domain_lookup: ${2|false,true|}",
+            "    domain_name:",
+            "      - ${3:element}",
+            "    domain_search:",
+            "      - ${4:element}",
+            "    hostname: ${5:string}",
+            "    name_servers:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    system_mtu: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage the system attributes on Cisco NXOS devices",
+        "scope": "ansible"
+    },
+    "TELEMETRY resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_telemetry",
+            "TELEMETRY resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_telemetry:",
+            "    state: ${3|merged,replaced,deleted,gathered|}",
+            "$0"
+        ],
+        "description": "TELEMETRY resource module",
+        "scope": "ansible"
+    },
+    "Manages UDLD global configuration params.": {
+        "prefix": [
+            "cisco.nxos.nxos_udld",
+            "Manages UDLD global configuration params."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_udld:",
+            "    aggressive: ${2:string}",
+            "    msg_time: ${3:string}",
+            "    reset: ${4|false,true|}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages UDLD global configuration params.",
+        "scope": "ansible"
+    },
+    "Manages UDLD interface configuration params.": {
+        "prefix": [
+            "cisco.nxos.nxos_udld_interface",
+            "Manages UDLD interface configuration params."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_udld_interface:",
+            "    interface: ${2:string}",
+            "    mode: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages UDLD interface configuration params.",
+        "scope": "ansible"
+    },
+    "Manage the collection of local users on Nexus devices": {
+        "prefix": [
+            "cisco.nxos.nxos_user",
+            "Manage the collection of local users on Nexus devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_user:",
+            "    aggregate:",
+            "      - ${2:element}",
+            "    configured_password: ${3:string}",
+            "    name: ${4:string}",
+            "    purge: ${5|false,true|}",
+            "    roles:",
+            "      - ${6:element}",
+            "    sshkey: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    update_password: ${9|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manage the collection of local users on Nexus devices",
+        "scope": "ansible"
+    },
+    "VLANs resource module": {
+        "prefix": [
+            "cisco.nxos.nxos_vlans",
+            "VLANs resource module"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vlans:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "VLANs resource module",
+        "scope": "ansible"
+    },
+    "Manages global VPC configuration": {
+        "prefix": [
+            "cisco.nxos.nxos_vpc",
+            "Manages global VPC configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vpc:",
+            "    auto_recovery: ${2|false,true|}",
+            "    auto_recovery_reload_delay: ${3:string}",
+            "    delay_restore: ${4:string}",
+            "    delay_restore_interface_vlan: ${5:string}",
+            "    delay_restore_orphan_port: ${6:string}",
+            "    domain: ${7:string}",
+            "    peer_gw: ${8|false,true|}",
+            "    pkl_dest: ${9:string}",
+            "    pkl_src: ${10:string}",
+            "    pkl_vrf: ${11:string}",
+            "    role_priority: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    system_priority: ${14:string}",
+            "$0"
+        ],
+        "description": "Manages global VPC configuration",
+        "scope": "ansible"
+    },
+    "Manages interface VPC configuration": {
+        "prefix": [
+            "cisco.nxos.nxos_vpc_interface",
+            "Manages interface VPC configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vpc_interface:",
+            "    peer_link: ${2|false,true|}",
+            "    portchannel: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "    vpc: ${5:string}",
+            "$0"
+        ],
+        "description": "Manages interface VPC configuration",
+        "scope": "ansible"
+    },
+    "Manages global VRF configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_vrf",
+            "Manages global VRF configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vrf:",
+            "    admin_state: ${2|up,down|}",
+            "    aggregate:",
+            "      - ${3:element}",
+            "    associated_interfaces:",
+            "      - ${4:element}",
+            "    delay: ${5:10}",
+            "    description: ${6:string}",
+            "    interfaces:",
+            "      - ${7:element}",
+            "    name: ${8:string}",
+            "    purge: ${9|false,true|}",
+            "    rd: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    vni: ${12:string}",
+            "$0"
+        ],
+        "description": "Manages global VRF configuration.",
+        "scope": "ansible"
+    },
+    "Manages VRF AF.": {
+        "prefix": [
+            "cisco.nxos.nxos_vrf_af",
+            "Manages VRF AF."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vrf_af:",
+            "    afi: ${2:string}",
+            "    route_target_both_auto_evpn: ${3|false,true|}",
+            "    route_targets:",
+            "      - ${4:element}",
+            "    state: ${5|present,absent|}",
+            "    vrf: ${6:string}",
+            "$0"
+        ],
+        "description": "Manages VRF AF.",
+        "scope": "ansible"
+    },
+    "Manages interface specific VRF configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_vrf_interface",
+            "Manages interface specific VRF configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vrf_interface:",
+            "    interface: ${2:string}",
+            "    state: ${3|present,absent|}",
+            "    vrf: ${4:string}",
+            "$0"
+        ],
+        "description": "Manages interface specific VRF configuration.",
+        "scope": "ansible"
+    },
+    "Manages VRRP configuration on NX-OS switches.": {
+        "prefix": [
+            "cisco.nxos.nxos_vrrp",
+            "Manages VRRP configuration on NX-OS switches."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vrrp:",
+            "    admin_state: ${2|shutdown,noshutdown,default|}",
+            "    authentication: ${3:string}",
+            "    group: ${4:string}",
+            "    interface: ${5:string}",
+            "    interval: ${6:string}",
+            "    preempt: ${7|false,true|}",
+            "    priority: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    vip: ${10:string}",
+            "$0"
+        ],
+        "description": "Manages VRRP configuration on NX-OS switches.",
+        "scope": "ansible"
+    },
+    "Configuration of vsan for Cisco NXOS MDS Switches.": {
+        "prefix": [
+            "cisco.nxos.nxos_vsan",
+            "Configuration of vsan for Cisco NXOS MDS Switches."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vsan:",
+            "    vsan:",
+            "      - ${2:element}",
+            "$0"
+        ],
+        "description": "Configuration of vsan for Cisco NXOS MDS Switches.",
+        "scope": "ansible"
+    },
+    "Manages VTP domain configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_vtp_domain",
+            "Manages VTP domain configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vtp_domain:",
+            "    domain: ${2:string}",
+            "$0"
+        ],
+        "description": "Manages VTP domain configuration.",
+        "scope": "ansible"
+    },
+    "Manages VTP password configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_vtp_password",
+            "Manages VTP password configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vtp_password:",
+            "    state: ${2|present,absent|}",
+            "    vtp_password: ${3:string}",
+            "$0"
+        ],
+        "description": "Manages VTP password configuration.",
+        "scope": "ansible"
+    },
+    "Manages VTP version configuration.": {
+        "prefix": [
+            "cisco.nxos.nxos_vtp_version",
+            "Manages VTP version configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vtp_version:",
+            "    version: ${2:string}",
+            "$0"
+        ],
+        "description": "Manages VTP version configuration.",
+        "scope": "ansible"
+    },
+    "Manages VXLAN Network Virtualization Endpoint (NVE).": {
+        "prefix": [
+            "cisco.nxos.nxos_vxlan_vtep",
+            "Manages VXLAN Network Virtualization Endpoint (NVE)."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vxlan_vtep:",
+            "    description: ${2:string}",
+            "    global_ingress_replication_bgp: ${3|false,true|}",
+            "    global_mcast_group_L2: ${4:string}",
+            "    global_mcast_group_L3: ${5:string}",
+            "    global_suppress_arp: ${6|false,true|}",
+            "    host_reachability: ${7|false,true|}",
+            "    interface: ${8:string}",
+            "    multisite_border_gateway_interface: ${9:string}",
+            "    shutdown: ${10|false,true|}",
+            "    source_interface: ${11:string}",
+            "    source_interface_hold_down_time: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages VXLAN Network Virtualization Endpoint (NVE).",
+        "scope": "ansible"
+    },
+    "Creates a Virtual Network Identifier member (VNI)": {
+        "prefix": [
+            "cisco.nxos.nxos_vxlan_vtep_vni",
+            "Creates a Virtual Network Identifier member (VNI)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_vxlan_vtep_vni:",
+            "    assoc_vrf: ${2|false,true|}",
+            "    ingress_replication: ${3:string}",
+            "    interface: ${4:string}",
+            "    multicast_group: ${5:string}",
+            "    multisite_ingress_replication: ${6:string}",
+            "    peer_list:",
+            "      - ${7:element}",
+            "    state: ${8|present,absent|}",
+            "    suppress_arp: ${9|false,true|}",
+            "    suppress_arp_disable: ${10|false,true|}",
+            "    vni: ${11:string}",
+            "$0"
+        ],
+        "description": "Creates a Virtual Network Identifier member (VNI)",
+        "scope": "ansible"
+    },
+    "Configuration of zone/zoneset for Cisco NXOS MDS Switches.": {
+        "prefix": [
+            "cisco.nxos.nxos_zone_zoneset",
+            "Configuration of zone/zoneset for Cisco NXOS MDS Switches."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nxos.nxos_zone_zoneset:",
+            "    zone_zoneset_details:",
+            "      - ${2:element}",
+            "$0"
+        ],
+        "description": "Configuration of zone/zoneset for Cisco NXOS MDS Switches.",
+        "scope": "ansible"
+    }
+}

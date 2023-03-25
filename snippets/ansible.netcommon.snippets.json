@@ -1,0 +1,254 @@
+{
+    "Run a cli command on cli-based network devices": {
+        "prefix": [
+            "ansible.netcommon.cli_command",
+            "Run a cli command on cli-based network devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.cli_command:",
+            "    answer:",
+            "      - ${2:element}",
+            "    check_all: ${3|false,true|}",
+            "    command: ${4:string}",
+            "    newline: ${5|true,false|}",
+            "    prompt:",
+            "      - ${6:element}",
+            "    sendonly: ${7|false,true|}",
+            "$0"
+        ],
+        "description": "Run a cli command on cli-based network devices",
+        "scope": "ansible"
+    },
+    "Push text based configuration to network devices over network_cli": {
+        "prefix": [
+            "ansible.netcommon.cli_config",
+            "Push text based configuration to network devices over network_cli"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.cli_config:",
+            "    backup: ${2|false,true|}",
+            "    commit: ${4|false,true|}",
+            "    commit_comment: ${5:string}",
+            "    config: ${6:string}",
+            "    defaults: ${7|false,true|}",
+            "    diff_ignore_lines:",
+            "      - ${8:element}",
+            "    diff_match: ${9:string}",
+            "    diff_replace: ${10:string}",
+            "    multiline_delimiter: ${11:string}",
+            "    replace: ${12:string}",
+            "    rollback: ${13:int}",
+            "$0"
+        ],
+        "description": "Push text based configuration to network devices over network_cli",
+        "scope": "ansible"
+    },
+    "Fetch configuration/state data from gRPC enabled target hosts.": {
+        "prefix": [
+            "ansible.netcommon.grpc_get",
+            "Fetch configuration/state data from gRPC enabled target hosts."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.grpc_get:",
+            "    command: ${2:string}",
+            "    data_type: ${3:string}",
+            "    display: ${4:string}",
+            "    section: ${5:string}",
+            "$0"
+        ],
+        "description": "Fetch configuration/state data from gRPC enabled target hosts.",
+        "scope": "ansible"
+    },
+    "Copy a file from a network device to Ansible Controller": {
+        "prefix": [
+            "ansible.netcommon.net_get",
+            "Copy a file from a network device to Ansible Controller"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.net_get:",
+            "$0"
+        ],
+        "description": "Copy a file from a network device to Ansible Controller",
+        "scope": "ansible"
+    },
+    "Tests reachability using ping from a network device": {
+        "prefix": [
+            "ansible.netcommon.net_ping",
+            "Tests reachability using ping from a network device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.net_ping:",
+            "$0"
+        ],
+        "description": "Tests reachability using ping from a network device",
+        "scope": "ansible"
+    },
+    "Copy a file from Ansible Controller to a network device": {
+        "prefix": [
+            "ansible.netcommon.net_put",
+            "Copy a file from Ansible Controller to a network device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.net_put:",
+            "$0"
+        ],
+        "description": "Copy a file from Ansible Controller to a network device",
+        "scope": "ansible"
+    },
+    "netconf device configuration": {
+        "prefix": [
+            "ansible.netcommon.netconf_config",
+            "netconf device configuration"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.netconf_config:",
+            "    backup: ${2|false,true|}",
+            "    commit: ${4|true,false|}",
+            "    confirm: ${5:0}",
+            "    confirm_commit: ${6|false,true|}",
+            "    content: ${7:\"raw\"}",
+            "    default_operation: ${8:string}",
+            "    delete: ${9|false,true|}",
+            "    error_option: ${10|stop-on-error,continue-on-error,rollback-on-error|}",
+            "    format: ${11:string}",
+            "    get_filter: ${12:\"raw\"}",
+            "    lock: ${13|always,never,if-supported|}",
+            "    save: ${14|false,true|}",
+            "    source_datastore: ${15:string}",
+            "    target: ${16|auto,candidate,running|}",
+            "    validate: ${17|false,true|}",
+            "$0"
+        ],
+        "description": "netconf device configuration",
+        "scope": "ansible"
+    },
+    "Fetch configuration/state data from NETCONF enabled network devices.": {
+        "prefix": [
+            "ansible.netcommon.netconf_get",
+            "Fetch configuration/state data from NETCONF enabled network devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.netconf_get:",
+            "    display: ${2:string}",
+            "    filter: ${3:\"raw\"}",
+            "    lock: ${4|never,always,if-supported|}",
+            "    source: ${5:string}",
+            "$0"
+        ],
+        "description": "Fetch configuration/state data from NETCONF enabled network devices.",
+        "scope": "ansible"
+    },
+    "Execute operations on NETCONF enabled network devices.": {
+        "prefix": [
+            "ansible.netcommon.netconf_rpc",
+            "Execute operations on NETCONF enabled network devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.netconf_rpc:",
+            "    content: ${2:string}",
+            "    display: ${3:string}",
+            "    rpc: ${4:string}",
+            "    xmlns: ${5:string}",
+            "$0"
+        ],
+        "description": "Execute operations on NETCONF enabled network devices.",
+        "scope": "ansible"
+    },
+    "Manage resource modules": {
+        "prefix": [
+            "ansible.netcommon.network_resource",
+            "Manage resource modules"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.network_resource:",
+            "    config: ${2:\"raw\"}",
+            "    name: ${3:string}",
+            "    os_name: ${4:string}",
+            "$0"
+        ],
+        "description": "Manage resource modules",
+        "scope": "ansible"
+    },
+    "Handles create, update, read and delete of configuration data on RESTCONF enabled devices.": {
+        "prefix": [
+            "ansible.netcommon.restconf_config",
+            "Handles create, update, read and delete of configuration data on RESTCONF enabled devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.restconf_config:",
+            "    content: ${2:string}",
+            "    format: ${3|json,xml|}",
+            "    method: ${4|post,put,patch,delete|}",
+            "    path: ${5:string}",
+            "$0"
+        ],
+        "description": "Handles create, update, read and delete of configuration data on RESTCONF enabled devices.",
+        "scope": "ansible"
+    },
+    "Fetch configuration/state data from RESTCONF enabled devices.": {
+        "prefix": [
+            "ansible.netcommon.restconf_get",
+            "Fetch configuration/state data from RESTCONF enabled devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.restconf_get:",
+            "    content: ${2:string}",
+            "    output: ${3|json,xml|}",
+            "    path: ${4:string}",
+            "$0"
+        ],
+        "description": "Fetch configuration/state data from RESTCONF enabled devices.",
+        "scope": "ansible"
+    },
+    "Executes a low-down and dirty telnet command": {
+        "prefix": [
+            "ansible.netcommon.telnet",
+            "Executes a low-down and dirty telnet command"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.netcommon.telnet:",
+            "    command:",
+            "      - ${2:element}",
+            "    host: ${3:remote_addr}",
+            "    login_prompt: ${4:login: }",
+            "    password: ${5:string}",
+            "    password_prompt: ${6:Password: }",
+            "    pause: ${7:1}",
+            "    port: ${8:23}",
+            "    prompts:",
+            "      - ${9:element}",
+            "    send_newline: ${10|false,true|}",
+            "    timeout: ${11:120}",
+            "    user: ${12:remote_user}",
+            "$0"
+        ],
+        "description": "Executes a low-down and dirty telnet command",
+        "scope": "ansible"
+    }
+}

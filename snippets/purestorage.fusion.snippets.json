@@ -1,0 +1,384 @@
+{
+    "Manage API clients in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_api_client",
+            "Manage API clients in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_api_client:",
+            "    app_id: ${2:string}",
+            "    key_file: ${3:string}",
+            "    name: ${4:string}",
+            "    public_key: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage API clients in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage arrays in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_array",
+            "Manage arrays in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_array:",
+            "    app_id: ${2:string}",
+            "    appliance_id: ${3:string}",
+            "    availability_zone: ${4:string}",
+            "    display_name: ${5:string}",
+            "    hardware_type: ${6:string}",
+            "    host_name: ${7:string}",
+            "    key_file: ${8:string}",
+            "    maintenance_mode: ${9|false,true|}",
+            "    name: ${10:string}",
+            "    region: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage arrays in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Create Availability Zones in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_az",
+            "Create Availability Zones in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_az:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    key_file: ${4:string}",
+            "    name: ${5:string}",
+            "    region: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Create Availability Zones in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage host access policies in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_hap",
+            "Manage host access policies in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_hap:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    host_password: ${4:string}",
+            "    host_user: ${5:string}",
+            "    iqn: ${6:string}",
+            "    key_file: ${7:string}",
+            "    name: ${8:string}",
+            "    nqn: ${9:string}",
+            "    personality: ${10|linux,hpux,vms,aix,esxi,solaris,hitachi-vsp,oracle-vm-server|}",
+            "    state: ${11|present,absent|}",
+            "    target_password: ${12:string}",
+            "    target_user: ${13:string}",
+            "    wwns:",
+            "      - ${14:element}",
+            "$0"
+        ],
+        "description": "Manage host access policies in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Create hardware types in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_hw",
+            "Create hardware types in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_hw:",
+            "    app_id: ${2:string}",
+            "    array_type: ${3:string}",
+            "    display_name: ${4:string}",
+            "    key_file: ${5:string}",
+            "    media_type: ${6:string}",
+            "    name: ${7:string}",
+            "    state: ${8|present|}",
+            "$0"
+        ],
+        "description": "Create hardware types in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Collect information from Pure Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_info",
+            "Collect information from Pure Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_info:",
+            "    app_id: ${2:string}",
+            "    gather_subset:",
+            "      - ${3:element}",
+            "    key_file: ${4:string}",
+            "$0"
+        ],
+        "description": "Collect information from Pure Fusion",
+        "scope": "ansible"
+    },
+    "Manage Network Interface Groups in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_nig",
+            "Manage Network Interface Groups in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_nig:",
+            "    app_id: ${2:string}",
+            "    availability_zone: ${3:string}",
+            "    display_name: ${4:string}",
+            "    gateway: ${5:string}",
+            "    group_type: ${6|eth|}",
+            "    key_file: ${7:string}",
+            "    mtu: ${8:1500}",
+            "    name: ${9:string}",
+            "    prefix: ${10:string}",
+            "    region: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Network Interface Groups in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage placement groups in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_pg",
+            "Manage placement groups in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_pg:",
+            "    app_id: ${2:string}",
+            "    availability_zone: ${3:string}",
+            "    display_name: ${4:string}",
+            "    key_file: ${5:string}",
+            "    name: ${6:string}",
+            "    placement_engine: ${7|heuristics,pure1meta|}",
+            "    region: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    tenant: ${10:string}",
+            "    tenant_space: ${11:string}",
+            "$0"
+        ],
+        "description": "Manage placement groups in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage protection policies in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_pp",
+            "Manage protection policies in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_pp:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    key_file: ${4:string}",
+            "    local_retention: ${5:string}",
+            "    local_rpo: ${6:int}",
+            "    name: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage protection policies in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage role assignments in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_ra",
+            "Manage role assignments in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_ra:",
+            "    app_id: ${2:string}",
+            "    key_file: ${3:string}",
+            "    name: ${4:string}",
+            "    scope: ${5|organization,tenant,tenant_space|}",
+            "    state: ${6|present,absent|}",
+            "    tenant: ${7:string}",
+            "    tenant_space: ${8:string}",
+            "    user: ${9:string}",
+            "$0"
+        ],
+        "description": "Manage role assignments in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage Regions in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_region",
+            "Manage Regions in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_region:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    key_file: ${4:string}",
+            "    name: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage Regions in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage storage classes in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_sc",
+            "Manage storage classes in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_sc:",
+            "    app_id: ${2:string}",
+            "    bw_limit: ${3:string}",
+            "    display_name: ${4:string}",
+            "    iops_limit: ${5:string}",
+            "    key_file: ${6:string}",
+            "    name: ${7:string}",
+            "    size_limit: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    storage_service: ${10:string}",
+            "$0"
+        ],
+        "description": "Manage storage classes in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage storage services in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_ss",
+            "Manage storage services in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_ss:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    hardware_types:",
+            "      - ${4:element}",
+            "    key_file: ${5:string}",
+            "    name: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage storage services in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage tenants in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_tenant",
+            "Manage tenants in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_tenant:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    key_file: ${4:string}",
+            "    name: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage tenants in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage tenant networks in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_tn",
+            "Manage tenant networks in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_tn:",
+            "    addresses:",
+            "      - ${2:element}",
+            "    app_id: ${3:string}",
+            "    availability_zone: ${4:string}",
+            "    display_name: ${5:string}",
+            "    gateway: ${6:string}",
+            "    key_file: ${7:string}",
+            "    mtu: ${8:1500}",
+            "    name: ${9:string}",
+            "    prefix: ${10:string}",
+            "    provider_subnets:",
+            "      - ${11:element}",
+            "    region: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage tenant networks in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage tenant spaces in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_ts",
+            "Manage tenant spaces in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_ts:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    key_file: ${4:string}",
+            "    name: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    tenant: ${7:string}",
+            "$0"
+        ],
+        "description": "Manage tenant spaces in Pure Storage Fusion",
+        "scope": "ansible"
+    },
+    "Manage volumes in Pure Storage Fusion": {
+        "prefix": [
+            "purestorage.fusion.fusion_volume",
+            "Manage volumes in Pure Storage Fusion"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.fusion.fusion_volume:",
+            "    app_id: ${2:string}",
+            "    display_name: ${3:string}",
+            "    eradicate: ${4|true,false|}",
+            "    hosts:",
+            "      - ${5:element}",
+            "    key_file: ${6:string}",
+            "    name: ${7:string}",
+            "    placement_group: ${8:string}",
+            "    protection_policy: ${9:string}",
+            "    rename: ${10:string}",
+            "    size: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    storage_class: ${13:string}",
+            "    tenant: ${14:string}",
+            "    tenant_space: ${15:string}",
+            "$0"
+        ],
+        "description": "Manage volumes in Pure Storage Fusion",
+        "scope": "ansible"
+    }
+}

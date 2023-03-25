@@ -1,0 +1,1005 @@
+{
+    "Manage FlashBlade Active Directory Account": {
+        "prefix": [
+            "purestorage.flashblade.purefb_ad",
+            "Manage FlashBlade Active Directory Account"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_ad:",
+            "    api_token: ${2:string}",
+            "    computer: ${3:string}",
+            "    directory_servers:",
+            "      - ${4:element}",
+            "    domain: ${5:string}",
+            "    encryption:",
+            "      - ${6:element}",
+            "    existing: ${7|false,true|}",
+            "    fb_url: ${8:string}",
+            "    join_ou: ${9:string}",
+            "    kerberos_servers:",
+            "      - ${10:element}",
+            "    local_only: ${11|false,true|}",
+            "    name: ${12:string}",
+            "    password: ${13:string}",
+            "    service:",
+            "      - ${14:element}",
+            "    service_principals:",
+            "      - ${15:element}",
+            "    state: ${16|present,absent|}",
+            "    username: ${17:string}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade Active Directory Account",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade Global Admin settings": {
+        "prefix": [
+            "purestorage.flashblade.purefb_admin",
+            "Configure Pure Storage FlashBlade Global Admin settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_admin:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    lockout: ${4:int}",
+            "    max_login: ${5:int}",
+            "    min_password: ${6:1}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade Global Admin settings",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade alert email settings": {
+        "prefix": [
+            "purestorage.flashblade.purefb_alert",
+            "Configure Pure Storage FlashBlade alert email settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_alert:",
+            "    address: ${2:string}",
+            "    api_token: ${3:string}",
+            "    enabled: ${4|true,false|}",
+            "    fb_url: ${5:string}",
+            "    severity: ${6|info,warning,critical|}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade alert email settings",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade API Clients": {
+        "prefix": [
+            "purestorage.flashblade.purefb_apiclient",
+            "Manage FlashBlade API Clients"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_apiclient:",
+            "    api_token: ${2:string}",
+            "    enabled: ${3|true,false|}",
+            "    fb_url: ${4:string}",
+            "    issuer: ${5:string}",
+            "    name: ${6:string}",
+            "    public_key: ${7:string}",
+            "    role: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    token_ttl: ${10:86400}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade API Clients",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade GUI and SSH MOTD message": {
+        "prefix": [
+            "purestorage.flashblade.purefb_banner",
+            "Configure Pure Storage FlashBlade GUI and SSH MOTD message"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_banner:",
+            "    api_token: ${2:string}",
+            "    banner: ${3:Welcome to the machine...}",
+            "    fb_url: ${4:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade GUI and SSH MOTD message",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade name": {
+        "prefix": [
+            "purestorage.flashblade.purefb_bladename",
+            "Configure Pure Storage FlashBlade name"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_bladename:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    name: ${4:string}",
+            "    state: ${5|present|}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade name",
+        "scope": "ansible"
+    },
+    "Manage Object Store Buckets on a  Pure Storage FlashBlade.": {
+        "prefix": [
+            "purestorage.flashblade.purefb_bucket",
+            "Manage Object Store Buckets on a  Pure Storage FlashBlade."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_bucket:",
+            "    account: ${2:string}",
+            "    api_token: ${3:string}",
+            "    eradicate: ${4|false,true|}",
+            "    fb_url: ${5:string}",
+            "    mode: ${6:string}",
+            "    name: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    versioning: ${9|absent,enabled,suspended|}",
+            "$0"
+        ],
+        "description": "Manage Object Store Buckets on a  Pure Storage FlashBlade.",
+        "scope": "ansible"
+    },
+    "Manage bucket replica links between Pure Storage FlashBlades": {
+        "prefix": [
+            "purestorage.flashblade.purefb_bucket_replica",
+            "Manage bucket replica links between Pure Storage FlashBlades"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_bucket_replica:",
+            "    api_token: ${2:string}",
+            "    credential: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    paused: ${6|false,true|}",
+            "    state: ${7|present,absent|}",
+            "    target: ${8:string}",
+            "    target_bucket: ${9:string}",
+            "$0"
+        ],
+        "description": "Manage bucket replica links between Pure Storage FlashBlades",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade Certifcate Groups": {
+        "prefix": [
+            "purestorage.flashblade.purefb_certgrp",
+            "Manage FlashBlade Certifcate Groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_certgrp:",
+            "    api_token: ${2:string}",
+            "    certificates:",
+            "      - ${3:element}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade Certifcate Groups",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade SSL Certificates": {
+        "prefix": [
+            "purestorage.flashblade.purefb_certs",
+            "Manage FlashBlade SSL Certificates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_certs:",
+            "    api_token: ${2:string}",
+            "    contents: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    passphrase: ${6:string}",
+            "    private_key: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade SSL Certificates",
+        "scope": "ansible"
+    },
+    "Manage replication connections between two FlashBlades": {
+        "prefix": [
+            "purestorage.flashblade.purefb_connect",
+            "Manage replication connections between two FlashBlades"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_connect:",
+            "    api_token: ${2:string}",
+            "    default_limit: ${3:string}",
+            "    encrypted: ${4|false,true|}",
+            "    fb_url: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    target_api: ${7:string}",
+            "    target_repl:",
+            "      - ${8:element}",
+            "    target_url: ${9:string}",
+            "    window_end: ${10:string}",
+            "    window_limit: ${11:string}",
+            "    window_start: ${12:string}",
+            "$0"
+        ],
+        "description": "Manage replication connections between two FlashBlades",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade DNS settings": {
+        "prefix": [
+            "purestorage.flashblade.purefb_dns",
+            "Configure Pure Storage FlashBlade DNS settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_dns:",
+            "    api_token: ${2:string}",
+            "    domain: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    nameservers:",
+            "      - ${5:element}",
+            "    search:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade DNS settings",
+        "scope": "ansible"
+    },
+    "Configure FlashBlade Directory Service": {
+        "prefix": [
+            "purestorage.flashblade.purefb_ds",
+            "Configure FlashBlade Directory Service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_ds:",
+            "    api_token: ${2:string}",
+            "    base_dn: ${3:string}",
+            "    bind_password: ${4:string}",
+            "    bind_user: ${5:string}",
+            "    dstype: ${6:string}",
+            "    enable: ${7|false,true|}",
+            "    fb_url: ${8:string}",
+            "    join_ou: ${9:string}",
+            "    nis_domain: ${10:string}",
+            "    nis_servers:",
+            "      - ${11:element}",
+            "    state: ${12|present,absent|}",
+            "    uri:",
+            "      - ${13:element}",
+            "$0"
+        ],
+        "description": "Configure FlashBlade Directory Service",
+        "scope": "ansible"
+    },
+    "Configure FlashBlade  Management Directory Service Roles": {
+        "prefix": [
+            "purestorage.flashblade.purefb_dsrole",
+            "Configure FlashBlade  Management Directory Service Roles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_dsrole:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    group: ${4:string}",
+            "    group_base: ${5:string}",
+            "    role: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Configure FlashBlade  Management Directory Service Roles",
+        "scope": "ansible"
+    },
+    "Sign Pure Storage FlashBlade EULA": {
+        "prefix": [
+            "purestorage.flashblade.purefb_eula",
+            "Sign Pure Storage FlashBlade EULA"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_eula:",
+            "    api_token: ${2:string}",
+            "    company: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    title: ${6:string}",
+            "$0"
+        ],
+        "description": "Sign Pure Storage FlashBlade EULA",
+        "scope": "ansible"
+    },
+    "Manage filesystemon Pure Storage FlashBlade`": {
+        "prefix": [
+            "purestorage.flashblade.purefb_fs",
+            "Manage filesystemon Pure Storage FlashBlade`"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_fs:",
+            "    access_control: ${2|shared,nfs,smb,independent,mode-bits|}",
+            "    api_token: ${3:string}",
+            "    delete_link: ${4|false,true|}",
+            "    discard_snaps: ${5|false,true|}",
+            "    eradicate: ${6|false,true|}",
+            "    export_policy: ${7:string}",
+            "    fastremove: ${8|false,true|}",
+            "    fb_url: ${9:string}",
+            "    group_quota: ${10:string}",
+            "    hard_limit: ${11|false,true|}",
+            "    http: ${12|false,true|}",
+            "    name: ${13:string}",
+            "    nfs_rules: ${14:string}",
+            "    nfsv3: ${15|true,false|}",
+            "    nfsv4: ${16|true,false|}",
+            "    policy: ${17:string}",
+            "    policy_state: ${18|present,absent|}",
+            "    promote: ${19|false,true|}",
+            "    safeguard_acls: ${20|true,false|}",
+            "    size: ${21:string}",
+            "    smb: ${22|false,true|}",
+            "    smb_aclmode: ${23|shared,native|}",
+            "    snapshot: ${24|false,true|}",
+            "    state: ${25|present,absent|}",
+            "    user_quota: ${26:string}",
+            "    writable: ${27|false,true|}",
+            "$0"
+        ],
+        "description": "Manage filesystemon Pure Storage FlashBlade`",
+        "scope": "ansible"
+    },
+    "Manage filesystem replica links between Pure Storage FlashBlades": {
+        "prefix": [
+            "purestorage.flashblade.purefb_fs_replica",
+            "Manage filesystem replica links between Pure Storage FlashBlades"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_fs_replica:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    name: ${4:string}",
+            "    policy: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    target_array: ${7:string}",
+            "    target_fs: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage filesystem replica links between Pure Storage FlashBlades",
+        "scope": "ansible"
+    },
+    "Manage filesystem group quotas": {
+        "prefix": [
+            "purestorage.flashblade.purefb_groupquota",
+            "Manage filesystem group quotas"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_groupquota:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    gid: ${4:int}",
+            "    gname: ${5:string}",
+            "    name: ${6:string}",
+            "    quota: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage filesystem group quotas",
+        "scope": "ansible"
+    },
+    "Collect information from Pure Storage FlashBlade": {
+        "prefix": [
+            "purestorage.flashblade.purefb_inventory",
+            "Collect information from Pure Storage FlashBlade"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_inventory:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "$0"
+        ],
+        "description": "Collect information from Pure Storage FlashBlade",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade Kerberos Keytabs": {
+        "prefix": [
+            "purestorage.flashblade.purefb_keytabs",
+            "Manage FlashBlade Kerberos Keytabs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_keytabs:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    filetype: ${4:string}",
+            "    keytab_file: ${5:string}",
+            "    name: ${6:string}",
+            "    prefix: ${7:string}",
+            "    state: ${8|import,absent,export,rotate|}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade Kerberos Keytabs",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade Link Aggregation Groups": {
+        "prefix": [
+            "purestorage.flashblade.purefb_lag",
+            "Manage FlashBlade Link Aggregation Groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_lag:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    name: ${4:uplink}",
+            "    ports:",
+            "      - ${5:element}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade Link Aggregation Groups",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade object lifecycles": {
+        "prefix": [
+            "purestorage.flashblade.purefb_lifecycle",
+            "Manage FlashBlade object lifecycles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_lifecycle:",
+            "    abort_uploads_after: ${2:string}",
+            "    api_token: ${3:string}",
+            "    bucket: ${4:string}",
+            "    enabled: ${5|true,false|}",
+            "    fb_url: ${6:string}",
+            "    keep_current_for: ${7:string}",
+            "    keep_current_until: ${8:string}",
+            "    keep_previous_for: ${9:string}",
+            "    name: ${10:string}",
+            "    prefix: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade object lifecycles",
+        "scope": "ansible"
+    },
+    "List FlashBlade Alert Messages": {
+        "prefix": [
+            "purestorage.flashblade.purefb_messages",
+            "List FlashBlade Alert Messages"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_messages:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    flagged: ${4|false,true|}",
+            "    history: ${5:1w}",
+            "    severity:",
+            "      - ${6:element}",
+            "    state: ${7|open,all,closed|}",
+            "$0"
+        ],
+        "description": "List FlashBlade Alert Messages",
+        "scope": "ansible"
+    },
+    "Manage network interfaces in a Pure Storage FlashBlade": {
+        "prefix": [
+            "purestorage.flashblade.purefb_network",
+            "Manage network interfaces in a Pure Storage FlashBlade"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_network:",
+            "    address: ${2:string}",
+            "    api_token: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    itype: ${5|vip|}",
+            "    name: ${6:string}",
+            "    services: ${7|data,replication|}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage network interfaces in a Pure Storage FlashBlade",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade NTP settings": {
+        "prefix": [
+            "purestorage.flashblade.purefb_ntp",
+            "Configure Pure Storage FlashBlade NTP settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_ntp:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    ntp_servers:",
+            "      - ${4:element}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade NTP settings",
+        "scope": "ansible"
+    },
+    "Enable or Disable Pure Storage FlashBlade Phone Home": {
+        "prefix": [
+            "purestorage.flashblade.purefb_phonehome",
+            "Enable or Disable Pure Storage FlashBlade Phone Home"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_phonehome:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Enable or Disable Pure Storage FlashBlade Phone Home",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade policies": {
+        "prefix": [
+            "purestorage.flashblade.purefb_policy",
+            "Manage FlashBlade policies"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_policy:",
+            "    access: ${2|root-squash,all-squash,no-squash|}",
+            "    account: ${3:string}",
+            "    actions:",
+            "      - ${4:element}",
+            "    anongid: ${5:string}",
+            "    anonuid: ${6:string}",
+            "    api_token: ${7:string}",
+            "    at: ${8:string}",
+            "    atime: ${9|true,false|}",
+            "    before_rule: ${10:int}",
+            "    client: ${11:*}",
+            "    effect: ${12|allow|}",
+            "    enabled: ${13|true,false|}",
+            "    every: ${14:int}",
+            "    fb_url: ${15:string}",
+            "    fileid_32bit: ${16|false,true|}",
+            "    filesystem:",
+            "      - ${17:element}",
+            "    force_delete: ${18|false,true|}",
+            "    ignore_enforcement: ${19|true,false|}",
+            "    keep_for: ${20:int}",
+            "    name: ${21:string}",
+            "    object_resources:",
+            "      - ${22:element}",
+            "    permission: ${23|ro,rw|}",
+            "    policy_type: ${24|snapshot,access,nfs|}",
+            "    rename: ${25:string}",
+            "    replica_link:",
+            "      - ${26:element}",
+            "    rule: ${27:string}",
+            "    s3_delimiters:",
+            "      - ${28:element}",
+            "    s3_prefixes:",
+            "      - ${29:element}",
+            "    secure: ${30|false,true|}",
+            "    security:",
+            "      - ${31:element}",
+            "    source_ips:",
+            "      - ${32:element}",
+            "    state: ${33|present,absent,copy|}",
+            "    target: ${34:string}",
+            "    target_rule: ${35:string}",
+            "    timezone: ${36:string}",
+            "    user: ${37:string}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade policies",
+        "scope": "ansible"
+    },
+    "Configure FlashBlade phonehome HTTPs proxy settings": {
+        "prefix": [
+            "purestorage.flashblade.purefb_proxy",
+            "Configure FlashBlade phonehome HTTPs proxy settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_proxy:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    host: ${4:string}",
+            "    port: ${5:int}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Configure FlashBlade phonehome HTTPs proxy settings",
+        "scope": "ansible"
+    },
+    "Enable or Disable Pure Storage FlashBlade Remote Assist": {
+        "prefix": [
+            "purestorage.flashblade.purefb_ra",
+            "Enable or Disable Pure Storage FlashBlade Remote Assist"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_ra:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "$0"
+        ],
+        "description": "Enable or Disable Pure Storage FlashBlade Remote Assist",
+        "scope": "ansible"
+    },
+    "Create, modify and delete FlashBlade object store remote credentials": {
+        "prefix": [
+            "purestorage.flashblade.purefb_remote_cred",
+            "Create, modify and delete FlashBlade object store remote credentials"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_remote_cred:",
+            "    access_key: ${2:string}",
+            "    api_token: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    secret: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    target: ${8:string}",
+            "$0"
+        ],
+        "description": "Create, modify and delete FlashBlade object store remote credentials",
+        "scope": "ansible"
+    },
+    "Create or delete FlashBlade Object Store accounts": {
+        "prefix": [
+            "purestorage.flashblade.purefb_s3acc",
+            "Create or delete FlashBlade Object Store accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_s3acc:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    name: ${4:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Create or delete FlashBlade Object Store accounts",
+        "scope": "ansible"
+    },
+    "Create or delete FlashBlade Object Store account users": {
+        "prefix": [
+            "purestorage.flashblade.purefb_s3user",
+            "Create or delete FlashBlade Object Store account users"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_s3user:",
+            "    access_key: ${2|false,true|}",
+            "    account: ${3:string}",
+            "    api_token: ${4:string}",
+            "    fb_url: ${5:string}",
+            "    imported_key: ${6:string}",
+            "    imported_secret: ${7:string}",
+            "    name: ${8:string}",
+            "    policy:",
+            "      - ${9:element}",
+            "    remove_key: ${10:string}",
+            "    state: ${11|present,absent,remove_key|}",
+            "$0"
+        ],
+        "description": "Create or delete FlashBlade Object Store account users",
+        "scope": "ansible"
+    },
+    "Configure SMTP for Pure Storage FlashBlade": {
+        "prefix": [
+            "purestorage.flashblade.purefb_smtp",
+            "Configure SMTP for Pure Storage FlashBlade"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_smtp:",
+            "    api_token: ${2:string}",
+            "    domain: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    host: ${5:string}",
+            "$0"
+        ],
+        "description": "Configure SMTP for Pure Storage FlashBlade",
+        "scope": "ansible"
+    },
+    "Manage filesystem snapshots on Pure Storage FlashBlades": {
+        "prefix": [
+            "purestorage.flashblade.purefb_snap",
+            "Manage filesystem snapshots on Pure Storage FlashBlades"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_snap:",
+            "    api_token: ${2:string}",
+            "    eradicate: ${3|true,false|}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    now: ${6|false,true|}",
+            "    state: ${7|present,absent,restore|}",
+            "    suffix: ${8:string}",
+            "    targets:",
+            "      - ${9:element}",
+            "$0"
+        ],
+        "description": "Manage filesystem snapshots on Pure Storage FlashBlades",
+        "scope": "ansible"
+    },
+    "Configure the FlashBlade SNMP Agent": {
+        "prefix": [
+            "purestorage.flashblade.purefb_snmp_agent",
+            "Configure the FlashBlade SNMP Agent"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_snmp_agent:",
+            "    api_token: ${2:string}",
+            "    auth_passphrase: ${3:string}",
+            "    auth_protocol: ${4:string}",
+            "    community: ${5:string}",
+            "    fb_url: ${6:string}",
+            "    privacy_passphrase: ${7:string}",
+            "    privacy_protocol: ${8:string}",
+            "    user: ${9:string}",
+            "    version: ${10:string}",
+            "$0"
+        ],
+        "description": "Configure the FlashBlade SNMP Agent",
+        "scope": "ansible"
+    },
+    "Configure FlashBlade SNMP Managers": {
+        "prefix": [
+            "purestorage.flashblade.purefb_snmp_mgr",
+            "Configure FlashBlade SNMP Managers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_snmp_mgr:",
+            "    api_token: ${2:string}",
+            "    auth_passphrase: ${3:string}",
+            "    auth_protocol: ${4:string}",
+            "    community: ${5:string}",
+            "    fb_url: ${6:string}",
+            "    host: ${7:string}",
+            "    name: ${8:string}",
+            "    notification: ${9|trap,inform|}",
+            "    privacy_passphrase: ${10:string}",
+            "    privacy_protocol: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    user: ${13:string}",
+            "    version: ${14:string}",
+            "$0"
+        ],
+        "description": "Configure FlashBlade SNMP Managers",
+        "scope": "ansible"
+    },
+    "Manage network subnets in a Pure Storage FlashBlade": {
+        "prefix": [
+            "purestorage.flashblade.purefb_subnet",
+            "Manage network subnets in a Pure Storage FlashBlade"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_subnet:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    gateway: ${4:string}",
+            "    lag: ${5:uplink}",
+            "    mtu: ${6:1500}",
+            "    name: ${7:string}",
+            "    prefix: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    vlan: ${10:0}",
+            "$0"
+        ],
+        "description": "Manage network subnets in a Pure Storage FlashBlade",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade syslog settings": {
+        "prefix": [
+            "purestorage.flashblade.purefb_syslog",
+            "Configure Pure Storage FlashBlade syslog settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_syslog:",
+            "    address: ${2:string}",
+            "    api_token: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    port: ${6:string}",
+            "    protocol: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade syslog settings",
+        "scope": "ansible"
+    },
+    "Manage remote S3-capable targets for a FlashBlade": {
+        "prefix": [
+            "purestorage.flashblade.purefb_target",
+            "Manage remote S3-capable targets for a FlashBlade"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_target:",
+            "    address: ${2:string}",
+            "    api_token: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage remote S3-capable targets for a FlashBlade",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade GUI idle timeout": {
+        "prefix": [
+            "purestorage.flashblade.purefb_timeout",
+            "Configure Pure Storage FlashBlade GUI idle timeout"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_timeout:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    state: ${4|present,absent|}",
+            "    timeout: ${5:30}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade GUI idle timeout",
+        "scope": "ansible"
+    },
+    "Configure Pure Storage FlashBlade timezone": {
+        "prefix": [
+            "purestorage.flashblade.purefb_tz",
+            "Configure Pure Storage FlashBlade timezone"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_tz:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    timezone: ${4:string}",
+            "$0"
+        ],
+        "description": "Configure Pure Storage FlashBlade timezone",
+        "scope": "ansible"
+    },
+    "Modify FlashBlade user accounts": {
+        "prefix": [
+            "purestorage.flashblade.purefb_user",
+            "Modify FlashBlade user accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_user:",
+            "    api_token: ${2:string}",
+            "    clear_lock: ${3|false,true|}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    old_password: ${6:string}",
+            "    password: ${7:string}",
+            "    public_key: ${8:string}",
+            "$0"
+        ],
+        "description": "Modify FlashBlade user accounts",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade Object Store User Access Policies": {
+        "prefix": [
+            "purestorage.flashblade.purefb_userpolicy",
+            "Manage FlashBlade Object Store User Access Policies"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_userpolicy:",
+            "    account: ${2:string}",
+            "    api_token: ${3:string}",
+            "    fb_url: ${4:string}",
+            "    name: ${5:string}",
+            "    policy:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent,show|}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade Object Store User Access Policies",
+        "scope": "ansible"
+    },
+    "Manage filesystem user quotas": {
+        "prefix": [
+            "purestorage.flashblade.purefb_userquota",
+            "Manage filesystem user quotas"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_userquota:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    name: ${4:string}",
+            "    quota: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    uid: ${7:int}",
+            "    uname: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage filesystem user quotas",
+        "scope": "ansible"
+    },
+    "Manage FlashBlade Object Store Virtual Hosts": {
+        "prefix": [
+            "purestorage.flashblade.purefb_virtualhost",
+            "Manage FlashBlade Object Store Virtual Hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  purestorage.flashblade.purefb_virtualhost:",
+            "    api_token: ${2:string}",
+            "    fb_url: ${3:string}",
+            "    name: ${4:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage FlashBlade Object Store Virtual Hosts",
+        "scope": "ansible"
+    }
+}

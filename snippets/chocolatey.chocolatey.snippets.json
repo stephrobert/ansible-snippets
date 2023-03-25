@@ -1,0 +1,119 @@
+{
+    "Manage packages using chocolatey": {
+        "prefix": [
+            "chocolatey.chocolatey.win_chocolatey",
+            "Manage packages using chocolatey"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  chocolatey.chocolatey.win_chocolatey:",
+            "    allow_empty_checksums: ${2|false,true|}",
+            "    allow_multiple: ${3|false,true|}",
+            "    allow_prerelease: ${4|false,true|}",
+            "    architecture: ${5|default,x86|}",
+            "    bootstrap_script: ${6:string}",
+            "    bootstrap_tls_version:",
+            "      - ${7:element}",
+            "    choco_args:",
+            "      - ${8:element}",
+            "    force: ${9|false,true|}",
+            "    ignore_checksums: ${10|false,true|}",
+            "    ignore_dependencies: ${11|false,true|}",
+            "    install_args: ${12:string}",
+            "    name:",
+            "      - ${13:element}",
+            "    override_args: ${14|false,true|}",
+            "    package_params: ${15:string}",
+            "    pinned: ${16|false,true|}",
+            "    proxy_password: ${17:string}",
+            "    proxy_url: ${18:string}",
+            "    proxy_username: ${19:string}",
+            "    remove_dependencies: ${20|false,true|}",
+            "    skip_scripts: ${21|false,true|}",
+            "    source: ${22:string}",
+            "    source_password: ${23:string}",
+            "    source_username: ${24:string}",
+            "    state: ${25|present,absent,downgrade,upgrade,latest,reinstalled|}",
+            "    timeout: ${26:2700}",
+            "    validate_certs: ${27|true,false|}",
+            "    version: ${28:string}",
+            "$0"
+        ],
+        "description": "Manage packages using chocolatey",
+        "scope": "ansible"
+    },
+    "Manages Chocolatey config settings": {
+        "prefix": [
+            "chocolatey.chocolatey.win_chocolatey_config",
+            "Manages Chocolatey config settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  chocolatey.chocolatey.win_chocolatey_config:",
+            "    name: ${2:string}",
+            "    state: ${3|present,absent|}",
+            "    value: ${4:string}",
+            "$0"
+        ],
+        "description": "Manages Chocolatey config settings",
+        "scope": "ansible"
+    },
+    "Create a facts collection for Chocolatey": {
+        "prefix": [
+            "chocolatey.chocolatey.win_chocolatey_facts",
+            "Create a facts collection for Chocolatey"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  chocolatey.chocolatey.win_chocolatey_facts:",
+            "$0"
+        ],
+        "description": "Create a facts collection for Chocolatey",
+        "scope": "ansible"
+    },
+    "Manages Chocolatey features": {
+        "prefix": [
+            "chocolatey.chocolatey.win_chocolatey_feature",
+            "Manages Chocolatey features"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  chocolatey.chocolatey.win_chocolatey_feature:",
+            "    name: ${2:string}",
+            "    state: ${3|enabled,disabled|}",
+            "$0"
+        ],
+        "description": "Manages Chocolatey features",
+        "scope": "ansible"
+    },
+    "Manages Chocolatey sources": {
+        "prefix": [
+            "chocolatey.chocolatey.win_chocolatey_source",
+            "Manages Chocolatey sources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  chocolatey.chocolatey.win_chocolatey_source:",
+            "    admin_only: ${2|false,true|}",
+            "    allow_self_service: ${3|false,true|}",
+            "    bypass_proxy: ${4|false,true|}",
+            "    certificate: ${5:string}",
+            "    certificate_password: ${6:string}",
+            "    name: ${7:string}",
+            "    priority: ${8:int}",
+            "    source: ${9:string}",
+            "    source_password: ${10:string}",
+            "    source_username: ${11:string}",
+            "    state: ${12|present,absent,disabled|}",
+            "    update_password: ${13|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages Chocolatey sources",
+        "scope": "ansible"
+    }
+}

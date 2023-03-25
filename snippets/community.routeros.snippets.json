@@ -1,0 +1,188 @@
+{
+    "Ansible module for RouterOS API": {
+        "prefix": [
+            "community.routeros.api",
+            "Ansible module for RouterOS API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.routeros.api:",
+            "    add: ${2:string}",
+            "    ca_path: ${3:path}",
+            "    cmd: ${4:string}",
+            "    encoding: ${5:ASCII}",
+            "    force_no_cert: ${7|false,true|}",
+            "    hostname: ${8:string}",
+            "    password: ${9:string}",
+            "    path: ${10:string}",
+            "    port: ${11:int}",
+            "    query: ${12:string}",
+            "    remove: ${13:string}",
+            "    timeout: ${14:10}",
+            "    tls: ${15|false,true|}",
+            "    update: ${16:string}",
+            "    username: ${17:string}",
+            "    validate_cert_hostname: ${18|false,true|}",
+            "    validate_certs: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Ansible module for RouterOS API",
+        "scope": "ansible"
+    },
+    "Collect facts from remote devices running MikroTik RouterOS using the API": {
+        "prefix": [
+            "community.routeros.api_facts",
+            "Collect facts from remote devices running MikroTik RouterOS using the API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.routeros.api_facts:",
+            "    ca_path: ${2:path}",
+            "    encoding: ${3:ASCII}",
+            "    force_no_cert: ${4|false,true|}",
+            "    gather_subset:",
+            "      - ${5:element}",
+            "    hostname: ${6:string}",
+            "    password: ${7:string}",
+            "    port: ${8:int}",
+            "    timeout: ${9:10}",
+            "    tls: ${10|false,true|}",
+            "    username: ${11:string}",
+            "    validate_cert_hostname: ${12|false,true|}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Collect facts from remote devices running MikroTik RouterOS using the API",
+        "scope": "ansible"
+    },
+    "Find and modify information using the API": {
+        "prefix": [
+            "community.routeros.api_find_and_modify",
+            "Find and modify information using the API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.routeros.api_find_and_modify:",
+            "    allow_no_matches: ${2|false,true|}",
+            "    ca_path: ${3:path}",
+            "    encoding: ${4:ASCII}",
+            "    force_no_cert: ${6|false,true|}",
+            "    hostname: ${7:string}",
+            "    password: ${8:string}",
+            "    path: ${9:string}",
+            "    port: ${10:int}",
+            "    require_matches_max: ${11:int}",
+            "    require_matches_min: ${12:0}",
+            "    timeout: ${13:10}",
+            "    tls: ${14|false,true|}",
+            "    username: ${15:string}",
+            "    validate_cert_hostname: ${16|false,true|}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Find and modify information using the API",
+        "scope": "ansible"
+    },
+    "Retrieve information from API": {
+        "prefix": [
+            "community.routeros.api_info",
+            "Retrieve information from API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.routeros.api_info:",
+            "    ca_path: ${2:path}",
+            "    encoding: ${3:ASCII}",
+            "    force_no_cert: ${4|false,true|}",
+            "    handle_disabled: ${5|exclamation,null-value,omit|}",
+            "    hide_defaults: ${6|true,false|}",
+            "    hostname: ${7:string}",
+            "    include_builtin: ${8|false,true|}",
+            "    include_dynamic: ${9|false,true|}",
+            "    password: ${10:string}",
+            "    path: ${11:string}",
+            "    port: ${12:int}",
+            "    timeout: ${13:10}",
+            "    tls: ${14|false,true|}",
+            "    unfiltered: ${15|false,true|}",
+            "    username: ${16:string}",
+            "    validate_cert_hostname: ${17|false,true|}",
+            "    validate_certs: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieve information from API",
+        "scope": "ansible"
+    },
+    "Modify data at paths with API": {
+        "prefix": [
+            "community.routeros.api_modify",
+            "Modify data at paths with API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.routeros.api_modify:",
+            "    ca_path: ${2:path}",
+            "    data:",
+            "      - ${3:element}",
+            "    encoding: ${4:ASCII}",
+            "    ensure_order: ${5|false,true|}",
+            "    force_no_cert: ${6|false,true|}",
+            "    handle_absent_entries: ${7|ignore,remove|}",
+            "    handle_entries_content: ${8|ignore,remove,remove_as_much_as_possible|}",
+            "    hostname: ${9:string}",
+            "    password: ${10:string}",
+            "    path: ${11:string}",
+            "    port: ${12:int}",
+            "    timeout: ${13:10}",
+            "    tls: ${14|false,true|}",
+            "    username: ${15:string}",
+            "    validate_cert_hostname: ${16|false,true|}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Modify data at paths with API",
+        "scope": "ansible"
+    },
+    "Run commands on remote devices running MikroTik RouterOS": {
+        "prefix": [
+            "community.routeros.command",
+            "Run commands on remote devices running MikroTik RouterOS"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.routeros.command:",
+            "    commands:",
+            "      - ${2:element}",
+            "    interval: ${3:1}",
+            "    match: ${4|all,any|}",
+            "    retries: ${5:10}",
+            "    wait_for:",
+            "      - ${6:element}",
+            "$0"
+        ],
+        "description": "Run commands on remote devices running MikroTik RouterOS",
+        "scope": "ansible"
+    },
+    "Collect facts from remote devices running MikroTik RouterOS": {
+        "prefix": [
+            "community.routeros.facts",
+            "Collect facts from remote devices running MikroTik RouterOS"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.routeros.facts:",
+            "    gather_subset:",
+            "      - ${2:element}",
+            "$0"
+        ],
+        "description": "Collect facts from remote devices running MikroTik RouterOS",
+        "scope": "ansible"
+    }
+}

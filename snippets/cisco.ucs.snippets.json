@@ -1,0 +1,645 @@
+{
+    "Configures disk group policies on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_disk_group_policy",
+            "Configures disk group policies on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_disk_group_policy:",
+            "    hostname: ${5:string}",
+            "    password: ${13:string}",
+            "    port: ${14:int}",
+            "    proxy: ${15:string}",
+            "    use_proxy: ${18|true,false|}",
+            "    use_ssl: ${20|true,false|}",
+            "    username: ${21:admin}",
+            "$0"
+        ],
+        "description": "Configures disk group policies on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configure DNS servers on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_dns_server",
+            "Configure DNS servers on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_dns_server:",
+            "    delegate_to: ${2:localhost}",
+            "    description: ${3:string}",
+            "    dns_server: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:int}",
+            "    proxy: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    use_proxy: ${10|true,false|}",
+            "    use_ssl: ${11|true,false|}",
+            "    username: ${12:admin}",
+            "$0"
+        ],
+        "description": "Configure DNS servers on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Manages UCS Graphics Card Policies on UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_graphics_card_policy",
+            "Manages UCS Graphics Card Policies on UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_graphics_card_policy:",
+            "    description: ${2:string}",
+            "    graphics_card_mode: ${3:string}",
+            "    hostname: ${4:string}",
+            "    name: ${5:string}",
+            "    org_dn: ${6:org-root}",
+            "    password: ${7:string}",
+            "    port: ${8:int}",
+            "    proxy: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    use_proxy: ${11|true,false|}",
+            "    use_ssl: ${12|true,false|}",
+            "    username: ${13:admin}",
+            "$0"
+        ],
+        "description": "Manages UCS Graphics Card Policies on UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures IP address pools on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_ip_pool",
+            "Configures IP address pools on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_ip_pool:",
+            "    hostname: ${3:string}",
+            "    password: ${9:string}",
+            "    port: ${10:int}",
+            "    proxy: ${11:string}",
+            "    use_proxy: ${13|true,false|}",
+            "    use_ssl: ${14|true,false|}",
+            "    username: ${15:admin}",
+            "$0"
+        ],
+        "description": "Configures IP address pools on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures LAN Connectivity Policies on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_lan_connectivity",
+            "Configures LAN Connectivity Policies on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_lan_connectivity:",
+            "    hostname: ${3:string}",
+            "    password: ${7:string}",
+            "    port: ${8:int}",
+            "    proxy: ${9:string}",
+            "    use_proxy: ${11|true,false|}",
+            "    use_ssl: ${12|true,false|}",
+            "    username: ${13:admin}",
+            "$0"
+        ],
+        "description": "Configures LAN Connectivity Policies on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures MAC address pools on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_mac_pool",
+            "Configures MAC address pools on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_mac_pool:",
+            "    hostname: ${4:string}",
+            "    password: ${9:string}",
+            "    port: ${10:int}",
+            "    proxy: ${11:string}",
+            "    use_proxy: ${13|true,false|}",
+            "    use_ssl: ${14|true,false|}",
+            "    username: ${15:admin}",
+            "$0"
+        ],
+        "description": "Configures MAC address pools on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures Managed Objects on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_managed_objects",
+            "Configures Managed Objects on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_managed_objects:",
+            "    hostname: ${2:string}",
+            "    password: ${4:string}",
+            "    port: ${5:int}",
+            "    proxy: ${6:string}",
+            "    use_proxy: ${8|true,false|}",
+            "    use_ssl: ${9|true,false|}",
+            "    username: ${10:admin}",
+            "$0"
+        ],
+        "description": "Configures Managed Objects on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures NTP server on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_ntp_server",
+            "Configures NTP server on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_ntp_server:",
+            "    hostname: ${3:string}",
+            "    password: ${5:string}",
+            "    port: ${6:int}",
+            "    proxy: ${7:string}",
+            "    use_proxy: ${9|true,false|}",
+            "    use_ssl: ${10|true,false|}",
+            "    username: ${11:admin}",
+            "$0"
+        ],
+        "description": "Configures NTP server on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Manages UCS Organizations for UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_org",
+            "Manages UCS Organizations for UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_org:",
+            "    delegate_to: ${2:localhost}",
+            "    description: ${3:string}",
+            "    hostname: ${4:string}",
+            "    org_name: ${5:string}",
+            "    parent_org_path: ${6:root}",
+            "    password: ${7:string}",
+            "    port: ${8:int}",
+            "    proxy: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    use_proxy: ${11|true,false|}",
+            "    use_ssl: ${12|true,false|}",
+            "    username: ${13:admin}",
+            "$0"
+        ],
+        "description": "Manages UCS Organizations for UCS Manager",
+        "scope": "ansible"
+    },
+    "Queries UCS Manager objects by class or distinguished name": {
+        "prefix": [
+            "cisco.ucs.ucs_query",
+            "Queries UCS Manager objects by class or distinguished name"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_query:",
+            "    class_ids: ${2:string}",
+            "    delegate_to: ${3:localhost}",
+            "    distinguished_names: ${4:string}",
+            "    hostname: ${5:string}",
+            "    password: ${6:string}",
+            "    port: ${7:int}",
+            "    proxy: ${8:string}",
+            "    use_proxy: ${9|true,false|}",
+            "    use_ssl: ${10|true,false|}",
+            "    username: ${11:admin}",
+            "$0"
+        ],
+        "description": "Queries UCS Manager objects by class or distinguished name",
+        "scope": "ansible"
+    },
+    "Configures SAN Connectivity Policies on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_san_connectivity",
+            "Configures SAN Connectivity Policies on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_san_connectivity:",
+            "    hostname: ${3:string}",
+            "    password: ${6:string}",
+            "    port: ${7:int}",
+            "    proxy: ${8:string}",
+            "    use_proxy: ${10|true,false|}",
+            "    use_ssl: ${11|true,false|}",
+            "    username: ${12:admin}",
+            "$0"
+        ],
+        "description": "Configures SAN Connectivity Policies on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Manages UCS Scrub Policies on UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_scrub_policy",
+            "Manages UCS Scrub Policies on UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_scrub_policy:",
+            "    bios_settings_scrub: ${2:string}",
+            "    description: ${3:string}",
+            "    disk_scrub: ${4:string}",
+            "    flex_flash_scrub: ${5:string}",
+            "    hostname: ${6:string}",
+            "    name: ${7:string}",
+            "    org_dn: ${8:org-root}",
+            "    password: ${9:string}",
+            "    persistent_memory_scrub: ${10:string}",
+            "    port: ${11:int}",
+            "    proxy: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    use_proxy: ${14|true,false|}",
+            "    use_ssl: ${15|true,false|}",
+            "    username: ${16:admin}",
+            "$0"
+        ],
+        "description": "Manages UCS Scrub Policies on UCS Manager",
+        "scope": "ansible"
+    },
+    "Manages UCS Serial Over Lan Policies on UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_serial_over_lan_policy",
+            "Manages UCS Serial Over Lan Policies on UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_serial_over_lan_policy:",
+            "    admin_state: ${2:string}",
+            "    description: ${3:string}",
+            "    hostname: ${4:string}",
+            "    name: ${5:string}",
+            "    org_dn: ${6:org-root}",
+            "    password: ${7:string}",
+            "    port: ${8:int}",
+            "    proxy: ${9:string}",
+            "    speed: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    use_proxy: ${12|true,false|}",
+            "    use_ssl: ${13|true,false|}",
+            "    username: ${14:admin}",
+            "$0"
+        ],
+        "description": "Manages UCS Serial Over Lan Policies on UCS Manager",
+        "scope": "ansible"
+    },
+    "Creates Server Maintenance Policy on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_server_maintenance",
+            "Creates Server Maintenance Policy on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_server_maintenance:",
+            "    hostname: ${3:string}",
+            "    password: ${5:string}",
+            "    port: ${6:int}",
+            "    proxy: ${7:string}",
+            "    use_proxy: ${11|true,false|}",
+            "    use_ssl: ${12|true,false|}",
+            "    username: ${13:admin}",
+            "$0"
+        ],
+        "description": "Creates Server Maintenance Policy on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures Service Profile Association on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_service_profile_association",
+            "Configures Service Profile Association on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_service_profile_association:",
+            "    hostname: ${2:string}",
+            "    password: ${4:string}",
+            "    port: ${5:int}",
+            "    proxy: ${6:string}",
+            "    use_proxy: ${13|true,false|}",
+            "    use_ssl: ${14|true,false|}",
+            "    username: ${15:admin}",
+            "$0"
+        ],
+        "description": "Configures Service Profile Association on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures Service Profiles from templates on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_service_profile_from_template",
+            "Configures Service Profiles from templates on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_service_profile_from_template:",
+            "    hostname: ${3:string}",
+            "    password: ${6:string}",
+            "    port: ${7:int}",
+            "    proxy: ${9:string}",
+            "    use_proxy: ${12|true,false|}",
+            "    use_ssl: ${13|true,false|}",
+            "    username: ${15:admin}",
+            "$0"
+        ],
+        "description": "Configures Service Profiles from templates on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures Service Profile Templates on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_service_profile_template",
+            "Configures Service Profile Templates on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_service_profile_template:",
+            "    hostname: ${7:string}",
+            "    password: ${21:string}",
+            "    port: ${22:int}",
+            "    proxy: ${26:string}",
+            "    use_proxy: ${36|true,false|}",
+            "    use_ssl: ${37|true,false|}",
+            "    username: ${39:admin}",
+            "$0"
+        ],
+        "description": "Configures Service Profile Templates on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures vNIC order for service profiles and templates on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_sp_vnic_order",
+            "Configures vNIC order for service profiles and templates on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_sp_vnic_order:",
+            "    hostname: ${2:string}",
+            "    password: ${4:string}",
+            "    port: ${5:int}",
+            "    proxy: ${6:string}",
+            "    use_proxy: ${8|true,false|}",
+            "    use_ssl: ${9|true,false|}",
+            "    username: ${10:admin}",
+            "$0"
+        ],
+        "description": "Configures vNIC order for service profiles and templates on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures storage profiles on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_storage_profile",
+            "Configures storage profiles on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_storage_profile:",
+            "    hostname: ${3:string}",
+            "    password: ${7:string}",
+            "    port: ${8:int}",
+            "    proxy: ${9:string}",
+            "    use_proxy: ${11|true,false|}",
+            "    use_ssl: ${12|true,false|}",
+            "    username: ${13:admin}",
+            "$0"
+        ],
+        "description": "Configures storage profiles on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures system QoS settings": {
+        "prefix": [
+            "cisco.ucs.ucs_system_qos",
+            "Configures system QoS settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_system_qos:",
+            "    hostname: ${5:string}",
+            "    password: ${8:string}",
+            "    port: ${9:int}",
+            "    proxy: ${11:string}",
+            "    use_proxy: ${12|true,false|}",
+            "    use_ssl: ${13|true,false|}",
+            "    username: ${14:admin}",
+            "$0"
+        ],
+        "description": "Configures system QoS settings",
+        "scope": "ansible"
+    },
+    "Configures timezone on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_timezone",
+            "Configures timezone on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_timezone:",
+            "    hostname: ${4:string}",
+            "    password: ${5:string}",
+            "    port: ${6:int}",
+            "    proxy: ${7:string}",
+            "    use_proxy: ${10|true,false|}",
+            "    use_ssl: ${11|true,false|}",
+            "    username: ${12:admin}",
+            "$0"
+        ],
+        "description": "Configures timezone on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures server UUID pools on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_uuid_pool",
+            "Configures server UUID pools on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_uuid_pool:",
+            "    hostname: ${4:string}",
+            "    password: ${9:string}",
+            "    port: ${10:int}",
+            "    proxy: ${12:string}",
+            "    use_proxy: ${14|true,false|}",
+            "    use_ssl: ${15|true,false|}",
+            "    username: ${16:admin}",
+            "$0"
+        ],
+        "description": "Configures server UUID pools on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures vHBA templates on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_vhba_template",
+            "Configures vHBA templates on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_vhba_template:",
+            "    hostname: ${4:string}",
+            "    password: ${8:string}",
+            "    port: ${10:int}",
+            "    proxy: ${11:string}",
+            "    use_proxy: ${17|true,false|}",
+            "    use_ssl: ${18|true,false|}",
+            "    username: ${19:admin}",
+            "$0"
+        ],
+        "description": "Configures vHBA templates on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Find VLANs on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_vlan_find",
+            "Find VLANs on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_vlan_find:",
+            "    fabric: ${2|common,A,B|}",
+            "    hostname: ${3:string}",
+            "    password: ${4:string}",
+            "    pattern: ${5:string}",
+            "    port: ${6:int}",
+            "    proxy: ${7:string}",
+            "    use_proxy: ${8|true,false|}",
+            "    use_ssl: ${9|true,false|}",
+            "    username: ${10:admin}",
+            "    vlanid: ${11:string}",
+            "$0"
+        ],
+        "description": "Find VLANs on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Add VLANs to a VLAN Group. Requires VLAN and VLAN Group to already be created on UCS prior to running module.": {
+        "prefix": [
+            "cisco.ucs.ucs_vlan_to_group",
+            "Add VLANs to a VLAN Group. Requires VLAN and VLAN Group to already be created on UCS prior to running module."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_vlan_to_group:",
+            "    hostname: ${2:string}",
+            "    password: ${3:string}",
+            "    port: ${4:int}",
+            "    proxy: ${5:string}",
+            "    use_proxy: ${7|true,false|}",
+            "    use_ssl: ${8|true,false|}",
+            "    username: ${9:admin}",
+            "$0"
+        ],
+        "description": "Add VLANs to a VLAN Group. Requires VLAN and VLAN Group to already be created on UCS prior to running module.",
+        "scope": "ansible"
+    },
+    "Configures VLANs on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_vlans",
+            "Configures VLANs on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_vlans:",
+            "    hostname: ${3:string}",
+            "    password: ${8:string}",
+            "    port: ${9:int}",
+            "    proxy: ${10:string}",
+            "    use_proxy: ${13|true,false|}",
+            "    use_ssl: ${14|true,false|}",
+            "    username: ${15:admin}",
+            "$0"
+        ],
+        "description": "Configures VLANs on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures vNIC templates on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_vnic_template",
+            "Configures vNIC templates on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_vnic_template:",
+            "    hostname: ${6:string}",
+            "    password: ${12:string}",
+            "    port: ${15:int}",
+            "    proxy: ${16:string}",
+            "    use_proxy: ${23|true,false|}",
+            "    use_ssl: ${24|true,false|}",
+            "    username: ${25:admin}",
+            "$0"
+        ],
+        "description": "Configures vNIC templates on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures VSANs on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_vsans",
+            "Configures VSANs on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_vsans:",
+            "    hostname: ${4:string}",
+            "    password: ${6:string}",
+            "    port: ${7:int}",
+            "    proxy: ${8:string}",
+            "    use_proxy: ${10|true,false|}",
+            "    use_ssl: ${11|true,false|}",
+            "    username: ${12:admin}",
+            "$0"
+        ],
+        "description": "Configures VSANs on Cisco UCS Manager",
+        "scope": "ansible"
+    },
+    "Configures WWNN or WWPN pools on Cisco UCS Manager": {
+        "prefix": [
+            "cisco.ucs.ucs_wwn_pool",
+            "Configures WWNN or WWPN pools on Cisco UCS Manager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ucs.ucs_wwn_pool:",
+            "    hostname: ${4:string}",
+            "    password: ${9:string}",
+            "    port: ${10:int}",
+            "    proxy: ${11:string}",
+            "    use_proxy: ${14|true,false|}",
+            "    use_ssl: ${15|true,false|}",
+            "    username: ${16:admin}",
+            "$0"
+        ],
+        "description": "Configures WWNN or WWPN pools on Cisco UCS Manager",
+        "scope": "ansible"
+    }
+}

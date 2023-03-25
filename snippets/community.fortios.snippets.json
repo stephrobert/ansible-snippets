@@ -1,0 +1,424 @@
+{
+    "Add or remove device": {
+        "prefix": [
+            "community.fortios.faz_device",
+            "Add or remove device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.faz_device:",
+            "    adom: ${2:root}",
+            "    device_ip: ${3:string}",
+            "    device_password: ${4:string}",
+            "    device_serial: ${5:string}",
+            "    device_unique_name: ${6:string}",
+            "    device_username: ${7:string}",
+            "    faz_quota: ${8:string}",
+            "    mgmt_mode: ${9:string}",
+            "    mode: ${10|add,delete,promote|}",
+            "    os_minor_vers: ${11:string}",
+            "    os_type: ${12:string}",
+            "    os_ver: ${13:string}",
+            "    platform_str: ${14:string}",
+            "$0"
+        ],
+        "description": "Add or remove device",
+        "scope": "ansible"
+    },
+    "Add or remove device from FortiManager.": {
+        "prefix": [
+            "community.fortios.fmgr_device",
+            "Add or remove device from FortiManager."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_device:",
+            "$0"
+        ],
+        "description": "Add or remove device from FortiManager.",
+        "scope": "ansible"
+    },
+    "Edit device configurations": {
+        "prefix": [
+            "community.fortios.fmgr_device_config",
+            "Edit device configurations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_device_config:",
+            "$0"
+        ],
+        "description": "Edit device configurations",
+        "scope": "ansible"
+    },
+    "Alter FortiManager device groups.": {
+        "prefix": [
+            "community.fortios.fmgr_device_group",
+            "Alter FortiManager device groups."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_device_group:",
+            "$0"
+        ],
+        "description": "Alter FortiManager device groups.",
+        "scope": "ansible"
+    },
+    "Manages Device Provisioning Templates in FortiManager.": {
+        "prefix": [
+            "community.fortios.fmgr_device_provision_template",
+            "Manages Device Provisioning Templates in FortiManager."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_device_provision_template:",
+            "$0"
+        ],
+        "description": "Manages Device Provisioning Templates in FortiManager.",
+        "scope": "ansible"
+    },
+    "Allows the management of firewall objects in FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_fwobj_address",
+            "Allows the management of firewall objects in FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_fwobj_address:",
+            "$0"
+        ],
+        "description": "Allows the management of firewall objects in FortiManager",
+        "scope": "ansible"
+    },
+    "Allows the editing of IP Pool Objects within FortiManager.": {
+        "prefix": [
+            "community.fortios.fmgr_fwobj_ippool6",
+            "Allows the editing of IP Pool Objects within FortiManager."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_fwobj_ippool6:",
+            "$0"
+        ],
+        "description": "Allows the editing of IP Pool Objects within FortiManager.",
+        "scope": "ansible"
+    },
+    "Manages FortiManager Firewall Service Objects.": {
+        "prefix": [
+            "community.fortios.fmgr_fwobj_service",
+            "Manages FortiManager Firewall Service Objects."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_fwobj_service:",
+            "$0"
+        ],
+        "description": "Manages FortiManager Firewall Service Objects.",
+        "scope": "ansible"
+    },
+    "Manages Virtual IPs objects in FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_fwobj_vip",
+            "Manages Virtual IPs objects in FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_fwobj_vip:",
+            "$0"
+        ],
+        "description": "Manages Virtual IPs objects in FortiManager",
+        "scope": "ansible"
+    },
+    "Allows the add/delete of Firewall Policies on Packages in FortiManager.": {
+        "prefix": [
+            "community.fortios.fmgr_fwpol_ipv4",
+            "Allows the add/delete of Firewall Policies on Packages in FortiManager."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_fwpol_ipv4:",
+            "$0"
+        ],
+        "description": "Allows the add/delete of Firewall Policies on Packages in FortiManager.",
+        "scope": "ansible"
+    },
+    "Manages FortiManager Firewall Policies Packages.": {
+        "prefix": [
+            "community.fortios.fmgr_fwpol_package",
+            "Manages FortiManager Firewall Policies Packages."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_fwpol_package:",
+            "$0"
+        ],
+        "description": "Manages FortiManager Firewall Policies Packages.",
+        "scope": "ansible"
+    },
+    "Manages the High-Availability State of FortiManager Clusters and Nodes.": {
+        "prefix": [
+            "community.fortios.fmgr_ha",
+            "Manages the High-Availability State of FortiManager Clusters and Nodes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_ha:",
+            "$0"
+        ],
+        "description": "Manages the High-Availability State of FortiManager Clusters and Nodes.",
+        "scope": "ansible"
+    },
+    "Provision devices via FortiMananger": {
+        "prefix": [
+            "community.fortios.fmgr_provisioning",
+            "Provision devices via FortiMananger"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_provisioning:",
+            "$0"
+        ],
+        "description": "Provision devices via FortiMananger",
+        "scope": "ansible"
+    },
+    "Query FortiManager data objects for use in Ansible workflows.": {
+        "prefix": [
+            "community.fortios.fmgr_query",
+            "Query FortiManager data objects for use in Ansible workflows."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_query:",
+            "$0"
+        ],
+        "description": "Query FortiManager data objects for use in Ansible workflows.",
+        "scope": "ansible"
+    },
+    "Add/Edit/Delete and execute scripts": {
+        "prefix": [
+            "community.fortios.fmgr_script",
+            "Add/Edit/Delete and execute scripts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_script:",
+            "$0"
+        ],
+        "description": "Add/Edit/Delete and execute scripts",
+        "scope": "ansible"
+    },
+    "Manage application control security profiles": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_appctrl",
+            "Manage application control security profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_appctrl:",
+            "$0"
+        ],
+        "description": "Manage application control security profiles",
+        "scope": "ansible"
+    },
+    "Manage security profile": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_av",
+            "Manage security profile"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_av:",
+            "$0"
+        ],
+        "description": "Manage security profile",
+        "scope": "ansible"
+    },
+    "Manage DNS security profiles in FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_dns",
+            "Manage DNS security profiles in FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_dns:",
+            "    block_action: ${3:string}",
+            "    block_botnet: ${4:string}",
+            "    comment: ${5:string}",
+            "    domain_filter_domain_filter_table: ${6:string}",
+            "    external_ip_blocklist: ${7:string}",
+            "    ftgd_dns_filters_action: ${8:string}",
+            "    ftgd_dns_filters_category: ${9:string}",
+            "    ftgd_dns_filters_log: ${10:string}",
+            "    ftgd_dns_options: ${11:string}",
+            "    log_all_domain: ${12:string}",
+            "    name: ${14:string}",
+            "    redirect_portal: ${15:string}",
+            "    safe_search: ${16:string}",
+            "    sdns_domain_log: ${17:string}",
+            "    sdns_ftgd_err_log: ${18:string}",
+            "    youtube_restrict: ${19:string}",
+            "$0"
+        ],
+        "description": "Manage DNS security profiles in FortiManager",
+        "scope": "ansible"
+    },
+    "Managing IPS security profiles in FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_ips",
+            "Managing IPS security profiles in FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_ips:",
+            "$0"
+        ],
+        "description": "Managing IPS security profiles in FortiManager",
+        "scope": "ansible"
+    },
+    "Manage security profiles within FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_profile_group",
+            "Manage security profiles within FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_profile_group:",
+            "    application_list: ${3:string}",
+            "    av_profile: ${4:string}",
+            "    dlp_sensor: ${5:string}",
+            "    dnsfilter_profile: ${6:string}",
+            "    icap_profile: ${7:string}",
+            "    ips_sensor: ${8:string}",
+            "    mms_profile: ${9:string}",
+            "    name: ${11:string}",
+            "    profile_protocol_options: ${12:string}",
+            "    spamfilter_profile: ${13:string}",
+            "    ssh_filter_profile: ${14:string}",
+            "    ssl_ssh_profile: ${15:string}",
+            "    voip_profile: ${16:string}",
+            "    waf_profile: ${17:string}",
+            "    webfilter_profile: ${18:string}",
+            "$0"
+        ],
+        "description": "Manage security profiles within FortiManager",
+        "scope": "ansible"
+    },
+    "Manage proxy security profiles in FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_proxy",
+            "Manage proxy security profiles in FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_proxy:",
+            "$0"
+        ],
+        "description": "Manage proxy security profiles in FortiManager",
+        "scope": "ansible"
+    },
+    "spam filter profile for FMG": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_spam",
+            "spam filter profile for FMG"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_spam:",
+            "$0"
+        ],
+        "description": "spam filter profile for FMG",
+        "scope": "ansible"
+    },
+    "Manage SSL and SSH security profiles in FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_ssl_ssh",
+            "Manage SSL and SSH security profiles in FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_ssl_ssh:",
+            "$0"
+        ],
+        "description": "Manage SSL and SSH security profiles in FortiManager",
+        "scope": "ansible"
+    },
+    "VOIP security profiles in FMG": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_voip",
+            "VOIP security profiles in FMG"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_voip:",
+            "$0"
+        ],
+        "description": "VOIP security profiles in FMG",
+        "scope": "ansible"
+    },
+    "FortiManager web application firewall security profile": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_waf",
+            "FortiManager web application firewall security profile"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_waf:",
+            "$0"
+        ],
+        "description": "FortiManager web application firewall security profile",
+        "scope": "ansible"
+    },
+    "WAN optimization": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_wanopt",
+            "WAN optimization"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_wanopt:",
+            "$0"
+        ],
+        "description": "WAN optimization",
+        "scope": "ansible"
+    },
+    "Manage web filter security profiles in FortiManager": {
+        "prefix": [
+            "community.fortios.fmgr_secprof_web",
+            "Manage web filter security profiles in FortiManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.fortios.fmgr_secprof_web:",
+            "$0"
+        ],
+        "description": "Manage web filter security profiles in FortiManager",
+        "scope": "ansible"
+    }
+}

@@ -1,0 +1,485 @@
+{
+    "Manage AAA and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_aaa",
+            "Manage AAA and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_aaa:",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage AAA and its parameters",
+        "scope": "ansible"
+    },
+    "Manages REST operations on devices running Enterprise SONiC": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_api",
+            "Manages REST operations on devices running Enterprise SONiC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_api:",
+            "    body: ${2:\"raw\"}",
+            "    method: ${3:string}",
+            "    status_code:",
+            "      - ${4:element}",
+            "    url: ${5:path}",
+            "$0"
+        ],
+        "description": "Manages REST operations on devices running Enterprise SONiC",
+        "scope": "ansible"
+    },
+    "Manage global BGP and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_bgp",
+            "Manage global BGP and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_bgp:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage global BGP and its parameters",
+        "scope": "ansible"
+    },
+    "Manage global BGP address-family and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_bgp_af",
+            "Manage global BGP address-family and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_bgp_af:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage global BGP address-family and its parameters",
+        "scope": "ansible"
+    },
+    "Manage BGP autonomous system path (or as-path-list) and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_bgp_as_paths",
+            "Manage BGP autonomous system path (or as-path-list) and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_bgp_as_paths:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage BGP autonomous system path (or as-path-list) and its parameters",
+        "scope": "ansible"
+    },
+    "Manage BGP community and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_bgp_communities",
+            "Manage BGP community and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_bgp_communities:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage BGP community and its parameters",
+        "scope": "ansible"
+    },
+    "Manage BGP extended community-list and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_bgp_ext_communities",
+            "Manage BGP extended community-list and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_bgp_ext_communities:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage BGP extended community-list and its parameters",
+        "scope": "ansible"
+    },
+    "Manage a BGP neighbor and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_bgp_neighbors",
+            "Manage a BGP neighbor and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_bgp_neighbors:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage a BGP neighbor and its parameters",
+        "scope": "ansible"
+    },
+    "Manage the BGP neighbor address-family and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_bgp_neighbors_af",
+            "Manage the BGP neighbor address-family and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_bgp_neighbors_af:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage the BGP neighbor address-family and its parameters",
+        "scope": "ansible"
+    },
+    "Runs commands on devices running Enterprise SONiC": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_command",
+            "Runs commands on devices running Enterprise SONiC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_command:",
+            "    commands:",
+            "      - ${2:element}",
+            "    interval: ${3:1}",
+            "    match: ${4|all,any|}",
+            "    retries: ${5:10}",
+            "    wait_for:",
+            "      - ${6:element}",
+            "$0"
+        ],
+        "description": "Runs commands on devices running Enterprise SONiC",
+        "scope": "ansible"
+    },
+    "Manages configuration sections on devices running Enterprise SONiC": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_config",
+            "Manages configuration sections on devices running Enterprise SONiC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_config:",
+            "    after:",
+            "      - ${2:element}",
+            "    backup: ${3|true,false|}",
+            "    before:",
+            "      - ${5:element}",
+            "    config: ${6:string}",
+            "    lines:",
+            "      - ${7:element}",
+            "    match: ${8|line,strict,exact,none|}",
+            "    parents:",
+            "      - ${9:element}",
+            "    replace: ${10|line,block|}",
+            "    save: ${11|true,false|}",
+            "    src: ${12:path}",
+            "    update: ${13|merge,check|}",
+            "$0"
+        ],
+        "description": "Manages configuration sections on devices running Enterprise SONiC",
+        "scope": "ansible"
+    },
+    "Collects facts on devices running Enterprise SONiC": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_facts",
+            "Collects facts on devices running Enterprise SONiC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_facts:",
+            "    gather_network_resources:",
+            "      - ${2:element}",
+            "    gather_subset:",
+            "      - ${3:element}",
+            "$0"
+        ],
+        "description": "Collects facts on devices running Enterprise SONiC",
+        "scope": "ansible"
+    },
+    "Configure Interface attributes on interfaces such as, Eth, LAG, VLAN, and loopback. (create a loopback interface if it does not exist.)": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_interfaces",
+            "Configure Interface attributes on interfaces such as, Eth, LAG, VLAN, and loopback. (create a loopback interface if it does not exist.)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Configure Interface attributes on interfaces such as, Eth, LAG, VLAN, and loopback. (create a loopback interface if it does not exist.)",
+        "scope": "ansible"
+    },
+    "Configure interface-to-VLAN association that is based on access or trunk mode": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_l2_interfaces",
+            "Configure interface-to-VLAN association that is based on access or trunk mode"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_l2_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Configure interface-to-VLAN association that is based on access or trunk mode",
+        "scope": "ansible"
+    },
+    "Configure the IPv4 and IPv6 parameters on Interfaces such as, Eth, LAG, VLAN, and loopback": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_l3_interfaces",
+            "Configure the IPv4 and IPv6 parameters on Interfaces such as, Eth, LAG, VLAN, and loopback"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_l3_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Configure the IPv4 and IPv6 parameters on Interfaces such as, Eth, LAG, VLAN, and loopback",
+        "scope": "ansible"
+    },
+    "Manage link aggregation group (LAG) interface parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_lag_interfaces",
+            "Manage link aggregation group (LAG) interface parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_lag_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage link aggregation group (LAG) interface parameters",
+        "scope": "ansible"
+    },
+    "Manage multi chassis link aggregation groups domain (MCLAG) and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_mclag",
+            "Manage multi chassis link aggregation groups domain (MCLAG) and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_mclag:",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage multi chassis link aggregation groups domain (MCLAG) and its parameters",
+        "scope": "ansible"
+    },
+    "Manage NTP configuration on SONiC.": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_ntp",
+            "Manage NTP configuration on SONiC."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_ntp:",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage NTP configuration on SONiC.",
+        "scope": "ansible"
+    },
+    "Configure port breakout settings on physical interfaces": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_port_breakout",
+            "Configure port breakout settings on physical interfaces"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_port_breakout:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Configure port breakout settings on physical interfaces",
+        "scope": "ansible"
+    },
+    "prefix list configuration handling for SONiC": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_prefix_lists",
+            "prefix list configuration handling for SONiC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_prefix_lists:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "prefix list configuration handling for SONiC",
+        "scope": "ansible"
+    },
+    "Manage RADIUS server and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_radius_server",
+            "Manage RADIUS server and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_radius_server:",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage RADIUS server and its parameters",
+        "scope": "ansible"
+    },
+    "Manage static routes configuration on SONiC": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_static_routes",
+            "Manage static routes configuration on SONiC"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_static_routes:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage static routes configuration on SONiC",
+        "scope": "ansible"
+    },
+    "Configure system parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_system",
+            "Configure system parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_system:",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Configure system parameters",
+        "scope": "ansible"
+    },
+    "Manage TACACS server and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_tacacs_server",
+            "Manage TACACS server and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_tacacs_server:",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage TACACS server and its parameters",
+        "scope": "ansible"
+    },
+    "Manage users and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_users",
+            "Manage users and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_users:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage users and its parameters",
+        "scope": "ansible"
+    },
+    "Manage VLAN and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_vlans",
+            "Manage VLAN and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_vlans:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage VLAN and its parameters",
+        "scope": "ansible"
+    },
+    "Manage VRFs and associate VRFs to interfaces such as, Eth, LAG, VLAN, and loopback": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_vrfs",
+            "Manage VRFs and associate VRFs to interfaces such as, Eth, LAG, VLAN, and loopback"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_vrfs:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage VRFs and associate VRFs to interfaces such as, Eth, LAG, VLAN, and loopback",
+        "scope": "ansible"
+    },
+    "Manage VxLAN EVPN and its parameters": {
+        "prefix": [
+            "dellemc.enterprise_sonic.sonic_vxlans",
+            "Manage VxLAN EVPN and its parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.enterprise_sonic.sonic_vxlans:",
+            "    config:",
+            "      - ${2:element}",
+            "    state: ${3|merged,deleted|}",
+            "$0"
+        ],
+        "description": "Manage VxLAN EVPN and its parameters",
+        "scope": "ansible"
+    }
+}

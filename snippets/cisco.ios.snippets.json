@@ -1,0 +1,607 @@
+{
+    "Resource module to configure ACL interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_acl_interfaces",
+            "Resource module to configure ACL interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_acl_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure ACL interfaces.",
+        "scope": "ansible"
+    },
+    "Resource module to configure ACLs.": {
+        "prefix": [
+            "cisco.ios.ios_acls",
+            "Resource module to configure ACLs."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_acls:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure ACLs.",
+        "scope": "ansible"
+    },
+    "Module to configure multiline banners.": {
+        "prefix": [
+            "cisco.ios.ios_banner",
+            "Module to configure multiline banners."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_banner:",
+            "    banner: ${2:string}",
+            "    multiline_delimiter: ${3:@}",
+            "    state: ${4|present,absent|}",
+            "    text: ${5:string}",
+            "$0"
+        ],
+        "description": "Module to configure multiline banners.",
+        "scope": "ansible"
+    },
+    "Resource module to configure BGP Address family.": {
+        "prefix": [
+            "cisco.ios.ios_bgp_address_family",
+            "Resource module to configure BGP Address family."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_bgp_address_family:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure BGP Address family.",
+        "scope": "ansible"
+    },
+    "Resource module to configure BGP.": {
+        "prefix": [
+            "cisco.ios.ios_bgp_global",
+            "Resource module to configure BGP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_bgp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,purged,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure BGP.",
+        "scope": "ansible"
+    },
+    "Module to run commands on remote devices.": {
+        "prefix": [
+            "cisco.ios.ios_command",
+            "Module to run commands on remote devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_command:",
+            "    commands:",
+            "      - ${2:element}",
+            "    interval: ${3:1}",
+            "    match: ${4|all,any|}",
+            "    retries: ${5:10}",
+            "    wait_for:",
+            "      - ${6:element}",
+            "$0"
+        ],
+        "description": "Module to run commands on remote devices.",
+        "scope": "ansible"
+    },
+    "Module to manage configuration sections.": {
+        "prefix": [
+            "cisco.ios.ios_config",
+            "Module to manage configuration sections."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_config:",
+            "    after:",
+            "      - ${2:element}",
+            "    backup: ${3|false,true|}",
+            "    before:",
+            "      - ${5:element}",
+            "    defaults: ${6|false,true|}",
+            "    diff_against: ${7:string}",
+            "    diff_ignore_lines:",
+            "      - ${8:element}",
+            "    intended_config: ${9:string}",
+            "    lines:",
+            "      - ${10:element}",
+            "    match: ${11|line,strict,exact,none|}",
+            "    multiline_delimiter: ${12:@}",
+            "    parents:",
+            "      - ${13:element}",
+            "    replace: ${14|line,block|}",
+            "    running_config: ${15:string}",
+            "    save_when: ${16|never,always,modified,changed|}",
+            "    src: ${17:string}",
+            "$0"
+        ],
+        "description": "Module to manage configuration sections.",
+        "scope": "ansible"
+    },
+    "Module to collect facts from remote devices.": {
+        "prefix": [
+            "cisco.ios.ios_facts",
+            "Module to collect facts from remote devices."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_facts:",
+            "    available_network_resources: ${2|false,true|}",
+            "    gather_network_resources:",
+            "      - ${3:element}",
+            "    gather_subset:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Module to collect facts from remote devices.",
+        "scope": "ansible"
+    },
+    "Resource module to configure hostname.": {
+        "prefix": [
+            "cisco.ios.ios_hostname",
+            "Resource module to configure hostname."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_hostname:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure hostname.",
+        "scope": "ansible"
+    },
+    "Resource module to configure interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_interfaces",
+            "Resource module to configure interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,purged,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure interfaces.",
+        "scope": "ansible"
+    },
+    "Resource Module to configure L2 interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_l2_interfaces",
+            "Resource Module to configure L2 interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_l2_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource Module to configure L2 interfaces.",
+        "scope": "ansible"
+    },
+    "Resource module to configure L3 interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_l3_interfaces",
+            "Resource module to configure L3 interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_l3_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure L3 interfaces.",
+        "scope": "ansible"
+    },
+    "Resource module to configure LACP.": {
+        "prefix": [
+            "cisco.ios.ios_lacp",
+            "Resource module to configure LACP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_lacp:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,rendered,parsed,gathered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure LACP.",
+        "scope": "ansible"
+    },
+    "Resource module to configure LACP interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_lacp_interfaces",
+            "Resource module to configure LACP interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_lacp_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure LACP interfaces.",
+        "scope": "ansible"
+    },
+    "Resource module to configure LAG interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_lag_interfaces",
+            "Resource module to configure LAG interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_lag_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,parsed,gathered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure LAG interfaces.",
+        "scope": "ansible"
+    },
+    "Resource module to configure LLDP.": {
+        "prefix": [
+            "cisco.ios.ios_lldp_global",
+            "Resource module to configure LLDP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_lldp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure LLDP.",
+        "scope": "ansible"
+    },
+    "Resource module to configure LLDP interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_lldp_interfaces",
+            "Resource module to configure LLDP interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_lldp_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure LLDP interfaces.",
+        "scope": "ansible"
+    },
+    "Resource module to configure logging.": {
+        "prefix": [
+            "cisco.ios.ios_logging_global",
+            "Resource module to configure logging."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_logging_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure logging.",
+        "scope": "ansible"
+    },
+    "Resource module to configure NTP.": {
+        "prefix": [
+            "cisco.ios.ios_ntp_global",
+            "Resource module to configure NTP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_ntp_global:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure NTP.",
+        "scope": "ansible"
+    },
+    "Resource module to configure OSPF interfaces.": {
+        "prefix": [
+            "cisco.ios.ios_ospf_interfaces",
+            "Resource module to configure OSPF interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_ospf_interfaces:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure OSPF interfaces.",
+        "scope": "ansible"
+    },
+    "Resource module to configure OSPFv2.": {
+        "prefix": [
+            "cisco.ios.ios_ospfv2",
+            "Resource module to configure OSPFv2."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_ospfv2:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure OSPFv2.",
+        "scope": "ansible"
+    },
+    "Resource module to configure OSPFv3.": {
+        "prefix": [
+            "cisco.ios.ios_ospfv3",
+            "Resource module to configure OSPFv3."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_ospfv3:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure OSPFv3.",
+        "scope": "ansible"
+    },
+    "Tests reachability using ping from IOS switch.": {
+        "prefix": [
+            "cisco.ios.ios_ping",
+            "Tests reachability using ping from IOS switch."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_ping:",
+            "    afi: ${2|ip,ipv6|}",
+            "    count: ${3:int}",
+            "    dest: ${4:string}",
+            "    df_bit: ${5|false,true|}",
+            "    egress: ${6:string}",
+            "    ingress: ${7:string}",
+            "    source: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:int}",
+            "    vrf: ${11:string}",
+            "$0"
+        ],
+        "description": "Tests reachability using ping from IOS switch.",
+        "scope": "ansible"
+    },
+    "Resource module to configure prefix lists.": {
+        "prefix": [
+            "cisco.ios.ios_prefix_lists",
+            "Resource module to configure prefix lists."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_prefix_lists:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure prefix lists.",
+        "scope": "ansible"
+    },
+    "Resource module to configure route maps.": {
+        "prefix": [
+            "cisco.ios.ios_route_maps",
+            "Resource module to configure route maps."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_route_maps:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,parsed,rendered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure route maps.",
+        "scope": "ansible"
+    },
+    "Resource module to configure snmp server.": {
+        "prefix": [
+            "cisco.ios.ios_snmp_server",
+            "Resource module to configure snmp server."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_snmp_server:",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,parsed,gathered,rendered|}",
+            "$0"
+        ],
+        "description": "Resource module to configure snmp server.",
+        "scope": "ansible"
+    },
+    "Resource module to configure static routes.": {
+        "prefix": [
+            "cisco.ios.ios_static_routes",
+            "Resource module to configure static routes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_static_routes:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,gathered,rendered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure static routes.",
+        "scope": "ansible"
+    },
+    "Module to manage the system attributes.": {
+        "prefix": [
+            "cisco.ios.ios_system",
+            "Module to manage the system attributes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_system:",
+            "    domain_name:",
+            "      - ${2:element}",
+            "    domain_search:",
+            "      - ${3:element}",
+            "    hostname: ${4:string}",
+            "    lookup_enabled: ${5|false,true|}",
+            "    lookup_source: ${6:string}",
+            "    name_servers:",
+            "      - ${7:element}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Module to manage the system attributes.",
+        "scope": "ansible"
+    },
+    "Module to manage the aggregates of local users.": {
+        "prefix": [
+            "cisco.ios.ios_user",
+            "Module to manage the aggregates of local users."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_user:",
+            "    aggregate:",
+            "      - ${2:element}",
+            "    configured_password: ${3:string}",
+            "    name: ${5:string}",
+            "    nopassword: ${6|false,true|}",
+            "    password_type: ${7|secret,password|}",
+            "    privilege: ${8:int}",
+            "    purge: ${9|false,true|}",
+            "    sshkey:",
+            "      - ${10:element}",
+            "    state: ${11|present,absent|}",
+            "    update_password: ${12|always,on_create|}",
+            "    view: ${13:string}",
+            "$0"
+        ],
+        "description": "Module to manage the aggregates of local users.",
+        "scope": "ansible"
+    },
+    "Resource module to configure VLANs.": {
+        "prefix": [
+            "cisco.ios.ios_vlans",
+            "Resource module to configure VLANs."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_vlans:",
+            "    config:",
+            "      - ${2:element}",
+            "    running_config: ${3:string}",
+            "    state: ${4|merged,replaced,overridden,deleted,rendered,gathered,parsed|}",
+            "$0"
+        ],
+        "description": "Resource module to configure VLANs.",
+        "scope": "ansible"
+    },
+    "Module to configure VRF definitions.": {
+        "prefix": [
+            "cisco.ios.ios_vrf",
+            "Module to configure VRF definitions."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.ios.ios_vrf:",
+            "    associated_interfaces:",
+            "      - ${2:element}",
+            "    delay: ${3:10}",
+            "    description: ${4:string}",
+            "    interfaces:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    purge: ${7|false,true|}",
+            "    rd: ${8:string}",
+            "    route_both:",
+            "      - ${9:element}",
+            "    route_both_ipv4:",
+            "      - ${10:element}",
+            "    route_both_ipv6:",
+            "      - ${11:element}",
+            "    route_export:",
+            "      - ${12:element}",
+            "    route_export_ipv4:",
+            "      - ${13:element}",
+            "    route_export_ipv6:",
+            "      - ${14:element}",
+            "    route_import:",
+            "      - ${15:element}",
+            "    route_import_ipv4:",
+            "      - ${16:element}",
+            "    route_import_ipv6:",
+            "      - ${17:element}",
+            "    state: ${18|present,absent|}",
+            "    vrfs:",
+            "      - ${19:element}",
+            "$0"
+        ],
+        "description": "Module to configure VRF definitions.",
+        "scope": "ansible"
+    }
+}

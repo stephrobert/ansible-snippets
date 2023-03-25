@@ -1,0 +1,884 @@
+{
+    "Create, modify or delete ACME accounts": {
+        "prefix": [
+            "community.crypto.acme_account",
+            "Create, modify or delete ACME accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.acme_account:",
+            "    account_key_content: ${2:string}",
+            "    account_key_passphrase: ${3:string}",
+            "    account_key_src: ${4:path}",
+            "    account_uri: ${5:string}",
+            "    acme_directory: ${6:string}",
+            "    acme_version: ${7:int}",
+            "    allow_creation: ${8|true,false|}",
+            "    contact:",
+            "      - ${9:element}",
+            "    new_account_key_content: ${11:string}",
+            "    new_account_key_passphrase: ${12:string}",
+            "    new_account_key_src: ${13:path}",
+            "    request_timeout: ${14:10}",
+            "    select_crypto_backend: ${15|auto,cryptography,openssl|}",
+            "    state: ${16:string}",
+            "    terms_agreed: ${17|false,true|}",
+            "    validate_certs: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Create, modify or delete ACME accounts",
+        "scope": "ansible"
+    },
+    "Retrieves information on ACME accounts": {
+        "prefix": [
+            "community.crypto.acme_account_info",
+            "Retrieves information on ACME accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.acme_account_info:",
+            "    account_key_content: ${2:string}",
+            "    account_key_passphrase: ${3:string}",
+            "    account_key_src: ${4:path}",
+            "    account_uri: ${5:string}",
+            "    acme_directory: ${6:string}",
+            "    acme_version: ${7:int}",
+            "    request_timeout: ${8:10}",
+            "    retrieve_orders: ${9|ignore,url_list,object_list|}",
+            "    select_crypto_backend: ${10|auto,cryptography,openssl|}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Retrieves information on ACME accounts",
+        "scope": "ansible"
+    },
+    "Create SSL/TLS certificates with the ACME protocol": {
+        "prefix": [
+            "community.crypto.acme_certificate",
+            "Create SSL/TLS certificates with the ACME protocol"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.acme_certificate:",
+            "    account_email: ${2:string}",
+            "    account_key_content: ${3:string}",
+            "    account_key_passphrase: ${4:string}",
+            "    account_key_src: ${5:path}",
+            "    account_uri: ${6:string}",
+            "    acme_directory: ${7:string}",
+            "    acme_version: ${8:int}",
+            "    agreement: ${9:string}",
+            "    chain_dest: ${10:path}",
+            "    challenge: ${11|http-01,dns-01,tls-alpn-01|}",
+            "    csr: ${12:path}",
+            "    csr_content: ${13:string}",
+            "    deactivate_authzs: ${15|false,true|}",
+            "    dest: ${16:path}",
+            "    force: ${17|false,true|}",
+            "    fullchain_dest: ${18:path}",
+            "    modify_account: ${19|true,false|}",
+            "    remaining_days: ${20:10}",
+            "    request_timeout: ${21:10}",
+            "    retrieve_all_alternates: ${22|false,true|}",
+            "    select_chain:",
+            "      - ${23:element}",
+            "    select_crypto_backend: ${24|auto,cryptography,openssl|}",
+            "    terms_agreed: ${25|false,true|}",
+            "    validate_certs: ${26|true,false|}",
+            "$0"
+        ],
+        "description": "Create SSL/TLS certificates with the ACME protocol",
+        "scope": "ansible"
+    },
+    "Revoke certificates with the ACME protocol": {
+        "prefix": [
+            "community.crypto.acme_certificate_revoke",
+            "Revoke certificates with the ACME protocol"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.acme_certificate_revoke:",
+            "    account_key_content: ${2:string}",
+            "    account_key_passphrase: ${3:string}",
+            "    account_key_src: ${4:path}",
+            "    account_uri: ${5:string}",
+            "    acme_directory: ${6:string}",
+            "    acme_version: ${7:int}",
+            "    certificate: ${8:path}",
+            "    private_key_content: ${9:string}",
+            "    private_key_passphrase: ${10:string}",
+            "    private_key_src: ${11:path}",
+            "    request_timeout: ${12:10}",
+            "    revoke_reason: ${13:int}",
+            "    select_crypto_backend: ${14|auto,cryptography,openssl|}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Revoke certificates with the ACME protocol",
+        "scope": "ansible"
+    },
+    "Prepare certificates required for ACME challenges such as C(tls-alpn-01)": {
+        "prefix": [
+            "community.crypto.acme_challenge_cert_helper",
+            "Prepare certificates required for ACME challenges such as C(tls-alpn-01)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.acme_challenge_cert_helper:",
+            "    challenge: ${2:string}",
+            "    private_key_content: ${4:string}",
+            "    private_key_passphrase: ${5:string}",
+            "    private_key_src: ${6:path}",
+            "$0"
+        ],
+        "description": "Prepare certificates required for ACME challenges such as C(tls-alpn-01)",
+        "scope": "ansible"
+    },
+    "Send direct requests to an ACME server": {
+        "prefix": [
+            "community.crypto.acme_inspect",
+            "Send direct requests to an ACME server"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.acme_inspect:",
+            "    account_key_content: ${2:string}",
+            "    account_key_passphrase: ${3:string}",
+            "    account_key_src: ${4:path}",
+            "    account_uri: ${5:string}",
+            "    acme_directory: ${6:string}",
+            "    acme_version: ${7:int}",
+            "    content: ${8:string}",
+            "    fail_on_acme_error: ${9|true,false|}",
+            "    method: ${10|get,post,directory-only|}",
+            "    request_timeout: ${11:10}",
+            "    select_crypto_backend: ${12|auto,cryptography,openssl|}",
+            "    url: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Send direct requests to an ACME server",
+        "scope": "ansible"
+    },
+    "Complete certificate chain given a set of untrusted and root certificates": {
+        "prefix": [
+            "community.crypto.certificate_complete_chain",
+            "Complete certificate chain given a set of untrusted and root certificates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.certificate_complete_chain:",
+            "    input_chain: ${2:string}",
+            "    intermediate_certificates:",
+            "      - ${3:element}",
+            "    root_certificates:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Complete certificate chain given a set of untrusted and root certificates",
+        "scope": "ansible"
+    },
+    "Retrieve cryptographic capabilities": {
+        "prefix": [
+            "community.crypto.crypto_info",
+            "Retrieve cryptographic capabilities"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.crypto_info:",
+            "$0"
+        ],
+        "description": "Retrieve cryptographic capabilities",
+        "scope": "ansible"
+    },
+    "Request SSL/TLS certificates with the Entrust Certificate Services (ECS) API": {
+        "prefix": [
+            "community.crypto.ecs_certificate",
+            "Request SSL/TLS certificates with the Entrust Certificate Services (ECS) API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.ecs_certificate:",
+            "    additional_emails:",
+            "      - ${2:element}",
+            "    backup: ${3|false,true|}",
+            "    cert_expiry: ${4:string}",
+            "    cert_lifetime: ${5:string}",
+            "    cert_type: ${6:string}",
+            "    client_id: ${7:1}",
+            "    csr: ${8:string}",
+            "    ct_log: ${9|false,true|}",
+            "    eku: ${11:string}",
+            "    end_user_key_storage_agreement: ${12|false,true|}",
+            "    entrust_api_client_cert_key_path: ${13:path}",
+            "    entrust_api_client_cert_path: ${14:path}",
+            "    entrust_api_key: ${15:string}",
+            "    entrust_api_specification_path: ${16:path}",
+            "    entrust_api_user: ${17:string}",
+            "    force: ${18|false,true|}",
+            "    full_chain_path: ${19:path}",
+            "    org: ${20:string}",
+            "    ou:",
+            "      - ${21:element}",
+            "    path: ${22:path}",
+            "    remaining_days: ${23:30}",
+            "    request_type: ${24|new,renew,reissue,validate_only|}",
+            "    requester_email: ${25:string}",
+            "    requester_name: ${26:string}",
+            "    requester_phone: ${27:string}",
+            "    subject_alt_name:",
+            "      - ${28:element}",
+            "    tracking_id: ${29:int}",
+            "    tracking_info: ${30:string}",
+            "$0"
+        ],
+        "description": "Request SSL/TLS certificates with the Entrust Certificate Services (ECS) API",
+        "scope": "ansible"
+    },
+    "Request validation of a domain with the Entrust Certificate Services (ECS) API": {
+        "prefix": [
+            "community.crypto.ecs_domain",
+            "Request validation of a domain with the Entrust Certificate Services (ECS) API"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.ecs_domain:",
+            "    client_id: ${2:1}",
+            "    domain_name: ${3:string}",
+            "    entrust_api_client_cert_key_path: ${4:path}",
+            "    entrust_api_client_cert_path: ${5:path}",
+            "    entrust_api_key: ${6:string}",
+            "    entrust_api_specification_path: ${7:path}",
+            "    entrust_api_user: ${8:string}",
+            "    verification_email: ${9:string}",
+            "    verification_method: ${10:string}",
+            "$0"
+        ],
+        "description": "Request validation of a domain with the Entrust Certificate Services (ECS) API",
+        "scope": "ansible"
+    },
+    "Get a certificate from a host:port": {
+        "prefix": [
+            "community.crypto.get_certificate",
+            "Get a certificate from a host:port"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.get_certificate:",
+            "    ca_cert: ${2:path}",
+            "    ciphers:",
+            "      - ${3:element}",
+            "    host: ${4:string}",
+            "    port: ${5:int}",
+            "    proxy_host: ${6:string}",
+            "    proxy_port: ${7:8080}",
+            "    select_crypto_backend: ${8|auto,cryptography|}",
+            "    server_name: ${9:string}",
+            "    starttls: ${10:string}",
+            "    timeout: ${11:10}",
+            "$0"
+        ],
+        "description": "Get a certificate from a host:port",
+        "scope": "ansible"
+    },
+    "Manage encrypted (LUKS) devices": {
+        "prefix": [
+            "community.crypto.luks_device",
+            "Manage encrypted (LUKS) devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.luks_device:",
+            "    cipher: ${2:string}",
+            "    device: ${3:string}",
+            "    force_remove_last_key: ${4|false,true|}",
+            "    hash: ${5:string}",
+            "    keyfile: ${6:path}",
+            "    keysize: ${7:int}",
+            "    label: ${8:string}",
+            "    name: ${9:string}",
+            "    new_keyfile: ${10:path}",
+            "    new_passphrase: ${11:string}",
+            "    passphrase: ${12:string}",
+            "    perf_no_read_workqueue: ${14|false,true|}",
+            "    perf_no_write_workqueue: ${15|false,true|}",
+            "    perf_same_cpu_crypt: ${16|false,true|}",
+            "    perf_submit_from_crypt_cpus: ${17|false,true|}",
+            "    persistent: ${18|false,true|}",
+            "    remove_keyfile: ${19:path}",
+            "    remove_passphrase: ${20:string}",
+            "    sector_size: ${21:int}",
+            "    state: ${22|present,absent,opened,closed|}",
+            "    type: ${23:string}",
+            "    uuid: ${24:string}",
+            "$0"
+        ],
+        "description": "Manage encrypted (LUKS) devices",
+        "scope": "ansible"
+    },
+    "Generate OpenSSH host or user certificates.": {
+        "prefix": [
+            "community.crypto.openssh_cert",
+            "Generate OpenSSH host or user certificates."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssh_cert:",
+            "    attributes: ${2:string}",
+            "    force: ${3|false,true|}",
+            "    group: ${4:string}",
+            "    identifier: ${5:string}",
+            "    ignore_timestamps: ${6|false,true|}",
+            "    mode: ${7|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    options:",
+            "      - ${8:element}",
+            "    owner: ${9:string}",
+            "    path: ${10:path}",
+            "    pkcs11_provider: ${11:string}",
+            "    principals:",
+            "      - ${12:element}",
+            "    public_key: ${13:path}",
+            "    regenerate: ${14|partial_idempotence,never,fail,full_idempotence,always|}",
+            "    selevel: ${15:string}",
+            "    serial_number: ${16:int}",
+            "    serole: ${17:string}",
+            "    setype: ${18:string}",
+            "    seuser: ${19:string}",
+            "    signature_algorithm: ${20:string}",
+            "    signing_key: ${21:path}",
+            "    state: ${22|present,absent|}",
+            "    type: ${23:string}",
+            "    unsafe_writes: ${24|false,true|}",
+            "    use_agent: ${25|false,true|}",
+            "    valid_at: ${26:string}",
+            "    valid_from: ${27:string}",
+            "    valid_to: ${28:string}",
+            "$0"
+        ],
+        "description": "Generate OpenSSH host or user certificates.",
+        "scope": "ansible"
+    },
+    "Generate OpenSSH private and public keys": {
+        "prefix": [
+            "community.crypto.openssh_keypair",
+            "Generate OpenSSH private and public keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssh_keypair:",
+            "    attributes: ${2:string}",
+            "    backend: ${3|auto,cryptography,opensshbin|}",
+            "    comment: ${4:string}",
+            "    force: ${5|false,true|}",
+            "    group: ${6:string}",
+            "    mode: ${7|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    owner: ${8:string}",
+            "    passphrase: ${9:string}",
+            "    path: ${10:path}",
+            "    private_key_format: ${11|auto,pkcs1,pkcs8,ssh|}",
+            "    regenerate: ${12|partial_idempotence,never,fail,full_idempotence,always|}",
+            "    selevel: ${13:string}",
+            "    serole: ${14:string}",
+            "    setype: ${15:string}",
+            "    seuser: ${16:string}",
+            "    size: ${17:int}",
+            "    state: ${18|present,absent|}",
+            "    type: ${19|rsa,dsa,rsa1,ecdsa,ed25519|}",
+            "    unsafe_writes: ${20|false,true|}",
+            "$0"
+        ],
+        "description": "Generate OpenSSH private and public keys",
+        "scope": "ansible"
+    },
+    "Generate OpenSSL Certificate Signing Request (CSR)": {
+        "prefix": [
+            "community.crypto.openssl_csr_pipe",
+            "Generate OpenSSL Certificate Signing Request (CSR)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_csr_pipe:",
+            "    authority_cert_issuer:",
+            "      - ${2:element}",
+            "    authority_cert_serial_number: ${3:int}",
+            "    authority_key_identifier: ${4:string}",
+            "    basic_constraints:",
+            "      - ${5:element}",
+            "    basic_constraints_critical: ${6|false,true|}",
+            "    common_name: ${7:string}",
+            "    content: ${8:string}",
+            "    country_name: ${9:string}",
+            "    create_subject_key_identifier: ${10|false,true|}",
+            "    crl_distribution_points:",
+            "      - ${11:element}",
+            "    digest: ${12:sha256}",
+            "    email_address: ${13:string}",
+            "    extended_key_usage:",
+            "      - ${14:element}",
+            "    extended_key_usage_critical: ${15|false,true|}",
+            "    key_usage:",
+            "      - ${16:element}",
+            "    key_usage_critical: ${17|false,true|}",
+            "    locality_name: ${18:string}",
+            "    name_constraints_critical: ${19|false,true|}",
+            "    name_constraints_excluded:",
+            "      - ${20:element}",
+            "    name_constraints_permitted:",
+            "      - ${21:element}",
+            "    ocsp_must_staple: ${22|false,true|}",
+            "    ocsp_must_staple_critical: ${23|false,true|}",
+            "    organization_name: ${24:string}",
+            "    organizational_unit_name: ${25:string}",
+            "    privatekey_content: ${26:string}",
+            "    privatekey_passphrase: ${27:string}",
+            "    privatekey_path: ${28:path}",
+            "    select_crypto_backend: ${29|auto,cryptography|}",
+            "    state_or_province_name: ${30:string}",
+            "    subject_alt_name:",
+            "      - ${32:element}",
+            "    subject_alt_name_critical: ${33|false,true|}",
+            "    subject_key_identifier: ${34:string}",
+            "    subject_ordered:",
+            "      - ${35:element}",
+            "    use_common_name_for_san: ${36|true,false|}",
+            "    version: ${37:1}",
+            "$0"
+        ],
+        "description": "Generate OpenSSL Certificate Signing Request (CSR)",
+        "scope": "ansible"
+    },
+    "Provide information of OpenSSL Certificate Signing Requests (CSR)": {
+        "prefix": [
+            "community.crypto.openssl_csr_info",
+            "Provide information of OpenSSL Certificate Signing Requests (CSR)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_csr_info:",
+            "    content: ${2:string}",
+            "    name_encoding: ${3|ignore,idna,unicode|}",
+            "    path: ${4:path}",
+            "    select_crypto_backend: ${5|auto,cryptography|}",
+            "$0"
+        ],
+        "description": "Provide information of OpenSSL Certificate Signing Requests (CSR)",
+        "scope": "ansible"
+    },
+    "Generate OpenSSL Diffie-Hellman Parameters": {
+        "prefix": [
+            "community.crypto.openssl_dhparam",
+            "Generate OpenSSL Diffie-Hellman Parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_dhparam:",
+            "    attributes: ${2:string}",
+            "    backup: ${3|false,true|}",
+            "    force: ${4|false,true|}",
+            "    group: ${5:string}",
+            "    mode: ${6|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    owner: ${7:string}",
+            "    path: ${8:path}",
+            "    return_content: ${9|false,true|}",
+            "    select_crypto_backend: ${10|auto,cryptography,openssl|}",
+            "    selevel: ${11:string}",
+            "    serole: ${12:string}",
+            "    setype: ${13:string}",
+            "    seuser: ${14:string}",
+            "    size: ${15:4096}",
+            "    state: ${16|present,absent|}",
+            "    unsafe_writes: ${17|false,true|}",
+            "$0"
+        ],
+        "description": "Generate OpenSSL Diffie-Hellman Parameters",
+        "scope": "ansible"
+    },
+    "Generate OpenSSL PKCS#12 archive": {
+        "prefix": [
+            "community.crypto.openssl_pkcs12",
+            "Generate OpenSSL PKCS#12 archive"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_pkcs12:",
+            "    action: ${2|export,parse|}",
+            "    attributes: ${3:string}",
+            "    backup: ${4|false,true|}",
+            "    certificate_path: ${5:path}",
+            "    encryption_level: ${6|auto,compatibility2022|}",
+            "    force: ${7|false,true|}",
+            "    friendly_name: ${8:string}",
+            "    group: ${9:string}",
+            "    iter_size: ${10:int}",
+            "    maciter_size: ${11:int}",
+            "    mode: ${12|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    other_certificates:",
+            "      - ${13:element}",
+            "    other_certificates_parse_all: ${14|false,true|}",
+            "    owner: ${15:string}",
+            "    passphrase: ${16:string}",
+            "    path: ${17:path}",
+            "    privatekey_content: ${18:string}",
+            "    privatekey_passphrase: ${19:string}",
+            "    privatekey_path: ${20:path}",
+            "    return_content: ${21|false,true|}",
+            "    select_crypto_backend: ${22|auto,cryptography,pyopenssl|}",
+            "    selevel: ${23:string}",
+            "    serole: ${24:string}",
+            "    setype: ${25:string}",
+            "    seuser: ${26:string}",
+            "    src: ${27:path}",
+            "    state: ${28|present,absent|}",
+            "    unsafe_writes: ${29|false,true|}",
+            "$0"
+        ],
+        "description": "Generate OpenSSL PKCS#12 archive",
+        "scope": "ansible"
+    },
+    "Generate OpenSSL private keys": {
+        "prefix": [
+            "community.crypto.openssl_privatekey",
+            "Generate OpenSSL private keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_privatekey:",
+            "    attributes: ${2:string}",
+            "    backup: ${3|false,true|}",
+            "    cipher: ${4:string}",
+            "    curve: ${5:string}",
+            "    force: ${6|false,true|}",
+            "    format: ${7|auto_ignore,pkcs1,pkcs8,raw,auto|}",
+            "    format_mismatch: ${8|regenerate,convert|}",
+            "    group: ${9:string}",
+            "    mode: ${10|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    owner: ${11:string}",
+            "    passphrase: ${12:string}",
+            "    path: ${13:path}",
+            "    regenerate: ${14|full_idempotence,never,fail,partial_idempotence,always|}",
+            "    return_content: ${15|false,true|}",
+            "    select_crypto_backend: ${16|auto,cryptography|}",
+            "    selevel: ${17:string}",
+            "    serole: ${18:string}",
+            "    setype: ${19:string}",
+            "    seuser: ${20:string}",
+            "    size: ${21:4096}",
+            "    state: ${22|present,absent|}",
+            "    type: ${23|RSA,DSA,ECC,Ed25519,Ed448,X25519,X448|}",
+            "    unsafe_writes: ${24|false,true|}",
+            "$0"
+        ],
+        "description": "Generate OpenSSL private keys",
+        "scope": "ansible"
+    },
+    "Convert OpenSSL private keys": {
+        "prefix": [
+            "community.crypto.openssl_privatekey_convert",
+            "Convert OpenSSL private keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_privatekey_convert:",
+            "    attributes: ${2:string}",
+            "    backup: ${3|false,true|}",
+            "    dest_passphrase: ${4:string}",
+            "    dest_path: ${5:path}",
+            "    format: ${6:string}",
+            "    group: ${7:string}",
+            "    mode: ${8|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    owner: ${9:string}",
+            "    selevel: ${10:string}",
+            "    serole: ${11:string}",
+            "    setype: ${12:string}",
+            "    seuser: ${13:string}",
+            "    src_content: ${14:string}",
+            "    src_passphrase: ${15:string}",
+            "    src_path: ${16:path}",
+            "    unsafe_writes: ${17|false,true|}",
+            "$0"
+        ],
+        "description": "Convert OpenSSL private keys",
+        "scope": "ansible"
+    },
+    "Provide information for OpenSSL private keys": {
+        "prefix": [
+            "community.crypto.openssl_privatekey_info",
+            "Provide information for OpenSSL private keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_privatekey_info:",
+            "    check_consistency: ${2|false,true|}",
+            "    content: ${3:string}",
+            "    passphrase: ${4:string}",
+            "    path: ${5:path}",
+            "    return_private_key_data: ${6|false,true|}",
+            "    select_crypto_backend: ${7|auto,cryptography|}",
+            "$0"
+        ],
+        "description": "Provide information for OpenSSL private keys",
+        "scope": "ansible"
+    },
+    "Generate OpenSSL private keys without disk access": {
+        "prefix": [
+            "community.crypto.openssl_privatekey_pipe",
+            "Generate OpenSSL private keys without disk access"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_privatekey_pipe:",
+            "    cipher: ${2:string}",
+            "    content: ${3:string}",
+            "    content_base64: ${4|false,true|}",
+            "    curve: ${5:string}",
+            "    format: ${6|auto_ignore,pkcs1,pkcs8,raw,auto|}",
+            "    format_mismatch: ${7|regenerate,convert|}",
+            "    passphrase: ${8:string}",
+            "    regenerate: ${9|full_idempotence,never,fail,partial_idempotence,always|}",
+            "    return_current_key: ${10|false,true|}",
+            "    select_crypto_backend: ${11|auto,cryptography|}",
+            "    size: ${12:4096}",
+            "    type: ${13|RSA,DSA,ECC,Ed25519,Ed448,X25519,X448|}",
+            "$0"
+        ],
+        "description": "Generate OpenSSL private keys without disk access",
+        "scope": "ansible"
+    },
+    "Generate an OpenSSL public key from its private key.": {
+        "prefix": [
+            "community.crypto.openssl_publickey",
+            "Generate an OpenSSL public key from its private key."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_publickey:",
+            "    attributes: ${2:string}",
+            "    backup: ${3|false,true|}",
+            "    force: ${4|false,true|}",
+            "    format: ${5|PEM,OpenSSH|}",
+            "    group: ${6:string}",
+            "    mode: ${7|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    owner: ${8:string}",
+            "    path: ${9:path}",
+            "    privatekey_content: ${10:string}",
+            "    privatekey_passphrase: ${11:string}",
+            "    privatekey_path: ${12:path}",
+            "    return_content: ${13|false,true|}",
+            "    select_crypto_backend: ${14|auto,cryptography|}",
+            "    selevel: ${15:string}",
+            "    serole: ${16:string}",
+            "    setype: ${17:string}",
+            "    seuser: ${18:string}",
+            "    state: ${19|present,absent|}",
+            "    unsafe_writes: ${20|false,true|}",
+            "$0"
+        ],
+        "description": "Generate an OpenSSL public key from its private key.",
+        "scope": "ansible"
+    },
+    "Provide information for OpenSSL public keys": {
+        "prefix": [
+            "community.crypto.openssl_publickey_info",
+            "Provide information for OpenSSL public keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_publickey_info:",
+            "    content: ${2:string}",
+            "    path: ${3:path}",
+            "    select_crypto_backend: ${4|auto,cryptography|}",
+            "$0"
+        ],
+        "description": "Provide information for OpenSSL public keys",
+        "scope": "ansible"
+    },
+    "Sign data with openssl": {
+        "prefix": [
+            "community.crypto.openssl_signature",
+            "Sign data with openssl"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_signature:",
+            "    path: ${2:path}",
+            "    privatekey_content: ${3:string}",
+            "    privatekey_passphrase: ${4:string}",
+            "    privatekey_path: ${5:path}",
+            "    select_crypto_backend: ${6|auto,cryptography|}",
+            "$0"
+        ],
+        "description": "Sign data with openssl",
+        "scope": "ansible"
+    },
+    "Verify signatures with openssl": {
+        "prefix": [
+            "community.crypto.openssl_signature_info",
+            "Verify signatures with openssl"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.openssl_signature_info:",
+            "    certificate_content: ${2:string}",
+            "    certificate_path: ${3:path}",
+            "    path: ${4:path}",
+            "    select_crypto_backend: ${5|auto,cryptography|}",
+            "    signature: ${6:string}",
+            "$0"
+        ],
+        "description": "Verify signatures with openssl",
+        "scope": "ansible"
+    },
+    "Generate and/or check OpenSSL certificates": {
+        "prefix": [
+            "community.crypto.x509_certificate_pipe",
+            "Generate and/or check OpenSSL certificates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.x509_certificate_pipe:",
+            "    content: ${2:string}",
+            "    csr_content: ${3:string}",
+            "    csr_path: ${4:path}",
+            "    entrust_api_client_cert_key_path: ${5:path}",
+            "    entrust_api_client_cert_path: ${6:path}",
+            "    entrust_api_key: ${7:string}",
+            "    entrust_api_specification_path: ${8:path}",
+            "    entrust_api_user: ${9:string}",
+            "    entrust_cert_type: ${10|STANDARD_SSL,ADVANTAGE_SSL,UC_SSL,EV_SSL,WILDCARD_SSL,PRIVATE_SSL,PD_SSL,CDS_ENT_LITE,CDS_ENT_PRO,SMIME_ENT|}",
+            "    entrust_not_after: ${11:+365d}",
+            "    entrust_requester_email: ${12:string}",
+            "    entrust_requester_name: ${13:string}",
+            "    entrust_requester_phone: ${14:string}",
+            "    force: ${15|false,true|}",
+            "    ignore_timestamps: ${16|true,false|}",
+            "    ownca_content: ${17:string}",
+            "    ownca_create_authority_key_identifier: ${18|true,false|}",
+            "    ownca_create_subject_key_identifier: ${19|create_if_not_provided,always_create,never_create|}",
+            "    ownca_digest: ${20:sha256}",
+            "    ownca_not_after: ${21:+3650d}",
+            "    ownca_not_before: ${22:+0s}",
+            "    ownca_path: ${23:path}",
+            "    ownca_privatekey_content: ${24:string}",
+            "    ownca_privatekey_passphrase: ${25:string}",
+            "    ownca_privatekey_path: ${26:path}",
+            "    ownca_version: ${27:3}",
+            "    privatekey_content: ${28:string}",
+            "    privatekey_passphrase: ${29:string}",
+            "    privatekey_path: ${30:path}",
+            "    provider: ${31:string}",
+            "    select_crypto_backend: ${32|auto,cryptography|}",
+            "    selfsigned_create_subject_key_identifier: ${33|create_if_not_provided,always_create,never_create|}",
+            "    selfsigned_digest: ${34:sha256}",
+            "    selfsigned_not_after: ${35:+3650d}",
+            "    selfsigned_not_before: ${36:+0s}",
+            "    selfsigned_version: ${37:3}",
+            "$0"
+        ],
+        "description": "Generate and/or check OpenSSL certificates",
+        "scope": "ansible"
+    },
+    "Provide information of OpenSSL X.509 certificates": {
+        "prefix": [
+            "community.crypto.x509_certificate_info",
+            "Provide information of OpenSSL X.509 certificates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.x509_certificate_info:",
+            "    content: ${2:string}",
+            "    name_encoding: ${3|ignore,idna,unicode|}",
+            "    path: ${4:path}",
+            "    select_crypto_backend: ${5|auto,cryptography|}",
+            "$0"
+        ],
+        "description": "Provide information of OpenSSL X.509 certificates",
+        "scope": "ansible"
+    },
+    "Generate Certificate Revocation Lists (CRLs)": {
+        "prefix": [
+            "community.crypto.x509_crl",
+            "Generate Certificate Revocation Lists (CRLs)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.x509_crl:",
+            "    attributes: ${2:string}",
+            "    backup: ${3|false,true|}",
+            "    digest: ${4:sha256}",
+            "    force: ${5|false,true|}",
+            "    format: ${6|pem,der|}",
+            "    group: ${7:string}",
+            "    ignore_timestamps: ${8|false,true|}",
+            "    issuer_ordered:",
+            "      - ${10:element}",
+            "    last_update: ${11:+0s}",
+            "    mode: ${12|generate,update|}",
+            "    name_encoding: ${13|ignore,idna,unicode|}",
+            "    next_update: ${14:string}",
+            "    owner: ${15:string}",
+            "    path: ${16:path}",
+            "    privatekey_content: ${17:string}",
+            "    privatekey_passphrase: ${18:string}",
+            "    privatekey_path: ${19:path}",
+            "    return_content: ${20|false,true|}",
+            "    revoked_certificates:",
+            "      - ${21:element}",
+            "    selevel: ${22:string}",
+            "    serole: ${23:string}",
+            "    setype: ${24:string}",
+            "    seuser: ${25:string}",
+            "    state: ${26|present,absent|}",
+            "    unsafe_writes: ${27|false,true|}",
+            "$0"
+        ],
+        "description": "Generate Certificate Revocation Lists (CRLs)",
+        "scope": "ansible"
+    },
+    "Retrieve information on Certificate Revocation Lists (CRLs)": {
+        "prefix": [
+            "community.crypto.x509_crl_info",
+            "Retrieve information on Certificate Revocation Lists (CRLs)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.crypto.x509_crl_info:",
+            "    content: ${2:string}",
+            "    list_revoked_certificates: ${3|true,false|}",
+            "    name_encoding: ${4|ignore,idna,unicode|}",
+            "    path: ${5:path}",
+            "$0"
+        ],
+        "description": "Retrieve information on Certificate Revocation Lists (CRLs)",
+        "scope": "ansible"
+    }
+}

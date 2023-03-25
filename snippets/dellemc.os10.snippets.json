@@ -1,0 +1,180 @@
+{
+    "Operations for show command output convertion from xml to json format.": {
+        "prefix": [
+            "dellemc.os10.base_xml_to_dict",
+            "Operations for show command output convertion from xml to json format."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.base_xml_to_dict:",
+            "    cli_responses: ${2:string}",
+            "$0"
+        ],
+        "description": "Operations for show command output convertion from xml to json format.",
+        "scope": "ansible"
+    },
+    "Validate the bgp neighbor state,raise error if it is not in established state": {
+        "prefix": [
+            "dellemc.os10.bgp_validate",
+            "Validate the bgp neighbor state,raise error if it is not in established state"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.bgp_validate:",
+            "    bgp_neighbors:",
+            "      - ${2:element}",
+            "    show_ip_bgp:",
+            "      - ${3:element}",
+            "    show_ip_intf_brief:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Validate the bgp neighbor state,raise error if it is not in established state",
+        "scope": "ansible"
+    },
+    "Validate the MTU value for lldp neighbors": {
+        "prefix": [
+            "dellemc.os10.mtu_validate",
+            "Validate the MTU value for lldp neighbors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.mtu_validate:",
+            "    show_ip_intf_brief:",
+            "      - ${2:element}",
+            "    show_lldp_neighbors_list:",
+            "      - ${3:element}",
+            "    show_system_network_summary:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Validate the MTU value for lldp neighbors",
+        "scope": "ansible"
+    },
+    "Run commands on devices running Dell EMC SmartFabric OS10": {
+        "prefix": [
+            "dellemc.os10.os10_command",
+            "Run commands on devices running Dell EMC SmartFabric OS10"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.os10_command:",
+            "    commands:",
+            "      - ${2:element}",
+            "    interval: ${3:1}",
+            "    match: ${4|all,any|}",
+            "    retries: ${6:10}",
+            "    wait_for:",
+            "      - ${7:element}",
+            "$0"
+        ],
+        "description": "Run commands on devices running Dell EMC SmartFabric OS10",
+        "scope": "ansible"
+    },
+    "Manage Dell EMC SmartFabric OS10 configuration sections": {
+        "prefix": [
+            "dellemc.os10.os10_config",
+            "Manage Dell EMC SmartFabric OS10 configuration sections"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.os10_config:",
+            "    after:",
+            "      - ${2:element}",
+            "    backup: ${3|true,false|}",
+            "    before:",
+            "      - ${5:element}",
+            "    config: ${6:string}",
+            "    lines:",
+            "      - ${7:element}",
+            "    match: ${8|line,strict,exact,none|}",
+            "    parents:",
+            "      - ${9:element}",
+            "    replace: ${11|line,block|}",
+            "    save: ${12|true,false|}",
+            "    src: ${13:path}",
+            "    update: ${14|merge,check|}",
+            "$0"
+        ],
+        "description": "Manage Dell EMC SmartFabric OS10 configuration sections",
+        "scope": "ansible"
+    },
+    "Collect facts from devices running Dell EMC SmartFabric OS10": {
+        "prefix": [
+            "dellemc.os10.os10_facts",
+            "Collect facts from devices running Dell EMC SmartFabric OS10"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.os10_facts:",
+            "    gather_subset:",
+            "      - ${2:element}",
+            "$0"
+        ],
+        "description": "Collect facts from devices running Dell EMC SmartFabric OS10",
+        "scope": "ansible"
+    },
+    "Operations for show_system_network output in json/yaml format.": {
+        "prefix": [
+            "dellemc.os10.show_system_network_summary",
+            "Operations for show_system_network output in json/yaml format."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.show_system_network_summary:",
+            "    cli_responses:",
+            "      - ${2:element}",
+            "    output_type: ${3:json}",
+            "$0"
+        ],
+        "description": "Operations for show_system_network output in json/yaml format.",
+        "scope": "ansible"
+    },
+    "Validate the vlt info, raise an error if peer is not in up state": {
+        "prefix": [
+            "dellemc.os10.vlt_validate",
+            "Validate the vlt info, raise an error if peer is not in up state"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.vlt_validate:",
+            "    intended_vlt_pairs:",
+            "      - ${2:element}",
+            "    show_system_network_summary:",
+            "      - ${3:element}",
+            "    show_vlt:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Validate the vlt info, raise an error if peer is not in up state",
+        "scope": "ansible"
+    },
+    "Validate the wiring based on the planned wiring details": {
+        "prefix": [
+            "dellemc.os10.wiring_validate",
+            "Validate the wiring based on the planned wiring details"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  dellemc.os10.wiring_validate:",
+            "    planned_neighbors:",
+            "      - ${2:element}",
+            "    show_lldp_neighbors_list:",
+            "      - ${3:element}",
+            "    show_system_network_summary:",
+            "      - ${4:element}",
+            "$0"
+        ],
+        "description": "Validate the wiring based on the planned wiring details",
+        "scope": "ansible"
+    }
+}

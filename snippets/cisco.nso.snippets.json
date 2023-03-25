@@ -1,0 +1,106 @@
+{
+    "Executes Cisco NSO actions and verifies output.": {
+        "prefix": [
+            "cisco.nso.nso_action",
+            "Executes Cisco NSO actions and verifies output."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nso.nso_action:",
+            "    password: ${5:string}",
+            "    path: ${6:string}",
+            "    timeout: ${7:300}",
+            "    url: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|false,true|}",
+            "    validate_strict: ${11|false,true|}",
+            "$0"
+        ],
+        "description": "Executes Cisco NSO actions and verifies output.",
+        "scope": "ansible"
+    },
+    "Manage Cisco NSO configuration and service synchronization.": {
+        "prefix": [
+            "cisco.nso.nso_config",
+            "Manage Cisco NSO configuration and service synchronization."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nso.nso_config:",
+            "    commit_flags:",
+            "      - ${2:element}",
+            "    password: ${4:string}",
+            "    timeout: ${5:300}",
+            "    url: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Manage Cisco NSO configuration and service synchronization.",
+        "scope": "ansible"
+    },
+    "Query data from Cisco NSO.": {
+        "prefix": [
+            "cisco.nso.nso_query",
+            "Query data from Cisco NSO."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nso.nso_query:",
+            "    fields:",
+            "      - ${2:element}",
+            "    password: ${3:string}",
+            "    timeout: ${4:300}",
+            "    url: ${5:string}",
+            "    username: ${6:string}",
+            "    validate_certs: ${7|false,true|}",
+            "    xpath: ${8:string}",
+            "$0"
+        ],
+        "description": "Query data from Cisco NSO.",
+        "scope": "ansible"
+    },
+    "Displays data from Cisco NSO.": {
+        "prefix": [
+            "cisco.nso.nso_show",
+            "Displays data from Cisco NSO."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nso.nso_show:",
+            "    operational: ${2|false,true|}",
+            "    password: ${3:string}",
+            "    path: ${4:string}",
+            "    timeout: ${5:300}",
+            "    url: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|false,true|}",
+            "$0"
+        ],
+        "description": "Displays data from Cisco NSO.",
+        "scope": "ansible"
+    },
+    "Verifies Cisco NSO configuration.": {
+        "prefix": [
+            "cisco.nso.nso_verify",
+            "Verifies Cisco NSO configuration."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.nso.nso_verify:",
+            "    password: ${3:string}",
+            "    timeout: ${4:300}",
+            "    url: ${5:string}",
+            "    username: ${6:string}",
+            "    validate_certs: ${7|false,true|}",
+            "$0"
+        ],
+        "description": "Verifies Cisco NSO configuration.",
+        "scope": "ansible"
+    }
+}

@@ -1,0 +1,4075 @@
+{
+    "Creates a GCP FirewallRule": {
+        "prefix": [
+            "google.cloud.gcp_appengine_firewall_rule",
+            "Creates a GCP FirewallRule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_appengine_firewall_rule:",
+            "    action: ${2:string}",
+            "    auth_kind: ${3:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    priority: ${6:int}",
+            "    project: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    source_range: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP FirewallRule",
+        "scope": "ansible"
+    },
+    "Gather info for GCP FirewallRule": {
+        "prefix": [
+            "google.cloud.gcp_appengine_firewall_rule_info",
+            "Gather info for GCP FirewallRule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_appengine_firewall_rule_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP FirewallRule",
+        "scope": "ansible"
+    },
+    "Creates a GCP Dataset": {
+        "prefix": [
+            "google.cloud.gcp_bigquery_dataset",
+            "Creates a GCP Dataset"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_bigquery_dataset:",
+            "    access:",
+            "      - ${2:element}",
+            "    auth_kind: ${3:string}",
+            "    default_partition_expiration_ms: ${6:int}",
+            "    default_table_expiration_ms: ${7:int}",
+            "    description: ${8:string}",
+            "    env_type: ${9:string}",
+            "    friendly_name: ${10:string}",
+            "    location: ${12:US}",
+            "    name: ${13:string}",
+            "    project: ${14:string}",
+            "    scopes:",
+            "      - ${15:element}",
+            "    service_account_email: ${17:string}",
+            "    service_account_file: ${18:path}",
+            "    state: ${19|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Dataset",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Dataset": {
+        "prefix": [
+            "google.cloud.gcp_bigquery_dataset_info",
+            "Gather info for GCP Dataset"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_bigquery_dataset_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Dataset",
+        "scope": "ansible"
+    },
+    "Creates a GCP Table": {
+        "prefix": [
+            "google.cloud.gcp_bigquery_table",
+            "Creates a GCP Table"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_bigquery_table:",
+            "    auth_kind: ${2:string}",
+            "    clustering:",
+            "      - ${3:element}",
+            "    dataset: ${4:string}",
+            "    description: ${5:string}",
+            "    env_type: ${7:string}",
+            "    expiration_time: ${8:int}",
+            "    friendly_name: ${10:string}",
+            "    name: ${12:string}",
+            "    num_rows: ${13:int}",
+            "    project: ${14:string}",
+            "    scopes:",
+            "      - ${16:element}",
+            "    service_account_email: ${18:string}",
+            "    service_account_file: ${19:path}",
+            "    state: ${20|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Table",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Table": {
+        "prefix": [
+            "google.cloud.gcp_bigquery_table_info",
+            "Gather info for GCP Table"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_bigquery_table_info:",
+            "    auth_kind: ${2:string}",
+            "    dataset: ${3:string}",
+            "    env_type: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Table",
+        "scope": "ansible"
+    },
+    "Creates a GCP Instance": {
+        "prefix": [
+            "google.cloud.gcp_sql_instance",
+            "Creates a GCP Instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sql_instance:",
+            "    auth_kind: ${2:string}",
+            "    backend_type: ${3:string}",
+            "    connection_name: ${4:string}",
+            "    database_version: ${5:string}",
+            "    env_type: ${8:string}",
+            "    instance_type: ${10:string}",
+            "    ipv6_address: ${11:string}",
+            "    master_instance_name: ${12:string}",
+            "    max_disk_size: ${13:int}",
+            "    name: ${14:string}",
+            "    project: ${15:string}",
+            "    region: ${16:string}",
+            "    scopes:",
+            "      - ${18:element}",
+            "    service_account_email: ${20:string}",
+            "    service_account_file: ${21:path}",
+            "    state: ${23|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Instance",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Instance": {
+        "prefix": [
+            "google.cloud.gcp_sql_instance_info",
+            "Gather info for GCP Instance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sql_instance_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Instance",
+        "scope": "ansible"
+    },
+    "Creates a GCP Trigger": {
+        "prefix": [
+            "google.cloud.gcp_cloudbuild_trigger",
+            "Creates a GCP Trigger"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudbuild_trigger:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    disabled: ${5|false,true|}",
+            "    env_type: ${6:string}",
+            "    filename: ${7:string}",
+            "    id: ${9:string}",
+            "    ignored_files:",
+            "      - ${10:element}",
+            "    included_files:",
+            "      - ${11:element}",
+            "    name: ${12:string}",
+            "    project: ${13:string}",
+            "    scopes:",
+            "      - ${15:element}",
+            "    service_account_email: ${17:string}",
+            "    service_account_file: ${18:path}",
+            "    state: ${19|present,absent|}",
+            "    tags:",
+            "      - ${21:element}",
+            "$0"
+        ],
+        "description": "Creates a GCP Trigger",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Trigger": {
+        "prefix": [
+            "google.cloud.gcp_cloudbuild_trigger_info",
+            "Gather info for GCP Trigger"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudbuild_trigger_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Trigger",
+        "scope": "ansible"
+    },
+    "Creates a GCP CloudFunction": {
+        "prefix": [
+            "google.cloud.gcp_cloudfunctions_cloud_function",
+            "Creates a GCP CloudFunction"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudfunctions_cloud_function:",
+            "    auth_kind: ${2:string}",
+            "    available_memory_mb: ${3:int}",
+            "    description: ${4:string}",
+            "    entry_point: ${5:string}",
+            "    env_type: ${6:string}",
+            "    location: ${11:string}",
+            "    name: ${12:string}",
+            "    project: ${13:string}",
+            "    runtime: ${14:string}",
+            "    scopes:",
+            "      - ${15:element}",
+            "    service_account_email: ${17:string}",
+            "    service_account_file: ${18:path}",
+            "    source_archive_url: ${19:string}",
+            "    source_upload_url: ${21:string}",
+            "    state: ${22|present,absent|}",
+            "    timeout: ${23:string}",
+            "    trigger_http: ${24|false,true|}",
+            "$0"
+        ],
+        "description": "Creates a GCP CloudFunction",
+        "scope": "ansible"
+    },
+    "Gather info for GCP CloudFunction": {
+        "prefix": [
+            "google.cloud.gcp_cloudfunctions_cloud_function_info",
+            "Gather info for GCP CloudFunction"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudfunctions_cloud_function_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    location: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP CloudFunction",
+        "scope": "ansible"
+    },
+    "Creates a GCP Job": {
+        "prefix": [
+            "google.cloud.gcp_cloudscheduler_job",
+            "Creates a GCP Job"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudscheduler_job:",
+            "    attempt_deadline: ${3:180s}",
+            "    auth_kind: ${4:string}",
+            "    description: ${5:string}",
+            "    env_type: ${6:string}",
+            "    name: ${8:string}",
+            "    project: ${9:string}",
+            "    region: ${11:string}",
+            "    schedule: ${13:string}",
+            "    scopes:",
+            "      - ${14:element}",
+            "    service_account_email: ${16:string}",
+            "    service_account_file: ${17:path}",
+            "    state: ${18|present,absent|}",
+            "    time_zone: ${19:Etc/UTC}",
+            "$0"
+        ],
+        "description": "Creates a GCP Job",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Job": {
+        "prefix": [
+            "google.cloud.gcp_cloudscheduler_job_info",
+            "Gather info for GCP Job"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudscheduler_job_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    region: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Job",
+        "scope": "ansible"
+    },
+    "Creates a GCP Queue": {
+        "prefix": [
+            "google.cloud.gcp_cloudtasks_queue",
+            "Creates a GCP Queue"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudtasks_queue:",
+            "    auth_kind: ${3:string}",
+            "    env_type: ${4:string}",
+            "    location: ${5:string}",
+            "    name: ${6:string}",
+            "    project: ${7:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${15|present,absent|}",
+            "    status: ${16:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Queue",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Queue": {
+        "prefix": [
+            "google.cloud.gcp_cloudtasks_queue_info",
+            "Gather info for GCP Queue"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_cloudtasks_queue_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    location: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Queue",
+        "scope": "ansible"
+    },
+    "Creates a GCP Address": {
+        "prefix": [
+            "google.cloud.gcp_compute_address",
+            "Creates a GCP Address"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_address:",
+            "    address: ${2:string}",
+            "    address_type: ${3:EXTERNAL}",
+            "    auth_kind: ${4:string}",
+            "    description: ${5:string}",
+            "    env_type: ${6:string}",
+            "    name: ${7:string}",
+            "    network_tier: ${9:string}",
+            "    prefix_length: ${10:int}",
+            "    project: ${11:string}",
+            "    purpose: ${12:string}",
+            "    region: ${13:string}",
+            "    scopes:",
+            "      - ${14:element}",
+            "    service_account_email: ${16:string}",
+            "    service_account_file: ${17:path}",
+            "    state: ${18|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Address",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Address": {
+        "prefix": [
+            "google.cloud.gcp_compute_address_info",
+            "Gather info for GCP Address"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_address_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Address",
+        "scope": "ansible"
+    },
+    "Creates a GCP Autoscaler": {
+        "prefix": [
+            "google.cloud.gcp_compute_autoscaler",
+            "Creates a GCP Autoscaler"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_autoscaler:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${6:string}",
+            "    project: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    state: ${12|present,absent|}",
+            "    zone: ${14:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Autoscaler",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Autoscaler": {
+        "prefix": [
+            "google.cloud.gcp_compute_autoscaler_info",
+            "Gather info for GCP Autoscaler"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_autoscaler_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Autoscaler",
+        "scope": "ansible"
+    },
+    "Creates a GCP BackendBucket": {
+        "prefix": [
+            "google.cloud.gcp_compute_backend_bucket",
+            "Creates a GCP BackendBucket"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_backend_bucket:",
+            "    auth_kind: ${2:string}",
+            "    bucket_name: ${3:string}",
+            "    custom_response_headers:",
+            "      - ${5:element}",
+            "    description: ${6:string}",
+            "    enable_cdn: ${7|false,true|}",
+            "    env_type: ${8:string}",
+            "    name: ${9:string}",
+            "    project: ${10:string}",
+            "    scopes:",
+            "      - ${11:element}",
+            "    service_account_email: ${13:string}",
+            "    service_account_file: ${14:path}",
+            "    state: ${15|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP BackendBucket",
+        "scope": "ansible"
+    },
+    "Gather info for GCP BackendBucket": {
+        "prefix": [
+            "google.cloud.gcp_compute_backend_bucket_info",
+            "Gather info for GCP BackendBucket"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_backend_bucket_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP BackendBucket",
+        "scope": "ansible"
+    },
+    "Creates a GCP BackendService": {
+        "prefix": [
+            "google.cloud.gcp_compute_backend_service",
+            "Creates a GCP BackendService"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_backend_service:",
+            "    affinity_cookie_ttl_sec: ${2:int}",
+            "    auth_kind: ${3:string}",
+            "    backends:",
+            "      - ${4:element}",
+            "    custom_request_headers:",
+            "      - ${9:element}",
+            "    custom_response_headers:",
+            "      - ${10:element}",
+            "    description: ${11:string}",
+            "    enable_cdn: ${12|false,true|}",
+            "    env_type: ${13:string}",
+            "    health_checks:",
+            "      - ${14:element}",
+            "    load_balancing_scheme: ${16:EXTERNAL}",
+            "    locality_lb_policy: ${17:string}",
+            "    name: ${19:string}",
+            "    port_name: ${21:string}",
+            "    project: ${22:string}",
+            "    protocol: ${23:string}",
+            "    scopes:",
+            "      - ${24:element}",
+            "    security_policy: ${25:string}",
+            "    service_account_email: ${27:string}",
+            "    service_account_file: ${28:path}",
+            "    session_affinity: ${29:string}",
+            "    state: ${30|present,absent|}",
+            "    timeout_sec: ${31:int}",
+            "$0"
+        ],
+        "description": "Creates a GCP BackendService",
+        "scope": "ansible"
+    },
+    "Gather info for GCP BackendService": {
+        "prefix": [
+            "google.cloud.gcp_compute_backend_service_info",
+            "Gather info for GCP BackendService"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_backend_service_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP BackendService",
+        "scope": "ansible"
+    },
+    "Creates a GCP Disk": {
+        "prefix": [
+            "google.cloud.gcp_compute_disk",
+            "Creates a GCP Disk"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_disk:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${5:string}",
+            "    licenses:",
+            "      - ${7:element}",
+            "    name: ${8:string}",
+            "    physical_block_size_bytes: ${9:int}",
+            "    project: ${10:string}",
+            "    provisioned_iops: ${11:int}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    size_gb: ${16:int}",
+            "    source_image: ${17:string}",
+            "    state: ${21|present,absent|}",
+            "    type: ${22:string}",
+            "    zone: ${23:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Disk",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Disk": {
+        "prefix": [
+            "google.cloud.gcp_compute_disk_info",
+            "Gather info for GCP Disk"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_disk_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Disk",
+        "scope": "ansible"
+    },
+    "Creates a GCP ExternalVpnGateway": {
+        "prefix": [
+            "google.cloud.gcp_compute_external_vpn_gateway",
+            "Creates a GCP ExternalVpnGateway"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_external_vpn_gateway:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    interfaces:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    project: ${7:string}",
+            "    redundancy_type: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP ExternalVpnGateway",
+        "scope": "ansible"
+    },
+    "Gather info for GCP ExternalVpnGateway": {
+        "prefix": [
+            "google.cloud.gcp_compute_external_vpn_gateway_info",
+            "Gather info for GCP ExternalVpnGateway"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_external_vpn_gateway_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP ExternalVpnGateway",
+        "scope": "ansible"
+    },
+    "Creates a GCP Firewall": {
+        "prefix": [
+            "google.cloud.gcp_compute_firewall",
+            "Creates a GCP Firewall"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_firewall:",
+            "    allowed:",
+            "      - ${2:element}",
+            "    auth_kind: ${3:string}",
+            "    denied:",
+            "      - ${4:element}",
+            "    description: ${5:string}",
+            "    destination_ranges:",
+            "      - ${6:element}",
+            "    direction: ${7:string}",
+            "    disabled: ${8|false,true|}",
+            "    env_type: ${9:string}",
+            "    name: ${11:string}",
+            "    priority: ${13:1000}",
+            "    project: ${14:string}",
+            "    scopes:",
+            "      - ${15:element}",
+            "    service_account_email: ${17:string}",
+            "    service_account_file: ${18:path}",
+            "    source_ranges:",
+            "      - ${19:element}",
+            "    source_service_accounts:",
+            "      - ${20:element}",
+            "    source_tags:",
+            "      - ${21:element}",
+            "    state: ${22|present,absent|}",
+            "    target_service_accounts:",
+            "      - ${23:element}",
+            "    target_tags:",
+            "      - ${24:element}",
+            "$0"
+        ],
+        "description": "Creates a GCP Firewall",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Firewall": {
+        "prefix": [
+            "google.cloud.gcp_compute_firewall_info",
+            "Gather info for GCP Firewall"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_firewall_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Firewall",
+        "scope": "ansible"
+    },
+    "Creates a GCP ForwardingRule": {
+        "prefix": [
+            "google.cloud.gcp_compute_forwarding_rule",
+            "Creates a GCP ForwardingRule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_forwarding_rule:",
+            "    all_ports: ${2|false,true|}",
+            "    allow_global_access: ${3|false,true|}",
+            "    auth_kind: ${4:string}",
+            "    description: ${6:string}",
+            "    env_type: ${7:string}",
+            "    ip_address: ${8:string}",
+            "    ip_protocol: ${9:string}",
+            "    is_mirroring_collector: ${10|false,true|}",
+            "    load_balancing_scheme: ${11:string}",
+            "    name: ${12:string}",
+            "    network_tier: ${14:string}",
+            "    port_range: ${15:string}",
+            "    ports:",
+            "      - ${16:element}",
+            "    project: ${17:string}",
+            "    region: ${18:string}",
+            "    scopes:",
+            "      - ${19:element}",
+            "    service_account_email: ${21:string}",
+            "    service_account_file: ${22:path}",
+            "    service_label: ${23:string}",
+            "    state: ${24|present,absent|}",
+            "    target: ${26:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP ForwardingRule",
+        "scope": "ansible"
+    },
+    "Gather info for GCP ForwardingRule": {
+        "prefix": [
+            "google.cloud.gcp_compute_forwarding_rule_info",
+            "Gather info for GCP ForwardingRule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_forwarding_rule_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP ForwardingRule",
+        "scope": "ansible"
+    },
+    "Creates a GCP GlobalAddress": {
+        "prefix": [
+            "google.cloud.gcp_compute_global_address",
+            "Creates a GCP GlobalAddress"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_global_address:",
+            "    address: ${2:string}",
+            "    address_type: ${3:EXTERNAL}",
+            "    auth_kind: ${4:string}",
+            "    description: ${5:string}",
+            "    env_type: ${6:string}",
+            "    ip_version: ${7:string}",
+            "    name: ${8:string}",
+            "    prefix_length: ${10:int}",
+            "    project: ${11:string}",
+            "    purpose: ${12:string}",
+            "    scopes:",
+            "      - ${13:element}",
+            "    service_account_email: ${15:string}",
+            "    service_account_file: ${16:path}",
+            "    state: ${17|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP GlobalAddress",
+        "scope": "ansible"
+    },
+    "Gather info for GCP GlobalAddress": {
+        "prefix": [
+            "google.cloud.gcp_compute_global_address_info",
+            "Gather info for GCP GlobalAddress"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_global_address_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP GlobalAddress",
+        "scope": "ansible"
+    },
+    "Creates a GCP GlobalForwardingRule": {
+        "prefix": [
+            "google.cloud.gcp_compute_global_forwarding_rule",
+            "Creates a GCP GlobalForwardingRule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_global_forwarding_rule:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    ip_address: ${5:string}",
+            "    ip_protocol: ${6:string}",
+            "    ip_version: ${7:string}",
+            "    load_balancing_scheme: ${8:EXTERNAL}",
+            "    metadata_filters:",
+            "      - ${9:element}",
+            "    name: ${10:string}",
+            "    port_range: ${12:string}",
+            "    project: ${13:string}",
+            "    scopes:",
+            "      - ${14:element}",
+            "    service_account_email: ${16:string}",
+            "    service_account_file: ${17:path}",
+            "    state: ${18|present,absent|}",
+            "    target: ${19:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP GlobalForwardingRule",
+        "scope": "ansible"
+    },
+    "Gather info for GCP GlobalForwardingRule": {
+        "prefix": [
+            "google.cloud.gcp_compute_global_forwarding_rule_info",
+            "Gather info for GCP GlobalForwardingRule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_global_forwarding_rule_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP GlobalForwardingRule",
+        "scope": "ansible"
+    },
+    "Creates a GCP HealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_health_check",
+            "Creates a GCP HealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_health_check:",
+            "    auth_kind: ${2:string}",
+            "    check_interval_sec: ${3:5}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    healthy_threshold: ${7:2}",
+            "    name: ${12:string}",
+            "    project: ${13:string}",
+            "    scopes:",
+            "      - ${14:element}",
+            "    service_account_email: ${16:string}",
+            "    service_account_file: ${17:path}",
+            "    state: ${19|present,absent|}",
+            "    timeout_sec: ${21:5}",
+            "    type: ${22:string}",
+            "    unhealthy_threshold: ${23:2}",
+            "$0"
+        ],
+        "description": "Creates a GCP HealthCheck",
+        "scope": "ansible"
+    },
+    "Gather info for GCP HealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_health_check_info",
+            "Gather info for GCP HealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_health_check_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP HealthCheck",
+        "scope": "ansible"
+    },
+    "Creates a GCP HttpHealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_http_health_check",
+            "Creates a GCP HttpHealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_http_health_check:",
+            "    auth_kind: ${2:string}",
+            "    check_interval_sec: ${3:5}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    healthy_threshold: ${6:int}",
+            "    host: ${7:string}",
+            "    name: ${8:string}",
+            "    port: ${9:int}",
+            "    project: ${10:string}",
+            "    request_path: ${11:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    state: ${16|present,absent|}",
+            "    timeout_sec: ${17:int}",
+            "    unhealthy_threshold: ${18:int}",
+            "$0"
+        ],
+        "description": "Creates a GCP HttpHealthCheck",
+        "scope": "ansible"
+    },
+    "Gather info for GCP HttpHealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_http_health_check_info",
+            "Gather info for GCP HttpHealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_http_health_check_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP HttpHealthCheck",
+        "scope": "ansible"
+    },
+    "Creates a GCP HttpsHealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_https_health_check",
+            "Creates a GCP HttpsHealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_https_health_check:",
+            "    auth_kind: ${2:string}",
+            "    check_interval_sec: ${3:int}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    healthy_threshold: ${6:int}",
+            "    host: ${7:string}",
+            "    name: ${8:string}",
+            "    port: ${9:int}",
+            "    project: ${10:string}",
+            "    request_path: ${11:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    state: ${16|present,absent|}",
+            "    timeout_sec: ${17:int}",
+            "    unhealthy_threshold: ${18:int}",
+            "$0"
+        ],
+        "description": "Creates a GCP HttpsHealthCheck",
+        "scope": "ansible"
+    },
+    "Gather info for GCP HttpsHealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_https_health_check_info",
+            "Gather info for GCP HttpsHealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_https_health_check_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP HttpsHealthCheck",
+        "scope": "ansible"
+    },
+    "Creates a GCP Image": {
+        "prefix": [
+            "google.cloud.gcp_compute_image",
+            "Creates a GCP Image"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_image:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    disk_size_gb: ${4:int}",
+            "    env_type: ${5:string}",
+            "    family: ${6:string}",
+            "    guest_os_features:",
+            "      - ${7:element}",
+            "    licenses:",
+            "      - ${10:element}",
+            "    name: ${11:string}",
+            "    project: ${12:string}",
+            "    scopes:",
+            "      - ${14:element}",
+            "    service_account_email: ${16:string}",
+            "    service_account_file: ${17:path}",
+            "    source_disk_id: ${20:string}",
+            "    source_type: ${23:string}",
+            "    state: ${24|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Image",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Image": {
+        "prefix": [
+            "google.cloud.gcp_compute_image_info",
+            "Gather info for GCP Image"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_image_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Image",
+        "scope": "ansible"
+    },
+    "Creates a GCP InstanceGroup": {
+        "prefix": [
+            "google.cloud.gcp_compute_instance_group",
+            "Creates a GCP InstanceGroup"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_instance_group:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    instances:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    named_ports:",
+            "      - ${7:element}",
+            "    project: ${9:string}",
+            "    region: ${10:string}",
+            "    scopes:",
+            "      - ${11:element}",
+            "    service_account_email: ${13:string}",
+            "    service_account_file: ${14:path}",
+            "    state: ${15|present,absent|}",
+            "    zone: ${17:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP InstanceGroup",
+        "scope": "ansible"
+    },
+    "Gather info for GCP InstanceGroup": {
+        "prefix": [
+            "google.cloud.gcp_compute_instance_group_info",
+            "Gather info for GCP InstanceGroup"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_instance_group_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP InstanceGroup",
+        "scope": "ansible"
+    },
+    "Creates a GCP InstanceGroupManager": {
+        "prefix": [
+            "google.cloud.gcp_compute_instance_group_manager",
+            "Creates a GCP InstanceGroupManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_instance_group_manager:",
+            "    auth_kind: ${2:string}",
+            "    base_instance_name: ${3:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${7:string}",
+            "    named_ports:",
+            "      - ${8:element}",
+            "    project: ${9:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${14|present,absent|}",
+            "    target_pools:",
+            "      - ${15:element}",
+            "    target_size: ${16:int}",
+            "    zone: ${17:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP InstanceGroupManager",
+        "scope": "ansible"
+    },
+    "Gather info for GCP InstanceGroupManager": {
+        "prefix": [
+            "google.cloud.gcp_compute_instance_group_manager_info",
+            "Gather info for GCP InstanceGroupManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_instance_group_manager_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP InstanceGroupManager",
+        "scope": "ansible"
+    },
+    "Creates a GCP InstanceTemplate": {
+        "prefix": [
+            "google.cloud.gcp_compute_instance_template",
+            "Creates a GCP InstanceTemplate"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_instance_template:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP InstanceTemplate",
+        "scope": "ansible"
+    },
+    "Gather info for GCP InstanceTemplate": {
+        "prefix": [
+            "google.cloud.gcp_compute_instance_template_info",
+            "Gather info for GCP InstanceTemplate"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_instance_template_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP InstanceTemplate",
+        "scope": "ansible"
+    },
+    "Creates a GCP InterconnectAttachment": {
+        "prefix": [
+            "google.cloud.gcp_compute_interconnect_attachment",
+            "Creates a GCP InterconnectAttachment"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_interconnect_attachment:",
+            "    admin_enabled: ${2|true,false|}",
+            "    auth_kind: ${3:string}",
+            "    bandwidth: ${4:string}",
+            "    candidate_subnets:",
+            "      - ${5:element}",
+            "    description: ${6:string}",
+            "    edge_availability_domain: ${7:string}",
+            "    encryption: ${8:NONE}",
+            "    env_type: ${9:string}",
+            "    interconnect: ${10:string}",
+            "    ipsec_internal_addresses:",
+            "      - ${11:element}",
+            "    mtu: ${12:string}",
+            "    name: ${13:string}",
+            "    project: ${14:string}",
+            "    region: ${15:string}",
+            "    scopes:",
+            "      - ${17:element}",
+            "    service_account_email: ${19:string}",
+            "    service_account_file: ${20:path}",
+            "    state: ${21|present,absent|}",
+            "    type: ${22:string}",
+            "    vlan_tag8021q: ${23:int}",
+            "$0"
+        ],
+        "description": "Creates a GCP InterconnectAttachment",
+        "scope": "ansible"
+    },
+    "Gather info for GCP InterconnectAttachment": {
+        "prefix": [
+            "google.cloud.gcp_compute_interconnect_attachment_info",
+            "Gather info for GCP InterconnectAttachment"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_interconnect_attachment_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP InterconnectAttachment",
+        "scope": "ansible"
+    },
+    "Creates a GCP Network": {
+        "prefix": [
+            "google.cloud.gcp_compute_network",
+            "Creates a GCP Network"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_network:",
+            "    auth_kind: ${2:string}",
+            "    auto_create_subnetworks: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    mtu: ${6:int}",
+            "    name: ${7:string}",
+            "    project: ${8:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Network",
+        "scope": "ansible"
+    },
+    "Creates a GCP NetworkEndpointGroup": {
+        "prefix": [
+            "google.cloud.gcp_compute_network_endpoint_group",
+            "Creates a GCP NetworkEndpointGroup"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_network_endpoint_group:",
+            "    auth_kind: ${2:string}",
+            "    default_port: ${3:int}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${6:string}",
+            "    network_endpoint_type: ${8:GCE_VM_IP_PORT}",
+            "    project: ${9:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${14|present,absent|}",
+            "    zone: ${16:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP NetworkEndpointGroup",
+        "scope": "ansible"
+    },
+    "Gather info for GCP NetworkEndpointGroup": {
+        "prefix": [
+            "google.cloud.gcp_compute_network_endpoint_group_info",
+            "Gather info for GCP NetworkEndpointGroup"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_network_endpoint_group_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP NetworkEndpointGroup",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Network": {
+        "prefix": [
+            "google.cloud.gcp_compute_network_info",
+            "Gather info for GCP Network"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_network_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Network",
+        "scope": "ansible"
+    },
+    "Creates a GCP NodeGroup": {
+        "prefix": [
+            "google.cloud.gcp_compute_node_group",
+            "Creates a GCP NodeGroup"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_node_group:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    maintenance_policy: ${6:DEFAULT}",
+            "    name: ${8:string}",
+            "    project: ${10:string}",
+            "    scopes:",
+            "      - ${11:element}",
+            "    service_account_email: ${13:string}",
+            "    service_account_file: ${14:path}",
+            "    size: ${15:int}",
+            "    state: ${16|present,absent|}",
+            "    zone: ${17:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP NodeGroup",
+        "scope": "ansible"
+    },
+    "Gather info for GCP NodeGroup": {
+        "prefix": [
+            "google.cloud.gcp_compute_node_group_info",
+            "Gather info for GCP NodeGroup"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_node_group_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP NodeGroup",
+        "scope": "ansible"
+    },
+    "Creates a GCP NodeTemplate": {
+        "prefix": [
+            "google.cloud.gcp_compute_node_template",
+            "Creates a GCP NodeTemplate"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_node_template:",
+            "    auth_kind: ${2:string}",
+            "    cpu_overcommit_type: ${3:NONE}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${6:string}",
+            "    node_type: ${8:string}",
+            "    project: ${10:string}",
+            "    region: ${11:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${15:string}",
+            "    service_account_file: ${16:path}",
+            "    state: ${17|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP NodeTemplate",
+        "scope": "ansible"
+    },
+    "Gather info for GCP NodeTemplate": {
+        "prefix": [
+            "google.cloud.gcp_compute_node_template_info",
+            "Gather info for GCP NodeTemplate"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_node_template_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP NodeTemplate",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionAutoscaler": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_autoscaler",
+            "Creates a GCP RegionAutoscaler"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_autoscaler:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${6:string}",
+            "    project: ${7:string}",
+            "    region: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "    target: ${14:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionAutoscaler",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionAutoscaler": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_autoscaler_info",
+            "Gather info for GCP RegionAutoscaler"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_autoscaler_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionAutoscaler",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionBackendService": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_backend_service",
+            "Creates a GCP RegionBackendService"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_backend_service:",
+            "    affinity_cookie_ttl_sec: ${2:int}",
+            "    auth_kind: ${3:string}",
+            "    backends:",
+            "      - ${4:element}",
+            "    description: ${9:string}",
+            "    enable_cdn: ${10|false,true|}",
+            "    env_type: ${11:string}",
+            "    health_checks:",
+            "      - ${13:element}",
+            "    load_balancing_scheme: ${14:INTERNAL}",
+            "    locality_lb_policy: ${15:string}",
+            "    name: ${17:string}",
+            "    port_name: ${20:string}",
+            "    project: ${21:string}",
+            "    protocol: ${22:string}",
+            "    region: ${23:string}",
+            "    scopes:",
+            "      - ${24:element}",
+            "    service_account_email: ${26:string}",
+            "    service_account_file: ${27:path}",
+            "    session_affinity: ${28:string}",
+            "    state: ${29|present,absent|}",
+            "    timeout_sec: ${30:int}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionBackendService",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionBackendService": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_backend_service_info",
+            "Gather info for GCP RegionBackendService"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_backend_service_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionBackendService",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionDisk": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_disk",
+            "Creates a GCP RegionDisk"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_disk:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${5:string}",
+            "    licenses:",
+            "      - ${7:element}",
+            "    name: ${8:string}",
+            "    physical_block_size_bytes: ${9:int}",
+            "    project: ${10:string}",
+            "    region: ${11:string}",
+            "    replica_zones:",
+            "      - ${12:element}",
+            "    scopes:",
+            "      - ${13:element}",
+            "    service_account_email: ${15:string}",
+            "    service_account_file: ${16:path}",
+            "    size_gb: ${17:int}",
+            "    state: ${20|present,absent|}",
+            "    type: ${21:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionDisk",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionDisk": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_disk_info",
+            "Gather info for GCP RegionDisk"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_disk_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionDisk",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionHealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_health_check",
+            "Creates a GCP RegionHealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_health_check:",
+            "    auth_kind: ${2:string}",
+            "    check_interval_sec: ${3:5}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    healthy_threshold: ${7:2}",
+            "    name: ${12:string}",
+            "    project: ${13:string}",
+            "    region: ${14:string}",
+            "    scopes:",
+            "      - ${15:element}",
+            "    service_account_email: ${17:string}",
+            "    service_account_file: ${18:path}",
+            "    state: ${20|present,absent|}",
+            "    timeout_sec: ${22:5}",
+            "    type: ${23:string}",
+            "    unhealthy_threshold: ${24:2}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionHealthCheck",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionHealthCheck": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_health_check_info",
+            "Gather info for GCP RegionHealthCheck"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_health_check_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionHealthCheck",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionInstanceGroupManager": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_instance_group_manager",
+            "Creates a GCP RegionInstanceGroupManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_instance_group_manager:",
+            "    auth_kind: ${2:string}",
+            "    auto_healing_policies:",
+            "      - ${3:element}",
+            "    base_instance_name: ${4:string}",
+            "    description: ${5:string}",
+            "    env_type: ${6:string}",
+            "    name: ${8:string}",
+            "    named_ports:",
+            "      - ${9:element}",
+            "    project: ${10:string}",
+            "    region: ${11:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    state: ${16|present,absent|}",
+            "    target_pools:",
+            "      - ${17:element}",
+            "    target_size: ${18:int}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionInstanceGroupManager",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionInstanceGroupManager": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_instance_group_manager_info",
+            "Gather info for GCP RegionInstanceGroupManager"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_instance_group_manager_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionInstanceGroupManager",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionTargetHttpProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_target_http_proxy",
+            "Creates a GCP RegionTargetHttpProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_target_http_proxy:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    region: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionTargetHttpProxy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionTargetHttpProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_target_http_proxy_info",
+            "Gather info for GCP RegionTargetHttpProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_target_http_proxy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionTargetHttpProxy",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionTargetHttpsProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_target_https_proxy",
+            "Creates a GCP RegionTargetHttpsProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_target_https_proxy:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    region: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    ssl_certificates:",
+            "      - ${12:element}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionTargetHttpsProxy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionTargetHttpsProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_target_https_proxy_info",
+            "Gather info for GCP RegionTargetHttpsProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_target_https_proxy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionTargetHttpsProxy",
+        "scope": "ansible"
+    },
+    "Creates a GCP RegionUrlMap": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_url_map",
+            "Creates a GCP RegionUrlMap"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_url_map:",
+            "    auth_kind: ${2:string}",
+            "    description: ${5:string}",
+            "    env_type: ${6:string}",
+            "    host_rules:",
+            "      - ${7:element}",
+            "    name: ${8:string}",
+            "    path_matchers:",
+            "      - ${9:element}",
+            "    project: ${10:string}",
+            "    region: ${11:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    state: ${16|present,absent|}",
+            "    tests:",
+            "      - ${17:element}",
+            "$0"
+        ],
+        "description": "Creates a GCP RegionUrlMap",
+        "scope": "ansible"
+    },
+    "Gather info for GCP RegionUrlMap": {
+        "prefix": [
+            "google.cloud.gcp_compute_region_url_map_info",
+            "Gather info for GCP RegionUrlMap"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_region_url_map_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP RegionUrlMap",
+        "scope": "ansible"
+    },
+    "Creates a GCP Reservation": {
+        "prefix": [
+            "google.cloud.gcp_compute_reservation",
+            "Creates a GCP Reservation"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_reservation:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "    specific_reservation_required: ${12|true,false|}",
+            "    state: ${13|present,absent|}",
+            "    zone: ${14:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Reservation",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Reservation": {
+        "prefix": [
+            "google.cloud.gcp_compute_reservation_info",
+            "Gather info for GCP Reservation"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_reservation_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Reservation",
+        "scope": "ansible"
+    },
+    "Creates a GCP ResourcePolicy": {
+        "prefix": [
+            "google.cloud.gcp_compute_resource_policy",
+            "Creates a GCP ResourcePolicy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_resource_policy:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${7:string}",
+            "    project: ${8:string}",
+            "    region: ${9:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${15|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP ResourcePolicy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP ResourcePolicy": {
+        "prefix": [
+            "google.cloud.gcp_compute_resource_policy_info",
+            "Gather info for GCP ResourcePolicy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_resource_policy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP ResourcePolicy",
+        "scope": "ansible"
+    },
+    "Creates a GCP Route": {
+        "prefix": [
+            "google.cloud.gcp_compute_route",
+            "Creates a GCP Route"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_route:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    dest_range: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${6:string}",
+            "    next_hop_gateway: ${8:string}",
+            "    next_hop_ip: ${11:string}",
+            "    priority: ${13:int}",
+            "    project: ${14:string}",
+            "    scopes:",
+            "      - ${15:element}",
+            "    service_account_email: ${17:string}",
+            "    service_account_file: ${18:path}",
+            "    state: ${19|present,absent|}",
+            "    tags:",
+            "      - ${20:element}",
+            "$0"
+        ],
+        "description": "Creates a GCP Route",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Route": {
+        "prefix": [
+            "google.cloud.gcp_compute_route_info",
+            "Gather info for GCP Route"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_route_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Route",
+        "scope": "ansible"
+    },
+    "Creates a GCP Router": {
+        "prefix": [
+            "google.cloud.gcp_compute_router",
+            "Creates a GCP Router"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_router:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${6:string}",
+            "    project: ${8:string}",
+            "    region: ${9:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Router",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Router": {
+        "prefix": [
+            "google.cloud.gcp_compute_router_info",
+            "Gather info for GCP Router"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_router_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Router",
+        "scope": "ansible"
+    },
+    "Creates a GCP Snapshot": {
+        "prefix": [
+            "google.cloud.gcp_compute_snapshot",
+            "Creates a GCP Snapshot"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_snapshot:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${6:string}",
+            "    project: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    state: ${15|present,absent|}",
+            "    storage_locations:",
+            "      - ${16:element}",
+            "    zone: ${17:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Snapshot",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Snapshot": {
+        "prefix": [
+            "google.cloud.gcp_compute_snapshot_info",
+            "Gather info for GCP Snapshot"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_snapshot_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Snapshot",
+        "scope": "ansible"
+    },
+    "Creates a GCP SslCertificate": {
+        "prefix": [
+            "google.cloud.gcp_compute_ssl_certificate",
+            "Creates a GCP SslCertificate"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_ssl_certificate:",
+            "    auth_kind: ${2:string}",
+            "    certificate: ${3:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${6:string}",
+            "    private_key: ${7:string}",
+            "    project: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP SslCertificate",
+        "scope": "ansible"
+    },
+    "Gather info for GCP SslCertificate": {
+        "prefix": [
+            "google.cloud.gcp_compute_ssl_certificate_info",
+            "Gather info for GCP SslCertificate"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_ssl_certificate_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP SslCertificate",
+        "scope": "ansible"
+    },
+    "Creates a GCP SslPolicy": {
+        "prefix": [
+            "google.cloud.gcp_compute_ssl_policy",
+            "Creates a GCP SslPolicy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_ssl_policy:",
+            "    auth_kind: ${2:string}",
+            "    custom_features:",
+            "      - ${3:element}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    min_tls_version: ${6:string}",
+            "    name: ${7:string}",
+            "    profile: ${8:string}",
+            "    project: ${9:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP SslPolicy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP SslPolicy": {
+        "prefix": [
+            "google.cloud.gcp_compute_ssl_policy_info",
+            "Gather info for GCP SslPolicy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_ssl_policy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP SslPolicy",
+        "scope": "ansible"
+    },
+    "Creates a GCP Subnetwork": {
+        "prefix": [
+            "google.cloud.gcp_compute_subnetwork",
+            "Creates a GCP Subnetwork"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_subnetwork:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    ip_cidr_range: ${5:string}",
+            "    name: ${6:string}",
+            "    private_ip_google_access: ${8|false,true|}",
+            "    private_ipv6_google_access: ${9:string}",
+            "    project: ${10:string}",
+            "    region: ${11:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    secondary_ip_ranges:",
+            "      - ${13:element}",
+            "    service_account_email: ${15:string}",
+            "    service_account_file: ${16:path}",
+            "    state: ${17|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Subnetwork",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Subnetwork": {
+        "prefix": [
+            "google.cloud.gcp_compute_subnetwork_info",
+            "Gather info for GCP Subnetwork"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_subnetwork_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Subnetwork",
+        "scope": "ansible"
+    },
+    "Creates a GCP TargetHttpProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_http_proxy",
+            "Creates a GCP TargetHttpProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_http_proxy:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    proxy_bind: ${7|false,true|}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP TargetHttpProxy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP TargetHttpProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_http_proxy_info",
+            "Gather info for GCP TargetHttpProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_http_proxy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP TargetHttpProxy",
+        "scope": "ansible"
+    },
+    "Creates a GCP TargetHttpsProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_https_proxy",
+            "Creates a GCP TargetHttpsProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_https_proxy:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    proxy_bind: ${7|false,true|}",
+            "    quic_override: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    ssl_certificates:",
+            "      - ${13:element}",
+            "    state: ${15|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP TargetHttpsProxy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP TargetHttpsProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_https_proxy_info",
+            "Gather info for GCP TargetHttpsProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_https_proxy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP TargetHttpsProxy",
+        "scope": "ansible"
+    },
+    "Creates a GCP TargetInstance": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_instance",
+            "Creates a GCP TargetInstance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_instance:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${6:string}",
+            "    nat_policy: ${7:NO_NAT}",
+            "    project: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "    zone: ${14:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP TargetInstance",
+        "scope": "ansible"
+    },
+    "Gather info for GCP TargetInstance": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_instance_info",
+            "Gather info for GCP TargetInstance"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_instance_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    zone: ${10:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP TargetInstance",
+        "scope": "ansible"
+    },
+    "Creates a GCP TargetPool": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_pool",
+            "Creates a GCP TargetPool"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_pool:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    failover_ratio: ${6:string}",
+            "    instances:",
+            "      - ${8:element}",
+            "    name: ${9:string}",
+            "    project: ${10:string}",
+            "    region: ${11:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    session_affinity: ${16:string}",
+            "    state: ${17|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP TargetPool",
+        "scope": "ansible"
+    },
+    "Gather info for GCP TargetPool": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_pool_info",
+            "Gather info for GCP TargetPool"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_pool_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP TargetPool",
+        "scope": "ansible"
+    },
+    "Creates a GCP TargetSslProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_ssl_proxy",
+            "Creates a GCP TargetSslProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_ssl_proxy:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    proxy_header: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    ssl_certificates:",
+            "      - ${13:element}",
+            "    state: ${15|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP TargetSslProxy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP TargetSslProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_ssl_proxy_info",
+            "Gather info for GCP TargetSslProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_ssl_proxy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP TargetSslProxy",
+        "scope": "ansible"
+    },
+    "Creates a GCP TargetTcpProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_tcp_proxy",
+            "Creates a GCP TargetTcpProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_tcp_proxy:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    proxy_bind: ${7|false,true|}",
+            "    proxy_header: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP TargetTcpProxy",
+        "scope": "ansible"
+    },
+    "Gather info for GCP TargetTcpProxy": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_tcp_proxy_info",
+            "Gather info for GCP TargetTcpProxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_tcp_proxy_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP TargetTcpProxy",
+        "scope": "ansible"
+    },
+    "Creates a GCP TargetVpnGateway": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_vpn_gateway",
+            "Creates a GCP TargetVpnGateway"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_vpn_gateway:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${7:string}",
+            "    region: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP TargetVpnGateway",
+        "scope": "ansible"
+    },
+    "Gather info for GCP TargetVpnGateway": {
+        "prefix": [
+            "google.cloud.gcp_compute_target_vpn_gateway_info",
+            "Gather info for GCP TargetVpnGateway"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_target_vpn_gateway_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP TargetVpnGateway",
+        "scope": "ansible"
+    },
+    "Creates a GCP UrlMap": {
+        "prefix": [
+            "google.cloud.gcp_compute_url_map",
+            "Creates a GCP UrlMap"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_url_map:",
+            "    auth_kind: ${2:string}",
+            "    description: ${6:string}",
+            "    env_type: ${7:string}",
+            "    host_rules:",
+            "      - ${9:element}",
+            "    name: ${10:string}",
+            "    path_matchers:",
+            "      - ${11:element}",
+            "    project: ${12:string}",
+            "    scopes:",
+            "      - ${13:element}",
+            "    service_account_email: ${15:string}",
+            "    service_account_file: ${16:path}",
+            "    state: ${17|present,absent|}",
+            "    tests:",
+            "      - ${18:element}",
+            "$0"
+        ],
+        "description": "Creates a GCP UrlMap",
+        "scope": "ansible"
+    },
+    "Gather info for GCP UrlMap": {
+        "prefix": [
+            "google.cloud.gcp_compute_url_map_info",
+            "Gather info for GCP UrlMap"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_url_map_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP UrlMap",
+        "scope": "ansible"
+    },
+    "Creates a GCP VpnTunnel": {
+        "prefix": [
+            "google.cloud.gcp_compute_vpn_tunnel",
+            "Creates a GCP VpnTunnel"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_vpn_tunnel:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    ike_version: ${5:2}",
+            "    local_traffic_selector:",
+            "      - ${6:element}",
+            "    name: ${7:string}",
+            "    peer_external_gateway_interface: ${9:int}",
+            "    peer_ip: ${11:string}",
+            "    project: ${12:string}",
+            "    region: ${13:string}",
+            "    remote_traffic_selector:",
+            "      - ${14:element}",
+            "    scopes:",
+            "      - ${16:element}",
+            "    service_account_email: ${18:string}",
+            "    service_account_file: ${19:path}",
+            "    shared_secret: ${20:string}",
+            "    state: ${21|present,absent|}",
+            "    vpn_gateway_interface: ${24:int}",
+            "$0"
+        ],
+        "description": "Creates a GCP VpnTunnel",
+        "scope": "ansible"
+    },
+    "Gather info for GCP VpnTunnel": {
+        "prefix": [
+            "google.cloud.gcp_compute_vpn_tunnel_info",
+            "Gather info for GCP VpnTunnel"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_compute_vpn_tunnel_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    filters:",
+            "      - ${4:element}",
+            "    project: ${5:string}",
+            "    region: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP VpnTunnel",
+        "scope": "ansible"
+    },
+    "Creates a GCP Cluster": {
+        "prefix": [
+            "google.cloud.gcp_container_cluster",
+            "Creates a GCP Cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_container_cluster:",
+            "    auth_kind: ${3:string}",
+            "    cluster_ipv4_cidr: ${5:string}",
+            "    description: ${8:string}",
+            "    enable_kubernetes_alpha: ${9|false,true|}",
+            "    enable_tpu: ${10|false,true|}",
+            "    env_type: ${11:string}",
+            "    initial_cluster_version: ${12:string}",
+            "    initial_node_count: ${13:int}",
+            "    kubectl_context: ${15:string}",
+            "    kubectl_path: ${16:string}",
+            "    location: ${18:string}",
+            "    locations:",
+            "      - ${19:element}",
+            "    logging_service: ${20:string}",
+            "    monitoring_service: ${23:string}",
+            "    name: ${24:string}",
+            "    network: ${25:string}",
+            "    project: ${30:string}",
+            "    scopes:",
+            "      - ${33:element}",
+            "    service_account_email: ${35:string}",
+            "    service_account_file: ${36:path}",
+            "    state: ${38|present,absent|}",
+            "    subnetwork: ${39:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Cluster",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Cluster": {
+        "prefix": [
+            "google.cloud.gcp_container_cluster_info",
+            "Gather info for GCP Cluster"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_container_cluster_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    location: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Cluster",
+        "scope": "ansible"
+    },
+    "Creates a GCP NodePool": {
+        "prefix": [
+            "google.cloud.gcp_container_node_pool",
+            "Creates a GCP NodePool"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_container_node_pool:",
+            "    auth_kind: ${2:string}",
+            "    conditions:",
+            "      - ${5:element}",
+            "    env_type: ${7:string}",
+            "    initial_node_count: ${8:int}",
+            "    location: ${9:string}",
+            "    name: ${12:string}",
+            "    project: ${13:string}",
+            "    scopes:",
+            "      - ${14:element}",
+            "    service_account_email: ${16:string}",
+            "    service_account_file: ${17:path}",
+            "    state: ${18|present,absent|}",
+            "    version: ${19:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP NodePool",
+        "scope": "ansible"
+    },
+    "Gather info for GCP NodePool": {
+        "prefix": [
+            "google.cloud.gcp_container_node_pool_info",
+            "Gather info for GCP NodePool"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_container_node_pool_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${4:string}",
+            "    location: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP NodePool",
+        "scope": "ansible"
+    },
+    "Creates a GCP ManagedZone": {
+        "prefix": [
+            "google.cloud.gcp_dns_managed_zone",
+            "Creates a GCP ManagedZone"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_dns_managed_zone:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    dns_name: ${4:string}",
+            "    env_type: ${6:string}",
+            "    name: ${9:string}",
+            "    name_server_set: ${10:string}",
+            "    project: ${13:string}",
+            "    scopes:",
+            "      - ${14:element}",
+            "    service_account_email: ${16:string}",
+            "    service_account_file: ${17:path}",
+            "    state: ${18|present,absent|}",
+            "    visibility: ${19:public}",
+            "$0"
+        ],
+        "description": "Creates a GCP ManagedZone",
+        "scope": "ansible"
+    },
+    "Gather info for GCP ManagedZone": {
+        "prefix": [
+            "google.cloud.gcp_dns_managed_zone_info",
+            "Gather info for GCP ManagedZone"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_dns_managed_zone_info:",
+            "    auth_kind: ${2:string}",
+            "    dns_name:",
+            "      - ${3:element}",
+            "    env_type: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP ManagedZone",
+        "scope": "ansible"
+    },
+    "Creates a GCP ResourceRecordSet": {
+        "prefix": [
+            "google.cloud.gcp_dns_resource_record_set",
+            "Creates a GCP ResourceRecordSet"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_dns_resource_record_set:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "    state: ${11|present,absent|}",
+            "    target:",
+            "      - ${12:element}",
+            "    ttl: ${13:int}",
+            "    type: ${14:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP ResourceRecordSet",
+        "scope": "ansible"
+    },
+    "Gather info for GCP ResourceRecordSet": {
+        "prefix": [
+            "google.cloud.gcp_dns_resource_record_set_info",
+            "Gather info for GCP ResourceRecordSet"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_dns_resource_record_set_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP ResourceRecordSet",
+        "scope": "ansible"
+    },
+    "Creates a GCP Role": {
+        "prefix": [
+            "google.cloud.gcp_iam_role",
+            "Creates a GCP Role"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_iam_role:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    included_permissions:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    project: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    stage: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    title: ${14:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Role",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Role": {
+        "prefix": [
+            "google.cloud.gcp_iam_role_info",
+            "Gather info for GCP Role"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_iam_role_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Role",
+        "scope": "ansible"
+    },
+    "Creates a GCP ServiceAccount": {
+        "prefix": [
+            "google.cloud.gcp_iam_service_account",
+            "Creates a GCP ServiceAccount"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_iam_service_account:",
+            "    auth_kind: ${2:string}",
+            "    display_name: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP ServiceAccount",
+        "scope": "ansible"
+    },
+    "Gather info for GCP ServiceAccount": {
+        "prefix": [
+            "google.cloud.gcp_iam_service_account_info",
+            "Gather info for GCP ServiceAccount"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_iam_service_account_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP ServiceAccount",
+        "scope": "ansible"
+    },
+    "Creates a GCP ServiceAccountKey": {
+        "prefix": [
+            "google.cloud.gcp_iam_service_account_key",
+            "Creates a GCP ServiceAccountKey"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_iam_service_account_key:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    key_algorithm: ${4:string}",
+            "    path: ${5:path}",
+            "    private_key_type: ${6:string}",
+            "    project: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP ServiceAccountKey",
+        "scope": "ansible"
+    },
+    "Creates a GCP CryptoKey": {
+        "prefix": [
+            "google.cloud.gcp_kms_crypto_key",
+            "Creates a GCP CryptoKey"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_kms_crypto_key:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    key_ring: ${4:string}",
+            "    name: ${6:string}",
+            "    project: ${7:string}",
+            "    purpose: ${8:ENCRYPT_DECRYPT}",
+            "    rotation_period: ${9:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    skip_initial_version_creation: ${14|false,true|}",
+            "    state: ${15|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP CryptoKey",
+        "scope": "ansible"
+    },
+    "Gather info for GCP CryptoKey": {
+        "prefix": [
+            "google.cloud.gcp_kms_crypto_key_info",
+            "Gather info for GCP CryptoKey"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_kms_crypto_key_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    key_ring: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP CryptoKey",
+        "scope": "ansible"
+    },
+    "Creates a GCP KeyRing": {
+        "prefix": [
+            "google.cloud.gcp_kms_key_ring",
+            "Creates a GCP KeyRing"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_kms_key_ring:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    location: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP KeyRing",
+        "scope": "ansible"
+    },
+    "Gather info for GCP KeyRing": {
+        "prefix": [
+            "google.cloud.gcp_kms_key_ring_info",
+            "Gather info for GCP KeyRing"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_kms_key_ring_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    location: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP KeyRing",
+        "scope": "ansible"
+    },
+    "Creates a GCP Metric": {
+        "prefix": [
+            "google.cloud.gcp_logging_metric",
+            "Creates a GCP Metric"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_logging_metric:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    filter: ${6:string}",
+            "    name: ${9:string}",
+            "    project: ${10:string}",
+            "    scopes:",
+            "      - ${11:element}",
+            "    service_account_email: ${13:string}",
+            "    service_account_file: ${14:path}",
+            "    state: ${15|present,absent|}",
+            "    value_extractor: ${16:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Metric",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Metric": {
+        "prefix": [
+            "google.cloud.gcp_logging_metric_info",
+            "Gather info for GCP Metric"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_logging_metric_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Metric",
+        "scope": "ansible"
+    },
+    "Creates a GCP Model": {
+        "prefix": [
+            "google.cloud.gcp_mlengine_model",
+            "Creates a GCP Model"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_mlengine_model:",
+            "    auth_kind: ${2:string}",
+            "    description: ${4:string}",
+            "    env_type: ${5:string}",
+            "    name: ${7:string}",
+            "    online_prediction_console_logging: ${8|false,true|}",
+            "    online_prediction_logging: ${9|false,true|}",
+            "    project: ${10:string}",
+            "    regions:",
+            "      - ${11:element}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    state: ${16|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Model",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Model": {
+        "prefix": [
+            "google.cloud.gcp_mlengine_model_info",
+            "Gather info for GCP Model"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_mlengine_model_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Model",
+        "scope": "ansible"
+    },
+    "Creates a GCP Version": {
+        "prefix": [
+            "google.cloud.gcp_mlengine_version",
+            "Creates a GCP Version"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_mlengine_version:",
+            "    auth_kind: ${2:string}",
+            "    deployment_uri: ${4:string}",
+            "    description: ${5:string}",
+            "    env_type: ${6:string}",
+            "    framework: ${7:string}",
+            "    is_default: ${8|false,true|}",
+            "    machine_type: ${10:string}",
+            "    name: ${13:string}",
+            "    prediction_class: ${14:string}",
+            "    project: ${15:string}",
+            "    python_version: ${16:string}",
+            "    runtime_version: ${17:string}",
+            "    scopes:",
+            "      - ${18:element}",
+            "    service_account: ${19:string}",
+            "    service_account_email: ${21:string}",
+            "    service_account_file: ${22:path}",
+            "    state: ${23|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Version",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Version": {
+        "prefix": [
+            "google.cloud.gcp_mlengine_version_info",
+            "Gather info for GCP Version"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_mlengine_version_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Version",
+        "scope": "ansible"
+    },
+    "Creates a GCP Subscription": {
+        "prefix": [
+            "google.cloud.gcp_pubsub_subscription",
+            "Creates a GCP Subscription"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_pubsub_subscription:",
+            "    ack_deadline_seconds: ${2:int}",
+            "    auth_kind: ${3:string}",
+            "    enable_message_ordering: ${5|false,true|}",
+            "    env_type: ${6:string}",
+            "    filter: ${8:string}",
+            "    message_retention_duration: ${10:604800s}",
+            "    name: ${11:string}",
+            "    project: ${12:string}",
+            "    retain_acked_messages: ${14|false,true|}",
+            "    scopes:",
+            "      - ${16:element}",
+            "    service_account_email: ${18:string}",
+            "    service_account_file: ${19:path}",
+            "    state: ${20|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Subscription",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Subscription": {
+        "prefix": [
+            "google.cloud.gcp_pubsub_subscription_info",
+            "Gather info for GCP Subscription"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_pubsub_subscription_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Subscription",
+        "scope": "ansible"
+    },
+    "Creates a GCP Topic": {
+        "prefix": [
+            "google.cloud.gcp_pubsub_topic",
+            "Creates a GCP Topic"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_pubsub_topic:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    kms_key_name: ${4:string}",
+            "    name: ${7:string}",
+            "    project: ${8:string}",
+            "    scopes:",
+            "      - ${10:element}",
+            "    service_account_email: ${12:string}",
+            "    service_account_file: ${13:path}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Topic",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Topic": {
+        "prefix": [
+            "google.cloud.gcp_pubsub_topic_info",
+            "Gather info for GCP Topic"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_pubsub_topic_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Topic",
+        "scope": "ansible"
+    },
+    "Creates a GCP Project": {
+        "prefix": [
+            "google.cloud.gcp_resourcemanager_project",
+            "Creates a GCP Project"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_resourcemanager_project:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    id: ${4:string}",
+            "    name: ${6:string}",
+            "    project: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Project",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Project": {
+        "prefix": [
+            "google.cloud.gcp_resourcemanager_project_info",
+            "Gather info for GCP Project"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_resourcemanager_project_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    page_size: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Project",
+        "scope": "ansible"
+    },
+    "Creates a GCP Config": {
+        "prefix": [
+            "google.cloud.gcp_runtimeconfig_config",
+            "Creates a GCP Config"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_runtimeconfig_config:",
+            "    auth_kind: ${2:string}",
+            "    description: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Config",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Config": {
+        "prefix": [
+            "google.cloud.gcp_runtimeconfig_config_info",
+            "Gather info for GCP Config"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_runtimeconfig_config_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Config",
+        "scope": "ansible"
+    },
+    "Creates a GCP Variable": {
+        "prefix": [
+            "google.cloud.gcp_runtimeconfig_variable",
+            "Creates a GCP Variable"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_runtimeconfig_variable:",
+            "    auth_kind: ${2:string}",
+            "    config: ${3:string}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "    state: ${11|present,absent|}",
+            "    text: ${12:string}",
+            "    value: ${13:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Variable",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Variable": {
+        "prefix": [
+            "google.cloud.gcp_runtimeconfig_variable_info",
+            "Gather info for GCP Variable"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_runtimeconfig_variable_info:",
+            "    auth_kind: ${2:string}",
+            "    config: ${3:string}",
+            "    env_type: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Variable",
+        "scope": "ansible"
+    },
+    "Creates a GCP Service": {
+        "prefix": [
+            "google.cloud.gcp_serviceusage_service",
+            "Creates a GCP Service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_serviceusage_service:",
+            "    auth_kind: ${2:string}",
+            "    disable_dependent_services: ${3|false,true|}",
+            "    env_type: ${4:string}",
+            "    name: ${5:string}",
+            "    project: ${6:string}",
+            "    scopes:",
+            "      - ${7:element}",
+            "    service_account_email: ${9:string}",
+            "    service_account_file: ${10:path}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Service",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Service": {
+        "prefix": [
+            "google.cloud.gcp_serviceusage_service_info",
+            "Gather info for GCP Service"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_serviceusage_service_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Service",
+        "scope": "ansible"
+    },
+    "Creates a GCP Repository": {
+        "prefix": [
+            "google.cloud.gcp_sourcerepo_repository",
+            "Creates a GCP Repository"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sourcerepo_repository:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    name: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "    state: ${10|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Repository",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Repository": {
+        "prefix": [
+            "google.cloud.gcp_sourcerepo_repository_info",
+            "Gather info for GCP Repository"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sourcerepo_repository_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Repository",
+        "scope": "ansible"
+    },
+    "Creates a GCP Database": {
+        "prefix": [
+            "google.cloud.gcp_sql_database",
+            "Creates a GCP Database"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sql_database:",
+            "    auth_kind: ${2:string}",
+            "    charset: ${3:string}",
+            "    collation: ${4:string}",
+            "    env_type: ${5:string}",
+            "    instance: ${6:string}",
+            "    name: ${7:string}",
+            "    project: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP Database",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Database": {
+        "prefix": [
+            "google.cloud.gcp_sql_database_info",
+            "Gather info for GCP Database"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sql_database_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    instance: ${4:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Database",
+        "scope": "ansible"
+    },
+    "Creates a GCP SslCert": {
+        "prefix": [
+            "google.cloud.gcp_sql_ssl_cert",
+            "Creates a GCP SslCert"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sql_ssl_cert:",
+            "    auth_kind: ${2:string}",
+            "    cert: ${3:string}",
+            "    cert_serial_number: ${4:string}",
+            "    common_name: ${5:string}",
+            "    create_time: ${6:string}",
+            "    env_type: ${7:string}",
+            "    expiration_time: ${8:string}",
+            "    project: ${10:string}",
+            "    scopes:",
+            "      - ${11:element}",
+            "    service_account_email: ${13:string}",
+            "    service_account_file: ${14:path}",
+            "    sha1_fingerprint: ${15:string}",
+            "    state: ${16|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP SslCert",
+        "scope": "ansible"
+    },
+    "Creates a GCP User": {
+        "prefix": [
+            "google.cloud.gcp_sql_user",
+            "Creates a GCP User"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sql_user:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    host: ${4:string}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    project: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP User",
+        "scope": "ansible"
+    },
+    "Gather info for GCP User": {
+        "prefix": [
+            "google.cloud.gcp_sql_user_info",
+            "Gather info for GCP User"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_sql_user_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${5:string}",
+            "    scopes:",
+            "      - ${6:element}",
+            "    service_account_email: ${8:string}",
+            "    service_account_file: ${9:path}",
+            "$0"
+        ],
+        "description": "Gather info for GCP User",
+        "scope": "ansible"
+    },
+    "Creates a GCP Bucket": {
+        "prefix": [
+            "google.cloud.gcp_storage_bucket",
+            "Creates a GCP Bucket"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_storage_bucket:",
+            "    acl:",
+            "      - ${2:element}",
+            "    auth_kind: ${3:string}",
+            "    cors:",
+            "      - ${4:element}",
+            "    default_event_based_hold: ${5|false,true|}",
+            "    default_object_acl:",
+            "      - ${6:element}",
+            "    env_type: ${7:string}",
+            "    location: ${10:string}",
+            "    metageneration: ${12:int}",
+            "    name: ${13:string}",
+            "    predefined_default_object_acl: ${15:string}",
+            "    project: ${16:string}",
+            "    scopes:",
+            "      - ${17:element}",
+            "    service_account_email: ${19:string}",
+            "    service_account_file: ${20:path}",
+            "    state: ${21|present,absent|}",
+            "    storage_class: ${22:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Bucket",
+        "scope": "ansible"
+    },
+    "Creates a GCP BucketAccessControl": {
+        "prefix": [
+            "google.cloud.gcp_storage_bucket_access_control",
+            "Creates a GCP BucketAccessControl"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_storage_bucket_access_control:",
+            "    auth_kind: ${2:string}",
+            "    entity: ${4:string}",
+            "    env_type: ${5:string}",
+            "    project: ${6:string}",
+            "    role: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP BucketAccessControl",
+        "scope": "ansible"
+    },
+    "Creates a GCP DefaultObjectACL": {
+        "prefix": [
+            "google.cloud.gcp_storage_default_object_acl",
+            "Creates a GCP DefaultObjectACL"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_storage_default_object_acl:",
+            "    auth_kind: ${2:string}",
+            "    entity: ${4:string}",
+            "    env_type: ${5:string}",
+            "    object: ${6:string}",
+            "    project: ${7:string}",
+            "    role: ${8:string}",
+            "    scopes:",
+            "      - ${9:element}",
+            "    service_account_email: ${11:string}",
+            "    service_account_file: ${12:path}",
+            "    state: ${13|present,absent|}",
+            "$0"
+        ],
+        "description": "Creates a GCP DefaultObjectACL",
+        "scope": "ansible"
+    },
+    "Creates a GCP Object": {
+        "prefix": [
+            "google.cloud.gcp_storage_object",
+            "Creates a GCP Object"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_storage_object:",
+            "    action: ${2:string}",
+            "    auth_kind: ${3:string}",
+            "    bucket: ${4:string}",
+            "    dest: ${5:path}",
+            "    env_type: ${6:string}",
+            "    project: ${7:string}",
+            "    scopes:",
+            "      - ${8:element}",
+            "    service_account_email: ${10:string}",
+            "    service_account_file: ${11:path}",
+            "    src: ${12:path}",
+            "$0"
+        ],
+        "description": "Creates a GCP Object",
+        "scope": "ansible"
+    },
+    "Creates a GCP Node": {
+        "prefix": [
+            "google.cloud.gcp_tpu_node",
+            "Creates a GCP Node"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_tpu_node:",
+            "    accelerator_type: ${2:string}",
+            "    auth_kind: ${3:string}",
+            "    cidr_block: ${4:string}",
+            "    description: ${5:string}",
+            "    env_type: ${6:string}",
+            "    name: ${8:string}",
+            "    network: ${9:string}",
+            "    project: ${10:string}",
+            "    scopes:",
+            "      - ${12:element}",
+            "    service_account_email: ${14:string}",
+            "    service_account_file: ${15:path}",
+            "    state: ${16|present,absent|}",
+            "    tensorflow_version: ${17:string}",
+            "    use_service_networking: ${18|true,false|}",
+            "    zone: ${19:string}",
+            "$0"
+        ],
+        "description": "Creates a GCP Node",
+        "scope": "ansible"
+    },
+    "Gather info for GCP Node": {
+        "prefix": [
+            "google.cloud.gcp_tpu_node_info",
+            "Gather info for GCP Node"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  google.cloud.gcp_tpu_node_info:",
+            "    auth_kind: ${2:string}",
+            "    env_type: ${3:string}",
+            "    project: ${4:string}",
+            "    scopes:",
+            "      - ${5:element}",
+            "    service_account_email: ${7:string}",
+            "    service_account_file: ${8:path}",
+            "    zone: ${9:string}",
+            "$0"
+        ],
+        "description": "Gather info for GCP Node",
+        "scope": "ansible"
+    }
+}

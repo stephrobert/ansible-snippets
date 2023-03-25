@@ -1,0 +1,102 @@
+{
+    "NetApp Unified Manager list aggregates.": {
+        "prefix": [
+            "netapp.um_info.na_um_aggregates_info",
+            "NetApp Unified Manager list aggregates."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netapp.um_info.na_um_aggregates_info:",
+            "    hostname: ${3:string}",
+            "    http_port: ${4:int}",
+            "    max_records: ${5:int}",
+            "    password: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "NetApp Unified Manager list aggregates.",
+        "scope": "ansible"
+    },
+    "NetApp Unified Manager list cluster.": {
+        "prefix": [
+            "netapp.um_info.na_um_clusters_info",
+            "NetApp Unified Manager list cluster."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netapp.um_info.na_um_clusters_info:",
+            "    hostname: ${3:string}",
+            "    http_port: ${4:int}",
+            "    max_records: ${5:int}",
+            "    password: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "NetApp Unified Manager list cluster.",
+        "scope": "ansible"
+    },
+    "NetApp Unified Manager list nodes.": {
+        "prefix": [
+            "netapp.um_info.na_um_nodes_info",
+            "NetApp Unified Manager list nodes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netapp.um_info.na_um_nodes_info:",
+            "    hostname: ${3:string}",
+            "    http_port: ${4:int}",
+            "    max_records: ${5:int}",
+            "    password: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "NetApp Unified Manager list nodes.",
+        "scope": "ansible"
+    },
+    "NetApp Unified Manager list svms.": {
+        "prefix": [
+            "netapp.um_info.na_um_svms_info",
+            "NetApp Unified Manager list svms."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netapp.um_info.na_um_svms_info:",
+            "    hostname: ${3:string}",
+            "    http_port: ${4:int}",
+            "    max_records: ${5:int}",
+            "    password: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "NetApp Unified Manager list svms.",
+        "scope": "ansible"
+    },
+    "NetApp Unified Manager list volumes.": {
+        "prefix": [
+            "netapp.um_info.na_um_volumes_info",
+            "NetApp Unified Manager list volumes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netapp.um_info.na_um_volumes_info:",
+            "    hostname: ${3:string}",
+            "    http_port: ${4:int}",
+            "    max_records: ${5:int}",
+            "    password: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "NetApp Unified Manager list volumes.",
+        "scope": "ansible"
+    }
+}

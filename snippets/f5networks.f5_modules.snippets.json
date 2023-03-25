@@ -1,0 +1,4470 @@
+{
+    "Manage user-defined APM ACLs": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_apm_acl",
+            "Manage user-defined APM ACLs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_apm_acl:",
+            "    acl_order: ${2:int}",
+            "    description: ${3:string}",
+            "    entries:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    partition: ${6:Common}",
+            "    path_match_case: ${7|false,true|}",
+            "    state: ${9|present,absent|}",
+            "    type: ${10:string}",
+            "$0"
+        ],
+        "description": "Manage user-defined APM ACLs",
+        "scope": "ansible"
+    },
+    "Manage APM Network Access resource": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_apm_network_access",
+            "Manage APM Network Access resource"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_apm_network_access:",
+            "    allow_local_dns: ${2|false,true|}",
+            "    allow_local_subnet: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    dns_address_space:",
+            "      - ${5:element}",
+            "    dtls: ${6|false,true|}",
+            "    dtls_port: ${7:int}",
+            "    excluded_dns_addresses:",
+            "      - ${8:element}",
+            "    excluded_ipv4_adresses:",
+            "      - ${9:element}",
+            "    excluded_ipv6_adresses:",
+            "      - ${10:element}",
+            "    ip_version: ${11:string}",
+            "    ipv4_address_space:",
+            "      - ${12:element}",
+            "    ipv4_lease_pool: ${13:string}",
+            "    ipv6_address_space:",
+            "      - ${14:element}",
+            "    ipv6_lease_pool: ${15:string}",
+            "    name: ${16:string}",
+            "    partition: ${17:Common}",
+            "    snat_pool: ${19:string}",
+            "    split_tunnel: ${20|false,true|}",
+            "    state: ${21|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage APM Network Access resource",
+        "scope": "ansible"
+    },
+    "Exports the APM policy or APM access profile from remote nodes.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_apm_policy_fetch",
+            "Exports the APM policy or APM access profile from remote nodes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_apm_policy_fetch:",
+            "    dest: ${2:path}",
+            "    file: ${3:string}",
+            "    force: ${4|true,false|}",
+            "    name: ${5:string}",
+            "    partition: ${6:Common}",
+            "    type: ${8|profile_access,access_policy|}",
+            "$0"
+        ],
+        "description": "Exports the APM policy or APM access profile from remote nodes.",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP APM policy or APM access profile imports": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_apm_policy_import",
+            "Manage BIG-IP APM policy or APM access profile imports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_apm_policy_import:",
+            "    force: ${2|false,true|}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    reuse_objects: ${6|true,false|}",
+            "    source: ${7:path}",
+            "    type: ${8|profile_access,access_policy,profile_api_protection|}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP APM policy or APM access profile imports",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP system ASM advanced settings": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_asm_advanced_settings",
+            "Manage BIG-IP system ASM advanced settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_asm_advanced_settings:",
+            "    name: ${2:string}",
+            "    state: ${4|present,reset|}",
+            "    value: ${5:string}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP system ASM advanced settings",
+        "scope": "ansible"
+    },
+    "Manage application settings for a DOS profile": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_asm_dos_application",
+            "Manage application settings for a DOS profile"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_asm_dos_application:",
+            "    partition: ${5:Common}",
+            "    profile: ${6:string}",
+            "    rtbh_duration: ${8:int}",
+            "    rtbh_enable: ${9|false,true|}",
+            "    scrubbing_duration: ${10:int}",
+            "    scrubbing_enable: ${11|false,true|}",
+            "    single_page_application: ${12|false,true|}",
+            "    state: ${13|present,absent|}",
+            "    trigger_irule: ${14|false,true|}",
+            "$0"
+        ],
+        "description": "Manage application settings for a DOS profile",
+        "scope": "ansible"
+    },
+    "Exports the ASM policy from remote nodes.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_asm_policy_fetch",
+            "Exports the ASM policy from remote nodes."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_asm_policy_fetch:",
+            "    base64: ${2|false,true|}",
+            "    binary: ${3|false,true|}",
+            "    compact: ${4|false,true|}",
+            "    dest: ${5:path}",
+            "    file: ${6:string}",
+            "    force: ${7|true,false|}",
+            "    inline: ${8|false,true|}",
+            "    name: ${9:string}",
+            "    partition: ${10:Common}",
+            "$0"
+        ],
+        "description": "Exports the ASM policy from remote nodes.",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP ASM policy imports": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_asm_policy_import",
+            "Manage BIG-IP ASM policy imports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_asm_policy_import:",
+            "    base64: ${2|false,true|}",
+            "    encoding: ${3:string}",
+            "    force: ${4|false,true|}",
+            "    inline: ${5:string}",
+            "    name: ${6:string}",
+            "    parent_policy: ${7:string}",
+            "    partition: ${8:Common}",
+            "    policy_type: ${9|security,parent|}",
+            "    retain_inheritance_settings: ${11|false,true|}",
+            "    source: ${12:path}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP ASM policy imports",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP ASM policies": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_asm_policy_manage",
+            "Manage BIG-IP ASM policies"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_asm_policy_manage:",
+            "    active: ${2|false,true|}",
+            "    apply: ${3|false,true|}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "    template: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP ASM policies",
+        "scope": "ansible"
+    },
+    "Manages Server Technology on an ASM policy": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_asm_policy_server_technology",
+            "Manages Server Technology on an ASM policy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_asm_policy_server_technology:",
+            "    name: ${2:string}",
+            "    partition: ${3:Common}",
+            "    policy_name: ${4:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages Server Technology on an ASM policy",
+        "scope": "ansible"
+    },
+    "Manages Signature Sets on an ASM policy": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_asm_policy_signature_set",
+            "Manages Signature Sets on an ASM policy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_asm_policy_signature_set:",
+            "    alarm: ${2|false,true|}",
+            "    block: ${3|false,true|}",
+            "    learn: ${4|false,true|}",
+            "    name: ${5:string}",
+            "    partition: ${6:Common}",
+            "    policy_name: ${7:string}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages Signature Sets on an ASM policy",
+        "scope": "ansible"
+    },
+    "Manage CGNAT LSN Pools": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_cgnat_lsn_pool",
+            "Manage CGNAT LSN Pools"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_cgnat_lsn_pool:",
+            "    backup_members:",
+            "      - ${2:element}",
+            "    client_conn_limit: ${3:int}",
+            "    description: ${4:string}",
+            "    egress_interfaces:",
+            "      - ${5:element}",
+            "    egress_intf_enabled: ${6|false,true|}",
+            "    harpin_mode: ${7|false,true|}",
+            "    icmp_echo: ${8|false,true|}",
+            "    inbound_connections: ${9:string}",
+            "    log_profile: ${10:string}",
+            "    log_publisher: ${11:string}",
+            "    members:",
+            "      - ${12:element}",
+            "    mode: ${13:string}",
+            "    name: ${14:string}",
+            "    partition: ${15:Common}",
+            "    pba_block_idle_timeout: ${16:int}",
+            "    pba_block_lifetime: ${17:int}",
+            "    pba_block_size: ${18:int}",
+            "    pba_client_block_limit: ${19:int}",
+            "    pba_zombie_timeout: ${20:int}",
+            "    persistence_mode: ${21:string}",
+            "    persistence_timeout: ${22:int}",
+            "    port_range_high: ${23:int}",
+            "    port_range_low: ${24:int}",
+            "    route_advertisement: ${26|false,true|}",
+            "    state: ${27|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage CGNAT LSN Pools",
+        "scope": "ansible"
+    },
+    "Manage CLI aliases on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_cli_alias",
+            "Manage CLI aliases on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_cli_alias:",
+            "    command: ${2:string}",
+            "    description: ${3:string}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    scope: ${7|shared,private|}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage CLI aliases on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage CLI scripts on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_cli_script",
+            "Manage CLI scripts on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_cli_script:",
+            "    content: ${2:string}",
+            "    description: ${3:string}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage CLI scripts on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Run TMSH and BASH commands on F5 devices": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_command",
+            "Run TMSH and BASH commands on F5 devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_command:",
+            "    chdir: ${2:string}",
+            "    commands: ${3:\"raw\"}",
+            "    interval: ${4:1}",
+            "    match: ${5|all,any|}",
+            "    retries: ${7:10}",
+            "    wait_for:",
+            "      - ${8:element}",
+            "    warn: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Run TMSH and BASH commands on F5 devices",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP configuration sections": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_config",
+            "Manage BIG-IP configuration sections"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_config:",
+            "    merge_content: ${2:string}",
+            "    reset: ${4|false,true|}",
+            "    save: ${5|true,false|}",
+            "    verify: ${6|false,true|}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP configuration sections",
+        "scope": "ansible"
+    },
+    "Perform different actions related to config-sync": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_configsync_action",
+            "Perform different actions related to config-sync"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_configsync_action:",
+            "    device_group: ${2:string}",
+            "    overwrite_config: ${3|false,true|}",
+            "    sync_device_to_group: ${5|false,true|}",
+            "    sync_group_to_device: ${6|false,true|}",
+            "$0"
+        ],
+        "description": "Perform different actions related to config-sync",
+        "scope": "ansible"
+    },
+    "Manage data groups on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_data_group",
+            "Manage data groups on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_data_group:",
+            "    delete_data_group_file: ${2|false,true|}",
+            "    description: ${3:string}",
+            "    external_file_name: ${4:string}",
+            "    internal: ${5|false,true|}",
+            "    name: ${6:string}",
+            "    partition: ${7:Common}",
+            "    records:",
+            "      - ${9:element}",
+            "    records_src: ${10:path}",
+            "    separator: ${11::=}",
+            "    state: ${12|present,absent|}",
+            "    type: ${13|string,address,addr,ip,integer,int|}",
+            "$0"
+        ],
+        "description": "Manage data groups on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage system authentication on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_auth",
+            "Manage system authentication on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_auth:",
+            "    accounting: ${2:string}",
+            "    authentication: ${3:string}",
+            "    protocol_name: ${4:string}",
+            "    secret: ${6:string}",
+            "    servers: ${7:\"raw\"}",
+            "    service_name: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    type: ${10:string}",
+            "    update_secret: ${11|always,on_create|}",
+            "    use_for_auth: ${12|false,true|}",
+            "$0"
+        ],
+        "description": "Manage system authentication on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage LDAP device authentication settings on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_auth_ldap",
+            "Manage LDAP device authentication settings on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_auth_ldap:",
+            "    bind_dn: ${2:string}",
+            "    bind_password: ${3:string}",
+            "    ca_cert: ${4:string}",
+            "    check_member_attr: ${5|false,true|}",
+            "    client_cert: ${6:string}",
+            "    client_key: ${7:string}",
+            "    fallback_to_local: ${8|false,true|}",
+            "    login_ldap_attr: ${9:string}",
+            "    port: ${10:int}",
+            "    referrals: ${12|false,true|}",
+            "    remote_directory_tree: ${13:string}",
+            "    scope: ${14:string}",
+            "    servers:",
+            "      - ${15:element}",
+            "    source_type: ${16|ldap,active-directory|}",
+            "    ssl: ${17:string}",
+            "    state: ${18|present,absent|}",
+            "    update_password: ${19|always,on_create|}",
+            "    use_for_auth: ${20|false,true|}",
+            "    user_template: ${21:string}",
+            "    validate_certs: ${22|false,true|}",
+            "$0"
+        ],
+        "description": "Manage LDAP device authentication settings on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages RADIUS auth configuration on a BIG-IP device": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_auth_radius",
+            "Manages RADIUS auth configuration on a BIG-IP device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_auth_radius:",
+            "    accounting_bug: ${2|false,true|}",
+            "    fallback_to_local: ${3|false,true|}",
+            "    retries: ${5:int}",
+            "    servers:",
+            "      - ${6:element}",
+            "    service_type: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    use_for_auth: ${9|false,true|}",
+            "$0"
+        ],
+        "description": "Manages RADIUS auth configuration on a BIG-IP device",
+        "scope": "ansible"
+    },
+    "Manages the RADIUS server configuration of the device": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_auth_radius_server",
+            "Manages the RADIUS server configuration of the device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_auth_radius_server:",
+            "    description: ${2:string}",
+            "    ip: ${3:string}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    port: ${6:int}",
+            "    secret: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:int}",
+            "    update_secret: ${11|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages the RADIUS server configuration of the device",
+        "scope": "ansible"
+    },
+    "Manage self-signed device certificates": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_certificate",
+            "Manage self-signed device certificates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_certificate:",
+            "    add_to_trusted: ${2|false,true|}",
+            "    cert_name: ${3:server.crt}",
+            "    days_valid: ${4:int}",
+            "    force: ${5|false,true|}",
+            "    key_name: ${7:server.key}",
+            "    key_size: ${8:2048}",
+            "    new_cert: ${9|false,true|}",
+            "$0"
+        ],
+        "description": "Manage self-signed device certificates",
+        "scope": "ansible"
+    },
+    "Manages device IP configuration settings for HA on a BIG-IP.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_connectivity",
+            "Manages device IP configuration settings for HA on a BIG-IP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_connectivity:",
+            "    cluster_mirroring: ${2:string}",
+            "    config_sync_ip: ${3:string}",
+            "    failover_multicast: ${4|false,true|}",
+            "    mirror_primary_address: ${5:string}",
+            "    mirror_secondary_address: ${6:string}",
+            "    multicast_address: ${7:string}",
+            "    multicast_interface: ${8:string}",
+            "    multicast_port: ${9:int}",
+            "    unicast_failover:",
+            "      - ${11:element}",
+            "$0"
+        ],
+        "description": "Manages device IP configuration settings for HA on a BIG-IP.",
+        "scope": "ansible"
+    },
+    "Manage DNS settings on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_dns",
+            "Manage DNS settings on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_dns:",
+            "    cache: ${2:string}",
+            "    ip_version: ${3:int}",
+            "    name_servers:",
+            "      - ${4:element}",
+            "    search:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage DNS settings on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage device groups on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_group",
+            "Manage device groups on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_group:",
+            "    asm_sync: ${2|false,true|}",
+            "    auto_sync: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    full_sync: ${5|false,true|}",
+            "    max_incremental_sync_size: ${6:int}",
+            "    name: ${7:string}",
+            "    network_failover: ${8|false,true|}",
+            "    save_on_auto_sync: ${10|false,true|}",
+            "    state: ${11|present,absent|}",
+            "    type: ${12:string}",
+            "$0"
+        ],
+        "description": "Manage device groups on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages members in a device group": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_group_member",
+            "Manages members in a device group"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_group_member:",
+            "    device_group: ${2:string}",
+            "    name: ${3:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages members in a device group",
+        "scope": "ansible"
+    },
+    "Manage HA group settings on a BIG-IP system": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_ha_group",
+            "Manage HA group settings on a BIG-IP system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_ha_group:",
+            "    active_bonus: ${2:int}",
+            "    description: ${3:string}",
+            "    enable: ${4|true,false|}",
+            "    name: ${5:string}",
+            "    pools:",
+            "      - ${6:element}",
+            "    state: ${8|present,absent|}",
+            "    trunks:",
+            "      - ${9:element}",
+            "$0"
+        ],
+        "description": "Manage HA group settings on a BIG-IP system",
+        "scope": "ansible"
+    },
+    "Manage HTTPD related settings on a BIG-IP system": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_httpd",
+            "Manage HTTPD related settings on a BIG-IP system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_httpd:",
+            "    allow:",
+            "      - ${2:element}",
+            "    auth_name: ${3:string}",
+            "    auth_pam_dashboard_timeout: ${4|false,true|}",
+            "    auth_pam_idle_timeout: ${5:int}",
+            "    auth_pam_validate_ip: ${6|false,true|}",
+            "    fast_cgi_timeout: ${7:int}",
+            "    hostname_lookup: ${8|false,true|}",
+            "    log_level: ${9:string}",
+            "    max_clients: ${10:int}",
+            "    redirect_http_to_https: ${12|false,true|}",
+            "    ssl_cipher_suite: ${13:\"raw\"}",
+            "    ssl_port: ${14:int}",
+            "    ssl_protocols: ${15:\"raw\"}",
+            "$0"
+        ],
+        "description": "Manage HTTPD related settings on a BIG-IP system",
+        "scope": "ansible"
+    },
+    "Collect information from F5 BIG-IP devices": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_info",
+            "Collect information from F5 BIG-IP devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_info:",
+            "    data_increment: ${2:10}",
+            "    gather_subset:",
+            "      - ${3:element}",
+            "    partition: ${4:Common}",
+            "$0"
+        ],
+        "description": "Collect information from F5 BIG-IP devices",
+        "scope": "ansible"
+    },
+    "Manage license installation and activation on BIG-IP devices": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_license",
+            "Manage license installation and activation on BIG-IP devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_license:",
+            "    accept_eula: ${2|false,true|}",
+            "    addon_keys:",
+            "      - ${3:element}",
+            "    force: ${4|false,true|}",
+            "    license_key: ${5:string}",
+            "    license_server: ${6:activate.f5.com}",
+            "    state: ${8|present,absent,latest,revoked|}",
+            "$0"
+        ],
+        "description": "Manage license installation and activation on BIG-IP devices",
+        "scope": "ansible"
+    },
+    "Manage NTP servers on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_ntp",
+            "Manage NTP servers on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_ntp:",
+            "    ntp_servers:",
+            "      - ${2:element}",
+            "    state: ${4|present,absent|}",
+            "    timezone: ${5:string}",
+            "$0"
+        ],
+        "description": "Manage NTP servers on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage the SSHD settings of a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_sshd",
+            "Manage the SSHD settings of a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_sshd:",
+            "    allow:",
+            "      - ${2:element}",
+            "    banner: ${3:string}",
+            "    banner_text: ${4:string}",
+            "    inactivity_timeout: ${5:int}",
+            "    log_level: ${6:string}",
+            "    login: ${7:string}",
+            "    port: ${8:int}",
+            "$0"
+        ],
+        "description": "Manage the SSHD settings of a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage system-level syslog settings on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_syslog",
+            "Manage system-level syslog settings on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_syslog:",
+            "    auth_priv_from: ${2:string}",
+            "    auth_priv_to: ${3:string}",
+            "    console_log: ${4|false,true|}",
+            "    cron_from: ${5:string}",
+            "    cron_to: ${6:string}",
+            "    daemon_from: ${7:string}",
+            "    daemon_to: ${8:string}",
+            "    include: ${9:string}",
+            "    iso_date: ${10|false,true|}",
+            "    kern_from: ${11:string}",
+            "    kern_to: ${12:string}",
+            "    local6_from: ${13:string}",
+            "    local6_to: ${14:string}",
+            "    mail_from: ${15:string}",
+            "    mail_to: ${16:string}",
+            "    messages_from: ${17:string}",
+            "    messages_to: ${18:string}",
+            "    user_log_from: ${20:string}",
+            "    user_log_to: ${21:string}",
+            "$0"
+        ],
+        "description": "Manage system-level syslog settings on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages traffic groups on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_traffic_group",
+            "Manages traffic groups on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_traffic_group:",
+            "    auto_failback: ${2|false,true|}",
+            "    auto_failback_time: ${3:int}",
+            "    ha_group: ${4:string}",
+            "    ha_load_factor: ${5:int}",
+            "    ha_order:",
+            "      - ${6:element}",
+            "    mac_address: ${7:string}",
+            "    name: ${8:string}",
+            "    partition: ${9:Common}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages traffic groups on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage the trust relationships between BIG-IPs": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_device_trust",
+            "Manage the trust relationships between BIG-IPs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_device_trust:",
+            "    peer_hostname: ${2:string}",
+            "    peer_password: ${3:string}",
+            "    peer_server: ${4:string}",
+            "    peer_user: ${5:string}",
+            "    state: ${7|present,absent|}",
+            "    type: ${8|peer,subordinate|}",
+            "$0"
+        ],
+        "description": "Manage the trust relationships between BIG-IPs",
+        "scope": "ansible"
+    },
+    "Manage DNS resolver cache configuration on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_dns_cache_resolver",
+            "Manage DNS resolver cache configuration on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_dns_cache_resolver:",
+            "    answer_default_zones: ${2|false,true|}",
+            "    forward_zones: ${3:\"raw\"}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    route_domain: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage DNS resolver cache configuration on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage LTM DNS nameservers on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_dns_nameserver",
+            "Manage LTM DNS nameservers on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_dns_nameserver:",
+            "    address: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    route_domain: ${6:string}",
+            "    service_port: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    tsig_key: ${9:string}",
+            "$0"
+        ],
+        "description": "Manage LTM DNS nameservers on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage DNS resolvers on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_dns_resolver",
+            "Manage DNS resolvers on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_dns_resolver:",
+            "    answer_default_zones: ${2|false,true|}",
+            "    cache_size: ${3:int}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    randomize_query_case: ${7|false,true|}",
+            "    route_domain: ${8:int}",
+            "    state: ${9|present,absent|}",
+            "    use_ipv4: ${10|false,true|}",
+            "    use_ipv6: ${11|false,true|}",
+            "    use_tcp: ${12|false,true|}",
+            "    use_udp: ${13|false,true|}",
+            "$0"
+        ],
+        "description": "Manage DNS resolvers on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage DNS zones on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_dns_zone",
+            "Manage DNS zones on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_dns_zone:",
+            "    name: ${3:string}",
+            "    nameservers:",
+            "      - ${4:element}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "    tsig_server_key: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage DNS zones on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage files in datastores on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_file_copy",
+            "Manage files in datastores on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_file_copy:",
+            "    datastore: ${2|ifile,external-monitor,lw4o6-table|}",
+            "    force: ${3|false,true|}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    source: ${7:path}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage files in datastores on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage address lists on BIG-IP AFM": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_address_list",
+            "Manage address lists on BIG-IP AFM"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_address_list:",
+            "    address_lists:",
+            "      - ${2:element}",
+            "    address_ranges:",
+            "      - ${3:element}",
+            "    addresses:",
+            "      - ${4:element}",
+            "    description: ${5:string}",
+            "    fqdns:",
+            "      - ${6:element}",
+            "    geo_locations:",
+            "      - ${7:element}",
+            "    name: ${8:string}",
+            "    partition: ${9:Common}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage address lists on BIG-IP AFM",
+        "scope": "ansible"
+    },
+    "Manage AFM DoS profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_dos_profile",
+            "Manage AFM DoS profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_dos_profile:",
+            "    default_whitelist: ${2:string}",
+            "    description: ${3:string}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "    threshold_sensitivity: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage AFM DoS profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage attack vector configuration in an AFM DoS profile": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_dos_vector",
+            "Manage attack vector configuration in an AFM DoS profile"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_dos_vector:",
+            "    allow_advertisement: ${2|false,true|}",
+            "    attack_ceiling: ${3:string}",
+            "    attack_floor: ${4:string}",
+            "    auto_blacklist: ${5|false,true|}",
+            "    bad_actor_detection: ${6|false,true|}",
+            "    blacklist_detection_seconds: ${7:int}",
+            "    blacklist_duration: ${8:int}",
+            "    detection_threshold_eps: ${9:string}",
+            "    detection_threshold_percent: ${10:string}",
+            "    mitigation_threshold_eps: ${11:string}",
+            "    name: ${12:string}",
+            "    partition: ${13:Common}",
+            "    per_source_ip_detection_threshold: ${14:string}",
+            "    per_source_ip_mitigation_threshold: ${15:string}",
+            "    profile: ${16:string}",
+            "    simulate_auto_threshold: ${18|false,true|}",
+            "    state: ${19:string}",
+            "    threshold_mode: ${20:string}",
+            "$0"
+        ],
+        "description": "Manage attack vector configuration in an AFM DoS profile",
+        "scope": "ansible"
+    },
+    "Manage AFM global rule settings on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_global_rules",
+            "Manage AFM global rule settings on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_global_rules:",
+            "    description: ${2:string}",
+            "    enforced_policy: ${3:string}",
+            "    service_policy: ${5:string}",
+            "    staged_policy: ${6:string}",
+            "$0"
+        ],
+        "description": "Manage AFM global rule settings on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages AFM logging profiles configured in the system": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_log_profile",
+            "Manages AFM logging profiles configured in the system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_log_profile:",
+            "    description: ${2:string}",
+            "    name: ${5:string}",
+            "    partition: ${6:Common}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages AFM logging profiles configured in the system",
+        "scope": "ansible"
+    },
+    "Configures Network Firewall related settings of the log profile": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_log_profile_network",
+            "Configures Network Firewall related settings of the log profile"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_log_profile_network:",
+            "    log_format_delimiter: ${2:string}",
+            "    log_message_fields:",
+            "      - ${7:element}",
+            "    log_publisher: ${8:string}",
+            "    log_storage_format: ${9:string}",
+            "    log_translation_fields: ${12|false,true|}",
+            "    partition: ${13:Common}",
+            "    profile_name: ${14:string}",
+            "    rate_limit: ${16:string}",
+            "    state: ${17|present,absent|}",
+            "$0"
+        ],
+        "description": "Configures Network Firewall related settings of the log profile",
+        "scope": "ansible"
+    },
+    "Manage AFM security firewall policies on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_rule_list",
+            "Manage AFM security firewall policies on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_rule_list:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    rules:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage AFM security firewall policies on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage port lists on BIG-IP AFM": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_port_list",
+            "Manage port lists on BIG-IP AFM"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_port_list:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    port_lists:",
+            "      - ${5:element}",
+            "    port_ranges:",
+            "      - ${6:element}",
+            "    ports:",
+            "      - ${7:element}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage port lists on BIG-IP AFM",
+        "scope": "ansible"
+    },
+    "Manage AFM Firewall rules": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_rule",
+            "Manage AFM Firewall rules"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_rule:",
+            "    action: ${2:string}",
+            "    description: ${3:string}",
+            "    destination:",
+            "      - ${4:element}",
+            "    icmp_message:",
+            "      - ${5:element}",
+            "    irule: ${6:string}",
+            "    logging: ${7|false,true|}",
+            "    name: ${8:string}",
+            "    parent_policy: ${9:string}",
+            "    parent_rule_list: ${10:string}",
+            "    partition: ${11:Common}",
+            "    protocol: ${12:string}",
+            "    rule_list: ${14:string}",
+            "    schedule: ${15:string}",
+            "    source:",
+            "      - ${16:element}",
+            "    state: ${17|present,absent|}",
+            "    status: ${18:string}",
+            "$0"
+        ],
+        "description": "Manage AFM Firewall rules",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP AFM schedule configurations": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_firewall_schedule",
+            "Manage BIG-IP AFM schedule configurations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_firewall_schedule:",
+            "    daily_hour_end: ${2:string}",
+            "    daily_hour_start: ${3:string}",
+            "    date_valid_end: ${4:string}",
+            "    date_valid_start: ${5:string}",
+            "    days_of_week:",
+            "      - ${6:element}",
+            "    description: ${7:string}",
+            "    name: ${8:string}",
+            "    partition: ${9:Common}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP AFM schedule configurations",
+        "scope": "ansible"
+    },
+    "Manage Datacenter configuration in BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_datacenter",
+            "Manage Datacenter configuration in BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_datacenter:",
+            "    contact: ${2:string}",
+            "    description: ${3:string}",
+            "    location: ${4:string}",
+            "    name: ${5:string}",
+            "    partition: ${6:Common}",
+            "    state: ${8|present,absent,enabled,disabled|}",
+            "$0"
+        ],
+        "description": "Manage Datacenter configuration in BIG-IP",
+        "scope": "ansible"
+    },
+    "Configures the BIG-IP DNS system to answer TCP or UDP DNS requests": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_dns_listener",
+            "Configures the BIG-IP DNS system to answer TCP or UDP DNS requests"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_dns_listener:",
+            "    address: ${2:string}",
+            "    advertise: ${3|false,true|}",
+            "    auto_lasthop: ${4:string}",
+            "    description: ${5:string}",
+            "    disabled_vlans:",
+            "      - ${6:element}",
+            "    enabled_vlans:",
+            "      - ${7:element}",
+            "    fallback_persistence: ${8:string}",
+            "    ip_protocol: ${9:string}",
+            "    irules:",
+            "      - ${10:element}",
+            "    last_hop_pool: ${11:string}",
+            "    mask: ${12:string}",
+            "    name: ${13:string}",
+            "    partition: ${14:Common}",
+            "    pool: ${15:string}",
+            "    port: ${16:int}",
+            "    source_port: ${18:string}",
+            "    state: ${19|present,absent,enabled,disabled|}",
+            "    translate_address: ${20|false,true|}",
+            "    translate_port: ${21|false,true|}",
+            "$0"
+        ],
+        "description": "Configures the BIG-IP DNS system to answer TCP or UDP DNS requests",
+        "scope": "ansible"
+    },
+    "Manages global GTM settings": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_global",
+            "Manages global GTM settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_global:",
+            "    synchronization: ${3|false,true|}",
+            "    synchronization_group_name: ${4:string}",
+            "    synchronize_zone_files: ${5|false,true|}",
+            "$0"
+        ],
+        "description": "Manages global GTM settings",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM BIG-IP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_monitor_bigip",
+            "Manages F5 BIG-IP GTM BIG-IP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_monitor_bigip:",
+            "    aggregate_dynamic_ratios: ${2:string}",
+            "    ignore_down_response: ${3|false,true|}",
+            "    interval: ${4:int}",
+            "    ip: ${5:string}",
+            "    name: ${6:string}",
+            "    parent: ${7:/Common/bigip}",
+            "    partition: ${8:Common}",
+            "    port: ${9:string}",
+            "    state: ${11|present,absent|}",
+            "    timeout: ${12:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM BIG-IP monitors",
+        "scope": "ansible"
+    },
+    "Manages external GTM monitors on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_monitor_external",
+            "Manages external GTM monitors on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_monitor_external:",
+            "    arguments: ${2:string}",
+            "    external_program: ${3:string}",
+            "    interval: ${4:int}",
+            "    ip: ${5:string}",
+            "    name: ${6:string}",
+            "    parent: ${7:/Common/external}",
+            "    partition: ${8:Common}",
+            "    port: ${9:string}",
+            "    state: ${11|present,absent|}",
+            "    timeout: ${12:int}",
+            "$0"
+        ],
+        "description": "Manages external GTM monitors on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM FirePass monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_monitor_firepass",
+            "Manages F5 BIG-IP GTM FirePass monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_monitor_firepass:",
+            "    cipher_list: ${2:string}",
+            "    concurrency_limit: ${3:int}",
+            "    ignore_down_response: ${4|false,true|}",
+            "    interval: ${5:int}",
+            "    ip: ${6:string}",
+            "    max_load_average: ${7:int}",
+            "    name: ${8:string}",
+            "    parent: ${9:/Common/firepass_gtm}",
+            "    partition: ${10:Common}",
+            "    port: ${11:string}",
+            "    probe_timeout: ${12:int}",
+            "    state: ${14|present,absent|}",
+            "    target_password: ${15:string}",
+            "    target_username: ${16:string}",
+            "    timeout: ${17:int}",
+            "    update_password: ${18|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM FirePass monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM HTTP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_monitor_http",
+            "Manages F5 BIG-IP GTM HTTP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_monitor_http:",
+            "    ignore_down_response: ${2|false,true|}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/http}",
+            "    partition: ${7:Common}",
+            "    port: ${8:string}",
+            "    probe_timeout: ${9:int}",
+            "    receive: ${11:string}",
+            "    reverse: ${12|false,true|}",
+            "    send: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    target_password: ${15:string}",
+            "    target_username: ${16:string}",
+            "    timeout: ${17:int}",
+            "    transparent: ${18|false,true|}",
+            "    update_password: ${19|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM HTTP monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM HTTPS monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_monitor_https",
+            "Manages F5 BIG-IP GTM HTTPS monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_monitor_https:",
+            "    cipher_list: ${2:string}",
+            "    client_cert: ${3:string}",
+            "    client_key: ${4:string}",
+            "    compatibility: ${5|false,true|}",
+            "    ignore_down_response: ${6|false,true|}",
+            "    interval: ${7:int}",
+            "    ip: ${8:string}",
+            "    name: ${9:string}",
+            "    parent: ${10:/Common/https}",
+            "    partition: ${11:Common}",
+            "    port: ${12:string}",
+            "    probe_timeout: ${13:int}",
+            "    receive: ${15:string}",
+            "    reverse: ${16|false,true|}",
+            "    send: ${17:string}",
+            "    state: ${18|present,absent|}",
+            "    target_password: ${19:string}",
+            "    target_username: ${20:string}",
+            "    timeout: ${21:int}",
+            "    transparent: ${22|false,true|}",
+            "    update_password: ${23|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM HTTPS monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM TCP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_monitor_tcp",
+            "Manages F5 BIG-IP GTM TCP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_monitor_tcp:",
+            "    ignore_down_response: ${2|false,true|}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/tcp}",
+            "    partition: ${7:Common}",
+            "    port: ${8:string}",
+            "    probe_timeout: ${9:int}",
+            "    receive: ${11:string}",
+            "    reverse: ${12|false,true|}",
+            "    send: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    timeout: ${15:int}",
+            "    transparent: ${16|false,true|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM TCP monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM TCP half-open monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_monitor_tcp_half_open",
+            "Manages F5 BIG-IP GTM TCP half-open monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_monitor_tcp_half_open:",
+            "    ignore_down_response: ${2|false,true|}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/tcp_half_open}",
+            "    partition: ${7:Common}",
+            "    port: ${8:string}",
+            "    probe_attempts: ${9:int}",
+            "    probe_interval: ${10:int}",
+            "    probe_timeout: ${11:int}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:int}",
+            "    transparent: ${15|false,true|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM TCP half-open monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM pools": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_pool",
+            "Manages F5 BIG-IP GTM pools"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_pool:",
+            "    alternate_lb_method: ${2:string}",
+            "    fallback_ip: ${4:string}",
+            "    fallback_lb_method: ${5:string}",
+            "    max_answers_returned: ${6:int}",
+            "    members:",
+            "      - ${7:element}",
+            "    monitors:",
+            "      - ${8:element}",
+            "    name: ${9:string}",
+            "    partition: ${10:Common}",
+            "    preferred_lb_method: ${11:string}",
+            "    state: ${13|present,absent,enabled,disabled|}",
+            "    ttl: ${14:int}",
+            "    type: ${15:string}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM pools",
+        "scope": "ansible"
+    },
+    "Manage GTM pool member settings": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_pool_member",
+            "Manage GTM pool member settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_pool_member:",
+            "    aggregate:",
+            "      - ${2:element}",
+            "    description: ${3:string}",
+            "    member_order: ${5:int}",
+            "    monitor: ${6:string}",
+            "    partition: ${7:Common}",
+            "    pool: ${8:string}",
+            "    ratio: ${10:int}",
+            "    replace_all_with: ${11|false,true|}",
+            "    server_name: ${12:string}",
+            "    state: ${13|present,absent,enabled,disabled|}",
+            "    type: ${14:string}",
+            "    virtual_server: ${15:string}",
+            "$0"
+        ],
+        "description": "Manage GTM pool member settings",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM servers": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_server",
+            "Manages F5 BIG-IP GTM servers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_server:",
+            "    datacenter: ${3:string}",
+            "    devices: ${4:\"raw\"}",
+            "    link_discovery: ${7:string}",
+            "    monitors:",
+            "      - ${8:element}",
+            "    name: ${9:string}",
+            "    partition: ${10:Common}",
+            "    prober_fallback: ${11:string}",
+            "    prober_pool: ${12:string}",
+            "    prober_preference: ${13:string}",
+            "    server_type: ${15:string}",
+            "    state: ${16|present,absent,enabled,disabled|}",
+            "    virtual_server_discovery: ${17:string}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM servers",
+        "scope": "ansible"
+    },
+    "Manages GTM Topology Records": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_topology_record",
+            "Manages GTM Topology Records"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_topology_record:",
+            "    partition: ${3:Common}",
+            "    state: ${6|present,absent|}",
+            "    weight: ${7:int}",
+            "$0"
+        ],
+        "description": "Manages GTM Topology Records",
+        "scope": "ansible"
+    },
+    "Manages GTM Topology Regions": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_topology_region",
+            "Manages GTM Topology Regions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_topology_region:",
+            "    name: ${2:string}",
+            "    partition: ${3:Common}",
+            "    region_members:",
+            "      - ${5:element}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages GTM Topology Regions",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM virtual servers": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_virtual_server",
+            "Manages F5 BIG-IP GTM virtual servers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_virtual_server:",
+            "    address: ${2:string}",
+            "    link: ${5:string}",
+            "    monitors:",
+            "      - ${6:element}",
+            "    name: ${7:string}",
+            "    partition: ${8:Common}",
+            "    port: ${9:int}",
+            "    server_name: ${11:string}",
+            "    state: ${12|present,absent,enabled,disabled|}",
+            "    translation_address: ${13:string}",
+            "    translation_port: ${14:string}",
+            "    virtual_server_dependencies:",
+            "      - ${15:element}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM virtual servers",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP GTM Wide IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_gtm_wide_ip",
+            "Manages F5 BIG-IP GTM Wide IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_gtm_wide_ip:",
+            "    aliases:",
+            "      - ${2:element}",
+            "    irules:",
+            "      - ${3:element}",
+            "    last_resort_pool: ${4:string}",
+            "    name: ${5:string}",
+            "    partition: ${6:Common}",
+            "    persist_cidr_ipv4: ${7:int}",
+            "    persist_cidr_ipv6: ${8:int}",
+            "    persistence: ${9|false,true|}",
+            "    persistence_ttl: ${10:int}",
+            "    pool_lb_method: ${11:string}",
+            "    pools:",
+            "      - ${12:element}",
+            "    state: ${14|present,absent,disabled,enabled|}",
+            "    type: ${15:string}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP GTM Wide IP",
+        "scope": "ansible"
+    },
+    "Manage the hostname of a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_hostname",
+            "Manage the hostname of a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_hostname:",
+            "    hostname: ${2:string}",
+            "$0"
+        ],
+        "description": "Manage the hostname of a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages TCL iApp services on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_iapp_service",
+            "Manages TCL iApp services on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_iapp_service:",
+            "    description: ${2:string}",
+            "    device_group: ${3:string}",
+            "    force: ${4|false,true|}",
+            "    metadata:",
+            "      - ${5:element}",
+            "    name: ${6:string}",
+            "    partition: ${8:Common}",
+            "    state: ${10|present,absent|}",
+            "    strict_updates: ${11|false,true|}",
+            "    template: ${12:string}",
+            "    traffic_group: ${13:string}",
+            "$0"
+        ],
+        "description": "Manages TCL iApp services on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages TCL iApp templates on a BIG-IP.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_iapp_template",
+            "Manages TCL iApp templates on a BIG-IP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_iapp_template:",
+            "    content: ${2:string}",
+            "    force: ${3|false,true|}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages TCL iApp templates on a BIG-IP.",
+        "scope": "ansible"
+    },
+    "Manage IPSec IKE Peer configuration on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ike_peer",
+            "Manage IPSec IKE Peer configuration on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ike_peer:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    phase1_auth_method: ${5:string}",
+            "    phase1_cert: ${6:string}",
+            "    phase1_encryption_algorithm: ${7:string}",
+            "    phase1_hash_algorithm: ${8:string}",
+            "    phase1_key: ${9:string}",
+            "    phase1_lifetime: ${10:int}",
+            "    phase1_perfect_forward_secrecy: ${11:string}",
+            "    phase1_verify_peer_cert: ${12|false,true|}",
+            "    presented_id_type: ${13:string}",
+            "    presented_id_value: ${14:string}",
+            "    preshared_key: ${15:string}",
+            "    remote_address: ${17:string}",
+            "    state: ${18|present,absent|}",
+            "    update_password: ${19|always,on_create|}",
+            "    verified_id_type: ${20:string}",
+            "    verified_id_value: ${21:string}",
+            "    version:",
+            "      - ${22:element}",
+            "$0"
+        ],
+        "description": "Manage IPSec IKE Peer configuration on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP advanced routing configuration sections": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_imish_config",
+            "Manage BIG-IP advanced routing configuration sections"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_imish_config:",
+            "    after:",
+            "      - ${2:element}",
+            "    allow_duplicates: ${3|false,true|}",
+            "    backup: ${4|false,true|}",
+            "    before:",
+            "      - ${6:element}",
+            "    diff_against: ${7|startup,intended,running|}",
+            "    diff_ignore_lines:",
+            "      - ${8:element}",
+            "    intended_config: ${9:string}",
+            "    lines:",
+            "      - ${10:element}",
+            "    match: ${11|line,strict,exact,none|}",
+            "    parents:",
+            "      - ${12:element}",
+            "    replace: ${14|line,block|}",
+            "    route_domain: ${15:0}",
+            "    running_config: ${16:string}",
+            "    save_when: ${17|never,always,modified,changed|}",
+            "    src: ${18:path}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP advanced routing configuration sections",
+        "scope": "ansible"
+    },
+    "Module to manage BIG-IP physical interfaces.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_interface",
+            "Module to manage BIG-IP physical interfaces."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_interface:",
+            "    bundle: ${2:string}",
+            "    bundle_speed: ${3:string}",
+            "    description: ${4:string}",
+            "    enabled: ${5|false,true|}",
+            "    flow_control: ${6:string}",
+            "    force_gigabit_fiber: ${7|false,true|}",
+            "    forward_error_correction: ${8:string}",
+            "    lldp_admin: ${9:string}",
+            "    lldp_tlvmap: ${10:int}",
+            "    media_fixed: ${11:string}",
+            "    media_sfp: ${12:string}",
+            "    name: ${13:string}",
+            "    port_fwd_mode: ${14:string}",
+            "    prefer_port: ${15:string}",
+            "    stp: ${18|false,true|}",
+            "    stp_auto_edge_port: ${19|false,true|}",
+            "    stp_edge_port: ${20|false,true|}",
+            "    stp_link_type: ${21:string}",
+            "$0"
+        ],
+        "description": "Module to manage BIG-IP physical interfaces.",
+        "scope": "ansible"
+    },
+    "Manage IPSec policies on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ipsec_policy",
+            "Manage IPSec policies on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ipsec_policy:",
+            "    auth_algorithm: ${2:string}",
+            "    description: ${3:string}",
+            "    encrypt_algorithm: ${4:string}",
+            "    ipcomp: ${5:string}",
+            "    ipv4_interface: ${6|false,true|}",
+            "    kb_lifetime: ${7:int}",
+            "    lifetime: ${8:int}",
+            "    mode: ${9:string}",
+            "    name: ${10:string}",
+            "    partition: ${11:Common}",
+            "    perfect_forward_secrecy: ${12:string}",
+            "    protocol: ${13:string}",
+            "    route_domain: ${15:int}",
+            "    state: ${16|present,absent|}",
+            "    tunnel_local_address: ${17:string}",
+            "    tunnel_remote_address: ${18:string}",
+            "$0"
+        ],
+        "description": "Manage IPSec policies on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage iRules across different modules on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_irule",
+            "Manage iRules across different modules on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_irule:",
+            "    content: ${2:string}",
+            "    module: ${3:string}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    src: ${7:path}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage iRules across different modules on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages log destinations on a BIG-IP.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_log_destination",
+            "Manages log destinations on a BIG-IP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_log_destination:",
+            "    address: ${2:string}",
+            "    description: ${3:string}",
+            "    distribution: ${4:string}",
+            "    forward_to: ${5:string}",
+            "    name: ${6:string}",
+            "    partition: ${7:Common}",
+            "    pool: ${8:string}",
+            "    port: ${9:int}",
+            "    protocol: ${10:string}",
+            "    server_ssl_profile: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    syslog_format: ${14:string}",
+            "    template_delete_delay: ${15:int}",
+            "    template_retransmit_interval: ${16:int}",
+            "    transport_profile: ${17:string}",
+            "    type: ${18:string}",
+            "$0"
+        ],
+        "description": "Manages log destinations on a BIG-IP.",
+        "scope": "ansible"
+    },
+    "Manages log publishers on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_log_publisher",
+            "Manages log publishers on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_log_publisher:",
+            "    description: ${2:string}",
+            "    destinations:",
+            "      - ${3:element}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages log publishers on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages global LTM settings": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ltm_global",
+            "Manages global LTM settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ltm_global:",
+            "$0"
+        ],
+        "description": "Manages global LTM settings",
+        "scope": "ansible"
+    },
+    "Manages Javascript LX packages on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_lx_package",
+            "Manages Javascript LX packages on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_lx_package:",
+            "    package: ${2:path}",
+            "    retain_package_file: ${4|false,true|}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages Javascript LX packages on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage system management routes on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_management_route",
+            "Manage system management routes on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_management_route:",
+            "    description: ${2:string}",
+            "    gateway: ${3:string}",
+            "    name: ${4:string}",
+            "    network: ${5:string}",
+            "    partition: ${6:Common}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage system management routes on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage peers for routing generic message protocol messages": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_message_routing_peer",
+            "Manage peers for routing generic message protocol messages"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_message_routing_peer:",
+            "    auto_init: ${2|false,true|}",
+            "    auto_init_interval: ${3:int}",
+            "    connection_mode: ${4:string}",
+            "    description: ${5:string}",
+            "    name: ${6:string}",
+            "    number_of_connections: ${7:int}",
+            "    partition: ${8:Common}",
+            "    pool: ${9:string}",
+            "    ratio: ${11:int}",
+            "    state: ${12|present,absent|}",
+            "    transport_config: ${13:string}",
+            "    type: ${14|generic|}",
+            "$0"
+        ],
+        "description": "Manage peers for routing generic message protocol messages",
+        "scope": "ansible"
+    },
+    "Manage the generic message parser profile.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_message_routing_protocol",
+            "Manage the generic message parser profile."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_message_routing_protocol:",
+            "    description: ${2:string}",
+            "    disable_parser: ${3|false,true|}",
+            "    max_egress_buffer: ${4:int}",
+            "    max_msg_size: ${5:int}",
+            "    msg_terminator: ${6:string}",
+            "    name: ${7:string}",
+            "    no_response: ${8|false,true|}",
+            "    parent: ${9:string}",
+            "    partition: ${10:Common}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage the generic message parser profile.",
+        "scope": "ansible"
+    },
+    "Manages static routes for routing message protocol messages": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_message_routing_route",
+            "Manages static routes for routing message protocol messages"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_message_routing_route:",
+            "    description: ${2:string}",
+            "    dst_address: ${3:string}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    peer_selection_mode: ${6:string}",
+            "    peers:",
+            "      - ${7:element}",
+            "    src_address: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    type: ${11|generic|}",
+            "$0"
+        ],
+        "description": "Manages static routes for routing message protocol messages",
+        "scope": "ansible"
+    },
+    "Manages router profiles for message-routing protocols": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_message_routing_router",
+            "Manages router profiles for message-routing protocols"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_message_routing_router:",
+            "    description: ${2:string}",
+            "    ignore_client_port: ${3|false,true|}",
+            "    inherited_traffic_group: ${4|false,true|}",
+            "    max_pending_bytes: ${5:int}",
+            "    max_pending_messages: ${6:int}",
+            "    max_retries: ${7:int}",
+            "    mirror: ${8|false,true|}",
+            "    mirrored_msg_sweeper_interval: ${9:int}",
+            "    name: ${10:string}",
+            "    parent: ${11:string}",
+            "    partition: ${12:Common}",
+            "    routes:",
+            "      - ${14:element}",
+            "    state: ${15|present,absent|}",
+            "    traffic_group: ${16:string}",
+            "    type: ${17|generic|}",
+            "    use_local_connection: ${18|false,true|}",
+            "$0"
+        ],
+        "description": "Manages router profiles for message-routing protocols",
+        "scope": "ansible"
+    },
+    "Manages configuration for an outgoing connection": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_message_routing_transport_config",
+            "Manages configuration for an outgoing connection"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_message_routing_transport_config:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    profiles:",
+            "      - ${5:element}",
+            "    rules:",
+            "      - ${7:element}",
+            "    src_port: ${9:int}",
+            "    state: ${10|present,absent|}",
+            "    type: ${11|generic|}",
+            "$0"
+        ],
+        "description": "Manages configuration for an outgoing connection",
+        "scope": "ansible"
+    },
+    "Manage DNS monitors on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_dns",
+            "Manage DNS monitors on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_dns:",
+            "    accept_rcode: ${2:string}",
+            "    adaptive: ${3|false,true|}",
+            "    adaptive_limit: ${4:int}",
+            "    allowed_divergence_type: ${5:string}",
+            "    allowed_divergence_value: ${6:int}",
+            "    answer_section_contains: ${7:string}",
+            "    description: ${8:string}",
+            "    interval: ${9:int}",
+            "    ip: ${10:string}",
+            "    manual_resume: ${11|false,true|}",
+            "    name: ${12:string}",
+            "    parent: ${13:/Common/dns}",
+            "    partition: ${14:Common}",
+            "    port: ${15:string}",
+            "    query_name: ${17:string}",
+            "    query_type: ${18:string}",
+            "    receive: ${19:string}",
+            "    reverse: ${20|false,true|}",
+            "    sampling_timespan: ${21:int}",
+            "    state: ${22|present,absent|}",
+            "    time_until_up: ${23:int}",
+            "    timeout: ${24:int}",
+            "    transparent: ${25|false,true|}",
+            "    up_interval: ${26:int}",
+            "$0"
+        ],
+        "description": "Manage DNS monitors on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages external LTM monitors on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_external",
+            "Manages external LTM monitors on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_external:",
+            "    arguments: ${2:string}",
+            "    description: ${3:string}",
+            "    external_program: ${4:string}",
+            "    interval: ${5:int}",
+            "    ip: ${6:string}",
+            "    name: ${7:string}",
+            "    parent: ${8:/Common/external}",
+            "    partition: ${9:Common}",
+            "    port: ${10:string}",
+            "    state: ${12|present,absent|}",
+            "    timeout: ${13:int}",
+            "$0"
+        ],
+        "description": "Manages external LTM monitors on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage FTP monitors on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_ftp",
+            "Manage FTP monitors on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_ftp:",
+            "    app_service: ${2:string}",
+            "    debug: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    filename: ${5:string}",
+            "    interval: ${6:int}",
+            "    ip: ${7:string}",
+            "    manual_resume: ${8|false,true|}",
+            "    mode: ${9:string}",
+            "    name: ${10:string}",
+            "    parent: ${11:string}",
+            "    partition: ${12:Common}",
+            "    port: ${13:string}",
+            "    state: ${15|present,absent|}",
+            "    target_password: ${16:string}",
+            "    target_username: ${17:string}",
+            "    time_until_up: ${18:int}",
+            "    timeout: ${19:int}",
+            "    up_interval: ${20:int}",
+            "    update_password: ${21|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manage FTP monitors on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM gateway ICMP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_gateway_icmp",
+            "Manages F5 BIG-IP LTM gateway ICMP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_gateway_icmp:",
+            "    adaptive: ${2|false,true|}",
+            "    adaptive_limit: ${3:int}",
+            "    allowed_divergence_type: ${4:string}",
+            "    allowed_divergence_value: ${5:int}",
+            "    description: ${6:string}",
+            "    interval: ${7:int}",
+            "    ip: ${8:string}",
+            "    manual_resume: ${9|false,true|}",
+            "    name: ${10:string}",
+            "    parent: ${11:/Common/gateway_icmp}",
+            "    partition: ${12:Common}",
+            "    port: ${13:string}",
+            "    sampling_timespan: ${15:int}",
+            "    state: ${16|present,absent|}",
+            "    time_until_up: ${17:int}",
+            "    timeout: ${18:int}",
+            "    transparent: ${19|false,true|}",
+            "    up_interval: ${20:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM gateway ICMP monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM HTTP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_http",
+            "Manages F5 BIG-IP LTM HTTP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_http:",
+            "    description: ${2:string}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/http}",
+            "    partition: ${7:Common}",
+            "    port: ${8:string}",
+            "    receive: ${10:string}",
+            "    receive_disable: ${11:string}",
+            "    reverse: ${12|false,true|}",
+            "    send: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    target_password: ${15:string}",
+            "    target_username: ${16:string}",
+            "    time_until_up: ${17:int}",
+            "    timeout: ${18:int}",
+            "    up_interval: ${19:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM HTTP monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM HTTPS monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_https",
+            "Manages F5 BIG-IP LTM HTTPS monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_https:",
+            "    cipher_list: ${2:string}",
+            "    description: ${3:string}",
+            "    interval: ${4:int}",
+            "    ip: ${5:string}",
+            "    name: ${6:string}",
+            "    parent: ${7:/Common/https}",
+            "    partition: ${8:Common}",
+            "    port: ${9:string}",
+            "    receive: ${11:string}",
+            "    receive_disable: ${12:string}",
+            "    reverse: ${13|false,true|}",
+            "    send: ${14:string}",
+            "    ssl_profile: ${15:string}",
+            "    state: ${16|present,absent|}",
+            "    target_password: ${17:string}",
+            "    target_username: ${18:string}",
+            "    time_until_up: ${19:int}",
+            "    timeout: ${20:int}",
+            "    up_interval: ${21:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM HTTPS monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM ICMP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_icmp",
+            "Manages F5 BIG-IP LTM ICMP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_icmp:",
+            "    adaptive: ${2|false,true|}",
+            "    adaptive_limit: ${3:int}",
+            "    allowed_divergence_type: ${4:string}",
+            "    allowed_divergence_value: ${5:int}",
+            "    app_service: ${6:string}",
+            "    description: ${7:string}",
+            "    interval: ${8:int}",
+            "    ip: ${9:string}",
+            "    manual_resume: ${10|false,true|}",
+            "    name: ${11:string}",
+            "    parent: ${12:string}",
+            "    partition: ${13:Common}",
+            "    sampling_timespan: ${15:int}",
+            "    state: ${16|present,absent|}",
+            "    time_until_up: ${17:int}",
+            "    timeout: ${18:int}",
+            "    transparent: ${19|false,true|}",
+            "    up_interval: ${20:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM ICMP monitors",
+        "scope": "ansible"
+    },
+    "Manages BIG-IP LDAP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_ldap",
+            "Manages BIG-IP LDAP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_ldap:",
+            "    base: ${2:string}",
+            "    chase_referrals: ${3|false,true|}",
+            "    debug: ${4|false,true|}",
+            "    description: ${5:string}",
+            "    filter: ${6:string}",
+            "    interval: ${7:int}",
+            "    ip: ${8:string}",
+            "    mandatory_attributes: ${9|false,true|}",
+            "    manual_resume: ${10|false,true|}",
+            "    name: ${11:string}",
+            "    parent: ${12:/Common/ldap}",
+            "    partition: ${13:Common}",
+            "    port: ${14:string}",
+            "    security: ${16:string}",
+            "    state: ${17|present,absent|}",
+            "    target_password: ${18:string}",
+            "    target_username: ${19:string}",
+            "    time_until_up: ${20:int}",
+            "    timeout: ${21:int}",
+            "    up_interval: ${22:int}",
+            "    update_password: ${23|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IP LDAP monitors",
+        "scope": "ansible"
+    },
+    "Manages BIG-IP MySQL monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_mysql",
+            "Manages BIG-IP MySQL monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_mysql:",
+            "    app_service: ${2:string}",
+            "    count: ${3:int}",
+            "    database: ${4:string}",
+            "    debug: ${5|false,true|}",
+            "    description: ${6:string}",
+            "    interval: ${7:int}",
+            "    ip: ${8:string}",
+            "    manual_resume: ${9|false,true|}",
+            "    name: ${10:string}",
+            "    parent: ${11:string}",
+            "    partition: ${12:Common}",
+            "    port: ${13:string}",
+            "    recv: ${15:string}",
+            "    recv_column: ${16:string}",
+            "    recv_row: ${17:string}",
+            "    send: ${18:string}",
+            "    state: ${19|present,absent|}",
+            "    target_password: ${20:string}",
+            "    target_username: ${21:string}",
+            "    time_until_up: ${22:int}",
+            "    timeout: ${23:int}",
+            "    up_interval: ${24:int}",
+            "    update_password: ${25|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IP MySQL monitors",
+        "scope": "ansible"
+    },
+    "Manages BIG-IP Oracle monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_oracle",
+            "Manages BIG-IP Oracle monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_oracle:",
+            "    app_service: ${2:string}",
+            "    count: ${3:int}",
+            "    database: ${4:string}",
+            "    debug: ${5|false,true|}",
+            "    description: ${6:string}",
+            "    interval: ${7:int}",
+            "    ip: ${8:string}",
+            "    manual_resume: ${9|false,true|}",
+            "    name: ${10:string}",
+            "    parent: ${11:string}",
+            "    partition: ${12:Common}",
+            "    port: ${13:string}",
+            "    recv: ${15:string}",
+            "    recv_column: ${16:string}",
+            "    recv_row: ${17:string}",
+            "    send: ${18:string}",
+            "    state: ${19|present,absent|}",
+            "    target_password: ${20:string}",
+            "    target_username: ${21:string}",
+            "    time_until_up: ${22:int}",
+            "    timeout: ${23:int}",
+            "    up_interval: ${24:int}",
+            "    update_password: ${25|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IP Oracle monitors",
+        "scope": "ansible"
+    },
+    "Manage SMTP monitors on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_smtp",
+            "Manage SMTP monitors on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_smtp:",
+            "    app_service: ${2:string}",
+            "    debug: ${3|false,true|}",
+            "    description: ${4:string}",
+            "    domain: ${5:string}",
+            "    interval: ${6:int}",
+            "    ip: ${7:string}",
+            "    manual_resume: ${8|false,true|}",
+            "    name: ${9:string}",
+            "    parent: ${10:string}",
+            "    partition: ${11:Common}",
+            "    port: ${12:string}",
+            "    state: ${14|present,absent|}",
+            "    time_until_up: ${15:int}",
+            "    timeout: ${16:int}",
+            "    up_interval: ${17:int}",
+            "$0"
+        ],
+        "description": "Manage SMTP monitors on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages BIG-IP SNMP data collecting agent (DCA) monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_snmp_dca",
+            "Manages BIG-IP SNMP data collecting agent (DCA) monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_snmp_dca:",
+            "    agent_type: ${2:string}",
+            "    community: ${3:string}",
+            "    cpu_coefficient: ${4:string}",
+            "    cpu_threshold: ${5:int}",
+            "    description: ${6:string}",
+            "    disk_coefficient: ${7:string}",
+            "    disk_threshold: ${8:int}",
+            "    interval: ${9:int}",
+            "    memory_coefficient: ${10:string}",
+            "    memory_threshold: ${11:int}",
+            "    name: ${12:string}",
+            "    parent: ${13:/Common/snmp_dca}",
+            "    partition: ${14:Common}",
+            "    state: ${16|present,absent|}",
+            "    time_until_up: ${17:int}",
+            "    timeout: ${18:int}",
+            "    version: ${19:string}",
+            "$0"
+        ],
+        "description": "Manages BIG-IP SNMP data collecting agent (DCA) monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM TCP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_tcp",
+            "Manages F5 BIG-IP LTM TCP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_tcp:",
+            "    description: ${2:string}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/tcp}",
+            "    partition: ${7:Common}",
+            "    port: ${8:string}",
+            "    receive: ${10:string}",
+            "    receive_disable: ${11:string}",
+            "    send: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    time_until_up: ${14:int}",
+            "    timeout: ${15:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM TCP monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM TCP echo monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_tcp_echo",
+            "Manages F5 BIG-IP LTM TCP echo monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_tcp_echo:",
+            "    description: ${2:string}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/tcp_echo}",
+            "    partition: ${7:Common}",
+            "    state: ${9|present,absent|}",
+            "    time_until_up: ${10:int}",
+            "    timeout: ${11:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM TCP echo monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM TCP half-open monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_tcp_half_open",
+            "Manages F5 BIG-IP LTM TCP half-open monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_tcp_half_open:",
+            "    description: ${2:string}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/tcp_half_open}",
+            "    partition: ${7:Common}",
+            "    port: ${8:string}",
+            "    state: ${10|present,absent|}",
+            "    time_until_up: ${11:int}",
+            "    timeout: ${12:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM TCP half-open monitors",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM UDP monitors": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_monitor_udp",
+            "Manages F5 BIG-IP LTM UDP monitors"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_monitor_udp:",
+            "    description: ${2:string}",
+            "    interval: ${3:int}",
+            "    ip: ${4:string}",
+            "    name: ${5:string}",
+            "    parent: ${6:/Common/udp}",
+            "    partition: ${7:Common}",
+            "    port: ${8:string}",
+            "    receive: ${10:string}",
+            "    receive_disable: ${11:string}",
+            "    send: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    time_until_up: ${14:int}",
+            "    timeout: ${15:int}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM UDP monitors",
+        "scope": "ansible"
+    },
+    "Manage network global settings on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_network_globals",
+            "Manage network global settings on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_network_globals:",
+            "$0"
+        ],
+        "description": "Manage network global settings on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM nodes": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_node",
+            "Manages F5 BIG-IP LTM nodes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_node:",
+            "    address: ${2:string}",
+            "    connection_limit: ${4:int}",
+            "    description: ${5:string}",
+            "    dynamic_ratio: ${6:int}",
+            "    fqdn: ${7:string}",
+            "    fqdn_address_type: ${8:string}",
+            "    fqdn_auto_populate: ${9|false,true|}",
+            "    fqdn_down_interval: ${10:int}",
+            "    fqdn_up_interval: ${11:string}",
+            "    monitors:",
+            "      - ${12:element}",
+            "    name: ${13:string}",
+            "    partition: ${14:Common}",
+            "    rate_limit: ${16:int}",
+            "    ratio: ${17:int}",
+            "    state: ${18|present,absent,enabled,disabled,offline|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM nodes",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP partitions": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_partition",
+            "Manage BIG-IP partitions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_partition:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    route_domain: ${5:int}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP partitions",
+        "scope": "ansible"
+    },
+    "Manages the authentication password policy on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_password_policy",
+            "Manages the authentication password policy on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_password_policy:",
+            "    expiration_warning: ${2:int}",
+            "    max_duration: ${3:int}",
+            "    max_login_failures: ${4:int}",
+            "    min_duration: ${5:int}",
+            "    min_length: ${6:int}",
+            "    password_memory: ${7:int}",
+            "    policy_enforcement: ${8|false,true|}",
+            "    required_lowercase: ${10:int}",
+            "    required_numeric: ${11:int}",
+            "    required_special: ${12:int}",
+            "    required_uppercase: ${13:int}",
+            "$0"
+        ],
+        "description": "Manages the authentication password policy on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage general policy configuration on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_policy",
+            "Manage general policy configuration on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_policy:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    rules:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent,draft|}",
+            "    strategy: ${8:string}",
+            "$0"
+        ],
+        "description": "Manage general policy configuration on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage LTM policy rules on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_policy_rule",
+            "Manage LTM policy rules on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_policy_rule:",
+            "    actions:",
+            "      - ${2:element}",
+            "    conditions:",
+            "      - ${3:element}",
+            "    description: ${4:string}",
+            "    name: ${5:string}",
+            "    partition: ${6:Common}",
+            "    policy: ${7:string}",
+            "    replace_with: ${9|false,true|}",
+            "    rule_order: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage LTM policy rules on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM pools": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_pool",
+            "Manages F5 BIG-IP LTM pools"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_pool:",
+            "    aggregate:",
+            "      - ${2:element}",
+            "    description: ${3:string}",
+            "    lb_method: ${4:string}",
+            "    metadata: ${5:\"raw\"}",
+            "    min_up_members: ${6:int}",
+            "    min_up_members_action: ${7:string}",
+            "    min_up_members_checking: ${8:string}",
+            "    monitor_type: ${9:string}",
+            "    monitors:",
+            "      - ${10:element}",
+            "    name: ${11:string}",
+            "    partition: ${12:Common}",
+            "    priority_group_activation: ${13:int}",
+            "    quorum: ${15:int}",
+            "    replace_all_with: ${16|false,true|}",
+            "    reselect_tries: ${17:int}",
+            "    service_down_action: ${18:string}",
+            "    slow_ramp_time: ${19:int}",
+            "    state: ${20|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM pools",
+        "scope": "ansible"
+    },
+    "Manages F5 BIG-IP LTM pool members": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_pool_member",
+            "Manages F5 BIG-IP LTM pool members"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_pool_member:",
+            "    address: ${2:string}",
+            "    aggregate:",
+            "      - ${3:element}",
+            "    connection_limit: ${5:int}",
+            "    description: ${6:string}",
+            "    fqdn: ${7:string}",
+            "    fqdn_auto_populate: ${8|false,true|}",
+            "    ip_encapsulation: ${9:string}",
+            "    monitors:",
+            "      - ${10:element}",
+            "    name: ${11:string}",
+            "    partition: ${12:Common}",
+            "    pool: ${13:string}",
+            "    port: ${14:int}",
+            "    preserve_node: ${15|false,true|}",
+            "    priority_group: ${16:int}",
+            "    rate_limit: ${18:int}",
+            "    ratio: ${19:int}",
+            "    replace_all_with: ${20|false,true|}",
+            "    reuse_nodes: ${21|true,false|}",
+            "    state: ${22|present,absent,enabled,disabled,forced_offline|}",
+            "$0"
+        ],
+        "description": "Manages F5 BIG-IP LTM pool members",
+        "scope": "ansible"
+    },
+    "Manage HTTP analytics profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_analytics",
+            "Manage HTTP analytics profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_analytics:",
+            "    collect_geo: ${2|false,true|}",
+            "    collect_ip: ${3|false,true|}",
+            "    collect_max_tps_and_throughput: ${4|false,true|}",
+            "    collect_page_load_time: ${5|false,true|}",
+            "    collect_url: ${6|false,true|}",
+            "    collect_user_agent: ${7|false,true|}",
+            "    collect_user_sessions: ${8|false,true|}",
+            "    collected_stats_external_logging: ${9|false,true|}",
+            "    collected_stats_internal_logging: ${10|false,true|}",
+            "    description: ${11:string}",
+            "    external_logging_publisher: ${12:string}",
+            "    name: ${13:string}",
+            "    notification_by_email: ${14|false,true|}",
+            "    notification_by_syslog: ${15|false,true|}",
+            "    notification_email_addresses:",
+            "      - ${16:element}",
+            "    parent: ${17:string}",
+            "    partition: ${18:Common}",
+            "    state: ${20|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage HTTP analytics profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages client SSL profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_client_ssl",
+            "Manages client SSL profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_client_ssl:",
+            "    advertised_cert_authority: ${2:string}",
+            "    allow_expired_crl: ${3|false,true|}",
+            "    allow_non_ssl: ${4|false,true|}",
+            "    cache_size: ${5:int}",
+            "    cache_timeout: ${6:int}",
+            "    cert_auth_depth: ${7:int}",
+            "    cert_key_chain:",
+            "      - ${8:element}",
+            "    cipher_group: ${9:string}",
+            "    ciphers: ${10:string}",
+            "    client_auth_crl: ${11:string}",
+            "    client_auth_frequency: ${12:string}",
+            "    client_certificate: ${13:string}",
+            "    name: ${14:string}",
+            "    options:",
+            "      - ${15:element}",
+            "    parent: ${16:string}",
+            "    partition: ${17:Common}",
+            "    renegotiation: ${19|false,true|}",
+            "    retain_certificate: ${20|false,true|}",
+            "    secure_renegotiation: ${21:string}",
+            "    server_name: ${22:string}",
+            "    sni_default: ${23|false,true|}",
+            "    sni_require: ${24|false,true|}",
+            "    state: ${25|present,absent|}",
+            "    strict_resume: ${26|false,true|}",
+            "    trusted_cert_authority: ${27:string}",
+            "$0"
+        ],
+        "description": "Manages client SSL profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage DNS profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_dns",
+            "Manage DNS profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_dns:",
+            "    cache_name: ${2:string}",
+            "    enable_cache: ${3|false,true|}",
+            "    enable_dns_express: ${4|false,true|}",
+            "    enable_dns_firewall: ${5|false,true|}",
+            "    enable_dnssec: ${6|false,true|}",
+            "    enable_gtm: ${7|false,true|}",
+            "    enable_zone_transfer: ${8|false,true|}",
+            "    name: ${9:string}",
+            "    parent: ${10:string}",
+            "    partition: ${11:Common}",
+            "    process_recursion_desired: ${12|false,true|}",
+            "    state: ${14|present,absent|}",
+            "    unhandled_query_action: ${15:string}",
+            "    use_local_bind: ${16|false,true|}",
+            "$0"
+        ],
+        "description": "Manage DNS profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages Fast L4 profiles": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_fastl4",
+            "Manages Fast L4 profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_fastl4:",
+            "    client_timeout: ${2:string}",
+            "    description: ${3:string}",
+            "    explicit_flow_migration: ${4|false,true|}",
+            "    hardware_syn_cookie: ${5|false,true|}",
+            "    idle_timeout: ${6:string}",
+            "    ip_df_mode: ${7:string}",
+            "    ip_tos_to_client: ${8:string}",
+            "    ip_tos_to_server: ${9:string}",
+            "    ip_ttl_mode: ${10:string}",
+            "    ip_ttl_v4: ${11:int}",
+            "    ip_ttl_v6: ${12:int}",
+            "    keep_alive_interval: ${13:int}",
+            "    late_binding: ${14|false,true|}",
+            "    link_qos_to_client: ${15:string}",
+            "    link_qos_to_server: ${16:string}",
+            "    loose_close: ${17|false,true|}",
+            "    loose_initialization: ${18|false,true|}",
+            "    mss_override: ${19:int}",
+            "    name: ${20:string}",
+            "    parent: ${21:string}",
+            "    partition: ${22:Common}",
+            "    pva_acceleration: ${24:string}",
+            "    reassemble_fragments: ${25|false,true|}",
+            "    receive_window_size: ${26:int}",
+            "    reset_on_timeout: ${27|false,true|}",
+            "    rtt_from_client: ${28|false,true|}",
+            "    rtt_from_server: ${29|false,true|}",
+            "    server_sack: ${30|false,true|}",
+            "    server_timestamp: ${31|false,true|}",
+            "    state: ${32|present,absent|}",
+            "    syn_cookie_enable: ${33|false,true|}",
+            "    syn_cookie_mss: ${34:int}",
+            "    tcp_close_timeout: ${35:string}",
+            "    tcp_generate_isn: ${36|false,true|}",
+            "    tcp_handshake_timeout: ${37:string}",
+            "    tcp_strip_sack: ${38|false,true|}",
+            "    tcp_time_wait_timeout: ${39:int}",
+            "    tcp_timestamp_mode: ${40:string}",
+            "    tcp_wscale_mode: ${41:string}",
+            "    timeout_recovery: ${42:string}",
+            "$0"
+        ],
+        "description": "Manages Fast L4 profiles",
+        "scope": "ansible"
+    },
+    "Manages FTP profiles": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_ftp",
+            "Manages FTP profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_ftp:",
+            "    allow_ftps: ${2|false,true|}",
+            "    description: ${3:string}",
+            "    inherit_parent_profile: ${4|false,true|}",
+            "    log_profile: ${5:string}",
+            "    log_publisher: ${6:string}",
+            "    name: ${7:string}",
+            "    parent: ${8:string}",
+            "    partition: ${9:Common}",
+            "    port: ${10:int}",
+            "    security: ${12|false,true|}",
+            "    state: ${13|present,absent|}",
+            "    translate_extended: ${14|false,true|}",
+            "$0"
+        ],
+        "description": "Manages FTP profiles",
+        "scope": "ansible"
+    },
+    "Manage HTTP profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_http",
+            "Manage HTTP profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_http:",
+            "    accept_xff: ${2|false,true|}",
+            "    description: ${3:string}",
+            "    dns_resolver: ${4:string}",
+            "    encrypt_cookie_secret: ${5:string}",
+            "    encrypt_cookies:",
+            "      - ${6:element}",
+            "    fallback_host: ${8:string}",
+            "    fallback_status_codes:",
+            "      - ${9:element}",
+            "    header_erase: ${10:string}",
+            "    header_insert: ${11:string}",
+            "    hsts_mode: ${12|false,true|}",
+            "    hsts_preload: ${13|false,true|}",
+            "    include_subdomains: ${14|false,true|}",
+            "    insert_xforwarded_for: ${15|false,true|}",
+            "    maximum_age: ${16:string}",
+            "    name: ${17:string}",
+            "    oneconnect_transformations: ${18|false,true|}",
+            "    parent: ${19:string}",
+            "    partition: ${20:Common}",
+            "    proxy_type: ${22:string}",
+            "    redirect_rewrite: ${23:string}",
+            "    request_chunking: ${24:string}",
+            "    response_chunking: ${25:string}",
+            "    server_agent_name: ${26:string}",
+            "    state: ${28|present,absent|}",
+            "    update_password: ${29|always,on_create|}",
+            "    xff_alternative_names:",
+            "      - ${30:element}",
+            "$0"
+        ],
+        "description": "Manage HTTP profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage HTTP2 profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_http2",
+            "Manage HTTP2 profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_http2:",
+            "    activation_modes:",
+            "      - ${2:element}",
+            "    description: ${3:string}",
+            "    enforce_tls_requirements: ${4|false,true|}",
+            "    frame_size: ${5:int}",
+            "    header_table_size: ${6:int}",
+            "    idle_timeout: ${7:int}",
+            "    insert_header: ${8|false,true|}",
+            "    insert_header_name: ${9:string}",
+            "    name: ${10:string}",
+            "    parent: ${11:string}",
+            "    partition: ${12:Common}",
+            "    receive_window: ${14:int}",
+            "    state: ${15|present,absent|}",
+            "    streams: ${16:int}",
+            "    write_size: ${17:int}",
+            "$0"
+        ],
+        "description": "Manage HTTP2 profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage HTTP compression profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_http_compression",
+            "Manage HTTP compression profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_http_compression:",
+            "    buffer_size: ${2:int}",
+            "    content_type_include:",
+            "      - ${3:element}",
+            "    description: ${4:string}",
+            "    gzip_level: ${5:int}",
+            "    gzip_memory_level: ${6:int}",
+            "    gzip_window_size: ${7:int}",
+            "    name: ${8:string}",
+            "    parent: ${9:string}",
+            "    partition: ${10:Common}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage HTTP compression profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage OneConnect profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_oneconnect",
+            "Manage OneConnect profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_oneconnect:",
+            "    description: ${2:string}",
+            "    idle_timeout_override: ${3:string}",
+            "    limit_type: ${4:string}",
+            "    maximum_age: ${5:int}",
+            "    maximum_reuse: ${6:int}",
+            "    maximum_size: ${7:int}",
+            "    name: ${8:string}",
+            "    parent: ${9:string}",
+            "    partition: ${10:Common}",
+            "    share_pools: ${12|false,true|}",
+            "    source_mask: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage OneConnect profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage cookie persistence profiles on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_persistence_cookie",
+            "Manage cookie persistence profiles on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_persistence_cookie:",
+            "    always_send: ${2|false,true|}",
+            "    cookie_encryption: ${3:string}",
+            "    cookie_method: ${4:string}",
+            "    cookie_name: ${5:string}",
+            "    description: ${6:string}",
+            "    encrypt_cookie_pool_name: ${7|false,true|}",
+            "    encryption_passphrase: ${8:string}",
+            "    http_only: ${10|false,true|}",
+            "    match_across_pools: ${11|false,true|}",
+            "    match_across_services: ${12|false,true|}",
+            "    match_across_virtuals: ${13|false,true|}",
+            "    name: ${14:string}",
+            "    override_connection_limit: ${15|false,true|}",
+            "    parent: ${16:cookie}",
+            "    partition: ${17:Common}",
+            "    secure: ${19|false,true|}",
+            "    state: ${20|present,absent|}",
+            "    update_password: ${21|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manage cookie persistence profiles on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage source address persistence profiles": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_persistence_src_addr",
+            "Manage source address persistence profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_persistence_src_addr:",
+            "    entry_timeout: ${2:string}",
+            "    hash_algorithm: ${3:string}",
+            "    mask: ${4:string}",
+            "    match_across_pools: ${5|false,true|}",
+            "    match_across_services: ${6|false,true|}",
+            "    match_across_virtuals: ${7|false,true|}",
+            "    mirror: ${8|false,true|}",
+            "    name: ${9:string}",
+            "    override_connection_limit: ${10|false,true|}",
+            "    parent: ${11:string}",
+            "    partition: ${12:Common}",
+            "    state: ${14|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage source address persistence profiles",
+        "scope": "ansible"
+    },
+    "Manage universal persistence profiles": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_persistence_universal",
+            "Manage universal persistence profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_persistence_universal:",
+            "    app_service: ${2:string}",
+            "    match_across_pools: ${3|false,true|}",
+            "    match_across_services: ${4|false,true|}",
+            "    match_across_virtuals: ${5|false,true|}",
+            "    mirror: ${6|false,true|}",
+            "    name: ${7:string}",
+            "    override_connection_limit: ${8|false,true|}",
+            "    parent: ${9:string}",
+            "    partition: ${10:Common}",
+            "    rule: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    timeout: ${14:string}",
+            "$0"
+        ],
+        "description": "Manage universal persistence profiles",
+        "scope": "ansible"
+    },
+    "Manages server SSL profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_server_ssl",
+            "Manages server SSL profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_server_ssl:",
+            "    authenticate_name: ${2:string}",
+            "    ca_file: ${3:string}",
+            "    certificate: ${4:string}",
+            "    chain: ${5:string}",
+            "    cipher_group: ${6:string}",
+            "    ciphers: ${7:string}",
+            "    key: ${8:string}",
+            "    name: ${9:string}",
+            "    ocsp_profile: ${10:string}",
+            "    options:",
+            "      - ${11:element}",
+            "    parent: ${12:/Common/serverssl}",
+            "    partition: ${13:Common}",
+            "    passphrase: ${14:string}",
+            "    renegotiation: ${16|false,true|}",
+            "    secure_renegotiation: ${17:string}",
+            "    server_certificate: ${18:string}",
+            "    server_name: ${19:string}",
+            "    sni_default: ${20|false,true|}",
+            "    sni_require: ${21|false,true|}",
+            "    state: ${22|present,absent|}",
+            "    update_password: ${23|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages server SSL profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage SIP profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_sip",
+            "Manage SIP profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_sip:",
+            "    community: ${2:string}",
+            "    description: ${3:string}",
+            "    dialog_aware: ${4|false,true|}",
+            "    enable_sip_firewall: ${5|false,true|}",
+            "    insert_record_route_header: ${6|false,true|}",
+            "    insert_via_header: ${7|false,true|}",
+            "    log_profile: ${8:string}",
+            "    log_publisher: ${9:string}",
+            "    max_size: ${10:int}",
+            "    name: ${11:string}",
+            "    parent: ${12:string}",
+            "    partition: ${13:Common}",
+            "    secure_via_header: ${15|false,true|}",
+            "    security: ${16|false,true|}",
+            "    state: ${17|present,absent|}",
+            "    terminate_on_bye: ${18|false,true|}",
+            "    user_via_header: ${19:string}",
+            "$0"
+        ],
+        "description": "Manage SIP profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage TCP profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_tcp",
+            "Manage TCP profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_tcp:",
+            "    delayed_acks: ${2|false,true|}",
+            "    early_retransmit: ${3|false,true|}",
+            "    idle_timeout: ${4:string}",
+            "    initial_congestion_window_size: ${5:int}",
+            "    initial_receive_window_size: ${6:int}",
+            "    ip_tos_to_client: ${7:string}",
+            "    keep_alive_interval: ${8:string}",
+            "    nagle: ${9:string}",
+            "    name: ${10:string}",
+            "    parent: ${11:string}",
+            "    partition: ${12:Common}",
+            "    proxy_options: ${14|false,true|}",
+            "    state: ${15|present,absent|}",
+            "    syn_rto_base: ${16:int}",
+            "    time_wait_recycle: ${17|false,true|}",
+            "    time_wait_timeout: ${18:string}",
+            "$0"
+        ],
+        "description": "Manage TCP profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage UDP profiles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_profile_udp",
+            "Manage UDP profiles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_profile_udp:",
+            "    datagram_load_balancing: ${2|false,true|}",
+            "    idle_timeout: ${3:string}",
+            "    name: ${4:string}",
+            "    parent: ${5:string}",
+            "    partition: ${6:Common}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage UDP profiles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP module provisioning": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_provision",
+            "Manage BIG-IP module provisioning"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_provision:",
+            "    level: ${2|nominal,dedicated,minimum|}",
+            "    memory: ${3:string}",
+            "    module: ${4:string}",
+            "    state: ${6|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP module provisioning",
+        "scope": "ansible"
+    },
+    "Manage QKviews on the device": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_qkview",
+            "Manage QKviews on the device"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_qkview:",
+            "    asm_request_log: ${2|false,true|}",
+            "    complete_information: ${3|false,true|}",
+            "    dest: ${4:path}",
+            "    exclude:",
+            "      - ${5:element}",
+            "    exclude_core: ${6|false,true|}",
+            "    filename: ${7:localhost.localdomain.qkview}",
+            "    force: ${8|true,false|}",
+            "    max_file_size: ${9:0}",
+            "    only_create_file: ${10|false,true|}",
+            "$0"
+        ],
+        "description": "Manage QKviews on the device",
+        "scope": "ansible"
+    },
+    "Manage remote roles on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_remote_role",
+            "Manage remote roles on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_remote_role:",
+            "    assigned_role: ${2:string}",
+            "    attribute_string: ${3:string}",
+            "    line_order: ${4:int}",
+            "    name: ${5:string}",
+            "    partition_access: ${6:string}",
+            "    remote_access: ${8|false,true|}",
+            "    state: ${9|present,absent|}",
+            "    terminal_access: ${10:string}",
+            "$0"
+        ],
+        "description": "Manage remote roles on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manipulate remote syslog settings on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_remote_syslog",
+            "Manipulate remote syslog settings on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_remote_syslog:",
+            "    local_ip: ${2:string}",
+            "    name: ${3:string}",
+            "    remote_host: ${5:string}",
+            "    remote_port: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manipulate remote syslog settings on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages default settings for remote user accounts on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_remote_user",
+            "Manages default settings for remote user accounts on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_remote_user:",
+            "    console_access: ${2|false,true|}",
+            "    default_partition: ${3:string}",
+            "    default_role: ${4:string}",
+            "    description: ${5:string}",
+            "$0"
+        ],
+        "description": "Manages default settings for remote user accounts on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage route domains on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_routedomain",
+            "Manage route domains on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_routedomain:",
+            "    bwc_policy: ${2:string}",
+            "    connection_limit: ${3:int}",
+            "    description: ${4:string}",
+            "    flow_eviction_policy: ${5:string}",
+            "    fw_enforced_policy: ${6:string}",
+            "    id: ${7:int}",
+            "    name: ${8:string}",
+            "    parent: ${9:string}",
+            "    partition: ${10:Common}",
+            "    routing_protocol:",
+            "      - ${12:element}",
+            "    service_policy: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    strict: ${15|false,true|}",
+            "    vlans:",
+            "      - ${16:element}",
+            "$0"
+        ],
+        "description": "Manage route domains on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage Self-IPs on a BIG-IP system": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_selfip",
+            "Manage Self-IPs on a BIG-IP system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_selfip:",
+            "    address: ${2:string}",
+            "    allow_service:",
+            "      - ${3:element}",
+            "    description: ${4:string}",
+            "    fw_enforced_policy: ${5:string}",
+            "    name: ${6:string}",
+            "    netmask: ${7:string}",
+            "    partition: ${8:Common}",
+            "    route_domain: ${10:int}",
+            "    state: ${11|present,absent|}",
+            "    traffic_group: ${12:string}",
+            "    vlan: ${13:string}",
+            "$0"
+        ],
+        "description": "Manage Self-IPs on a BIG-IP system",
+        "scope": "ansible"
+    },
+    "Manages service policies on a BIG-IP.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_service_policy",
+            "Manages service policies on a BIG-IP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_service_policy:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    port_misuse_policy: ${5:string}",
+            "    state: ${7|present,absent|}",
+            "    timer_policy: ${8:string}",
+            "$0"
+        ],
+        "description": "Manages service policies on a BIG-IP.",
+        "scope": "ansible"
+    },
+    "Manages SMTP settings on the BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_smtp",
+            "Manages SMTP settings on the BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_smtp:",
+            "    authentication: ${2|false,true|}",
+            "    encryption: ${3:string}",
+            "    from_address: ${4:string}",
+            "    local_host_name: ${5:string}",
+            "    name: ${6:string}",
+            "    partition: ${7:Common}",
+            "    smtp_server: ${9:string}",
+            "    smtp_server_password: ${10:string}",
+            "    smtp_server_port: ${11:int}",
+            "    smtp_server_username: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    update_password: ${14|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manages SMTP settings on the BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage SNAT pools on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_snat_pool",
+            "Manage SNAT pools on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_snat_pool:",
+            "    description: ${2:string}",
+            "    members:",
+            "      - ${3:element}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage SNAT pools on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage SNAT translations on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_snat_translation",
+            "Manage SNAT translations on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_snat_translation:",
+            "    address: ${2:string}",
+            "    arp: ${3|false,true|}",
+            "    connection_limit: ${4:int}",
+            "    description: ${5:string}",
+            "    ip_idle_timeout: ${6:string}",
+            "    name: ${7:string}",
+            "    partition: ${8:string}",
+            "    state: ${10|present,absent,enabled,disabled|}",
+            "    tcp_idle_timeout: ${11:string}",
+            "    traffic_group: ${12:string}",
+            "    udp_idle_timeout: ${13:string}",
+            "$0"
+        ],
+        "description": "Manage SNAT translations on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manipulate general SNMP settings on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_snmp",
+            "Manipulate general SNMP settings on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_snmp:",
+            "    agent_authentication_traps: ${2:string}",
+            "    agent_status_traps: ${3:string}",
+            "    allowed_addresses: ${4:\"raw\"}",
+            "    contact: ${5:string}",
+            "    device_warning_traps: ${6:string}",
+            "    location: ${7:string}",
+            "$0"
+        ],
+        "description": "Manipulate general SNMP settings on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages SNMP communities on a BIG-IP.": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_snmp_community",
+            "Manages SNMP communities on a BIG-IP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_snmp_community:",
+            "    access: ${2:string}",
+            "    community: ${3:string}",
+            "    ip_version: ${4:string}",
+            "    name: ${5:string}",
+            "    oid: ${6:string}",
+            "    partition: ${7:Common}",
+            "    port: ${8:int}",
+            "    snmp_auth_password: ${10:string}",
+            "    snmp_auth_protocol: ${11:string}",
+            "    snmp_privacy_password: ${12:string}",
+            "    snmp_privacy_protocol: ${13:string}",
+            "    snmp_username: ${14:string}",
+            "    source: ${15:string}",
+            "    state: ${16|present,absent|}",
+            "    update_password: ${17|always,on_create|}",
+            "    version: ${18|v2c,v1,v3|}",
+            "$0"
+        ],
+        "description": "Manages SNMP communities on a BIG-IP.",
+        "scope": "ansible"
+    },
+    "Manipulate SNMP trap information on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_snmp_trap",
+            "Manipulate SNMP trap information on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_snmp_trap:",
+            "    auth_password: ${2:string}",
+            "    auth_protocol: ${3:string}",
+            "    community: ${4:string}",
+            "    destination: ${5:string}",
+            "    name: ${6:string}",
+            "    network: ${7:string}",
+            "    partition: ${8:Common}",
+            "    port: ${9:string}",
+            "    privacy_password: ${10:string}",
+            "    privacy_protocol: ${11:string}",
+            "    security_level: ${13:string}",
+            "    security_name: ${14:string}",
+            "    snmp_version: ${15:string}",
+            "    state: ${16|present,absent|}",
+            "$0"
+        ],
+        "description": "Manipulate SNMP trap information on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage software images on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_software_image",
+            "Manage software images on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_software_image:",
+            "    force: ${2|false,true|}",
+            "    image: ${3:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage software images on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Install software images on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_software_install",
+            "Install software images on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_software_install:",
+            "    block_device_image: ${2:string}",
+            "    image: ${3:string}",
+            "    state: ${5|activated,installed|}",
+            "    type: ${6|standard,vcmp|}",
+            "    volume: ${7:string}",
+            "$0"
+        ],
+        "description": "Install software images on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage the software update settings of a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_software_update",
+            "Manage the software update settings of a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_software_update:",
+            "    auto_check: ${2|false,true|}",
+            "    auto_phone_home: ${3|false,true|}",
+            "    frequency: ${4:string}",
+            "$0"
+        ],
+        "description": "Manage the software update settings of a BIG-IP",
+        "scope": "ansible"
+    },
+    "Import/Delete certificates from BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ssl_certificate",
+            "Import/Delete certificates from BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ssl_certificate:",
+            "    content: ${2:string}",
+            "    issuer_cert: ${3:string}",
+            "    name: ${4:string}",
+            "    partition: ${5:Common}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Import/Delete certificates from BIG-IP",
+        "scope": "ansible"
+    },
+    "Create SSL CSR files on the BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ssl_csr",
+            "Create SSL CSR files on the BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ssl_csr:",
+            "    common_name: ${2:string}",
+            "    dest: ${3:path}",
+            "    force: ${4|true,false|}",
+            "    key_name: ${5:string}",
+            "    name: ${6:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Create SSL CSR files on the BIG-IP",
+        "scope": "ansible"
+    },
+    "Import/Delete SSL keys from BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ssl_key",
+            "Import/Delete SSL keys from BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ssl_key:",
+            "    content: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    passphrase: ${5:string}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Import/Delete SSL keys from BIG-IP",
+        "scope": "ansible"
+    },
+    "Import/Delete SSL keys and certs from BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ssl_key_cert",
+            "Import/Delete SSL keys and certs from BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ssl_key_cert:",
+            "    cert_content: ${2:string}",
+            "    cert_name: ${3:string}",
+            "    issuer_cert: ${4:string}",
+            "    key_content: ${5:string}",
+            "    key_name: ${6:string}",
+            "    partition: ${7:Common}",
+            "    passphrase: ${8:string}",
+            "    state: ${10|present,absent|}",
+            "$0"
+        ],
+        "description": "Import/Delete SSL keys and certs from BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage OCSP configurations on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ssl_ocsp",
+            "Manage OCSP configurations on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ssl_ocsp:",
+            "    cache_error_timeout: ${2:int}",
+            "    cache_timeout: ${3:string}",
+            "    certificate: ${4:string}",
+            "    clock_skew: ${5:int}",
+            "    connection_timeout: ${6:int}",
+            "    connections_limit: ${7:int}",
+            "    dns_resolver: ${8:string}",
+            "    hash_algorithm: ${9:string}",
+            "    key: ${10:string}",
+            "    name: ${11:string}",
+            "    partition: ${12:Common}",
+            "    passphrase: ${13:string}",
+            "    proxy_server_pool: ${15:string}",
+            "    responder_url: ${16:string}",
+            "    route_domain: ${17:string}",
+            "    state: ${18|present,absent|}",
+            "    status_age: ${19:int}",
+            "    strict_responder_checking: ${20|false,true|}",
+            "    trusted_responders: ${21:string}",
+            "    update_password: ${22|always,on_create|}",
+            "$0"
+        ],
+        "description": "Manage OCSP configurations on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manipulate static routes on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_static_route",
+            "Manipulate static routes on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_static_route:",
+            "    description: ${2:string}",
+            "    destination: ${3:string}",
+            "    gateway_address: ${4:string}",
+            "    mtu: ${5:string}",
+            "    name: ${6:string}",
+            "    netmask: ${7:string}",
+            "    partition: ${8:Common}",
+            "    pool: ${9:string}",
+            "    reject: ${11|false,true|}",
+            "    route_domain: ${12:int}",
+            "    state: ${13|present,absent|}",
+            "    vlan: ${14:string}",
+            "$0"
+        ],
+        "description": "Manipulate static routes on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP tmm daemon log settings": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_sys_daemon_log_tmm",
+            "Manage BIG-IP tmm daemon log settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_sys_daemon_log_tmm:",
+            "    arp_log_level: ${2:string}",
+            "    http_compression_log_level: ${3:string}",
+            "    http_log_level: ${4:string}",
+            "    ip_log_level: ${5:string}",
+            "    irule_log_level: ${6:string}",
+            "    layer4_log_level: ${7:string}",
+            "    net_log_level: ${8:string}",
+            "    os_log_level: ${9:string}",
+            "    pva_log_level: ${11:string}",
+            "    ssl_log_level: ${12:string}",
+            "    state: ${13|present|}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP tmm daemon log settings",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP system database variables": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_sys_db",
+            "Manage BIG-IP system database variables"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_sys_db:",
+            "    key: ${2:string}",
+            "    state: ${4|present,reset|}",
+            "    value: ${5:string}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP system database variables",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP global settings": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_sys_global",
+            "Manage BIG-IP global settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_sys_global:",
+            "    banner_text: ${2:string}",
+            "    console_timeout: ${3:int}",
+            "    gui_setup: ${4|false,true|}",
+            "    lcd_display: ${5|false,true|}",
+            "    mgmt_dhcp: ${6|false,true|}",
+            "    net_reboot: ${7|false,true|}",
+            "    quiet_boot: ${9|false,true|}",
+            "    security_banner: ${10|false,true|}",
+            "    state: ${11|present|}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP global settings",
+        "scope": "ansible"
+    },
+    "Manage timer policies on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_timer_policy",
+            "Manage timer policies on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_timer_policy:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    partition: ${4:Common}",
+            "    rules:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage timer policies on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage IPSec Traffic Selectors on BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_traffic_selector",
+            "Manage IPSec Traffic Selectors on BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_traffic_selector:",
+            "    description: ${2:string}",
+            "    destination_address: ${3:string}",
+            "    ipsec_policy: ${4:string}",
+            "    name: ${5:string}",
+            "    order: ${6:int}",
+            "    partition: ${7:Common}",
+            "    source_address: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage IPSec Traffic Selectors on BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage trunks on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_trunk",
+            "Manage trunks on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_trunk:",
+            "    description: ${2:string}",
+            "    frame_distribution_hash: ${3:string}",
+            "    interfaces:",
+            "      - ${4:element}",
+            "    lacp_enabled: ${5|false,true|}",
+            "    lacp_mode: ${6:string}",
+            "    lacp_timeout: ${7:string}",
+            "    link_selection_policy: ${8:string}",
+            "    name: ${9:string}",
+            "    qinq_ethertype: ${11:\"raw\"}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage trunks on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage tunnels on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_tunnel",
+            "Manage tunnels on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_tunnel:",
+            "    auto_last_hop: ${2:string}",
+            "    description: ${3:string}",
+            "    key: ${4:int}",
+            "    local_address: ${5:string}",
+            "    mode: ${6:string}",
+            "    mtu: ${7:int}",
+            "    name: ${8:string}",
+            "    partition: ${9:Common}",
+            "    profile: ${10:string}",
+            "    remote_address: ${12:string}",
+            "    secondary_address: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    tos: ${15:string}",
+            "    traffic_group: ${16:string}",
+            "    transparent: ${17|false,true|}",
+            "    use_pmtu: ${18|false,true|}",
+            "$0"
+        ],
+        "description": "Manage tunnels on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage upload, installation, and removal of UCS files": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ucs",
+            "Manage upload, installation, and removal of UCS files"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ucs:",
+            "    force: ${2|false,true|}",
+            "    include_chassis_level_config: ${3|false,true|}",
+            "    no_license: ${4|false,true|}",
+            "    no_platform_check: ${5|false,true|}",
+            "    passphrase: ${6:string}",
+            "    reset_trust: ${8|false,true|}",
+            "    state: ${9|present,absent,installed|}",
+            "    ucs: ${10:string}",
+            "$0"
+        ],
+        "description": "Manage upload, installation, and removal of UCS files",
+        "scope": "ansible"
+    },
+    "Fetches a UCS file from remote nodes": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_ucs_fetch",
+            "Fetches a UCS file from remote nodes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_ucs_fetch:",
+            "    async_timeout: ${2:150}",
+            "    backup: ${3|false,true|}",
+            "    create_on_missing: ${4|true,false|}",
+            "    dest: ${5:path}",
+            "    encryption_password: ${6:string}",
+            "    fail_on_missing: ${7|false,true|}",
+            "    force: ${8|true,false|}",
+            "    only_create_file: ${9|false,true|}",
+            "    src: ${11:string}",
+            "$0"
+        ],
+        "description": "Fetches a UCS file from remote nodes",
+        "scope": "ansible"
+    },
+    "Manage user accounts and user attributes on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_user",
+            "Manage user accounts and user attributes on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_user:",
+            "    full_name: ${2:string}",
+            "    partition: ${3:Common}",
+            "    partition_access:",
+            "      - ${4:element}",
+            "    password_credential: ${5:string}",
+            "    shell: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    update_password: ${9|always,on_create|}",
+            "    username_credential: ${10:string}",
+            "$0"
+        ],
+        "description": "Manage user accounts and user attributes on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manages vCMP guests on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_vcmp_guest",
+            "Manages vCMP guests on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_vcmp_guest:",
+            "    allowed_slots:",
+            "      - ${2:element}",
+            "    cores_per_slot: ${3:int}",
+            "    delete_virtual_disk: ${4|false,true|}",
+            "    initial_hotfix: ${5:string}",
+            "    initial_image: ${6:string}",
+            "    mgmt_address: ${7:string}",
+            "    mgmt_network: ${8:string}",
+            "    mgmt_route: ${9:string}",
+            "    min_number_of_slots: ${10:int}",
+            "    name: ${11:string}",
+            "    number_of_slots: ${12:int}",
+            "    partition: ${13:Common}",
+            "    state: ${15|present,configured,disabled,provisioned,absent|}",
+            "    vlans:",
+            "      - ${16:element}",
+            "$0"
+        ],
+        "description": "Manages vCMP guests on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage LTM virtual addresses on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_virtual_address",
+            "Manage LTM virtual addresses on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_virtual_address:",
+            "    address: ${2:string}",
+            "    arp: ${3|false,true|}",
+            "    auto_delete: ${4|false,true|}",
+            "    availability_calculation: ${5:string}",
+            "    connection_limit: ${6:int}",
+            "    icmp_echo: ${7:string}",
+            "    name: ${8:string}",
+            "    netmask: ${9:string}",
+            "    partition: ${10:Common}",
+            "    route_advertisement: ${12:string}",
+            "    route_domain: ${13:string}",
+            "    spanning: ${14|false,true|}",
+            "    state: ${15|present,absent,enabled,disabled|}",
+            "    traffic_group: ${16:string}",
+            "$0"
+        ],
+        "description": "Manage LTM virtual addresses on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage LTM virtual servers on a BIG-IP": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_virtual_server",
+            "Manage LTM virtual servers on a BIG-IP"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_virtual_server:",
+            "    address_translation: ${2|false,true|}",
+            "    auto_last_hop: ${3:string}",
+            "    bypass_module_checks: ${4|false,true|}",
+            "    check_profiles: ${5|true,false|}",
+            "    clone_pools:",
+            "      - ${6:element}",
+            "    default_persistence_profile: ${7:string}",
+            "    description: ${8:string}",
+            "    destination: ${9:string}",
+            "    disabled_vlans:",
+            "      - ${10:element}",
+            "    enabled_vlans:",
+            "      - ${11:element}",
+            "    fallback_persistence_profile: ${12:string}",
+            "    firewall_enforced_policy: ${13:string}",
+            "    firewall_staged_policy: ${14:string}",
+            "    insert_metadata: ${15|true,false|}",
+            "    ip_intelligence_policy: ${16:string}",
+            "    ip_protocol: ${17:string}",
+            "    irules:",
+            "      - ${18:element}",
+            "    mask: ${19:string}",
+            "    metadata: ${20:\"raw\"}",
+            "    mirror: ${21|false,true|}",
+            "    name: ${22:string}",
+            "    partition: ${23:Common}",
+            "    policies:",
+            "      - ${24:element}",
+            "    pool: ${25:string}",
+            "    port: ${26:string}",
+            "    port_translation: ${27|false,true|}",
+            "    profiles: ${28:\"raw\"}",
+            "    rate_limit: ${30:int}",
+            "    rate_limit_dst_mask: ${31:int}",
+            "    rate_limit_mode: ${32|object,object-source,object-destination,object-source-destination,destination,source,source-destination|}",
+            "    rate_limit_src_mask: ${33:int}",
+            "    security_log_profiles:",
+            "      - ${34:element}",
+            "    service_down_immediate_action: ${36:string}",
+            "    snat: ${37:string}",
+            "    source: ${38:string}",
+            "    source_port: ${39:string}",
+            "    state: ${40|present,absent,enabled,disabled|}",
+            "    type: ${41|standard,forwarding-l2,forwarding-ip,performance-http,performance-l4,stateless,reject,dhcp,internal,message-routing|}",
+            "$0"
+        ],
+        "description": "Manage LTM virtual servers on a BIG-IP",
+        "scope": "ansible"
+    },
+    "Manage VLANs on a BIG-IP system": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_vlan",
+            "Manage VLANs on a BIG-IP system"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_vlan:",
+            "    cmp_hash: ${2:string}",
+            "    dag_round_robin: ${3|false,true|}",
+            "    dag_tunnel: ${4:string}",
+            "    description: ${5:string}",
+            "    fail_safe: ${6|false,true|}",
+            "    fail_safe_action: ${7:string}",
+            "    fail_safe_timeout: ${8:int}",
+            "    hw_syn_cookie: ${9|false,true|}",
+            "    interfaces:",
+            "      - ${10:element}",
+            "    mtu: ${11:int}",
+            "    name: ${12:string}",
+            "    partition: ${13:Common}",
+            "    sflow_poll_interval: ${15:int}",
+            "    sflow_sampling_rate: ${16:int}",
+            "    source_check: ${17|false,true|}",
+            "    state: ${18|present,absent|}",
+            "    tag: ${19:int}",
+            "    tagged_interfaces:",
+            "      - ${20:element}",
+            "    untagged_interfaces:",
+            "      - ${21:element}",
+            "$0"
+        ],
+        "description": "Manage VLANs on a BIG-IP system",
+        "scope": "ansible"
+    },
+    "Wait for a BIG-IP condition before continuing": {
+        "prefix": [
+            "f5networks.f5_modules.bigip_wait",
+            "Wait for a BIG-IP condition before continuing"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigip_wait:",
+            "    delay: ${2:0}",
+            "    msg: ${3:string}",
+            "    sleep: ${5:1}",
+            "    timeout: ${6:7200}",
+            "    type: ${7|standard,vcmp|}",
+            "$0"
+        ],
+        "description": "Wait for a BIG-IP condition before continuing",
+        "scope": "ansible"
+    },
+    "Manages BIG-IQ FastHTTP applications": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_application_fasthttp",
+            "Manages BIG-IQ FastHTTP applications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_application_fasthttp:",
+            "    add_analytics: ${2|false,true|}",
+            "    description: ${3:string}",
+            "    name: ${5:string}",
+            "    servers:",
+            "      - ${7:element}",
+            "    service_environment: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    wait: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IQ FastHTTP applications",
+        "scope": "ansible"
+    },
+    "Manages BIG-IQ FastL4 TCP applications": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_application_fastl4_tcp",
+            "Manages BIG-IQ FastL4 TCP applications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_application_fastl4_tcp:",
+            "    add_analytics: ${2|false,true|}",
+            "    description: ${3:string}",
+            "    name: ${5:string}",
+            "    servers:",
+            "      - ${7:element}",
+            "    service_environment: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    wait: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IQ FastL4 TCP applications",
+        "scope": "ansible"
+    },
+    "Manages BIG-IQ FastL4 UDP applications": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_application_fastl4_udp",
+            "Manages BIG-IQ FastL4 UDP applications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_application_fastl4_udp:",
+            "    add_analytics: ${2|false,true|}",
+            "    description: ${3:string}",
+            "    name: ${5:string}",
+            "    servers:",
+            "      - ${7:element}",
+            "    service_environment: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    wait: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IQ FastL4 UDP applications",
+        "scope": "ansible"
+    },
+    "Manages BIG-IQ HTTP applications": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_application_http",
+            "Manages BIG-IQ HTTP applications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_application_http:",
+            "    add_analytics: ${2|false,true|}",
+            "    description: ${3:string}",
+            "    name: ${5:string}",
+            "    servers:",
+            "      - ${7:element}",
+            "    service_environment: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    wait: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IQ HTTP applications",
+        "scope": "ansible"
+    },
+    "Manages BIG-IQ HTTPS offload applications": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_application_https_offload",
+            "Manages BIG-IQ HTTPS offload applications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_application_https_offload:",
+            "    add_analytics: ${2|false,true|}",
+            "    description: ${4:string}",
+            "    name: ${6:string}",
+            "    servers:",
+            "      - ${9:element}",
+            "    service_environment: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    wait: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IQ HTTPS offload applications",
+        "scope": "ansible"
+    },
+    "Manages BIG-IQ HTTPS WAF applications": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_application_https_waf",
+            "Manages BIG-IQ HTTPS WAF applications"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_application_https_waf:",
+            "    add_analytics: ${2|false,true|}",
+            "    description: ${4:string}",
+            "    domain_names:",
+            "      - ${5:element}",
+            "    name: ${7:string}",
+            "    servers:",
+            "      - ${10:element}",
+            "    service_environment: ${11:string}",
+            "    state: ${12|present,absent|}",
+            "    wait: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manages BIG-IQ HTTPS WAF applications",
+        "scope": "ansible"
+    },
+    "Manage BIG-IP devices through BIG-IQ": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_device_discovery",
+            "Manage BIG-IP devices through BIG-IQ"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_device_discovery:",
+            "    access_conflict_policy: ${2:string}",
+            "    access_group_first_device: ${3|true,false|}",
+            "    access_group_name: ${4:string}",
+            "    conflict_policy: ${5|use_bigiq,use_bigip|}",
+            "    device_address: ${6:string}",
+            "    device_conflict_policy: ${7|use_bigiq,use_bigip|}",
+            "    device_password: ${8:string}",
+            "    device_port: ${9:443}",
+            "    device_username: ${10:string}",
+            "    force: ${11|false,true|}",
+            "    ha_name: ${12:string}",
+            "    modules:",
+            "      - ${13:element}",
+            "    state: ${15|present,absent|}",
+            "    use_bigiq_sync: ${17|false,true|}",
+            "    versioned_conflict_policy: ${18:string}",
+            "$0"
+        ],
+        "description": "Manage BIG-IP devices through BIG-IQ",
+        "scope": "ansible"
+    },
+    "Collect information from F5 BIG-IQ devices": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_device_info",
+            "Collect information from F5 BIG-IQ devices"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_device_info:",
+            "    gather_subset:",
+            "      - ${2:element}",
+            "$0"
+        ],
+        "description": "Collect information from F5 BIG-IQ devices",
+        "scope": "ansible"
+    },
+    "Manages licenses in a BIG-IQ registration key pool": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_regkey_license",
+            "Manages licenses in a BIG-IQ registration key pool"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_regkey_license:",
+            "    accept_eula: ${2|false,true|}",
+            "    addon_keys:",
+            "      - ${3:element}",
+            "    description: ${4:string}",
+            "    license_key: ${5:string}",
+            "    regkey_pool: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages licenses in a BIG-IQ registration key pool",
+        "scope": "ansible"
+    },
+    "Manage regkey license assignment on BIG-IPs from a BIG-IQ": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_regkey_license_assignment",
+            "Manage regkey license assignment on BIG-IPs from a BIG-IQ"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_regkey_license_assignment:",
+            "    device: ${2:string}",
+            "    device_password: ${3:string}",
+            "    device_port: ${4:443}",
+            "    device_username: ${5:string}",
+            "    key: ${6:string}",
+            "    managed: ${7|false,true|}",
+            "    pool: ${8:string}",
+            "    state: ${10|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage regkey license assignment on BIG-IPs from a BIG-IQ",
+        "scope": "ansible"
+    },
+    "Manages registration key pools on BIG-IQ": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_regkey_pool",
+            "Manages registration key pools on BIG-IQ"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_regkey_pool:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manages registration key pools on BIG-IQ",
+        "scope": "ansible"
+    },
+    "Manage utility licenses on a BIG-IQ": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_utility_license",
+            "Manage utility licenses on a BIG-IQ"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_utility_license:",
+            "    accept_eula: ${2|false,true|}",
+            "    license_key: ${3:string}",
+            "    state: ${5|present,absent|}",
+            "$0"
+        ],
+        "description": "Manage utility licenses on a BIG-IQ",
+        "scope": "ansible"
+    },
+    "Manage utility license assignment on BIG-IPs from a BIG-IQ": {
+        "prefix": [
+            "f5networks.f5_modules.bigiq_utility_license_assignment",
+            "Manage utility license assignment on BIG-IPs from a BIG-IQ"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  f5networks.f5_modules.bigiq_utility_license_assignment:",
+            "    device: ${2:string}",
+            "    device_password: ${3:string}",
+            "    device_port: ${4:443}",
+            "    device_username: ${5:string}",
+            "    key: ${6:string}",
+            "    managed: ${7|false,true|}",
+            "    offering: ${8:string}",
+            "    state: ${10|present,absent|}",
+            "    unit_of_measure: ${11|hourly,daily,monthly,yearly|}",
+            "$0"
+        ],
+        "description": "Manage utility license assignment on BIG-IPs from a BIG-IQ",
+        "scope": "ansible"
+    }
+}

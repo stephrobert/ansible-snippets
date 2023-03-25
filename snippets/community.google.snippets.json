@@ -1,0 +1,357 @@
+{
+    "This module manages objects/buckets in Google Cloud Storage.": {
+        "prefix": [
+            "community.google.gc_storage",
+            "This module manages objects/buckets in Google Cloud Storage."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gc_storage:",
+            "    bucket: ${2:string}",
+            "    dest: ${3:path}",
+            "    expiration: ${4:600}",
+            "    gs_access_key: ${5:string}",
+            "    gs_secret_key: ${6:string}",
+            "    mode: ${8:string}",
+            "    object: ${9:path}",
+            "    overwrite: ${10|true,false|}",
+            "    permission: ${11|private,public-read,authenticated-read|}",
+            "    region: ${12:US}",
+            "    src: ${13:string}",
+            "    versioning: ${14|false,true|}",
+            "$0"
+        ],
+        "description": "This module manages objects/buckets in Google Cloud Storage.",
+        "scope": "ansible"
+    },
+    "Create or Destroy Global or Regional External IP addresses.": {
+        "prefix": [
+            "community.google.gce_eip",
+            "Create or Destroy Global or Regional External IP addresses."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_eip:",
+            "    credentials_file: ${2:path}",
+            "    name: ${3:string}",
+            "    pem_file: ${4:path}",
+            "    project_id: ${5:string}",
+            "    region: ${6:string}",
+            "    service_account_email: ${7:string}",
+            "    service_account_permissions:",
+            "      - ${8:element}",
+            "    state: ${9|present,absent|}",
+            "$0"
+        ],
+        "description": "Create or Destroy Global or Regional External IP addresses.",
+        "scope": "ansible"
+    },
+    "utilize GCE image resources": {
+        "prefix": [
+            "community.google.gce_img",
+            "utilize GCE image resources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_img:",
+            "    description: ${2:string}",
+            "    family: ${3:string}",
+            "    name: ${4:string}",
+            "    pem_file: ${5:path}",
+            "    project_id: ${6:string}",
+            "    service_account_email: ${7:string}",
+            "    source: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    timeout: ${10:180}",
+            "    zone: ${11:us-central1-a}",
+            "$0"
+        ],
+        "description": "utilize GCE image resources",
+        "scope": "ansible"
+    },
+    "create or destroy instance templates of Compute Engine of GCP.": {
+        "prefix": [
+            "community.google.gce_instance_template",
+            "create or destroy instance templates of Compute Engine of GCP."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_instance_template:",
+            "    automatic_restart: ${2|false,true|}",
+            "    can_ip_forward: ${3|true,false|}",
+            "    credentials_file: ${4:path}",
+            "    description: ${5:string}",
+            "    disk_auto_delete: ${6|true,false|}",
+            "    disk_type: ${7|pd-standard,pd-ssd|}",
+            "    disks:",
+            "      - ${8:element}",
+            "    disks_gce_struct:",
+            "      - ${9:element}",
+            "    external_ip: ${10:ephemeral}",
+            "    image: ${11:string}",
+            "    image_family: ${12:debian-8}",
+            "    name: ${14:string}",
+            "    network: ${15:default}",
+            "    nic_gce_struct:",
+            "      - ${16:element}",
+            "    pem_file: ${17:path}",
+            "    preemptible: ${18|false,true|}",
+            "    project_id: ${19:string}",
+            "    service_account_email: ${20:string}",
+            "    service_account_permissions:",
+            "      - ${21:element}",
+            "    size: ${22:f1-micro}",
+            "    source: ${23:string}",
+            "    state: ${24|present,absent|}",
+            "    subnetwork: ${25:string}",
+            "    subnetwork_region: ${26:string}",
+            "    tags:",
+            "      - ${27:element}",
+            "$0"
+        ],
+        "description": "create or destroy instance templates of Compute Engine of GCP.",
+        "scope": "ansible"
+    },
+    "Create, Update or Destroy GCE Labels.": {
+        "prefix": [
+            "community.google.gce_labels",
+            "Create, Update or Destroy GCE Labels."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_labels:",
+            "    credentials_file: ${2:string}",
+            "    pem_file: ${4:string}",
+            "    project_id: ${5:string}",
+            "    resource_location: ${6:string}",
+            "    resource_name: ${7:string}",
+            "    resource_type: ${8:string}",
+            "    resource_url: ${9:string}",
+            "    service_account_email: ${10:string}",
+            "    service_account_permissions:",
+            "      - ${11:element}",
+            "    state: ${12|present,absent|}",
+            "$0"
+        ],
+        "description": "Create, Update or Destroy GCE Labels.",
+        "scope": "ansible"
+    },
+    "create/destroy GCE load-balancer resources": {
+        "prefix": [
+            "community.google.gce_lb",
+            "create/destroy GCE load-balancer resources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_lb:",
+            "    credentials_file: ${2:path}",
+            "    external_ip: ${3:string}",
+            "    httphealthcheck_healthy_count: ${4:2}",
+            "    httphealthcheck_host: ${5:string}",
+            "    httphealthcheck_interval: ${6:5}",
+            "    httphealthcheck_name: ${7:string}",
+            "    httphealthcheck_path: ${8:/}",
+            "    httphealthcheck_port: ${9:80}",
+            "    httphealthcheck_timeout: ${10:5}",
+            "    httphealthcheck_unhealthy_count: ${11:2}",
+            "    members:",
+            "      - ${12:element}",
+            "    name: ${13:string}",
+            "    pem_file: ${14:path}",
+            "    port_range: ${15:string}",
+            "    project_id: ${16:string}",
+            "    protocol: ${17:tcp}",
+            "    region: ${18:string}",
+            "    service_account_email: ${19:string}",
+            "    state: ${20:present}",
+            "$0"
+        ],
+        "description": "create/destroy GCE load-balancer resources",
+        "scope": "ansible"
+    },
+    "Create, Update or Destroy a Managed Instance Group (MIG).": {
+        "prefix": [
+            "community.google.gce_mig",
+            "Create, Update or Destroy a Managed Instance Group (MIG)."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_mig:",
+            "    credentials_file: ${3:path}",
+            "    name: ${4:string}",
+            "    named_ports:",
+            "      - ${5:element}",
+            "    pem_file: ${6:path}",
+            "    project_id: ${7:string}",
+            "    recreate_instances: ${8|false,true|}",
+            "    service_account_email: ${9:string}",
+            "    service_account_permissions:",
+            "      - ${10:element}",
+            "    size: ${11:int}",
+            "    state: ${12|present,absent|}",
+            "    template: ${13:string}",
+            "    zone: ${14:string}",
+            "$0"
+        ],
+        "description": "Create, Update or Destroy a Managed Instance Group (MIG).",
+        "scope": "ansible"
+    },
+    "create/destroy GCE networks and firewall rules": {
+        "prefix": [
+            "community.google.gce_net",
+            "create/destroy GCE networks and firewall rules"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_net:",
+            "    allowed: ${2:string}",
+            "    credentials_file: ${3:path}",
+            "    fwname: ${4:string}",
+            "    ipv4_range: ${5:string}",
+            "    mode: ${6|legacy,auto,custom|}",
+            "    name: ${7:string}",
+            "    pem_file: ${8:path}",
+            "    project_id: ${9:string}",
+            "    service_account_email: ${10:string}",
+            "    src_range:",
+            "      - ${11:element}",
+            "    src_tags:",
+            "      - ${12:element}",
+            "    state: ${13:present}",
+            "    subnet_desc: ${14:string}",
+            "    subnet_name: ${15:string}",
+            "    subnet_region: ${16:string}",
+            "    target_tags:",
+            "      - ${17:element}",
+            "$0"
+        ],
+        "description": "create/destroy GCE networks and firewall rules",
+        "scope": "ansible"
+    },
+    "utilize GCE persistent disk resources": {
+        "prefix": [
+            "community.google.gce_pd",
+            "utilize GCE persistent disk resources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_pd:",
+            "    credentials_file: ${2:path}",
+            "    delete_on_termination: ${3|false,true|}",
+            "    detach_only: ${4|false,true|}",
+            "    disk_type: ${5:pd-standard}",
+            "    external_projects:",
+            "      - ${6:element}",
+            "    image: ${7:string}",
+            "    image_family: ${8:string}",
+            "    instance_name: ${9:string}",
+            "    mode: ${10|READ_ONLY,READ_WRITE|}",
+            "    name: ${11:string}",
+            "    pem_file: ${12:path}",
+            "    project_id: ${13:string}",
+            "    service_account_email: ${14:string}",
+            "    size_gb: ${15:10}",
+            "    snapshot: ${16:string}",
+            "    state: ${17:present}",
+            "    zone: ${18:us-central1-b}",
+            "$0"
+        ],
+        "description": "utilize GCE persistent disk resources",
+        "scope": "ansible"
+    },
+    "Create or destroy snapshots for GCE storage volumes": {
+        "prefix": [
+            "community.google.gce_snapshot",
+            "Create or destroy snapshots for GCE storage volumes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_snapshot:",
+            "    credentials_file: ${2:path}",
+            "    disks:",
+            "      - ${3:element}",
+            "    instance_name: ${4:string}",
+            "    project_id: ${5:string}",
+            "    service_account_email: ${6:string}",
+            "    snapshot_name: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "$0"
+        ],
+        "description": "Create or destroy snapshots for GCE storage volumes",
+        "scope": "ansible"
+    },
+    "add or remove tag(s) to/from GCE instances": {
+        "prefix": [
+            "community.google.gce_tag",
+            "add or remove tag(s) to/from GCE instances"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gce_tag:",
+            "    instance_name: ${2:string}",
+            "    instance_pattern: ${3:string}",
+            "    pem_file: ${4:path}",
+            "    project_id: ${5:string}",
+            "    service_account_email: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    tags:",
+            "      - ${8:element}",
+            "    zone: ${9:us-central1-a}",
+            "$0"
+        ],
+        "description": "add or remove tag(s) to/from GCE instances",
+        "scope": "ansible"
+    },
+    "Create and Delete Topics/Subscriptions, Publish and pull messages on PubSub": {
+        "prefix": [
+            "community.google.gcpubsub",
+            "Create and Delete Topics/Subscriptions, Publish and pull messages on PubSub"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gcpubsub:",
+            "    credentials_file: ${2:string}",
+            "    project_id: ${3:string}",
+            "    publish:",
+            "      - ${4:element}",
+            "    service_account_email: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    topic: ${8:string}",
+            "$0"
+        ],
+        "description": "Create and Delete Topics/Subscriptions, Publish and pull messages on PubSub",
+        "scope": "ansible"
+    },
+    "List Topics/Subscriptions and Messages from Google PubSub.": {
+        "prefix": [
+            "community.google.gcpubsub_info",
+            "List Topics/Subscriptions and Messages from Google PubSub."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  community.google.gcpubsub_info:",
+            "    credentials_file: ${2:string}",
+            "    project_id: ${3:string}",
+            "    service_account_email: ${4:string}",
+            "    state: ${5|list|}",
+            "    topic: ${6:string}",
+            "    view: ${7|topics,subscriptions|}",
+            "$0"
+        ],
+        "description": "List Topics/Subscriptions and Messages from Google PubSub.",
+        "scope": "ansible"
+    }
+}

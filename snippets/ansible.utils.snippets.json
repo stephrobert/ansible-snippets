@@ -1,0 +1,68 @@
+{
+    "Parse cli output or text using a variety of parsers": {
+        "prefix": [
+            "ansible.utils.cli_parse",
+            "Parse cli output or text using a variety of parsers"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.utils.cli_parse:",
+            "    command: ${2:string}",
+            "    set_fact: ${4:string}",
+            "    text: ${5:string}",
+            "$0"
+        ],
+        "description": "Parse cli output or text using a variety of parsers",
+        "scope": "ansible"
+    },
+    "Find the difference between currently set facts": {
+        "prefix": [
+            "ansible.utils.fact_diff",
+            "Find the difference between currently set facts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.utils.fact_diff:",
+            "    after: ${2:\"raw\"}",
+            "    before: ${3:\"raw\"}",
+            "$0"
+        ],
+        "description": "Find the difference between currently set facts",
+        "scope": "ansible"
+    },
+    "Update currently set facts": {
+        "prefix": [
+            "ansible.utils.update_fact",
+            "Update currently set facts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.utils.update_fact:",
+            "    updates:",
+            "      - ${2:element}",
+            "$0"
+        ],
+        "description": "Update currently set facts",
+        "scope": "ansible"
+    },
+    "Validate data with provided criteria": {
+        "prefix": [
+            "ansible.utils.validate",
+            "Validate data with provided criteria"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ansible.utils.validate:",
+            "    criteria: ${2:\"raw\"}",
+            "    data: ${3:\"raw\"}",
+            "    engine: ${4:ansible.utils.jsonschema}",
+            "$0"
+        ],
+        "description": "Validate data with provided criteria",
+        "scope": "ansible"
+    }
+}

@@ -1,0 +1,200 @@
+{
+    "Boot Order policy configuration for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_boot_order_policy",
+            "Boot Order policy configuration for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_boot_order_policy:",
+            "    api_key_id: ${2:string}",
+            "    api_private_key: ${3:string}",
+            "    api_uri: ${4:https://intersight.com/api/v1}",
+            "    boot_devices:",
+            "      - ${5:element}",
+            "    tags:",
+            "      - ${11:element}",
+            "    uefi_enable_secure_boot: ${12|false,true|}",
+            "    use_proxy: ${13|true,false|}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Boot Order policy configuration for Cisco Intersight",
+        "scope": "ansible"
+    },
+    "IMC Access Policy configuration for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_imc_access_policy",
+            "IMC Access Policy configuration for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_imc_access_policy:",
+            "    api_key_id: ${2:string}",
+            "    api_private_key: ${3:string}",
+            "    api_uri: ${4:https://intersight.com/api/v1}",
+            "    use_proxy: ${11|true,false|}",
+            "    validate_certs: ${12|true,false|}",
+            "    vlan_id: ${13:int}",
+            "$0"
+        ],
+        "description": "IMC Access Policy configuration for Cisco Intersight",
+        "scope": "ansible"
+    },
+    "Gather information about Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_info",
+            "Gather information about Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_info:",
+            "    api_key_id: ${2:string}",
+            "    api_private_key: ${3:string}",
+            "    api_uri: ${4:https://intersight.com/api/v1}",
+            "    server_names:",
+            "      - ${5:element}",
+            "    use_proxy: ${6|true,false|}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about Intersight",
+        "scope": "ansible"
+    },
+    "Local User Policy configuration for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_local_user_policy",
+            "Local User Policy configuration for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_local_user_policy:",
+            "    api_key_id: ${3:string}",
+            "    api_private_key: ${4:string}",
+            "    api_uri: ${5:https://intersight.com/api/v1}",
+            "    enable_password_expiry: ${7|false,true|}",
+            "    enforce_strong_password: ${8|true,false|}",
+            "    password_history: ${12:5}",
+            "    use_proxy: ${16|true,false|}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Local User Policy configuration for Cisco Intersight",
+        "scope": "ansible"
+    },
+    "NTP policy configuration for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_ntp_policy",
+            "NTP policy configuration for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_ntp_policy:",
+            "    api_key_id: ${2:string}",
+            "    api_private_key: ${3:string}",
+            "    api_uri: ${4:https://intersight.com/api/v1}",
+            "    enable: ${6|true,false|}",
+            "    ntp_servers:",
+            "      - ${8:element}",
+            "    tags:",
+            "      - ${11:element}",
+            "    use_proxy: ${13|true,false|}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "NTP policy configuration for Cisco Intersight",
+        "scope": "ansible"
+    },
+    "REST API configuration for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_rest_api",
+            "REST API configuration for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_rest_api:",
+            "    api_key_id: ${3:string}",
+            "    api_private_key: ${4:string}",
+            "    api_uri: ${5:https://intersight.com/api/v1}",
+            "    list_body:",
+            "      - ${6:element}",
+            "    resource_path: ${8:string}",
+            "    return_list: ${9|false,true|}",
+            "    update_method: ${11|patch,post|}",
+            "    use_proxy: ${12|true,false|}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "REST API configuration for Cisco Intersight",
+        "scope": "ansible"
+    },
+    "Server Profile configuration for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_server_profile",
+            "Server Profile configuration for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_server_profile:",
+            "    api_key_id: ${2:string}",
+            "    api_private_key: ${3:string}",
+            "    api_uri: ${4:https://intersight.com/api/v1}",
+            "    use_proxy: ${18|true,false|}",
+            "    validate_certs: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Server Profile configuration for Cisco Intersight",
+        "scope": "ansible"
+    },
+    "Target claim configuraiton for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_target_claim",
+            "Target claim configuraiton for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_target_claim:",
+            "    api_key_id: ${2:string}",
+            "    api_private_key: ${3:string}",
+            "    api_uri: ${4:https://intersight.com/api/v1}",
+            "    claim_code: ${5:string}",
+            "    use_proxy: ${8|true,false|}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Target claim configuraiton for Cisco Intersight",
+        "scope": "ansible"
+    },
+    "Virtual Media policy configuration for Cisco Intersight": {
+        "prefix": [
+            "cisco.intersight.intersight_virtual_media_policy",
+            "Virtual Media policy configuration for Cisco Intersight"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  cisco.intersight.intersight_virtual_media_policy:",
+            "    api_key_id: ${2:string}",
+            "    api_private_key: ${3:string}",
+            "    api_uri: ${4:https://intersight.com/api/v1}",
+            "    enable: ${7|true,false|}",
+            "    encryption: ${8|false,true|}",
+            "    low_power_usb: ${10|true,false|}",
+            "    tags:",
+            "      - ${14:element}",
+            "    use_proxy: ${15|true,false|}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Virtual Media policy configuration for Cisco Intersight",
+        "scope": "ansible"
+    }
+}

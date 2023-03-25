@@ -1,0 +1,1452 @@
+{
+    "Creates or removes aggregates from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_aggregate",
+            "Creates or removes aggregates from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_aggregate:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes aggregates from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete cables within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_cable",
+            "Create, update or delete cables within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_cable:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete cables within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete circuits within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_circuit",
+            "Create, update or delete circuits within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_circuit:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete circuits within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete circuit terminations within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_circuit_termination",
+            "Create, update or delete circuit terminations within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_circuit_termination:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete circuit terminations within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete circuit types within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_circuit_type",
+            "Create, update or delete circuit types within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_circuit_type:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete circuit types within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete clusters within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_cluster",
+            "Create, update or delete clusters within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_cluster:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete clusters within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete cluster groups within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_cluster_group",
+            "Create, update or delete cluster groups within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_cluster_group:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete cluster groups within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete cluster types within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_cluster_type",
+            "Create, update or delete cluster types within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_cluster_type:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete cluster types within NetBox",
+        "scope": "ansible"
+    },
+    "Creates, updates or deletes configuration contexts within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_config_context",
+            "Creates, updates or deletes configuration contexts within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_config_context:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates, updates or deletes configuration contexts within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete console ports within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_console_port",
+            "Create, update or delete console ports within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_console_port:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete console ports within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete console port templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_console_port_template",
+            "Create, update or delete console port templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_console_port_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete console port templates within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete console server ports within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_console_server_port",
+            "Create, update or delete console server ports within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_console_server_port:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete console server ports within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete console server port templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_console_server_port_template",
+            "Create, update or delete console server port templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_console_server_port_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete console server port templates within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes contacts from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_contact",
+            "Creates or removes contacts from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_contact:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes contacts from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes contact groups from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_contact_group",
+            "Creates or removes contact groups from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_contact_group:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes contact groups from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes contact roles from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_contact_role",
+            "Creates or removes contact roles from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_contact_role:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes contact roles from NetBox",
+        "scope": "ansible"
+    },
+    "Creates, updates or deletes custom fields within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_custom_field",
+            "Creates, updates or deletes custom fields within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_custom_field:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates, updates or deletes custom fields within NetBox",
+        "scope": "ansible"
+    },
+    "Creates, updates or deletes custom links within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_custom_link",
+            "Creates, updates or deletes custom links within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_custom_link:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates, updates or deletes custom links within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete devices within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_device",
+            "Create, update or delete devices within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_device:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete devices within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete device bays within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_device_bay",
+            "Create, update or delete device bays within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_device_bay:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete device bays within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete device bay templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_device_bay_template",
+            "Create, update or delete device bay templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_device_bay_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete device bay templates within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes interfaces on devices from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_device_interface_template",
+            "Creates or removes interfaces on devices from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_device_interface_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes interfaces on devices from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete devices roles within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_inventory_item_role",
+            "Create, update or delete devices roles within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_inventory_item_role:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete devices roles within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete device types within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_device_type",
+            "Create, update or delete device types within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_device_type:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete device types within NetBox",
+        "scope": "ansible"
+    },
+    "Creates, updates or deletes export templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_export_template",
+            "Creates, updates or deletes export templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_export_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates, updates or deletes export templates within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete front ports within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_front_port",
+            "Create, update or delete front ports within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_front_port:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete front ports within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete front port templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_front_port_template",
+            "Create, update or delete front port templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_front_port_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete front port templates within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes inventory items from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_inventory_item",
+            "Creates or removes inventory items from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_inventory_item:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes inventory items from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes IP addresses from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_ip_address",
+            "Creates or removes IP addresses from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_ip_address:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent,new|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes IP addresses from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes ipam roles from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_ipam_role",
+            "Creates or removes ipam roles from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_ipam_role:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes ipam roles from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete L2VPNs within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_l2vpn",
+            "Create, update or delete L2VPNs within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_l2vpn:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete L2VPNs within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete locations within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_location",
+            "Create, update or delete locations within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_location:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete locations within NetBox",
+        "scope": "ansible"
+    },
+    "Create or delete manufacturers within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_manufacturer",
+            "Create or delete manufacturers within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_manufacturer:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create or delete manufacturers within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete module types within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_module_type",
+            "Create, update or delete module types within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_module_type:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete module types within NetBox",
+        "scope": "ansible"
+    },
+    "Create or delete platforms within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_platform",
+            "Create or delete platforms within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_platform:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create or delete platforms within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete power feeds within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_power_feed",
+            "Create, update or delete power feeds within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_power_feed:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete power feeds within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete power outlets within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_power_outlet",
+            "Create, update or delete power outlets within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_power_outlet:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete power outlets within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete power outlet templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_power_outlet_template",
+            "Create, update or delete power outlet templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_power_outlet_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete power outlet templates within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete power panels within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_power_panel",
+            "Create, update or delete power panels within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_power_panel:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete power panels within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete power ports within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_power_port",
+            "Create, update or delete power ports within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_power_port:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete power ports within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete power port templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_power_port_template",
+            "Create, update or delete power port templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_power_port_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete power port templates within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes prefixes from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_prefix",
+            "Creates or removes prefixes from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_prefix:",
+            "    cert: ${2:\"raw\"}",
+            "    first_available: ${4|false,true|}",
+            "    netbox_token: ${5:string}",
+            "    netbox_url: ${6:string}",
+            "    query_params:",
+            "      - ${7:element}",
+            "    state: ${8|present,absent|}",
+            "    validate_certs: ${9:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes prefixes from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete providers within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_provider",
+            "Create, update or delete providers within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_provider:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete providers within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete provider networks within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_provider_network",
+            "Create, update or delete provider networks within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_provider_network:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete provider networks within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete racks within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_rack",
+            "Create, update or delete racks within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_rack:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete racks within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete racks groups within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_rack_group",
+            "Create, update or delete racks groups within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_rack_group:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete racks groups within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete racks roles within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_rack_role",
+            "Create, update or delete racks roles within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_rack_role:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete racks roles within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete rear ports within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_rear_port",
+            "Create, update or delete rear ports within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_rear_port:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete rear ports within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete rear port templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_rear_port_template",
+            "Create, update or delete rear port templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_rear_port_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete rear port templates within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes regions from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_region",
+            "Creates or removes regions from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_region:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes regions from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete RIRs within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_rir",
+            "Create, update or delete RIRs within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_rir:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete RIRs within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes route targets from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_route_target",
+            "Creates or removes route targets from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_route_target:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes route targets from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes service from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_service",
+            "Creates or removes service from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_service:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes service from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete service templates within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_service_template",
+            "Create, update or delete service templates within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_service_template:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete service templates within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes sites from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_site",
+            "Creates or removes sites from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_site:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes sites from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update, or delete site groups within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_site_group",
+            "Create, update, or delete site groups within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_site_group:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update, or delete site groups within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes tags from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_tag",
+            "Creates or removes tags from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_tag:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes tags from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes tenants from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_tenant",
+            "Creates or removes tenants from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_tenant:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes tenants from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes tenant groups from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_tenant_group",
+            "Creates or removes tenant groups from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_tenant_group:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes tenant groups from NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete virtual chassis within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_virtual_chassis",
+            "Create, update or delete virtual chassis within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_virtual_chassis:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete virtual chassis within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete virtual_machines within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_virtual_machine",
+            "Create, update or delete virtual_machines within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_virtual_machine:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete virtual_machines within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete vlans within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_vlan",
+            "Create, update or delete vlans within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_vlan:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete vlans within NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete vlans groups within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_vlan_group",
+            "Create, update or delete vlans groups within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_vlan_group:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete vlans groups within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes interfaces from virtual machines in NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_vm_interface",
+            "Creates or removes interfaces from virtual machines in NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_vm_interface:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes interfaces from virtual machines in NetBox",
+        "scope": "ansible"
+    },
+    "Create, update or delete vrfs within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_vrf",
+            "Create, update or delete vrfs within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_vrf:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Create, update or delete vrfs within NetBox",
+        "scope": "ansible"
+    },
+    "Creates, updates or deletes webhook configuration within NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_webhook",
+            "Creates, updates or deletes webhook configuration within NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_webhook:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates, updates or deletes webhook configuration within NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes Wireless LANs from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_wireless_lan",
+            "Creates or removes Wireless LANs from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_wireless_lan:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes Wireless LANs from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes Wireless LAN Groups from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_wireless_lan_group",
+            "Creates or removes Wireless LAN Groups from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_wireless_lan_group:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes Wireless LAN Groups from NetBox",
+        "scope": "ansible"
+    },
+    "Creates or removes Wireless links from NetBox": {
+        "prefix": [
+            "netbox.netbox.netbox_wireless_link",
+            "Creates or removes Wireless links from NetBox"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  netbox.netbox.netbox_wireless_link:",
+            "    cert: ${2:\"raw\"}",
+            "    netbox_token: ${4:string}",
+            "    netbox_url: ${5:string}",
+            "    query_params:",
+            "      - ${6:element}",
+            "    state: ${7|present,absent|}",
+            "    validate_certs: ${8:\"raw\"}",
+            "$0"
+        ],
+        "description": "Creates or removes Wireless links from NetBox",
+        "scope": "ansible"
+    }
+}

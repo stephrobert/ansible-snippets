@@ -1,0 +1,584 @@
+{
+    "Get information about the Vultr account.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_account_info",
+            "Get information about the Vultr account."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_account_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get information about the Vultr account.",
+        "scope": "ansible"
+    },
+    "Manages block storage volumes on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_block_storage",
+            "Manages block storage volumes on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_block_storage:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    attached_to_SUBID: ${8:int}",
+            "    live_attachment: ${9|true,false|}",
+            "    name: ${10:string}",
+            "    region: ${11:string}",
+            "    size: ${12:int}",
+            "    state: ${13|present,absent,attached,detached|}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Manages block storage volumes on Vultr.",
+        "scope": "ansible"
+    },
+    "Get information about the Vultr block storage volumes available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_block_storage_info",
+            "Get information about the Vultr block storage volumes available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_block_storage_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get information about the Vultr block storage volumes available.",
+        "scope": "ansible"
+    },
+    "Manages DNS domains on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_dns_domain",
+            "Manages DNS domains on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_dns_domain:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    name: ${8:string}",
+            "    server_ip: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manages DNS domains on Vultr.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr DNS domains available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_dns_domain_info",
+            "Gather information about the Vultr DNS domains available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_dns_domain_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr DNS domains available.",
+        "scope": "ansible"
+    },
+    "Manages DNS records on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_dns_record",
+            "Manages DNS records on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_dns_record:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    data: ${8:string}",
+            "    domain: ${9:string}",
+            "    multiple: ${10|false,true|}",
+            "    name: ${11:}",
+            "    priority: ${12:0}",
+            "    record_type: ${13|A,AAAA,CNAME,MX,SRV,CAA,TXT,NS,SSHFP|}",
+            "    state: ${14|present,absent|}",
+            "    ttl: ${15:300}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Manages DNS records on Vultr.",
+        "scope": "ansible"
+    },
+    "Manages firewall groups on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_firewall_group",
+            "Manages firewall groups on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_firewall_group:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    name: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manages firewall groups on Vultr.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr firewall groups available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_firewall_group_info",
+            "Gather information about the Vultr firewall groups available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_firewall_group_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr firewall groups available.",
+        "scope": "ansible"
+    },
+    "Manages firewall rules on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_firewall_rule",
+            "Manages firewall rules on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_firewall_rule:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    cidr: ${8:string}",
+            "    end_port: ${9:int}",
+            "    group: ${10:string}",
+            "    ip_version: ${11|v4,v6|}",
+            "    protocol: ${12|tcp,icmp,udp,gre|}",
+            "    start_port: ${13:int}",
+            "    state: ${14|present,absent|}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manages firewall rules on Vultr.",
+        "scope": "ansible"
+    },
+    "Manages networks on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_network",
+            "Manages networks on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_network:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    cidr: ${8:string}",
+            "    name: ${9:string}",
+            "    region: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manages networks on Vultr.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr networks available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_network_info",
+            "Gather information about the Vultr networks available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_network_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr networks available.",
+        "scope": "ansible"
+    },
+    "Get information about the Vultr OSes available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_os_info",
+            "Get information about the Vultr OSes available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_os_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get information about the Vultr OSes available.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr Bare Metal plans available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_plan_baremetal_info",
+            "Gather information about the Vultr Bare Metal plans available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_plan_baremetal_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr Bare Metal plans available.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr plans available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_plan_info",
+            "Gather information about the Vultr plans available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_plan_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr plans available.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr regions available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_region_info",
+            "Gather information about the Vultr regions available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_region_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr regions available.",
+        "scope": "ansible"
+    },
+    "Manages virtual servers on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_server",
+            "Manages virtual servers on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_server:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    auto_backup_enabled: ${8|false,true|}",
+            "    firewall_group: ${9:string}",
+            "    force: ${10|false,true|}",
+            "    hostname: ${11:string}",
+            "    ipv6_enabled: ${12|false,true|}",
+            "    name: ${13:string}",
+            "    notify_activate: ${14|false,true|}",
+            "    os: ${15:string}",
+            "    plan: ${16:string}",
+            "    private_network_enabled: ${17|false,true|}",
+            "    region: ${18:string}",
+            "    reserved_ip_v4: ${19:string}",
+            "    snapshot: ${20:string}",
+            "    ssh_keys:",
+            "      - ${21:element}",
+            "    startup_script: ${22:string}",
+            "    state: ${23|present,absent,restarted,reinstalled,started,stopped|}",
+            "    tag: ${24:string}",
+            "    user_data: ${25:string}",
+            "    validate_certs: ${26|true,false|}",
+            "$0"
+        ],
+        "description": "Manages virtual servers on Vultr.",
+        "scope": "ansible"
+    },
+    "Manages baremetal servers on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_server_baremetal",
+            "Manages baremetal servers on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_server_baremetal:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    hostname: ${8:string}",
+            "    ipv6_enabled: ${9|false,true|}",
+            "    name: ${10:string}",
+            "    notify_activate: ${11|false,true|}",
+            "    os: ${12:string}",
+            "    plan: ${13:string}",
+            "    region: ${14:string}",
+            "    reserved_ip_v4: ${15:string}",
+            "    ssh_keys:",
+            "      - ${16:element}",
+            "    startup_script: ${17:string}",
+            "    state: ${18|present,absent|}",
+            "    tag: ${19:string}",
+            "    user_data: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Manages baremetal servers on Vultr.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr servers available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_server_info",
+            "Gather information about the Vultr servers available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_server_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr servers available.",
+        "scope": "ansible"
+    },
+    "Manages ssh keys on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_ssh_key",
+            "Manages ssh keys on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_ssh_key:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    name: ${8:string}",
+            "    ssh_key: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manages ssh keys on Vultr.",
+        "scope": "ansible"
+    },
+    "Get information about the Vultr SSH keys available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_ssh_key_info",
+            "Get information about the Vultr SSH keys available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_ssh_key_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get information about the Vultr SSH keys available.",
+        "scope": "ansible"
+    },
+    "Manages startup scripts on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_startup_script",
+            "Manages startup scripts on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_startup_script:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    name: ${8:string}",
+            "    script: ${9:string}",
+            "    script_type: ${10|boot,pxe|}",
+            "    state: ${11|present,absent|}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manages startup scripts on Vultr.",
+        "scope": "ansible"
+    },
+    "Gather information about the Vultr startup scripts available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_startup_script_info",
+            "Gather information about the Vultr startup scripts available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_startup_script_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about the Vultr startup scripts available.",
+        "scope": "ansible"
+    },
+    "Manages users on Vultr.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_user",
+            "Manages users on Vultr."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_user:",
+            "    acls:",
+            "      - ${2:element}",
+            "    api_account: ${3:default}",
+            "    api_enabled: ${4|true,false|}",
+            "    api_endpoint: ${5:string}",
+            "    api_key: ${6:string}",
+            "    api_retries: ${7:int}",
+            "    api_retry_max_delay: ${8:int}",
+            "    api_timeout: ${9:int}",
+            "    email: ${10:string}",
+            "    force: ${11|false,true|}",
+            "    name: ${12:string}",
+            "    password: ${13:string}",
+            "    state: ${14|present,absent|}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manages users on Vultr.",
+        "scope": "ansible"
+    },
+    "Get information about the Vultr user available.": {
+        "prefix": [
+            "ngine_io.vultr.vultr_user_info",
+            "Get information about the Vultr user available."
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  ngine_io.vultr.vultr_user_info:",
+            "    api_account: ${2:default}",
+            "    api_endpoint: ${3:string}",
+            "    api_key: ${4:string}",
+            "    api_retries: ${5:int}",
+            "    api_retry_max_delay: ${6:int}",
+            "    api_timeout: ${7:int}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Get information about the Vultr user available.",
+        "scope": "ansible"
+    }
+}

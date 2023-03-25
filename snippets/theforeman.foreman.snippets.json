@@ -1,0 +1,2161 @@
+{
+    "Manage Activation Keys": {
+        "prefix": [
+            "theforeman.foreman.activation_key",
+            "Manage Activation Keys"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.activation_key:",
+            "    auto_attach: ${2|false,true|}",
+            "    content_overrides:",
+            "      - ${3:element}",
+            "    content_view: ${4:string}",
+            "    description: ${5:string}",
+            "    host_collections:",
+            "      - ${6:element}",
+            "    lifecycle_environment: ${7:string}",
+            "    max_hosts: ${8:int}",
+            "    name: ${9:string}",
+            "    new_name: ${10:string}",
+            "    organization: ${11:string}",
+            "    password: ${12:string}",
+            "    purpose_addons:",
+            "      - ${13:element}",
+            "    purpose_role: ${14:string}",
+            "    purpose_usage: ${15:string}",
+            "    release_version: ${16:string}",
+            "    server_url: ${17:string}",
+            "    service_level: ${18:string}",
+            "    state: ${19|present,present_with_defaults,absent,copied|}",
+            "    subscriptions:",
+            "      - ${20:element}",
+            "    unlimited_hosts: ${21|false,true|}",
+            "    username: ${22:string}",
+            "    validate_certs: ${23|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Activation Keys",
+        "scope": "ansible"
+    },
+    "Manage Architectures": {
+        "prefix": [
+            "theforeman.foreman.architecture",
+            "Manage Architectures"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.architecture:",
+            "    name: ${2:string}",
+            "    operatingsystems:",
+            "      - ${3:element}",
+            "    password: ${4:string}",
+            "    server_url: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    updated_name: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Architectures",
+        "scope": "ansible"
+    },
+    "Manage LDAP Authentication Sources": {
+        "prefix": [
+            "theforeman.foreman.auth_source_ldap",
+            "Manage LDAP Authentication Sources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.auth_source_ldap:",
+            "    account: ${2:string}",
+            "    account_password: ${3:string}",
+            "    attr_firstname: ${4:string}",
+            "    attr_lastname: ${5:string}",
+            "    attr_login: ${6:string}",
+            "    attr_mail: ${7:string}",
+            "    attr_photo: ${8:string}",
+            "    base_dn: ${9:string}",
+            "    groups_base: ${10:string}",
+            "    host: ${11:string}",
+            "    ldap_filter: ${12:string}",
+            "    locations:",
+            "      - ${13:element}",
+            "    name: ${14:string}",
+            "    onthefly_register: ${15|false,true|}",
+            "    organizations:",
+            "      - ${16:element}",
+            "    password: ${17:string}",
+            "    port: ${18:389}",
+            "    server_type: ${19:string}",
+            "    server_url: ${20:string}",
+            "    state: ${21|present,absent|}",
+            "    tls: ${22|false,true|}",
+            "    use_netgroups: ${23|false,true|}",
+            "    usergroup_sync: ${24|false,true|}",
+            "    username: ${25:string}",
+            "    validate_certs: ${26|true,false|}",
+            "$0"
+        ],
+        "description": "Manage LDAP Authentication Sources",
+        "scope": "ansible"
+    },
+    "Manage Bookmarks": {
+        "prefix": [
+            "theforeman.foreman.bookmark",
+            "Manage Bookmarks"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.bookmark:",
+            "    controller: ${2:string}",
+            "    name: ${3:string}",
+            "    password: ${4:string}",
+            "    public: ${5|true,false|}",
+            "    query: ${6:string}",
+            "    server_url: ${7:string}",
+            "    state: ${8|present,present_with_defaults,absent|}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Bookmarks",
+        "scope": "ansible"
+    },
+    "Manage Compute Attributes": {
+        "prefix": [
+            "theforeman.foreman.compute_attribute",
+            "Manage Compute Attributes"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.compute_attribute:",
+            "    compute_profile: ${2:string}",
+            "    compute_resource: ${3:string}",
+            "    password: ${4:string}",
+            "    server_url: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Compute Attributes",
+        "scope": "ansible"
+    },
+    "Manage Compute Profiles": {
+        "prefix": [
+            "theforeman.foreman.compute_profile",
+            "Manage Compute Profiles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.compute_profile:",
+            "    compute_attributes:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    password: ${4:string}",
+            "    server_url: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    updated_name: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Compute Profiles",
+        "scope": "ansible"
+    },
+    "Manage Compute Resources": {
+        "prefix": [
+            "theforeman.foreman.compute_resource",
+            "Manage Compute Resources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.compute_resource:",
+            "    description: ${2:string}",
+            "    locations:",
+            "      - ${3:element}",
+            "    name: ${4:string}",
+            "    organizations:",
+            "      - ${5:element}",
+            "    password: ${6:string}",
+            "    provider: ${7:string}",
+            "    server_url: ${9:string}",
+            "    state: ${10|present,present_with_defaults,absent|}",
+            "    updated_name: ${11:string}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Compute Resources",
+        "scope": "ansible"
+    },
+    "Manage (Puppet) Config Groups": {
+        "prefix": [
+            "theforeman.foreman.config_group",
+            "Manage (Puppet) Config Groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.config_group:",
+            "    name: ${2:string}",
+            "    password: ${3:string}",
+            "    puppetclasses:",
+            "      - ${4:element}",
+            "    server_url: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    updated_name: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage (Puppet) Config Groups",
+        "scope": "ansible"
+    },
+    "Manage Content Credentials": {
+        "prefix": [
+            "theforeman.foreman.content_credential",
+            "Manage Content Credentials"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_credential:",
+            "    content: ${2:string}",
+            "    content_type: ${3:string}",
+            "    name: ${4:string}",
+            "    organization: ${5:string}",
+            "    password: ${6:string}",
+            "    server_url: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Content Credentials",
+        "scope": "ansible"
+    },
+    "List content exports": {
+        "prefix": [
+            "theforeman.foreman.content_export_info",
+            "List content exports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_export_info:",
+            "    content_view: ${2:string}",
+            "    content_view_version: ${3:string}",
+            "    destination_server: ${4:string}",
+            "    id: ${5:int}",
+            "    location: ${6:string}",
+            "    organization: ${7:string}",
+            "    password: ${8:string}",
+            "    search: ${9:string}",
+            "    server_url: ${10:string}",
+            "    type: ${11:string}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "List content exports",
+        "scope": "ansible"
+    },
+    "Manage library content exports": {
+        "prefix": [
+            "theforeman.foreman.content_export_library",
+            "Manage library content exports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_export_library:",
+            "    chunk_size_gb: ${2:int}",
+            "    destination_server: ${3:string}",
+            "    fail_on_missing_content: ${4|false,true|}",
+            "    from_history_id: ${5:int}",
+            "    incremental: ${6|false,true|}",
+            "    organization: ${7:string}",
+            "    password: ${8:string}",
+            "    server_url: ${9:string}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage library content exports",
+        "scope": "ansible"
+    },
+    "Manage repository content exports": {
+        "prefix": [
+            "theforeman.foreman.content_export_repository",
+            "Manage repository content exports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_export_repository:",
+            "    chunk_size_gb: ${2:int}",
+            "    from_history_id: ${3:int}",
+            "    incremental: ${4|false,true|}",
+            "    organization: ${5:string}",
+            "    password: ${6:string}",
+            "    product: ${7:string}",
+            "    repository: ${8:string}",
+            "    server_url: ${9:string}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage repository content exports",
+        "scope": "ansible"
+    },
+    "Manage content view version content exports": {
+        "prefix": [
+            "theforeman.foreman.content_export_version",
+            "Manage content view version content exports"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_export_version:",
+            "    chunk_size_gb: ${2:int}",
+            "    content_view: ${3:string}",
+            "    content_view_version: ${4:string}",
+            "    destination_server: ${5:string}",
+            "    fail_on_missing_content: ${6|false,true|}",
+            "    from_history_id: ${7:int}",
+            "    incremental: ${8|false,true|}",
+            "    organization: ${9:string}",
+            "    password: ${10:string}",
+            "    server_url: ${11:string}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage content view version content exports",
+        "scope": "ansible"
+    },
+    "Upload content to a repository": {
+        "prefix": [
+            "theforeman.foreman.content_upload",
+            "Upload content to a repository"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_upload:",
+            "    organization: ${2:string}",
+            "    ostree_repository_name: ${3:string}",
+            "    password: ${4:string}",
+            "    product: ${5:string}",
+            "    repository: ${6:string}",
+            "    server_url: ${7:string}",
+            "    src: ${8:path}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Upload content to a repository",
+        "scope": "ansible"
+    },
+    "Manage Content Views": {
+        "prefix": [
+            "theforeman.foreman.content_view",
+            "Manage Content Views"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_view:",
+            "    auto_publish: ${2|false,true|}",
+            "    components:",
+            "      - ${3:element}",
+            "    composite: ${4|false,true|}",
+            "    description: ${5:string}",
+            "    label: ${6:string}",
+            "    name: ${7:string}",
+            "    organization: ${8:string}",
+            "    password: ${9:string}",
+            "    repositories:",
+            "      - ${10:element}",
+            "    server_url: ${11:string}",
+            "    solve_dependencies: ${12|false,true|}",
+            "    state: ${13|present,present_with_defaults,absent|}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Content Views",
+        "scope": "ansible"
+    },
+    "Manage Content View Filters": {
+        "prefix": [
+            "theforeman.foreman.content_view_filter",
+            "Manage Content View Filters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_view_filter:",
+            "    architecture: ${2:string}",
+            "    content_view: ${3:string}",
+            "    date_type: ${4|updated,issued|}",
+            "    description: ${5:string}",
+            "    end_date: ${6:string}",
+            "    errata_id: ${7:string}",
+            "    filter_state: ${8|present,absent|}",
+            "    filter_type: ${9:string}",
+            "    inclusion: ${10|false,true|}",
+            "    max_version: ${11:string}",
+            "    min_version: ${12:string}",
+            "    name: ${13:string}",
+            "    organization: ${14:string}",
+            "    original_packages: ${15|false,true|}",
+            "    password: ${16:string}",
+            "    repositories:",
+            "      - ${17:element}",
+            "    rule_name: ${18:string}",
+            "    rule_state: ${19|present,absent|}",
+            "    server_url: ${20:string}",
+            "    start_date: ${21:string}",
+            "    types:",
+            "      - ${22:element}",
+            "    username: ${23:string}",
+            "    validate_certs: ${24|true,false|}",
+            "    version: ${25:string}",
+            "$0"
+        ],
+        "description": "Manage Content View Filters",
+        "scope": "ansible"
+    },
+    "Fetch information about a Content View Filter": {
+        "prefix": [
+            "theforeman.foreman.content_view_filter_info",
+            "Fetch information about a Content View Filter"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_view_filter_info:",
+            "    content_view: ${2:string}",
+            "    location: ${3:string}",
+            "    name: ${4:string}",
+            "    organization: ${5:string}",
+            "    password: ${6:string}",
+            "    search: ${7:string}",
+            "    server_url: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about a Content View Filter",
+        "scope": "ansible"
+    },
+    "Manage content view filter rules": {
+        "prefix": [
+            "theforeman.foreman.content_view_filter_rule",
+            "Manage content view filter rules"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_view_filter_rule:",
+            "    architecture: ${2:string}",
+            "    content_view: ${3:string}",
+            "    content_view_filter: ${4:string}",
+            "    context: ${5:string}",
+            "    date_type: ${6|updated,issued|}",
+            "    end_date: ${7:string}",
+            "    errata_id: ${8:string}",
+            "    max_version: ${9:string}",
+            "    min_version: ${10:string}",
+            "    name: ${11:string}",
+            "    organization: ${12:string}",
+            "    password: ${13:string}",
+            "    server_url: ${14:string}",
+            "    start_date: ${15:string}",
+            "    state: ${16|present,absent|}",
+            "    stream: ${17:string}",
+            "    types:",
+            "      - ${18:element}",
+            "    username: ${19:string}",
+            "    validate_certs: ${20|true,false|}",
+            "    version: ${21:string}",
+            "$0"
+        ],
+        "description": "Manage content view filter rules",
+        "scope": "ansible"
+    },
+    "Fetch information about a Content View Filter Rule": {
+        "prefix": [
+            "theforeman.foreman.content_view_filter_rule_info",
+            "Fetch information about a Content View Filter Rule"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_view_filter_rule_info:",
+            "    content_view: ${2:string}",
+            "    content_view_filter: ${3:string}",
+            "    errata_id: ${4:string}",
+            "    location: ${5:string}",
+            "    name: ${6:string}",
+            "    organization: ${7:string}",
+            "    password: ${8:string}",
+            "    search: ${9:string}",
+            "    server_url: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about a Content View Filter Rule",
+        "scope": "ansible"
+    },
+    "Fetch information about Content Views": {
+        "prefix": [
+            "theforeman.foreman.content_view_version_info",
+            "Fetch information about Content Views"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_view_version_info:",
+            "    content_view: ${2:string}",
+            "    location: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Content Views",
+        "scope": "ansible"
+    },
+    "Manage Content View Versions": {
+        "prefix": [
+            "theforeman.foreman.content_view_version",
+            "Manage Content View Versions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.content_view_version:",
+            "    content_view: ${2:string}",
+            "    current_lifecycle_environment: ${3:string}",
+            "    description: ${4:string}",
+            "    force_promote: ${5|false,true|}",
+            "    force_yum_metadata_regeneration: ${6|false,true|}",
+            "    lifecycle_environments:",
+            "      - ${7:element}",
+            "    organization: ${8:string}",
+            "    password: ${9:string}",
+            "    server_url: ${10:string}",
+            "    state: ${11|present,absent|}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "    version: ${14:string}",
+            "$0"
+        ],
+        "description": "Manage Content View Versions",
+        "scope": "ansible"
+    },
+    "Manage Host Discovery Rules": {
+        "prefix": [
+            "theforeman.foreman.discovery_rule",
+            "Manage Host Discovery Rules"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.discovery_rule:",
+            "    enabled: ${2|false,true|}",
+            "    hostgroup: ${3:string}",
+            "    hostname: ${4:string}",
+            "    locations:",
+            "      - ${5:element}",
+            "    max_count: ${6:int}",
+            "    name: ${7:string}",
+            "    organizations:",
+            "      - ${8:element}",
+            "    password: ${9:string}",
+            "    priority: ${10:int}",
+            "    search: ${11:string}",
+            "    server_url: ${12:string}",
+            "    state: ${13|present,absent|}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Host Discovery Rules",
+        "scope": "ansible"
+    },
+    "Manage Domains": {
+        "prefix": [
+            "theforeman.foreman.domain",
+            "Manage Domains"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.domain:",
+            "    description: ${2:string}",
+            "    dns_proxy: ${3:string}",
+            "    locations:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    organizations:",
+            "      - ${6:element}",
+            "    parameters:",
+            "      - ${7:element}",
+            "    password: ${8:string}",
+            "    server_url: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    updated_name: ${11:string}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Domains",
+        "scope": "ansible"
+    },
+    "Fetch information about Domains": {
+        "prefix": [
+            "theforeman.foreman.domain_info",
+            "Fetch information about Domains"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.domain_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Domains",
+        "scope": "ansible"
+    },
+    "Manage External User Groups": {
+        "prefix": [
+            "theforeman.foreman.external_usergroup",
+            "Manage External User Groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.external_usergroup:",
+            "    auth_source: ${2:string}",
+            "    name: ${3:string}",
+            "    password: ${4:string}",
+            "    server_url: ${5:string}",
+            "    state: ${6|present,absent|}",
+            "    usergroup: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage External User Groups",
+        "scope": "ansible"
+    },
+    "Manage Global Parameters": {
+        "prefix": [
+            "theforeman.foreman.global_parameter",
+            "Manage Global Parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.global_parameter:",
+            "    hidden_value: ${2|false,true|}",
+            "    name: ${3:string}",
+            "    parameter_type: ${4|string,boolean,integer,real,array,hash,yaml,json|}",
+            "    password: ${5:string}",
+            "    server_url: ${6:string}",
+            "    state: ${7|present,present_with_defaults,absent|}",
+            "    updated_name: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "    value: ${11:\"raw\"}",
+            "$0"
+        ],
+        "description": "Manage Global Parameters",
+        "scope": "ansible"
+    },
+    "Manage Hardware Models": {
+        "prefix": [
+            "theforeman.foreman.hardware_model",
+            "Manage Hardware Models"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.hardware_model:",
+            "    hardware_model: ${2:string}",
+            "    info: ${3:string}",
+            "    name: ${4:string}",
+            "    password: ${5:string}",
+            "    server_url: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "    vendor_class: ${10:string}",
+            "$0"
+        ],
+        "description": "Manage Hardware Models",
+        "scope": "ansible"
+    },
+    "Manage Hosts": {
+        "prefix": [
+            "theforeman.foreman.host",
+            "Manage Hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.host:",
+            "    activation_keys: ${2:string}",
+            "    architecture: ${3:string}",
+            "    build: ${4|false,true|}",
+            "    comment: ${5:string}",
+            "    compute_profile: ${7:string}",
+            "    compute_resource: ${8:string}",
+            "    config_groups:",
+            "      - ${9:element}",
+            "    content_source: ${10:string}",
+            "    content_view: ${11:string}",
+            "    domain: ${12:string}",
+            "    enabled: ${13|false,true|}",
+            "    environment: ${14:string}",
+            "    hostgroup: ${15:string}",
+            "    image: ${16:string}",
+            "    interfaces_attributes:",
+            "      - ${17:element}",
+            "    ip: ${18:string}",
+            "    kickstart_repository: ${19:string}",
+            "    lifecycle_environment: ${20:string}",
+            "    location: ${21:string}",
+            "    mac: ${22:string}",
+            "    managed: ${23|false,true|}",
+            "    medium: ${24:string}",
+            "    name: ${25:string}",
+            "    openscap_proxy: ${26:string}",
+            "    operatingsystem: ${27:string}",
+            "    organization: ${28:string}",
+            "    owner: ${29:string}",
+            "    owner_group: ${30:string}",
+            "    parameters:",
+            "      - ${31:element}",
+            "    password: ${32:string}",
+            "    provision_method: ${33:string}",
+            "    ptable: ${34:string}",
+            "    puppet_ca_proxy: ${35:string}",
+            "    puppet_proxy: ${36:string}",
+            "    puppetclasses:",
+            "      - ${37:element}",
+            "    pxe_loader: ${38:string}",
+            "    realm: ${39:string}",
+            "    root_pass: ${40:string}",
+            "    server_url: ${41:string}",
+            "    state: ${42|present,absent|}",
+            "    subnet: ${43:string}",
+            "    subnet6: ${44:string}",
+            "    username: ${45:string}",
+            "    validate_certs: ${46|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Hosts",
+        "scope": "ansible"
+    },
+    "Manage Host Collections": {
+        "prefix": [
+            "theforeman.foreman.host_collection",
+            "Manage Host Collections"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.host_collection:",
+            "    description: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    server_url: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    updated_name: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Host Collections",
+        "scope": "ansible"
+    },
+    "Fetch information about Host Errata": {
+        "prefix": [
+            "theforeman.foreman.host_errata_info",
+            "Fetch information about Host Errata"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.host_errata_info:",
+            "    content_view: ${2:string}",
+            "    host: ${3:string}",
+            "    lifecycle_environment: ${4:string}",
+            "    location: ${5:string}",
+            "    organization: ${6:string}",
+            "    password: ${7:string}",
+            "    search: ${8:string}",
+            "    server_url: ${9:string}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Host Errata",
+        "scope": "ansible"
+    },
+    "Fetch information about Hosts": {
+        "prefix": [
+            "theforeman.foreman.host_info",
+            "Fetch information about Hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.host_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Hosts",
+        "scope": "ansible"
+    },
+    "Manage Power State of Hosts": {
+        "prefix": [
+            "theforeman.foreman.host_power",
+            "Manage Power State of Hosts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.host_power:",
+            "    name: ${2:string}",
+            "    password: ${3:string}",
+            "    server_url: ${4:string}",
+            "    state: ${5|state,on,start,off,stop,soft,reboot,cycle,reset,status|}",
+            "    username: ${6:string}",
+            "    validate_certs: ${7|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Power State of Hosts",
+        "scope": "ansible"
+    },
+    "Manage Hostgroups": {
+        "prefix": [
+            "theforeman.foreman.hostgroup",
+            "Manage Hostgroups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.hostgroup:",
+            "    activation_keys: ${2:string}",
+            "    ansible_roles:",
+            "      - ${3:element}",
+            "    architecture: ${4:string}",
+            "    compute_profile: ${5:string}",
+            "    compute_resource: ${6:string}",
+            "    config_groups:",
+            "      - ${7:element}",
+            "    content_source: ${8:string}",
+            "    content_view: ${9:string}",
+            "    description: ${10:string}",
+            "    domain: ${11:string}",
+            "    environment: ${12:string}",
+            "    kickstart_repository: ${13:string}",
+            "    lifecycle_environment: ${14:string}",
+            "    locations:",
+            "      - ${15:element}",
+            "    medium: ${16:string}",
+            "    name: ${17:string}",
+            "    openscap_proxy: ${18:string}",
+            "    operatingsystem: ${19:string}",
+            "    organization: ${20:string}",
+            "    organizations:",
+            "      - ${21:element}",
+            "    parameters:",
+            "      - ${22:element}",
+            "    parent: ${23:string}",
+            "    password: ${24:string}",
+            "    ptable: ${25:string}",
+            "    puppet_ca_proxy: ${26:string}",
+            "    puppet_proxy: ${27:string}",
+            "    puppetclasses:",
+            "      - ${28:element}",
+            "    pxe_loader: ${29:string}",
+            "    realm: ${30:string}",
+            "    root_pass: ${31:string}",
+            "    server_url: ${32:string}",
+            "    state: ${33|present,absent|}",
+            "    subnet: ${34:string}",
+            "    subnet6: ${35:string}",
+            "    updated_name: ${36:string}",
+            "    username: ${37:string}",
+            "    validate_certs: ${38|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Hostgroups",
+        "scope": "ansible"
+    },
+    "Get information about hostgroup(s)": {
+        "prefix": [
+            "theforeman.foreman.hostgroup_info",
+            "Get information about hostgroup(s)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.hostgroup_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Get information about hostgroup(s)",
+        "scope": "ansible"
+    },
+    "Manage HTTP Proxies": {
+        "prefix": [
+            "theforeman.foreman.http_proxy",
+            "Manage HTTP Proxies"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.http_proxy:",
+            "    locations:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    organizations:",
+            "      - ${4:element}",
+            "    password: ${5:string}",
+            "    proxy_password: ${6:string}",
+            "    proxy_username: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    url: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage HTTP Proxies",
+        "scope": "ansible"
+    },
+    "Manage Images": {
+        "prefix": [
+            "theforeman.foreman.image",
+            "Manage Images"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.image:",
+            "    architecture: ${2:string}",
+            "    compute_resource: ${3:string}",
+            "    image_password: ${4:string}",
+            "    image_username: ${5:string}",
+            "    name: ${6:string}",
+            "    operatingsystem: ${7:string}",
+            "    password: ${8:string}",
+            "    server_url: ${9:string}",
+            "    state: ${10|present,absent|}",
+            "    user_data: ${11|false,true|}",
+            "    username: ${12:string}",
+            "    uuid: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Images",
+        "scope": "ansible"
+    },
+    "Manage Installation Media": {
+        "prefix": [
+            "theforeman.foreman.installation_medium",
+            "Manage Installation Media"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.installation_medium:",
+            "    locations:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    operatingsystems:",
+            "      - ${4:element}",
+            "    organizations:",
+            "      - ${5:element}",
+            "    os_family: ${6:string}",
+            "    password: ${7:string}",
+            "    path: ${8:string}",
+            "    server_url: ${9:string}",
+            "    state: ${10|present,present_with_defaults,absent|}",
+            "    updated_name: ${11:string}",
+            "    username: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Installation Media",
+        "scope": "ansible"
+    },
+    "Invoke Remote Execution Jobs": {
+        "prefix": [
+            "theforeman.foreman.job_invocation",
+            "Invoke Remote Execution Jobs"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.job_invocation:",
+            "    bookmark: ${2:string}",
+            "    command: ${3:string}",
+            "    execution_timeout_interval: ${5:int}",
+            "    job_template: ${7:string}",
+            "    password: ${8:string}",
+            "    randomized_ordering: ${9|false,true|}",
+            "    search_query: ${12:string}",
+            "    server_url: ${13:string}",
+            "    targeting_type: ${15|static_query,dynamic_query|}",
+            "    username: ${16:string}",
+            "    validate_certs: ${17|true,false|}",
+            "$0"
+        ],
+        "description": "Invoke Remote Execution Jobs",
+        "scope": "ansible"
+    },
+    "Manage Job Templates": {
+        "prefix": [
+            "theforeman.foreman.job_template",
+            "Manage Job Templates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.job_template:",
+            "    audit_comment: ${2:string}",
+            "    description_format: ${3:string}",
+            "    file_name: ${4:path}",
+            "    job_category: ${5:string}",
+            "    locations:",
+            "      - ${6:element}",
+            "    locked: ${7|false,true|}",
+            "    name: ${8:string}",
+            "    organizations:",
+            "      - ${9:element}",
+            "    password: ${10:string}",
+            "    provider_type: ${11:string}",
+            "    server_url: ${12:string}",
+            "    snippet: ${13|false,true|}",
+            "    state: ${14|present,present_with_defaults,absent|}",
+            "    template: ${15:string}",
+            "    template_inputs:",
+            "      - ${16:element}",
+            "    username: ${17:string}",
+            "    validate_certs: ${18|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Job Templates",
+        "scope": "ansible"
+    },
+    "Manage Lifecycle Environments": {
+        "prefix": [
+            "theforeman.foreman.lifecycle_environment",
+            "Manage Lifecycle Environments"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.lifecycle_environment:",
+            "    description: ${2:string}",
+            "    label: ${3:string}",
+            "    name: ${4:string}",
+            "    organization: ${5:string}",
+            "    password: ${6:string}",
+            "    prior: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Lifecycle Environments",
+        "scope": "ansible"
+    },
+    "Manage Locations": {
+        "prefix": [
+            "theforeman.foreman.location",
+            "Manage Locations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.location:",
+            "    ignore_types:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    organizations:",
+            "      - ${4:element}",
+            "    parameters:",
+            "      - ${5:element}",
+            "    parent: ${6:string}",
+            "    password: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Locations",
+        "scope": "ansible"
+    },
+    "Manage Operating Systems": {
+        "prefix": [
+            "theforeman.foreman.operatingsystem",
+            "Manage Operating Systems"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.operatingsystem:",
+            "    architectures:",
+            "      - ${2:element}",
+            "    description: ${3:string}",
+            "    major: ${4:string}",
+            "    media:",
+            "      - ${5:element}",
+            "    minor: ${6:string}",
+            "    name: ${7:string}",
+            "    os_family: ${8:string}",
+            "    parameters:",
+            "      - ${9:element}",
+            "    password: ${10:string}",
+            "    password_hash: ${11:string}",
+            "    provisioning_templates:",
+            "      - ${12:element}",
+            "    ptables:",
+            "      - ${13:element}",
+            "    release_name: ${14:string}",
+            "    server_url: ${15:string}",
+            "    state: ${16|present,present_with_defaults,absent|}",
+            "    updated_name: ${17:string}",
+            "    username: ${18:string}",
+            "    validate_certs: ${19|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Operating Systems",
+        "scope": "ansible"
+    },
+    "Manage Organizations": {
+        "prefix": [
+            "theforeman.foreman.organization",
+            "Manage Organizations"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.organization:",
+            "    description: ${2:string}",
+            "    ignore_types:",
+            "      - ${3:element}",
+            "    label: ${4:string}",
+            "    name: ${5:string}",
+            "    parameters:",
+            "      - ${6:element}",
+            "    password: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Organizations",
+        "scope": "ansible"
+    },
+    "Get information about organization(s)": {
+        "prefix": [
+            "theforeman.foreman.organization_info",
+            "Get information about organization(s)"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.organization_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Get information about organization(s)",
+        "scope": "ansible"
+    },
+    "Manage Default Template Associations To Operating Systems": {
+        "prefix": [
+            "theforeman.foreman.os_default_template",
+            "Manage Default Template Associations To Operating Systems"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.os_default_template:",
+            "    operatingsystem: ${2:string}",
+            "    password: ${3:string}",
+            "    provisioning_template: ${4:string}",
+            "    server_url: ${5:string}",
+            "    state: ${6|present,present_with_defaults,absent|}",
+            "    template_kind: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Default Template Associations To Operating Systems",
+        "scope": "ansible"
+    },
+    "Manage Partition Table Templates": {
+        "prefix": [
+            "theforeman.foreman.partition_table",
+            "Manage Partition Table Templates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.partition_table:",
+            "    file_name: ${2:path}",
+            "    layout: ${3:string}",
+            "    locations:",
+            "      - ${4:element}",
+            "    locked: ${5|false,true|}",
+            "    name: ${6:string}",
+            "    organizations:",
+            "      - ${7:element}",
+            "    os_family: ${8:string}",
+            "    password: ${9:string}",
+            "    server_url: ${10:string}",
+            "    state: ${11|present,present_with_defaults,absent|}",
+            "    updated_name: ${12:string}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Partition Table Templates",
+        "scope": "ansible"
+    },
+    "Manage Products": {
+        "prefix": [
+            "theforeman.foreman.product",
+            "Manage Products"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.product:",
+            "    description: ${2:string}",
+            "    gpg_key: ${3:string}",
+            "    label: ${4:string}",
+            "    name: ${5:string}",
+            "    organization: ${6:string}",
+            "    password: ${7:string}",
+            "    server_url: ${8:string}",
+            "    ssl_ca_cert: ${9:string}",
+            "    ssl_client_cert: ${10:string}",
+            "    ssl_client_key: ${11:string}",
+            "    state: ${12|present,present_with_defaults,absent|}",
+            "    sync_plan: ${13:string}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Products",
+        "scope": "ansible"
+    },
+    "Manage Provisioning Templates": {
+        "prefix": [
+            "theforeman.foreman.provisioning_template",
+            "Manage Provisioning Templates"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.provisioning_template:",
+            "    audit_comment: ${2:string}",
+            "    file_name: ${3:path}",
+            "    kind: ${4:string}",
+            "    locations:",
+            "      - ${5:element}",
+            "    locked: ${6|false,true|}",
+            "    name: ${7:string}",
+            "    operatingsystems:",
+            "      - ${8:element}",
+            "    organizations:",
+            "      - ${9:element}",
+            "    password: ${10:string}",
+            "    server_url: ${11:string}",
+            "    state: ${12|present,present_with_defaults,absent|}",
+            "    template: ${13:string}",
+            "    updated_name: ${14:string}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Provisioning Templates",
+        "scope": "ansible"
+    },
+    "Manage Puppet Environments": {
+        "prefix": [
+            "theforeman.foreman.puppet_environment",
+            "Manage Puppet Environments"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.puppet_environment:",
+            "    locations:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    organizations:",
+            "      - ${4:element}",
+            "    password: ${5:string}",
+            "    server_url: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Puppet Environments",
+        "scope": "ansible"
+    },
+    "Import Puppet Classes from a Proxy": {
+        "prefix": [
+            "theforeman.foreman.puppetclasses_import",
+            "Import Puppet Classes from a Proxy"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.puppetclasses_import:",
+            "    environment: ${2:string}",
+            "    except:",
+            "      - ${3:element}",
+            "    password: ${4:string}",
+            "    server_url: ${5:string}",
+            "    smart_proxy: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Import Puppet Classes from a Proxy",
+        "scope": "ansible"
+    },
+    "Manage Realms": {
+        "prefix": [
+            "theforeman.foreman.realm",
+            "Manage Realms"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.realm:",
+            "    locations:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    organizations:",
+            "      - ${4:element}",
+            "    password: ${5:string}",
+            "    realm_proxy: ${6:string}",
+            "    realm_type: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Realms",
+        "scope": "ansible"
+    },
+    "Interact with a Red Hat Satellite Subscription Manifest": {
+        "prefix": [
+            "theforeman.foreman.redhat_manifest",
+            "Interact with a Red Hat Satellite Subscription Manifest"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.redhat_manifest:",
+            "    content_access_mode: ${2|entitlement,org_environment|}",
+            "    name: ${3:string}",
+            "    password: ${4:string}",
+            "    path: ${5:path}",
+            "    pool_id: ${6:string}",
+            "    pool_state: ${7|present,absent|}",
+            "    portal: ${8:https://subscription.rhsm.redhat.com}",
+            "    quantity: ${9:1}",
+            "    state: ${10|present,absent|}",
+            "    username: ${11:string}",
+            "    uuid: ${12:string}",
+            "    validate_certs: ${13|true,false|}",
+            "$0"
+        ],
+        "description": "Interact with a Red Hat Satellite Subscription Manifest",
+        "scope": "ansible"
+    },
+    "Manage Repositories": {
+        "prefix": [
+            "theforeman.foreman.repository",
+            "Manage Repositories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.repository:",
+            "    ansible_collection_requirements: ${2:string}",
+            "    arch: ${3:string}",
+            "    auto_enabled: ${4|false,true|}",
+            "    checksum_type: ${5:string}",
+            "    content_type: ${6:string}",
+            "    deb_architectures: ${7:string}",
+            "    deb_components: ${8:string}",
+            "    deb_errata_url: ${9:string}",
+            "    deb_releases: ${10:string}",
+            "    description: ${11:string}",
+            "    docker_tags_whitelist:",
+            "      - ${12:element}",
+            "    docker_upstream_name: ${13:string}",
+            "    download_concurrency: ${14:int}",
+            "    download_policy: ${15:string}",
+            "    exclude_tags:",
+            "      - ${16:element}",
+            "    gpg_key: ${17:string}",
+            "    http_proxy: ${18:string}",
+            "    http_proxy_policy: ${19:string}",
+            "    ignorable_content:",
+            "      - ${20:element}",
+            "    ignore_global_proxy: ${21|false,true|}",
+            "    include_tags:",
+            "      - ${22:element}",
+            "    label: ${23:string}",
+            "    mirror_on_sync: ${24|false,true|}",
+            "    mirroring_policy: ${25:string}",
+            "    name: ${26:string}",
+            "    organization: ${27:string}",
+            "    os_versions:",
+            "      - ${28:element}",
+            "    password: ${29:string}",
+            "    product: ${30:string}",
+            "    server_url: ${31:string}",
+            "    ssl_ca_cert: ${32:string}",
+            "    ssl_client_cert: ${33:string}",
+            "    ssl_client_key: ${34:string}",
+            "    state: ${35|present,present_with_defaults,absent|}",
+            "    unprotected: ${36|false,true|}",
+            "    upstream_password: ${37:string}",
+            "    upstream_username: ${38:string}",
+            "    url: ${39:string}",
+            "    username: ${40:string}",
+            "    validate_certs: ${41|true,false|}",
+            "    verify_ssl_on_sync: ${42|false,true|}",
+            "$0"
+        ],
+        "description": "Manage Repositories",
+        "scope": "ansible"
+    },
+    "Fetch information about Repositories": {
+        "prefix": [
+            "theforeman.foreman.repository_info",
+            "Fetch information about Repositories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.repository_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    product: ${6:string}",
+            "    search: ${7:string}",
+            "    server_url: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Repositories",
+        "scope": "ansible"
+    },
+    "Enable/disable Red Hat Repositories available through subscriptions": {
+        "prefix": [
+            "theforeman.foreman.repository_set",
+            "Enable/disable Red Hat Repositories available through subscriptions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.repository_set:",
+            "    all_repositories: ${2|false,true|}",
+            "    label: ${3:string}",
+            "    name: ${4:string}",
+            "    organization: ${5:string}",
+            "    password: ${6:string}",
+            "    product: ${7:string}",
+            "    repositories:",
+            "      - ${8:element}",
+            "    server_url: ${9:string}",
+            "    state: ${10|enabled,disabled|}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Enable/disable Red Hat Repositories available through subscriptions",
+        "scope": "ansible"
+    },
+    "Fetch information about Red Hat Repositories": {
+        "prefix": [
+            "theforeman.foreman.repository_set_info",
+            "Fetch information about Red Hat Repositories"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.repository_set_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    product: ${6:string}",
+            "    search: ${7:string}",
+            "    server_url: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Red Hat Repositories",
+        "scope": "ansible"
+    },
+    "Sync a Repository or Product": {
+        "prefix": [
+            "theforeman.foreman.repository_sync",
+            "Sync a Repository or Product"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.repository_sync:",
+            "    organization: ${2:string}",
+            "    password: ${3:string}",
+            "    product: ${4:string}",
+            "    repository: ${5:string}",
+            "    server_url: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Sync a Repository or Product",
+        "scope": "ansible"
+    },
+    "Gather information about resources": {
+        "prefix": [
+            "theforeman.foreman.resource_info",
+            "Gather information about resources"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.resource_info:",
+            "    full_details: ${2|false,true|}",
+            "    organization: ${3:string}",
+            "    password: ${5:string}",
+            "    resource: ${6:string}",
+            "    search: ${7:string}",
+            "    server_url: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Gather information about resources",
+        "scope": "ansible"
+    },
+    "Manage Roles": {
+        "prefix": [
+            "theforeman.foreman.role",
+            "Manage Roles"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.role:",
+            "    description: ${2:string}",
+            "    filters:",
+            "      - ${3:element}",
+            "    locations:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    organizations:",
+            "      - ${6:element}",
+            "    password: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Roles",
+        "scope": "ansible"
+    },
+    "Manage SCAP content": {
+        "prefix": [
+            "theforeman.foreman.scap_content",
+            "Manage SCAP content"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.scap_content:",
+            "    locations:",
+            "      - ${2:element}",
+            "    organizations:",
+            "      - ${3:element}",
+            "    original_filename: ${4:string}",
+            "    password: ${5:string}",
+            "    scap_file: ${6:path}",
+            "    server_url: ${7:string}",
+            "    state: ${8|present,absent|}",
+            "    title: ${9:string}",
+            "    updated_title: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage SCAP content",
+        "scope": "ansible"
+    },
+    "Manage SCAP Tailoring Files": {
+        "prefix": [
+            "theforeman.foreman.scap_tailoring_file",
+            "Manage SCAP Tailoring Files"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.scap_tailoring_file:",
+            "    locations:",
+            "      - ${2:element}",
+            "    name: ${3:string}",
+            "    organizations:",
+            "      - ${4:element}",
+            "    original_filename: ${5:string}",
+            "    password: ${6:string}",
+            "    scap_file: ${7:path}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    updated_name: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage SCAP Tailoring Files",
+        "scope": "ansible"
+    },
+    "Manage SUSE Customer Center Accounts": {
+        "prefix": [
+            "theforeman.foreman.scc_account",
+            "Manage SUSE Customer Center Accounts"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.scc_account:",
+            "    base_url: ${2:string}",
+            "    interval: ${3:string}",
+            "    login: ${4:string}",
+            "    name: ${5:string}",
+            "    organization: ${6:string}",
+            "    password: ${7:string}",
+            "    scc_account_password: ${8:string}",
+            "    server_url: ${9:string}",
+            "    state: ${10|present,absent,synced|}",
+            "    sync_date: ${11:string}",
+            "    test_connection: ${12|false,true|}",
+            "    updated_name: ${13:string}",
+            "    username: ${14:string}",
+            "    validate_certs: ${15|true,false|}",
+            "$0"
+        ],
+        "description": "Manage SUSE Customer Center Accounts",
+        "scope": "ansible"
+    },
+    "Subscribe SUSE Customer Center Account Products": {
+        "prefix": [
+            "theforeman.foreman.scc_product",
+            "Subscribe SUSE Customer Center Account Products"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.scc_product:",
+            "    organization: ${2:string}",
+            "    password: ${3:string}",
+            "    scc_account: ${4:string}",
+            "    scc_product: ${5:string}",
+            "    server_url: ${6:string}",
+            "    username: ${7:string}",
+            "    validate_certs: ${8|true,false|}",
+            "$0"
+        ],
+        "description": "Subscribe SUSE Customer Center Account Products",
+        "scope": "ansible"
+    },
+    "Manage Settings": {
+        "prefix": [
+            "theforeman.foreman.setting",
+            "Manage Settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.setting:",
+            "    name: ${2:string}",
+            "    password: ${3:string}",
+            "    server_url: ${4:string}",
+            "    username: ${5:string}",
+            "    validate_certs: ${6|true,false|}",
+            "    value: ${7:\"raw\"}",
+            "$0"
+        ],
+        "description": "Manage Settings",
+        "scope": "ansible"
+    },
+    "Fetch information about Settings": {
+        "prefix": [
+            "theforeman.foreman.setting_info",
+            "Fetch information about Settings"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.setting_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Settings",
+        "scope": "ansible"
+    },
+    "Manage Smart Class Parameters": {
+        "prefix": [
+            "theforeman.foreman.smart_class_parameter",
+            "Manage Smart Class Parameters"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.smart_class_parameter:",
+            "    avoid_duplicates: ${2|false,true|}",
+            "    default_value: ${3:\"raw\"}",
+            "    description: ${4:string}",
+            "    hidden_value: ${5|false,true|}",
+            "    merge_default: ${6|false,true|}",
+            "    merge_overrides: ${7|false,true|}",
+            "    omit: ${8|false,true|}",
+            "    override: ${9|false,true|}",
+            "    override_value_order:",
+            "      - ${10:element}",
+            "    override_values:",
+            "      - ${11:element}",
+            "    parameter: ${12:string}",
+            "    parameter_type: ${13:string}",
+            "    password: ${14:string}",
+            "    puppetclass_name: ${15:string}",
+            "    required: ${16|false,true|}",
+            "    server_url: ${17:string}",
+            "    state: ${18|present,present_with_defaults|}",
+            "    username: ${19:string}",
+            "    validate_certs: ${20|true,false|}",
+            "    validator_rule: ${21:string}",
+            "    validator_type: ${22:string}",
+            "$0"
+        ],
+        "description": "Manage Smart Class Parameters",
+        "scope": "ansible"
+    },
+    "Manage Smart Proxies": {
+        "prefix": [
+            "theforeman.foreman.smart_proxy",
+            "Manage Smart Proxies"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.smart_proxy:",
+            "    download_policy: ${2:string}",
+            "    lifecycle_environments:",
+            "      - ${3:element}",
+            "    locations:",
+            "      - ${4:element}",
+            "    name: ${5:string}",
+            "    organizations:",
+            "      - ${6:element}",
+            "    password: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,absent|}",
+            "    url: ${10:string}",
+            "    username: ${11:string}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Smart Proxies",
+        "scope": "ansible"
+    },
+    "Manage Snapshots": {
+        "prefix": [
+            "theforeman.foreman.snapshot",
+            "Manage Snapshots"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.snapshot:",
+            "    description: ${2:string}",
+            "    host: ${3:string}",
+            "    id: ${4:string}",
+            "    include_ram: ${5|false,true|}",
+            "    name: ${6:string}",
+            "    password: ${7:string}",
+            "    server_url: ${8:string}",
+            "    state: ${9|present,reverted,absent,new_snapshot|}",
+            "    username: ${10:string}",
+            "    validate_certs: ${11|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Snapshots",
+        "scope": "ansible"
+    },
+    "Fetch information about Foreman Snapshots": {
+        "prefix": [
+            "theforeman.foreman.snapshot_info",
+            "Fetch information about Foreman Snapshots"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.snapshot_info:",
+            "    host: ${2:string}",
+            "    location: ${3:string}",
+            "    name: ${4:string}",
+            "    organization: ${5:string}",
+            "    password: ${6:string}",
+            "    search: ${7:string}",
+            "    server_url: ${8:string}",
+            "    username: ${9:string}",
+            "    validate_certs: ${10|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Foreman Snapshots",
+        "scope": "ansible"
+    },
+    "Get status info": {
+        "prefix": [
+            "theforeman.foreman.status_info",
+            "Get status info"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.status_info:",
+            "    password: ${2:string}",
+            "    server_url: ${3:string}",
+            "    username: ${4:string}",
+            "    validate_certs: ${5|true,false|}",
+            "$0"
+        ],
+        "description": "Get status info",
+        "scope": "ansible"
+    },
+    "Manage Subnets": {
+        "prefix": [
+            "theforeman.foreman.subnet",
+            "Manage Subnets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.subnet:",
+            "    bmc_proxy: ${2:string}",
+            "    boot_mode: ${3|DHCP,Static|}",
+            "    cidr: ${4:int}",
+            "    description: ${5:string}",
+            "    dhcp_proxy: ${6:string}",
+            "    discovery_proxy: ${7:string}",
+            "    dns_primary: ${8:string}",
+            "    dns_proxy: ${9:string}",
+            "    dns_secondary: ${10:string}",
+            "    domains:",
+            "      - ${11:element}",
+            "    externalipam_group: ${12:string}",
+            "    externalipam_proxy: ${13:string}",
+            "    from_ip: ${14:string}",
+            "    gateway: ${15:string}",
+            "    httpboot_proxy: ${16:string}",
+            "    ipam: ${17|DHCP,InternalDB,RandomDB,EUI-64,ExternalIPAM,None|}",
+            "    locations:",
+            "      - ${18:element}",
+            "    mask: ${19:string}",
+            "    mtu: ${20:int}",
+            "    name: ${21:string}",
+            "    network: ${22:string}",
+            "    network_type: ${23|IPv4,IPv6|}",
+            "    organizations:",
+            "      - ${24:element}",
+            "    parameters:",
+            "      - ${25:element}",
+            "    password: ${26:string}",
+            "    remote_execution_proxies:",
+            "      - ${27:element}",
+            "    server_url: ${28:string}",
+            "    state: ${29|present,absent|}",
+            "    template_proxy: ${30:string}",
+            "    tftp_proxy: ${31:string}",
+            "    to_ip: ${32:string}",
+            "    updated_name: ${33:string}",
+            "    username: ${34:string}",
+            "    validate_certs: ${35|true,false|}",
+            "    vlanid: ${36:int}",
+            "$0"
+        ],
+        "description": "Manage Subnets",
+        "scope": "ansible"
+    },
+    "Fetch information about Subnets": {
+        "prefix": [
+            "theforeman.foreman.subnet_info",
+            "Fetch information about Subnets"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.subnet_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Subnets",
+        "scope": "ansible"
+    },
+    "Fetch information about Subscriptions": {
+        "prefix": [
+            "theforeman.foreman.subscription_info",
+            "Fetch information about Subscriptions"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.subscription_info:",
+            "    location: ${2:string}",
+            "    name: ${3:string}",
+            "    organization: ${4:string}",
+            "    password: ${5:string}",
+            "    search: ${6:string}",
+            "    server_url: ${7:string}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Fetch information about Subscriptions",
+        "scope": "ansible"
+    },
+    "Manage Subscription Manifests": {
+        "prefix": [
+            "theforeman.foreman.subscription_manifest",
+            "Manage Subscription Manifests"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.subscription_manifest:",
+            "    manifest_path: ${2:path}",
+            "    organization: ${3:string}",
+            "    password: ${4:string}",
+            "    repository_url: ${5:string}",
+            "    server_url: ${6:string}",
+            "    state: ${7|present,absent,refreshed|}",
+            "    username: ${8:string}",
+            "    validate_certs: ${9|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Subscription Manifests",
+        "scope": "ansible"
+    },
+    "Manage Sync Plans": {
+        "prefix": [
+            "theforeman.foreman.sync_plan",
+            "Manage Sync Plans"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.sync_plan:",
+            "    cron_expression: ${2:string}",
+            "    description: ${3:string}",
+            "    enabled: ${4|false,true|}",
+            "    interval: ${5:string}",
+            "    name: ${6:string}",
+            "    organization: ${7:string}",
+            "    password: ${8:string}",
+            "    products:",
+            "      - ${9:element}",
+            "    server_url: ${10:string}",
+            "    state: ${11|present,present_with_defaults,absent|}",
+            "    sync_date: ${12:string}",
+            "    username: ${13:string}",
+            "    validate_certs: ${14|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Sync Plans",
+        "scope": "ansible"
+    },
+    "Sync Templates from a repository": {
+        "prefix": [
+            "theforeman.foreman.templates_import",
+            "Sync Templates from a repository"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.templates_import:",
+            "    associate: ${2:string}",
+            "    branch: ${3:string}",
+            "    dirname: ${4:string}",
+            "    filter: ${5:string}",
+            "    force: ${6|false,true|}",
+            "    locations:",
+            "      - ${7:element}",
+            "    lock: ${8|false,true|}",
+            "    negate: ${9|false,true|}",
+            "    organizations:",
+            "      - ${10:element}",
+            "    password: ${11:string}",
+            "    prefix: ${12:string}",
+            "    repo: ${13:string}",
+            "    server_url: ${14:string}",
+            "    username: ${15:string}",
+            "    validate_certs: ${16|true,false|}",
+            "    verbose: ${17|false,true|}",
+            "$0"
+        ],
+        "description": "Sync Templates from a repository",
+        "scope": "ansible"
+    },
+    "Manage Users": {
+        "prefix": [
+            "theforeman.foreman.user",
+            "Manage Users"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.user:",
+            "    admin: ${2|false,true|}",
+            "    auth_source: ${3:string}",
+            "    default_location: ${4:string}",
+            "    default_organization: ${5:string}",
+            "    description: ${6:string}",
+            "    firstname: ${7:string}",
+            "    lastname: ${8:string}",
+            "    locale: ${9:string}",
+            "    locations:",
+            "      - ${10:element}",
+            "    login: ${11:string}",
+            "    mail: ${12:string}",
+            "    organizations:",
+            "      - ${13:element}",
+            "    password: ${14:string}",
+            "    roles:",
+            "      - ${15:element}",
+            "    server_url: ${16:string}",
+            "    state: ${17|present,absent|}",
+            "    timezone: ${18:string}",
+            "    user_password: ${19:string}",
+            "    username: ${20:string}",
+            "    validate_certs: ${21|true,false|}",
+            "$0"
+        ],
+        "description": "Manage Users",
+        "scope": "ansible"
+    },
+    "Manage User Groups": {
+        "prefix": [
+            "theforeman.foreman.usergroup",
+            "Manage User Groups"
+        ],
+        "body": [
+            "- name: ${1:Description}",
+            "  # ${99:Comment}",
+            "  theforeman.foreman.usergroup:",
+            "    admin: ${2|false,true|}",
+            "    name: ${3:string}",
+            "    password: ${4:string}",
+            "    roles:",
+            "      - ${5:element}",
+            "    server_url: ${6:string}",
+            "    state: ${7|present,absent|}",
+            "    updated_name: ${8:string}",
+            "    usergroups:",
+            "      - ${9:element}",
+            "    username: ${10:string}",
+            "    users:",
+            "      - ${11:element}",
+            "    validate_certs: ${12|true,false|}",
+            "$0"
+        ],
+        "description": "Manage User Groups",
+        "scope": "ansible"
+    }
+}
