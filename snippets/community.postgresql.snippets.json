@@ -272,7 +272,7 @@
             "    group: ${11:string}",
             "    keep_comments_at_rules: ${12|false,true|}",
             "    method: ${13|md5,cert,gss,ident,krb5,ldap,pam,password,peer,radius,reject,scram-sha-256,sspi,trust|}",
-            "    mode: ${14|\"0755,0750,0700,0644,0640,0600,\"|}",
+            "    mode: ${14|\"0755\",\"0750\",\"0700\",\"0644\",\"0640\",\"0600\"|}",
             "    netmask: ${15:string}",
             "    options: ${16:string}",
             "    order: ${17|sdu,sud,dsu,dus,usd,uds|}",
