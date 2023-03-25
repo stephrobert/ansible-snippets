@@ -13,8 +13,7 @@ You may find DevOps tips on my [own blog](https://blog.stephane-robert.info/).
 
 **Format :**
 
-* module
-  * text to be paste
+* **module** : Text to be parse
 
 ### `ansible.builtin` collection
 
