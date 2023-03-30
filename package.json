@@ -2,7 +2,7 @@
   "name": "sr-ansible-snippets",
   "displayName": "Ansible Snippets",
   "description": "Stephane ROBERT Ansible Snippets for VScode",
-  "version": "0.2.25",
+  "version": "0.2.27",
   "engines": {
     "vscode": "^0.10.5"
   },
