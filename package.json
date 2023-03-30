@@ -2,7 +2,7 @@
   "name": "sr-ansible-snippets",
   "displayName": "Ansible Core Snippets",
   "description": "Stephane ROBERT Ansible Core Snippets for VScode",
-  "version": "0.2.27",
+  "version": "0.2.28",
   "engines": {
     "vscode": "^0.10.5"
   },
@@ -24,33 +24,43 @@
       {
         "language": "ansible",
         "path": "./snippets/ansible.builtin.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/ansible.netcommon.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/ansible.posix.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/ansible.windows.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/community.general.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/community.crypto.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/community.docker.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/kubernetes.core.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/community.mysql.snippets.json"
-      },        {
+      },
+      {
         "language": "ansible",
         "path": "./snippets/community.postgresql.snippets.json"
-      }      ]
+      }
+    ]
   }
 }
