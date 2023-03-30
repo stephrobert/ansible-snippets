@@ -1,7 +1,7 @@
 {
   "name": "sr-ansible-snippets",
-  "displayName": "Ansible Snippets",
-  "description": "Stephane ROBERT Ansible Snippets for VScode",
+  "displayName": "Ansible Core Snippets",
+  "description": "Stephane ROBERT Ansible Core Snippets for VScode",
   "version": "0.2.27",
   "engines": {
     "vscode": "^0.10.5"
@@ -19,436 +19,38 @@
     "snippets": [
       {
         "language": "ansible",
-        "path": "./snippets/amazon.aws.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ansible.builtin.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ansible.netcommon.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ansible.posix.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ansible.utils.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ansible.windows.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/arista.eos.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/awx.awx.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/azure.azcollection.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/check_point.mgmt.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/chocolatey.chocolatey.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.aci.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.asa.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.dnac.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.intersight.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.ios.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.iosxr.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.ise.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.meraki.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.mso.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.nso.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.nxos.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cisco.ucs.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cloud.common.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cloudscale_ch.cloud.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.aws.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.ciscosmb.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.crypto.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.digitalocean.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.dns.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.docker.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.fortios.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.general.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.google.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.grafana.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.hashi_vault.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.hrobot.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.libvirt.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.mongodb.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.mysql.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.network.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.okd.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.postgresql.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.proxysql.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.rabbitmq.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.routeros.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.sap_libs.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.sap.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.skydive.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.sops.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.vmware.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.windows.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/community.zabbix.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/containers.podman.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/cyberark.pas.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/dellemc.enterprise_sonic.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/dellemc.openmanage.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/dellemc.os10.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/dellemc.os6.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/dellemc.os9.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/dellemc.powerflex.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/dellemc.unity.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/f5networks.f5_modules.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/fortinet.fortimanager.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/fortinet.fortios.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/frr.frr.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/gluster.gluster.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/google.cloud.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/grafana.grafana.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/hetzner.hcloud.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/hpe.nimble.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ibm.qradar.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ibm.spectrum_virtualize.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/infinidat.infinibox.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/infoblox.nios_modules.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/inspur.ispim.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/inspur.sm.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/junipernetworks.junos.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/kubernetes.core.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/lowlydba.sqlserver.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/mellanox.onyx.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp.aws.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp.azure.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp.cloudmanager.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp.elementsw.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp_eseries.santricity.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp.ontap.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp.storagegrid.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netapp.um_info.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/netbox.netbox.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ngine_io.cloudstack.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ngine_io.exoscale.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ngine_io.vultr.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/openstack.cloud.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/openvswitch.openvswitch.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/ovirt.ovirt.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/purestorage.flasharray.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/purestorage.flashblade.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/purestorage.fusion.snippets.json"
-      },
-      {
-        "language": "ansible",
-        "path": "./snippets/sensu.sensu_go.snippets.json"
-      },
-      {
-        "language": "ansible",
         "path": "./snippets/snippets.json"
       },
       {
         "language": "ansible",
-        "path": "./snippets/splunk.es.snippets.json"
-      },
-      {
+        "path": "./snippets/ansible.builtin.snippets.json"
+      },        {
         "language": "ansible",
-        "path": "./snippets/theforeman.foreman.snippets.json"
-      },
-      {
+        "path": "./snippets/ansible.netcommon.snippets.json"
+      },        {
         "language": "ansible",
-        "path": "./snippets/t_systems_mms.icinga_director.snippets.json"
-      },
-      {
+        "path": "./snippets/ansible.posix.snippets.json"
+      },        {
         "language": "ansible",
-        "path": "./snippets/vmware.vmware_rest.snippets.json"
-      },
-      {
+        "path": "./snippets/ansible.windows.snippets.json"
+      },        {
         "language": "ansible",
-        "path": "./snippets/vultr.cloud.snippets.json"
-      },
-      {
+        "path": "./snippets/community.general.snippets.json"
+      },        {
         "language": "ansible",
-        "path": "./snippets/vyos.vyos.snippets.json"
-      },
-      {
+        "path": "./snippets/community.crypto.snippets.json"
+      },        {
         "language": "ansible",
-        "path": "./snippets/wti.remote.snippets.json"
-      }
-    ]
+        "path": "./snippets/community.docker.snippets.json"
+      },        {
+        "language": "ansible",
+        "path": "./snippets/kubernetes.core.snippets.json"
+      },        {
+        "language": "ansible",
+        "path": "./snippets/community.mysql.snippets.json"
+      },        {
+        "language": "ansible",
+        "path": "./snippets/community.postgresql.snippets.json"
+      }      ]
   }
 }
