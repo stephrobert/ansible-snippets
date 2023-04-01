@@ -2,7 +2,7 @@
     "Copy data between a file/program and a PostgreSQL table": {
         "prefix": [
             "community.postgresql.postgresql_copy",
-            "Copy data between a file/program and a PostgreSQL table"
+            "postgresql_copy Copy data between a file/program and a PostgreSQL table"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -11,8 +11,8 @@
             "    ca_cert: ${2:string}",
             "    columns:",
             "      - ${3:element}",
-            "    copy_from: ${5:path}",
-            "    copy_to: ${6:path}",
+            "    copy_from: ${5:/tmp/test}",
+            "    copy_to: ${6:/tmp/test}",
             "    db: ${7:string}",
             "    dst: ${8:string}",
             "    login_host: ${9:}",
@@ -33,7 +33,7 @@
     "Add or remove PostgreSQL databases from a remote host": {
         "prefix": [
             "community.postgresql.postgresql_db",
-            "Add or remove PostgreSQL databases from a remote host"
+            "postgresql_db Add or remove PostgreSQL databases from a remote host"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -57,8 +57,8 @@
             "    session_role: ${18:string}",
             "    ssl_mode: ${19|prefer,allow,disable,require,verify-ca,verify-full|}",
             "    state: ${20|present,absent,dump,rename,restore|}",
-            "    tablespace: ${21:path}",
-            "    target: ${22:path}",
+            "    tablespace: ${21:/tmp/test}",
+            "    target: ${22:/tmp/test}",
             "    target_opts: ${23:}",
             "    template: ${24:}",
             "    trust_input: ${25|true,false|}",
@@ -70,7 +70,7 @@
     "Add or remove PostgreSQL extensions from a database": {
         "prefix": [
             "community.postgresql.postgresql_ext",
-            "Add or remove PostgreSQL extensions from a database"
+            "postgresql_ext Add or remove PostgreSQL extensions from a database"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -99,7 +99,7 @@
     "Create or drop indexes from a PostgreSQL database": {
         "prefix": [
             "community.postgresql.postgresql_idx",
-            "Create or drop indexes from a PostgreSQL database"
+            "postgresql_idx Create or drop indexes from a PostgreSQL database"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -137,7 +137,7 @@
     "Gather information about PostgreSQL servers": {
         "prefix": [
             "community.postgresql.postgresql_info",
-            "Gather information about PostgreSQL servers"
+            "postgresql_info Gather information about PostgreSQL servers"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -163,7 +163,7 @@
     "Adds, removes or changes procedural languages with a PostgreSQL database": {
         "prefix": [
             "community.postgresql.postgresql_lang",
-            "Adds, removes or changes procedural languages with a PostgreSQL database"
+            "postgresql_lang Adds, removes or changes procedural languages with a PostgreSQL database"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -194,7 +194,7 @@
     "Add or remove PostgreSQL roles from groups": {
         "prefix": [
             "community.postgresql.postgresql_membership",
-            "Add or remove PostgreSQL roles from groups"
+            "postgresql_membership Add or remove PostgreSQL roles from groups"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -224,7 +224,7 @@
     "Change an owner of PostgreSQL database object": {
         "prefix": [
             "community.postgresql.postgresql_owner",
-            "Change an owner of PostgreSQL database object"
+            "postgresql_owner Change an owner of PostgreSQL database object"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -239,7 +239,7 @@
             "    login_user: ${9:postgres}",
             "    new_owner: ${10:string}",
             "    obj_name: ${11:string}",
-            "    obj_type: ${12:string}",
+            "    obj_type: ${12|database,function,matview,sequence,schema,table,tablespace,view|}",
             "    port: ${13:5432}",
             "    reassign_owned_by:",
             "      - ${14:element}",
@@ -254,7 +254,7 @@
     "Add, remove or modify a rule in a pg_hba file": {
         "prefix": [
             "community.postgresql.postgresql_pg_hba",
-            "Add, remove or modify a rule in a pg_hba file"
+            "postgresql_pg_hba Add, remove or modify a rule in a pg_hba file"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -265,10 +265,10 @@
             "    backup: ${4|false,true|}",
             "    backup_file: ${5:string}",
             "    comment: ${6:string}",
-            "    contype: ${7:string}",
+            "    contype: ${7|local,host,hostnossl,hostssl,hostgssenc,hostnogssenc|}",
             "    create: ${8|false,true|}",
             "    databases: ${9:all}",
-            "    dest: ${10:path}",
+            "    dest: ${10:/tmp/test}",
             "    group: ${11:string}",
             "    keep_comments_at_rules: ${12|false,true|}",
             "    method: ${13|md5,cert,gss,ident,krb5,ldap,pam,password,peer,radius,reject,scram-sha-256,sspi,trust|}",
@@ -296,7 +296,7 @@
     "Check remote PostgreSQL server availability": {
         "prefix": [
             "community.postgresql.postgresql_ping",
-            "Check remote PostgreSQL server availability"
+            "postgresql_ping Check remote PostgreSQL server availability"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -320,7 +320,7 @@
     "Grant or revoke privileges on PostgreSQL database objects": {
         "prefix": [
             "community.postgresql.postgresql_privs",
-            "Grant or revoke privileges on PostgreSQL database objects"
+            "postgresql_privs Grant or revoke privileges on PostgreSQL database objects"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -358,7 +358,7 @@
     "Add, update, or remove PostgreSQL publication": {
         "prefix": [
             "community.postgresql.postgresql_publication",
-            "Add, update, or remove PostgreSQL publication"
+            "postgresql_publication Add, update, or remove PostgreSQL publication"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -388,7 +388,7 @@
     "Run PostgreSQL queries": {
         "prefix": [
             "community.postgresql.postgresql_query",
-            "Run PostgreSQL queries"
+            "postgresql_query Run PostgreSQL queries"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -403,7 +403,7 @@
             "    login_password: ${9:}",
             "    login_unix_socket: ${10:}",
             "    login_user: ${11:postgres}",
-            "    path_to_script: ${13:path}",
+            "    path_to_script: ${13:/tmp/test}",
             "    port: ${14:5432}",
             "    positional_args:",
             "      - ${15:element}",
@@ -421,7 +421,7 @@
     "Add or remove PostgreSQL schema": {
         "prefix": [
             "community.postgresql.postgresql_schema",
-            "Add or remove PostgreSQL schema"
+            "postgresql_schema Add or remove PostgreSQL schema"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -449,7 +449,7 @@
     "Run PostgreSQL statements from a file": {
         "prefix": [
             "community.postgresql.postgresql_script",
-            "Run PostgreSQL statements from a file"
+            "postgresql_script Run PostgreSQL statements from a file"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -462,7 +462,7 @@
             "    login_password: ${7:}",
             "    login_unix_socket: ${8:}",
             "    login_user: ${9:postgres}",
-            "    path: ${11:path}",
+            "    path: ${11:/tmp/test}",
             "    port: ${12:5432}",
             "    positional_args:",
             "      - ${13:element}",
@@ -479,7 +479,7 @@
     "Create, drop, or alter a PostgreSQL sequence": {
         "prefix": [
             "community.postgresql.postgresql_sequence",
-            "Create, drop, or alter a PostgreSQL sequence"
+            "postgresql_sequence Create, drop, or alter a PostgreSQL sequence"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -489,7 +489,7 @@
             "    cache: ${3:int}",
             "    cascade: ${4|false,true|}",
             "    cycle: ${6|false,true|}",
-            "    data_type: ${7:string}",
+            "    data_type: ${7|bigint,integer,smallint|}",
             "    db: ${8:}",
             "    increment: ${9:int}",
             "    login_host: ${10:}",
@@ -517,7 +517,7 @@
     "Change a PostgreSQL server configuration parameter": {
         "prefix": [
             "community.postgresql.postgresql_set",
-            "Change a PostgreSQL server configuration parameter"
+            "postgresql_set Change a PostgreSQL server configuration parameter"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -544,7 +544,7 @@
     "Add or remove replication slots from a PostgreSQL database": {
         "prefix": [
             "community.postgresql.postgresql_slot",
-            "Add or remove replication slots from a PostgreSQL database"
+            "postgresql_slot Add or remove replication slots from a PostgreSQL database"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -573,7 +573,7 @@
     "Add, update, or remove PostgreSQL subscription": {
         "prefix": [
             "community.postgresql.postgresql_subscription",
-            "Add, update, or remove PostgreSQL subscription"
+            "postgresql_subscription Add, update, or remove PostgreSQL subscription"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -603,7 +603,7 @@
     "Create, drop, or modify a PostgreSQL table": {
         "prefix": [
             "community.postgresql.postgresql_table",
-            "Create, drop, or modify a PostgreSQL table"
+            "postgresql_table Create, drop, or modify a PostgreSQL table"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -641,7 +641,7 @@
     "Add or remove PostgreSQL tablespaces from remote hosts": {
         "prefix": [
             "community.postgresql.postgresql_tablespace",
-            "Add or remove PostgreSQL tablespaces from remote hosts"
+            "postgresql_tablespace Add or remove PostgreSQL tablespaces from remote hosts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -649,7 +649,7 @@
             "  community.postgresql.postgresql_tablespace:",
             "    ca_cert: ${2:string}",
             "    db: ${4:string}",
-            "    location: ${5:path}",
+            "    location: ${5:/tmp/test}",
             "    login_host: ${6:}",
             "    login_password: ${7:}",
             "    login_unix_socket: ${8:}",
@@ -670,7 +670,7 @@
     "Create, alter, or remove a user (role) from a PostgreSQL server instance": {
         "prefix": [
             "community.postgresql.postgresql_user",
-            "Create, alter, or remove a user (role) from a PostgreSQL server instance"
+            "postgresql_user Create, alter, or remove a user (role) from a PostgreSQL server instance"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -707,7 +707,7 @@
     "Gather statistics about PostgreSQL user objects": {
         "prefix": [
             "community.postgresql.postgresql_user_obj_stat_info",
-            "Gather statistics about PostgreSQL user objects"
+            "postgresql_user_obj_stat_info Gather statistics about PostgreSQL user objects"
         ],
         "body": [
             "- name: ${1:Description}",

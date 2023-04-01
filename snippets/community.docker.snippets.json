@@ -2,7 +2,7 @@
     "Return facts about whether the module runs in a container": {
         "prefix": [
             "community.docker.current_container_facts",
-            "Return facts about whether the module runs in a container"
+            "current_container_facts Return facts about whether the module runs in a container"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -16,7 +16,7 @@
     "Manage multi-container Docker applications with Docker Compose.": {
         "prefix": [
             "community.docker.docker_compose",
-            "Manage multi-container Docker applications with Docker Compose."
+            "docker_compose Manage multi-container Docker applications with Docker Compose."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -24,13 +24,13 @@
             "  community.docker.docker_compose:",
             "    api_version: ${2:auto}",
             "    build: ${3|false,true|}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    debug: ${7|false,true|}",
             "    dependencies: ${9|true,false|}",
             "    docker_host: ${10:unix://var/run/docker.sock}",
-            "    env_file: ${11:path}",
+            "    env_file: ${11:/tmp/test}",
             "    files:",
             "      - ${12:element}",
             "    hostname_check: ${13|false,true|}",
@@ -38,10 +38,10 @@
             "    profiles:",
             "      - ${15:element}",
             "    project_name: ${16:string}",
-            "    project_src: ${17:path}",
+            "    project_src: ${17:/tmp/test}",
             "    pull: ${18|false,true|}",
             "    recreate: ${19|smart,always,never|}",
-            "    remove_images: ${20:string}",
+            "    remove_images: ${20|all,local|}",
             "    remove_orphans: ${21|false,true|}",
             "    remove_volumes: ${22|false,true|}",
             "    restarted: ${23|false,true|}",
@@ -63,19 +63,19 @@
     "Manage docker configs.": {
         "prefix": [
             "community.docker.docker_config",
-            "Manage docker configs."
+            "docker_config Manage docker configs."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_config:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    data: ${6:string}",
             "    data_is_b64: ${7|false,true|}",
-            "    data_src: ${8:path}",
+            "    data_src: ${8:/tmp/test}",
             "    debug: ${9|false,true|}",
             "    docker_host: ${10:unix://var/run/docker.sock}",
             "    force: ${11|false,true|}",
@@ -83,7 +83,7 @@
             "    rolling_versions: ${14|false,true|}",
             "    ssl_version: ${15:string}",
             "    state: ${16|present,absent|}",
-            "    template_driver: ${17:string}",
+            "    template_driver: ${17|golang|}",
             "    timeout: ${18:60}",
             "    tls: ${19|false,true|}",
             "    tls_hostname: ${20:string}",
@@ -98,7 +98,7 @@
     "manage Docker containers": {
         "prefix": [
             "community.docker.docker_container",
-            "manage Docker containers"
+            "docker_container manage Docker containers"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -107,16 +107,16 @@
             "    api_version: ${2:auto}",
             "    auto_remove: ${3|false,true|}",
             "    blkio_weight: ${4:int}",
-            "    ca_cert: ${5:path}",
+            "    ca_cert: ${5:/tmp/test}",
             "    cap_drop:",
             "      - ${6:element}",
             "    capabilities:",
             "      - ${7:element}",
             "    cgroup_parent: ${8:string}",
-            "    cgroupns_mode: ${9:string}",
+            "    cgroupns_mode: ${9|host,private|}",
             "    cleanup: ${10|false,true|}",
-            "    client_cert: ${11:path}",
-            "    client_key: ${12:path}",
+            "    client_cert: ${11:/tmp/test}",
+            "    client_key: ${12:/tmp/test}",
             "    command: ${13:\"raw\"}",
             "    command_handling: ${14|correct,compatibility|}",
             "    container_default_behavior: ${16|no_defaults,compatibility|}",
@@ -150,7 +150,7 @@
             "    domainname: ${36:string}",
             "    entrypoint:",
             "      - ${37:element}",
-            "    env_file: ${39:path}",
+            "    env_file: ${39:/tmp/test}",
             "    exposed_ports:",
             "      - ${41:element}",
             "    force_kill: ${42|false,true|}",
@@ -199,7 +199,7 @@
             "    read_only: ${83|false,true|}",
             "    recreate: ${84|false,true|}",
             "    restart: ${86|false,true|}",
-            "    restart_policy: ${87:string}",
+            "    restart_policy: ${87|no,on-failure,always,unless-stopped|}",
             "    restart_retries: ${88:int}",
             "    runtime: ${89:string}",
             "    security_opts:",
@@ -236,16 +236,16 @@
     "Copy a file into a Docker container": {
         "prefix": [
             "community.docker.docker_container_copy_into",
-            "Copy a file into a Docker container"
+            "docker_container_copy_into Copy a file into a Docker container"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_container_copy_into:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    container: ${6:string}",
             "    container_path: ${7:string}",
             "    content: ${8:string}",
@@ -258,7 +258,7 @@
             "    local_follow: ${15|true,false|}",
             "    mode: ${16:int}",
             "    owner_id: ${17:int}",
-            "    path: ${18:path}",
+            "    path: ${18:/tmp/test}",
             "    ssl_version: ${19:string}",
             "    timeout: ${20:60}",
             "    tls: ${21|false,true|}",
@@ -273,7 +273,7 @@
     "Execute command in a docker container": {
         "prefix": [
             "community.docker.docker_container_exec",
-            "Execute command in a docker container"
+            "docker_container_exec Execute command in a docker container"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -282,10 +282,10 @@
             "    api_version: ${2:auto}",
             "    argv:",
             "      - ${3:element}",
-            "    ca_cert: ${4:path}",
+            "    ca_cert: ${4:/tmp/test}",
             "    chdir: ${5:string}",
-            "    client_cert: ${6:path}",
-            "    client_key: ${7:path}",
+            "    client_cert: ${6:/tmp/test}",
+            "    client_key: ${7:/tmp/test}",
             "    command: ${8:string}",
             "    container: ${9:string}",
             "    debug: ${10|false,true|}",
@@ -310,16 +310,16 @@
     "Retrieves facts about docker container": {
         "prefix": [
             "community.docker.docker_container_info",
-            "Retrieves facts about docker container"
+            "docker_container_info Retrieves facts about docker container"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_container_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    name: ${8:string}",
@@ -337,16 +337,16 @@
     "Retrieves facts about docker host and lists of objects of the services.": {
         "prefix": [
             "community.docker.docker_host_info",
-            "Retrieves facts about docker host and lists of objects of the services."
+            "docker_host_info Retrieves facts about docker host and lists of objects of the services."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_host_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    containers: ${6|false,true|}",
             "    containers_all: ${7|false,true|}",
             "    debug: ${9|false,true|}",
@@ -370,27 +370,27 @@
     "Manage docker images": {
         "prefix": [
             "community.docker.docker_image",
-            "Manage docker images"
+            "docker_image Manage docker images"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_image:",
             "    api_version: ${2:auto}",
-            "    archive_path: ${3:path}",
-            "    ca_cert: ${5:path}",
-            "    client_cert: ${6:path}",
-            "    client_key: ${7:path}",
+            "    archive_path: ${3:/tmp/test}",
+            "    ca_cert: ${5:/tmp/test}",
+            "    client_cert: ${6:/tmp/test}",
+            "    client_key: ${7:/tmp/test}",
             "    debug: ${8|false,true|}",
             "    docker_host: ${9:unix://var/run/docker.sock}",
             "    force_absent: ${10|false,true|}",
             "    force_source: ${11|false,true|}",
             "    force_tag: ${12|false,true|}",
-            "    load_path: ${13:path}",
+            "    load_path: ${13:/tmp/test}",
             "    name: ${14:string}",
             "    push: ${16|false,true|}",
             "    repository: ${17:string}",
-            "    source: ${18:string}",
+            "    source: ${18|build,load,pull,local|}",
             "    ssl_version: ${19:string}",
             "    state: ${20|present,absent|}",
             "    tag: ${21:latest}",
@@ -407,16 +407,16 @@
     "Inspect docker images": {
         "prefix": [
             "community.docker.docker_image_info",
-            "Inspect docker images"
+            "docker_image_info Inspect docker images"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_image_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    name:",
@@ -435,19 +435,19 @@
     "Load docker image(s) from archives": {
         "prefix": [
             "community.docker.docker_image_load",
-            "Load docker image(s) from archives"
+            "docker_image_load Load docker image(s) from archives"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_image_load:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
-            "    path: ${8:path}",
+            "    path: ${8:/tmp/test}",
             "    ssl_version: ${9:string}",
             "    timeout: ${10:60}",
             "    tls: ${11|false,true|}",
@@ -462,17 +462,17 @@
     "Log into a Docker registry.": {
         "prefix": [
             "community.docker.docker_login",
-            "Log into a Docker registry."
+            "docker_login Log into a Docker registry."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_login:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
-            "    config_path: ${6:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
+            "    config_path: ${6:/tmp/test}",
             "    debug: ${7|false,true|}",
             "    docker_host: ${8:unix://var/run/docker.sock}",
             "    password: ${9:string}",
@@ -494,7 +494,7 @@
     "Manage Docker networks": {
         "prefix": [
             "community.docker.docker_network",
-            "Manage Docker networks"
+            "docker_network Manage Docker networks"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -503,9 +503,9 @@
             "    api_version: ${2:auto}",
             "    appends: ${3|false,true|}",
             "    attachable: ${4|false,true|}",
-            "    ca_cert: ${5:path}",
-            "    client_cert: ${6:path}",
-            "    client_key: ${7:path}",
+            "    ca_cert: ${5:/tmp/test}",
+            "    client_cert: ${6:/tmp/test}",
+            "    client_key: ${7:/tmp/test}",
             "    connected:",
             "      - ${8:element}",
             "    debug: ${9|false,true|}",
@@ -518,7 +518,7 @@
             "      - ${16:element}",
             "    ipam_driver: ${17:string}",
             "    name: ${20:string}",
-            "    scope: ${21:string}",
+            "    scope: ${21|local,global,swarm|}",
             "    ssl_version: ${22:string}",
             "    state: ${23|present,absent|}",
             "    timeout: ${24:60}",
@@ -534,16 +534,16 @@
     "Retrieves facts about docker network": {
         "prefix": [
             "community.docker.docker_network_info",
-            "Retrieves facts about docker network"
+            "docker_network_info Retrieves facts about docker network"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_network_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    name: ${8:string}",
@@ -561,24 +561,24 @@
     "Manage Docker Swarm node": {
         "prefix": [
             "community.docker.docker_node",
-            "Manage Docker Swarm node"
+            "docker_node Manage Docker Swarm node"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_node:",
             "    api_version: ${2:auto}",
-            "    availability: ${3:string}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    availability: ${3|active,pause,drain|}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    debug: ${7|false,true|}",
             "    docker_host: ${8:unix://var/run/docker.sock}",
             "    hostname: ${9:string}",
             "    labels_state: ${11|merge,replace|}",
             "    labels_to_remove:",
             "      - ${12:element}",
-            "    role: ${13:string}",
+            "    role: ${13|manager,worker|}",
             "    ssl_version: ${14:string}",
             "    timeout: ${15:60}",
             "    tls: ${16|false,true|}",
@@ -593,16 +593,16 @@
     "Retrieves facts about docker swarm node from Swarm Manager": {
         "prefix": [
             "community.docker.docker_node_info",
-            "Retrieves facts about docker swarm node from Swarm Manager"
+            "docker_node_info Retrieves facts about docker swarm node from Swarm Manager"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_node_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    name:",
@@ -622,7 +622,7 @@
     "Manage Docker plugins": {
         "prefix": [
             "community.docker.docker_plugin",
-            "Manage Docker plugins"
+            "docker_plugin Manage Docker plugins"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -630,9 +630,9 @@
             "  community.docker.docker_plugin:",
             "    alias: ${2:string}",
             "    api_version: ${3:auto}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    debug: ${7|false,true|}",
             "    docker_host: ${8:unix://var/run/docker.sock}",
             "    enable_timeout: ${9:0}",
@@ -653,7 +653,7 @@
     "Allows to prune various docker objects": {
         "prefix": [
             "community.docker.docker_prune",
-            "Allows to prune various docker objects"
+            "docker_prune Allows to prune various docker objects"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -661,9 +661,9 @@
             "  community.docker.docker_prune:",
             "    api_version: ${2:auto}",
             "    builder_cache: ${3|false,true|}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    containers: ${7|false,true|}",
             "    debug: ${9|false,true|}",
             "    docker_host: ${10:unix://var/run/docker.sock}",
@@ -684,19 +684,19 @@
     "Manage docker secrets.": {
         "prefix": [
             "community.docker.docker_secret",
-            "Manage docker secrets."
+            "docker_secret Manage docker secrets."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_secret:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    data: ${6:string}",
             "    data_is_b64: ${7|false,true|}",
-            "    data_src: ${8:path}",
+            "    data_src: ${8:/tmp/test}",
             "    debug: ${9|false,true|}",
             "    docker_host: ${10:unix://var/run/docker.sock}",
             "    force: ${11|false,true|}",
@@ -718,7 +718,7 @@
     "docker stack module": {
         "prefix": [
             "community.docker.docker_stack",
-            "docker stack module"
+            "docker_stack docker stack module"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -730,7 +730,7 @@
             "      - ${4:element}",
             "    name: ${5:string}",
             "    prune: ${6|false,true|}",
-            "    resolve_image: ${7:string}",
+            "    resolve_image: ${7|always,changed,never|}",
             "    state: ${8|present,absent|}",
             "    with_registry_auth: ${9|false,true|}",
             "$0"
@@ -741,7 +741,7 @@
     "Return information on a docker stack": {
         "prefix": [
             "community.docker.docker_stack_info",
-            "Return information on a docker stack"
+            "docker_stack_info Return information on a docker stack"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -755,7 +755,7 @@
     "Return information of the tasks on a docker stack": {
         "prefix": [
             "community.docker.docker_stack_task_info",
-            "Return information of the tasks on a docker stack"
+            "docker_stack_task_info Return information of the tasks on a docker stack"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -770,7 +770,7 @@
     "Manage Swarm cluster": {
         "prefix": [
             "community.docker.docker_swarm",
-            "Manage Swarm cluster"
+            "docker_swarm Manage Swarm cluster"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -779,10 +779,10 @@
             "    advertise_addr: ${2:string}",
             "    api_version: ${3:auto}",
             "    autolock_managers: ${4|false,true|}",
-            "    ca_cert: ${5:path}",
+            "    ca_cert: ${5:/tmp/test}",
             "    ca_force_rotate: ${6:int}",
-            "    client_cert: ${7:path}",
-            "    client_key: ${8:path}",
+            "    client_cert: ${7:/tmp/test}",
+            "    client_key: ${8:/tmp/test}",
             "    data_path_addr: ${9:string}",
             "    data_path_port: ${10:int}",
             "    debug: ${11|false,true|}",
@@ -824,16 +824,16 @@
     "Retrieves facts about Docker Swarm cluster.": {
         "prefix": [
             "community.docker.docker_swarm_info",
-            "Retrieves facts about Docker Swarm cluster."
+            "docker_swarm_info Retrieves facts about Docker Swarm cluster."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_swarm_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    nodes: ${8|false,true|}",
@@ -855,7 +855,7 @@
     "docker swarm service": {
         "prefix": [
             "community.docker.docker_swarm_service",
-            "docker swarm service"
+            "docker_swarm_service docker swarm service"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -864,13 +864,13 @@
             "    api_version: ${2:auto}",
             "    args:",
             "      - ${3:element}",
-            "    ca_cert: ${4:path}",
+            "    ca_cert: ${4:/tmp/test}",
             "    cap_add:",
             "      - ${5:element}",
             "    cap_drop:",
             "      - ${6:element}",
-            "    client_cert: ${7:path}",
-            "    client_key: ${8:path}",
+            "    client_cert: ${7:/tmp/test}",
+            "    client_key: ${8:/tmp/test}",
             "    command: ${9:\"raw\"}",
             "    configs:",
             "      - ${10:element}",
@@ -882,7 +882,7 @@
             "    dns_search:",
             "      - ${15:element}",
             "    docker_host: ${16:unix://var/run/docker.sock}",
-            "    endpoint_mode: ${17:string}",
+            "    endpoint_mode: ${17|vip,dnsrr|}",
             "    env: ${18:\"raw\"}",
             "    env_files:",
             "      - ${19:element}",
@@ -925,16 +925,16 @@
     "Retrieves information about docker services from a Swarm Manager": {
         "prefix": [
             "community.docker.docker_swarm_service_info",
-            "Retrieves information about docker services from a Swarm Manager"
+            "docker_swarm_service_info Retrieves information about docker services from a Swarm Manager"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_swarm_service_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    name: ${8:string}",
@@ -952,16 +952,16 @@
     "Manage Docker volumes": {
         "prefix": [
             "community.docker.docker_volume",
-            "Manage Docker volumes"
+            "docker_volume Manage Docker volumes"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_volume:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    driver: ${8:local}",
@@ -982,16 +982,16 @@
     "Retrieve facts about Docker volumes": {
         "prefix": [
             "community.docker.docker_volume_info",
-            "Retrieve facts about Docker volumes"
+            "docker_volume_info Retrieve facts about Docker volumes"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.docker.docker_volume_info:",
             "    api_version: ${2:auto}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    debug: ${6|false,true|}",
             "    docker_host: ${7:unix://var/run/docker.sock}",
             "    name: ${8:string}",

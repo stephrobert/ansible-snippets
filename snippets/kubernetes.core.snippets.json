@@ -2,7 +2,7 @@
     "Manages Kubernetes packages with the Helm package manager": {
         "prefix": [
             "kubernetes.core.helm",
-            "Manages Kubernetes packages with the Helm package manager"
+            "helm Manages Kubernetes packages with the Helm package manager"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -10,9 +10,9 @@
             "  kubernetes.core.helm:",
             "    api_key: ${2:string}",
             "    atomic: ${3|false,true|}",
-            "    binary_path: ${4:path}",
-            "    ca_cert: ${5:path}",
-            "    chart_ref: ${6:path}",
+            "    binary_path: ${4:/tmp/test}",
+            "    ca_cert: ${5:/tmp/test}",
+            "    chart_ref: ${6:/tmp/test}",
             "    chart_repo_url: ${7:string}",
             "    chart_version: ${8:string}",
             "    context: ${9:string}",
@@ -47,15 +47,15 @@
     "Get information from Helm package deployed inside the cluster": {
         "prefix": [
             "kubernetes.core.helm_info",
-            "Get information from Helm package deployed inside the cluster"
+            "helm_info Get information from Helm package deployed inside the cluster"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.helm_info:",
             "    api_key: ${2:string}",
-            "    binary_path: ${3:path}",
-            "    ca_cert: ${4:path}",
+            "    binary_path: ${3:/tmp/test}",
+            "    ca_cert: ${4:/tmp/test}",
             "    context: ${5:string}",
             "    get_all_values: ${6|false,true|}",
             "    host: ${7:string}",
@@ -73,15 +73,15 @@
     "Manage Helm plugins": {
         "prefix": [
             "kubernetes.core.helm_plugin",
-            "Manage Helm plugins"
+            "helm_plugin Manage Helm plugins"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.helm_plugin:",
             "    api_key: ${2:string}",
-            "    binary_path: ${3:path}",
-            "    ca_cert: ${4:path}",
+            "    binary_path: ${3:/tmp/test}",
+            "    ca_cert: ${4:/tmp/test}",
             "    context: ${5:string}",
             "    host: ${6:string}",
             "    kubeconfig: ${7:\"raw\"}",
@@ -98,15 +98,15 @@
     "Gather information about Helm plugins": {
         "prefix": [
             "kubernetes.core.helm_plugin_info",
-            "Gather information about Helm plugins"
+            "helm_plugin_info Gather information about Helm plugins"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.helm_plugin_info:",
             "    api_key: ${2:string}",
-            "    binary_path: ${3:path}",
-            "    ca_cert: ${4:path}",
+            "    binary_path: ${3:/tmp/test}",
+            "    ca_cert: ${4:/tmp/test}",
             "    context: ${5:string}",
             "    host: ${6:string}",
             "    kubeconfig: ${7:\"raw\"}",
@@ -120,20 +120,20 @@
     "download a chart from a repository and (optionally) unpack it in local directory.": {
         "prefix": [
             "kubernetes.core.helm_pull",
-            "download a chart from a repository and (optionally) unpack it in local directory."
+            "helm_pull download a chart from a repository and (optionally) unpack it in local directory."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.helm_pull:",
-            "    binary_path: ${2:path}",
-            "    chart_ca_cert: ${3:path}",
+            "    binary_path: ${2:/tmp/test}",
+            "    chart_ca_cert: ${3:/tmp/test}",
             "    chart_devel: ${4|false,true|}",
             "    chart_ref: ${5:string}",
-            "    chart_ssl_cert_file: ${6:path}",
-            "    chart_ssl_key_file: ${7:path}",
+            "    chart_ssl_cert_file: ${6:/tmp/test}",
+            "    chart_ssl_key_file: ${7:/tmp/test}",
             "    chart_version: ${8:string}",
-            "    destination: ${9:path}",
+            "    destination: ${9:/tmp/test}",
             "    pass_credentials: ${10|false,true|}",
             "    provenance: ${11|false,true|}",
             "    repo_password: ${12:string}",
@@ -142,7 +142,7 @@
             "    skip_tls_certs_check: ${15|false,true|}",
             "    untar_chart: ${16|false,true|}",
             "    verify_chart: ${17|false,true|}",
-            "    verify_chart_keyring: ${18:path}",
+            "    verify_chart_keyring: ${18:/tmp/test}",
             "$0"
         ],
         "description": "download a chart from a repository and (optionally) unpack it in local directory.",
@@ -151,15 +151,15 @@
     "Manage Helm repositories.": {
         "prefix": [
             "kubernetes.core.helm_repository",
-            "Manage Helm repositories."
+            "helm_repository Manage Helm repositories."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.helm_repository:",
             "    api_key: ${2:string}",
-            "    binary_path: ${3:path}",
-            "    ca_cert: ${4:path}",
+            "    binary_path: ${3:/tmp/test}",
+            "    ca_cert: ${4:/tmp/test}",
             "    context: ${5:string}",
             "    force_update: ${6|false,true|}",
             "    host: ${7:string}",
@@ -179,20 +179,20 @@
     "Render chart templates": {
         "prefix": [
             "kubernetes.core.helm_template",
-            "Render chart templates"
+            "helm_template Render chart templates"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.helm_template:",
-            "    binary_path: ${2:path}",
-            "    chart_ref: ${3:path}",
+            "    binary_path: ${2:/tmp/test}",
+            "    chart_ref: ${3:/tmp/test}",
             "    chart_repo_url: ${4:string}",
             "    chart_version: ${5:string}",
             "    dependency_update: ${6|false,true|}",
             "    disable_hook: ${7|false,true|}",
             "    include_crds: ${8|false,true|}",
-            "    output_dir: ${9:path}",
+            "    output_dir: ${9:/tmp/test}",
             "    release_name: ${10:string}",
             "    release_namespace: ${11:string}",
             "    set_values:",
@@ -210,7 +210,7 @@
     "Manage Kubernetes (K8s) objects": {
         "prefix": [
             "kubernetes.core.k8s",
-            "Manage Kubernetes (K8s) objects"
+            "k8s Manage Kubernetes (K8s) objects"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -220,9 +220,9 @@
             "    api_version: ${3:v1}",
             "    append_hash: ${4|false,true|}",
             "    apply: ${5|false,true|}",
-            "    ca_cert: ${6:path}",
-            "    client_cert: ${7:path}",
-            "    client_key: ${8:path}",
+            "    ca_cert: ${6:/tmp/test}",
+            "    client_cert: ${7:/tmp/test}",
+            "    client_key: ${8:/tmp/test}",
             "    context: ${9:string}",
             "    continue_on_error: ${10|false,true|}",
             "    force: ${12|false,true|}",
@@ -235,15 +235,14 @@
             "    kubeconfig: ${18:\"raw\"}",
             "    label_selectors:",
             "      - ${19:element}",
-            "    merge_type:",
-            "      - ${20:element}",
+            "    merge_type: ${20|json,merge,strategic-merge|}",
             "    name: ${21:string}",
             "    namespace: ${22:string}",
             "    no_proxy: ${23:string}",
             "    password: ${24:string}",
             "    persist_config: ${25|false,true|}",
             "    proxy: ${26:string}",
-            "    src: ${30:path}",
+            "    src: ${30:/tmp/test}",
             "    state: ${31|present,absent,patched|}",
             "    template: ${32:\"raw\"}",
             "    username: ${33:string}",
@@ -259,16 +258,16 @@
     "Describe Kubernetes (K8s) cluster, APIs available and their respective versions": {
         "prefix": [
             "kubernetes.core.k8s_cluster_info",
-            "Describe Kubernetes (K8s) cluster, APIs available and their respective versions"
+            "k8s_cluster_info Describe Kubernetes (K8s) cluster, APIs available and their respective versions"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.k8s_cluster_info:",
             "    api_key: ${2:string}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    context: ${6:string}",
             "    host: ${7:string}",
             "    impersonate_groups:",
@@ -290,16 +289,16 @@
     "Copy files and directories to and from pod.": {
         "prefix": [
             "kubernetes.core.k8s_cp",
-            "Copy files and directories to and from pod."
+            "k8s_cp Copy files and directories to and from pod."
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.k8s_cp:",
             "    api_key: ${2:string}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    container: ${6:string}",
             "    content: ${7:string}",
             "    context: ${8:string}",
@@ -308,7 +307,7 @@
             "      - ${10:element}",
             "    impersonate_user: ${11:string}",
             "    kubeconfig: ${12:\"raw\"}",
-            "    local_path: ${13:path}",
+            "    local_path: ${13:/tmp/test}",
             "    namespace: ${14:string}",
             "    no_preserve: ${15|false,true|}",
             "    no_proxy: ${16:string}",
@@ -316,7 +315,7 @@
             "    persist_config: ${18|false,true|}",
             "    pod: ${19:string}",
             "    proxy: ${20:string}",
-            "    remote_path: ${22:path}",
+            "    remote_path: ${22:/tmp/test}",
             "    state: ${23|to_pod,from_pod|}",
             "    username: ${24:string}",
             "    validate_certs: ${25|false,true|}",
@@ -328,16 +327,16 @@
     "Drain, Cordon, or Uncordon node in k8s cluster": {
         "prefix": [
             "kubernetes.core.k8s_drain",
-            "Drain, Cordon, or Uncordon node in k8s cluster"
+            "k8s_drain Drain, Cordon, or Uncordon node in k8s cluster"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.k8s_drain:",
             "    api_key: ${2:string}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    context: ${6:string}",
             "    host: ${8:string}",
             "    impersonate_groups:",
@@ -360,16 +359,16 @@
     "Execute command in Pod": {
         "prefix": [
             "kubernetes.core.k8s_exec",
-            "Execute command in Pod"
+            "k8s_exec Execute command in Pod"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.k8s_exec:",
             "    api_key: ${2:string}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    command: ${6:string}",
             "    container: ${7:string}",
             "    context: ${8:string}",
@@ -394,7 +393,7 @@
     "Describe Kubernetes (K8s) objects": {
         "prefix": [
             "kubernetes.core.k8s_info",
-            "Describe Kubernetes (K8s) objects"
+            "k8s_info Describe Kubernetes (K8s) objects"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -402,9 +401,9 @@
             "  kubernetes.core.k8s_info:",
             "    api_key: ${2:string}",
             "    api_version: ${3:v1}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    context: ${7:string}",
             "    field_selectors:",
             "      - ${8:element}",
@@ -435,7 +434,7 @@
     "Apply JSON patch operations to existing objects": {
         "prefix": [
             "kubernetes.core.k8s_json_patch",
-            "Apply JSON patch operations to existing objects"
+            "k8s_json_patch Apply JSON patch operations to existing objects"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -443,9 +442,9 @@
             "  kubernetes.core.k8s_json_patch:",
             "    api_key: ${2:string}",
             "    api_version: ${3:v1}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    context: ${7:string}",
             "    host: ${8:string}",
             "    impersonate_groups:",
@@ -474,7 +473,7 @@
     "Fetch logs from Kubernetes resources": {
         "prefix": [
             "kubernetes.core.k8s_log",
-            "Fetch logs from Kubernetes resources"
+            "k8s_log Fetch logs from Kubernetes resources"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -483,9 +482,9 @@
             "    all_containers: ${2|false,true|}",
             "    api_key: ${3:string}",
             "    api_version: ${4:v1}",
-            "    ca_cert: ${5:path}",
-            "    client_cert: ${6:path}",
-            "    client_key: ${7:path}",
+            "    ca_cert: ${5:/tmp/test}",
+            "    client_cert: ${6:/tmp/test}",
+            "    client_key: ${7:/tmp/test}",
             "    container: ${8:string}",
             "    context: ${9:string}",
             "    host: ${10:string}",
@@ -515,7 +514,7 @@
     "Rollback Kubernetes (K8S) Deployments and DaemonSets": {
         "prefix": [
             "kubernetes.core.k8s_rollback",
-            "Rollback Kubernetes (K8S) Deployments and DaemonSets"
+            "k8s_rollback Rollback Kubernetes (K8S) Deployments and DaemonSets"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -523,9 +522,9 @@
             "  kubernetes.core.k8s_rollback:",
             "    api_key: ${2:string}",
             "    api_version: ${3:v1}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    context: ${7:string}",
             "    field_selectors:",
             "      - ${8:element}",
@@ -553,7 +552,7 @@
     "Set a new size for a Deployment, ReplicaSet, Replication Controller, or Job.": {
         "prefix": [
             "kubernetes.core.k8s_scale",
-            "Set a new size for a Deployment, ReplicaSet, Replication Controller, or Job."
+            "k8s_scale Set a new size for a Deployment, ReplicaSet, Replication Controller, or Job."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -561,9 +560,9 @@
             "  kubernetes.core.k8s_scale:",
             "    api_key: ${2:string}",
             "    api_version: ${3:v1}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    context: ${7:string}",
             "    continue_on_error: ${8|false,true|}",
             "    current_replicas: ${9:int}",
@@ -583,7 +582,7 @@
             "    proxy: ${21:string}",
             "    replicas: ${23:int}",
             "    resource_version: ${25:string}",
-            "    src: ${26:path}",
+            "    src: ${26:/tmp/test}",
             "    username: ${27:string}",
             "    validate_certs: ${28|false,true|}",
             "    wait: ${29|true,false|}",
@@ -597,7 +596,7 @@
     "Manage Services on Kubernetes": {
         "prefix": [
             "kubernetes.core.k8s_service",
-            "Manage Services on Kubernetes"
+            "k8s_service Manage Services on Kubernetes"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -605,9 +604,9 @@
             "  kubernetes.core.k8s_service:",
             "    api_key: ${2:string}",
             "    apply: ${3|false,true|}",
-            "    ca_cert: ${4:path}",
-            "    client_cert: ${5:path}",
-            "    client_key: ${6:path}",
+            "    ca_cert: ${4:/tmp/test}",
+            "    client_cert: ${5:/tmp/test}",
+            "    client_key: ${6:/tmp/test}",
             "    context: ${7:string}",
             "    force: ${8|false,true|}",
             "    host: ${9:string}",
@@ -615,8 +614,7 @@
             "      - ${10:element}",
             "    impersonate_user: ${11:string}",
             "    kubeconfig: ${12:\"raw\"}",
-            "    merge_type:",
-            "      - ${13:element}",
+            "    merge_type: ${13|json,merge,strategic-merge|}",
             "    name: ${14:string}",
             "    namespace: ${15:string}",
             "    no_proxy: ${16:string}",
@@ -625,9 +623,9 @@
             "    ports:",
             "      - ${19:element}",
             "    proxy: ${20:string}",
-            "    src: ${24:path}",
+            "    src: ${24:/tmp/test}",
             "    state: ${25|present,absent|}",
-            "    type: ${26:string}",
+            "    type: ${26|NodePort,ClusterIP,LoadBalancer,ExternalName|}",
             "    username: ${27:string}",
             "    validate_certs: ${28|false,true|}",
             "$0"
@@ -638,16 +636,16 @@
     "Taint a node in a Kubernetes/OpenShift cluster": {
         "prefix": [
             "kubernetes.core.k8s_taint",
-            "Taint a node in a Kubernetes/OpenShift cluster"
+            "k8s_taint Taint a node in a Kubernetes/OpenShift cluster"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  kubernetes.core.k8s_taint:",
             "    api_key: ${2:string}",
-            "    ca_cert: ${3:path}",
-            "    client_cert: ${4:path}",
-            "    client_key: ${5:path}",
+            "    ca_cert: ${3:/tmp/test}",
+            "    client_cert: ${4:/tmp/test}",
+            "    client_key: ${5:/tmp/test}",
             "    context: ${6:string}",
             "    host: ${7:string}",
             "    impersonate_groups:",

@@ -2,7 +2,7 @@
     "Add a host (and alternatively a group) to the ansible-playbook in-memory inventory": {
         "prefix": [
             "ansible.builtin.add_host",
-            "Add a host (and alternatively a group) to the ansible-playbook in-memory inventory"
+            "add_host Add a host (and alternatively a group) to the ansible-playbook in-memory inventory"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -10,7 +10,7 @@
             "  ansible.builtin.add_host:",
             "    groups:",
             "      - ${2:element}",
-            "    name: ${3:string}",
+            "    name: ${3:group}",
             "$0"
         ],
         "description": "Add a host (and alternatively a group) to the ansible-playbook in-memory inventory",
@@ -19,7 +19,7 @@
     "Manages apt-packages": {
         "prefix": [
             "ansible.builtin.apt",
-            "Manages apt-packages"
+            "apt Manages apt-packages"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -58,7 +58,7 @@
     "Add or remove an apt key": {
         "prefix": [
             "ansible.builtin.apt_key",
-            "Add or remove an apt key"
+            "apt_key Add or remove an apt key"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -80,7 +80,7 @@
     "Add and remove APT repositories": {
         "prefix": [
             "ansible.builtin.apt_repository",
-            "Add and remove APT repositories"
+            "apt_repository Add and remove APT repositories"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -104,7 +104,7 @@
     "Assemble configuration files from fragments": {
         "prefix": [
             "ansible.builtin.assemble",
-            "Assemble configuration files from fragments"
+            "assemble Assemble configuration files from fragments"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -136,7 +136,7 @@
     "Asserts given expressions are true": {
         "prefix": [
             "ansible.builtin.assert",
-            "Asserts given expressions are true"
+            "assert Asserts given expressions are true"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -155,7 +155,7 @@
     "Obtain status of asynchronous task": {
         "prefix": [
             "ansible.builtin.async_status",
-            "Obtain status of asynchronous task"
+            "async_status Obtain status of asynchronous task"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -171,7 +171,7 @@
     "Insert/update/remove a text block surrounded by marker lines": {
         "prefix": [
             "ansible.builtin.blockinfile",
-            "Insert/update/remove a text block surrounded by marker lines"
+            "blockinfile Insert/update/remove a text block surrounded by marker lines"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -205,7 +205,7 @@
     "Execute commands on targets": {
         "prefix": [
             "ansible.builtin.command",
-            "Execute commands on targets"
+            "command Execute commands on targets"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -228,7 +228,7 @@
     "Copy files to remote locations": {
         "prefix": [
             "ansible.builtin.copy",
-            "Copy files to remote locations"
+            "copy Copy files to remote locations"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -252,7 +252,7 @@
     "Manage cron.d and crontab entries": {
         "prefix": [
             "ansible.builtin.cron",
-            "Manage cron.d and crontab entries"
+            "cron Manage cron.d and crontab entries"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -282,7 +282,7 @@
     "Configure a .deb package": {
         "prefix": [
             "ansible.builtin.debconf",
-            "Configure a .deb package"
+            "debconf Configure a .deb package"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -301,15 +301,14 @@
     "Print statements during execution": {
         "prefix": [
             "ansible.builtin.debug",
-            "Print statements during execution"
+            "debug Print statements during execution"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  ansible.builtin.debug:",
             "    msg: ${2:Hello world!}",
-            "    var: ${3:string}",
-            "    verbosity: ${4:0}",
+            "    verbosity: ${3:0}",
             "$0"
         ],
         "description": "Print statements during execution",
@@ -318,7 +317,7 @@
     "Manages packages with the I(dnf) package manager": {
         "prefix": [
             "ansible.builtin.dnf",
-            "Manages packages with the I(dnf) package manager"
+            "dnf Manages packages with the I(dnf) package manager"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -368,7 +367,7 @@
     "Dpkg package selection selections": {
         "prefix": [
             "ansible.builtin.dpkg_selections",
-            "Dpkg package selection selections"
+            "dpkg_selections Dpkg package selection selections"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -384,7 +383,7 @@
     "Executes a command and responds to prompts": {
         "prefix": [
             "ansible.builtin.expect",
-            "Executes a command and responds to prompts"
+            "expect Executes a command and responds to prompts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -404,7 +403,7 @@
     "Fail with custom message": {
         "prefix": [
             "ansible.builtin.fail",
-            "Fail with custom message"
+            "fail Fail with custom message"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -419,7 +418,7 @@
     "Fetch files from remote nodes": {
         "prefix": [
             "ansible.builtin.fetch",
-            "Fetch files from remote nodes"
+            "fetch Fetch files from remote nodes"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -436,7 +435,7 @@
     "Manage files and file properties": {
         "prefix": [
             "ansible.builtin.file",
-            "Manage files and file properties"
+            "file Manage files and file properties"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -458,7 +457,7 @@
     "Return a list of files based on specific criteria": {
         "prefix": [
             "ansible.builtin.find",
-            "Return a list of files based on specific criteria"
+            "find Return a list of files based on specific criteria"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -490,7 +489,7 @@
     "Gathers facts about remote hosts": {
         "prefix": [
             "ansible.builtin.setup",
-            "Gathers facts about remote hosts"
+            "setup Gathers facts about remote hosts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -510,7 +509,7 @@
     "Downloads files from HTTP, HTTPS, or FTP to node": {
         "prefix": [
             "ansible.builtin.get_url",
-            "Downloads files from HTTP, HTTPS, or FTP to node"
+            "get_url Downloads files from HTTP, HTTPS, or FTP to node"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -555,7 +554,7 @@
     "A wrapper to the unix getent utility": {
         "prefix": [
             "ansible.builtin.getent",
-            "A wrapper to the unix getent utility"
+            "getent A wrapper to the unix getent utility"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -574,7 +573,7 @@
     "Deploy software (or files) from git checkouts": {
         "prefix": [
             "ansible.builtin.git",
-            "Deploy software (or files) from git checkouts"
+            "git Deploy software (or files) from git checkouts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -613,7 +612,7 @@
     "Add or remove groups": {
         "prefix": [
             "ansible.builtin.group",
-            "Add or remove groups"
+            "group Add or remove groups"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -633,7 +632,7 @@
     "Create Ansible groups based on facts": {
         "prefix": [
             "ansible.builtin.group_by",
-            "Create Ansible groups based on facts"
+            "group_by Create Ansible groups based on facts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -650,7 +649,7 @@
     "Manage hostname": {
         "prefix": [
             "ansible.builtin.hostname",
-            "Manage hostname"
+            "hostname Manage hostname"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -666,7 +665,7 @@
     "Import a playbook": {
         "prefix": [
             "ansible.builtin.import_playbook",
-            "Import a playbook"
+            "import_playbook Import a playbook"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -680,7 +679,7 @@
     "Import a role into a play": {
         "prefix": [
             "ansible.builtin.import_role",
-            "Import a role into a play"
+            "import_role Import a role into a play"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -701,7 +700,7 @@
     "Import a task list": {
         "prefix": [
             "ansible.builtin.import_tasks",
-            "Import a task list"
+            "import_tasks Import a task list"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -716,7 +715,7 @@
     "Load and execute a role": {
         "prefix": [
             "ansible.builtin.include_role",
-            "Load and execute a role"
+            "include_role Load and execute a role"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -738,7 +737,7 @@
     "Dynamically include a task list": {
         "prefix": [
             "ansible.builtin.include_tasks",
-            "Dynamically include a task list"
+            "include_tasks Dynamically include a task list"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -754,7 +753,7 @@
     "Load variables from files, dynamically within a task": {
         "prefix": [
             "ansible.builtin.include_vars",
-            "Load variables from files, dynamically within a task"
+            "include_vars Load variables from files, dynamically within a task"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -779,7 +778,7 @@
     "Modify iptables rules": {
         "prefix": [
             "ansible.builtin.iptables",
-            "Modify iptables rules"
+            "iptables Modify iptables rules"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -840,7 +839,7 @@
     "Add or remove a host from the C(known_hosts) file": {
         "prefix": [
             "ansible.builtin.known_hosts",
-            "Add or remove a host from the C(known_hosts) file"
+            "known_hosts Add or remove a host from the C(known_hosts) file"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -859,7 +858,7 @@
     "Manage lines in text files": {
         "prefix": [
             "ansible.builtin.lineinfile",
-            "Manage lines in text files"
+            "lineinfile Manage lines in text files"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -895,7 +894,7 @@
     "Execute Ansible 'actions'": {
         "prefix": [
             "ansible.builtin.meta",
-            "Execute Ansible 'actions'"
+            "meta Execute Ansible 'actions'"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -910,7 +909,7 @@
     "Generic OS package manager": {
         "prefix": [
             "ansible.builtin.package",
-            "Generic OS package manager"
+            "package Generic OS package manager"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -924,7 +923,7 @@
     "Package information as facts": {
         "prefix": [
             "ansible.builtin.package_facts",
-            "Package information as facts"
+            "package_facts Package information as facts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -940,7 +939,7 @@
     "Pause playbook execution": {
         "prefix": [
             "ansible.builtin.pause",
-            "Pause playbook execution"
+            "pause Pause playbook execution"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -955,7 +954,7 @@
     "Try to connect to host, verify a usable python and return C(pong) on success": {
         "prefix": [
             "ansible.builtin.ping",
-            "Try to connect to host, verify a usable python and return C(pong) on success"
+            "ping Try to connect to host, verify a usable python and return C(pong) on success"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -970,7 +969,7 @@
     "Manages Python library dependencies": {
         "prefix": [
             "ansible.builtin.pip",
-            "Manages Python library dependencies"
+            "pip Manages Python library dependencies"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -998,7 +997,7 @@
     "Executes a low-down and dirty command": {
         "prefix": [
             "ansible.builtin.raw",
-            "Executes a low-down and dirty command"
+            "raw Executes a low-down and dirty command"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1012,7 +1011,7 @@
     "Reboot a machine": {
         "prefix": [
             "ansible.builtin.reboot",
-            "Reboot a machine"
+            "reboot Reboot a machine"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1036,7 +1035,7 @@
     "Replace all instances of a particular string in a file using a back-referenced regular expression": {
         "prefix": [
             "ansible.builtin.replace",
-            "Replace all instances of a particular string in a file using a back-referenced regular expression"
+            "replace Replace all instances of a particular string in a file using a back-referenced regular expression"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1068,7 +1067,7 @@
     "Adds or removes a gpg key from the rpm db": {
         "prefix": [
             "ansible.builtin.rpm_key",
-            "Adds or removes a gpg key from the rpm db"
+            "rpm_key Adds or removes a gpg key from the rpm db"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1086,7 +1085,7 @@
     "Runs a local script on a remote node after transferring it": {
         "prefix": [
             "ansible.builtin.script",
-            "Runs a local script on a remote node after transferring it"
+            "script Runs a local script on a remote node after transferring it"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1102,7 +1101,7 @@
     "Manage services": {
         "prefix": [
             "ansible.builtin.service",
-            "Manage services"
+            "service Manage services"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1124,7 +1123,7 @@
     "Return service state information as fact data": {
         "prefix": [
             "ansible.builtin.service_facts",
-            "Return service state information as fact data"
+            "service_facts Return service state information as fact data"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1138,7 +1137,7 @@
     "Set host variable(s) and fact(s).": {
         "prefix": [
             "ansible.builtin.set_fact",
-            "Set host variable(s) and fact(s)."
+            "set_fact Set host variable(s) and fact(s)."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1153,7 +1152,7 @@
     "Define and display stats for the current ansible run": {
         "prefix": [
             "ansible.builtin.set_stats",
-            "Define and display stats for the current ansible run"
+            "set_stats Define and display stats for the current ansible run"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1169,7 +1168,7 @@
     "Execute shell commands on targets": {
         "prefix": [
             "ansible.builtin.shell",
-            "Execute shell commands on targets"
+            "shell Execute shell commands on targets"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1191,7 +1190,7 @@
     "Slurps a file from remote nodes": {
         "prefix": [
             "ansible.builtin.slurp",
-            "Slurps a file from remote nodes"
+            "slurp Slurps a file from remote nodes"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1206,7 +1205,7 @@
     "Retrieve file or file system status": {
         "prefix": [
             "ansible.builtin.stat",
-            "Retrieve file or file system status"
+            "stat Retrieve file or file system status"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1226,7 +1225,7 @@
     "Deploys a subversion repository": {
         "prefix": [
             "ansible.builtin.subversion",
-            "Deploys a subversion repository"
+            "subversion Deploys a subversion repository"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1253,7 +1252,7 @@
     "Manage systemd units": {
         "prefix": [
             "ansible.builtin.systemd_service",
-            "Manage systemd units"
+            "systemd_service Manage systemd units"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1276,7 +1275,7 @@
     "Manage SysV services.": {
         "prefix": [
             "ansible.builtin.sysvinit",
-            "Manage SysV services."
+            "sysvinit Manage SysV services."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1299,7 +1298,7 @@
     "Creates temporary files and directories": {
         "prefix": [
             "ansible.builtin.tempfile",
-            "Creates temporary files and directories"
+            "tempfile Creates temporary files and directories"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1317,7 +1316,7 @@
     "Template a file out to a target host": {
         "prefix": [
             "ansible.builtin.template",
-            "Template a file out to a target host"
+            "template Template a file out to a target host"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1356,7 +1355,7 @@
     "Unpacks an archive after (optionally) copying it from the local machine": {
         "prefix": [
             "ansible.builtin.unarchive",
-            "Unpacks an archive after (optionally) copying it from the local machine"
+            "unarchive Unpacks an archive after (optionally) copying it from the local machine"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1395,7 +1394,7 @@
     "Interacts with webservices": {
         "prefix": [
             "ansible.builtin.uri",
-            "Interacts with webservices"
+            "uri Interacts with webservices"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1450,7 +1449,7 @@
     "Manage user accounts": {
         "prefix": [
             "ansible.builtin.user",
-            "Manage user accounts"
+            "user Manage user accounts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1500,7 +1499,7 @@
     "Validate role argument specs.": {
         "prefix": [
             "ansible.builtin.validate_argument_spec",
-            "Validate role argument specs."
+            "validate_argument_spec Validate role argument specs."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1514,7 +1513,7 @@
     "Waits for a condition before continuing": {
         "prefix": [
             "ansible.builtin.wait_for",
-            "Waits for a condition before continuing"
+            "wait_for Waits for a condition before continuing"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1542,7 +1541,7 @@
     "Waits until remote system is reachable/usable": {
         "prefix": [
             "ansible.builtin.wait_for_connection",
-            "Waits until remote system is reachable/usable"
+            "wait_for_connection Waits until remote system is reachable/usable"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1560,7 +1559,7 @@
     "Manages packages with the I(yum) package manager": {
         "prefix": [
             "ansible.builtin.yum",
-            "Manages packages with the I(yum) package manager"
+            "yum Manages packages with the I(yum) package manager"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -1609,7 +1608,7 @@
     "Add or remove YUM repositories": {
         "prefix": [
             "ansible.builtin.yum_repository",
-            "Add or remove YUM repositories"
+            "yum_repository Add or remove YUM repositories"
         ],
         "body": [
             "- name: ${1:Description}",

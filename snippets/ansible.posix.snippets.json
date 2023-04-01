@@ -2,7 +2,7 @@
     "Set and retrieve file ACL information.": {
         "prefix": [
             "ansible.posix.acl",
-            "Set and retrieve file ACL information."
+            "acl Set and retrieve file ACL information."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -11,9 +11,9 @@
             "    default: ${2|false,true|}",
             "    entity: ${3:}",
             "    entry: ${4:string}",
-            "    etype: ${5:string}",
+            "    etype: ${5|group,mask,other,user|}",
             "    follow: ${6|true,false|}",
-            "    path: ${7:path}",
+            "    path: ${7:/tmp/test}",
             "    permissions: ${8:string}",
             "    recalculate_mask: ${9|default,mask,no_mask|}",
             "    recursive: ${10|false,true|}",
@@ -27,7 +27,7 @@
     "Schedule the execution of a command or script file via the at command": {
         "prefix": [
             "ansible.posix.at",
-            "Schedule the execution of a command or script file via the at command"
+            "at Schedule the execution of a command or script file via the at command"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -38,7 +38,7 @@
             "    script_file: ${4:string}",
             "    state: ${5|present,absent|}",
             "    unique: ${6|false,true|}",
-            "    units: ${7:string}",
+            "    units: ${7|minutes,hours,days,weeks|}",
             "$0"
         ],
         "description": "Schedule the execution of a command or script file via the at command",
@@ -47,7 +47,7 @@
     "Adds or removes an SSH authorized key": {
         "prefix": [
             "ansible.posix.authorized_key",
-            "Adds or removes an SSH authorized key"
+            "authorized_key Adds or removes an SSH authorized key"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -59,7 +59,7 @@
             "    key: ${5:string}",
             "    key_options: ${6:string}",
             "    manage_dir: ${7|true,false|}",
-            "    path: ${8:path}",
+            "    path: ${8:/tmp/test}",
             "    state: ${9|present,absent|}",
             "    user: ${10:string}",
             "    validate_certs: ${11|true,false|}",
@@ -71,7 +71,7 @@
     "Manage arbitrary ports/services with firewalld": {
         "prefix": [
             "ansible.posix.firewalld",
-            "Manage arbitrary ports/services with firewalld"
+            "firewalld Manage arbitrary ports/services with firewalld"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -90,8 +90,8 @@
             "    rich_rule: ${11:string}",
             "    service: ${12:string}",
             "    source: ${13:string}",
-            "    state: ${14:string}",
-            "    target: ${15:string}",
+            "    state: ${14|absent,disabled,enabled,present|}",
+            "    target: ${15|default,ACCEPT,DROP,%%REJECT%%|}",
             "    timeout: ${16:0}",
             "    zone: ${17:string}",
             "$0"
@@ -102,7 +102,7 @@
     "Gather information about firewalld": {
         "prefix": [
             "ansible.posix.firewalld_info",
-            "Gather information about firewalld"
+            "firewalld_info Gather information about firewalld"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -119,7 +119,7 @@
     "Control active and configured mount points": {
         "prefix": [
             "ansible.posix.mount",
-            "Control active and configured mount points"
+            "mount Control active and configured mount points"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -132,9 +132,9 @@
             "    fstype: ${6:string}",
             "    opts: ${7:string}",
             "    passno: ${8:0}",
-            "    path: ${9:path}",
-            "    src: ${10:path}",
-            "    state: ${11:string}",
+            "    path: ${9:/tmp/test}",
+            "    src: ${10:/tmp/test}",
+            "    state: ${11|absent,absent_from_fstab,mounted,present,unmounted,remounted,ephemeral|}",
             "$0"
         ],
         "description": "Control active and configured mount points",
@@ -143,19 +143,19 @@
     "Apply patch files using the GNU patch tool": {
         "prefix": [
             "ansible.posix.patch",
-            "Apply patch files using the GNU patch tool"
+            "patch Apply patch files using the GNU patch tool"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  ansible.posix.patch:",
             "    backup: ${2|false,true|}",
-            "    basedir: ${3:path}",
+            "    basedir: ${3:/tmp/test}",
             "    binary: ${4|false,true|}",
-            "    dest: ${5:path}",
+            "    dest: ${5:/tmp/test}",
             "    ignore_whitespace: ${6|false,true|}",
             "    remote_src: ${7|false,true|}",
-            "    src: ${8:path}",
+            "    src: ${8:/tmp/test}",
             "    state: ${9|present,absent|}",
             "    strip: ${10:0}",
             "$0"
@@ -166,7 +166,7 @@
     "Facts module to set or override RHEL specific facts.": {
         "prefix": [
             "ansible.posix.rhel_facts",
-            "Facts module to set or override RHEL specific facts."
+            "rhel_facts Facts module to set or override RHEL specific facts."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -180,7 +180,7 @@
     "Ensure packages exist in a RHEL for Edge rpm-ostree based system": {
         "prefix": [
             "ansible.posix.rhel_rpm_ostree",
-            "Ensure packages exist in a RHEL for Edge rpm-ostree based system"
+            "rhel_rpm_ostree Ensure packages exist in a RHEL for Edge rpm-ostree based system"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -188,7 +188,7 @@
             "  ansible.posix.rhel_rpm_ostree:",
             "    name:",
             "      - ${2:element}",
-            "    state: ${3:string}",
+            "    state: ${3|absent,installed,latest,present,removed|}",
             "$0"
         ],
         "description": "Ensure packages exist in a RHEL for Edge rpm-ostree based system",
@@ -197,7 +197,7 @@
     "Manage rpm-ostree upgrade transactions": {
         "prefix": [
             "ansible.posix.rpm_ostree_upgrade",
-            "Manage rpm-ostree upgrade transactions"
+            "rpm_ostree_upgrade Manage rpm-ostree upgrade transactions"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -215,7 +215,7 @@
     "Toggles SELinux booleans": {
         "prefix": [
             "ansible.posix.seboolean",
-            "Toggles SELinux booleans"
+            "seboolean Toggles SELinux booleans"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -233,7 +233,7 @@
     "Change policy and state of SELinux": {
         "prefix": [
             "ansible.posix.selinux",
-            "Change policy and state of SELinux"
+            "selinux Change policy and state of SELinux"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -241,7 +241,7 @@
             "  ansible.posix.selinux:",
             "    configfile: ${2:/etc/selinux/config}",
             "    policy: ${3:string}",
-            "    state: ${4:string}",
+            "    state: ${4|disabled,enforcing,permissive|}",
             "    update_kernel_param: ${5|false,true|}",
             "$0"
         ],
@@ -251,7 +251,7 @@
     "A wrapper around rsync to make common tasks in your playbooks quick and easy": {
         "prefix": [
             "ansible.posix.synchronize",
-            "A wrapper around rsync to make common tasks in your playbooks quick and easy"
+            "synchronize A wrapper around rsync to make common tasks in your playbooks quick and easy"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -275,7 +275,7 @@
             "    owner: ${16|false,true|}",
             "    partial: ${17|false,true|}",
             "    perms: ${18|false,true|}",
-            "    private_key: ${19:path}",
+            "    private_key: ${19:/tmp/test}",
             "    recursive: ${20|false,true|}",
             "    rsync_opts:",
             "      - ${21:element}",
@@ -295,7 +295,7 @@
     "Manage entries in sysctl.conf.": {
         "prefix": [
             "ansible.posix.sysctl",
-            "Manage entries in sysctl.conf."
+            "sysctl Manage entries in sysctl.conf."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -305,7 +305,7 @@
             "    name: ${3:string}",
             "    reload: ${4|true,false|}",
             "    state: ${5|present,absent|}",
-            "    sysctl_file: ${6:path}",
+            "    sysctl_file: ${6:/tmp/test}",
             "    sysctl_set: ${7|false,true|}",
             "    value: ${8:string}",
             "$0"

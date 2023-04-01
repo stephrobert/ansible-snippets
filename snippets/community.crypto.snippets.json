@@ -2,7 +2,7 @@
     "Create, modify or delete ACME accounts": {
         "prefix": [
             "community.crypto.acme_account",
-            "Create, modify or delete ACME accounts"
+            "acme_account Create, modify or delete ACME accounts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -10,19 +10,19 @@
             "  community.crypto.acme_account:",
             "    account_key_content: ${2:string}",
             "    account_key_passphrase: ${3:string}",
-            "    account_key_src: ${4:path}",
+            "    account_key_src: ${4:/tmp/test}",
             "    account_uri: ${5:string}",
             "    acme_directory: ${6:string}",
-            "    acme_version: ${7:int}",
+            "    acme_version: ${7|1,2|}",
             "    allow_creation: ${8|true,false|}",
             "    contact:",
             "      - ${9:element}",
             "    new_account_key_content: ${11:string}",
             "    new_account_key_passphrase: ${12:string}",
-            "    new_account_key_src: ${13:path}",
+            "    new_account_key_src: ${13:/tmp/test}",
             "    request_timeout: ${14:10}",
             "    select_crypto_backend: ${15|auto,cryptography,openssl|}",
-            "    state: ${16:string}",
+            "    state: ${16|present,absent,changed_key|}",
             "    terms_agreed: ${17|false,true|}",
             "    validate_certs: ${18|true,false|}",
             "$0"
@@ -33,7 +33,7 @@
     "Retrieves information on ACME accounts": {
         "prefix": [
             "community.crypto.acme_account_info",
-            "Retrieves information on ACME accounts"
+            "acme_account_info Retrieves information on ACME accounts"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -41,10 +41,10 @@
             "  community.crypto.acme_account_info:",
             "    account_key_content: ${2:string}",
             "    account_key_passphrase: ${3:string}",
-            "    account_key_src: ${4:path}",
+            "    account_key_src: ${4:/tmp/test}",
             "    account_uri: ${5:string}",
             "    acme_directory: ${6:string}",
-            "    acme_version: ${7:int}",
+            "    acme_version: ${7|1,2|}",
             "    request_timeout: ${8:10}",
             "    retrieve_orders: ${9|ignore,url_list,object_list|}",
             "    select_crypto_backend: ${10|auto,cryptography,openssl|}",
@@ -57,7 +57,7 @@
     "Create SSL/TLS certificates with the ACME protocol": {
         "prefix": [
             "community.crypto.acme_certificate",
-            "Create SSL/TLS certificates with the ACME protocol"
+            "acme_certificate Create SSL/TLS certificates with the ACME protocol"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -66,19 +66,19 @@
             "    account_email: ${2:string}",
             "    account_key_content: ${3:string}",
             "    account_key_passphrase: ${4:string}",
-            "    account_key_src: ${5:path}",
+            "    account_key_src: ${5:/tmp/test}",
             "    account_uri: ${6:string}",
             "    acme_directory: ${7:string}",
-            "    acme_version: ${8:int}",
+            "    acme_version: ${8|1,2|}",
             "    agreement: ${9:string}",
-            "    chain_dest: ${10:path}",
+            "    chain_dest: ${10:/tmp/test}",
             "    challenge: ${11|http-01,dns-01,tls-alpn-01|}",
-            "    csr: ${12:path}",
+            "    csr: ${12:/tmp/test}",
             "    csr_content: ${13:string}",
             "    deactivate_authzs: ${15|false,true|}",
-            "    dest: ${16:path}",
+            "    dest: ${16:/tmp/test}",
             "    force: ${17|false,true|}",
-            "    fullchain_dest: ${18:path}",
+            "    fullchain_dest: ${18:/tmp/test}",
             "    modify_account: ${19|true,false|}",
             "    remaining_days: ${20:10}",
             "    request_timeout: ${21:10}",
@@ -96,7 +96,7 @@
     "Revoke certificates with the ACME protocol": {
         "prefix": [
             "community.crypto.acme_certificate_revoke",
-            "Revoke certificates with the ACME protocol"
+            "acme_certificate_revoke Revoke certificates with the ACME protocol"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -104,14 +104,14 @@
             "  community.crypto.acme_certificate_revoke:",
             "    account_key_content: ${2:string}",
             "    account_key_passphrase: ${3:string}",
-            "    account_key_src: ${4:path}",
+            "    account_key_src: ${4:/tmp/test}",
             "    account_uri: ${5:string}",
             "    acme_directory: ${6:string}",
-            "    acme_version: ${7:int}",
-            "    certificate: ${8:path}",
+            "    acme_version: ${7|1,2|}",
+            "    certificate: ${8:/tmp/test}",
             "    private_key_content: ${9:string}",
             "    private_key_passphrase: ${10:string}",
-            "    private_key_src: ${11:path}",
+            "    private_key_src: ${11:/tmp/test}",
             "    request_timeout: ${12:10}",
             "    revoke_reason: ${13:int}",
             "    select_crypto_backend: ${14|auto,cryptography,openssl|}",
@@ -124,16 +124,16 @@
     "Prepare certificates required for ACME challenges such as C(tls-alpn-01)": {
         "prefix": [
             "community.crypto.acme_challenge_cert_helper",
-            "Prepare certificates required for ACME challenges such as C(tls-alpn-01)"
+            "acme_challenge_cert_helper Prepare certificates required for ACME challenges such as C(tls-alpn-01)"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.crypto.acme_challenge_cert_helper:",
-            "    challenge: ${2:string}",
+            "    challenge: ${2|tls-alpn-01|}",
             "    private_key_content: ${4:string}",
             "    private_key_passphrase: ${5:string}",
-            "    private_key_src: ${6:path}",
+            "    private_key_src: ${6:/tmp/test}",
             "$0"
         ],
         "description": "Prepare certificates required for ACME challenges such as C(tls-alpn-01)",
@@ -142,7 +142,7 @@
     "Send direct requests to an ACME server": {
         "prefix": [
             "community.crypto.acme_inspect",
-            "Send direct requests to an ACME server"
+            "acme_inspect Send direct requests to an ACME server"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -150,10 +150,10 @@
             "  community.crypto.acme_inspect:",
             "    account_key_content: ${2:string}",
             "    account_key_passphrase: ${3:string}",
-            "    account_key_src: ${4:path}",
+            "    account_key_src: ${4:/tmp/test}",
             "    account_uri: ${5:string}",
             "    acme_directory: ${6:string}",
-            "    acme_version: ${7:int}",
+            "    acme_version: ${7|1,2|}",
             "    content: ${8:string}",
             "    fail_on_acme_error: ${9|true,false|}",
             "    method: ${10|get,post,directory-only|}",
@@ -169,7 +169,7 @@
     "Complete certificate chain given a set of untrusted and root certificates": {
         "prefix": [
             "community.crypto.certificate_complete_chain",
-            "Complete certificate chain given a set of untrusted and root certificates"
+            "certificate_complete_chain Complete certificate chain given a set of untrusted and root certificates"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -188,7 +188,7 @@
     "Retrieve cryptographic capabilities": {
         "prefix": [
             "community.crypto.crypto_info",
-            "Retrieve cryptographic capabilities"
+            "crypto_info Retrieve cryptographic capabilities"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -202,7 +202,7 @@
     "Request SSL/TLS certificates with the Entrust Certificate Services (ECS) API": {
         "prefix": [
             "community.crypto.ecs_certificate",
-            "Request SSL/TLS certificates with the Entrust Certificate Services (ECS) API"
+            "ecs_certificate Request SSL/TLS certificates with the Entrust Certificate Services (ECS) API"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -212,24 +212,24 @@
             "      - ${2:element}",
             "    backup: ${3|false,true|}",
             "    cert_expiry: ${4:string}",
-            "    cert_lifetime: ${5:string}",
-            "    cert_type: ${6:string}",
+            "    cert_lifetime: ${5|P1Y,P2Y,P3Y|}",
+            "    cert_type: ${6|STANDARD_SSL,ADVANTAGE_SSL,UC_SSL,EV_SSL,WILDCARD_SSL,PRIVATE_SSL,PD_SSL,CODE_SIGNING,EV_CODE_SIGNING,CDS_INDIVIDUAL,CDS_GROUP,CDS_ENT_LITE,CDS_ENT_PRO,SMIME_ENT|}",
             "    client_id: ${7:1}",
             "    csr: ${8:string}",
             "    ct_log: ${9|false,true|}",
-            "    eku: ${11:string}",
+            "    eku: ${11|SERVER_AUTH,CLIENT_AUTH,SERVER_AND_CLIENT_AUTH|}",
             "    end_user_key_storage_agreement: ${12|false,true|}",
-            "    entrust_api_client_cert_key_path: ${13:path}",
-            "    entrust_api_client_cert_path: ${14:path}",
+            "    entrust_api_client_cert_key_path: ${13:/tmp/test}",
+            "    entrust_api_client_cert_path: ${14:/tmp/test}",
             "    entrust_api_key: ${15:string}",
-            "    entrust_api_specification_path: ${16:path}",
+            "    entrust_api_specification_path: ${16:/tmp/test}",
             "    entrust_api_user: ${17:string}",
             "    force: ${18|false,true|}",
-            "    full_chain_path: ${19:path}",
+            "    full_chain_path: ${19:/tmp/test}",
             "    org: ${20:string}",
             "    ou:",
             "      - ${21:element}",
-            "    path: ${22:path}",
+            "    path: ${22:/tmp/test}",
             "    remaining_days: ${23:30}",
             "    request_type: ${24|new,renew,reissue,validate_only|}",
             "    requester_email: ${25:string}",
@@ -247,7 +247,7 @@
     "Request validation of a domain with the Entrust Certificate Services (ECS) API": {
         "prefix": [
             "community.crypto.ecs_domain",
-            "Request validation of a domain with the Entrust Certificate Services (ECS) API"
+            "ecs_domain Request validation of a domain with the Entrust Certificate Services (ECS) API"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -255,13 +255,13 @@
             "  community.crypto.ecs_domain:",
             "    client_id: ${2:1}",
             "    domain_name: ${3:string}",
-            "    entrust_api_client_cert_key_path: ${4:path}",
-            "    entrust_api_client_cert_path: ${5:path}",
+            "    entrust_api_client_cert_key_path: ${4:/tmp/test}",
+            "    entrust_api_client_cert_path: ${5:/tmp/test}",
             "    entrust_api_key: ${6:string}",
-            "    entrust_api_specification_path: ${7:path}",
+            "    entrust_api_specification_path: ${7:/tmp/test}",
             "    entrust_api_user: ${8:string}",
             "    verification_email: ${9:string}",
-            "    verification_method: ${10:string}",
+            "    verification_method: ${10|dns,email,manual,web_server|}",
             "$0"
         ],
         "description": "Request validation of a domain with the Entrust Certificate Services (ECS) API",
@@ -270,13 +270,13 @@
     "Get a certificate from a host:port": {
         "prefix": [
             "community.crypto.get_certificate",
-            "Get a certificate from a host:port"
+            "get_certificate Get a certificate from a host:port"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.crypto.get_certificate:",
-            "    ca_cert: ${2:path}",
+            "    ca_cert: ${2:/tmp/test}",
             "    ciphers:",
             "      - ${3:element}",
             "    host: ${4:string}",
@@ -285,7 +285,7 @@
             "    proxy_port: ${7:8080}",
             "    select_crypto_backend: ${8|auto,cryptography|}",
             "    server_name: ${9:string}",
-            "    starttls: ${10:string}",
+            "    starttls: ${10|mysql|}",
             "    timeout: ${11:10}",
             "$0"
         ],
@@ -295,7 +295,7 @@
     "Manage encrypted (LUKS) devices": {
         "prefix": [
             "community.crypto.luks_device",
-            "Manage encrypted (LUKS) devices"
+            "luks_device Manage encrypted (LUKS) devices"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -305,11 +305,11 @@
             "    device: ${3:string}",
             "    force_remove_last_key: ${4|false,true|}",
             "    hash: ${5:string}",
-            "    keyfile: ${6:path}",
+            "    keyfile: ${6:/tmp/test}",
             "    keysize: ${7:int}",
             "    label: ${8:string}",
             "    name: ${9:string}",
-            "    new_keyfile: ${10:path}",
+            "    new_keyfile: ${10:/tmp/test}",
             "    new_passphrase: ${11:string}",
             "    passphrase: ${12:string}",
             "    perf_no_read_workqueue: ${14|false,true|}",
@@ -317,11 +317,11 @@
             "    perf_same_cpu_crypt: ${16|false,true|}",
             "    perf_submit_from_crypt_cpus: ${17|false,true|}",
             "    persistent: ${18|false,true|}",
-            "    remove_keyfile: ${19:path}",
+            "    remove_keyfile: ${19:/tmp/test}",
             "    remove_passphrase: ${20:string}",
             "    sector_size: ${21:int}",
             "    state: ${22|present,absent,opened,closed|}",
-            "    type: ${23:string}",
+            "    type: ${23|luks1,luks2|}",
             "    uuid: ${24:string}",
             "$0"
         ],
@@ -331,7 +331,7 @@
     "Generate OpenSSH host or user certificates.": {
         "prefix": [
             "community.crypto.openssh_cert",
-            "Generate OpenSSH host or user certificates."
+            "openssh_cert Generate OpenSSH host or user certificates."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -346,21 +346,21 @@
             "    options:",
             "      - ${8:element}",
             "    owner: ${9:string}",
-            "    path: ${10:path}",
+            "    path: ${10:/tmp/test}",
             "    pkcs11_provider: ${11:string}",
             "    principals:",
             "      - ${12:element}",
-            "    public_key: ${13:path}",
+            "    public_key: ${13:/tmp/test}",
             "    regenerate: ${14|partial_idempotence,never,fail,full_idempotence,always|}",
             "    selevel: ${15:string}",
             "    serial_number: ${16:int}",
             "    serole: ${17:string}",
             "    setype: ${18:string}",
             "    seuser: ${19:string}",
-            "    signature_algorithm: ${20:string}",
-            "    signing_key: ${21:path}",
+            "    signature_algorithm: ${20|ssh-rsa,rsa-sha2-256,rsa-sha2-512|}",
+            "    signing_key: ${21:/tmp/test}",
             "    state: ${22|present,absent|}",
-            "    type: ${23:string}",
+            "    type: ${23|host,user|}",
             "    unsafe_writes: ${24|false,true|}",
             "    use_agent: ${25|false,true|}",
             "    valid_at: ${26:string}",
@@ -374,7 +374,7 @@
     "Generate OpenSSH private and public keys": {
         "prefix": [
             "community.crypto.openssh_keypair",
-            "Generate OpenSSH private and public keys"
+            "openssh_keypair Generate OpenSSH private and public keys"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -388,7 +388,7 @@
             "    mode: ${7|\"0755\",\"0750\",\"0700\",\"0644\",\"0640\",\"0600\"|}",
             "    owner: ${8:string}",
             "    passphrase: ${9:string}",
-            "    path: ${10:path}",
+            "    path: ${10:/tmp/test}",
             "    private_key_format: ${11|auto,pkcs1,pkcs8,ssh|}",
             "    regenerate: ${12|partial_idempotence,never,fail,full_idempotence,always|}",
             "    selevel: ${13:string}",
@@ -407,7 +407,7 @@
     "Generate OpenSSL Certificate Signing Request (CSR)": {
         "prefix": [
             "community.crypto.openssl_csr_pipe",
-            "Generate OpenSSL Certificate Signing Request (CSR)"
+            "openssl_csr_pipe Generate OpenSSL Certificate Signing Request (CSR)"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -446,7 +446,7 @@
             "    organizational_unit_name: ${25:string}",
             "    privatekey_content: ${26:string}",
             "    privatekey_passphrase: ${27:string}",
-            "    privatekey_path: ${28:path}",
+            "    privatekey_path: ${28:/tmp/test}",
             "    select_crypto_backend: ${29|auto,cryptography|}",
             "    state_or_province_name: ${30:string}",
             "    subject_alt_name:",
@@ -456,7 +456,7 @@
             "    subject_ordered:",
             "      - ${35:element}",
             "    use_common_name_for_san: ${36|true,false|}",
-            "    version: ${37:1}",
+            "    version: ${37|1|}",
             "$0"
         ],
         "description": "Generate OpenSSL Certificate Signing Request (CSR)",
@@ -465,7 +465,7 @@
     "Provide information of OpenSSL Certificate Signing Requests (CSR)": {
         "prefix": [
             "community.crypto.openssl_csr_info",
-            "Provide information of OpenSSL Certificate Signing Requests (CSR)"
+            "openssl_csr_info Provide information of OpenSSL Certificate Signing Requests (CSR)"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -473,7 +473,7 @@
             "  community.crypto.openssl_csr_info:",
             "    content: ${2:string}",
             "    name_encoding: ${3|ignore,idna,unicode|}",
-            "    path: ${4:path}",
+            "    path: ${4:/tmp/test}",
             "    select_crypto_backend: ${5|auto,cryptography|}",
             "$0"
         ],
@@ -483,7 +483,7 @@
     "Generate OpenSSL Diffie-Hellman Parameters": {
         "prefix": [
             "community.crypto.openssl_dhparam",
-            "Generate OpenSSL Diffie-Hellman Parameters"
+            "openssl_dhparam Generate OpenSSL Diffie-Hellman Parameters"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -495,7 +495,7 @@
             "    group: ${5:string}",
             "    mode: ${6|\"0755\",\"0750\",\"0700\",\"0644\",\"0640\",\"0600\"|}",
             "    owner: ${7:string}",
-            "    path: ${8:path}",
+            "    path: ${8:/tmp/test}",
             "    return_content: ${9|false,true|}",
             "    select_crypto_backend: ${10|auto,cryptography,openssl|}",
             "    selevel: ${11:string}",
@@ -513,7 +513,7 @@
     "Generate OpenSSL PKCS#12 archive": {
         "prefix": [
             "community.crypto.openssl_pkcs12",
-            "Generate OpenSSL PKCS#12 archive"
+            "openssl_pkcs12 Generate OpenSSL PKCS#12 archive"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -522,7 +522,7 @@
             "    action: ${2|export,parse|}",
             "    attributes: ${3:string}",
             "    backup: ${4|false,true|}",
-            "    certificate_path: ${5:path}",
+            "    certificate_path: ${5:/tmp/test}",
             "    encryption_level: ${6|auto,compatibility2022|}",
             "    force: ${7|false,true|}",
             "    friendly_name: ${8:string}",
@@ -535,17 +535,17 @@
             "    other_certificates_parse_all: ${14|false,true|}",
             "    owner: ${15:string}",
             "    passphrase: ${16:string}",
-            "    path: ${17:path}",
+            "    path: ${17:/tmp/test}",
             "    privatekey_content: ${18:string}",
             "    privatekey_passphrase: ${19:string}",
-            "    privatekey_path: ${20:path}",
+            "    privatekey_path: ${20:/tmp/test}",
             "    return_content: ${21|false,true|}",
             "    select_crypto_backend: ${22|auto,cryptography,pyopenssl|}",
             "    selevel: ${23:string}",
             "    serole: ${24:string}",
             "    setype: ${25:string}",
             "    seuser: ${26:string}",
-            "    src: ${27:path}",
+            "    src: ${27:/tmp/test}",
             "    state: ${28|present,absent|}",
             "    unsafe_writes: ${29|false,true|}",
             "$0"
@@ -556,7 +556,7 @@
     "Generate OpenSSL private keys": {
         "prefix": [
             "community.crypto.openssl_privatekey",
-            "Generate OpenSSL private keys"
+            "openssl_privatekey Generate OpenSSL private keys"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -565,7 +565,7 @@
             "    attributes: ${2:string}",
             "    backup: ${3|false,true|}",
             "    cipher: ${4:string}",
-            "    curve: ${5:string}",
+            "    curve: ${5|secp224r1,secp256k1,secp256r1,secp384r1,secp521r1,secp192r1,brainpoolP256r1,brainpoolP384r1,brainpoolP512r1,sect163k1,sect163r2,sect233k1,sect233r1,sect283k1,sect283r1,sect409k1,sect409r1,sect571k1,sect571r1|}",
             "    force: ${6|false,true|}",
             "    format: ${7|auto_ignore,pkcs1,pkcs8,raw,auto|}",
             "    format_mismatch: ${8|regenerate,convert|}",
@@ -573,7 +573,7 @@
             "    mode: ${10|\"0755\",\"0750\",\"0700\",\"0644\",\"0640\",\"0600\"|}",
             "    owner: ${11:string}",
             "    passphrase: ${12:string}",
-            "    path: ${13:path}",
+            "    path: ${13:/tmp/test}",
             "    regenerate: ${14|full_idempotence,never,fail,partial_idempotence,always|}",
             "    return_content: ${15|false,true|}",
             "    select_crypto_backend: ${16|auto,cryptography|}",
@@ -593,7 +593,7 @@
     "Convert OpenSSL private keys": {
         "prefix": [
             "community.crypto.openssl_privatekey_convert",
-            "Convert OpenSSL private keys"
+            "openssl_privatekey_convert Convert OpenSSL private keys"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -602,8 +602,8 @@
             "    attributes: ${2:string}",
             "    backup: ${3|false,true|}",
             "    dest_passphrase: ${4:string}",
-            "    dest_path: ${5:path}",
-            "    format: ${6:string}",
+            "    dest_path: ${5:/tmp/test}",
+            "    format: ${6|pkcs1,pkcs8,raw|}",
             "    group: ${7:string}",
             "    mode: ${8|\"0755\",\"0750\",\"0700\",\"0644\",\"0640\",\"0600\"|}",
             "    owner: ${9:string}",
@@ -613,7 +613,7 @@
             "    seuser: ${13:string}",
             "    src_content: ${14:string}",
             "    src_passphrase: ${15:string}",
-            "    src_path: ${16:path}",
+            "    src_path: ${16:/tmp/test}",
             "    unsafe_writes: ${17|false,true|}",
             "$0"
         ],
@@ -623,7 +623,7 @@
     "Provide information for OpenSSL private keys": {
         "prefix": [
             "community.crypto.openssl_privatekey_info",
-            "Provide information for OpenSSL private keys"
+            "openssl_privatekey_info Provide information for OpenSSL private keys"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -632,7 +632,7 @@
             "    check_consistency: ${2|false,true|}",
             "    content: ${3:string}",
             "    passphrase: ${4:string}",
-            "    path: ${5:path}",
+            "    path: ${5:/tmp/test}",
             "    return_private_key_data: ${6|false,true|}",
             "    select_crypto_backend: ${7|auto,cryptography|}",
             "$0"
@@ -643,7 +643,7 @@
     "Generate OpenSSL private keys without disk access": {
         "prefix": [
             "community.crypto.openssl_privatekey_pipe",
-            "Generate OpenSSL private keys without disk access"
+            "openssl_privatekey_pipe Generate OpenSSL private keys without disk access"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -652,7 +652,7 @@
             "    cipher: ${2:string}",
             "    content: ${3:string}",
             "    content_base64: ${4|false,true|}",
-            "    curve: ${5:string}",
+            "    curve: ${5|secp224r1,secp256k1,secp256r1,secp384r1,secp521r1,secp192r1,brainpoolP256r1,brainpoolP384r1,brainpoolP512r1,sect163k1,sect163r2,sect233k1,sect233r1,sect283k1,sect283r1,sect409k1,sect409r1,sect571k1,sect571r1|}",
             "    format: ${6|auto_ignore,pkcs1,pkcs8,raw,auto|}",
             "    format_mismatch: ${7|regenerate,convert|}",
             "    passphrase: ${8:string}",
@@ -669,7 +669,7 @@
     "Generate an OpenSSL public key from its private key.": {
         "prefix": [
             "community.crypto.openssl_publickey",
-            "Generate an OpenSSL public key from its private key."
+            "openssl_publickey Generate an OpenSSL public key from its private key."
         ],
         "body": [
             "- name: ${1:Description}",
@@ -682,10 +682,10 @@
             "    group: ${6:string}",
             "    mode: ${7|\"0755\",\"0750\",\"0700\",\"0644\",\"0640\",\"0600\"|}",
             "    owner: ${8:string}",
-            "    path: ${9:path}",
+            "    path: ${9:/tmp/test}",
             "    privatekey_content: ${10:string}",
             "    privatekey_passphrase: ${11:string}",
-            "    privatekey_path: ${12:path}",
+            "    privatekey_path: ${12:/tmp/test}",
             "    return_content: ${13|false,true|}",
             "    select_crypto_backend: ${14|auto,cryptography|}",
             "    selevel: ${15:string}",
@@ -702,14 +702,14 @@
     "Provide information for OpenSSL public keys": {
         "prefix": [
             "community.crypto.openssl_publickey_info",
-            "Provide information for OpenSSL public keys"
+            "openssl_publickey_info Provide information for OpenSSL public keys"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.crypto.openssl_publickey_info:",
             "    content: ${2:string}",
-            "    path: ${3:path}",
+            "    path: ${3:/tmp/test}",
             "    select_crypto_backend: ${4|auto,cryptography|}",
             "$0"
         ],
@@ -719,16 +719,16 @@
     "Sign data with openssl": {
         "prefix": [
             "community.crypto.openssl_signature",
-            "Sign data with openssl"
+            "openssl_signature Sign data with openssl"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.crypto.openssl_signature:",
-            "    path: ${2:path}",
+            "    path: ${2:/tmp/test}",
             "    privatekey_content: ${3:string}",
             "    privatekey_passphrase: ${4:string}",
-            "    privatekey_path: ${5:path}",
+            "    privatekey_path: ${5:/tmp/test}",
             "    select_crypto_backend: ${6|auto,cryptography|}",
             "$0"
         ],
@@ -738,15 +738,15 @@
     "Verify signatures with openssl": {
         "prefix": [
             "community.crypto.openssl_signature_info",
-            "Verify signatures with openssl"
+            "openssl_signature_info Verify signatures with openssl"
         ],
         "body": [
             "- name: ${1:Description}",
             "  # ${99:Comment}",
             "  community.crypto.openssl_signature_info:",
             "    certificate_content: ${2:string}",
-            "    certificate_path: ${3:path}",
-            "    path: ${4:path}",
+            "    certificate_path: ${3:/tmp/test}",
+            "    path: ${4:/tmp/test}",
             "    select_crypto_backend: ${5|auto,cryptography|}",
             "    signature: ${6:string}",
             "$0"
@@ -757,7 +757,7 @@
     "Generate and/or check OpenSSL certificates": {
         "prefix": [
             "community.crypto.x509_certificate_pipe",
-            "Generate and/or check OpenSSL certificates"
+            "x509_certificate_pipe Generate and/or check OpenSSL certificates"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -765,11 +765,11 @@
             "  community.crypto.x509_certificate_pipe:",
             "    content: ${2:string}",
             "    csr_content: ${3:string}",
-            "    csr_path: ${4:path}",
-            "    entrust_api_client_cert_key_path: ${5:path}",
-            "    entrust_api_client_cert_path: ${6:path}",
+            "    csr_path: ${4:/tmp/test}",
+            "    entrust_api_client_cert_key_path: ${5:/tmp/test}",
+            "    entrust_api_client_cert_path: ${6:/tmp/test}",
             "    entrust_api_key: ${7:string}",
-            "    entrust_api_specification_path: ${8:path}",
+            "    entrust_api_specification_path: ${8:/tmp/test}",
             "    entrust_api_user: ${9:string}",
             "    entrust_cert_type: ${10|STANDARD_SSL,ADVANTAGE_SSL,UC_SSL,EV_SSL,WILDCARD_SSL,PRIVATE_SSL,PD_SSL,CDS_ENT_LITE,CDS_ENT_PRO,SMIME_ENT|}",
             "    entrust_not_after: ${11:+365d}",
@@ -784,15 +784,15 @@
             "    ownca_digest: ${20:sha256}",
             "    ownca_not_after: ${21:+3650d}",
             "    ownca_not_before: ${22:+0s}",
-            "    ownca_path: ${23:path}",
+            "    ownca_path: ${23:/tmp/test}",
             "    ownca_privatekey_content: ${24:string}",
             "    ownca_privatekey_passphrase: ${25:string}",
-            "    ownca_privatekey_path: ${26:path}",
+            "    ownca_privatekey_path: ${26:/tmp/test}",
             "    ownca_version: ${27:3}",
             "    privatekey_content: ${28:string}",
             "    privatekey_passphrase: ${29:string}",
-            "    privatekey_path: ${30:path}",
-            "    provider: ${31:string}",
+            "    privatekey_path: ${30:/tmp/test}",
+            "    provider: ${31|entrust,ownca,selfsigned|}",
             "    select_crypto_backend: ${32|auto,cryptography|}",
             "    selfsigned_create_subject_key_identifier: ${33|create_if_not_provided,always_create,never_create|}",
             "    selfsigned_digest: ${34:sha256}",
@@ -807,7 +807,7 @@
     "Provide information of OpenSSL X.509 certificates": {
         "prefix": [
             "community.crypto.x509_certificate_info",
-            "Provide information of OpenSSL X.509 certificates"
+            "x509_certificate_info Provide information of OpenSSL X.509 certificates"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -815,7 +815,7 @@
             "  community.crypto.x509_certificate_info:",
             "    content: ${2:string}",
             "    name_encoding: ${3|ignore,idna,unicode|}",
-            "    path: ${4:path}",
+            "    path: ${4:/tmp/test}",
             "    select_crypto_backend: ${5|auto,cryptography|}",
             "$0"
         ],
@@ -825,7 +825,7 @@
     "Generate Certificate Revocation Lists (CRLs)": {
         "prefix": [
             "community.crypto.x509_crl",
-            "Generate Certificate Revocation Lists (CRLs)"
+            "x509_crl Generate Certificate Revocation Lists (CRLs)"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -845,10 +845,10 @@
             "    name_encoding: ${13|ignore,idna,unicode|}",
             "    next_update: ${14:string}",
             "    owner: ${15:string}",
-            "    path: ${16:path}",
+            "    path: ${16:/tmp/test}",
             "    privatekey_content: ${17:string}",
             "    privatekey_passphrase: ${18:string}",
-            "    privatekey_path: ${19:path}",
+            "    privatekey_path: ${19:/tmp/test}",
             "    return_content: ${20|false,true|}",
             "    revoked_certificates:",
             "      - ${21:element}",
@@ -866,7 +866,7 @@
     "Retrieve information on Certificate Revocation Lists (CRLs)": {
         "prefix": [
             "community.crypto.x509_crl_info",
-            "Retrieve information on Certificate Revocation Lists (CRLs)"
+            "x509_crl_info Retrieve information on Certificate Revocation Lists (CRLs)"
         ],
         "body": [
             "- name: ${1:Description}",
@@ -875,7 +875,7 @@
             "    content: ${2:string}",
             "    list_revoked_certificates: ${3|true,false|}",
             "    name_encoding: ${4|ignore,idna,unicode|}",
-            "    path: ${5:path}",
+            "    path: ${5:/tmp/test}",
             "$0"
         ],
         "description": "Retrieve information on Certificate Revocation Lists (CRLs)",
